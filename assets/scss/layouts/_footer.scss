@@ -1,0 +1,43 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 64px;
+  color: #787878;
+  line-height: 28px;
+  .copyright {
+    font-size: inherit;
+    margin-right: auto;
+  }
+  .term {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .term-txt,
+  .policy-txt {
+    font-size: inherit;
+  }
+  .policy-txt {
+    color: $font-color;
+  }
+}
+
+@include tablet-only {
+  .footer {
+    padding: 50px 50px 0;
+  }
+}
+@include mobile {
+  .footer {
+    flex-direction: column-reverse;
+    padding: 60px 27px 0;
+    font-size: 14px;
+    .copyright {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,715 @@
+@charset "UTF-8";
+/******************************************
+# DATE   :  
+# AUTHOR : yujinkim
+# DEVICE : WEB
+******************************************/
+/*반응형 화면 크기*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/***
+    The new CSS reset - version 1.7.2 (last updated 23.6.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-webkit-input-placeholder {
+  color: unset;
+}
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* ----------------------------------------------------------
+	# Font face
+---------------------------------------------------------- */
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-Thin"), url("../fonts/Pretendard-Thin.woff") format("woff"), url("../fonts/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-ExtraLight"), url("../fonts/Pretendard-ExtraLight.woff") format("woff"), url("../fonts/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-Light"), url("../fonts/Pretendard-Light.woff") format("woff"), url("../fonts/Pretendard-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-Regular"), url("../fonts/Pretendard-Regular.woff") format("woff"), url("../fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-Medium"), url("../fonts/Pretendard-Medium.woff") format("woff"), url("../fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-SemiBold"), url("../fonts/Pretendard-SemiBold.woff") format("woff"), url("../fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-Bold"), url("../fonts/Pretendard-Bold.woff") format("woff"), url("../fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-ExtraBold"), url("../fonts/Pretendard-ExtraBold.woff") format("woff"), url("../fonts/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pretendard";
+  src: local("Pretendard-Black"), url("../fonts/Pretendard-Black.woff") format("woff"), url("../fonts/Pretendard-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+html,
+body {
+  font-family: "pretendard", "Malgun Gothic";
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  line-height: 28px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1392px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 33px 0;
+}
+.header .logo {
+  padding: 10px 0;
+  margin-right: 60px;
+  font-size: 24px;
+  font-weight: 800;
+}
+.header .gnb-btn {
+  display: none;
+  background: url("../images/ico_gnb.svg") no-repeat 50% 50%;
+  margin-left: auto;
+  width: 20px;
+  height: 72px;
+  font-size: 0;
+  color: transparent;
+}
+.header .header-menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: auto;
+  gap: 28px;
+}
+.header .gnb .gnb-menu {
+  padding: 10px;
+  font-size: 20px;
+}
+.header .gnb .gnb-menu:hover {
+  font-weight: 700;
+}
+.header .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.header .info .info-menu {
+  padding: 10px 0 10px 26px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header .info .info-menu.logout {
+  color: #838383;
+}
+
+@media (max-width: 1440px) {
+  .header {
+    height: 70px;
+    padding: 0 30px;
+  }
+  .header .logo {
+    font-size: 18px;
+  }
+  .header .gnb-btn {
+    display: block;
+  }
+  .header .header-menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: #fff;
+    padding: 40px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+  }
+  .header .header-menu.is-show {
+    right: 0;
+  }
+  .header .gnb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    margin-top: 80px;
+  }
+  .header .gnb .gnb-menu {
+    display: block;
+    width: 100%;
+  }
+  .header .info {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .header .info .info-menu.ground {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+  }
+}
+.footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 64px;
+  color: #787878;
+  line-height: 28px;
+}
+.footer .copyright {
+  font-size: inherit;
+  margin-right: auto;
+}
+.footer .term {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+.footer .term-txt,
+.footer .policy-txt {
+  font-size: inherit;
+}
+.footer .policy-txt {
+  color: #000;
+}
+
+@media (min-width: 743px) and (max-width: 1440px) {
+  .footer {
+    padding: 50px 50px 0;
+  }
+}
+@media (max-width: 742px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 60px 27px 0;
+    font-size: 14px;
+  }
+  .footer .copyright {
+    margin-top: 20px;
+  }
+}
+.badge {
+  display: inline-block;
+  font-weight: 700;
+  vertical-align: middle;
+  line-height: 1;
+  border-radius: 80px;
+}
+.badge-white {
+  background-color: #fff;
+  padding: 6px 12px;
+}
+.badge-outline {
+  border: 2px solid #000;
+  background-color: transparent;
+  padding: 6px 12px;
+}
+
+.txt-new {
+  color: #ff6b00;
+}
+.txt-update {
+  color: #00d1ff;
+}
+
+.card {
+  position: relative;
+  display: block;
+  background-color: #f4f4f4;
+  width: 321px;
+  height: 321px;
+}
+.card .card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card .card-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 11px;
+  margin-bottom: 28px;
+}
+.card .card-head .card-bookmark {
+  background: url("../images/ico_bookmark_b.svg") no-repeat 100% 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 20px 0;
+  font-size: 0;
+  color: transparent;
+}
+.card .card-body {
+  display: block;
+  margin-bottom: 30px;
+}
+.card .card-body .card-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.card .card-body .card-detail {
+  display: none;
+  width: 320px;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 24px;
+}
+.card .card-foot {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card .card-foot.link::before {
+  content: "";
+  display: block;
+  background: url("../images/img_card_arrow.svg") no-repeat 50% 50%;
+  width: 30px;
+  height: 72px;
+}
+.card .card-foot.midm::after {
+  content: "";
+  display: block;
+  background: url("../images/img_midm.svg") no-repeat 50% 50%;
+  width: 72px;
+  height: 72px;
+  margin-left: auto;
+}
+
+.card:hover {
+  z-index: 1;
+}
+.card:hover .card-hover {
+  background-color: #ff6800;
+  width: 480px;
+  height: 480px;
+  padding: 60px;
+}
+.card:hover .card-hover .badge.txt-new,
+.card:hover .card-hover .badge.txt-update {
+  color: #fff;
+}
+.card:hover .card-hover .card-body .card-detail {
+  display: block;
+}
+
+.card-container .card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+.card-container .card-title .title-tit {
+  font-size: 30px;
+  font-weight: 700;
+}
+.card-container .card-title .title-link {
+  padding-right: 42px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #787878;
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 36px;
+}
+
+@media (max-width: 1440px) {
+  .card-container {
+    padding: 0 50px;
+  }
+  .card-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+  }
+  .card {
+    max-width: 606px;
+    width: calc(50vw - 79px);
+    height: calc(50vw - 79px);
+  }
+  .card .card-hover, .card:hover .card-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: calc(50vw - 79px);
+    height: calc(50vw - 79px);
+    padding: 40px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .card .card-hover .card-body .card-detail, .card:hover .card-hover .card-body .card-detail {
+    display: none;
+  }
+}
+@media (max-width: 742px) {
+  .card-container {
+    padding: 0 27px;
+  }
+  .card-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .card {
+    max-width: none;
+    width: calc(100vw - 54px);
+    height: calc(100vw - 54px);
+  }
+  .card .card-hover, .card:hover .card-hover {
+    width: calc(100vw - 54px);
+    height: calc(100vw - 54px);
+  }
+}
+.visual-container {
+  position: relative;
+  background: url("../images/img_visual_main.svg") no-repeat;
+  width: 100%;
+  height: 606px;
+  padding: 70px 0 120px 0;
+  text-align: center;
+}
+.visual-container .visual-text {
+  margin-bottom: 35px;
+  line-height: 70px;
+  font-size: 55px;
+  font-weight: 700;
+}
+.visual-container .visual-link {
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 80px;
+  padding: 15px 40px;
+  font-weight: 800;
+  line-height: 26px;
+}
+
+.card-container + .card-container {
+  margin-top: 79px;
+}
+
+@media (min-width: 743px) and (max-width: 1440px) {
+  .visual-container {
+    background: url("../images/img_visual_main.svg") no-repeat 50% 50%/contain;
+    height: 595px;
+    padding: 50px 0 0 0;
+  }
+  .card-container + .card-container {
+    margin-top: 88px;
+  }
+}
+@media (max-width: 742px) {
+  .visual-container {
+    background: url("../images/img_visual_main.svg") no-repeat 100% 50%/cover;
+    height: 575px;
+    padding: 50px 0 0 0;
+  }
+  .visual-container .visual-text {
+    margin-bottom: 30px;
+    line-height: 42px;
+    font-size: 30px;
+  }
+  .card-container + .card-container {
+    margin-top: 60px;
+  }
+}

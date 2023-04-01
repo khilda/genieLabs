@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* ----------------------------------------------------------
+	# Font face
+---------------------------------------------------------- */
+@mixin fontFace($name, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: local("#{$file}"), url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@include fontFace("pretendard", "Pretendard-Thin", 100);
+@include fontFace("pretendard", "Pretendard-ExtraLight", 200);
+@include fontFace("pretendard", "Pretendard-Light", 300);
+@include fontFace("pretendard", "Pretendard-Regular", 400);
+@include fontFace("pretendard", "Pretendard-Medium", 500);
+@include fontFace("pretendard", "Pretendard-SemiBold", 600);
+@include fontFace("pretendard", "Pretendard-Bold", 700);
+@include fontFace("pretendard", "Pretendard-ExtraBold", 800);
+@include fontFace("pretendard", "Pretendard-Black", 900);
