@@ -74,22 +74,6 @@
     }
   }
 }
-.card:hover {
-  z-index: 1;
-  .card-hover {
-    background-color: $color-primary-3;
-    width: 480px;
-    height: 480px;
-    padding: 60px;
-    .badge.txt-new,
-    .badge.txt-update {
-      color: #fff;
-    }
-    .card-body .card-detail {
-      display: block;
-    }
-  }
-}
 
 .card-container {
   .card-title {
@@ -117,19 +101,36 @@
   gap: 36px;
 }
 
+@include desktop {
+  // interaction
+  .card:hover {
+    z-index: 1;
+    .card-hover {
+      background-color: $color-primary-3;
+      width: 480px;
+      height: 480px;
+      padding: 60px;
+      .badge.txt-new,
+      .badge.txt-update {
+        color: #fff;
+      }
+      .card-body .card-detail {
+        display: block;
+      }
+    }
+  }
+}
 @include tablet {
   .card-container {
     padding: 0 50px;
   }
   // swiper
-  .card-swiper {
-    padding: 0;
-    .card-title,
-    .swiper {
+  .card-swiper-container {
+    position: relative;
+    margin: 0 -50px;
+    padding-bottom: 50px;
+    .swiper{
       padding: 0 50px;
-    }
-    .card-list {
-      padding-bottom: 56px;
     }
   }
   .card-list {
@@ -162,10 +163,10 @@
     padding: 0 27px;
   }
   // swiper
-  .card-swiper {
-    padding: 0;
-    .card-title,
-    .swiper {
+  .card-swiper-container {
+    position: relative;
+    margin: 0 -27px;
+    .swiper{
       padding: 0 27px;
     }
   }

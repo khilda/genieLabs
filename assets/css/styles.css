@@ -561,23 +561,6 @@ button {
   margin-left: auto;
 }
 
-.card:hover {
-  z-index: 1;
-}
-.card:hover .card-hover {
-  background-color: #ff6800;
-  width: 480px;
-  height: 480px;
-  padding: 60px;
-}
-.card:hover .card-hover .badge.txt-new,
-.card:hover .card-hover .badge.txt-update {
-  color: #fff;
-}
-.card:hover .card-hover .card-body .card-detail {
-  display: block;
-}
-
 .card-container .card-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -613,19 +596,35 @@ button {
   gap: 36px;
 }
 
+@media (min-width: 1440px) {
+  .card:hover {
+    z-index: 1;
+  }
+  .card:hover .card-hover {
+    background-color: #ff6800;
+    width: 480px;
+    height: 480px;
+    padding: 60px;
+  }
+  .card:hover .card-hover .badge.txt-new,
+  .card:hover .card-hover .badge.txt-update {
+    color: #fff;
+  }
+  .card:hover .card-hover .card-body .card-detail {
+    display: block;
+  }
+}
 @media (max-width: 1439px) {
   .card-container {
     padding: 0 50px;
   }
-  .card-swiper {
-    padding: 0;
+  .card-swiper-container {
+    position: relative;
+    margin: 0 -50px;
+    padding-bottom: 50px;
   }
-  .card-swiper .card-title,
-  .card-swiper .swiper {
+  .card-swiper-container .swiper {
     padding: 0 50px;
-  }
-  .card-swiper .card-list {
-    padding-bottom: 56px;
   }
   .card-list {
     -ms-flex-wrap: wrap;
@@ -662,11 +661,11 @@ button {
   .card-container {
     padding: 0 27px;
   }
-  .card-swiper {
-    padding: 0;
+  .card-swiper-container {
+    position: relative;
+    margin: 0 -27px;
   }
-  .card-swiper .card-title,
-  .card-swiper .swiper {
+  .card-swiper-container .swiper {
     padding: 0 27px;
   }
   .card-list {
@@ -743,9 +742,9 @@ button {
 
 @media (min-width: 744px) and (max-width: 1439px) {
   .visual-container {
-    background: url("../images/img_visual_main.svg") no-repeat 50% 100%/contain;
-    height: 595px;
-    padding: 50px 0 0 0;
+    height: 427px;
+    margin-top: 50px;
+    margin-bottom: 118px;
   }
   .card-container + .card-container {
     margin-top: 88px;
@@ -754,8 +753,9 @@ button {
 @media (max-width: 743px) {
   .visual-container {
     background: url("../images/img_visual_main_m.svg") no-repeat 50% 100%;
-    height: 575px;
-    padding: 50px 0 0 0;
+    height: 450px;
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
   .visual-container .visual-text {
     margin-bottom: 30px;
