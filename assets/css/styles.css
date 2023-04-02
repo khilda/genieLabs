@@ -551,7 +551,7 @@ button {
 
 @media (min-width: 744px) and (max-width: 1439px) {
   .footer {
-    padding: 50px 50px 0;
+    padding: 50px 50px 101px;
   }
 }
 @media (max-width: 743px) {
@@ -560,7 +560,7 @@ button {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    padding: 60px 27px 0;
+    padding: 60px 27px 64px;
     font-size: 14px;
   }
   .footer .copyright {
@@ -802,8 +802,8 @@ button {
   }
   .card {
     max-width: 606px;
-    width: calc(50vw - 79px);
-    height: calc(50vw - 79px);
+    width: calc(50vw - 70px);
+    height: calc(50vw - 70px);
   }
   .card .card-hover .card-body .card-detail, .card:hover .card-hover .card-body .card-detail {
     display: none;
@@ -881,6 +881,22 @@ button {
     display: none;
   }
 }
+:root {
+  --visual-link-background: transparent;
+  --visual-link-border: #000;
+  --visual-link-color: #000;
+  --visual-link-hover-background: #000;
+  --visual-link-hover-color: #fff;
+}
+
+.dark-theme {
+  --visual-link-background: #000;
+  --visual-link-border: #fff;
+  --visual-link-color: #fff;
+  --visual-link-hover-background: #fff;
+  --visual-link-hover-color: #000;
+}
+
 .visual-container {
   position: relative;
   background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
@@ -898,12 +914,20 @@ button {
 }
 .visual-container .visual-link {
   display: inline-block;
-  border: 2px solid #000;
+  border: 2px solid var(--visual-link-border, #000);
+  background: var(--visual-link-background, transparent);
   border-radius: 80px;
   background: url("../images/btn_ico_guide.svg") no-repeat 41px 50%;
   padding: 15px 40px 15px 65px;
   font-weight: 800;
   line-height: 26px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.visual-container .visual-link:hover {
+  border-color: #000;
+  background-color: var(--visual-link-hover-background, transparent);
+  color: var(--visual-link-hover-color, #000);
 }
 
 .card-container + .card-container {
