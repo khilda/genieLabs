@@ -3,10 +3,28 @@ body {
   font-family: $font-famliy;
   font-weight: $font-weight;
   font-size: $font-size;
-  color: $font-color;
+  color: var(--color, #000);;
   line-height: $line-height;
+  transition: all 0.3s;
 }
 
-button{
+button {
   cursor: pointer;
+}
+
+:root {
+  --background: #fff;
+  --color: #000;
+  --header-gnb-background: #fff;
+  --header-gnb-toggle: #ccc;
+  --header-gnb-toggle-icon: #fff;
+  --header-gnb-toggle-border: transparent;
+}
+.dark-theme {
+  --background: #000;
+  --color: #fff;
+  --header-gnb-background: #1f1f1f;
+  --header-gnb-toggle: transparent;
+  --header-gnb-toggle-icon: #fff;
+  --header-gnb-toggle-border: #fff;
 }

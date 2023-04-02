@@ -31,3 +31,7 @@ document.querySelector("#gnbClose").addEventListener("click", () => {
   document.querySelector(".header-menu").classList.remove("is-show");
   document.body.removeAttribute("style");
 });
+document.querySelector("#toggleTheme").addEventListener("click", (e) => {
+  e.target.classList.toggle("toggle");
+  document.body.classList.toggle("dark-theme");
+});

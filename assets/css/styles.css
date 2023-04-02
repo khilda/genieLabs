@@ -223,12 +223,32 @@ body {
   font-family: "pretendard", "Malgun Gothic";
   font-weight: 500;
   font-size: 16px;
-  color: #000;
+  color: var(--color, #000);
   line-height: 28px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 button {
   cursor: pointer;
+}
+
+:root {
+  --background: #fff;
+  --color: #000;
+  --header-gnb-background: #fff;
+  --header-gnb-toggle: #ccc;
+  --header-gnb-toggle-icon: #fff;
+  --header-gnb-toggle-border: transparent;
+}
+
+.dark-theme {
+  --background: #000;
+  --color: #fff;
+  --header-gnb-background: #1f1f1f;
+  --header-gnb-toggle: transparent;
+  --header-gnb-toggle-icon: #fff;
+  --header-gnb-toggle-border: #fff;
 }
 
 .wrap {
@@ -236,6 +256,11 @@ button {
   width: 100%;
   max-width: 1392px;
   margin: 0 auto;
+}
+
+.dark-theme {
+  background-color: var(--background, #000);
+  color: var(--color, #fff);
 }
 
 .header {
@@ -274,6 +299,48 @@ button {
   background-image: url("../images/ico_gnb_close.svg");
   width: 22px;
   height: 22px;
+}
+.header .btn-theme {
+  position: relative;
+  border: 1px solid var(--header-gnb-toggle-border, #ccc);
+  background-color: var(--header-gnb-toggle, #ccc);
+  border-radius: 28px;
+  width: 80px;
+  height: 40px;
+  font-size: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header .btn-theme::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  background-color: var(--header-gnb-toggle-icon, #fff);
+  border-radius: 28px;
+  width: 28px;
+  height: 28px;
+}
+.header .btn-theme::after {
+  content: "W";
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.header .btn-theme.toggle::before {
+  left: 44px;
+}
+.header .btn-theme.toggle::after {
+  content: "B";
+  right: 40px;
 }
 .header .header-menu {
   -webkit-box-flex: 1;
@@ -391,10 +458,10 @@ button {
     width: 100%;
     font-weight: 400;
   }
-  .header .gnb .gnb-menu:hover {
+  .header .gnb .gnb-menu:hover, .header .gnb .gnb-menu:active {
     font-weight: 700;
   }
-  .header .gnb .gnb-menu:hover::after {
+  .header .gnb .gnb-menu:hover::after, .header .gnb .gnb-menu:active::after {
     content: "";
     position: absolute;
     top: 0;
@@ -425,6 +492,16 @@ button {
     bottom: 56px;
   }
 }
+:root {
+  --footer-color: #787878;
+  --footer-policy-color: #000;
+}
+
+.dark-theme {
+  --footer-color: #787878;
+  --footer-policy-color: #fff;
+}
+
 .footer {
   position: relative;
   display: -webkit-box;
@@ -438,7 +515,7 @@ button {
           align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 64px;
-  color: #787878;
+  color: var(--footer-color, #787878);
   line-height: 28px;
 }
 .footer .copyright {
@@ -462,7 +539,7 @@ button {
   font-size: inherit;
 }
 .footer .policy-txt {
-  color: #000;
+  color: var(--footer-policy-color, #000);
 }
 
 @media (min-width: 744px) and (max-width: 1439px) {
@@ -483,6 +560,18 @@ button {
     margin-top: 20px;
   }
 }
+:root {
+  --badge-white-background: #fff;
+  --badge-outline-border: #000;
+  --badge-outline-color: #000;
+}
+
+.dark-theme {
+  --badge-white-background: #fff;
+  --badge-outline-border: #fff;
+  --badge-outline-color: #fff;
+}
+
 .badge {
   display: inline-block;
   font-weight: 700;
@@ -491,13 +580,15 @@ button {
   border-radius: 80px;
 }
 .badge-white {
-  background-color: #fff;
+  background-color: var(--badge-white-background, #fff);
   padding: 6px 12px;
+  color: #000;
 }
 .badge-outline {
-  border: 2px solid #000;
+  border: 2px solid var(--badge-outline-border, #000);
   background-color: transparent;
   padding: 6px 12px;
+  color: var(--badge-outline-color, #000);
 }
 
 .txt-new {
@@ -507,10 +598,18 @@ button {
   color: #00d1ff;
 }
 
+:root {
+  --card-background: #f4f4f4;
+}
+
+.dark-theme {
+  --card-background: #1f1f1f;
+}
+
 .card {
   position: relative;
   display: block;
-  background-color: #f4f4f4;
+  background-color: var(--card-background, #f4f4f4);
   width: 321px;
   height: 321px;
 }
@@ -658,6 +757,7 @@ button {
     width: 480px;
     height: 480px;
     padding: 60px;
+    color: #000;
   }
   .card:hover .card-hover .badge.txt-new,
   .card:hover .card-hover .badge.txt-update {

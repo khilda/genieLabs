@@ -1,7 +1,16 @@
+// color
+// var(--color, #f4f4f4);
+:root {
+  --card-background: #f4f4f4;
+}
+.dark-theme {
+  --card-background: #1f1f1f;
+}
+
 .card {
   position: relative;
   display: block;
-  background-color: #f4f4f4;
+  background-color: var(--card-background, #f4f4f4);
   width: 321px;
   height: 321px;
   .card-head {
@@ -118,6 +127,7 @@
       width: 480px;
       height: 480px;
       padding: 60px;
+      color: #000;
       .badge.txt-new,
       .badge.txt-update {
         color: #fff;

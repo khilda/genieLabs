@@ -1,6 +1,10 @@
-.wrap{
+.wrap {
   position: relative;
   width: 100%;
   max-width: 1392px;
   margin: 0 auto;
+}
+.dark-theme {
+  background-color: var(--background, #000);
+  color: var(--color, #fff);
 }

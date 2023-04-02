@@ -1,3 +1,15 @@
+// color
+// var(--color, #f4f4f4);
+:root {
+  --badge-white-background: #fff;
+  --badge-outline-border: #000;
+  --badge-outline-color: #000;
+}
+.dark-theme {
+  --badge-white-background: #fff;
+  --badge-outline-border: #fff;
+  --badge-outline-color: #fff;
+}
 @mixin badge-default() {
   display: inline-block;
   font-weight: 700;
@@ -8,13 +20,15 @@
   @include badge-default();
   border-radius: 80px;
   &-white {
-    background-color: #fff;
+    background-color: var(--badge-white-background, #fff);
     padding: 6px 12px;
+    color: #000;
   }
-  &-outline{
-    border: 2px solid #000;
+  &-outline {
+    border: 2px solid var(--badge-outline-border, #000);
     background-color: transparent;
     padding: 6px 12px;
+    color:  var(--badge-outline-color, #000);
   }
 }
 .txt {

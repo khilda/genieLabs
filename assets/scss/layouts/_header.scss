@@ -30,6 +30,49 @@
       height: 22px;
     }
   }
+  .btn-theme {
+    position: relative;
+    border: 1px solid var(--header-gnb-toggle-border, #ccc);
+    background-color: var(--header-gnb-toggle, #ccc);
+    border-radius: 28px;
+    width: 80px;
+    height: 40px;
+    font-size: 0;
+    transition: all 0.3s;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      display: block;
+      background-color: var(--header-gnb-toggle-icon, #fff);
+      border-radius: 28px;
+      width: 28px;
+      height: 28px;
+    }
+    &::after {
+      content: "W";
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      display: block;
+      width: 28px;
+      height: 28px;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+    }
+    &.toggle {
+      &::before {
+        left: 44px;
+      }
+      &::after {
+        content: "B";
+        right: 40px;
+      }
+    }
+  }
   .header-menu {
     flex: 1;
     display: flex;
@@ -112,7 +155,8 @@
         padding: 13px 40px;
         width: 100%;
         font-weight: 400;
-        &:hover {
+        &:hover,
+        &:active {
           font-weight: 700;
           &::after {
             content: "";
@@ -120,7 +164,8 @@
             top: 0;
             right: 40px;
             display: block;
-            background: url("../images/ico_arrow_42.svg") no-repeat 50% 50% / contain;
+            background: url("../images/ico_arrow_42.svg") no-repeat 50% 50% /
+              contain;
             width: 27px;
             height: 54px;
           }

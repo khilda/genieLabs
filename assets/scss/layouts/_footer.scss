@@ -1,3 +1,13 @@
+// color
+// var(--color, #f4f4f4);
+:root {
+  --footer-color: #787878;
+  --footer-policy-color: #000;
+}
+.dark-theme {
+  --footer-color: #787878;
+  --footer-policy-color: #fff;
+}
 .footer {
   position: relative;
   display: flex;
@@ -5,7 +15,7 @@
   align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 64px;
-  color: #787878;
+  color: var(--footer-color, #787878);
   line-height: 28px;
   .copyright {
     font-size: inherit;
@@ -22,7 +32,7 @@
     font-size: inherit;
   }
   .policy-txt {
-    color: $font-color;
+    color: var(--footer-policy-color, #000);
   }
 }
 
