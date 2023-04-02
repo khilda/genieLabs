@@ -485,7 +485,7 @@ button {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.card:nth-child(3n) .card-hover, .card:nth-child(4n) .card-hover {
+.card:nth-child(4n) .card-hover {
   left: auto;
   right: 0;
 }
