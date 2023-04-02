@@ -282,15 +282,13 @@ button {
 .header .btn-gnb {
   display: none;
   background: no-repeat 50% 50%;
-  margin-left: auto;
-  width: 20px;
-  height: 72px;
   font-size: 0;
   color: transparent;
 }
 .header .btn-gnb.open {
-  margin-left: auto;
   background-image: url("../images/ico_gnb.svg");
+  width: 20px;
+  height: 72px;
 }
 .header .btn-gnb.close {
   position: absolute;
@@ -299,48 +297,6 @@ button {
   background-image: url("../images/ico_gnb_close.svg");
   width: 22px;
   height: 22px;
-}
-.header .btn-theme {
-  position: relative;
-  border: 1px solid var(--header-gnb-toggle-border, #ccc);
-  background-color: var(--header-gnb-toggle, #ccc);
-  border-radius: 28px;
-  width: 80px;
-  height: 40px;
-  font-size: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.header .btn-theme::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  display: block;
-  background-color: var(--header-gnb-toggle-icon, #fff);
-  border-radius: 28px;
-  width: 28px;
-  height: 28px;
-}
-.header .btn-theme::after {
-  content: "W";
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  display: block;
-  width: 28px;
-  height: 28px;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-}
-.header .btn-theme.toggle::before {
-  left: 44px;
-}
-.header .btn-theme.toggle::after {
-  content: "B";
-  right: 40px;
 }
 .header .header-menu {
   -webkit-box-flex: 1;
@@ -405,7 +361,54 @@ button {
   padding-left: 32px;
   color: #838383;
 }
+.header .btn-theme {
+  position: relative;
+  border: 1px solid var(--header-gnb-toggle-border, #ccc);
+  background-color: var(--header-gnb-toggle, #ccc);
+  border-radius: 28px;
+  width: 80px;
+  height: 40px;
+  font-size: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header .btn-theme::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  background-color: var(--header-gnb-toggle-icon, #fff);
+  border-radius: 28px;
+  width: 28px;
+  height: 28px;
+}
+.header .btn-theme::after {
+  content: "W";
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.header .btn-theme.toggle::before {
+  left: 44px;
+}
+.header .btn-theme.toggle::after {
+  content: "B";
+  right: 40px;
+}
 
+@media (min-width: 1440px) {
+  .btn-theme {
+    margin-left: 30px;
+  }
+}
 @media (max-width: 1439px) {
   .header {
     height: 70px;
@@ -413,6 +416,10 @@ button {
   }
   .header .logo {
     font-size: 18px;
+  }
+  .header .btn-theme {
+    margin-left: auto;
+    margin-right: 30px;
   }
   .header .btn-gnb {
     display: block;

@@ -12,14 +12,12 @@
   .btn-gnb {
     display: none;
     background: no-repeat 50% 50%;
-    margin-left: auto;
-    width: 20px;
-    height: 72px;
     font-size: 0;
     color: transparent;
     &.open {
-      margin-left: auto;
       background-image: url("../images/ico_gnb.svg");
+      width: 20px;
+      height: 72px;
     }
     &.close {
       position: absolute;
@@ -28,6 +26,48 @@
       background-image: url("../images/ico_gnb_close.svg");
       width: 22px;
       height: 22px;
+    }
+  }
+  .header-menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+  }
+  .gnb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: auto;
+    gap: 28px;
+    .gnb-menu {
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    .info-menu {
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+      &.ground {
+        background: url("../images/ico_gnb_my.svg") no-repeat 0 50%;
+        padding-left: 26px;
+      }
+      &.logout {
+        background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
+        padding-left: 32px;
+        color: #838383;
+      }
     }
   }
   .btn-theme {
@@ -73,50 +113,13 @@
       }
     }
   }
-  .header-menu {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.3s;
-  }
-  .gnb {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: auto;
-    gap: 28px;
-    .gnb-menu {
-      padding: 10px;
-      font-size: 20px;
-      font-weight: 700;
-      &:hover {
-        font-weight: 700;
-      }
-    }
-  }
-  .info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
-    .info-menu {
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: 600;
-      &.ground {
-        background: url("../images/ico_gnb_my.svg") no-repeat 0 50%;
-        padding-left: 26px;
-      }
-      &.logout {
-        background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
-        padding-left: 32px;
-        color: #838383;
-      }
-    }
-  }
 }
 
+@include desktop {
+  .btn-theme {
+    margin-left: 30px;
+  }
+}
 // tablet & mobile
 @include tablet {
   .header {
@@ -124,6 +127,10 @@
     padding: 0 30px;
     .logo {
       font-size: 18px;
+    }
+    .btn-theme {
+      margin-left: auto;
+      margin-right: 30px;
     }
     .btn-gnb {
       display: block;
