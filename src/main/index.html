@@ -47,7 +47,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="badge badge-white">NPL AI</em>
-                  <em class="badge txt-new">NEW</em>
+                  <em class="badge-txt new">NEW</em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 요약</strong>
@@ -61,7 +61,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="badge badge-white">NPL AI</em>
-                  <em class="badge txt-update">UPDATE</em>
+                  <em class="badge-txt update">UPDATE</em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">의도 분류<br>(Fine Tuning)</strong>
@@ -88,7 +88,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="badge badge-white">Voice AI</em>
-                  <em class="badge txt-new">NEW</em>
+                  <em class="badge-txt new">NEW</em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">지니 Voice(TTS)</strong>
@@ -111,8 +111,8 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="badge badge-outline">Demo</em>
-                      <em class="badge txt-new">NEW</em>
-                      <button type="button" class="card-bookmark">즐겨찾기</button>
+                  <em class="badge-txt new">NEW</em>
+                  <button type="button" class="card-bookmark">즐겨찾기</button>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">의도 분류<br>(Fine Tuning)</strong>
@@ -170,15 +170,15 @@
             <h5 class="title-tit">Applications</h5>
             <a href="#none" class="title-link">See All</a>
           </div>
-          <div class="card-swiper-container">
-            <article id="cardSwiper" class="swiper card-hover-3">
+          <div class="card-swiper-container card-hover-3">
+            <article id="cardSwiper" class="swiper">
               <div class="swiper-wrapper card-swiper-wrapper">
                 <a href="#none" class="swiper-slide card">
                   <div class="card-hover">
                     <div class="card-head">
                       <em class="card-view hits"><span class="count">123</span></em>
                       <em class="card-view like"><span class="count">3455</span></em>
-                      <em class="badge txt-new">NEW</em>
+                      <em class="badge-txt new">NEW</em>
                     </div>
                     <div class="card-body">
                       <strong class="card-txt">의도 분류<br>(Fine Tuning)</strong>
@@ -233,7 +233,62 @@
                     <div class="card-head">
                       <em class="card-view hits"><span class="count">123</span></em>
                       <em class="card-view like"><span class="count">3455</span></em>
-                      <em class="badge txt-update">UPDATE</em>
+                      <em class="badge-txt update">UPDATE</em>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">상담분류</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot link">
+                      <dl class="foot-author">
+                        <dt>홍길동</dt>
+                        <dd>2023.01.12</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <em class="card-view hits"><span class="count">123</span></em>
+                      <em class="card-view like"><span class="count">3455</span></em>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">상담분류</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot link">
+                      <dl class="foot-author">
+                        <dt>홍길동</dt>
+                        <dd>2023.01.12</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </a>
+                </a>
+                <a href="#none" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <em class="card-view hits"><span class="count">123</span></em>
+                      <em class="card-view like"><span class="count">3455</span></em>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">상담분류</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot link">
+                      <dl class="foot-author">
+                        <dt>홍길동</dt>
+                        <dd>2023.01.12</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <em class="card-view hits"><span class="count">123</span></em>
+                      <em class="card-view like"><span class="count">3455</span></em>
                     </div>
                     <div class="card-body">
                       <strong class="card-txt">상담분류</strong>
@@ -288,7 +343,33 @@
       </footer>
     </div>
   </body>
-  <script defer src="../../assets/js/lib/swiper-bundle.min.js"></script>
   <script defer src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper("#cardSwiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 27,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        742: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 36,
+          pagination: false,
+        },
+      },
+    });
+  </script>
 
 </html>

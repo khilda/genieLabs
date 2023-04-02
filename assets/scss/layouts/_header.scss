@@ -2,7 +2,9 @@
 // var(--color, #f4f4f4);
 :root {
   --gnb-icon-open: url("../images/ico_gnb_open.svg");
+  --gnb-icon-open-white: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/ico_gnb_close.svg");
+  --gnb-icon-close-white: url("../images/darkmode/ico_gnb_close.svg");
   --gnb-icon-ground: url("../images/ico_gnb_my.svg");
   --gnb-icon-menu: url("../images/ico_arrow_42.svg");
   --gnb-mobile-background: #fff;
@@ -10,7 +12,9 @@
 }
 .dark-theme {
   --gnb-icon-open: url("../images/darkmode/ico_gnb_open.svg");
+  --gnb-icon-open-white: url("../images/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/darkmode/ico_gnb_close.svg");
+  --gnb-icon-close-white: url("../images/ico_gnb_close.svg");
   --gnb-icon-ground: url("../images/darkmode/ico_gnb_my.svg");
   --gnb-icon-menu: url("../images/darkmode/ico_arrow_42.svg");
   --gnb-mobile-background: #000;
@@ -32,13 +36,16 @@
   }
   .btn-gnb {
     display: none;
+    position: absolute;
     background: no-repeat 50% 50%;
     font-size: 0;
     color: transparent;
     &.open {
-      background-image: var(--gnb-icon-open);
-      width: 20px;
-      height: 72px;
+      top: 0px;
+      right: 18px;
+      background-image: var(--gnb-icon-open-white);
+      width: 38px;
+      height: 70px;
     }
     &.close {
       position: absolute;
@@ -60,13 +67,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-left: auto;
     margin-right: auto;
     gap: 28px;
     .gnb-menu {
       padding: 10px;
       font-size: 20px;
       font-weight: 700;
-      &:hover {
+      &:hover,
+      &:active,
+      &.is-active {
         color: $color-primary-2;
       }
     }
@@ -137,11 +147,15 @@
   }
 }
 
-// main
 .main .header {
   background-color: transparent;
-  padding: 33px 0;
   color: var(--main-header-color);
+  .btn-gnb.open {
+    background-image: var(--gnb-icon-open);
+  }
+  .btn-gnb.close {
+    background-image: var(--gnb-icon-close);
+  }
   .info .info-menu.ground {
     background-image: var(--gnb-icon-ground);
   }
@@ -150,6 +164,13 @@
 @include desktop {
   .btn-theme {
     margin-left: 30px;
+  }
+  // main
+  .main .header {
+    padding: 33px 0;
+    .gnb {
+      margin-left: 0;
+    }
   }
 }
 // tablet & mobile
@@ -162,7 +183,7 @@
     }
     .btn-theme {
       margin-left: auto;
-      margin-right: 30px;
+      margin-right: 35px;
     }
     .btn-gnb {
       display: block;
@@ -179,6 +200,7 @@
       width: 100vw;
       height: 100vh;
       z-index: 5;
+      color: var(--main-header-color);
       &.is-show {
         right: 0;
       }
@@ -196,6 +218,7 @@
         font-weight: 400;
         &:hover,
         &:active {
+          color: var(--main-header-color);
           font-weight: 700;
           &::after {
             content: "";
@@ -219,6 +242,7 @@
           left: 40px;
           border: 2px solid var(--visual-link-border);
           border-radius: 80px;
+          background-image: var(--gnb-icon-ground);
           background-position: 20px 50%;
           padding: 10px 20px 10px 44px;
           line-height: 22px;

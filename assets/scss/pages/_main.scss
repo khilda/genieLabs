@@ -18,43 +18,67 @@
   --visual-link-hover-color: #000;
   --visual-link-hover-icon: url("../images/btn_ico_guide.svg");
 }
-.main {
-  .visual-container {
-    position: relative;
-    background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
-    width: 100%;
-    height: 427px;
-    margin-top: 70px;
-    margin-bottom: 109px;
-    text-align: center;
-    .visual-text {
-      margin-bottom: 35px;
-      line-height: 70px;
-      font-size: 55px;
-      font-weight: 700;
-    }
-    .visual-link {
-      display: inline-block;
-      border: 2px solid var(--visual-link-border, #000);
-      border-radius: 80px;
-      background: var(--visual-link-background, transparent)
-        var(--visual-link-icon) no-repeat 41px 50%;
-      padding: 15px 40px 15px 65px;
-      font-weight: 800;
-      line-height: 26px;
-      transition: all 0.3s;
-      &:hover {
-        border-color: #000;
-        background-color: var(--visual-link-hover-background, transparent);
-        background-image: var(--visual-link-hover-icon);
-        color: var(--visual-link-hover-color, #000);
-      }
+// visual
+.main .visual-container {
+  position: relative;
+  background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
+  width: 100%;
+  height: 427px;
+  margin-top: 70px;
+  margin-bottom: 109px;
+  text-align: center;
+  .visual-text {
+    margin-bottom: 35px;
+    line-height: 70px;
+    font-size: 55px;
+    font-weight: 700;
+  }
+  .visual-link {
+    display: inline-block;
+    border: 2px solid var(--visual-link-border, #000);
+    border-radius: 80px;
+    background: var(--visual-link-background, transparent)
+      var(--visual-link-icon) no-repeat 41px 50%;
+    padding: 15px 40px 15px 65px;
+    font-weight: 800;
+    line-height: 26px;
+    transition: all 0.3s;
+    &:hover {
+      border-color: #000;
+      background-color: var(--visual-link-hover-background, transparent);
+      background-image: var(--visual-link-hover-icon);
+      color: var(--visual-link-hover-color, #000);
     }
   }
-  .card-container + .card-container {
+}
+// card
+.main .card-container {
+  & + .card-container {
     margin-top: 79px;
   }
-
+  .card {
+    .card-head {
+      margin-bottom: 27px;
+    }
+    .card-txt {
+      @include ellipsis(3);
+      line-height: 42px;
+      font-size: 30px;
+    }
+    .card-detail {
+      display: none;
+      width: 320px;
+      margin-top: 30px;
+      font-weight: 500;
+      font-size: 24px;
+    }
+  }
+  .card-swiper-container {
+    position: relative;
+  }
+}
+// responsive
+.main {
   @include desktop {
     // interaction
     .card:hover {
@@ -64,14 +88,19 @@
         height: 480px;
         padding: 60px;
         color: #000;
-        .badge.txt-new,
-        .badge.txt-update {
+        .badge-txt.new,
+        .badge-txt.update {
           color: #fff;
         }
         .card-body .card-detail {
           display: block;
         }
       }
+    }
+    .card-list .card:nth-child(4n):hover .card-hover,
+    .swiper-slide-next + .card + .card:hover .card-hover {
+      left: auto;
+      right: 0;
     }
     .card-hover-1 .card:hover .card-hover {
       border-color: transparent;
@@ -94,6 +123,12 @@
         color: #000;
       }
     }
+    .card-swiper-container {
+      height: 321px;
+    }
+    .card-swiper-container .swiper {
+      height: 480px;
+    }
   }
   @include tablet-only {
     .visual-container {
@@ -103,6 +138,20 @@
     }
     .card-container + .card-container {
       margin-top: 88px;
+    }
+    .card-swiper-container {
+      position: relative;
+      margin: 0 -50px;
+      padding-bottom: 50px;
+      .swiper {
+        padding: 0 50px;
+        .card-hover,
+        &:hover .card-hover {
+          .card-body .card-detail {
+            display: none;
+          }
+        }
+      }
     }
   }
   @include mobile {
@@ -119,6 +168,20 @@
     }
     .card-container + .card-container {
       margin-top: 60px;
+    }
+    // swiper
+    .card-swiper-container {
+      margin: 0 -27px;
+      padding-bottom: 50px;
+      .swiper {
+        padding: 0 27px;
+        .card-hover,
+        &:hover .card-hover {
+          .card-body .card-detail {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

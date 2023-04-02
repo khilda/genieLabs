@@ -18,24 +18,30 @@
 .badge {
   @include badge-default();
   border-radius: 80px;
+  background-color: #dfdfdf;
+  padding: 6px 12px;
+  color: #787878;
   &-white {
     background-color: var(--badge-white-background, #fff);
-    padding: 6px 12px;
+    color: #000;
+  }
+  &-white {
+    background-color: var(--badge-white-background, #fff);
     color: #000;
   }
   &-outline {
     border: 2px solid var(--badge-outline-border, #000);
     background-color: transparent;
-    padding: 6px 12px;
     color: var(--badge-outline-color, #000);
   }
 }
-.txt {
-  &-new {
+.badge-txt {
+  @include badge-default();
+  &.new {
     font-size: 18px;
     color: #ff6b00;
   }
-  &-update {
+  &.update {
     font-size: 18px;
     color: #00d1ff;
   }

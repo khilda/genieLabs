@@ -18,8 +18,9 @@
 
 .container {
   &-header {
-    background: #000 no-repeat 100% 50% / contain;
+    background: #000 no-repeat 100% 100% / contain;
     padding: 64px 60px;
+    margin-bottom: 40px;
     color: #fff;
     .page-title {
       margin-bottom: 14px;
@@ -33,8 +34,32 @@
       font-weight: 400;
     }
     // images
-    &.demo{
-      background-image: url('../images/');
+    &.demo {
+      background-image: url("../images/img_page_title_demo.svg");
     }
+    &.sampleCode{
+      background-image: url("../images/img_page_title_sampleCode.svg");
+    }
+  }
+}
+@include tablet {
+  .container {
+    padding: 0 50px;
+  }
+  .main .container{
+    padding: 0;
+  }
+}
+@include mobile {
+  .container {
+    padding: 0 27px;
+  }
+  .container-header {
+    background-size: 0;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 47px 0 31px;
+    text-align: center;
+    color: #000;
   }
 }
