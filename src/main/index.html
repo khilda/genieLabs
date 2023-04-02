@@ -104,7 +104,7 @@
             <h5 class="title-tit">Sample Code</h5>
             <a href="#" class="title-link">See All</a>
           </div>
-          <div class="card-list">
+          <div class="card-list hover-primary1">
             <a href="#" class="card">
               <div class="card-hover">
                 <div class="card-head">
@@ -260,60 +260,62 @@
       </footer>
     </div>
   </body>
-  <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
+  <script defer src="../../assets/js/lib/swiper-bundle.min.js"></script>
   <script>
-    // swiper
-    const swiper = new Swiper('#cardSwiper', {
-      loop: true,
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 27,
-          navigation: {
-            enabled: false,
+    document.addEventListener("DOMContentLoaded", function () {
+      // swiper
+      const swiper = new Swiper('#cardSwiper', {
+        loop: true,
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 27,
+            navigation: {
+              enabled: false,
+            },
+            pagination: {
+              enabled: true,
+              el: '.swiper-pagination',
+              type: 'bullets',
+            },
           },
-          pagination: {
-            enabled: true,
-            el: '.swiper-pagination',
-            type: 'bullets',
+          742: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            navigation: {
+              enabled: false,
+            },
+            pagination: {
+              enabled: true,
+              el: '.swiper-pagination',
+              type: 'bullets',
+            },
           },
-        },
-        742: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-          navigation: {
-            enabled: false,
+          1440: {
+            slidesPerView: 4,
+            spaceBetween: 36,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              enabled: false,
+            },
           },
-          pagination: {
-            enabled: true,
-            el: '.swiper-pagination',
-            type: 'bullets',
-          },
-        },
-        1440: {
-          slidesPerView: 4,
-          spaceBetween: 36,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            enabled: false,
-          },
-        },
-      }
-    });
-    //
-    document.querySelector('.gnb-btn').addEventListener('click', () => {
-      const headerMenu = document.querySelector('.header-menu')
-      if (headerMenu.classList.contains('is-show')) {
-        headerMenu.classList.remove('is-show')
-        document.body.removeAttribute('style')
-      } else {
-        headerMenu.classList.add('is-show')
-        document.body.setAttribute('style', 'overflow: hidden')
-      }
+        }
+      });
+      //
+      document.querySelector('.gnb-btn').addEventListener('click', () => {
+        const headerMenu = document.querySelector('.header-menu')
+        if (headerMenu.classList.contains('is-show')) {
+          headerMenu.classList.remove('is-show')
+          document.body.removeAttribute('style')
+        } else {
+          headerMenu.classList.add('is-show')
+          document.body.setAttribute('style', 'overflow: hidden')
+        }
+      })
     })
   </script>
 
