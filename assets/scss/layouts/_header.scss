@@ -87,16 +87,14 @@
     justify-content: flex-start;
     gap: 30px;
     .info-menu {
-      padding: 10px 0;
+      padding: 10px 0 10px 34px;
       font-size: 18px;
       font-weight: 600;
       &.ground {
         background: url("../images/darkmode/ico_gnb_my.svg") no-repeat 0 50%;
-        padding-left: 26px;
       }
       &.logout {
         background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
-        padding-left: 32px;
         color: #838383;
       }
     }

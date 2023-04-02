@@ -440,17 +440,15 @@ button {
   gap: 30px;
 }
 .header .info .info-menu {
-  padding: 10px 0;
+  padding: 10px 0 10px 34px;
   font-size: 18px;
   font-weight: 600;
 }
 .header .info .info-menu.ground {
   background: url("../images/darkmode/ico_gnb_my.svg") no-repeat 0 50%;
-  padding-left: 26px;
 }
 .header .info .info-menu.logout {
   background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
-  padding-left: 32px;
   color: #838383;
 }
 .header .btn-theme {
@@ -1012,8 +1010,16 @@ button {
   gap: 36px;
 }
 
+.card-swiper-container {
+  position: relative;
+}
+
 @media (min-width: 744px) and (max-width: 1439px) {
-  .card-container {
+  .card-swiper-container {
+    margin: 0 -50px;
+    padding-bottom: 50px;
+  }
+  .card-swiper-container .swiper {
     padding: 0 50px;
   }
   .card-list {
@@ -1028,7 +1034,11 @@ button {
   }
 }
 @media (max-width: 743px) {
-  .card-container {
+  .card-swiper-container {
+    margin: 0 -27px;
+    padding-bottom: 50px;
+  }
+  .card-swiper-container .swiper {
     padding: 0 27px;
   }
   .card-list {
@@ -1074,9 +1084,11 @@ button {
   --visual-link-border: #000;
   --visual-link-color: #000;
   --visual-link-icon: url("../images/btn_ico_guide.svg");
+  --visual-link-icon-hover: url("../images/darkmode/btn_ico_guide.svg");
   --visual-link-hover-background: #000;
   --visual-link-hover-color: #fff;
-  --visual-link-hover-icon: url("../images/darkmode/btn_ico_guide.svg");
+  --card-icon-hits: url("../images/ico_view_24.svg");
+  --card-hits-hover-icon: url("../images/darkmode/btn_ico_guide.svg");
 }
 
 .dark-theme {
@@ -1084,9 +1096,9 @@ button {
   --visual-link-border: #fff;
   --visual-link-color: #fff;
   --visual-link-icon: url("../images/darkmode/btn_ico_guide.svg");
+  --visual-link-icon-hover: url("../images/btn_ico_guide.svg");
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
-  --visual-link-hover-icon: url("../images/btn_ico_guide.svg");
 }
 
 .main .visual-container {
@@ -1116,9 +1128,9 @@ button {
   transition: all 0.3s;
 }
 .main .visual-container .visual-link:hover {
+  background-image: var(--visual-link-icon-hover);
   border-color: #000;
   background-color: var(--visual-link-hover-background, transparent);
-  background-image: var(--visual-link-hover-icon);
   color: var(--visual-link-hover-color, #000);
 }
 
@@ -1145,9 +1157,6 @@ button {
   font-weight: 500;
   font-size: 24px;
 }
-.main .card-container .card-swiper-container {
-  position: relative;
-}
 
 @media (min-width: 1440px) {
   .main .card:hover {
@@ -1159,12 +1168,19 @@ button {
     padding: 60px;
     color: #000;
   }
+  .main .card:hover .card-hover .card-view.hits {
+    background-image: url("../images/ico_view_24_hover.svg");
+    color: #000;
+  }
   .main .card:hover .card-hover .badge-txt.new,
   .main .card:hover .card-hover .badge-txt.update {
     color: #fff;
   }
   .main .card:hover .card-hover .card-body .card-detail {
     display: block;
+  }
+  .main .card:hover .card-hover .card-foot .foot-author {
+    color: #000;
   }
   .main .card-list .card:nth-child(4n):hover .card-hover,
   .main .swiper-slide-next + .card + .card:hover .card-hover {
@@ -1205,19 +1221,11 @@ button {
     margin-top: 50px;
     margin-bottom: 118px;
   }
-  .main .card-container + .card-container {
-    margin-top: 88px;
-  }
-  .main .card-swiper-container {
-    position: relative;
-    margin: 0 -50px;
-    padding-bottom: 50px;
-  }
-  .main .card-swiper-container .swiper {
+  .main .card-container {
     padding: 0 50px;
   }
-  .main .card-swiper-container .swiper .card-hover .card-body .card-detail, .main .card-swiper-container .swiper:hover .card-hover .card-body .card-detail {
-    display: none;
+  .main .card-container + .card-container {
+    margin-top: 88px;
   }
 }
 @media (max-width: 743px) {
@@ -1232,18 +1240,11 @@ button {
     line-height: 42px;
     font-size: 30px;
   }
-  .main .card-container + .card-container {
-    margin-top: 60px;
-  }
-  .main .card-swiper-container {
-    margin: 0 -27px;
-    padding-bottom: 50px;
-  }
-  .main .card-swiper-container .swiper {
+  .main .card-container {
     padding: 0 27px;
   }
-  .main .card-swiper-container .swiper .card-hover .card-body .card-detail, .main .card-swiper-container .swiper:hover .card-hover .card-body .card-detail {
-    display: none;
+  .main .card-container + .card-container {
+    margin-top: 60px;
   }
 }
 

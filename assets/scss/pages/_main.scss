@@ -5,18 +5,20 @@
   --visual-link-border: #000;
   --visual-link-color: #000;
   --visual-link-icon: url("../images/btn_ico_guide.svg");
+  --visual-link-icon-hover: url("../images/darkmode/btn_ico_guide.svg");
   --visual-link-hover-background: #000;
   --visual-link-hover-color: #fff;
-  --visual-link-hover-icon: url("../images/darkmode/btn_ico_guide.svg");
+  --card-icon-hits: url("../images/ico_view_24.svg");
+  --card-hits-hover-icon: url("../images/darkmode/btn_ico_guide.svg");
 }
 .dark-theme {
   --visual-link-background: #000;
   --visual-link-border: #fff;
   --visual-link-color: #fff;
   --visual-link-icon: url("../images/darkmode/btn_ico_guide.svg");
+  --visual-link-icon-hover: url("../images/btn_ico_guide.svg");
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
-  --visual-link-hover-icon: url("../images/btn_ico_guide.svg");
 }
 // visual
 .main .visual-container {
@@ -44,9 +46,9 @@
     line-height: 26px;
     transition: all 0.3s;
     &:hover {
+      background-image: var(--visual-link-icon-hover);
       border-color: #000;
       background-color: var(--visual-link-hover-background, transparent);
-      background-image: var(--visual-link-hover-icon);
       color: var(--visual-link-hover-color, #000);
     }
   }
@@ -73,9 +75,6 @@
       font-size: 24px;
     }
   }
-  .card-swiper-container {
-    position: relative;
-  }
 }
 // responsive
 .main {
@@ -88,12 +87,19 @@
         height: 480px;
         padding: 60px;
         color: #000;
+        .card-view.hits{
+          background-image: url("../images/ico_view_24_hover.svg");
+          color: #000;
+        }
         .badge-txt.new,
         .badge-txt.update {
           color: #fff;
         }
         .card-body .card-detail {
           display: block;
+        }
+        .card-foot .foot-author{
+          color: #000;
         }
       }
     }
@@ -136,22 +142,11 @@
       margin-top: 50px;
       margin-bottom: 118px;
     }
+    .card-container {
+      padding: 0 50px;
+    }
     .card-container + .card-container {
       margin-top: 88px;
-    }
-    .card-swiper-container {
-      position: relative;
-      margin: 0 -50px;
-      padding-bottom: 50px;
-      .swiper {
-        padding: 0 50px;
-        .card-hover,
-        &:hover .card-hover {
-          .card-body .card-detail {
-            display: none;
-          }
-        }
-      }
     }
   }
   @include mobile {
@@ -166,22 +161,11 @@
         font-size: 30px;
       }
     }
+    .card-container {
+      padding: 0 27px;
+    }
     .card-container + .card-container {
       margin-top: 60px;
-    }
-    // swiper
-    .card-swiper-container {
-      margin: 0 -27px;
-      padding-bottom: 50px;
-      .swiper {
-        padding: 0 27px;
-        .card-hover,
-        &:hover .card-hover {
-          .card-body .card-detail {
-            display: none;
-          }
-        }
-      }
     }
   }
 }

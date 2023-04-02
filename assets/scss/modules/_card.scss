@@ -116,7 +116,7 @@
       height: 72px;
       margin-left: auto;
     }
-    .foot-api{
+    .foot-api {
       display: inline-flex;
       gap: 5px;
     }
@@ -191,10 +191,19 @@
   gap: 36px;
 }
 
+// swiper
+.card-swiper-container {
+  position: relative;
+}
+
 // responsive
 @include tablet-only {
-  .card-container {
-    padding: 0 50px;
+  .card-swiper-container {
+    margin: 0 -50px;
+    padding-bottom: 50px;
+    .swiper {
+      padding: 0 50px;
+    }
   }
   .card-list {
     flex-wrap: wrap;
@@ -207,8 +216,12 @@
   }
 }
 @include mobile {
-  .card-container {
-    padding: 0 27px;
+  .card-swiper-container {
+    margin: 0 -27px;
+    padding-bottom: 50px;
+    .swiper {
+      padding: 0 27px;
+    }
   }
   .card-list {
     flex-direction: column;
