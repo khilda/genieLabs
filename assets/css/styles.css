@@ -225,6 +225,7 @@ body {
   font-size: 16px;
   color: var(--color, #000);
   line-height: 28px;
+  word-break: keep-all;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -240,6 +241,7 @@ button {
   --header-gnb-toggle: #ccc;
   --header-gnb-toggle-icon: #fff;
   --header-gnb-toggle-border: transparent;
+  --svg-icon-color: #000;
 }
 
 .dark-theme {
@@ -249,6 +251,7 @@ button {
   --header-gnb-toggle: transparent;
   --header-gnb-toggle-icon: #fff;
   --header-gnb-toggle-border: #fff;
+  --svg-icon-color: #fff;
 }
 
 .wrap {
@@ -261,6 +264,22 @@ button {
 .dark-theme {
   background-color: var(--background, #000);
   color: var(--color, #fff);
+}
+
+:root {
+  --gnb-icon-open: url("../images/ico_gnb_open.svg");
+  --gnb-icon-close: url("../images/ico_gnb_close.svg");
+  --gnb-icon-ground: url("../images/ico_gnb_my.svg");
+  --gnb-icon-menu: url("../images/ico_arrow_42.svg");
+  --gnb-mobile-background: #fff;
+}
+
+.dark-theme {
+  --gnb-icon-open: url("../images/darkmode/ico_gnb_open.svg");
+  --gnb-icon-close: url("../images/darkmode/ico_gnb_close.svg");
+  --gnb-icon-ground: url("../images/darkmode/ico_gnb_my.svg");
+  --gnb-icon-menu: url("../images/darkmode/ico_arrow_42.svg");
+  --gnb-mobile-background: #000;
 }
 
 .header {
@@ -286,7 +305,7 @@ button {
   color: transparent;
 }
 .header .btn-gnb.open {
-  background-image: url("../images/ico_gnb.svg");
+  background-image: var(--gnb-icon-open);
   width: 20px;
   height: 72px;
 }
@@ -294,7 +313,7 @@ button {
   position: absolute;
   top: 40px;
   right: 40px;
-  background-image: url("../images/ico_gnb_close.svg");
+  background-image: var(--gnb-icon-close);
   width: 22px;
   height: 22px;
 }
@@ -333,7 +352,7 @@ button {
   font-weight: 700;
 }
 .header .gnb .gnb-menu:hover {
-  font-weight: 700;
+  color: #4ff3ff;
 }
 .header .info {
   display: -webkit-box;
@@ -353,7 +372,7 @@ button {
   font-weight: 600;
 }
 .header .info .info-menu.ground {
-  background: url("../images/ico_gnb_my.svg") no-repeat 0 50%;
+  background: var(--gnb-icon-ground) no-repeat 0 50%;
   padding-left: 26px;
 }
 .header .info .info-menu.logout {
@@ -369,8 +388,6 @@ button {
   width: 80px;
   height: 40px;
   font-size: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .header .btn-theme::before {
   content: "";
@@ -382,6 +399,8 @@ button {
   border-radius: 28px;
   width: 28px;
   height: 28px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .header .btn-theme::after {
   content: "W";
@@ -395,6 +414,8 @@ button {
   font-weight: 700;
   text-align: center;
   color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .header .btn-theme.toggle::before {
   left: 44px;
@@ -438,7 +459,7 @@ button {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-color: #fff;
+    background-color: var(--gnb-mobile-background);
     padding: 0;
     width: 100vw;
     height: 100vh;
@@ -474,7 +495,7 @@ button {
     top: 0;
     right: 40px;
     display: block;
-    background: url("../images/ico_arrow_42.svg") no-repeat 50% 50%/contain;
+    background: var(--gnb-icon-menu) no-repeat 50% 50%/contain;
     width: 27px;
     height: 54px;
   }
@@ -488,7 +509,7 @@ button {
   .header .info .info-menu.ground {
     top: 30px;
     left: 40px;
-    border: 2px solid #000;
+    border: 2px solid var(--visual-link-border);
     border-radius: 80px;
     background-position: 20px 50%;
     padding: 10px 20px 10px 44px;
@@ -582,7 +603,6 @@ button {
 .badge {
   display: inline-block;
   font-weight: 700;
-  vertical-align: middle;
   line-height: 1;
   border-radius: 80px;
 }
@@ -599,18 +619,36 @@ button {
 }
 
 .txt-new {
+  font-size: 18px;
   color: #ff6b00;
 }
 .txt-update {
+  font-size: 18px;
   color: #00d1ff;
 }
 
 :root {
   --card-background: #f4f4f4;
+  --card-icon-bookmark: url("../images/ico_bookmark_b.svg");
+  --card-icon-bookmark-active: url("../images/ico_bookmark_b_active.svg");
+  --card-icon-arrow: url("../images/ico_arrow_42.svg");
+  --card-icon-midm: url("../images/img_midm.svg");
+  --card-icon-hits: url("../images/ico_view_24.svg");
+  --card-icon-like: url("../images/ico_like_24.svg");
+  --card-icon-commnet: url("../images/ico_comment_24.svg");
+  --card-view-color: #000;
 }
 
 .dark-theme {
   --card-background: #1f1f1f;
+  --card-icon-bookmark: url("../images/darkmode/ico_bookmark.svg");
+  --card-icon-bookmark-active: url("../images/darkmode/ico_bookmark_active.svg");
+  --card-icon-arrow: url("../images/darkmode/ico_arrow_42.svg");
+  --card-icon-midm: url("../images/darkmode/img_midm.svg");
+  --card-icon-hits: url("../images/darkmode/ico_view_24.svg");
+  --card-icon-like: url("../images/darkmode/ico_like_24.svg");
+  --card-icon-commnet: url("../images/darkmode/ico_comment_24.svg");
+  --card-view-color: #787878;
 }
 
 .card {
@@ -633,14 +671,41 @@ button {
   gap: 11px;
   margin-bottom: 28px;
 }
+.card .card-head .card-view {
+  background: no-repeat 0% 50%;
+  padding-left: 31px;
+  color: var(--card-view-color);
+}
+.card .card-head .card-view .count {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.card .card-head .card-view.hits {
+  background-image: var(--card-icon-hits);
+  color: #787878;
+}
+.card .card-head .card-view.like {
+  background-image: var(--card-icon-like);
+}
+.card .card-head .card-view.comment {
+  background-image: var(--card-icon-commnet);
+}
+.card .card-head .card-view + .badge {
+  margin-left: auto;
+}
 .card .card-head .card-bookmark {
-  background: url("../images/ico_bookmark_b.svg") no-repeat 100% 50%;
+  background: no-repeat 100% 50%;
+  background-image: var(--card-icon-bookmark);
   width: 40px;
   height: 40px;
   margin-left: auto;
   padding: 20px 0;
   font-size: 0;
   color: transparent;
+}
+.card .card-head .card-bookmark.is-active {
+  background-image: var(--card-icon-bookmark-active);
 }
 .card .card-body {
   display: block;
@@ -678,21 +743,34 @@ button {
 }
 .card .card-foot.link::before {
   content: "";
-  display: block;
   position: absolute;
   left: 40px;
   bottom: 44px;
-  background: url("../images/ico_arrow_42.svg") no-repeat 50% 50%;
+  display: block;
+  background: var(--card-icon-arrow) no-repeat 50% 50%;
   width: 42px;
   height: 42px;
 }
 .card .card-foot.midm::after {
   content: "";
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
   display: block;
-  background: url("../images/img_midm.svg") no-repeat 50% 50%;
+  background: var(--card-icon-midm) no-repeat 50% 50%;
   width: 72px;
   height: 72px;
   margin-left: auto;
+}
+.card .card-foot .foot-author {
+  margin-left: auto;
+  font-size: 18px;
+  text-align: right;
+  color: #787878;
+}
+.card .card-foot .foot-author > dt {
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .card .card-hover {
@@ -736,7 +814,7 @@ button {
 }
 .card-container .card-title .title-link {
   background: url("../images/ico_link_20.svg") no-repeat 100% 50%;
-  padding-right: 42px;
+  padding-right: 29px;
   font-size: 24px;
   font-weight: 500;
   color: #787878;
@@ -801,9 +879,9 @@ button {
     gap: 40px;
   }
   .card {
-    max-width: 606px;
-    width: calc(50vw - 70px);
+    width: calc(50vw - (100vw - 100%) / 2 - 20px);
     height: calc(50vw - 70px);
+    max-height: 321px;
   }
   .card .card-hover .card-body .card-detail, .card:hover .card-hover .card-body .card-detail {
     display: none;
@@ -846,12 +924,7 @@ button {
     gap: 30px;
   }
   .card {
-    max-width: none;
-    width: calc(100vw - 54px);
-    height: calc(100vw - 54px);
-  }
-  .card .card-hover, .card:hover .card-hover {
-    width: calc(100vw - 54px);
+    width: calc(100vw - (100vw - 100%));
     height: calc(100vw - 54px);
   }
 }
@@ -885,6 +958,7 @@ button {
   --visual-link-background: transparent;
   --visual-link-border: #000;
   --visual-link-color: #000;
+  --visual-link-icon: url("../images/btn_ico_guide.svg");
   --visual-link-hover-background: #000;
   --visual-link-hover-color: #fff;
 }
@@ -893,6 +967,7 @@ button {
   --visual-link-background: #000;
   --visual-link-border: #fff;
   --visual-link-color: #fff;
+  --visual-link-icon: url("../images/darkmode/btn_ico_guide.svg");
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
 }
@@ -915,9 +990,8 @@ button {
 .visual-container .visual-link {
   display: inline-block;
   border: 2px solid var(--visual-link-border, #000);
-  background: var(--visual-link-background, transparent);
   border-radius: 80px;
-  background: url("../images/btn_ico_guide.svg") no-repeat 41px 50%;
+  background: var(--visual-link-background, transparent) var(--visual-link-icon) no-repeat 41px 50%;
   padding: 15px 40px 15px 65px;
   font-weight: 800;
   line-height: 26px;

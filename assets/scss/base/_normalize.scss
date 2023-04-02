@@ -3,8 +3,9 @@ body {
   font-family: $font-famliy;
   font-weight: $font-weight;
   font-size: $font-size;
-  color: var(--color, #000);;
+  color: var(--color, #000);
   line-height: $line-height;
+  word-break: keep-all;
   transition: all 0.3s;
 }
 
@@ -19,6 +20,7 @@ button {
   --header-gnb-toggle: #ccc;
   --header-gnb-toggle-icon: #fff;
   --header-gnb-toggle-border: transparent;
+  --svg-icon-color: #000;
 }
 .dark-theme {
   --background: #000;
@@ -27,4 +29,5 @@ button {
   --header-gnb-toggle: transparent;
   --header-gnb-toggle-icon: #fff;
   --header-gnb-toggle-border: #fff;
+  --svg-icon-color: #fff;
 }

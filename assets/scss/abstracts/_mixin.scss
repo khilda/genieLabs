@@ -31,3 +31,8 @@
     @content;
   }
 }
+
+
+@function getWidth(){
+  @return calc(100vw - (100vw - 100%))
+}
