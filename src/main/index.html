@@ -13,7 +13,7 @@
     <div class="wrap main">
       <header class="header">
         <a href="#" class="logo">GenieGround</a>
-        <button type="button" class="gnb-btn">메뉴열기</button>
+        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
         <div class="header-menu">
           <div class="gnb">
             <a href="#" class="gnb-menu">Docs</a>
@@ -26,6 +26,7 @@
             <a href="#" class="info-menu ground">MyGround</a>
             <a href="#" class="info-menu logout">Logout</a>
           </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
         </div>
       </header>
       <main class="container">
@@ -40,7 +41,7 @@
             <h5 class="title-tit">Demo</h5>
             <a href="#" class="title-link">See All</a>
           </div>
-          <div class="card-list">
+          <div class="card-list card-hover-1">
             <a href="#" class="card">
               <div class="card-hover">
                 <div class="card-head">
@@ -104,7 +105,7 @@
             <h5 class="title-tit">Sample Code</h5>
             <a href="#" class="title-link">See All</a>
           </div>
-          <div class="card-list hover-primary1">
+          <div class="card-list card-hover-2">
             <a href="#" class="card">
               <div class="card-hover">
                 <div class="card-head">
@@ -168,7 +169,7 @@
             <a href="#" class="title-link">See All</a>
           </div>
           <div class="card-swiper-container">
-            <article id="cardSwiper" class="swiper">
+            <article id="cardSwiper" class="swiper card-hover-3">
               <div class="swiper-wrapper card-swiper-wrapper">
                 <a href="#" class="swiper-slide card">
                   <div class="card-hover">

@@ -9,14 +9,26 @@
     font-size: 24px;
     font-weight: 800;
   }
-  .gnb-btn {
+  .btn-gnb {
     display: none;
-    background: url("../images/ico_gnb.svg") no-repeat 50% 50%;
+    background: no-repeat 50% 50%;
     margin-left: auto;
     width: 20px;
     height: 72px;
     font-size: 0;
     color: transparent;
+    &.open {
+      margin-left: auto;
+      background-image: url("../images/ico_gnb.svg");
+    }
+    &.close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      background-image: url("../images/ico_gnb_close.svg");
+      width: 22px;
+      height: 22px;
+    }
   }
   .header-menu {
     flex: 1;
@@ -44,11 +56,18 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 30px;
     .info-menu {
-      padding: 10px 0 10px 26px;
+      padding: 10px 0;
       font-size: 18px;
       font-weight: 600;
+      &.ground {
+        background: url("../images/ico_gnb_my.svg") no-repeat 0 50%;
+        padding-left: 26px;
+      }
       &.logout {
+        background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
+        padding-left: 32px;
         color: #838383;
       }
     }
@@ -63,7 +82,7 @@
     .logo {
       font-size: 18px;
     }
-    .gnb-btn {
+    .btn-gnb {
       display: block;
     }
     .header-menu {
@@ -74,7 +93,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       background-color: #fff;
-      padding: 40px;
+      padding: 0;
       width: 100vw;
       height: 100vh;
       z-index: 5;
@@ -86,21 +105,44 @@
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
-      margin-top: 80px;
+      margin-top: 92px;
       .gnb-menu {
+        position: relative;
         display: block;
+        padding: 13px 40px;
         width: 100%;
+        font-weight: 400;
+        &:hover {
+          font-weight: 700;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 40px;
+            display: block;
+            background: url("../images/ico_arrow_42.svg") no-repeat 50% 50% / contain;
+            width: 27px;
+            height: 54px;
+          }
+        }
       }
     }
     .info {
       align-self: flex-end;
       .info-menu {
+        position: absolute;
         &.ground {
-          position: absolute;
           top: 30px;
-          right: 40px;
+          left: 40px;
+          border: 2px solid #000;
+          border-radius: 80px;
+          background-position: 20px 50%;
+          padding: 10px 20px 10px 44px;
+          line-height: 22px;
         }
         &.logout {
+          right: 40px;
+          bottom: 56px;
         }
       }
     }

@@ -4,21 +4,6 @@
   background-color: #f4f4f4;
   width: 321px;
   height: 321px;
-  .card-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 40px;
-    transition: all 0.3s;
-  }
-  &:nth-child(4n) .card-hover {
-    left: auto;
-    right: 0;
-  }
   .card-head {
     display: flex;
     justify-content: flex-start;
@@ -60,9 +45,12 @@
     &.link::before {
       content: "";
       display: block;
+      position: absolute;
+      left: 40px;
+      bottom: 44px;
       background: url("../images/ico_arrow_42.svg") no-repeat 50% 50%;
       width: 42px;
-      height: 72px;
+      height: 42px;
     }
     &.midm::after {
       content: "";
@@ -74,7 +62,26 @@
     }
   }
 }
-
+// hover
+.card {
+  .card-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid transparent;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    transition: all 0.3s;
+  }
+  &:nth-child(4n) .card-hover {
+    left: auto;
+    right: 0;
+  }
+}
+// layout
 .card-container {
   .card-title {
     display: flex;
@@ -95,18 +102,19 @@
   }
 }
 .card-list {
-  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 36px;
 }
-
+.card-swiper-container {
+  position: relative;
+}
+// responsive
 @include desktop {
   // interaction
   .card:hover {
-    z-index: 1;
+    z-index: 10;
     .card-hover {
-      background-color: $color-primary-3;
       width: 480px;
       height: 480px;
       padding: 60px;
@@ -119,6 +127,15 @@
       }
     }
   }
+  .card-hover-1 .card:hover .card-hover {
+    background-color: $color-primary-1;
+  }
+  .card-hover-2 .card:hover .card-hover {
+    background-color: $color-primary-2;
+  }
+  .card-hover-3 .card:hover .card-hover {
+    background-color: $color-primary-3;
+  }
 }
 @include tablet {
   .card-container {
@@ -129,7 +146,7 @@
     position: relative;
     margin: 0 -50px;
     padding-bottom: 50px;
-    .swiper{
+    .swiper {
       padding: 0 50px;
     }
   }
@@ -143,18 +160,27 @@
     height: calc(50vw - 79px);
     .card-hover,
     &:hover .card-hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      width: calc(50vw - 79px);
-      height: calc(50vw - 79px);
-      padding: 40px;
-      transition: all 0.3s;
       .card-body .card-detail {
         display: none;
       }
+    }
+  }
+  .card-hover-1 .card:hover .card-hover {
+    border-color: $color-primary-1;
+    .card-txt {
+      color: $color-primary-1;
+    }
+  }
+  .card-hover-2 .card:hover .card-hover {
+    border-color: $color-primary-2;
+    .card-txt {
+      color: $color-primary-2;
+    }
+  }
+  .card-hover-3 .card:hover .card-hover {
+    border-color: $color-primary-3;
+    .card-txt {
+      color: $color-primary-3;
     }
   }
 }
@@ -166,7 +192,7 @@
   .card-swiper-container {
     position: relative;
     margin: 0 -27px;
-    .swiper{
+    .swiper {
       padding: 0 27px;
     }
   }
