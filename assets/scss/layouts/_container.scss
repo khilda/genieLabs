@@ -33,20 +33,26 @@
       font-size: 18px;
       font-weight: 400;
     }
-    // images
-    &.demo {
-      background-image: url("../images/img_page_title_demo.svg");
-    }
-    &.sampleCode{
-      background-image: url("../images/img_page_title_sampleCode.svg");
-    }
   }
 }
+
+// images
+.demo .container-header {
+  background-image: url("../images/img_page_title_demo.svg");
+}
+.sampleCode .container-header {
+  background-image: url("../images/img_page_title_sampleCode.svg");
+}
+.applications .container-header {
+  background-image: url("../images/img_page_title_applications.svg");
+}
+
+
 @include tablet {
   .container {
     padding: 0 50px;
   }
-  .main .container{
+  .main .container {
     padding: 0;
   }
 }

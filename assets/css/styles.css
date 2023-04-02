@@ -293,11 +293,17 @@ button {
   font-size: 18px;
   font-weight: 400;
 }
-.container-header.demo {
+
+.demo .container-header {
   background-image: url("../images/img_page_title_demo.svg");
 }
-.container-header.sampleCode {
+
+.sampleCode .container-header {
   background-image: url("../images/img_page_title_sampleCode.svg");
+}
+
+.applications .container-header {
+  background-image: url("../images/img_page_title_applications.svg");
 }
 
 @media (max-width: 1439px) {
@@ -1239,4 +1245,11 @@ button {
   .main .card-swiper-container .swiper .card-hover .card-body .card-detail, .main .card-swiper-container .swiper:hover .card-hover .card-body .card-detail {
     display: none;
   }
+}
+
+.applications .card-container + .card-container {
+  margin-top: 88px;
+}
+.applications .card-swiper-container {
+  position: relative;
 }
