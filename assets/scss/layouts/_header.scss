@@ -6,6 +6,7 @@
   --gnb-icon-ground: url("../images/ico_gnb_my.svg");
   --gnb-icon-menu: url("../images/ico_arrow_42.svg");
   --gnb-mobile-background: #fff;
+  --main-header-color: #000;
 }
 .dark-theme {
   --gnb-icon-open: url("../images/darkmode/ico_gnb_open.svg");
@@ -13,13 +14,16 @@
   --gnb-icon-ground: url("../images/darkmode/ico_gnb_my.svg");
   --gnb-icon-menu: url("../images/darkmode/ico_arrow_42.svg");
   --gnb-mobile-background: #000;
+  --main-header-color: #fff;
 }
 
 .header {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 33px 0;
+  background-color: #000;
+  color: #fff;
+  padding: 33px 50px;
   .logo {
     padding: 10px 0;
     margin-right: 60px;
@@ -77,7 +81,7 @@
       font-size: 18px;
       font-weight: 600;
       &.ground {
-        background: var(--gnb-icon-ground) no-repeat 0 50%;
+        background: url("../images/darkmode/ico_gnb_my.svg") no-repeat 0 50%;
         padding-left: 26px;
       }
       &.logout {
@@ -130,6 +134,16 @@
         right: 40px;
       }
     }
+  }
+}
+
+// main
+.main .header {
+  background-color: transparent;
+  padding: 33px 0;
+  color: var(--main-header-color);
+  .info .info-menu.ground {
+    background-image: var(--gnb-icon-ground);
   }
 }
 

@@ -146,6 +146,24 @@
     right: 0;
   }
 }
+.card-hover-1 .card:hover .card-hover {
+  border-color: $color-primary-1;
+  .card-txt {
+    color: $color-primary-1;
+  }
+}
+.card-hover-2 .card:hover .card-hover {
+  border-color: $color-primary-2;
+  .card-txt {
+    color: $color-primary-2;
+  }
+}
+.card-hover-3 .card:hover .card-hover {
+  border-color: $color-primary-3;
+  .card-txt {
+    color: $color-primary-3;
+  }
+}
 // layout
 .card-container {
   .card-title {
@@ -169,40 +187,13 @@
 .card-list {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 36px;
 }
 .card-swiper-container {
   position: relative;
 }
 // responsive
-@include desktop {
-  // interaction
-  .card:hover {
-    z-index: 10;
-    .card-hover {
-      width: 480px;
-      height: 480px;
-      padding: 60px;
-      color: #000;
-      .badge.txt-new,
-      .badge.txt-update {
-        color: #fff;
-      }
-      .card-body .card-detail {
-        display: block;
-      }
-    }
-  }
-  .card-hover-1 .card:hover .card-hover {
-    background-color: $color-primary-1;
-  }
-  .card-hover-2 .card:hover .card-hover {
-    background-color: $color-primary-2;
-  }
-  .card-hover-3 .card:hover .card-hover {
-    background-color: $color-primary-3;
-  }
-}
 @include tablet {
   .card-container {
     padding: 0 50px;
@@ -229,24 +220,6 @@
       .card-body .card-detail {
         display: none;
       }
-    }
-  }
-  .card-hover-1 .card:hover .card-hover {
-    border-color: $color-primary-1;
-    .card-txt {
-      color: $color-primary-1;
-    }
-  }
-  .card-hover-2 .card:hover .card-hover {
-    border-color: $color-primary-2;
-    .card-txt {
-      color: $color-primary-2;
-    }
-  }
-  .card-hover-3 .card:hover .card-hover {
-    border-color: $color-primary-3;
-    .card-txt {
-      color: $color-primary-3;
     }
   }
 }

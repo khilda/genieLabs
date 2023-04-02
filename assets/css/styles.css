@@ -254,16 +254,40 @@ button {
   --svg-icon-color: #fff;
 }
 
+.dark-theme {
+  color: var(--color, #fff);
+}
+
 .wrap {
   position: relative;
+  background-color: #ededed;
   width: 100%;
+}
+.wrap.main {
+  background-color: var(--background, #000);
+  max-width: 1392px;
+  margin: 0 auto;
+}
+.wrap .container {
   max-width: 1392px;
   margin: 0 auto;
 }
 
-.dark-theme {
-  background-color: var(--background, #000);
-  color: var(--color, #fff);
+.container-header {
+  background: #000 no-repeat 100% 50%/contain;
+  padding: 64px 60px;
+  color: #fff;
+}
+.container-header .page-title {
+  margin-bottom: 14px;
+  line-height: 55px;
+  font-size: 48px;
+  font-weight: 700;
+}
+.container-header .page-txt {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 :root {
@@ -272,6 +296,7 @@ button {
   --gnb-icon-ground: url("../images/ico_gnb_my.svg");
   --gnb-icon-menu: url("../images/ico_arrow_42.svg");
   --gnb-mobile-background: #fff;
+  --main-header-color: #000;
 }
 
 .dark-theme {
@@ -280,6 +305,7 @@ button {
   --gnb-icon-ground: url("../images/darkmode/ico_gnb_my.svg");
   --gnb-icon-menu: url("../images/darkmode/ico_arrow_42.svg");
   --gnb-mobile-background: #000;
+  --main-header-color: #fff;
 }
 
 .header {
@@ -290,7 +316,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 33px 0;
+  background-color: #000;
+  color: #fff;
+  padding: 33px 50px;
 }
 .header .logo {
   padding: 10px 0;
@@ -372,7 +400,7 @@ button {
   font-weight: 600;
 }
 .header .info .info-menu.ground {
-  background: var(--gnb-icon-ground) no-repeat 0 50%;
+  background: url("../images/darkmode/ico_gnb_my.svg") no-repeat 0 50%;
   padding-left: 26px;
 }
 .header .info .info-menu.logout {
@@ -423,6 +451,15 @@ button {
 .header .btn-theme.toggle::after {
   content: "B";
   right: 40px;
+}
+
+.main .header {
+  background-color: transparent;
+  padding: 33px 0;
+  color: var(--main-header-color);
+}
+.main .header .info .info-menu.ground {
+  background-image: var(--gnb-icon-ground);
 }
 
 @media (min-width: 1440px) {
@@ -541,6 +578,8 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 1392px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 64px;
   color: var(--footer-color, #787878);
@@ -588,6 +627,49 @@ button {
     margin-top: 20px;
   }
 }
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 13px;
+  margin-top: 41px;
+  margin-bottom: 30px;
+  color: #9e9e9e;
+}
+.breadcrumb .breadcrumb-link {
+  position: relative;
+  padding-left: 19px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.breadcrumb .breadcrumb-link:not(:first-child)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 2px);
+  background-color: #9e9e9e;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
+.breadcrumb .breadcrumb-link:last-child {
+  color: #333;
+}
+.breadcrumb .breadcrumb-link:first-child {
+  padding-left: 28px;
+}
+.breadcrumb .breadcrumb-link:first-child::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  background: url("../images/ico_breadcrumb.svg") no-repeat 50% 50%;
+  width: 18px;
+  height: 20px;
+}
+
 :root {
   --badge-white-background: #fff;
   --badge-outline-border: #000;
@@ -796,6 +878,27 @@ button {
   right: 0;
 }
 
+.card-hover-1 .card:hover .card-hover {
+  border-color: #13de48;
+}
+.card-hover-1 .card:hover .card-hover .card-txt {
+  color: #13de48;
+}
+
+.card-hover-2 .card:hover .card-hover {
+  border-color: #4ff3ff;
+}
+.card-hover-2 .card:hover .card-hover .card-txt {
+  color: #4ff3ff;
+}
+
+.card-hover-3 .card:hover .card-hover {
+  border-color: #ff6800;
+}
+.card-hover-3 .card:hover .card-hover .card-txt {
+  color: #ff6800;
+}
+
 .card-container .card-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -827,6 +930,8 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 36px;
 }
 
@@ -834,33 +939,6 @@ button {
   position: relative;
 }
 
-@media (min-width: 1440px) {
-  .card:hover {
-    z-index: 10;
-  }
-  .card:hover .card-hover {
-    width: 480px;
-    height: 480px;
-    padding: 60px;
-    color: #000;
-  }
-  .card:hover .card-hover .badge.txt-new,
-  .card:hover .card-hover .badge.txt-update {
-    color: #fff;
-  }
-  .card:hover .card-hover .card-body .card-detail {
-    display: block;
-  }
-  .card-hover-1 .card:hover .card-hover {
-    background-color: #13de48;
-  }
-  .card-hover-2 .card:hover .card-hover {
-    background-color: #4ff3ff;
-  }
-  .card-hover-3 .card:hover .card-hover {
-    background-color: #ff6800;
-  }
-}
 @media (max-width: 1439px) {
   .card-container {
     padding: 0 50px;
@@ -885,24 +963,6 @@ button {
   }
   .card .card-hover .card-body .card-detail, .card:hover .card-hover .card-body .card-detail {
     display: none;
-  }
-  .card-hover-1 .card:hover .card-hover {
-    border-color: #13de48;
-  }
-  .card-hover-1 .card:hover .card-hover .card-txt {
-    color: #13de48;
-  }
-  .card-hover-2 .card:hover .card-hover {
-    border-color: #4ff3ff;
-  }
-  .card-hover-2 .card:hover .card-hover .card-txt {
-    color: #4ff3ff;
-  }
-  .card-hover-3 .card:hover .card-hover {
-    border-color: #ff6800;
-  }
-  .card-hover-3 .card:hover .card-hover .card-txt {
-    color: #ff6800;
   }
 }
 @media (max-width: 743px) {
@@ -972,7 +1032,7 @@ button {
   --visual-link-hover-color: #000;
 }
 
-.visual-container {
+.main .visual-container {
   position: relative;
   background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
   width: 100%;
@@ -981,13 +1041,13 @@ button {
   margin-bottom: 109px;
   text-align: center;
 }
-.visual-container .visual-text {
+.main .visual-container .visual-text {
   margin-bottom: 35px;
   line-height: 70px;
   font-size: 55px;
   font-weight: 700;
 }
-.visual-container .visual-link {
+.main .visual-container .visual-link {
   display: inline-block;
   border: 2px solid var(--visual-link-border, #000);
   border-radius: 80px;
@@ -998,39 +1058,76 @@ button {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.visual-container .visual-link:hover {
+.main .visual-container .visual-link:hover {
   border-color: #000;
   background-color: var(--visual-link-hover-background, transparent);
   color: var(--visual-link-hover-color, #000);
 }
-
-.card-container + .card-container {
+.main .card-container + .card-container {
   margin-top: 79px;
 }
-
+@media (min-width: 1440px) {
+  .main .card:hover {
+    z-index: 10;
+  }
+  .main .card:hover .card-hover {
+    width: 480px;
+    height: 480px;
+    padding: 60px;
+    color: #000;
+  }
+  .main .card:hover .card-hover .badge.txt-new,
+  .main .card:hover .card-hover .badge.txt-update {
+    color: #fff;
+  }
+  .main .card:hover .card-hover .card-body .card-detail {
+    display: block;
+  }
+  .main .card-hover-1 .card:hover .card-hover {
+    border-color: transparent;
+    background-color: #13de48;
+  }
+  .main .card-hover-1 .card:hover .card-hover .card-txt {
+    color: #000;
+  }
+  .main .card-hover-2 .card:hover .card-hover {
+    border-color: transparent;
+    background-color: #4ff3ff;
+  }
+  .main .card-hover-2 .card:hover .card-hover .card-txt {
+    color: #000;
+  }
+  .main .card-hover-3 .card:hover .card-hover {
+    border-color: transparent;
+    background-color: #ff6800;
+  }
+  .main .card-hover-3 .card:hover .card-hover .card-txt {
+    color: #000;
+  }
+}
 @media (min-width: 744px) and (max-width: 1439px) {
-  .visual-container {
+  .main .visual-container {
     height: 427px;
     margin-top: 50px;
     margin-bottom: 118px;
   }
-  .card-container + .card-container {
+  .main .card-container + .card-container {
     margin-top: 88px;
   }
 }
 @media (max-width: 743px) {
-  .visual-container {
+  .main .visual-container {
     background: url("../images/img_visual_main_m.svg") no-repeat 50% 100%;
     height: 450px;
     margin-top: 50px;
     margin-bottom: 40px;
   }
-  .visual-container .visual-text {
+  .main .visual-container .visual-text {
     margin-bottom: 30px;
     line-height: 42px;
     font-size: 30px;
   }
-  .card-container + .card-container {
+  .main .card-container + .card-container {
     margin-top: 60px;
   }
 }
