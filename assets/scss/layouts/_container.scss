@@ -32,5 +32,9 @@
       font-size: 18px;
       font-weight: 400;
     }
+    // images
+    &.demo{
+      background-image: url('../images/');
+    }
   }
 }

@@ -1,12 +1,14 @@
 html,
 body {
+  background-color: var(--background);
   font-family: $font-famliy;
   font-weight: $font-weight;
   font-size: $font-size;
   color: var(--color, #000);
   line-height: $line-height;
   word-break: keep-all;
-  transition: all 0.3s;
+  transition: color 0.3s;
+  transition-delay: 0s;
 }
 
 button {

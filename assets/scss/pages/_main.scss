@@ -7,6 +7,7 @@
   --visual-link-icon: url("../images/btn_ico_guide.svg");
   --visual-link-hover-background: #000;
   --visual-link-hover-color: #fff;
+  --visual-link-hover-icon: url("../images/darkmode/btn_ico_guide.svg");
 }
 .dark-theme {
   --visual-link-background: #000;
@@ -15,6 +16,7 @@
   --visual-link-icon: url("../images/darkmode/btn_ico_guide.svg");
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
+  --visual-link-hover-icon: url("../images/btn_ico_guide.svg");
 }
 .main {
   .visual-container {
@@ -44,6 +46,7 @@
       &:hover {
         border-color: #000;
         background-color: var(--visual-link-hover-background, transparent);
+        background-image: var(--visual-link-hover-icon);
         color: var(--visual-link-hover-color, #000);
       }
     }
