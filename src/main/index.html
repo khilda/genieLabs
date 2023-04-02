@@ -162,66 +162,88 @@
           </div>
         </section>
         <!-- Applications 영역 -->
-        <section class="card-container">
+        <section class="card-container card-swiper">
           <div class="card-title">
             <h5 class="title-tit">Applications</h5>
             <a href="#" class="title-link">See All</a>
           </div>
           <div class="card-list">
-            <a href="#" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="badge badge-outline">Demo</em>
-                  <button class="card-bookmark">즐겨찾기</button>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">의도 분류<br>(Fine Tuning)</strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해… </p>
-                </div>
-                <div class="card-foot midm link">
-                </div>
+            <article id="cardSwiper" class="swiper">
+              <div class="swiper-wrapper card-swiper-wrapper">
+                <a href="#" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <em class="badge badge-outline">Demo</em>
+                      <button class="card-bookmark">즐겨찾기</button>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">의도 분류<br>(Fine Tuning)</strong>
+                      <p class="card-detail">AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해… </p>
+                    </div>
+                    <div class="card-foot midm link">
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <em class="badge badge-outline">Demo</em>
+                      <button class="card-bookmark">즐겨찾기</button>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">대화 스타일링<br>(사투리/키즈/반말체)</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot link">
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <button class="card-bookmark">즐겨찾기</button>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">상황인지 대화추천</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot link">
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <button class="card-bookmark">즐겨찾기</button>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">상담분류</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot midm link">
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="swiper-slide card">
+                  <div class="card-hover">
+                    <div class="card-head">
+                      <button class="card-bookmark">즐겨찾기</button>
+                    </div>
+                    <div class="card-body">
+                      <strong class="card-txt">상담분류</strong>
+                      <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
+                    </div>
+                    <div class="card-foot midm link">
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
-            <a href="#" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="badge badge-outline">Demo</em>
-                  <button class="card-bookmark">즐겨찾기</button>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">대화 스타일링<br>(사투리/키즈/반말체)</strong>
-                  <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
-                </div>
-                <div class="card-foot link">
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <button class="card-bookmark">즐겨찾기</button>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">상황인지 대화추천</strong>
-                  <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
-                </div>
-                <div class="card-foot link">
-                </div>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <button class="card-bookmark">즐겨찾기</button>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">상담분류</strong>
-                  <p class="card-detail">이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술</p>
-                </div>
-                <div class="card-foot midm link">
-                </div>
-              </div>
-            </a>
+            </article>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </section>
       </main>
@@ -238,7 +260,51 @@
       </footer>
     </div>
   </body>
+  <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
   <script>
+    // swiper
+    const swiper = new Swiper('#cardSwiper', {
+      loop: true,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 27,
+          navigation: {
+            enabled: false,
+          },
+          pagination: {
+            enabled: true,
+            el: '.swiper-pagination',
+            type: 'bullets',
+          },
+        },
+        742: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+          navigation: {
+            enabled: false,
+          },
+          pagination: {
+            enabled: true,
+            el: '.swiper-pagination',
+            type: 'bullets',
+          },
+        },
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 36,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            enabled: false,
+          },
+        },
+      }
+    });
+    //
     document.querySelector('.gnb-btn').addEventListener('click', () => {
       const headerMenu = document.querySelector('.header-menu')
       if (headerMenu.classList.contains('is-show')) {

@@ -1,0 +1,27 @@
+:root {
+  --swiper-navigation-size: 59px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: -83px;
+  --swiper-navigation-color: #989898;
+  --swiper-pagination-color: #b3b3b3;
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: auto;
+  --swiper-pagination-bottom: 0;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-width: 16px;
+  --swiper-pagination-bullet-height: 16px;
+  --swiper-pagination-bullet-inactive-color: #1f1f1f;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 20px;
+}
+
+// arrow 한정
+@media (max-width: 1624px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}

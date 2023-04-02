@@ -9,6 +9,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import "../css/lib/swiper-bundle.css";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -294,6 +295,7 @@ button {
 .header .gnb .gnb-menu {
   padding: 10px;
   font-size: 20px;
+  font-weight: 700;
 }
 .header .gnb .gnb-menu:hover {
   font-weight: 700;
@@ -318,7 +320,7 @@ button {
   color: #838383;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .header {
     height: 70px;
     padding: 0 30px;
@@ -417,12 +419,12 @@ button {
   color: #000;
 }
 
-@media (min-width: 743px) and (max-width: 1440px) {
+@media (min-width: 744px) and (max-width: 1439px) {
   .footer {
     padding: 50px 50px 0;
   }
 }
-@media (max-width: 742px) {
+@media (max-width: 743px) {
   .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -513,7 +515,7 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-line-clamp: 3; /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 42px;
@@ -542,8 +544,8 @@ button {
 .card .card-foot.link::before {
   content: "";
   display: block;
-  background: url("../images/img_card_arrow.svg") no-repeat 50% 50%;
-  width: 30px;
+  background: url("../images/ico_arrow_42.svg") no-repeat 50% 50%;
+  width: 42px;
   height: 72px;
 }
 .card .card-foot.midm::after {
@@ -589,6 +591,7 @@ button {
   font-weight: 700;
 }
 .card-container .card-title .title-link {
+  background: url("../images/ico_link_20.svg") no-repeat 100% 50%;
   padding-right: 42px;
   font-size: 24px;
   font-weight: 500;
@@ -596,6 +599,7 @@ button {
 }
 
 .card-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,9 +609,19 @@ button {
   gap: 36px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .card-container {
     padding: 0 50px;
+  }
+  .card-swiper {
+    padding: 0;
+  }
+  .card-swiper .card-title,
+  .card-swiper .swiper {
+    padding: 0 50px;
+  }
+  .card-swiper .card-list {
+    padding-bottom: 56px;
   }
   .card-list {
     -ms-flex-wrap: wrap;
@@ -640,8 +654,15 @@ button {
     display: none;
   }
 }
-@media (max-width: 742px) {
+@media (max-width: 743px) {
   .card-container {
+    padding: 0 27px;
+  }
+  .card-swiper {
+    padding: 0;
+  }
+  .card-swiper .card-title,
+  .card-swiper .swiper {
     padding: 0 27px;
   }
   .card-list {
@@ -661,12 +682,39 @@ button {
     height: calc(100vw - 54px);
   }
 }
+:root {
+  --swiper-navigation-size: 59px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: -83px;
+  --swiper-navigation-color: #989898;
+  --swiper-pagination-color: #b3b3b3;
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: auto;
+  --swiper-pagination-bottom: 0;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-width: 16px;
+  --swiper-pagination-bullet-height: 16px;
+  --swiper-pagination-bullet-inactive-color: #1f1f1f;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 20px;
+}
+
+@media (max-width: 1624px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
 .visual-container {
   position: relative;
-  background: url("../images/img_visual_main.svg") no-repeat;
+  background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
   width: 100%;
-  height: 606px;
-  padding: 70px 0 120px 0;
+  height: 427px;
+  margin-top: 70px;
+  margin-bottom: 109px;
   text-align: center;
 }
 .visual-container .visual-text {
@@ -679,7 +727,8 @@ button {
   display: inline-block;
   border: 2px solid #000;
   border-radius: 80px;
-  padding: 15px 40px;
+  background: url("../images/btn_ico_guide.svg") no-repeat 41px 50%;
+  padding: 15px 40px 15px 65px;
   font-weight: 800;
   line-height: 26px;
 }
@@ -688,7 +737,7 @@ button {
   margin-top: 79px;
 }
 
-@media (min-width: 743px) and (max-width: 1440px) {
+@media (min-width: 744px) and (max-width: 1439px) {
   .visual-container {
     background: url("../images/img_visual_main.svg") no-repeat 50% 50%/contain;
     height: 595px;
@@ -698,7 +747,7 @@ button {
     margin-top: 88px;
   }
 }
-@media (max-width: 742px) {
+@media (max-width: 743px) {
   .visual-container {
     background: url("../images/img_visual_main.svg") no-repeat 100% 50%/cover;
     height: 575px;

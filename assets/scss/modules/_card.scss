@@ -35,7 +35,7 @@
     display: block;
     margin-bottom: 30px;
     .card-txt {
-      @include ellipsis(2);
+      @include ellipsis(3);
       line-height: 42px;
       font-size: 30px;
       font-weight: 700;
@@ -56,8 +56,8 @@
     &.link::before {
       content: "";
       display: block;
-      background: url("../images/img_card_arrow.svg") no-repeat 50% 50%;
-      width: 30px;
+      background: url("../images/ico_arrow_42.svg") no-repeat 50% 50%;
+      width: 42px;
       height: 72px;
     }
     &.midm::after {
@@ -98,6 +98,7 @@
       font-weight: 700;
     }
     .title-link {
+      background: url("../images/ico_link_20.svg") no-repeat 100% 50%;
       padding-right: 42px;
       font-size: 24px;
       font-weight: 500;
@@ -106,6 +107,7 @@
   }
 }
 .card-list {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 36px;
@@ -114,6 +116,17 @@
 @include tablet {
   .card-container {
     padding: 0 50px;
+  }
+  // swiper
+  .card-swiper {
+    padding: 0;
+    .card-title,
+    .swiper {
+      padding: 0 50px;
+    }
+    .card-list {
+      padding-bottom: 56px;
+    }
   }
   .card-list {
     flex-wrap: wrap;
@@ -143,6 +156,14 @@
 @include mobile {
   .card-container {
     padding: 0 27px;
+  }
+  // swiper
+  .card-swiper {
+    padding: 0;
+    .card-title,
+    .swiper {
+      padding: 0 27px;
+    }
   }
   .card-list {
     flex-direction: column;

@@ -17,13 +17,12 @@
   }
 }
 @mixin tablet {
-  @media (max-width: $desktop) {
+  @media (max-width: ($desktop - 1)) {
     @content;
   }
 }
 @mixin tablet-only{
-  
-  @media (min-width: ($tablet + 1)) and (max-width: $desktop) {
+  @media (min-width: ($tablet + 1)) and (max-width: ($desktop - 1)) {
     @content;
   }
 }
