@@ -35,7 +35,7 @@
     align-items: center;
     height: 30px;
     gap: 11px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     .card-view {
       background: no-repeat 0% 50%;
       padding-left: 31px;
@@ -56,7 +56,7 @@
         background-image: var(--card-icon-commnet);
       }
     }
-    .card-view + .badge {
+    .card-view + .badge-txt {
       margin-left: auto;
     }
     .card-bookmark {
@@ -109,7 +109,7 @@
       content: "";
       position: absolute;
       right: 40px;
-      bottom: 35px;
+      bottom: 30px;
       display: block;
       background: var(--card-icon-midm) no-repeat 50% 50% / cover;
       width: 60px;
