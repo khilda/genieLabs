@@ -175,7 +175,7 @@
   .card-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 30px;
     .title-tit {
       font-size: 30px;
@@ -183,6 +183,7 @@
     }
     .title-link {
       background: url("../images/ico_link_20.svg") no-repeat 100% 50%;
+      margin-left: auto;
       padding-right: 29px;
       font-size: 24px;
       font-weight: 500;

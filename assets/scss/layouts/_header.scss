@@ -32,7 +32,8 @@
   padding: 33px 50px;
   z-index: 999;
   .logo {
-    background: var(--gnb-logo) no-repeat 50% 50% / contain;
+    background: url("../images/darkmode/img_logo.svg") no-repeat 50% 50% /
+      contain;
     width: 150px;
     height: 19px;
     padding: 10px 0;
@@ -159,6 +160,9 @@
 .main .header {
   background-color: transparent;
   color: var(--main-header-color);
+  .logo {
+    background-image: var(--gnb-logo);
+  }
   .btn-gnb.open {
     background-image: var(--gnb-icon-open);
   }

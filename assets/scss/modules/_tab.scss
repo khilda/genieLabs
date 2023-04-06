@@ -1,0 +1,105 @@
+.tab {
+  &-container {
+    position: relative;
+    text-align: center;
+  }
+  &-header {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 60px auto;
+    z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      background-color: #000;
+      height: 2px;
+    }
+  }
+  &-button {
+    flex: 1 1 auto;
+    display: block;
+    background-color: #dadada;
+    border: 2px solid transparent;
+    border-bottom: 0 none;
+    padding: 20px 55px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #787878;
+    text-align: center;
+    &.is-active {
+      border-color: #000;
+      background-color: #ededed;
+      color: #000;
+      z-index: 1;
+    }
+  }
+  &-content {
+    text-align: left;
+  }
+  &-item {
+    position: relative;
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}
+// sub style
+.tab-sub {
+  .tab-header {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+    justify-content: flex-start;
+    &::after {
+      content: none;
+    }
+  }
+  .tab-button {
+    flex: 1;
+    border: 0 none;
+    border-radius: 80px;
+    width: auto;
+    line-height: 26px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #000;
+    &.is-active {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+@include tablet {
+  .tab-header {
+    display: flex;
+  }
+  .tab-button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@include mobile {
+  .tab-header {
+    flex-direction: column;
+    &::after {
+      content: none;
+    }
+  }
+  .tab-button {
+    width: 100%;
+    &.is-active {
+      border-bottom: 2px solid;
+    }
+  }
+}
