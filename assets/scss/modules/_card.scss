@@ -95,7 +95,7 @@
     margin-top: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     &.link::before {
       content: "";
       position: absolute;
