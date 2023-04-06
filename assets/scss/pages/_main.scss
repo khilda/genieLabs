@@ -71,6 +71,7 @@
       display: none;
       width: 320px;
       margin-top: 30px;
+      line-height: 32px;
       font-weight: 500;
       font-size: 24px;
     }
@@ -87,7 +88,7 @@
         height: 480px;
         padding: 60px;
         color: #000;
-        .card-view.hits{
+        .card-view.hits {
           background-image: url("../images/ico_view_24_hover.svg");
           color: #000;
         }
@@ -98,7 +99,7 @@
         .card-body .card-detail {
           display: block;
         }
-        .card-foot .foot-author{
+        .card-foot .foot-author {
           color: #000;
         }
       }

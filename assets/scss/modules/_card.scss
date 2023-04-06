@@ -85,7 +85,7 @@
     .card-detail {
       margin-top: 17px;
       @include ellipsis(3);
-      line-height: 32px;
+      line-height: 22px;
       font-weight: 400;
       font-size: 14px;
     }
@@ -109,11 +109,11 @@
       content: "";
       position: absolute;
       right: 40px;
-      bottom: 40px;
+      bottom: 35px;
       display: block;
-      background: var(--card-icon-midm) no-repeat 50% 50%;
-      width: 72px;
-      height: 72px;
+      background: var(--card-icon-midm) no-repeat 50% 50% / cover;
+      width: 60px;
+      height: 60px;
       margin-left: auto;
     }
     .foot-api {
