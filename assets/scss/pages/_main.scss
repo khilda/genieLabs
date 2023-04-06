@@ -69,6 +69,7 @@
     }
     .card-detail {
       display: none;
+      -webkit-line-clamp: 3;
       width: 320px;
       margin-top: 30px;
       line-height: 32px;
@@ -97,7 +98,7 @@
           color: #fff;
         }
         .card-body .card-detail {
-          display: block;
+          display: -webkit-box;
         }
         .card-foot .foot-author {
           color: #000;
@@ -133,7 +134,7 @@
     .card-swiper-container {
       height: 321px;
     }
-    .card-swiper-container .swiper {
+    .card-swiper-container .swiper:hover {
       height: 480px;
     }
   }
@@ -164,9 +165,27 @@
     }
     .card-container {
       padding: 0 27px;
+      .card-title {
+        .title-tit{
+          font-size: 24px;
+        }
+        .title-link{
+          font-size: 18px;
+        }
+      }
+      .card{
+        min-height: 321px;
+        .card-txt{
+          font-size: 24px;
+          line-height: 26px;
+        }
+      }
     }
     .card-container + .card-container {
       margin-top: 60px;
+    }
+    .card{
+
     }
   }
 }

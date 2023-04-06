@@ -14,17 +14,16 @@
   display: inline-block;
   font-weight: 700;
   line-height: 1;
+  @include ellipsis();
 }
 .badge {
   @include badge-default();
   border-radius: 80px;
   background-color: #dfdfdf;
-  padding: 6px 12px;
+  max-width: 120px;
+  padding: 0 12px;
+  line-height: 28px;
   color: #787878;
-  &-white {
-    background-color: var(--badge-white-background, #fff);
-    color: #000;
-  }
   &-white {
     background-color: var(--badge-white-background, #fff);
     color: #000;

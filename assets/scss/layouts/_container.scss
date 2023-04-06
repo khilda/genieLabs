@@ -29,6 +29,7 @@
       font-weight: 700;
     }
     .page-txt {
+      margin: 0 auto;
       line-height: 30px;
       font-size: 18px;
       font-weight: 400;
@@ -37,6 +38,9 @@
 }
 
 // images
+.docs .container-header {
+  background-image: url("../images/img_page_title_docs.svg");
+}
 .demo .container-header {
   background-image: url("../images/img_page_title_demo.svg");
 }
@@ -46,14 +50,46 @@
 .applications .container-header {
   background-image: url("../images/img_page_title_applications.svg");
 }
-
+.forum .container-header {
+  background-image: url("../images/img_page_title_forum.svg");
+}
+.myGround .container-header {
+  background-image: url("../images/img_page_title_myground.svg");
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+}
 
 @include tablet {
   .container {
     padding: 0 50px;
   }
+  .container-header {
+    .page-txt {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
   .main .container {
     padding: 0;
+  }
+  .docs .container-header {
+    background-position: calc(100% - -48px) calc(100% - -18px);
+  }
+  .sampleCode .container-header {
+    background-position: calc(100% - -60px) 100%;
+  }
+  .applications .container-header {
+    background-position: calc(100% - -40px) 100%;
+  }
+  .forum .container-header {
+    background-position: calc(100% - -40px) 100%;
+  }
+  .myGround .container-header {
+    background-image: url("../images/img_page_title_myground_m.svg");
+    background-position: 100% 100%;
+    background-size: auto;
+    text-align: left;
   }
 }
 @include mobile {
@@ -61,11 +97,29 @@
     padding: 0 27px;
   }
   .container-header {
-    background-size: 0;
-    background-color: transparent;
-    margin-bottom: 0;
-    padding: 47px 0 31px;
+    background-size: auto;
+    height: 400px;
+    margin-bottom: 30px;
+    padding: 50px 20px 0px;
     text-align: center;
-    color: #000;
+    .page-title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+  .docs .container-header,
+  .demo .container-header,
+  .sampleCode .container-header,
+  .applications .container-header,
+  .myGround .container-header {
+    background-size: 320px;
+    background-position: center 100%;
+  }
+  .forum .container-header {
+    background-size: 530px;
+    background-position: calc(50% - 16px) 100%;
+  }
+  .myGround .container-header {
+    text-align: center;
   }
 }

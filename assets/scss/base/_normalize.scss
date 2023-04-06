@@ -33,3 +33,28 @@ button {
   --header-gnb-toggle-border: #fff;
   --svg-icon-color: #fff;
 }
+
+@include desktop {
+  .br-pc {
+    display: initial;
+  }
+  .br-mo {
+    display: none;
+  }
+}
+@include tablet-only {
+  .br-pc {
+    display: initial;
+  }
+  .br-mo {
+    display: none;
+  }
+}
+@include mobile {
+  .br-pc {
+    display: none;
+  }
+  .br-mo {
+    display: initial;
+  }
+}

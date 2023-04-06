@@ -38,6 +38,7 @@
     margin-bottom: 14px;
     .card-view {
       background: no-repeat 0% 50%;
+      line-height: 1;
       padding-left: 31px;
       color: var(--card-view-color);
       .count {
@@ -57,6 +58,7 @@
       }
     }
     .card-view + .badge-txt {
+      flex: 0 0 auto;
       margin-left: auto;
     }
     .card-bookmark {
@@ -75,7 +77,6 @@
   }
   .card-body {
     display: block;
-    margin-bottom: 30px;
     .card-txt {
       @include ellipsis(2);
       line-height: 26px;
@@ -84,7 +85,7 @@
     }
     .card-detail {
       margin-top: 17px;
-      @include ellipsis(3);
+      @include ellipsis(2);
       line-height: 22px;
       font-weight: 400;
       font-size: 14px;
@@ -99,7 +100,7 @@
       content: "";
       position: absolute;
       left: 40px;
-      bottom: 44px;
+      bottom: 50px;
       display: block;
       background: var(--card-icon-arrow) no-repeat 50% 50%;
       width: 42px;
@@ -107,9 +108,7 @@
     }
     &.midm::after {
       content: "";
-      position: absolute;
-      right: 40px;
-      bottom: 30px;
+      flex: 0 0 auto;
       display: block;
       background: var(--card-icon-midm) no-repeat 50% 50% / cover;
       width: 60px;
@@ -118,9 +117,11 @@
     }
     .foot-api {
       display: inline-flex;
+      flex-wrap: wrap;
       gap: 5px;
     }
     .foot-author {
+      margin-top: auto;
       margin-left: auto;
       font-size: 18px;
       text-align: right;
@@ -128,6 +129,10 @@
       > dt {
         line-height: 26px;
         font-weight: 700;
+      }
+      > dd{
+        font-weight: 400;
+
       }
     }
   }
@@ -211,7 +216,6 @@
   }
   .card {
     width: calc(50vw - ((100vw - 100%) / 2) - 20px);
-    height: calc(50vw - 70px);
     max-height: 321px;
   }
 }
@@ -229,6 +233,5 @@
   }
   .card {
     width: calc(100vw - (100vw - 100%));
-    height: calc(100vw - 84px);
   }
 }

@@ -28,6 +28,7 @@
   background-color: #000;
   color: #fff;
   padding: 33px 50px;
+  z-index: 999;
   .logo {
     padding: 10px 0;
     margin-right: 60px;
@@ -100,6 +101,7 @@
     }
   }
   .btn-theme {
+    flex: 0 0 auto;
     position: relative;
     border: 1px solid var(--header-gnb-toggle-border, #ccc);
     background-color: var(--header-gnb-toggle, #ccc);
@@ -178,6 +180,7 @@
     padding: 0 30px;
     .logo {
       font-size: 18px;
+      margin-right: auto;
     }
     .btn-theme {
       margin-left: auto;
@@ -215,7 +218,8 @@
         width: 100%;
         font-weight: 400;
         &:hover,
-        &:active {
+        &:active,
+        &.is-active {
           color: var(--main-header-color);
           font-weight: 700;
           &::after {
