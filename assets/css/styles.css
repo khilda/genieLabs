@@ -408,6 +408,7 @@ button {
   }
 }
 :root {
+  --gnb-logo: url("../images/img_logo.svg");
   --gnb-icon-open: url("../images/ico_gnb_open.svg");
   --gnb-icon-open-white: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/ico_gnb_close.svg");
@@ -419,6 +420,7 @@ button {
 }
 
 .dark-theme {
+  --gnb-logo: url("../images/darkmode/img_logo.svg");
   --gnb-icon-open: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-open-white: url("../images/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/darkmode/ico_gnb_close.svg");
@@ -443,9 +445,12 @@ button {
   z-index: 999;
 }
 .header .logo {
+  background: var(--gnb-logo) no-repeat 50% 50%/contain;
+  width: 150px;
+  height: 19px;
   padding: 10px 0;
   margin-right: 60px;
-  font-size: 24px;
+  font-size: 0;
   font-weight: 800;
 }
 .header .btn-gnb {
@@ -532,6 +537,10 @@ button {
   background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
   color: #838383;
 }
+.header .info .info-menu.login {
+  background: url("../images/ico_gnb_login.svg") no-repeat 0 50%;
+  color: #838383;
+}
 .header .btn-theme {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -604,6 +613,10 @@ button {
   .main .header .gnb {
     margin-left: 0;
   }
+  .header .info .info-menu.ground .is-active {
+    background-image: url("../images/ico_gnb_my_active.svg");
+    color: #4ff3ff;
+  }
 }
 @media (max-width: 1439px) {
   .header {
@@ -611,7 +624,8 @@ button {
     padding: 0 30px;
   }
   .header .logo {
-    font-size: 18px;
+    width: 115px;
+    height: 21px;
     margin-right: auto;
   }
   .header .btn-theme {
@@ -693,6 +707,11 @@ button {
     background-position: 20px 50%;
     padding: 10px 20px 10px 44px;
     line-height: 22px;
+  }
+  .header .info .info-menu.ground.is-active {
+    background-image: url("../images/darkmode/ico_gnb_my.svg");
+    background-color: #000;
+    color: #fff;
   }
   .header .info .info-menu.logout {
     right: 40px;
@@ -828,12 +847,10 @@ button {
   display: inline-block;
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  word-break: keep-all;
   border-radius: 80px;
   background-color: #dfdfdf;
   max-width: 120px;
@@ -855,20 +872,22 @@ button {
   display: inline-block;
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  word-break: keep-all;
 }
-.badge-txt.new {
+.badge-txt.primary {
+  font-size: 18px;
+  color: #00d1ff;
+}
+.badge-txt.secondary {
   font-size: 18px;
   color: #ff6b00;
 }
-.badge-txt.update {
+.badge-txt.info {
   font-size: 18px;
-  color: #00d1ff;
+  color: #929292;
 }
 
 :root {
@@ -960,24 +979,26 @@ button {
   display: block;
 }
 .card .card-body .card-txt {
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
   line-height: 26px;
   font-size: 24px;
   font-weight: 700;
 }
 .card .card-body .card-detail {
   margin-top: 17px;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
   line-height: 22px;
   font-weight: 400;
   font-size: 14px;
@@ -1019,8 +1040,13 @@ button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 5px;
 }
 .card .card-foot .foot-author {
@@ -1243,12 +1269,13 @@ button {
   margin-bottom: 27px;
 }
 .main .card-container .card .card-txt {
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3; /* 라인수 */
   -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
   line-height: 42px;
   font-size: 30px;
 }

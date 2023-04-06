@@ -5,11 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GenieGround</title>
+    <title>메인레이아웃 < GenieGround</title>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
 
   <body>
+    <!-- wrap 클래스에 main 클래스 제외하면 sub Layout -->
     <div class="wrap main">
       <header class="header">
         <a href="/src/main/index.html" class="logo">GenieGround</a>
@@ -23,7 +24,7 @@
           </div>
           <div class="info">
             <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
-            <a href="#none" class="info-menu logout">Logout</a>
+            <a href="#none" class="info-menu login">Login</a>
           </div>
           <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
         </div>
@@ -31,11 +32,13 @@
         <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
       </header>
       <main class="container">
-        <!-- Visual 영역 -->
+        <!-- 메인페이지 콘텐츠 영역 -->
         <section class="visual-container">
+          <!-- Visual 영역 -->
           <h1 class="visual-text">Open API<br />with GenieGround</h1>
           <a href="#none" class="visual-link">가이드 보러가기</a>
         </section>
+        <!-- // 메인페이지 콘텐츠 영역 -->
       </main>
       <footer class="footer">
         <div class="copyright">
@@ -51,5 +54,8 @@
     </div>
   </body>
   <script defer src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
+  <script>
+  </script>
 
 </html>

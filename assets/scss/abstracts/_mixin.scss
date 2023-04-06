@@ -2,12 +2,17 @@
 //# text eillipse
 //************************************
 @mixin ellipsis($line-cnt: 1) {
+  @if ($line-cnt == 1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line-cnt; /* 라인수 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: $line-cnt; /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  word-break: keep-all;
 }
 /*반응형 화면 크기*/
 

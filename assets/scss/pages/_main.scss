@@ -110,23 +110,24 @@
       left: auto;
       right: 0;
     }
+    // Hover color
     .card-hover-1 .card:hover .card-hover {
       border-color: transparent;
-      background-color: $color-primary-1;
+      background-color: $color-primary-green;
       .card-txt {
         color: #000;
       }
     }
     .card-hover-2 .card:hover .card-hover {
       border-color: transparent;
-      background-color: $color-primary-2;
+      background-color: $color-primary-skyblue;
       .card-txt {
         color: #000;
       }
     }
     .card-hover-3 .card:hover .card-hover {
       border-color: transparent;
-      background-color: $color-primary-3;
+      background-color: $color-primary-orange;
       .card-txt {
         color: #000;
       }

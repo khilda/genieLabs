@@ -36,12 +36,16 @@
 }
 .badge-txt {
   @include badge-default();
-  &.new {
+  &.primary {
+    font-size: 18px;
+    color: #00d1ff;
+  }
+  &.secondary {
     font-size: 18px;
     color: #ff6b00;
   }
-  &.update {
+  &.info {
     font-size: 18px;
-    color: #00d1ff;
+    color: #929292;
   }
 }

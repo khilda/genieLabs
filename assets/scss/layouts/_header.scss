@@ -1,6 +1,7 @@
 // color
 // var(--color, #f4f4f4);
 :root {
+  --gnb-logo: url("../images/img_logo.svg");
   --gnb-icon-open: url("../images/ico_gnb_open.svg");
   --gnb-icon-open-white: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/ico_gnb_close.svg");
@@ -11,6 +12,7 @@
   --main-header-color: #000;
 }
 .dark-theme {
+  --gnb-logo: url("../images/darkmode/img_logo.svg");
   --gnb-icon-open: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-open-white: url("../images/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/darkmode/ico_gnb_close.svg");
@@ -30,9 +32,12 @@
   padding: 33px 50px;
   z-index: 999;
   .logo {
+    background: var(--gnb-logo) no-repeat 50% 50% / contain;
+    width: 150px;
+    height: 19px;
     padding: 10px 0;
     margin-right: 60px;
-    font-size: 24px;
+    font-size: 0;
     font-weight: 800;
   }
   .btn-gnb {
@@ -78,7 +83,7 @@
       &:hover,
       &:active,
       &.is-active {
-        color: $color-primary-2;
+        color: $color-primary-skyblue;
       }
     }
   }
@@ -96,6 +101,10 @@
       }
       &.logout {
         background: url("../images/ico_gnb_logout.svg") no-repeat 0 50%;
+        color: #838383;
+      }
+      &.login {
+        background: url("../images/ico_gnb_login.svg") no-repeat 0 50%;
         color: #838383;
       }
     }
@@ -172,6 +181,10 @@
       margin-left: 0;
     }
   }
+  .header .info .info-menu.ground .is-active {
+    background-image: url("../images/ico_gnb_my_active.svg");
+    color: $color-primary-skyblue;
+  }
 }
 // tablet & mobile
 @include tablet {
@@ -179,7 +192,8 @@
     height: 70px;
     padding: 0 30px;
     .logo {
-      font-size: 18px;
+      width: 115px;
+      height: 21px;
       margin-right: auto;
     }
     .btn-theme {
@@ -248,6 +262,11 @@
           background-position: 20px 50%;
           padding: 10px 20px 10px 44px;
           line-height: 22px;
+          &.is-active {
+            background-image: url("../images/darkmode/ico_gnb_my.svg");
+            background-color: #000;
+            color: #fff;
+          }
         }
         &.logout {
           right: 40px;
