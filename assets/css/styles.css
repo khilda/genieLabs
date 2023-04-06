@@ -880,7 +880,7 @@ button {
   -webkit-line-clamp: 3; /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 22px;
+  line-height: 32px;
   font-weight: 400;
   font-size: 14px;
 }
@@ -1050,7 +1050,7 @@ button {
   }
   .card {
     width: calc(100vw - (100vw - 100%));
-    height: calc(100vw - 54px);
+    height: calc(100vw - 84px);
   }
 }
 :root {

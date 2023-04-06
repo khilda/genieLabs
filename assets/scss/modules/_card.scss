@@ -85,7 +85,7 @@
     .card-detail {
       margin-top: 17px;
       @include ellipsis(3);
-      line-height: 22px;
+      line-height: 32px;
       font-weight: 400;
       font-size: 14px;
     }
@@ -229,6 +229,6 @@
   }
   .card {
     width: calc(100vw - (100vw - 100%));
-    height: calc(100vw - 54px);
+    height: calc(100vw - 84px);
   }
 }
