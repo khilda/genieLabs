@@ -17,15 +17,20 @@
 
 // libaray
 @import "../css/lib/swiper-bundle.css";
+@import "../css/lib/fileup.css";
 
 @import "modules/breadcrumb";
 @import "modules/badge";
 @import "modules/button";
 @import "modules/edit";
-@import "modules/card";
-@import "modules/swiper";
+@import "modules/detail";
+@import "modules/form";
 @import "modules/select";
 @import "modules/tab";
+@import "modules/card";
+@import "modules/comment";
+@import "modules/swiper";
+@import "modules/library";
 @import "modules/etc";
 
 @import "pages/main";

@@ -36,6 +36,43 @@ document.querySelectorAll(".tab-container")?.forEach((tab) => {
     });
   });
 });
+// comment
+const commentItems = document.querySelectorAll(".cmt-container");
+commentItems?.forEach((_cmt) => {
+  const replycontainer = _cmt.nextElementSibling;
+  // 답글보기
+  _cmt.querySelector(".btn-ico.reply")?.addEventListener("click", (e) => {
+    e.target.classList.toggle("is-active");
+    replycontainer?.classList.toggle("is-show");
+  });
+  // 수정하기
+  _cmt.querySelector(".btn-ico.mod")?.addEventListener("click", (e) => {
+    _cmt.classList.add("is-edit");
+    const cmtContent = _cmt.querySelector(".txt").innerText;
+    _cmt.querySelector(".txt-edit").innerText = cmtContent;
+  });
+  // 답글모드에서 수정하기
+  _cmt.querySelector(".btn-txt.mod")?.addEventListener("click", (e) => {
+    _cmt.classList.add("is-edit");
+    e.target.style.display = "none";
+    const cmtContent = _cmt.querySelector(".txt").innerText;
+    _cmt.querySelector(".txt-edit").innerText = cmtContent;
+    if (e.target.previousElementSibling.classList.contains("regist")) {
+      e.target.style.display = "none";
+      e.target.previousElementSibling.removeAttribute("style");
+    }
+  });
+  // 수정모드에서 저장하기
+  _cmt.querySelector(".btn-txt.regist")?.addEventListener("click", (e) => {
+    _cmt.classList.remove("is-edit");
+    const cmtContent = _cmt.querySelector(".txt-edit").value;
+    _cmt.querySelector(".txt").innerText = cmtContent;
+    if (e.target.nextElementSibling.classList.contains("mod")) {
+      e.target.style.display = "none";
+      e.target.nextElementSibling.removeAttribute("style");
+    }
+  });
+});
 
 // select
 // $("select").each(function () {

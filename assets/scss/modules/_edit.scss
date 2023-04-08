@@ -1,60 +1,72 @@
-.edit {
-  &-ipt {
-    border: 2px solid #ccc;
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 14px;
+// 작성/수정
+.form-container + .form-container {
+  margin-top: 50px;
+}
+.form-header {
+  border: 0 none;
+  padding: 0;
+  margin-bottom: 10px;
+  .title {
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
-.container-content__edit {
-  .edit-header {
-    border: 0 none;
-    padding: 0;
-    margin-bottom: 20px;
-    .title {
-      line-height: 42px;
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 7px;
-    }
-    .txt {
-      line-height: 30px;
-      font-size: 18px;
-      font-weight: 500;
-      color: #787878;
-    }
-  }
-  .edit-container {
-    border-top: 3px solid #000;
-  }
-  .edit-title {
+.form {
+  border-top: 3px solid #000;
+  .form-subtitle {
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 10px;
     padding: 25px 20px;
+    border-bottom: 1px solid #000;
   }
-  .edit-content {
-    border-top: 1px solid #000;
-    padding: 25px 20px;
-  }
-  .edit-footer {
+  .form-item {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #000;
-    padding-top: 20px;
-    .btn-container {
-      gap: 5px;
-      &:only-child {
-        margin-left: auto;
-      }
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 20px;
+    border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-color: #000;
+    }
+  }
+  .form-textarea {
+    height: 250px;
+  }
+  > .txt {
+    padding: 40px;
+  }
+  .form-subtitle,
+  .form-item {
+    .ipt-container,
+    .file-list {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  .btn-container {
+    gap: 5px;
+    &:only-child {
+      margin-left: auto;
     }
   }
 }
 
 @include tablet-only {
-  .container-content__edit .edit-footer {
+  .form-footer {
     padding-top: 10px;
     .txt-notice {
       width: 100%;
@@ -67,35 +79,127 @@
 }
 
 @include mobile {
-  .container-content__edit {
-    .edit-header {
-      text-align: center;
-      .title {
-        font-size: 28px;
-      }
-      .txt {
-        font-size: 14px;
-      }
+  .form-header {
+    text-align: center;
+    .title {
+      font-size: 28px;
     }
-    .edit-title,
-    .edit-content {
-      flex-wrap: wrap;
+    .txt {
+      font-size: 14px;
+    }
+  }
+  .form-title,
+  .form-item {
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+    .form-textarea,
+    > .txt {
+      margin-left: 0;
+      margin-right: 0;
       padding-left: 0;
       padding-right: 0;
     }
-    .edit-footer {
-      padding-top: 10px;
-      .txt-notice {
-        width: 100%;
-      }
-      .btn-container {
-        margin-top: 20px;
-        width: 100%;
-        .btn {
-          flex: 1;
-        }
+    .form-textarea {
+      width: 100%;
+    }
+  }
+  .form-footer {
+    padding-top: 10px;
+    .txt-notice {
+      width: 100%;
+    }
+    .btn-container {
+      margin-top: 20px;
+      width: 100%;
+      .btn,
+      .btn-txt {
+        flex: 1;
       }
     }
   }
 }
 
+// 상세보기
+.form-detail-container {
+  margin-bottom: 60px;
+}
+.form-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 3px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 25px 20px;
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .edit-author {
+    margin-left: auto;
+    font-size: 18px;
+    text-align: right;
+    color: #787878;
+    > dt {
+      line-height: 26px;
+      font-weight: 700;
+    }
+    > dd {
+      margin-top: 6px;
+      font-weight: 400;
+    }
+  }
+}
+.form-detail-content {
+  > .txt {
+    padding: 40px;
+  }
+  .fileUpload-container {
+    border-top: 1px solid #ccc;
+    padding: 30px 20px;
+  }
+}
+.form-detail-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #000;
+  padding-top: 20px;
+  .btn-container {
+    gap: 5px;
+    &:only-child {
+      margin-left: auto;
+    }
+  }
+}
+
+@include tablet {
+  .form-detail-footer {
+    padding-top: 10px;
+  }
+}
+
+@include mobile {
+  .form-detail-header {
+    text-align: center;
+    .title {
+      font-size: 24px;
+    }
+  }
+  .form-detail-footer {
+    .btn-container {
+      margin-top: 20px;
+      width: 100%;
+      .btn,
+      .btn-txt {
+        flex: 1;
+      }
+    }
+  }
+}

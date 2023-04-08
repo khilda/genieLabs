@@ -7,66 +7,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GenieGround</title>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <style>
+      .guide {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
   </head>
 
   <body>
     <main class="guide">
       <article class="comment-container">
-        <div class="comment-header">
-          <div class="title">댓글 <strong class="comment-count">+2</strong></div>
-          <div class="comment-edit">
-            <input type="text" class="comment-ipt" />
+        <div class="comment-edit">
+          <div class="title">댓글 <strong class="count">+2</strong></div>
+          <div class="ipt-container">
+            <input type="text" class="ipt comment-ipt" />
             <div class="btn-container">
               <button type="button" class="btn">댓글</button>
-              <button type="button" class="btn cancel">취소</button>
             </div>
           </div>
         </div>
-        <ul class="comment-content">
+        <ul class="comment-list">
           <!-- 댓글 아이템 -->
-          <li class="comment-item" data-auth="me">
-            <div class="cmmt-header">
-              <dl class="auth-info">
-                <dt class="auth">나</dt>
-                <dd class="date">2022.03.14 09:30</dd>
-              </dl>
-            </div>
-            <div class="cmmt-body">
-              <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-              <div class="btn-container">
-                <button type="button" class="btn-ico mod">수정하기</button>
-                <button type="button" class="btn-ico del">삭제하기</button>
-                <button type="button" class="btn-ico reply">답글달기<strong class="badge count">+999</strong></button>
+          <li class="list-item">
+            <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
+            <div class="cmt-container type-editable">
+              <div class="cmt-header">
+                <dl class="auth-info">
+                  <dt class="auth">나</dt>
+                  <dd class="date">2022.03.14 09:30</dd>
+                </dl>
+                <div class="btn-container type-mod-btn">
+                  <button type="button" class="btn-txt regist">등록하기</button>
+                  <button type="button" class="btn-txt del">삭제하기</button>
+                </div>
+              </div>
+              <div class="cmt-body">
+                <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                <textarea class="txt-edit"></textarea>
+                <div class="btn-container type-editable-btn">
+                  <button type="button" class="btn-ico mod">수정하기</button>
+                  <button type="button" class="btn-ico del">삭제하기</button>
+                  <button type="button" class="btn-ico reply">답글달기<strong class="badge count">+999</strong></button>
+                </div>
               </div>
             </div>
             <!-- 답글 아이템 -->
             <div class="reply-container">
               <div class="reply-header">
-                <div class="comment-edit">
-                  <input type="text" class="comment-ipt" />
+                <div class="ipt-container">
+                  <input type="text" class="ipt cmt-ipt" />
                   <div class="btn-container">
                     <button type="button" class="btn">답글</button>
-                    <button type="button" class="btn cancel">취소</button>
                   </div>
                 </div>
               </div>
               <ul class="reply-content">
-                <li class="comment-item" data-auth="me">
-                  <div class="cmmt-header">
+                <li class="cmt-container type-editable">
+                  <div class="cmt-header">
+                    <dl class="auth-info">
+                      <dt class="auth">나</dt>
+                      <dd class="date">2022.03.14 09:30</dd>
+                    </dl>
+                    <div class="btn-container">
+                      <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
+                      <button type="button" class="btn-txt mod">수정하기</button>
+                      <button type="button" class="btn-txt del">삭제하기</button>
+                    </div>
+                  </div>
+                  <div class="cmt-body">
+                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                    <textarea class="txt-edit"></textarea>
+                  </div>
+                </li>
+                <li class="cmt-container type-editable">
+                  <div class="cmt-header">
+                    <dl class="auth-info">
+                      <dt class="auth">나</dt>
+                      <dd class="date">2022.03.14 09:30</dd>
+                    </dl>
+                    <div class="btn-container">
+                      <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
+                      <button type="button" class="btn-txt mod">수정하기</button>
+                      <button type="button" class="btn-txt del">삭제하기</button>
+                    </div>
+                  </div>
+                  <div class="cmt-body">
+                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                    <textarea class="txt-edit"></textarea>
+                  </div>
+                </li>
+                <li class="cmt-container type-editable">
+                  <div class="cmt-header">
+                    <dl class="auth-info">
+                      <dt class="auth">나</dt>
+                      <dd class="date">2022.03.14 09:30</dd>
+                    </dl>
+                    <div class="btn-container">
+                      <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
+                      <button type="button" class="btn-txt mod">수정하기</button>
+                      <button type="button" class="btn-txt del">삭제하기</button>
+                    </div>
+                  </div>
+                  <div class="cmt-body">
+                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                    <textarea class="txt-edit"></textarea>
+                  </div>
+                </li>
+              </ul>
+              <div class="btn-container reply-more">
+                <button type="button" class="btn">+ 답글 더보기</button>
+              </div>
+            </div>
+            <!-- // 답글 아이템 -->
+          </li>
+          <!-- //댓글 아이템 -->
+          <li class="list-item">
+            <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
+            <div class="cmt-container">
+              <div class="cmt-header">
+                <dl class="auth-info">
+                  <dt class="auth">홍길동</dt>
+                  <dd class="date">2022.03.14 09:30</dd>
+                </dl>
+                <div class="btn-container type-mod-btn">
+                  <button type="button" class="btn-txt regist">등록하기</button>
+                  <button type="button" class="btn-txt del">삭제하기</button>
+                </div>
+              </div>
+              <div class="cmt-body">
+                <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                <textarea class="txt-edit"></textarea>
+                <div class="btn-container type-editable-btn">
+                  <!-- <button type="button" class="btn-ico mod">수정하기</button>
+                  <button type="button" class="btn-ico del">삭제하기</button> -->
+                  <button type="button" class="btn-ico reply">답글달기<strong class="badge count">+1</strong></button>
+                </div>
+              </div>
+            </div>
+            <!-- 답글 아이템 -->
+            <div class="reply-container">
+              <div class="reply-header">
+                <div class="ipt-container">
+                  <input type="text" class="ipt cmt-ipt" />
+                  <div class="btn-container">
+                    <button type="button" class="btn">답글</button>
+                  </div>
+                </div>
+              </div>
+              <ul class="reply-content">
+                <li class="cmt-container">
+                  <div class="cmt-header">
                     <dl class="auth-info">
                       <dt class="auth">홍길동</dt>
                       <dd class="date">2022.03.14 09:30</dd>
                     </dl>
-                    <div class="btn-container">
-                      <button type="button" class="btn-txt regist">등록하기</button>
+                    <!-- <div class="btn-container">
+                      <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
+                      <button type="button" class="btn-txt mod">수정하기</button>
                       <button type="button" class="btn-txt del">삭제하기</button>
-                    </div>
+                    </div> -->
                   </div>
-                  <div class="cmmt-body">
+                  <div class="cmt-body">
                     <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                    <textarea class="txt-edit"></textarea>
                   </div>
                 </li>
               </ul>
+            </div>
+            <!-- // 답글 아이템 -->
+          </li>
+          <!-- //댓글 아이템 -->
+          <li class="list-item">
+            <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
+            <div class="cmt-container type-editable">
+              <div class="cmt-header">
+                <dl class="auth-info">
+                  <dt class="auth">나</dt>
+                  <dd class="date">2022.03.14 09:30</dd>
+                </dl>
+                <div class="btn-container type-mod-btn">
+                  <button type="button" class="btn-txt regist">등록하기</button>
+                  <button type="button" class="btn-txt del">삭제하기</button>
+                </div>
+              </div>
+              <div class="cmt-body">
+                <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                <textarea class="txt-edit"></textarea>
+                <div class="btn-container type-editable-btn">
+                  <button type="button" class="btn-ico mod">수정하기</button>
+                  <button type="button" class="btn-ico del">삭제하기</button>
+                  <button type="button" class="btn-ico reply">답글달기<strong class="badge count"></strong></button>
+                </div>
+              </div>
+            </div>
+            <!-- 답글 아이템 -->
+            <div class="reply-container">
+              <div class="reply-header">
+                <div class="ipt-container">
+                  <input type="text" class="ipt cmt-ipt" />
+                  <div class="btn-container">
+                    <button type="button" class="btn">답글</button>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- // 답글 아이템 -->
           </li>

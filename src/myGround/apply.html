@@ -47,9 +47,94 @@
               <button type="button" class="tab-button">My Post</button>
             </div>
             <div class="tab-content">
-              <article class="tab-item is-active">
-                <div class="container-content__background">
-                </div>  
+              <article class="tab-item container-edit is-active">
+                <header class="section-title">
+                  <h5 class="title">API 제안하기</h5>
+                </header>
+                <article class="form-container">
+                  <header class="form-header">
+                    <h5 class="title">필수정보</h5>
+                  </header>
+                  <form class="form">
+                    <div class="form-item">
+                      <div class="ipt-container">
+                        <select class="select">
+                          <option value="a" default>Voice AI</option>
+                          <option value="b">123</option>
+                          <option value="c">456</option>
+                          <option value="d">789</option>
+                          <option value="e">098</option>
+                        </select>
+                        <select class="select">
+                          <option value="a" default>Voice AI</option>
+                          <option value="b">123</option>
+                          <option value="c">456</option>
+                          <option value="d">789</option>
+                          <option value="e">098</option>
+                        </select>
+                        <div class="btn-container">
+                          <button type="button" class="btn">추가</button>
+                        </div>
+                      </div>
+                      <ul class="file-list">
+                        <li class="file-item api">
+                          <div class="data">
+                            <div class="description">
+                              <span class="file-name">localhost_3000_ (1).png</span>
+                              [<span class="file-size">181.82 Kb</span>]
+                            </div>
+                            <div class="controls">
+                              <button type="button" class="btn-txt del">삭제하기</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-item">
+                      <input type="text" class="ipt edit-ipt" placeholder="등록 될 application 제목을 입력하세요." />
+                    </div>
+                    <div class="form-item">
+                      <textarea class="edit-textarea" placeholder="등록 될 application 내용을 입력하세요."></textarea>
+                    </div>
+                    <div class="form-item">
+                      대표 이미지 또는 동영상
+                      <p class="txt-notice color-info">Application 상세 화면에서 제공할 대표 이미지 또는 YouTube 영상 URL 정보를 등록하세요​</p>
+                    </div>
+                    <div class="form-item">
+                      <textarea class="edit-textarea" placeholder="application 관련 상세 설명 정보를 입력하세요."></textarea>
+                      <p class="txt-notice color-info">Application 상세 화면에서 제공할 서비스 관련 정보를 등록하세요​</p>
+                    </div>
+                    <div class="form-item">
+                      <input type="text" class="ipt edit-ipt" placeholder="application 관련 GIT Hub 주소를 입력하세요​" />
+                      <p class="txt-notice color-info">Application 상세 화면에서 제공할 GitHub 정보를 등록하세요​</p>
+                    </div>
+                    <div class="form-item">
+                      제공자정보
+                      <p class="txt-notice color-info">제공자의 정보를 그룹(회사명 등) 또는 개인으로 선택하여 입력하세요. ​개인으로 선택 시 로그인 사용자의 이름으로 적용 됩니다. </p>
+                    </div>
+                  </form>
+                </article>
+                <article class="form-container">
+                  <header class="form-header">
+                    <h5 class="title">선택정보</h5>
+                  </header>
+                  <form class="form">
+                    <div class="form-item">
+                      <input type="text" class="ipt edit-ipt" placeholder="APK를 다운받을 수 있는 주소를 입력해 주세요.​" />
+                      <p class="txt-notice color-info">APK 제공이 가능한 경우 입력하면 서비스 상세 화면에서 해당 링크를 통해 APK 다운로드를 제공합니다. ​</p>
+                    </div>
+                    <div class="form-item">
+                      관련서비스
+                      <p class="txt-notice color-info">서비스 중인 제목 및 링크 주소를 입력하면 서비스 상세 화면에서 해당 링크를 제공합니다. ​</p>
+                    </div>
+                  </form>
+                  <div class="form-footer">
+                    <div class="btn-container">
+                      <a href="./index.html" class="btn cancel">삭제하기</a>
+                      <a href="./index.html" class="btn">재신청</a>
+                    </div>
+                  </div>
+                </article>
               </article>
               <article class="tab-item">myGuide/index.html 파일 참조</article>
               <article class="tab-item">myGuide/index.html 파일 참조</article>

@@ -39,22 +39,55 @@
           <p class="page-txt">GenieGround에서 경험할 수 있는 <br class="br-mo" />다양한 API들에 <br class="br-pc" />대해 정보를 <br class="br-mo" />공유할 수 있는 공간입니다 .</p>
         </section>
         <!-- 게시글 작성시  -->
-        <section class="container-content container-content__edit">
-          <article class="edit-container">
-            <div class="edit-title">
-              <select class="select search-category">
-                <option value="a" default>Voice AI</option>
-                <option value="b">123</option>
-                <option value="c">456</option>
-                <option value="d">789</option>
-                <option value="e">098</option>
-              </select>
-              <input type="text" class="edit-ipt" placeholder="게시글 제목을 입력해주세요" />
-            </div>
-            <div class="edit-content">
-              <textarea class="edit-ipt" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="edit-footer">
+        <section class="container-content container-edit">
+          <article class="form-container">
+            <form class="form">
+              <div class="form-subtitle ipt-container">
+                <select class="select search-category">
+                  <option value="a" default>Voice AI</option>
+                  <option value="b">123</option>
+                  <option value="c">456</option>
+                  <option value="d">789</option>
+                  <option value="e">098</option>
+                </select>
+                <input type="text" class="ipt edit-ipt" placeholder="게시글 제목을 입력해주세요" />
+              </div>
+              <div class="form-item">
+                <textarea class="edit-textarea"></textarea>
+              </div>
+              <div class="form-item">
+                <article class="fileUpload-container">
+                  <div class="fileUpload-title">
+                    <h5 class="title">첨부파일</h5>
+                    <p class="txt">
+                      * 첨부가능 파일 확장자 : hwp/pdf(최대 25MB) [
+                      <strong>200.9KB</strong>
+                      / 25MB]
+                    </p>
+                  </div>
+                  <div id="fileDropzone" class="drag-zone">
+                    <label for="fileIpt" class="file-label">파일첨부하기</label>
+                    <input type="file" id="fileIpt" class="file-ipt" multiple />
+                    <p class="drag-txt">파일을 마우스로 끌어오세요</p>
+                  </div>
+                  <div id="fileQueue" class="file-list">
+                    <div id="file-upload-1" class="fileup-file file-item">
+                      <div class="data">
+                        <div class="description">
+                          <span class="file-name">localhost_3000_ (1).png</span>
+                          [<span class="file-size">181.82 Kb</span>]
+                        </div>
+                        <div class="controls">
+                          <button type="button" class="btn-txt del" onclick="$.fileup('upload', 'remove', '1');" title="삭제하기">삭제하기</button>
+                        </div>
+                        <div class="result"></div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </form>
+            <div class="form-footer">
               <div class="btn-container">
                 <a href="./index.html" class="btn cancel">취소하기</a>
                 <a href="./index.html" class="btn">등록하기</a>

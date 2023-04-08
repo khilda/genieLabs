@@ -16,6 +16,10 @@
   line-height: 1;
   @include ellipsis();
 }
+.badge-container {
+  display: flex;
+  gap: 5px;
+}
 .badge {
   @include badge-default();
   border-radius: 80px;

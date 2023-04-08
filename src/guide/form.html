@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <style>
+      .guide {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="guide">
+      <article class="container-edit">
+        <header class="section-title">
+          <h5 class="title">API 제안하기</h5>
+          <p class="txt">사용하고 싶은 API가 있다면 자유롭게 제안해 주세요​</p>
+        </header>
+        <article class="form-container">
+          <header class="form-header">
+            <h5 class="title">필수정보</h5>
+          </header>
+          <form class="form">
+            <div class="form-subtitle ipt-container">
+              <select class="select search-category">
+                <option value="a" default>Voice AI</option>
+                <option value="b">123</option>
+                <option value="c">456</option>
+                <option value="d">789</option>
+                <option value="e">098</option>
+              </select>
+              <input type="text" class="ipt edit-ipt" placeholder="게시글 제목을 입력해주세요" />
+            </div>
+            <div class="form-item">
+              <input type="text" class="ipt edit-ipt" placeholder="게시글 제목을 입력해주세요" />
+            </div>
+            <div class="form-item">
+              <textarea class="edit-textarea" id="" cols="30" rows="10"></textarea>
+            </div>
+          </form>
+          <div class="form-footer">
+            <p class="txt-notice">제출된 제안 내용 및 답변 사항은 My Ground 메뉴에서 확인할 수 있습니다. ​</p>
+            <div class="btn-container">
+              <a href="./index.html" class="btn cancel">취소하기</a>
+              <a href="./index.html" class="btn">등록하기</a>
+            </div>
+          </div>
+        </article>
+      </article>
+    </main>
+  </body>
+  <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+  <script src="../../assets/js/lib/fileup.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    $(document).ready(() => {
+
+      $.fileup({
+        url: "https://github.com?file_upload=1",
+        inputID: "fileIpt",
+        queueID: "fileQueue",
+        dropzoneID: "fileDropzone",
+        templateFile: '<div id="file-[INPUT_ID]-[FILE_NUM]" class="fileup-file file-item">' +
+          '<div class="data">' +
+          '<div class="description">' +
+          '<span class="file-name">[NAME]</span> [<span class="file-size">[SIZE_HUMAN]</span>]' +
+          "</div>" +
+          '<div class="controls">' +
+          "<button type=\"button\" class=\"btn-txt del\" onclick=\"$.fileup('[INPUT_ID]', 'remove', '[FILE_NUM]');\" title=\"[REMOVE]\">삭제하기</button>" +
+          "</div>" +
+          '<div class="result"></div>' +
+          "</div>" +
+          "</div>",
+      })
+        .dragEnter(function (event) {
+          $(event.target).addClass("over");
+        })
+        .dragLeave(function (event) {
+          $(event.target).removeClass("over");
+        })
+        .dragEnd(function (event) {
+          $(event.target).removeClass("over");
+        });
+    })
+  </script>
+
+</html>

@@ -64,7 +64,9 @@
     left: 50%;
     background-color: #ff2e00;
     border-radius: 80px;
-    padding: 3px 10px;
+    max-width: 65px;
+    padding: 0 10px;
+    line-height: 34px;
     font-size: 16px;
     font-weight: 800;
     color: #fff;
@@ -87,4 +89,18 @@
       background-image: url("../images/ico_btn_cmt_b.svg");
     }
   }
+}
+
+// 바로가기 버튼
+.btn-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  padding: 11px 66px 11px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
 }

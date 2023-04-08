@@ -1,0 +1,123 @@
+.fileUpload-container {
+  position: relative;
+  width: 100%;
+}
+.fileUpload-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .txt {
+    color: #787878;
+    strong {
+      color: #000;
+      font-weight: 700;
+    }
+  }
+}
+
+.drag-zone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #f4f4f4;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  padding: 30px 0;
+  text-align: center;
+  color: #787878;
+  .file-label {
+    display: block;
+    background-color: transparent;
+    background: transparent no-repeat 20px 50%;
+    background-image: url("../images/ico_file_upload.svg");
+    border: 2px solid #000;
+    border-radius: 80px;
+    padding: 10px 20px 10px 44px;
+    color: #000;
+    font-weight: 700;
+  }
+  .file-ipt {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+  }
+  .drag-txt {
+    background: transparent no-repeat 0 50%;
+    background-image: url("../images/ico_file_file_78.svg");
+    padding-left: 30px;
+  }
+}
+
+.drag-zone.over {
+  opacity: 0.5;
+}
+.file-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.file-item {
+  border: 2px solid #ededed;
+  background-color: #fff;
+  margin: 0;
+  padding: 11px 20px;
+  max-width: none;
+  font: $font-weight $font-size $font-famliy;
+  line-height: $line-height;
+  .description {
+    background: transparent no-repeat 0 50%;
+    background-image: url("../images/ico_file_file.svg");
+    padding-left: 34px;
+    color: #787878;
+    .file-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+  .data {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .controls {
+    margin: 0;
+    margin-left: auto;
+  }
+  &.api .description {
+    background-image: url("../images/ico_file_api.svg");
+  }
+}
+
+@include mobile {
+  .fileUpload-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .fileUpload-title {
+    flex-direction: column;
+  }
+  .drag-zone {
+    flex-direction: column;
+  }
+  .file-item {
+    .controls {
+      margin-top: 10px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .data {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
