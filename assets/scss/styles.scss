@@ -16,9 +16,11 @@
 @import "layouts/footer";
 
 // libaray
+@import "../css/lib/jquery.ui.all.css";
 @import "../css/lib/swiper-bundle.css";
 @import "../css/lib/fileup.css";
 
+// module
 @import "modules/breadcrumb";
 @import "modules/badge";
 @import "modules/button";

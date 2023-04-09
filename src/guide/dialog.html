@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <style>
+      .guide {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="guide">
+      <button class="btn" onClick="onClickAlert()">Alert</button>
+      <button class="btn" onClick="onClickConfirm()">Conform</button>
+      <button class="btn" onClick="onClickLoader()">Loader</button>
+    </main>
+    <article class="dialog-alert">
+      <button class="dialog-close">닫기</button>
+      <div class="dialog-body">
+        <span class="loading-loader"></span>
+        <p class="loading-txt">로딩중입니다.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="dialog-btn confirm">확인</button>
+        <button class="dialog-btn">취소</button>
+      </div>
+    </article>
+    <article class="page-loading">
+      <div class="loading">
+        <span class="loading-loader"></span>
+        <p class="loading-txt">로딩중입니다.</p>
+      </div>
+    </article>
+  </body>
+  <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+  <script src="../../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    function onClickAlert() {
+      $("#dialogAlert").dialog();
+    }
+    function onClickConfirm() {
+      $("#dialogConfirm").dialog();
+    }
+    function onClickLoader() {
+      document.querySelector('.page-loading').classList.add('is-show')
+      setTimeout(() => {
+        document.querySelector('.page-loading').classList.remove('is-show')
+      }, 3000)
+    }
+  </script>
+
+</html>

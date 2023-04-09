@@ -60,7 +60,7 @@
 .drag-zone.over {
   opacity: 0.5;
 }
-.file-list{
+.file-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -118,6 +118,38 @@
     .data {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+}
+
+// sweet alert
+.dialog-container{
+  border-radius: 0;
+  font-size: 14px;
+  padding-top: 30px;
+  .dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .swal2-icon{
+    margin: 0 auto;
+  }
+  .dialog-body {
+  }
+  .dialog-btn {
+    background-color: #efefef;
+    border: 2px solid transparent;
+    border-radius: 80px;
+    padding: 0 20px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #787878;
+    &.confirm {
+      border-color: #000;
+      background-color: #fff;
+      color: #000;
     }
   }
 }
