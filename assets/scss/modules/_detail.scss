@@ -105,7 +105,12 @@
         }
       }
       .func-container {
+        flex-direction: column;
         width: 100%;
+        .chk-like{
+          flex: 1;
+          justify-content: center;
+        }
         .btn-link {
           flex: 1;
         }

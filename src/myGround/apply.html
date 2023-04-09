@@ -23,7 +23,7 @@
           </div>
           <div class="info">
             <a href="/src/myGround/index.html" class="info-menu ground is-active">MyGround</a>
-            <a href="#none" class="info-menu logout">Logout</a>
+            <a href="#logout" class="info-menu logout">Logout</a>
           </div>
           <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
         </div>
@@ -91,8 +91,8 @@
                     <div class="form-item">
                       <input type="text" class="ipt edit-ipt" placeholder="등록 될 application 제목을 입력하세요." />
                     </div>
-                    <div class="form-item">
-                      <textarea class="edit-textarea" placeholder="등록 될 application 내용을 입력하세요."></textarea>
+                    <div class="form-editor">
+                      <textarea id="formEditor" name="editor1"></textarea>
                     </div>
                     <div class="form-item">
                       <dl class="thumbnail-box">
@@ -203,7 +203,13 @@
     <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
     <script src="../../assets/js/lib/fileup.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        CKEDITOR.replace('editor1');
+        funcApiList()
+        initThumbImg()
+      })
       // API 리스트 추가하기
       function funcApiList() {
         const categoryBox = document.querySelector('.category-box')
@@ -263,8 +269,6 @@
         })
       }
 
-      funcApiList()
-      initThumbImg()
     </script>
     <script>
       $(document).ready(() => {
