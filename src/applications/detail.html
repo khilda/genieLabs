@@ -41,7 +41,7 @@
         <section class="container-content container-detail">
           <header class="section-title">
             <div class="title-container">
-              <h5 class="title">lorem</h5>
+              <h5 class="title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo illum vitae minima qui necessitatibus assumenda, distinctio illo</h5>
             </div>
             <div class="func-container">
               <div class="chk chk-like">
@@ -71,9 +71,22 @@
 
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
             </p>
-            <figure class="img">
+            <figure class="img-container">
               <img src="https://placehold.co/700x400/EEE/31343C" alt="">
             </figure>
+            <textarea id="codeMirror" class="code-mirror">
+<footer class="footer">
+  <div class="copyright">
+    <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+    <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+    <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+  </div>
+  <div class="term">
+    <a href="#none" class="term-txt">이용약관</a>
+    <a href="#none" class="policy-txt">개인정보처리방침</a>
+  </div>
+</footer>
+            </textarea>
           </article>
           <article class="form-container mt60">
             <header class="form-header">
@@ -302,32 +315,16 @@
         </div>
       </footer>
     </div>
-    <script defer src="../../assets/js/main.js"></script>
-    <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/lib/codemirror.js"></script>
+    <script src="../../assets/js/lib/xml.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
-      const swiper = new Swiper("#cardSwiper", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 27,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          742: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1440: {
-            slidesPerView: 4,
-            spaceBetween: 36,
-            pagination: false,
-          },
-        },
+      document.addEventListener('DOMContentLoaded', () => {
+        CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
+          lineNumbers: true,
+          mode: "text/html",
+          matchBrackets: true
+        });
       });
     </script>
   </body>

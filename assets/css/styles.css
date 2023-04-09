@@ -12,6 +12,7 @@
 @import "../css/lib/sweetalert2.min.css";
 @import "../css/lib/swiper-bundle.css";
 @import "../css/lib/fileup.css";
+@import "../css/lib/codemirror.css";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,8 +29,10 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-family: "pretendard", "Malgun Gothic";
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color, #000);
   vertical-align: baseline;
 }
 
@@ -1092,6 +1095,11 @@ textarea:read-only {
   .container-edit {
     padding: 20px;
   }
+  .container-edit > .section-title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .container-header {
     background-size: auto;
     height: 400px;
@@ -2080,6 +2088,7 @@ textarea:read-only {
 
 .ipt {
   border: 2px solid #ccc;
+  background-color: #fff;
   width: 100%;
   padding: 10px 20px;
   font-size: 14px;
@@ -2123,6 +2132,16 @@ textarea:read-only {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .ipt-container .select,
+  .ipt-container .btn-container {
+    width: 100%;
+  }
+  .ipt-container .select .btn,
+  .ipt-container .btn-container .btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 .chk {
@@ -3115,7 +3134,6 @@ select.select::-ms-expand {
   }
   .file-item .controls {
     margin-top: 10px;
-    margin-right: auto;
     margin-left: auto;
   }
   .file-item .data {
@@ -3128,33 +3146,10 @@ select.select::-ms-expand {
             align-items: flex-start;
   }
 }
-.dialog-container {
-  border-radius: 0;
-  font-size: 14px;
-  padding-top: 30px;
-}
-.dialog-container .dialog-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.dialog-container .swal2-icon {
-  margin: 0 auto;
-}
-.dialog-container .dialog-btn {
-  background-color: #efefef;
-  border: 2px solid transparent;
-  border-radius: 80px;
-  padding: 0 20px;
-  line-height: 32px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #787878;
-}
-.dialog-container .dialog-btn.confirm {
-  border-color: #000;
-  background-color: #fff;
-  color: #000;
+.CodeMirror {
+  border: 1px solid #ccc;
+  line-height: 1.2;
+  max-height: 250px;
 }
 
 .pagination {
@@ -3307,6 +3302,18 @@ select.select::-ms-expand {
   width: 42px;
   height: 48px;
   font-size: 0;
+}
+
+.img-container {
+  position: relative;
+  margin: 20px 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.img-container img {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1439px) {
@@ -3639,4 +3646,151 @@ select.select::-ms-expand {
 }
 .myGround .tab-item > .txt-notice {
   margin-bottom: 40px;
+}
+.myGround .title-content-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  gap: 40px;
+}
+.myGround .title-content-box dt {
+  font-weight: 700;
+  font-size: 18px;
+}
+.myGround .title-content-box dd.ipt-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.myGround .title-content-box dd.ipt-container .ipt {
+  min-width: 160px;
+}
+@media (max-width: 742px) {
+  .myGround .title-content-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 20px;
+  }
+  .myGround .title-content-box .ipt-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.myGround .title-ipt-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.myGround .title-ipt-box dt {
+  font-weight: 700;
+  font-size: 18px;
+}
+.myGround .title-ipt-box .ipt-container {
+  gap: 10px;
+}
+.myGround .title-ipt-box .ipt-container .ipt-tit {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 150px;
+  text-align: right;
+}
+@media (max-width: 742px) {
+  .myGround .title-ipt-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .myGround .title-ipt-box .ipt-container .ipt-tit {
+    text-align: center;
+  }
+}
+.myGround .thumbnail-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 24px;
+}
+.myGround .thumbnail-box dt {
+  font-weight: 700;
+  font-size: 18px;
+}
+.myGround .thumbnail-box .thumb-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #f4f4f4;
+  padding: 30px;
+  width: 100%;
+}
+.myGround .thumbnail-box .thumb-box .ipt {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 742px) {
+  .myGround .thumbnail-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .myGround .thumbnail-box .ipt-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .myGround .thumbnail-box .thumb-box {
+    padding: 20px 10px;
+  }
 }

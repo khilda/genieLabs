@@ -157,6 +157,9 @@
   }
   .container-edit {
     padding: 20px;
+    > .section-title {
+      align-items: center;
+    }
   }
   .container-header {
     background-size: auto;
