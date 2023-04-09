@@ -9,7 +9,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import "../css/lib/sweetalert2.min.css";
+@import "../css/lib/jquery.ui.all.css";
 @import "../css/lib/swiper-bundle.css";
 @import "../css/lib/fileup.css";
 html, body, div, span, applet, object, iframe,
@@ -1642,20 +1642,6 @@ textarea:read-only {
             flex: 1;
   }
 }
-.swal2-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.swal2-icon-info {
-  border-top-color: #FF6B00;
-}
-
-.swal2-icon-success {
-  border-top-color: #00D1FF;
-}
-
 .container-detail .section-title {
   -webkit-box-align: start;
       -ms-flex-align: start;

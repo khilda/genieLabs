@@ -65,6 +65,8 @@
   background-color: #fff;
   padding: 60px;
   .section-title {
+    align-items: flex-start;
+    flex-direction: column;
     border: 0 none;
     padding: 0;
     margin-bottom: 20px;
@@ -74,7 +76,8 @@
     .txt {
       line-height: 30px;
       font-size: 18px;
-      font-weight: 500;
+      font-weight: 400;
+      color: #787878;
     }
     .btn-container {
       margin-left: auto;
@@ -109,7 +112,7 @@
   .container {
     padding: 0 50px;
   }
-  .container-content.container-edit {
+  .container-edit {
     padding: 30px;
   }
   .container-header {
@@ -152,7 +155,7 @@
   .container {
     padding: 0 27px;
   }
-  .container-content.container-edit {
+  .container-edit {
     padding: 20px;
   }
   .container-header {

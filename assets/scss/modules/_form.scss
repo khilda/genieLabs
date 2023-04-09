@@ -6,20 +6,28 @@
 }
 
 .ipt-container {
+  flex: 1;
   display: flex;
   align-items: center;
   flex-direction: row;
+  width: 100%;
   gap: 5px;
-  padding: 10px;
   .select {
     flex: none;
     width: 200px;
+  }
+  .ipt {
+    flex: 1;
   }
   .btn-container {
     gap: inherit;
   }
 }
-
+@include mobile {
+  .ipt-container {
+    flex-direction: column;
+  }
+}
 .chk {
   position: relative;
   display: inline-flex;
@@ -34,7 +42,7 @@
     &:disabled + .chk-label {
       color: #ccc;
       cursor: auto;
-      opacity: .5;
+      opacity: 0.5;
     }
     &:disabled + .chk-label:before {
       background: #ccc;

@@ -6,6 +6,7 @@
   border: 0 none;
   padding: 0;
   margin-bottom: 10px;
+  text-align: left;
   .title {
     font-size: 20px;
     font-weight: 700;
@@ -14,40 +15,40 @@
 
 .form {
   border-top: 3px solid #000;
-  .form-subtitle {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 25px 20px;
-    border-bottom: 1px solid #000;
-  }
-  .form-item {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 10px;
-    padding: 25px 20px;
-    border-bottom: 1px solid #ccc;
-    &:last-child {
-      border-color: #000;
-    }
-  }
-  .form-textarea {
-    height: 250px;
-  }
   > .txt {
     padding: 40px;
   }
-  .form-subtitle,
-  .form-item {
-    .ipt-container,
-    .file-list {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
+}
+.form-subtitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 25px 20px;
+  border-bottom: 1px solid #000;
+}
+.form-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 20px;
+  border-bottom: 1px solid #ccc;
+  &:last-child {
+    border-color: #000;
+  }
+}
+.form-textarea {
+  height: 250px;
+}
+.form-subtitle,
+.form-item {
+  > .ipt-container,
+  > .file-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -80,15 +81,14 @@
 
 @include mobile {
   .form-header {
-    text-align: center;
     .title {
-      font-size: 28px;
+      font-size: 16px;
     }
     .txt {
       font-size: 14px;
     }
   }
-  .form-title,
+  .form-subtitle,
   .form-item {
     flex-wrap: wrap;
     padding-left: 0;

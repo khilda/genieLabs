@@ -49,7 +49,7 @@
             <div class="tab-content">
               <article class="tab-item container-edit is-active">
                 <header class="section-title">
-                  <h5 class="title">API 제안하기</h5>
+                  <h5 class="title">내가 만든 Application 등록 신청​</h5>
                 </header>
                 <article class="form-container">
                   <header class="form-header">
@@ -81,7 +81,6 @@
                           <div class="data">
                             <div class="description">
                               <span class="file-name">localhost_3000_ (1).png</span>
-                              [<span class="file-size">181.82 Kb</span>]
                             </div>
                             <div class="controls">
                               <button type="button" class="btn-txt del">삭제하기</button>
@@ -109,7 +108,21 @@
                       <p class="txt-notice color-info">Application 상세 화면에서 제공할 GitHub 정보를 등록하세요​</p>
                     </div>
                     <div class="form-item">
-                      제공자정보
+                      <dl class="d-flex">
+                        <dt>제공자정보</dt>
+                        <dd class="ipt-container ml40 gap20">
+                          <div class="rdo">
+                            <input class="rdo-ipt" id="rdo0" type="radio" name="demo">
+                            <label for="rdo0" class="rdo-label">개인</label>
+                          </div>
+                          <div class="rdo">
+                            <input class="rdo-ipt" id="rdo1" type="radio" name="demo">
+                            <label for="rdo1" class="rdo-label">그룹</label>
+                          </div>
+                          <input type="text" class="ipt ml30" placeholder="제공자 정보를 입력해주세요​" />
+                        </dd>
+                      </dl>
+
                       <p class="txt-notice color-info">제공자의 정보를 그룹(회사명 등) 또는 개인으로 선택하여 입력하세요. ​개인으로 선택 시 로그인 사용자의 이름으로 적용 됩니다. </p>
                     </div>
                   </form>

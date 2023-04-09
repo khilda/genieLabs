@@ -29,7 +29,11 @@ textarea {
     border-color: transparent;
   }
 }
-
+.d-flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 .flex-direction-vertical {
   flex-direction: column;
 }
@@ -40,16 +44,19 @@ textarea {
 @for $i from 0 to 10 {
   $margin: $i * 10;
   .mt#{$margin} {
-    margin-top: $margin * 1px;
+    margin-top: $margin * 1px !important;
   }
   .mb#{$margin} {
-    margin-bottom: $margin * 1px;
+    margin-bottom: $margin * 1px !important;
   }
   .ml#{$margin} {
-    margin-left: $margin * 1px;
+    margin-left: $margin * 1px !important;
   }
   .mr#{$margin} {
-    margin-right: $margin * 1px;
+    margin-right: $margin * 1px !important;
+  }
+  .gap#{$margin} {
+    gap: $margin * 1px !important;
   }
 }
 
