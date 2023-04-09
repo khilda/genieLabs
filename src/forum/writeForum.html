@@ -52,8 +52,8 @@
                 </select>
                 <input type="text" class="ipt edit-ipt" placeholder="게시글 제목을 입력해주세요" />
               </div>
-              <div class="form-item">
-                <textarea class="edit-textarea"></textarea>
+              <div class="form-editor">
+                <div id="formEditor"></div>
               </div>
               <div class="form-item">
                 <article class="fileUpload-container">
@@ -109,6 +109,17 @@
       </footer>
     </div>
     <script defer src="../../assets/js/main.js"></script>
+    <script defer src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        ClassicEditor
+          .create(document.querySelector( '#formEditor' ))
+          .catch( error => {
+              console.error( error );
+          });
+      })
+    </script>
   </body>
 
 </html>
