@@ -12,6 +12,7 @@
 @import "../css/lib/sweetalert2.min.css";
 @import "../css/lib/swiper-bundle.css";
 @import "../css/lib/fileup.css";
+@import "../css/lib/codemirror.css";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,8 +29,10 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-family: "pretendard", "Malgun Gothic";
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color, #000);
   vertical-align: baseline;
 }
 
@@ -3143,33 +3146,10 @@ select.select::-ms-expand {
             align-items: flex-start;
   }
 }
-.dialog-container {
-  border-radius: 0;
-  font-size: 14px;
-  padding-top: 30px;
-}
-.dialog-container .dialog-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.dialog-container .swal2-icon {
-  margin: 0 auto;
-}
-.dialog-container .dialog-btn {
-  background-color: #efefef;
-  border: 2px solid transparent;
-  border-radius: 80px;
-  padding: 0 20px;
-  line-height: 32px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #787878;
-}
-.dialog-container .dialog-btn.confirm {
-  border-color: #000;
-  background-color: #fff;
-  color: #000;
+.CodeMirror {
+  border: 1px solid #ccc;
+  line-height: 1.2;
+  max-height: 250px;
 }
 
 .pagination {
@@ -3322,6 +3302,18 @@ select.select::-ms-expand {
   width: 42px;
   height: 48px;
   font-size: 0;
+}
+
+.img-container {
+  position: relative;
+  margin: 20px 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.img-container img {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1439px) {
