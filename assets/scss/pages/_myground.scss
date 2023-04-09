@@ -5,6 +5,12 @@
   .tab-item > .txt-notice {
     margin-bottom: 40px;
   }
+  .category-box {
+    gap: 10px;
+    .category-tit {
+      flex: 1;
+    }
+  }
   .title-content-box {
     flex: 1;
     display: flex;
@@ -12,10 +18,6 @@
     justify-content: flex-start;
     width: 100%;
     gap: 40px;
-    dt {
-      font-weight: 700;
-      font-size: 18px;
-    }
     dd.ipt-container {
       display: flex;
       align-items: center;
@@ -43,10 +45,6 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    dt {
-      font-weight: 700;
-      font-size: 18px;
-    }
     .ipt-container {
       gap: 10px;
       .ipt-tit {
@@ -71,18 +69,24 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 24px;
-    dt {
-      font-weight: 700;
-      font-size: 18px;
-    }
     .thumb-box {
-      flex: 1;
+      display: none;
+      flex: none;
       background-color: #f4f4f4;
       padding: 30px;
       width: 100%;
+      &.is-show {
+        display: block;
+      }
+      .file-label {
+        width: 155px;
+      }
       .ipt {
         width: 100%;
-        margin-bottom: 20px;
+      }
+      .thumb-img {
+        margin-top: 20px;
+        max-width: 100%;
       }
     }
   }
@@ -97,7 +101,6 @@
       .thumb-box {
         padding: 20px 10px;
       }
-
     }
   }
 }
