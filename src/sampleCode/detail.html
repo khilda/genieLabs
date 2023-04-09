@@ -41,9 +41,11 @@
         <section class="container-content container-detail">
           <header class="section-title">
             <div class="title-container">
-              <h5 class="title">lorem</h5>
+              <h5 class="title">의도 분류(Fine Tuning)</h5>
               <dl class="badge-container">
                 <dt class="badge-tit">사용 API</dt>
+                <dd class="badge">Voice AI</dd>
+                <dd class="badge">Voice AI</dd>
                 <dd class="badge">Voice AI</dd>
               </dl>
             </div>
@@ -52,25 +54,44 @@
             </div>
           </header>
           <article class="detail-container">
+            <p class="txt">의도 분류(Intent Classification)는 텍스트에 담긴 목저깅나 상황 등을 매핑 및 분류하는 기술입니다.
+              일반적으로 챗봇/보이스봇 등 자연어 UX 기반 서비스에서 사용자와 상호 작용하기 위한 핵심 기술 중 하나이며,
+              사용자와 상호 작용하기 위한 핵심 기술 중 하나이며, 사용자의 자연어 입력 기반으로 사용자의 의도 또는 원하는
+              목적을 찾을 수 있도록 해줍니다.</p>
             <p class="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia ex maiores nulla inventore magni repellendus aut, ipsum ea laborum iste, itaque praesentium molestiae aspernatur doloribus quidem! Exercitationem, fuga. Autem?
-            </p>
+              KT 의도 분류는 대규모 신경망에 기반하여 확률적 의도 해석을 진행하기 때문에 발화 실수나
+              인식 오류에도 강건한 기술입니다.</p>
+            <div class="code-box">
+              <div class="code-header">
+                <select class="select">
+                  <option value="b" default>Html</option>
+                  <option value="c">JSON</option>
+                  <option value="d">Node.js</option>
+                  <option value="e">Vue</option>
+                </select>
+                <button type="button" class="btn-copy">Code Copy</button>
+                <p class="copy-tooltip">code가 복사 되었습니다.<br>원하는 곳에 붙여넣기 해주세요 (Ctrl+V)</p>
+              </div>
+              <textarea id="codeMirror" class="code-mirror">
+{
+  "code":"200",
+  "message":"Success",
+  "toxic_count": 1,
+  "result": [
+    {
+      "sentence": "집도 없는 새끼가 무슨 차를 사냐?",
+      "label": "toxic"
+      "confidences": { "normal": 0.0, "toxic": 1.0 }
+    },
+    {
+      "sentence": "와 진짜 잘한다. 우리나라에 그런 선수가 있다니 행복하네요.",
+      "label": "normal"
+      "confidences": { "normal": 1.0, "toxic": 0.0 }
+    }
+  ]
+}
+              </textarea>
+            </div>
           </article>
         </section>
       </main>
@@ -86,32 +107,16 @@
         </div>
       </footer>
     </div>
-    <script defer src="../../assets/js/main.js"></script>
-    <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/lib/codemirror.js"></script>
+    <script src="../../assets/js/lib/xml.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
-      const swiper = new Swiper("#cardSwiper", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 27,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          742: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1440: {
-            slidesPerView: 4,
-            spaceBetween: 36,
-            pagination: false,
-          },
-        },
+      document.addEventListener('DOMContentLoaded', () => {
+        CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
+          lineNumbers: true,
+          mode: "text/html",
+          matchBrackets: true
+        });
       });
     </script>
   </body>

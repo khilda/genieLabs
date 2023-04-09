@@ -112,7 +112,8 @@
   .container {
     padding: 0 50px;
   }
-  .container-edit {
+  .container-edit,
+  .container-detail {
     padding: 30px;
   }
   .container-header {
@@ -155,7 +156,8 @@
   .container {
     padding: 0 27px;
   }
-  .container-edit {
+  .container-edit,
+  .container-detail {
     padding: 20px;
     > .section-title {
       align-items: center;

@@ -42,6 +42,7 @@
       padding-left: 31px;
       color: var(--card-view-color);
       .count {
+        color: inherit;
         line-height: 24px;
         font-size: 18px;
         font-weight: 700;
@@ -131,9 +132,8 @@
         line-height: 26px;
         font-weight: 700;
       }
-      > dd{
+      > dd {
         font-weight: 400;
-
       }
     }
   }

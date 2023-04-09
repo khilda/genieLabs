@@ -34,9 +34,11 @@
   &.is-active {
     color: #000;
   }
-  &.regist:before {
+  &.regist {
     color: #000;
-    background-image: url("../images/ico_btn_resgist.svg");
+    &:before {
+      background-image: url("../images/ico_btn_resgist.svg");
+    }
   }
   &.mod:before {
     background-image: url("../images/ico_btn_mod.svg");
@@ -92,7 +94,7 @@
 }
 
 // 바로가기 버튼
-.btn-link{
+.btn-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -103,4 +105,25 @@
   color: #fff;
   text-decoration: underline;
   text-align: center;
+}
+// Code Copy
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  padding: 14px 20px 14px 66px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+@include mobile {
+  .btn-container {
+    width: 100%;
+    .btn {
+      flex: 1;
+    }
+  }
 }

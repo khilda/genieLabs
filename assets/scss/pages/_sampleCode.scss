@@ -1,0 +1,31 @@
+.sampleCode {
+  .code-box {
+    .code-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn-copy {
+      margin-left: auto;
+    }
+    .copy-tooltip {
+      position: relative;
+      border: 2px solid #000;
+      padding: 15px 30px;
+      margin-bottom: 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        right: -9px;
+        top: 36px;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border-top: 2px solid #000;
+        border-right: 2px solid #000;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
