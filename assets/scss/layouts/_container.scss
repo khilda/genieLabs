@@ -5,6 +5,7 @@
   position: relative;
   background-color: #ededed;
   width: 100%;
+  min-height: 100vh;
   &.main {
     background-color: var(--background, #000);
     max-width: 1392px;

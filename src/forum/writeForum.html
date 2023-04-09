@@ -23,7 +23,7 @@
           </div>
           <div class="info">
             <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
-            <a href="#none" class="info-menu logout">Logout</a>
+            <a href="#logout" class="info-menu logout">Logout</a>
           </div>
           <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
         </div>
@@ -53,7 +53,7 @@
                 <input type="text" class="ipt edit-ipt" placeholder="게시글 제목을 입력해주세요" />
               </div>
               <div class="form-editor">
-                <div id="formEditor"></div>
+                <textarea id="formEditor" name="editor1"></textarea>
               </div>
               <div class="form-item">
                 <article class="fileUpload-container">
@@ -109,15 +109,10 @@
       </footer>
     </div>
     <script defer src="../../assets/js/main.js"></script>
-    <script defer src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+    <script defer src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        
-        ClassicEditor
-          .create(document.querySelector( '#formEditor' ))
-          .catch( error => {
-              console.error( error );
-          });
+        CKEDITOR.replace('editor1');
       })
     </script>
   </body>

@@ -110,11 +110,14 @@
   }
   .drag-zone {
     flex-direction: column;
+    .drag-txt{
+      display: none;
+    }
   }
   .file-item {
     .controls {
       margin-top: 10px;
-      margin-left: auto;
+      margin-right: auto;
     }
     .data {
       flex-direction: column;

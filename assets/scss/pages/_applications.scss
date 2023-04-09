@@ -21,6 +21,7 @@
   @include mobile{
     .title-link-box .link{
       width: 100%;
+      justify-content: flex-start;
     }
   }
 }

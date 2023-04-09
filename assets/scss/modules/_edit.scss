@@ -185,6 +185,12 @@
   }
 }
 
+@include desktop {
+  .form-detail-footer {
+    padding-top: 10px;
+  }
+}
+
 @include tablet {
   .form-detail-footer {
     padding-top: 10px;
@@ -193,9 +199,31 @@
 
 @include mobile {
   .form-detail-header {
-    text-align: center;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
     .title {
       font-size: 24px;
+    }
+    .edit-author {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 0;
+      width: 100%;
+      gap: 6px;
+      > dd {
+        margin: 0;
+      }
+    }
+  }
+  .form-detail-content {
+    > .txt {
+      padding: 30px 0;
+    }
+    .fileUpload-container {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   .form-detail-footer {
@@ -207,5 +235,10 @@
         flex: 1;
       }
     }
+  }
+
+  .form-editor {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

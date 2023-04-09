@@ -46,6 +46,9 @@
   &.del:before {
     background-image: url("../images/ico_btn_del.svg");
   }
+  &.link:before {
+    background-image: url("../images/ico_btn_chain.svg");
+  }
 }
 
 // 아이콘버튼
@@ -98,25 +101,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
-  padding: 11px 66px 11px 20px;
+  background: #000;
+  padding: 11px 20px;
   font-size: 14px;
   font-weight: 700;
   color: #fff;
   text-decoration: underline;
   text-align: center;
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 26px;
+    background: url("../images/ico_btn_link.svg") no-repeat 50% 50%;
+  }
 }
 // Code Copy
 .btn-copy {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
-  padding: 14px 20px 14px 66px;
+  background: #000;
+  padding: 14px 20px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;
   text-align: center;
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url("../images/ico_btn_copy.svg") no-repeat 50% 50%;
+  }
 }
 
 @include mobile {
@@ -125,5 +144,9 @@
     .btn {
       flex: 1;
     }
+  }
+  .btn-link,
+  .btn-copy {
+    justify-content: space-between;
   }
 }
