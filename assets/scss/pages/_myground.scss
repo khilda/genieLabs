@@ -5,6 +5,101 @@
   .tab-item > .txt-notice {
     margin-bottom: 40px;
   }
+  .title-content-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 40px;
+    dt {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    dd.ipt-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .ipt {
+        min-width: 160px;
+      }
+    }
+  }
+  @include mobile {
+    .title-content-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      .ipt-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .title-ipt-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    dt {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .ipt-container {
+      gap: 10px;
+      .ipt-tit {
+        flex: 0 0 auto;
+        width: 150px;
+        text-align: right;
+      }
+    }
+  }
+  @include mobile {
+    .title-ipt-box {
+      flex-direction: column;
+      align-items: flex-start;
+      .ipt-container .ipt-tit {
+        text-align: center;
+      }
+    }
+  }
+  .thumbnail-box {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 24px;
+    dt {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .thumb-box {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 30px;
+      width: 100%;
+      .ipt {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @include mobile {
+    .thumbnail-box {
+      flex-direction: column;
+      align-items: flex-start;
+      .ipt-container {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .thumb-box {
+        padding: 20px 10px;
+      }
+
+    }
+  }
 }
 
 .forum {

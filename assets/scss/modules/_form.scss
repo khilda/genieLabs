@@ -1,5 +1,6 @@
 .ipt {
   border: 2px solid #ccc;
+  background-color: #fff;
   width: 100%;
   padding: 10px 20px;
   font-size: 14px;
@@ -26,6 +27,13 @@
 @include mobile {
   .ipt-container {
     flex-direction: column;
+    .select,
+    .btn-container {
+      width: 100%;
+      .btn {
+        flex: 1;
+      }
+    }
   }
 }
 .chk {
