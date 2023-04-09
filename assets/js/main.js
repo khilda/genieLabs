@@ -74,50 +74,44 @@ commentItems?.forEach((_cmt) => {
   });
 });
 
-// select
-// $("select").each(function () {
-//   var $this = $(this),
-//     numberOfOptions = $(this).children("option").length;
-//   var selectClass = $this.attr("class");
-//   $this.addClass("select-hidden");
-//   $this.wrap('<div class="select-container"></div>');
-//   $this.after(`<div class="${selectClass}"></div>`);
+// custom select
+const selectContainers = document.querySelectorAll('.select-container')
 
-//   var $styledSelect = $this.next("div.select");
-//   $styledSelect.text($this.children("option").eq(0).text());
+function deactivateAllSelect() {
+  selectContainers.forEach(container => {
+    const selectBox = container.querySelector('.select-box')
+    selectBox.classList.remove('active')
+  })
+}
 
-//   var $list = $("<ul />", {
-//     class: "select-options",
-//   }).insertAfter($styledSelect);
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.select-container')){
+    deactivateAllSelect()
+  }
+})
 
-//   for (var i = 0; i < numberOfOptions; i++) {
-//     $("<li />", {
-//       text: $this.children("option").eq(i).text(),
-//       rel: $this.children("option").eq(i).val(),
-//     }).appendTo($list);
-//   }
-
-//   var $listItems = $list.children("li");
-
-//   $styledSelect.click(function (e) {
-//     e.stopPropagation();
-//     $("div.select.is-active")
-//       .not(this)
-//       .each(function () {
-//         $(this).removeClass("is-active").next("ul.select-options").hide();
-//       });
-//     $(this).toggleClass("is-active").next("ul.select-options").toggle();
-//   });
-
-//   $listItems.click(function (e) {
-//     e.stopPropagation();
-//     $styledSelect.text($(this).text()).removeClass("is-active");
-//     $this.val($(this).attr("rel")).change();
-//     $list.hide();
-//   });
-
-//   $(document).click(function () {
-//     $styledSelect.removeClass("is-active");
-//     $list.hide();
-//   });
-// });
+selectContainers.forEach(container => {
+  const selectBox = container.querySelector('.select-box')
+  selectBox.textContent = selectBox.dataset.selected
+  const selectOptions = container.querySelectorAll('.select-option')
+  selectOptions.forEach(option => {
+    option.textContent = option.dataset.value
+  })
+  const selectHidden = container.querySelector('.select')
+  container.addEventListener('click', (e) => {
+    if (e.target === selectBox) {
+      deactivateAllSelect()
+      selectBox.classList.toggle('active')
+    }
+    selectOptions.forEach(option => {
+      if (e.target === option) {
+        selectBox.textContent = option.dataset.value
+        selectBox.classList.remove('active')
+        selectHidden.value = option.dataset.value
+      }
+    })
+  })
+  selectHidden.addEventListener('change', (e) => {
+    console.log(e.currentTarget.value)
+  })
+})

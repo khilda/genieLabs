@@ -1,78 +1,115 @@
+// custom select
 .select-container {
-  cursor: pointer;
   display: inline-block;
   position: relative;
+  width: 100%;
   font-size: 16px;
-}
-// custom select
-.select {
-  border: 2px solid transparent;
-  background: #f4f4f4;
-  min-width: 120px;
-  line-height: 50px;
-  padding: 0 48px 0 21px;
-  color: #000;
-  text-align: left;
   cursor: pointer;
-  @include ellipsis();
-  &::after {
+  user-select: none;
+  
+  .select-box {
+    border: 2px solid transparent;
+    background: #f4f4f4;
+    min-width: 120px;
+    line-height: 46px;
+    padding: 0 48px 0 21px;
+    color: #000;
+    text-align: left;
+    cursor: pointer;
+    @include ellipsis();
+    &:hover {
+      border-color: #000;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      background: url("../images/ico_select_arrow.svg") no-repeat 50% 50%;
+      width: 50px;
+      height: 50px;
+      transition: 0.25s all ease;
+      pointer-events: none;
+      transform-origin: center;
+    }
+    &.active {
+      border-color: #000;
+      & + .select-options {
+        display: block;
+      }
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .select-options {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    .select-option {
+      background: #f4f4f4;
+      min-width: 120px;
+      line-height: 50px;
+      padding: 0 48px 0 21px;
+      color: #000;
+      text-align: left;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  .select {
+    width: 100%;
+    border: 2px solid transparent;
+    background: #f4f4f4;
+    min-width: 120px;
+    line-height: 46px;
+    padding: 0 48px 0 21px;
+    color: #000;
+    text-align: left;
+    cursor: pointer;
+    @include ellipsis();
+  }
+}
+
+@include mobile {
+  .select-container::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0%;
     right: 0;
     display: block;
     background: url("../images/ico_select_arrow.svg") no-repeat 50% 50%;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     transition: 0.25s all ease;
     pointer-events: none;
     transform-origin: center;
   }
-  &:hover {
-    border-color: #000;
+  .select-box {
+    display: none;
   }
-  &.is-active {
-    border-color: #000;
-    &:after {
-      transform: rotate(180deg);
-    }
+  .select {
+    display: initial;
   }
 }
-select.select {
-  appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: none;
-  &::-ms-expand {
+
+@include tablet-only {
+  .select {
     display: none;
   }
 }
-.select-hidden {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  visibility: hidden;
-}
 
-.select-options {
-  display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
-  left: 0;
-  z-index: 999;
-  li {
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 14px 21px;
-    &:hover,
-    &.is-selected {
-      background: #000;
-      color: #fff;
-    }
-    &[rel="hide"] {
-      display: none;
-    }
+@include desktop {
+  .select {
+    display: none;
   }
 }
+
