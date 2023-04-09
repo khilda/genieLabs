@@ -43,13 +43,24 @@
           <article class="form-container">
             <form class="form">
               <div class="form-subtitle ipt-container">
-                <select class="select search-category">
-                  <option value="a" default>Voice AI</option>
-                  <option value="b">123</option>
-                  <option value="c">456</option>
-                  <option value="d">789</option>
-                  <option value="e">098</option>
-                </select>
+                <div class="select-container">
+                  <div class="select-box" data-selected="Voice AI"></div>
+                  <ul class="select-options">
+                    <li class="select-option" data-value="123"></li>
+                    <li class="select-option" data-value="345"></li>
+                    <li class="select-option" data-value="456"></li>
+                    <li class="select-option" data-value="567"></li>
+                    <li class="select-option" data-value="678"></li>
+                  </ul>
+                  <select class="select">
+                    <option value="Voice AI" default>Voice AI</option>
+                    <option value="123">123</option>
+                    <option value="345">123</option>
+                    <option value="456">456</option>
+                    <option value="567">789</option>
+                    <option value="678">098</option>
+                  </select>
+                </div>
                 <input type="text" class="ipt edit-ipt" placeholder="게시글 제목을 입력해주세요" />
               </div>
               <div class="form-editor">

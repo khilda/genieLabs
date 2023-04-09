@@ -58,19 +58,38 @@
                   <form class="form">
                     <div class="form-item">
                       <div class="ipt-container category-box">
-                        <select id="categorySelect" class="select">
-                          <option value="0" name="Voice API">Voice API</option>
-                          <option value="1" name="NLP API">NLP API</option>
-                          <option value="2" name="Vision API">Vision API</option>
-                          <option value="3" name="Industry API">Industry API</option>
-                          <option value="4" name="Network API">Network API</option>
-                          <option value="4" name="기타">기타</option>
-                        </select>
-                        <select id="apiSelect" class="select category-tit">
-                          <option value="a" name="Genie Memo">Genie Memo</option>
-                          <option value="b" name="API1 명">API1 명</option>
-                          <option value="c" name="API2 명">API2 명</option>
-                        </select>
+                        <div id="categorySelect" class="select-container">
+                          <div class="select-box" data-selected="Voice AI"></div>
+                          <ul class="select-options">
+                            <li class="select-option" data-value="0"></li>
+                            <li class="select-option" data-value="1"></li>
+                            <li class="select-option" data-value="2"></li>
+                            <li class="select-option" data-value="3"></li>
+                            <li class="select-option" data-value="4"></li>
+                            <li class="select-option" data-value="5"></li>
+                          </ul>
+                          <select class="select">
+                            <option value="0" name="Voice API">Voice API</option>
+                            <option value="1" name="NLP API">NLP API</option>
+                            <option value="2" name="Vision API">Vision API</option>
+                            <option value="3" name="Industry API">Industry API</option>
+                            <option value="4" name="Network API">Network API</option>
+                            <option value="5" name="기타">기타</option>
+                          </select>
+                        </div>
+                        <div id="apiSelect" class="select-container">
+                          <div class="select-box" data-selected="Voice AI"></div>
+                          <ul class="select-options">
+                            <li class="select-option" data-value="0"></li>
+                            <li class="select-option" data-value="1"></li>
+                            <li class="select-option" data-value="2"></li>
+                          </ul>
+                          <select class="select">
+                            <option value="0" name="Genie Memo">Genie Memo</option>
+                            <option value="1" name="API1 명">API1 명</option>
+                            <option value="2" name="API2 명">API2 명</option>
+                          </select>
+                        </div>
                         <div class="btn-container">
                           <button type="button" class="btn addCategory">추가</button>
                         </div>

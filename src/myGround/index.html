@@ -360,7 +360,7 @@
                     <div id="applicatonsSubTab1" class="tab-item">
                       <p class="txt-notice">등록 신청 후 <span class="color-secondary">관리자 승인이 완료되지 않은</span> Application 리스트 입니다 ​</p>
                       <div class="card-list card-hover-3">
-                        <a href="./applyDetail.html" class="card">
+                        <a href="./detail.html" class="card">
                           <div class="card-hover">
                             <div class="card-head">
                               <em class="card-view hits"><span class="count">123</span></em>
@@ -452,23 +452,41 @@
                     <div id="myPostSubTab0" class="tab-item is-active">
                       <!-- 검색영역 -->
                       <div class="search-container">
-                        <select class="select search-category">
-                          <option value="a" default>Voice AI</option>
-                          <option value="b">123</option>
-                          <option value="c">456</option>
-                          <option value="d">789</option>
-                          <option value="e">098</option>
-                        </select>
+                        <div class="select-container search-category">
+                          <div class="select-box" data-selected="Voice AI"></div>
+                          <ul class="select-options">
+                            <li class="select-option" data-value="123"></li>
+                            <li class="select-option" data-value="345"></li>
+                            <li class="select-option" data-value="456"></li>
+                            <li class="select-option" data-value="567"></li>
+                            <li class="select-option" data-value="678"></li>
+                          </ul>
+                          <select class="select">
+                            <option value="Voice AI" default>Voice AI</option>
+                            <option value="123">123</option>
+                            <option value="345">123</option>
+                            <option value="456">456</option>
+                            <option value="567">789</option>
+                            <option value="678">098</option>
+                          </select>
+                        </div>
                         <div class="search-input">
                           <input type="text" class="search-ipt" placeholder="검색어를 입력해주세요" />
                           <button class="search-btn">검색하기</button>
                         </div>
                         <p class="search-total">Total <strong>60</strong></p>
-                        <select class="select filter-select">
-                          <option value="a" default>최신순</option>
-                          <option value="b">조회순</option>
-                          <option value="c">등록순</option>
-                        </select>
+                        <div class="select-container filter-select">
+                          <div class="select-box" data-selected="최신순"></div>
+                          <ul class="select-options">
+                            <li class="select-option" data-value="123"></li>
+                            <li class="select-option" data-value="345"></li>
+                          </ul>
+                          <select class="select">
+                            <option value="Voice AI" default>최신순</option>
+                            <option value="123">조회순</option>
+                            <option value="345">등록순</option>
+                          </select>
+                        </div>
                       </div>
                       <!-- // 검색영역 -->
                       <div class="card-list card-hover-3">
@@ -795,7 +813,7 @@
       </footer>
     </div>
     <script defer src="../../assets/js/lib/jquery-1.9.1.js"></script>
-    
+
     <script defer src="../../assets/js/main.js"></script>
   </body>
 
