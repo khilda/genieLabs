@@ -39,6 +39,14 @@
     border-color: #000;
   }
 }
+.form-editor {
+  height: 350px;
+  padding: 25px 20px;
+}
+.ck.ck-content:not(.ck-comment__input *) {
+  height: 250px;
+  overflow-y: auto;
+}
 .form-textarea {
   height: 250px;
 }

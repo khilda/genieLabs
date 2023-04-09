@@ -53,5 +53,21 @@
     max-width: 100%;
     margin: 30px auto;
     overflow: hidden;
+    &.has-caption {
+      flex-direction: column;
+      align-items: center;
+      .caption {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #787878;
+      }
+    }
+  }
+
+  .sub-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
   }
 }

@@ -77,6 +77,9 @@
   &.color-info::before {
     background-image: url("../images/ico_txt_notice_gray.svg");
   }
+  &.center {
+    justify-content: center;
+  }
 }
 .color {
   &-primary {
