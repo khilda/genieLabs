@@ -1,29 +1,31 @@
 article.multi-column {
   display: flex;
-
   .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 10%;
-    .item-num {
+    padding: 50px 0;
+    > p {
+      width: 250px;
+      text-align: center;
+    }
+    &-num {
       font-size: 18px;
       font-weight: 700;
       font-size: 18px;
       line-height: 26px;
       color: #00d1ff
     }
-    .item-title {
+    &-title {
       margin-top: 20px;
       font-size: 24px;
       font-weight: 700;
       line-height: 26px;
     }
-    .item-txt {
+    &-txt {
       margin-top: 18px;
       font-size: 14px;
       line-height: 22px;
-      text-align: center;
     }
   }
   &.dbl {
@@ -74,9 +76,14 @@ article.multi-column {
 }
 
 .direction {
+  position: relative;
   height: 8px;
   margin: 40px 0;
   background: #000000;
+  &::after {
+    content: "";
+    position: absolute;
+  }
 }
 
 .waveform-area {
@@ -86,13 +93,54 @@ article.multi-column {
   background-color: #f4f4f4;
   .title {
     height: 40px;
-    padding-left: 60px;
+    margin-left: 20px;
     font-weight: 500;
     line-height: 40px;
-    background: url("../images/img_demo_text.svg") no-repeat 0% 0%;
   }
   #waveform {
     margin-left: 20px;
     flex: 1;
+  }
+}
+
+@include mobile {
+  article.multi-column {
+    flex-wrap: wrap;
+    &.dbl {
+      .item {
+        flex-basis: 100%
+      }
+    }
+  }
+
+  .sub-title-container {
+    flex-wrap: wrap;
+    .title {
+      width: 100%
+    }
+    .btn-container {
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+  }
+
+  .selector-option {
+    flex-wrap: wrap;
+    gap: 0;
+    label {
+      width: 100%;
+      height: 230px;
+    }
+  }
+
+  .waveform-area {
+    .title {
+      width: calc(100% - 60px)
+    }
+    #waveform {
+      width: 100%;
+      margin-left: 0;
+      flex: auto;
+    }
   }
 }

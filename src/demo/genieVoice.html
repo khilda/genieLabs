@@ -57,10 +57,10 @@
           <figure class="img">
             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
           </figure>
-          <p class="txt fs18">
+          <p class="txt">
             음성합성(TTS, Text-To-Speech)은 텍스트를 음성으로 변환하는 기술입니다.
           </p>
-          <p class="txt fs18">
+          <p class="txt">
             기존에는 규칙 기반의 음편결합 방식이었다면, 최근에는 딥러닝 기반 음성합성 기술을 통해 보다 더 자연스럽고 부드러운
             음성을 생성할 수 있도록 연구하고 있습니다.
           </p>
@@ -68,7 +68,7 @@
             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
             <figcaption class="caption mt10">음성 합성의 기술 변화</figcaption>
           </figure>
-          <p class="txt pt10 fs18">
+          <p class="txt pt10">
             딥러닝 모델 방식은 텍스트의 특징 정보를 추출하는 Encoder와 음성의 Spectrogram을 추론하는 Decoder
             그리고 Vocoder를 통해 스스로 학습하여 하나의 자연스러운 문장을 만들게 됩니다.
           </p>
@@ -76,18 +76,18 @@
             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
             <figcaption class="caption mt10">음성 합성의 Deep Learning 적용</figcaption>
           </figure>
-          <p class="txt pt10 fs18">
+          <p class="txt pt10">
             KT의 TTS 기술은 딥러닝이지만 GPU를 사용하지 않고, CPU 기반에서도 자연스러운 음성을 생성할 수 있습니다.
           </p>
-          <p class="txt mt30 fs18">
+          <p class="txt mt30">
             또한 띄어쓰기 오류가 있는지 자동으로 교정하고 한글 뿐만 아니라 기호, 숫자, 영어 등 다양한 경우에도 발음 단위로
             변환하여 그 단위를 통해 음성을 생성하게 됩니다.
           </p>
           <h4 class="sub-title mt50">지니 Custom Voice</h4>
-          <p class="txt mt20 fs18">
+          <p class="txt mt20">
             KT의 TTS 기술은 딥러닝이지만 GPU를 사용하지 않고, CPU 기반에서도 자연스러운 음성을 생성할 수 있습니다.
           </p>
-          <p class="txt mt30 fs18">
+          <p class="txt mt30">
             또한 띄어쓰기 오류가 있는지 자동으로 교정하고 한글 뿐만 아니라 기호, 숫자, 영어 등 다양한 경우에도 발음 단위로
             변환하여 그 단위를 통해 음성을 생성하게 됩니다.
           </p>
@@ -135,6 +135,7 @@
           </div>
           <p class="direction"></p>
           <div class="waveform-area">
+            <button id="waveformPlay">play</button>
             <span class="title">여기 음성 UI 나오는 영역</span>
             <div id="waveform"></div>
           </div>
@@ -159,11 +160,13 @@
     document.addEventListener('DOMContentLoaded', () => {
       const selectorWrapper = document.querySelector('.selector-option'),
           selectors = selectorWrapper.querySelectorAll('input'),
-          waveformBtn = document.querySelector('#waveformRequest')
+          waveformBtn = document.querySelector('#waveformRequest'),
+          waveformBtnPlay = document.querySelector('#waveformPlay')
 
       const wavesurfer = WaveSurfer.create({
         container: '#waveform',
         height: 40,
+        hideScrollbar: true,
       });
       selectors.forEach(selector => {
         selector.addEventListener('change', (e) => {
@@ -176,8 +179,17 @@
       waveformBtn.addEventListener('click', () => {
         wavesurfer.load('../../assets/wav/demo.wav')
       })
+
+      waveformBtnPlay.addEventListener('click', () => {
+        if (waveformBtnPlay.textContent === 'play') {
+          waveformBtnPlay.textContent = 'stop'
+          wavesurfer.play()
+        } else {
+          waveformBtnPlay.textContent = 'play'
+          wavesurfer.playPause()
+        }
+      })
     })
-    
 
   </script>
 </body>
