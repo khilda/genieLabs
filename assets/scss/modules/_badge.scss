@@ -11,6 +11,7 @@
   --badge-outline-color: #fff;
 }
 @mixin badge-default() {
+  flex: none;
   display: inline-block;
   font-weight: 700;
   line-height: 1;

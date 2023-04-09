@@ -97,6 +97,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    .badge {
+      max-width: 120px;
+    }
     &.link::before {
       content: "";
       position: absolute;
