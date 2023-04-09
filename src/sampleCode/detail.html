@@ -72,7 +72,7 @@
                 <button type="button" class="btn-copy">Code Copy</button>
                 <p class="copy-tooltip">code가 복사 되었습니다.<br>원하는 곳에 붙여넣기 해주세요 (Ctrl+V)</p>
               </div>
-              <textarea id="codeMirror" class="code-mirror">
+              <textarea id="codeMirror">
 {
   "code":"200",
   "message":"Success",
@@ -112,11 +112,26 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
+        const editor = CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
           lineNumbers: true,
           mode: "text/html",
           matchBrackets: true
         });
+        // 소스 복사하기
+        const btnCopy = document.querySelector('.btn-copy')
+        btnCopy.addEventListener('click', (e) => {
+          if (e.which == 1) {
+            navigator.clipboard.writeText(editor.getValue());
+            const tooltip = e.target.nextElementSibling
+            tooltip.classList.add('is-show')
+            setTimeout(() => {
+              tooltip.classList.remove('is-show')
+            }, 1000)
+
+          }
+        })
+        function copyRichText() {
+        }
       });
     </script>
   </body>

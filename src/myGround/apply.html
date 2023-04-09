@@ -57,26 +57,25 @@
                   </header>
                   <form class="form">
                     <div class="form-item">
-                      <div class="ipt-container">
-                        <select class="select">
-                          <option value="a" default>Voice AI</option>
-                          <option value="b">123</option>
-                          <option value="c">456</option>
-                          <option value="d">789</option>
-                          <option value="e">098</option>
+                      <div class="ipt-container category-box">
+                        <select id="categorySelect" class="select">
+                          <option value="0" name="Voice API">Voice API</option>
+                          <option value="1" name="NLP API">NLP API</option>
+                          <option value="2" name="Vision API">Vision API</option>
+                          <option value="3" name="Industry API">Industry API</option>
+                          <option value="4" name="Network API">Network API</option>
+                          <option value="4" name="기타">기타</option>
                         </select>
-                        <select class="select">
-                          <option value="a" default>Voice AI</option>
-                          <option value="b">123</option>
-                          <option value="c">456</option>
-                          <option value="d">789</option>
-                          <option value="e">098</option>
+                        <select id="apiSelect" class="select category-tit">
+                          <option value="a" name="Genie Memo">Genie Memo</option>
+                          <option value="b" name="API1 명">API1 명</option>
+                          <option value="c" name="API2 명">API2 명</option>
                         </select>
                         <div class="btn-container">
-                          <button type="button" class="btn">추가</button>
+                          <button type="button" class="btn addCategory">추가</button>
                         </div>
                       </div>
-                      <ul class="file-list">
+                      <ul class="file-list api-list">
                         <li class="file-item api">
                           <div class="data">
                             <div class="description">
@@ -100,25 +99,23 @@
                         <dt>대표 이미지 또는 동영상</dt>
                         <dd class="ipt-container gap20">
                           <div class="rdo">
-                            <input class="rdo-ipt" id="rdo0" type="radio" name="demo">
-                            <label for="rdo0" class="rdo-label">이미지</label>
+                            <input class="rdo-ipt" id="thumbImg" type="radio" name="thumbImg" checked>
+                            <label for="thumbImg" class="rdo-label">이미지</label>
                           </div>
                           <div class="rdo">
-                            <input class="rdo-ipt" id="rdo1" type="radio" name="demo">
-                            <label for="rdo1" class="rdo-label">YouTube URL</label>
+                            <input class="rdo-ipt" id="thumbYoutube" type="radio" name="thumbImg">
+                            <label for="thumbYoutube" class="rdo-label">YouTube URL</label>
                           </div>
                         </dd>
-                        <dd class="fileUpload-container">
-                          <div id="fileDropzone" class="drag-zone">
-                            <label for="fileIpt" class="file-label">파일첨부하기</label>
-                            <input type="file" id="fileIpt" class="file-ipt" multiple />
-                          </div>
-                          <figure class="thumb-img">
+                        <dd id="fileUpload" class="thumb-box is-show" data-thumb="thumbImg">
+                          <label for="fileIpt" class="file-label">파일첨부하기</label>
+                          <input type="file" id="fileIpt" class="file-ipt" />
+                          <figure id="imgPreview" class="thumb-img">
                             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
                           </figure>
                         </dd>
-                        <dd class="thumb-box">
-                          <input type="text" class="ipt" placeholder="URL을 입력해주세요​" />
+                        <dd class="thumb-box" data-thumb="thumbYoutube">
+                          <input id="iptUrl" type="text" class="ipt" placeholder="URL을 입력해주세요​" />
                           <figure class="thumb-img">
                             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
                           </figure>
@@ -139,12 +136,12 @@
                         <dt>제공자정보</dt>
                         <dd class="ipt-container">
                           <div class="rdo">
-                            <input class="rdo-ipt" id="rdo0" type="radio" name="demo">
-                            <label for="rdo0" class="rdo-label">개인</label>
+                            <input class="rdo-ipt" id="user0" type="radio" name="user" checked>
+                            <label for="user0" class="rdo-label">개인</label>
                           </div>
                           <div class="rdo">
-                            <input class="rdo-ipt" id="rdo1" type="radio" name="demo">
-                            <label for="rdo1" class="rdo-label">그룹</label>
+                            <input class="rdo-ipt" id="user1" type="radio" name="user">
+                            <label for="user1" class="rdo-label">그룹</label>
                           </div>
                           <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
                         </dd>
@@ -203,9 +200,82 @@
         </div>
       </footer>
     </div>
-    <script defer src="../../assets/js/lib/jquery-1.9.1.js"></script>
-    <script defer src="../../assets/js/lib/jquery-ui.min.js"></script>
-    <script defer src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/lib/fileup.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      // API 리스트 추가하기
+      function funcApiList() {
+        const categoryBox = document.querySelector('.category-box')
+        document.querySelector('.addCategory').addEventListener('click', (e) => {
+          const apiValue = categoryBox.querySelector('#apiSelect')
+          const text = apiValue.selectedOptions[0].label
+          if (text) {
+            cloneApiList(text)
+          }
+        })
+        const apiList = document.querySelector('.api-list')
+        function cloneApiList(apiName) {
+          const _li = document.createElement('li')
+          _li.classList.add('file-item', 'api')
+          _li.innerHTML = `<div class="data">
+                            <div class="description">
+                              <span class="file-name">${apiName}</span>
+                            </div>
+                            <div class="controls">
+                              <button type="button" class="btn-txt del">삭제하기</button>
+                            </div>
+                          </div>`
+          apiList.appendChild(_li)
+
+        }
+        // API 리스트 삭제하기
+        apiList.addEventListener('click', (e) => {
+          const _target = e.target
+          if (e.target.classList.contains('del')) {
+            e.target.closest('.file-item').remove()
+          }
+        })
+      }
+      // Youtube 썸네일 가져오기
+      function initThumbImg() {
+        // radio onChange Event
+        document.querySelectorAll('[name="thumbImg"]').forEach(rdo => {
+          rdo.addEventListener('change', (e) => {
+            if (e.target.checked) {
+              // init
+              document.querySelectorAll('.thumb-box').forEach(thumb => {
+                thumb.classList.remove('is-show')
+                thumb.querySelector('input').value = ''
+                thumb.querySelector('img')?.setAttribute('src', '')
+                thumb.querySelector('img')?.setAttribute('alt', '')
+              })
+              const id = e.target.getAttribute('id')
+              document.querySelector(`[data-thumb="${id}"]`).classList.add('is-show')
+            }
+          })
+        })
+        const _iptUrl = document.querySelector('#iptUrl')
+        _iptUrl.addEventListener('blur', (e) => {
+          const url = e.target.value?.split('=')
+          const thumb = `https://img.youtube.com/vi/${url[1]}/mqdefault.jpg`
+          e.target.nextElementSibling.firstElementChild.setAttribute('src', thumb)
+        })
+      }
+
+      funcApiList()
+      initThumbImg()
+    </script>
+    <script>
+      $(document).ready(() => {
+        $.fileup({
+          url: "",
+          inputID: "fileIpt",
+          queueID: "imgPreview",
+          templateFile: '<img src="[PREVIEW_SRC]" alt="[NAME]"/>',
+        })
+      })
+    </script>
   </body>
 
 </html>

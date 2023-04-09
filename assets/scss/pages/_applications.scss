@@ -5,4 +5,22 @@
   .card-swiper-container {
     position: relative;
   }
+  .title-link-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    dt {
+      flex: none;
+      width: 100px;
+    }
+    .file-item{
+      width: 100%;
+    }
+  }
+  @include mobile{
+    .title-link-box .link{
+      width: 100%;
+    }
+  }
 }

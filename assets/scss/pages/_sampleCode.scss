@@ -1,30 +1,70 @@
 .sampleCode {
   .code-box {
+    margin-top: 60px;
     .code-header {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 20px;
     }
     .btn-copy {
       margin-left: auto;
     }
+  }
+  .copy-tooltip {
+    position: absolute;
+    top: 0;
+    right: 175px;
+    border: 2px solid #000;
+    background-color: #fff;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -7px;
+      top: 16px;
+      width: 11px;
+      height: 11px;
+      background-color: #fff;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+      transform: rotate(45deg);
+    }
+  }
+  .copy-tooltip.is-show {
+    display: block;
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+@include mobile {
+  .sampleCode {
+    .code-box  .code-header{
+      flex-direction: column;
+      gap: 10px;
+      .select{
+        width: 100%;
+      }
+      .btn-copy{
+        flex: 1;
+        margin-left: 0;
+        width: 100%;
+      }
+    }
     .copy-tooltip {
-      position: relative;
-      border: 2px solid #000;
-      padding: 15px 30px;
-      margin-bottom: 10px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      left: 10px;
+      top: auto;
       &::before {
-        content: "";
-        position: absolute;
-        right: -9px;
-        top: 36px;
-        width: 15px;
-        height: 15px;
-        background-color: #fff;
-        border-top: 2px solid #000;
-        border-right: 2px solid #000;
-        transform: rotate(45deg);
+        content: none;
       }
     }
   }
