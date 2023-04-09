@@ -53,6 +53,29 @@ textarea {
   }
 }
 
+@for $i from 0 to 10 {
+  $padding: $i * 10;
+  .pt#{$padding} {
+    padding-top: $padding * 1px;
+  }
+  .pb#{$padding} {
+    padding-bottom: $padding * 1px;
+  }
+  .pl#{$padding} {
+    padding-left: $padding * 1px;
+  }
+  .pr#{$padding} {
+    padding-right: $padding * 1px;
+  }
+}
+
+@for $i from 0 to 50 {
+  $fontSize: $i;
+  .fs#{$fontSize} {
+    font-size: $fontSize * 1px;
+  }
+}
+
 :root {
   --background: #fff;
   --color: #000;
