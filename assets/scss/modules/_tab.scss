@@ -63,7 +63,7 @@
     }
   }
   .tab-button {
-    flex: 1;
+    flex: none;
     border: 0 none;
     border-radius: 80px;
     width: auto;
@@ -84,8 +84,12 @@
     display: flex;
   }
   .tab-button {
+    flex: 1;
     padding-left: 0;
     padding-right: 0;
+  }
+  .tab-sub .tab-button {
+    flex: 1;
   }
 }
 
