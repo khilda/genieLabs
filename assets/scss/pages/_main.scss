@@ -61,6 +61,9 @@
   .card {
     .card-head {
       margin-bottom: 27px;
+      .card-bookmark{
+        pointer-events: none
+      }
     }
     .card-txt {
       @include ellipsis(3);

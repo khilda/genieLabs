@@ -52,38 +52,29 @@
           </header>
           <div class="search-container">
             <div class="select-container search-category">
-              <div class="select-box" data-selected="Voice AI"></div>
-              <ul class="select-options">
-                <li class="select-option" data-value="123"></li>
-                <li class="select-option" data-value="345"></li>
-                <li class="select-option" data-value="456"></li>
-                <li class="select-option" data-value="567"></li>
-                <li class="select-option" data-value="678"></li>
-              </ul>
+              <div class="select-box"></div>
+              <ul class="select-options"></ul>
               <select class="select">
-                <option value="Voice AI" default>Voice AI</option>
-                <option value="123">123</option>
-                <option value="345">123</option>
-                <option value="456">456</option>
-                <option value="567">789</option>
-                <option value="678">098</option>
+                <option value="0" default>Voice API</option>
+                <option value="1">NLP API</option>
+                <option value="2">Vision API</option>
+                <option value="3">Industry API</option>
+                <option value="4">Network API</option>
+                <option value="5">기타</option>
               </select>
             </div>
             <div class="search-input">
               <input type="text" class="search-ipt" placeholder="검색어를 입력해주세요" />
-              <button class="search-btn">검색하기</button>
+              <button type="button" class="search-btn">검색하기</button>
             </div>
             <p class="search-total">Total <strong>60</strong></p>
             <div class="select-container filter-select">
-              <div class="select-box" data-selected="최신순"></div>
-              <ul class="select-options">
-                <li class="select-option" data-value="123"></li>
-                <li class="select-option" data-value="345"></li>
-              </ul>
+              <div class="select-box"></div>
+              <ul class="select-options"></ul>
               <select class="select">
-                <option value="Voice AI" default>최신순</option>
-                <option value="123">조회순</option>
-                <option value="345">등록순</option>
+                <option value="0" default>최신순</option>
+                <option value="1">조회순</option>
+                <option value="2">댓글순</option>
               </select>
             </div>
           </div>
@@ -355,8 +346,8 @@
             </a>
           </div>
           <div class="pagination">
-            <button type="button" class="page-item first">처음으로</button>
-            <button type="button" class="page-item prev">이전으로</button>
+            <button type="button" class="page-item first" disabled>처음으로</button>
+            <button type="button" class="page-item prev" disabled>이전으로</button>
             <button type="button" class="page-item is-active">1</button>
             <button type="button" class="page-item">2</button>
             <button type="button" class="page-item next">다음으로</button>

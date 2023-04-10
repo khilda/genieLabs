@@ -64,7 +64,7 @@
     }
     .card-bookmark {
       position: absolute;
-      top:0;
+      top: 0;
       right: 0;
       background: no-repeat 50% 50%;
       background-image: var(--card-icon-bookmark);
@@ -181,6 +181,10 @@
     .title-tit {
       font-size: 30px;
       font-weight: 700;
+    }
+    .filter-select {
+      width: 150px;
+      margin-left: auto;
     }
     .title-link {
       background: url("../images/ico_link_20.svg") no-repeat 100% 50%;

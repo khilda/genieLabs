@@ -14,11 +14,15 @@
     font-size: 18px;
     color: #000;
     text-align: center;
-    &:hover,
-    &:active,
-    &.is-active {
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled).is-active {
       background-color: #000;
       color: #fff;
+    }
+    &:disabled{
+      opacity: .5;
+      pointer-events: none;
     }
   }
   .first,
@@ -31,25 +35,25 @@
 
   .first {
     background-image: url("../images/ico_pagination_first.svg");
-    &:hover {
+    &:not(:disabled):hover {
       background-image: url("../images/ico_pagination_first_w.svg");
     }
   }
   .prev {
     background-image: url("../images/ico_pagination_prev.svg");
-    &:hover {
+    &:not(:disabled):hover {
       background-image: url("../images/ico_pagination_prev_w.svg");
     }
   }
   .next {
     background-image: url("../images/ico_pagination_next.svg");
-    &:hover {
+    &:not(:disabled):hover {
       background-image: url("../images/ico_pagination_next_w.svg");
     }
   }
   .last {
     background-image: url("../images/ico_pagination_last.svg");
-    &:hover {
+    &:not(:disabled):hover {
       background-image: url("../images/ico_pagination_last_w.svg");
     }
   }

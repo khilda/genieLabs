@@ -343,12 +343,13 @@
     <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        CKEDITOR.config.resize_enabled = false
         CKEDITOR.replace("editor1");
-        funcApiList();
-        initThumbImg();
+        evtApiItem();
+        evtThumbImg();
       });
       // API 리스트 추가하기
-      function funcApiList() {
+      function evtApiItem() {
         const categoryBox = document.querySelector(".category-box");
         document
           .querySelector(".addCategory")
@@ -384,7 +385,7 @@
         });
       }
       // Youtube 썸네일 가져오기
-      function initThumbImg() {
+      function evtThumbImg() {
         // radio onChange Event
         document.querySelectorAll('[name="thumbImg"]').forEach((rdo) => {
           rdo.addEventListener("change", (e) => {

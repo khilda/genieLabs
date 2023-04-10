@@ -63,12 +63,15 @@
               인식 오류에도 강건한 기술입니다.</p>
             <div class="code-box">
               <div class="code-header">
-                <select class="select">
-                  <option value="b" default>Html</option>
-                  <option value="c">JSON</option>
-                  <option value="d">Node.js</option>
-                  <option value="e">Vue</option>
-                </select>
+                <div class="select-container copy-select">
+                  <div class="select-box"></div>
+                  <ul class="select-options"></ul>
+                  <select class="select">
+                    <option value="Node.js" default>Node.js</option>
+                    <option value="java">java</option>
+                    <option value="python">python</option>
+                  </select>
+                </div>
                 <button type="button" class="btn-copy">Code Copy</button>
                 <p class="copy-tooltip">code가 복사 되었습니다.<br>원하는 곳에 붙여넣기 해주세요 (Ctrl+V)</p>
               </div>
@@ -107,8 +110,8 @@
         </div>
       </footer>
     </div>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
     <script src="../../assets/js/lib/codemirror.js"></script>
-    <script src="../../assets/js/lib/xml.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {

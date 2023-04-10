@@ -71,6 +71,7 @@
   border: 2px solid #ededed;
   background-color: #fff;
   margin: 0;
+  width: 100%;
   padding: 11px 20px;
   max-width: none;
   font: $font-weight $font-size $font-famliy;
@@ -110,7 +111,7 @@
   }
   .drag-zone {
     flex-direction: column;
-    .drag-txt{
+    .drag-txt {
       display: none;
     }
   }
