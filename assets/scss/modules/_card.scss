@@ -63,12 +63,13 @@
       margin-left: auto;
     }
     .card-bookmark {
-      background: no-repeat 100% 50%;
+      position: absolute;
+      top:0;
+      right: 0;
+      background: no-repeat 50% 50%;
       background-image: var(--card-icon-bookmark);
-      width: 40px;
-      height: 40px;
-      margin-left: auto;
-      padding: 20px 0;
+      width: 120px;
+      height: 120px;
       font-size: 0;
       color: transparent;
       &.is-active {
