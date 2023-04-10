@@ -11,6 +11,9 @@
       flex: 1;
     }
   }
+  .regist-complete .card-head .badge-txt {
+    margin-left: auto;
+  }
   .title-content-box {
     flex: 1;
     display: flex;
@@ -85,8 +88,23 @@
         width: 100%;
       }
       .thumb-img {
-        margin-top: 20px;
-        max-width: 100%;
+        position: relative;
+        width: 700px;
+        margin: 20px auto 0;
+        > img{
+          width: 100%;
+        }
+      }
+      .thumb-remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #ccc url("../images/darkmode/ico_close_22.svg") no-repeat
+          50% 50% / cover;
+        width: 40px;
+        height: 40px;
+        color: transparent;
+        font-size: 0;
       }
     }
   }
@@ -100,6 +118,9 @@
       }
       .thumb-box {
         padding: 20px 10px;
+      }
+      .thumb-img{
+        max-width: 100%;
       }
     }
   }

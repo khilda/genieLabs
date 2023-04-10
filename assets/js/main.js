@@ -124,7 +124,9 @@ function alertOpen(msg, callback) {
     showCloseButton: true,
     confirmButtonText: "확인",
   }).then((result) => {
-    callback(result);
+    if (callback) {
+      callback(result);
+    }
   });
 }
 function confirmOpen(msg, callback) {
@@ -136,7 +138,9 @@ function confirmOpen(msg, callback) {
     confirmButtonText: "확인",
     cancelButtonText: "취소",
   }).then((result) => {
-    callback(result);
+    if (callback) {
+      callback(result);
+    }
   });
 }
 function eventCmt() {

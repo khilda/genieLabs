@@ -2870,6 +2870,40 @@ textarea {
           align-items: flex-start;
   gap: 5px;
 }
+.card .card-foot .foot-api .badge:first-child:hover {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+.card .card-foot .foot-api .badge:first-child:hover ~ .badge-tooltip {
+  opacity: 1;
+  z-index: 5;
+}
+.card .card-foot .foot-api .badge-tooltip {
+  position: absolute;
+  top: -35px;
+  background-color: #1f1f1f;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: -1;
+}
+.card .card-foot .foot-api .badge-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: calc(50% - 2px);
+  display: block;
+  background-color: #1f1f1f;
+  width: 5px;
+  height: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 .card .card-foot .foot-author {
   margin-top: auto;
   margin-left: auto;
@@ -2941,7 +2975,7 @@ textarea {
   font-weight: 700;
 }
 .card-container .card-title .filter-select {
-  max-width: 150px;
+  max-width: 120px;
   margin-left: auto;
 }
 .card-container .card-title .title-link {
@@ -2994,6 +3028,9 @@ textarea {
   }
   .card-swiper-container .swiper {
     padding: 0 27px;
+  }
+  .card-container .card-title .title-tit {
+    font-size: 25px;
   }
   .card-list {
     -webkit-box-orient: vertical;
@@ -4160,45 +4197,6 @@ article.multi-column.dbl .item {
   }
 }
 
-.applications .foot-api .badge:first-child:hover,
-.sampleCode .foot-api .badge:first-child:hover {
-  background-color: #1f1f1f;
-  color: #fff;
-}
-.applications .foot-api .badge:first-child:hover ~ .badge-tooltip,
-.sampleCode .foot-api .badge:first-child:hover ~ .badge-tooltip {
-  opacity: 1;
-  z-index: 5;
-}
-.applications .foot-api .badge-tooltip,
-.sampleCode .foot-api .badge-tooltip {
-  position: absolute;
-  top: -35px;
-  background-color: #1f1f1f;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #fff;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  opacity: 0;
-  z-index: -1;
-}
-.applications .foot-api .badge-tooltip::after,
-.sampleCode .foot-api .badge-tooltip::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: calc(50% - 2px);
-  display: block;
-  background-color: #1f1f1f;
-  width: 5px;
-  height: 5px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
 .myGround .container-content {
   padding-top: 0px;
 }
@@ -4212,6 +4210,9 @@ article.multi-column.dbl .item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+.myGround .regist-complete .card-head .badge-txt {
+  margin-left: auto;
 }
 .myGround .title-content-box {
   -webkit-box-flex: 1;
@@ -4333,8 +4334,22 @@ article.multi-column.dbl .item {
   width: 100%;
 }
 .myGround .thumbnail-box .thumb-box .thumb-img {
-  margin-top: 20px;
-  max-width: 100%;
+  position: relative;
+  width: 700px;
+  margin: 20px auto 0;
+}
+.myGround .thumbnail-box .thumb-box .thumb-img > img {
+  width: 100%;
+}
+.myGround .thumbnail-box .thumb-box .thumb-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ccc url("../images/darkmode/ico_close_22.svg") no-repeat 50% 50%/cover;
+  width: 40px;
+  height: 40px;
+  color: transparent;
+  font-size: 0;
 }
 @media (max-width: 742px) {
   .myGround .thumbnail-box {
@@ -4356,6 +4371,9 @@ article.multi-column.dbl .item {
   }
   .myGround .thumbnail-box .thumb-box {
     padding: 20px 10px;
+  }
+  .myGround .thumbnail-box .thumb-img {
+    max-width: 100%;
   }
 }
 

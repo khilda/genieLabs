@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyGround < GenieGround</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+        <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
 
   <body>
@@ -16,20 +17,12 @@
           <div class="gnb">
             <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
             <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
-            <a href="/src/sampleCode/index.html" class="gnb-menu"
-              >Sample Code</a
-            >
-            <a href="/src/applications/index.html" class="gnb-menu"
-              >Applications</a
-            >
+            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
             <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
           </div>
           <div class="info">
-            <a
-              href="/src/myGround/index.html"
-              class="info-menu ground is-active"
-              >MyGround</a
-            >
+            <a href="/src/myGround/index.html" class="info-menu ground is-active">MyGround</a>
             <a href="#logout" class="info-menu logout">Logout</a>
           </div>
           <button type="button" id="gnbClose" class="btn-gnb close">
@@ -43,9 +36,7 @@
       <main class="container myGround">
         <nav class="breadcrumb">
           <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
-          <a href="/src/myGround/index.html" class="breadcrumb-link"
-            >My Ground</a
-          >
+          <a href="/src/myGround/index.html" class="breadcrumb-link">My Ground</a>
         </nav>
         <section class="container-header">
           <h1 class="page-title">My Ground</h1>
@@ -118,9 +109,7 @@
                         <li class="file-item api">
                           <div class="data">
                             <div class="description">
-                              <span class="file-name"
-                                >localhost_3000_ (1).png</span
-                              >
+                              <span class="file-name">localhost_3000_ (1).png</span>
                             </div>
                             <div class="controls">
                               <button type="button" class="btn-txt del">
@@ -132,71 +121,37 @@
                       </ul>
                     </div>
                     <div class="form-item">
-                      <input
-                        type="text"
-                        class="ipt edit-ipt"
-                        placeholder="등록 될 application 제목을 입력하세요."
-                      />
+                      <input type="text" class="ipt edit-ipt" placeholder="등록 될 application 제목을 입력하세요." />
                     </div>
-                    <div class="form-editor">
-                      <textarea id="formEditor" name="editor1"></textarea>
+                    <div class="form-item">
+                      <textarea class="textarea"></textarea>
                     </div>
                     <div class="form-item">
                       <dl class="thumbnail-box">
                         <dt>대표 이미지 또는 동영상</dt>
                         <dd class="ipt-container gap20">
                           <div class="rdo">
-                            <input
-                              class="rdo-ipt"
-                              id="thumbImg"
-                              type="radio"
-                              name="thumbImg"
-                              checked
-                            />
-                            <label for="thumbImg" class="rdo-label"
-                              >이미지</label
-                            >
+                            <input class="rdo-ipt" id="thumbImg" type="radio" name="thumbImg" checked />
+                            <label for="thumbImg" class="rdo-label">이미지</label>
                           </div>
                           <div class="rdo">
-                            <input
-                              class="rdo-ipt"
-                              id="thumbYoutube"
-                              type="radio"
-                              name="thumbImg"
-                            />
-                            <label for="thumbYoutube" class="rdo-label"
-                              >YouTube URL</label
-                            >
+                            <input class="rdo-ipt" id="thumbYoutube" type="radio" name="thumbImg" />
+                            <label for="thumbYoutube" class="rdo-label">YouTube URL</label>
                           </div>
                         </dd>
-                        <dd
-                          id="fileUpload"
-                          class="thumb-box is-show"
-                          data-thumb="thumbImg"
-                        >
-                          <label for="fileIpt" class="file-label"
-                            >파일첨부하기</label
-                          >
-                          <input type="file" id="fileIpt" class="file-ipt" />
-                          <figure id="imgPreview" class="thumb-img">
-                            <img
-                              src="https://placehold.co/700x400/EEE/31343C"
-                              alt=""
-                            />
+                        <dd id="fileUpload" class="thumb-box is-show" data-thumb="thumbImg">
+                          <label for="fileIpt" class="file-label">파일첨부하기</label>
+                          <input type="file" id="fileIpt" class="file-ipt" accept="image/*" />
+                          <figure class="thumb-img">
+                            <div id="imgPreview"><img src="https://placehold.co/700x400/000/fff" alt="" /></div>
+                            <button type="button" class="thumb-remove">삭제</button>
                           </figure>
                         </dd>
                         <dd class="thumb-box" data-thumb="thumbYoutube">
-                          <input
-                            id="iptUrl"
-                            type="text"
-                            class="ipt"
-                            placeholder="URL을 입력해주세요​"
-                          />
+                          <input id="iptUrl" type="text" class="ipt" placeholder="URL을 입력해주세요​" />
                           <figure class="thumb-img">
-                            <img
-                              src="https://placehold.co/700x400/EEE/31343C"
-                              alt=""
-                            />
+                            <img src="https://placehold.co/700x400/000/fff" alt="" />
+                            <button type="button" class="thumb-remove">삭제</button>
                           </figure>
                         </dd>
                       </dl>
@@ -206,21 +161,14 @@
                       </p>
                     </div>
                     <div class="form-item">
-                      <textarea
-                        class="edit-textarea"
-                        placeholder="application 관련 상세 설명 정보를 입력하세요."
-                      ></textarea>
+                      <textarea class="edit-textarea" placeholder="application 관련 상세 설명 정보를 입력하세요."></textarea>
                       <p class="txt-notice color-info">
                         Application 상세 화면에서 제공할 서비스 관련 정보를
                         등록하세요​
                       </p>
                     </div>
                     <div class="form-item">
-                      <input
-                        type="text"
-                        class="ipt edit-ipt"
-                        placeholder="application 관련 GIT Hub 주소를 입력하세요​"
-                      />
+                      <input type="text" class="ipt edit-ipt" placeholder="application 관련 GIT Hub 주소를 입력하세요​" />
                       <p class="txt-notice color-info">
                         Application 상세 화면에서 제공할 GitHub 정보를
                         등록하세요​
@@ -231,29 +179,14 @@
                         <dt>제공자정보</dt>
                         <dd class="ipt-container">
                           <div class="rdo">
-                            <input
-                              class="rdo-ipt"
-                              id="user0"
-                              type="radio"
-                              name="user"
-                              checked
-                            />
+                            <input class="rdo-ipt" id="user0" type="radio" name="user" checked />
                             <label for="user0" class="rdo-label">개인</label>
                           </div>
                           <div class="rdo">
-                            <input
-                              class="rdo-ipt"
-                              id="user1"
-                              type="radio"
-                              name="user"
-                            />
+                            <input class="rdo-ipt" id="user1" type="radio" name="user" />
                             <label for="user1" class="rdo-label">그룹</label>
                           </div>
-                          <input
-                            type="text"
-                            class="ipt"
-                            placeholder="제공자 정보를 입력해주세요​"
-                          />
+                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
                         </dd>
                       </dl>
                       <p class="txt-notice color-info">
@@ -270,11 +203,7 @@
                   </header>
                   <form class="form">
                     <div class="form-item">
-                      <input
-                        type="text"
-                        class="ipt edit-ipt"
-                        placeholder="APK를 다운받을 수 있는 주소를 입력해 주세요.​"
-                      />
+                      <input type="text" class="ipt edit-ipt" placeholder="APK를 다운받을 수 있는 주소를 입력해 주세요.​" />
                       <p class="txt-notice color-info">
                         APK 제공이 가능한 경우 입력하면 서비스 상세 화면에서
                         해당 링크를 통해 APK 다운로드를 제공합니다. ​
@@ -285,19 +214,11 @@
                         <dt>관련서비스</dt>
                         <dd class="ipt-container">
                           <label class="ipt-tit">서비스 제목</label>
-                          <input
-                            type="text"
-                            class="ipt"
-                            placeholder="제공자 정보를 입력해주세요​"
-                          />
+                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
                         </dd>
                         <dd class="ipt-container">
                           <label class="ipt-tit">링크 URL</label>
-                          <input
-                            type="text"
-                            class="ipt"
-                            placeholder="제공자 정보를 입력해주세요​"
-                          />
+                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
                         </dd>
                       </dl>
                       <p class="txt-notice color-info">
@@ -308,7 +229,9 @@
                   </form>
                   <div class="form-footer">
                     <div class="btn-container">
+                      <a href="./index.html" class="btn cancel">취소하기</a>
                       <a href="./index.html" class="btn cancel">삭제하기</a>
+                      <a href="./index.html" class="btn">수정하기</a>
                       <a href="./index.html" class="btn">재신청</a>
                     </div>
                   </div>
@@ -340,13 +263,15 @@
     <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
     <script src="../../assets/js/lib/fileup.js"></script>
     <script src="../../assets/js/main.js"></script>
-    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        CKEDITOR.config.resize_enabled = false
-        CKEDITOR.replace("editor1");
         evtApiItem();
         evtThumbImg();
+        document.querySelectorAll('.thumb-remove').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            initThumb()
+          })
+        })
       });
       // API 리스트 추가하기
       function evtApiItem() {
@@ -391,27 +316,32 @@
           rdo.addEventListener("change", (e) => {
             if (e.target.checked) {
               // init
+              initThumb()
               document.querySelectorAll(".thumb-box").forEach((thumb) => {
                 thumb.classList.remove("is-show");
-                thumb.querySelector("input").value = "";
-                thumb.querySelector("img")?.setAttribute("src", "");
-                thumb.querySelector("img")?.setAttribute("alt", "");
               });
               const id = e.target.getAttribute("id");
-              document
-                .querySelector(`[data-thumb="${id}"]`)
-                .classList.add("is-show");
+              document.querySelector(`[data-thumb="${id}"]`).classList.add("is-show");
             }
           });
         });
+        // Youtube URL
         const _iptUrl = document.querySelector("#iptUrl");
         _iptUrl.addEventListener("blur", (e) => {
           const url = e.target.value?.split("=");
           const thumb = `https://img.youtube.com/vi/${url[1]}/mqdefault.jpg`;
-          e.target.nextElementSibling.firstElementChild.setAttribute(
-            "src",
-            thumb
-          );
+          const _figure = e.target.nextElementSibling
+          const _img = _figure.firstElementChild
+          _img.setAttribute("src", thumb);
+          _figure.removeAttribute('style')
+        });
+      }
+      function initThumb() {
+        document.querySelectorAll(".thumb-box").forEach((thumb) => {
+          thumb.querySelector("input").value = "";
+          thumb.querySelector("img")?.setAttribute("src", "");
+          thumb.querySelector("img")?.setAttribute("alt", "");
+          thumb.querySelector('.thumb-img').setAttribute('style', 'display: none')
         });
       }
     </script>
@@ -422,8 +352,13 @@
           inputID: "fileIpt",
           queueID: "imgPreview",
           templateFile: '<img src="[PREVIEW_SRC]" alt="[NAME]"/>',
+          onSelect: function (file) {
+            document.querySelector('#fileIpt').nextElementSibling.removeAttribute('style')
+          },
+
         });
       });
     </script>
   </body>
+
 </html>
