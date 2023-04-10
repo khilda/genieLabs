@@ -51,23 +51,32 @@
             </div>
           </header>
           <div class="search-container">
-            <select class="select search-category">
-              <option value="a" default>Voice AI</option>
-              <option value="b">123</option>
-              <option value="c">456</option>
-              <option value="d">789</option>
-              <option value="e">098</option>
-            </select>
+            <div class="select-container search-category">
+              <div class="select-box"></div>
+              <ul class="select-options"></ul>
+              <select class="select">
+                <option value="0" default>Voice API</option>
+                <option value="1">NLP API</option>
+                <option value="2">Vision API</option>
+                <option value="3">Industry API</option>
+                <option value="4">Network API</option>
+                <option value="5">기타</option>
+              </select>
+            </div>
             <div class="search-input">
               <input type="text" class="search-ipt" placeholder="검색어를 입력해주세요" />
-              <button class="search-btn">검색하기</button>
+              <button type="button" class="search-btn">검색하기</button>
             </div>
             <p class="search-total">Total <strong>60</strong></p>
-            <select class="select filter-select">
-              <option value="a" default>최신순</option>
-              <option value="b">조회순</option>
-              <option value="c">등록순</option>
-            </select>
+            <div class="select-container filter-select">
+              <div class="select-box"></div>
+              <ul class="select-options"></ul>
+              <select class="select">
+                <option value="0" default>최신순</option>
+                <option value="1">조회순</option>
+                <option value="2">댓글순</option>
+              </select>
+            </div>
           </div>
           <!-- // 검색영역 -->
           <div class="card-list card-hover-3">
@@ -75,7 +84,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -83,8 +92,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -97,7 +105,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -105,8 +113,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -119,7 +126,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -127,8 +134,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -141,7 +147,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -149,8 +155,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -163,7 +168,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -171,8 +176,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -185,7 +189,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -193,8 +197,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -207,7 +210,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -215,8 +218,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -229,7 +231,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -237,8 +239,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -251,7 +252,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -259,8 +260,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -273,7 +273,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -281,8 +281,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -295,7 +294,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -303,8 +302,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -317,7 +315,7 @@
               <div class="card-hover">
                 <div class="card-head">
                   <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view like"><span class="count">3455</span></em>
+                  <em class="card-view comment"><span class="count">3455</span></em>
                 </div>
                 <div class="card-body">
                   <strong class="card-txt">Voc 상담 대화 </strong>
@@ -325,8 +323,7 @@
                 </div>
                 <div class="card-foot">
                   <div class="foot-api">
-                    <em class="badge">TTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTS</em>
-                    <em class="badge">+6</em>
+                    <em class="badge">Voice AI</em>
                   </div>
                   <dl class="foot-author">
                     <dt>홍길동</dt>
@@ -337,8 +334,8 @@
             </a>
           </div>
           <div class="pagination">
-            <button type="button" class="page-item first">처음으로</button>
-            <button type="button" class="page-item prev">이전으로</button>
+            <button type="button" class="page-item first" disabled>처음으로</button>
+            <button type="button" class="page-item prev" disabled>이전으로</button>
             <button type="button" class="page-item is-active">1</button>
             <button type="button" class="page-item">2</button>
             <button type="button" class="page-item next">다음으로</button>

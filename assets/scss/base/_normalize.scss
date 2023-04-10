@@ -33,9 +33,6 @@ textarea {
   padding: 20px;
   height: 150px;
   resize: none;
-  &:read-only {
-    border-color: transparent;
-  }
 }
 .d-flex {
   display: flex;

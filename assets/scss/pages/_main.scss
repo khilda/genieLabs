@@ -61,6 +61,9 @@
   .card {
     .card-head {
       margin-bottom: 27px;
+      .card-bookmark{
+        pointer-events: none
+      }
     }
     .card-txt {
       @include ellipsis(3);
@@ -69,7 +72,7 @@
     }
     .card-detail {
       display: none;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 4;
       width: 320px;
       margin-top: 30px;
       line-height: 32px;
@@ -105,8 +108,8 @@
         }
       }
     }
-    .card-list .card:nth-child(4n):hover .card-hover,
-    .swiper-slide-next + .card + .card:hover .card-hover {
+    .card-list .card:nth-child(4n) .card-hover,
+    .swiper-slide-next + .card + .card .card-hover {
       left: auto;
       right: 0;
     }

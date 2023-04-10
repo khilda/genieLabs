@@ -10,12 +10,14 @@
       width: 100%;
       .title {
         font-size: 28px;
+        margin-bottom: 10px;
       }
     }
     .badge-container {
       gap: 10px;
-      dt {
-        margin-right: 10px;
+      .badge-link {
+        display: flex;
+        gap: 10px;
       }
     }
     .func-container {
@@ -107,7 +109,7 @@
       .func-container {
         flex-direction: column;
         width: 100%;
-        .chk-like{
+        .chk-like {
           flex: 1;
           justify-content: center;
         }

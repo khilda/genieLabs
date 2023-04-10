@@ -166,7 +166,7 @@
   background-color: transparent;
   color: var(--main-header-color);
   .header-menu{
-    color: #000;
+    color: inherit;
   }
   .logo {
     background-image: var(--gnb-logo);
@@ -226,7 +226,8 @@
       background-color: var(--gnb-mobile-background);
       padding: 0;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
+      overflow-y: auto;
       z-index: 5;
       color: var(--main-header-color);
       &.is-show {
@@ -237,7 +238,8 @@
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
-      margin-top: 92px;
+      padding-top: 92px;
+      min-height: 653px;
       .gnb-menu {
         position: relative;
         display: block;
@@ -283,7 +285,7 @@
         }
         &.logout {
           right: 40px;
-          bottom: 56px;
+          top: 550px;
         }
       }
     }

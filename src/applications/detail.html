@@ -48,7 +48,7 @@
                 <input class="chk-ipt" id="chkLike" type="checkbox">
                 <label for="chkLike" class="chk-label">123</label>
               </div>
-              <button class="btn-link">링크 바로가기</button>
+              <a href="#링크바로가기" class="btn-link">링크 바로가기</a>
             </div>
           </header>
           <article class="detail-container">
@@ -117,19 +117,23 @@
                 <div class="form-item">
                   <dl class="title-link-box">
                     <dt>적용 API</dt>
-                    <dd class="file-item api">
-                      <div class="data">
-                        <div class="description">
-                          <span class="file-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+                    <dd class="link-api">
+                      <button type="button" class="file-item api" data-url="detail.html">
+                        <div class="data">
+                          <div class="description">
+                            <span class="file-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+                          </div>
                         </div>
-                      </div>
+                      </button>
                     </dd>
-                    <dd class="file-item api">
-                      <div class="data">
-                        <div class="description">
-                          <span class="file-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+                    <dd class="link-api">
+                      <button type="button" class="file-item api" data-url="index.html">
+                        <div class="data">
+                          <div class="description">
+                            <span class="file-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+                          </div>
                         </div>
-                      </div>
+                      </button>
                     </dd>
                   </dl>
                 </div>
@@ -137,7 +141,7 @@
                   <dl class="title-link-box">
                     <dt>GitHub</dt>
                     <dd class="link">
-                      <a href="#링크바로가기" class="btn-txt link">링크바로가기</a>
+                      <a href="#링크바로가기" class="btn-txt link" target="_blank">링크바로가기</a>
                     </dd>
                   </dl>
                 </div>
@@ -145,7 +149,7 @@
                   <dl class="title-link-box">
                     <dt>Service</dt>
                     <dd class="link">
-                      <a href="#링크바로가기" class="btn-txt link">링크바로가기</a>
+                      <a href="#링크바로가기" class="btn-txt link" target="_blank">링크바로가기</a>
                     </dd>
                   </dl>
                 </div>
@@ -162,205 +166,7 @@
                 </div>
               </div>
             </div>
-            <ul class="comment-list">
-              <!-- 댓글 아이템 -->
-              <li class="list-item">
-                <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
-                <div class="cmt-container type-editable">
-                  <div class="cmt-header">
-                    <dl class="auth-info">
-                      <dt class="auth">나</dt>
-                      <dd class="date">2022.03.14 09:30</dd>
-                    </dl>
-                  </div>
-                  <div class="cmt-body">
-                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                    <textarea class="txt-edit"></textarea>
-                    <div class="btn-container type-editable-btn">
-                      <button type="button" class="btn-ico mod">수정하기</button>
-                      <button type="button" class="btn-ico del">삭제하기</button>
-                      <button type="button" class="btn-ico reply">답글달기<strong class="badge count">+999</strong></button>
-                    </div>
-                  </div>
-                  <div class="cmt-footer">
-                    <div class="btn-container type-mod-btn">
-                      <button type="button" class="btn-txt regist">등록하기</button>
-                      <button type="button" class="btn-txt del">삭제하기</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- 답글 아이템 -->
-                <div class="reply-container">
-                  <div class="reply-header">
-                    <div class="ipt-container">
-                      <input type="text" class="ipt cmt-ipt" />
-                      <div class="btn-container">
-                        <button type="button" class="btn">답글</button>
-                      </div>
-                    </div>
-                  </div>
-                  <ul class="reply-content">
-                    <li class="cmt-container type-editable">
-                      <div class="cmt-header">
-                        <dl class="auth-info">
-                          <dt class="auth">나</dt>
-                          <dd class="date">2022.03.14 09:30</dd>
-                        </dl>
-                      </div>
-                      <div class="cmt-body">
-                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                        <textarea class="txt-edit"></textarea>
-                      </div>
-                      <div class="cmt-footer">
-                        <div class="btn-container">
-                          <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
-                          <button type="button" class="btn-txt mod">수정하기</button>
-                          <button type="button" class="btn-txt del">삭제하기</button>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="cmt-container type-editable">
-                      <div class="cmt-header">
-                        <dl class="auth-info">
-                          <dt class="auth">나</dt>
-                          <dd class="date">2022.03.14 09:30</dd>
-                        </dl>
-                      </div>
-                      <div class="cmt-body">
-                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                        <textarea class="txt-edit"></textarea>
-                      </div>
-                      <div class="cmt-footer">
-                        <div class="btn-container">
-                          <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
-                          <button type="button" class="btn-txt mod">수정하기</button>
-                          <button type="button" class="btn-txt del">삭제하기</button>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="cmt-container type-editable">
-                      <div class="cmt-header">
-                        <dl class="auth-info">
-                          <dt class="auth">나</dt>
-                          <dd class="date">2022.03.14 09:30</dd>
-                        </dl>
-                      </div>
-                      <div class="cmt-body">
-                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                        <textarea class="txt-edit"></textarea>
-                      </div>
-                      <div class="cmt-footer">
-                        <div class="btn-container">
-                          <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
-                          <button type="button" class="btn-txt mod">수정하기</button>
-                          <button type="button" class="btn-txt del">삭제하기</button>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-container reply-more">
-                    <button type="button" class="btn">+ 답글 더보기</button>
-                  </div>
-                </div>
-                <!-- // 답글 아이템 -->
-              </li>
-              <!-- //댓글 아이템 -->
-              <li class="list-item">
-                <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
-                <div class="cmt-container">
-                  <div class="cmt-header">
-                    <dl class="auth-info">
-                      <dt class="auth">홍길동</dt>
-                      <dd class="date">2022.03.14 09:30</dd>
-                    </dl>
-                  </div>
-                  <div class="cmt-body">
-                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                    <textarea class="txt-edit"></textarea>
-                  </div>
-                  <div class="cmt-footer">
-                    <div class="btn-container type-mod-btn">
-                      <button type="button" class="btn-txt regist">등록하기</button>
-                      <button type="button" class="btn-txt del">삭제하기</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- 답글 아이템 -->
-                <div class="reply-container">
-                  <div class="reply-header">
-                    <div class="ipt-container">
-                      <input type="text" class="ipt cmt-ipt" />
-                      <div class="btn-container">
-                        <button type="button" class="btn">답글</button>
-                      </div>
-                    </div>
-                  </div>
-                  <ul class="reply-content">
-                    <li class="cmt-container">
-                      <div class="cmt-header">
-                        <dl class="auth-info">
-                          <dt class="auth">홍길동</dt>
-                          <dd class="date">2022.03.14 09:30</dd>
-                        </dl>
-                      </div>
-                      <div class="cmt-body">
-                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                        <textarea class="txt-edit"></textarea>
-                      </div>
-                      <div class="cmt-footer">
-                        <div class="btn-container">
-                          <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
-                          <button type="button" class="btn-txt mod">수정하기</button>
-                          <button type="button" class="btn-txt del">삭제하기</button>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <!-- // 답글 아이템 -->
-              </li>
-              <!-- //댓글 아이템 -->
-              <li class="list-item">
-                <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
-                <div class="cmt-container type-editable">
-                  <div class="cmt-header">
-                    <dl class="auth-info">
-                      <dt class="auth">나</dt>
-                      <dd class="date">2022.03.14 09:30</dd>
-                    </dl>
-                  </div>
-                  <div class="cmt-body">
-                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
-                    <textarea class="txt-edit"></textarea>
-                    <div class="btn-container type-editable-btn">
-                      <button type="button" class="btn-ico mod">수정하기</button>
-                      <button type="button" class="btn-ico del">삭제하기</button>
-                      <button type="button" class="btn-ico reply">답글달기<strong class="badge count"></strong></button>
-                    </div>
-                  </div>
-                  <div class="cmt-footer">
-                    <div class="btn-container type-mod-btn">
-                      <button type="button" class="btn-txt regist">등록하기</button>
-                      <button type="button" class="btn-txt del">삭제하기</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- 답글 아이템 -->
-                <div class="reply-container">
-                  <div class="reply-header">
-                    <div class="ipt-container">
-                      <input type="text" class="ipt cmt-ipt" />
-                      <div class="btn-container">
-                        <button type="button" class="btn">답글</button>
-                      </div>
-                    </div>
-                  </div>
-                  <ul class="reply-content"></ul>
-                </div>
-                <!-- // 답글 아이템 -->
-              </li>
-              <!-- //댓글 아이템 -->
-            </ul>
+            <div class="comment-empty">등록된 댓글이 없습니다</div>
           </article>
         </section>
       </main>
@@ -376,6 +182,7 @@
         </div>
       </footer>
     </div>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
     <script src="../../assets/js/lib/codemirror.js"></script>
     <script src="../../assets/js/lib/xml.js"></script>
     <script src="../../assets/js/main.js"></script>
@@ -386,6 +193,24 @@
           mode: "text/html",
           matchBrackets: true
         });
+        // link
+        document.querySelectorAll('.link-api').forEach(link => {
+          link.querySelector('.file-item').addEventListener('click', (e) => {
+            confirmOpen('GenieLabs의 해당 API 상세 화면으로 이동합니다. <br> 계속하시겠습니까?', (result) => {
+              console.log(result, e.target.dataset.url)
+            })
+          })
+        })
+        // chk like
+        document.querySelector('.chk-like input').addEventListener('change', (e) => {
+          let count = Number(e.target.nextElementSibling.textContent) || 0
+          if (e.target.checked) {
+            ++count
+          } else {
+            --count
+          }
+          e.target.nextElementSibling.textContent = count
+        })
       });
     </script>
   </body>

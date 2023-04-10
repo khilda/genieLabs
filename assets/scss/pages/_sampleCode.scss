@@ -8,6 +8,9 @@
       justify-content: space-between;
       margin-bottom: 20px;
     }
+    .copy-select{
+      width: 250px;
+    }
     .btn-copy {
       margin-left: auto;
     }
@@ -48,7 +51,7 @@
     .code-box  .code-header{
       flex-direction: column;
       gap: 10px;
-      .select{
+      .select-container{
         width: 100%;
       }
       .btn-copy{
