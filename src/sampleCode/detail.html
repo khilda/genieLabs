@@ -44,13 +44,15 @@
               <h5 class="title">의도 분류(Fine Tuning)</h5>
               <dl class="badge-container">
                 <dt class="badge-tit">사용 API</dt>
-                <dd class="badge">Voice AI</dd>
-                <dd class="badge">Voice AI</dd>
-                <dd class="badge">Voice AI</dd>
+                <dd class="badge-link">
+                  <button type="button" class="badge" data-url="#VoiceAI">Voice AI</button>
+                  <button type="button" class="badge" data-url="#VoiceAI">Voice AI</button>
+                  <button type="button" class="badge" data-url="#VoiceAI">Voice AI</button>
+                </dd>
               </dl>
             </div>
             <div class="func-container">
-              <a href="링크바로가기" class="btn-link">Demo 바로가기</a>
+              <button type="button" class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
             </div>
           </header>
           <article class="detail-container">
@@ -133,8 +135,20 @@
 
           }
         })
-        function copyRichText() {
-        }
+        // badge Link
+        document.querySelectorAll('.badge-link > .badge').forEach(badge => {
+          badge.addEventListener('click', (e) => {
+            confirmOpen('GenieLabs의 해당 API 상세 화면으로 이동합니다. <br> 계속하시겠습니까?', (result) => {
+              console.log(result, e.target.dataset.url)
+            })
+          })
+        })  
+        // 데모 바로가기
+        document.querySelector('.btn-link').addEventListener('click', (e) => {
+          confirmOpen('선택하신 데모 상세 화면으로 이동합니다. <br> 계속하시겠습니까?', (result) => {
+            console.log(result, e.target.dataset.url)
+          })
+        })
       });
     </script>
   </body>

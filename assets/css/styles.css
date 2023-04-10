@@ -2163,12 +2163,16 @@ textarea {
 }
 .container-detail .section-title .title-container .title {
   font-size: 28px;
+  margin-bottom: 10px;
 }
 .container-detail .section-title .badge-container {
   gap: 10px;
 }
-.container-detail .section-title .badge-container dt {
-  margin-right: 10px;
+.container-detail .section-title .badge-container .badge-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
 .container-detail .section-title .func-container {
   -webkit-box-flex: 0;
@@ -3062,6 +3066,14 @@ textarea {
   display: block;
 }
 
+.cmt-container:not(.type-editable) .type-editable-btn .btn-ico.mod,
+.cmt-container:not(.type-editable) .type-editable-btn .btn-ico.del {
+  display: none;
+}
+.cmt-container:not(.type-editable) .cmt-footer .btn-container {
+  display: none;
+}
+
 .reply-container {
   display: none;
 }
@@ -3134,6 +3146,39 @@ textarea {
 }
 .comment-list .cmt-container {
   border-bottom: 1px solid #ccc;
+}
+
+.comment-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  min-height: 100%;
+  height: 150px;
+  text-align: center;
+  color: #838383;
+}
+.comment-empty::before {
+  content: "";
+  display: block;
+  background: transparent no-repeat 50% 50%/cover;
+  background-image: url("../images/ico_empty.svg");
+  width: 30px;
+  height: 30px;
 }
 
 @media (min-width: 743px) and (max-width: 1439px) {
