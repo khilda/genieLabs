@@ -20,8 +20,8 @@
       background-color: #000;
       color: #fff;
     }
-    &:disabled{
-      opacity: .5;
+    &:disabled {
+      opacity: 0.5;
       pointer-events: none;
     }
   }
@@ -114,7 +114,7 @@
       font-weight: 800;
     }
   }
-  .filter-select{
+  .filter-select {
     width: 150px;
   }
 }
@@ -135,13 +135,13 @@
     font-size: 0;
   }
 }
-.img-container{
+.img-container {
   position: relative;
   margin: 20px 0;
   max-width: 100%;
   overflow: hidden;
   text-align: center;
-  img{
+  img {
     max-width: 100%;
     margin: 0 auto;
   }
@@ -177,6 +177,7 @@
   min-height: 100%;
   height: 500px;
   text-align: center;
+  font-size: 24px;
   color: #838383;
   &::before {
     content: "";
@@ -187,7 +188,15 @@
     height: 60px;
   }
 }
-
+@include mobile {
+  .empty-container {
+    font-size: 16px;
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
 // loading
 .loading {
   display: flex;
