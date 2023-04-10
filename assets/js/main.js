@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   eventCmt();
   eventSelect();
 });
-
 function eventHeader() {
   document.querySelector("#gnbOpen")?.addEventListener("click", () => {
     document.querySelector(".header-menu").classList.add("is-show");
@@ -198,5 +197,21 @@ function eventCmt() {
         }
       }
     });
+  });
+}
+
+// 파일 다운로드
+function downloadFile(el) {
+  $.fileDownload({
+    successCallback: function () {
+      // $(document).block(false);
+    },
+    failCallback: function (responseHtml, url, error) {
+      console.error(responseHtml);
+      $(document).block(false);
+      alertOpen("파일 다운로드 중 오류가 발생하였습니다.", (result) => {
+        // $(document).block(false);
+      });
+    },
   });
 }

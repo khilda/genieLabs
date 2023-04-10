@@ -323,22 +323,6 @@
     <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
     <script src="../../assets/js/lib/jquery-fileDownload.js"></script>
     <script src="../../assets/js/main.js"></script>
-    <script>
-      function downloadFile(el) {
-        $.fileDownload({
-          successCallback: function () {
-            // $(document).block(false);
-          },
-          failCallback: function (responseHtml, url, error) {
-            console.error(responseHtml);
-            $(document).block(false);
-            alertOpen('파일 다운로드 중 오류가 발생하였습니다.', (result) => {
-              // $(document).block(false);
-            })
-          }
-        });
-      }
-    </script>
   </body>
 
 </html>
