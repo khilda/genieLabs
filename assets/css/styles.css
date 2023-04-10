@@ -2454,12 +2454,13 @@ textarea {
   margin-left: auto;
 }
 .card .card-head .card-bookmark {
-  background: no-repeat 100% 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: no-repeat 50% 50%;
   background-image: var(--card-icon-bookmark);
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
-  padding: 20px 0;
+  width: 120px;
+  height: 120px;
   font-size: 0;
   color: transparent;
 }
@@ -3330,8 +3331,8 @@ textarea {
   .main .card:hover .card-hover .card-foot .foot-author {
     color: #000;
   }
-  .main .card-list .card:nth-child(4n):hover .card-hover,
-  .main .swiper-slide-next + .card + .card:hover .card-hover {
+  .main .card-list .card:nth-child(4n) .card-hover,
+  .main .swiper-slide-next + .card + .card .card-hover {
     left: auto;
     right: 0;
   }
