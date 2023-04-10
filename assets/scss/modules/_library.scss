@@ -38,6 +38,9 @@
   padding: 0;
   overflow: hidden;
   border: 0;
+  &:disabled +.file-label{
+    cursor: default;
+  }
 }
 
 .drag-zone {

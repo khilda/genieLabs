@@ -33,23 +33,40 @@
     color: #000;
   }
   &-outline {
+    @include badge-default();
     border: 2px solid var(--badge-outline-border, #000);
+    border-radius: 80px;
     background-color: transparent;
+    line-height: 36px;
+    padding: 0 20px;
+    font-size: 16px;
     color: var(--badge-outline-color, #000);
+  }
+  &-outline.primary {
+    border-color: $color-primary-skyblue;
+    color: $color-primary-skyblue;
+  }
+  &-outline.secondary {
+    border-color: $color-primary-orange;
+    color: $color-primary-orange;
+  }
+  &-outline.info {
+    border-color: $color-primary-info;
+    color: $color-primary-info;
   }
 }
 .badge-txt {
   @include badge-default();
   &.primary {
     font-size: 18px;
-    color: #00d1ff;
+    color: $color-primary-skyblue;
   }
   &.secondary {
     font-size: 18px;
-    color: #ff6b00;
+    color: $color-primary-orange;
   }
   &.info {
     font-size: 18px;
-    color: #929292;
+    color: $color-primary-info;
   }
 }

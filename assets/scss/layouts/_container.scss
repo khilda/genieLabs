@@ -54,6 +54,7 @@
     font-size: 18px;
     font-weight: 500;
   }
+  .badge-container,
   .btn-container {
     margin-left: auto;
   }
@@ -66,8 +67,6 @@
   background-color: #fff;
   padding: 60px;
   .section-title {
-    align-items: flex-start;
-    flex-direction: column;
     border: 0 none;
     padding: 0;
     margin-bottom: 20px;
@@ -130,6 +129,9 @@
     .btn-container {
       margin: 20px auto 0 0;
     }
+    .badge-container {
+      margin-left: 0;
+    }
   }
   .main .container {
     padding: 0;
@@ -162,6 +164,10 @@
     padding: 20px;
     > .section-title {
       align-items: center;
+      .badge-container {
+        flex-direction: column;
+        margin-left: 0;
+      }
     }
   }
   .container-header {

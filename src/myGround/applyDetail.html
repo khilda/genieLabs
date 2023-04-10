@@ -59,8 +59,25 @@
             <div class="tab-content">
               <article class="tab-item container-edit is-active">
                 <header class="section-title">
-                  <h5 class="title">내가 만든 Application 등록 신청​</h5>
+                  <div class="title-container">
+                    <h5 class="title">내가 만든 Application 등록 신청 정보​</h5>
+                  </div>
+                  <div class="badge-container">
+                    <span class="badge-outline primary">등록신청중</span>
+                    <span class="badge-outline info">등록완료</span>
+                    <span class="badge-outline secondary">등록신청반려</span>
+                  </div>
                 </header>
+                <article class="form-container">
+                  <header class="form-header">
+                    <h5 class="title color-secondary">*Applications 등록신청 반려사유</h5>
+                  </header>
+                  <div class="form">
+                    <div class="form-item">
+                      <input type="text" class="ipt edit-ipt" value="서비스 요약 글이 충분하지 않아 반려하였습니다." readonly />
+                    </div>
+                  </div>
+                </article>
                 <article class="form-container">
                   <header class="form-header">
                     <h5 class="title">필수정보</h5>
@@ -68,7 +85,7 @@
                   <form class="form">
                     <div class="form-item">
                       <div class="ipt-container category-box">
-                        <div id="categorySelect" class="select-container">
+                        <div id="categorySelect" class="select-container is-disabled">
                           <div class="select-box" data-selected=""></div>
                           <ul class="select-options"></ul>
                           <select class="select">
@@ -88,7 +105,7 @@
                             <option value="5" name="기타">기타</option>
                           </select>
                         </div>
-                        <div id="apiSelect" class="select-container select-api">
+                        <div id="apiSelect" class="select-container select-api  is-disabled">
                           <div class="select-box" data-selected="0"></div>
                           <ul class="select-options"></ul>
                           <select class="select">
@@ -100,11 +117,12 @@
                           </select>
                         </div>
                         <div class="btn-container">
-                          <button type="button" class="btn addCategory">
+                          <button type="button" class="btn addCategory" disabled>
                             추가
                           </button>
                         </div>
                       </div>
+                      <p class="txt-notice color-info mt20 mb20">Service 화면의 카드에는 상위 2개의 API 만 노출됩니다. ​</p>
                       <ul class="file-list api-list">
                         <li class="file-item api">
                           <div class="data">
@@ -112,7 +130,7 @@
                               <span class="file-name">localhost_3000_ (1).png</span>
                             </div>
                             <div class="controls">
-                              <button type="button" class="btn-txt del">
+                              <button type="button" class="btn-txt del" disabled>
                                 삭제하기
                               </button>
                             </div>
@@ -121,37 +139,37 @@
                       </ul>
                     </div>
                     <div class="form-item">
-                      <input type="text" class="ipt edit-ipt" placeholder="등록 될 application 제목을 입력하세요." />
+                      <input type="text" class="ipt edit-ipt" placeholder="등록 될 application 제목을 입력하세요." readonly />
                     </div>
                     <div class="form-item">
-                      <textarea class="textarea"></textarea>
+                      <textarea class="textarea" readonly></textarea>
                     </div>
                     <div class="form-item">
                       <dl class="thumbnail-box">
                         <dt>대표 이미지 또는 동영상</dt>
                         <dd class="ipt-container gap20">
                           <div class="rdo">
-                            <input class="rdo-ipt" id="thumbImg" type="radio" name="thumbImg" checked />
+                            <input class="rdo-ipt" id="thumbImg" type="radio" name="thumbImg" checked disabled />
                             <label for="thumbImg" class="rdo-label">이미지</label>
                           </div>
                           <div class="rdo">
-                            <input class="rdo-ipt" id="thumbYoutube" type="radio" name="thumbImg" />
+                            <input class="rdo-ipt" id="thumbYoutube" type="radio" name="thumbImg" disabled />
                             <label for="thumbYoutube" class="rdo-label">YouTube URL</label>
                           </div>
                         </dd>
                         <dd id="fileUpload" class="thumb-box is-show" data-thumb="thumbImg">
-                          <input type="file" id="fileIpt" class="file-ipt" accept="image/*" />
+                          <input type="file" id="fileIpt" class="file-ipt" accept="image/*" disabled />
                           <label for="fileIpt" class="file-label">파일첨부하기</label>
                           <figure class="thumb-img">
                             <div id="imgPreview"><img src="https://placehold.co/700x400/000/fff" alt="" /></div>
-                            <button type="button" class="thumb-remove">삭제</button>
+                            <button type="button" class="thumb-remove" disabled>삭제</button>
                           </figure>
                         </dd>
                         <dd class="thumb-box" data-thumb="thumbYoutube">
                           <input id="iptUrl" type="text" class="ipt" placeholder="URL을 입력해주세요​" />
                           <figure class="thumb-img">
                             <img src="https://placehold.co/700x400/000/fff" alt="" />
-                            <button type="button" class="thumb-remove">삭제</button>
+                            <button type="button" class="thumb-remove" disabled>삭제</button>
                           </figure>
                         </dd>
                       </dl>
@@ -161,14 +179,14 @@
                       </p>
                     </div>
                     <div class="form-item">
-                      <textarea class="edit-textarea" placeholder="application 관련 상세 설명 정보를 입력하세요."></textarea>
+                      <textarea class="edit-textarea" placeholder="application 관련 상세 설명 정보를 입력하세요." readonly></textarea>
                       <p class="txt-notice color-info">
                         Application 상세 화면에서 제공할 서비스 관련 정보를
                         등록하세요​
                       </p>
                     </div>
                     <div class="form-item">
-                      <input type="text" class="ipt edit-ipt" placeholder="application 관련 GIT Hub 주소를 입력하세요​" />
+                      <input type="text" class="ipt edit-ipt" placeholder="application 관련 GIT Hub 주소를 입력하세요​" readonly />
                       <p class="txt-notice color-info">
                         Application 상세 화면에서 제공할 GitHub 정보를
                         등록하세요​
@@ -179,14 +197,14 @@
                         <dt>제공자정보</dt>
                         <dd class="ipt-container">
                           <div class="rdo">
-                            <input class="rdo-ipt" id="user0" type="radio" name="user" checked />
+                            <input class="rdo-ipt" id="user0" type="radio" name="user" checked disabled />
                             <label for="user0" class="rdo-label">개인</label>
                           </div>
                           <div class="rdo">
-                            <input class="rdo-ipt" id="user1" type="radio" name="user" />
+                            <input class="rdo-ipt" id="user1" type="radio" name="user" disabled />
                             <label for="user1" class="rdo-label">그룹</label>
                           </div>
-                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
+                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" readonly />
                         </dd>
                       </dl>
                       <p class="txt-notice color-info">
@@ -203,10 +221,10 @@
                   </header>
                   <form class="form">
                     <div class="form-item">
-                      <input type="text" class="ipt edit-ipt" placeholder="APK를 다운받을 수 있는 주소를 입력해 주세요.​" />
+                      <input type="text" class="ipt edit-ipt" placeholder="APK를 다운받을 수 있는 주소를 입력해 주세요." readonly />
                       <p class="txt-notice color-info">
                         APK 제공이 가능한 경우 입력하면 서비스 상세 화면에서
-                        해당 링크를 통해 APK 다운로드를 제공합니다. ​
+                        해당 링크를 통해 APK 다운로드를 제공합니다.
                       </p>
                     </div>
                     <div class="form-item">
@@ -214,16 +232,16 @@
                         <dt>관련서비스</dt>
                         <dd class="ipt-container">
                           <label class="ipt-tit">서비스 제목</label>
-                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
+                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" readonly />
                         </dd>
                         <dd class="ipt-container">
                           <label class="ipt-tit">링크 URL</label>
-                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
+                          <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" readonly />
                         </dd>
                       </dl>
                       <p class="txt-notice color-info">
                         서비스 중인 제목 및 링크 주소를 입력하면 서비스 상세
-                        화면에서 해당 링크를 제공합니다. ​
+                        화면에서 해당 링크를 제공합니다.
                       </p>
                     </div>
                   </form>
@@ -260,105 +278,7 @@
         </div>
       </footer>
     </div>
-    <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
-    <script src="../../assets/js/lib/fileup.js"></script>
     <script src="../../assets/js/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        evtApiItem();
-        evtThumbImg();
-        document.querySelectorAll('.thumb-remove').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            initThumb()
-          })
-        })
-      });
-      // API 리스트 추가하기
-      function evtApiItem() {
-        const categoryBox = document.querySelector(".category-box");
-        document
-          .querySelector(".addCategory")
-          .addEventListener("click", (e) => {
-            const apiValue = categoryBox.querySelector("#apiSelect");
-            console.log(apiValue.querySelector("select").selectedOptions[0]);
-            const text =
-              apiValue.querySelector("select").selectedOptions[0].label;
-            if (text) {
-              cloneApiList(text);
-            }
-          });
-        const apiList = document.querySelector(".api-list");
-        function cloneApiList(apiName) {
-          const _li = document.createElement("li");
-          _li.classList.add("file-item", "api");
-          _li.innerHTML = `<div class="data">
-                            <div class="description">
-                              <span class="file-name">${apiName}</span>
-                            </div>
-                            <div class="controls">
-                              <button type="button" class="btn-txt del">삭제하기</button>
-                            </div>
-                          </div>`;
-          apiList.appendChild(_li);
-        }
-        // API 리스트 삭제하기
-        apiList.addEventListener("click", (e) => {
-          const _target = e.target;
-          if (e.target.classList.contains("del")) {
-            e.target.closest(".file-item").remove();
-          }
-        });
-      }
-      // Youtube 썸네일 가져오기
-      function evtThumbImg() {
-        // radio onChange Event
-        document.querySelectorAll('[name="thumbImg"]').forEach((rdo) => {
-          rdo.addEventListener("change", (e) => {
-            if (e.target.checked) {
-              // init
-              initThumb()
-              document.querySelectorAll(".thumb-box").forEach((thumb) => {
-                thumb.classList.remove("is-show");
-              });
-              const id = e.target.getAttribute("id");
-              document.querySelector(`[data-thumb="${id}"]`).classList.add("is-show");
-            }
-          });
-        });
-        // Youtube URL
-        const _iptUrl = document.querySelector("#iptUrl");
-        _iptUrl.addEventListener("blur", (e) => {
-          const url = e.target.value?.split("=");
-          const thumb = `https://img.youtube.com/vi/${url[1]}/mqdefault.jpg`;
-          const _figure = e.target.nextElementSibling
-          const _img = _figure.firstElementChild
-          _img.setAttribute("src", thumb);
-          _figure.removeAttribute('style')
-        });
-      }
-      function initThumb() {
-        document.querySelectorAll(".thumb-box").forEach((thumb) => {
-          thumb.querySelector("input").value = "";
-          thumb.querySelector("img")?.setAttribute("src", "");
-          thumb.querySelector("img")?.setAttribute("alt", "");
-          thumb.querySelector('.thumb-img').setAttribute('style', 'display: none')
-        });
-      }
-    </script>
-    <script>
-      $(document).ready(() => {
-        $.fileup({
-          url: "",
-          inputID: "fileIpt",
-          queueID: "imgPreview",
-          templateFile: '<img src="[PREVIEW_SRC]" alt="[NAME]"/>',
-          onSelect: function (file) {
-            document.querySelector('#fileIpt').nextElementSibling.removeAttribute('style')
-          },
-
-        });
-      });
-    </script>
   </body>
 
 </html>

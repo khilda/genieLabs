@@ -246,8 +246,13 @@ dd {
   font-weight: 400;
 }
 
+a,
 button {
   cursor: pointer;
+}
+a:disabled,
+button:disabled {
+  cursor: default;
 }
 
 ::-webkit-input-placeholder {
@@ -981,6 +986,7 @@ textarea {
   font-size: 18px;
   font-weight: 500;
 }
+.section-title .badge-container,
 .section-title .btn-container {
   margin-left: auto;
 }
@@ -995,13 +1001,6 @@ textarea {
   padding: 60px;
 }
 .container-edit .section-title {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   border: 0 none;
   padding: 0;
   margin-bottom: 20px;
@@ -1070,6 +1069,9 @@ textarea {
   .section-title .btn-container {
     margin: 20px auto 0 0;
   }
+  .section-title .badge-container {
+    margin-left: 0;
+  }
   .main .container {
     padding: 0;
   }
@@ -1105,6 +1107,14 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .container-edit > .section-title .badge-container,
+  .container-detail > .section-title .badge-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
   }
   .container-header {
     background-size: auto;
@@ -1632,9 +1642,35 @@ textarea {
   color: #000;
 }
 .badge-outline {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
   border: 2px solid var(--badge-outline-border, #000);
+  border-radius: 80px;
   background-color: transparent;
+  line-height: 36px;
+  padding: 0 20px;
+  font-size: 16px;
   color: var(--badge-outline-color, #000);
+}
+.badge-outline.primary {
+  border-color: #4ff3ff;
+  color: #4ff3ff;
+}
+.badge-outline.secondary {
+  border-color: #ff6800;
+  color: #ff6800;
+}
+.badge-outline.info {
+  border-color: #929292;
+  color: #929292;
 }
 
 .badge-txt {
@@ -1651,11 +1687,11 @@ textarea {
 }
 .badge-txt.primary {
   font-size: 18px;
-  color: #00d1ff;
+  color: #4ff3ff;
 }
 .badge-txt.secondary {
   font-size: 18px;
-  color: #ff6b00;
+  color: #ff6800;
 }
 .badge-txt.info {
   font-size: 18px;
@@ -1938,6 +1974,8 @@ textarea {
   padding-top: 20px;
 }
 .form-footer .btn-container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 5px;
 }
 .form-footer .btn-container:only-child {
@@ -2361,7 +2399,7 @@ textarea {
   position: absolute;
   opacity: 0;
 }
-.chk .chk-ipt:hover + .chk-label:before, .chk .chk-ipt:focus + .chk-label:before {
+.chk .chk-ipt:not(:disabled):hover + .chk-label:before, .chk .chk-ipt:not(:disabled):focus + .chk-label:before {
   border-color: #000;
 }
 .chk .chk-ipt:disabled + .chk-label {
@@ -2370,7 +2408,7 @@ textarea {
   opacity: 0.5;
 }
 .chk .chk-ipt:disabled + .chk-label:before {
-  background: #ccc;
+  background-color: #ccc;
 }
 .chk .chk-label {
   position: relative;
@@ -2414,7 +2452,7 @@ textarea {
   position: absolute;
   opacity: 0;
 }
-.rdo .rdo-ipt:hover + .rdo-label:before, .rdo .rdo-ipt:focus + .rdo-label:before {
+.rdo .rdo-ipt:not(:disabled):hover + .rdo-label:before, .rdo .rdo-ipt:not(:disabled):focus + .rdo-label:before {
   border-color: #000;
 }
 .rdo .rdo-ipt:disabled + .rdo-label {
@@ -2422,7 +2460,7 @@ textarea {
   cursor: auto;
 }
 .rdo .rdo-ipt:disabled + .rdo-label:before {
-  background: #ccc;
+  background-color: #ccc;
 }
 .rdo .rdo-label {
   position: relative;
@@ -2462,6 +2500,15 @@ textarea {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.select-container.is-disabled {
+  cursor: default;
+}
+.select-container.is-disabled .select-box {
+  cursor: default;
+}
+.select-container.is-disabled .select-box:hover {
+  border-color: transparent;
 }
 .select-container .select-box {
   border: 2px solid transparent;
@@ -3376,6 +3423,9 @@ textarea {
   padding: 0;
   overflow: hidden;
   border: 0;
+}
+.file-ipt:disabled + .file-label {
+  cursor: default;
 }
 
 .drag-zone {
@@ -4351,6 +4401,11 @@ article.multi-column.dbl .item {
   color: transparent;
   font-size: 0;
 }
+@media (max-width: 1439px) {
+  .myGround .thumb-img {
+    max-width: 100%;
+  }
+}
 @media (max-width: 742px) {
   .myGround .thumbnail-box {
     -webkit-box-orient: vertical;
@@ -4371,9 +4426,6 @@ article.multi-column.dbl .item {
   }
   .myGround .thumbnail-box .thumb-box {
     padding: 20px 10px;
-  }
-  .myGround .thumbnail-box .thumb-img {
-    max-width: 100%;
   }
 }
 

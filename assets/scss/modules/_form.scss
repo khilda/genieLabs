@@ -43,8 +43,8 @@
   .chk-ipt {
     position: absolute; // take it out of document flow
     opacity: 0; // hide it
-    &:hover + .chk-label:before,
-    &:focus + .chk-label:before {
+    &:not(:disabled):hover + .chk-label:before,
+    &:not(:disabled):focus + .chk-label:before {
       border-color: #000;
     }
     &:disabled + .chk-label {
@@ -53,7 +53,7 @@
       opacity: 0.5;
     }
     &:disabled + .chk-label:before {
-      background: #ccc;
+      background-color: #ccc;
     }
   }
   .chk-label {
@@ -88,8 +88,8 @@
   .rdo-ipt {
     position: absolute; // take it out of document flow
     opacity: 0; // hide it
-    &:hover + .rdo-label:before,
-    &:focus + .rdo-label:before {
+    &:not(:disabled):hover + .rdo-label:before,
+    &:not(:disabled):focus + .rdo-label:before {
       border-color: #000;
     }
     &:disabled + .rdo-label {
@@ -97,7 +97,7 @@
       cursor: auto;
     }
     &:disabled + .rdo-label:before {
-      background: #ccc;
+      background-color: #ccc;
     }
   }
   .rdo-label {

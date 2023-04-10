@@ -94,6 +94,7 @@ function eventSelect() {
   }
   selectContainers.forEach((container) => {
     initSelectBox(container);
+    if (container.classList.contains("is-disabled")) return;
     const selectOptions = container.querySelectorAll(".select-option");
     const selectBox = container.querySelector(".select-box");
     const selectHidden = container.querySelector(".select");
@@ -123,6 +124,7 @@ function alertOpen(msg, callback) {
     icon: "info",
     showCloseButton: true,
     confirmButtonText: "확인",
+    allowOutsideClick: false, // dimmed 클릭시 close block
   }).then((result) => {
     if (callback) {
       callback(result);
@@ -137,6 +139,7 @@ function confirmOpen(msg, callback) {
     showCancelButton: true,
     confirmButtonText: "확인",
     cancelButtonText: "취소",
+    allowOutsideClick: false, // dimmed 클릭시 close block
   }).then((result) => {
     if (callback) {
       callback(result);

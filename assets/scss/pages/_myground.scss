@@ -91,7 +91,7 @@
         position: relative;
         width: 700px;
         margin: 20px auto 0;
-        > img{
+        > img {
           width: 100%;
         }
       }
@@ -108,6 +108,11 @@
       }
     }
   }
+  @include tablet {
+    .thumb-img {
+      max-width: 100%;
+    }
+  }
   @include mobile {
     .thumbnail-box {
       flex-direction: column;
@@ -118,9 +123,6 @@
       }
       .thumb-box {
         padding: 20px 10px;
-      }
-      .thumb-img{
-        max-width: 100%;
       }
     }
   }

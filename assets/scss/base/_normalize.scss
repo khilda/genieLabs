@@ -19,8 +19,12 @@ dd {
   font-weight: 400;
 }
 
+a,
 button {
   cursor: pointer;
+  &:disabled{
+    cursor: default;
+  }
 }
 ::placeholder {
   color: #787878;
