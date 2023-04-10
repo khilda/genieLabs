@@ -3123,6 +3123,11 @@ textarea {
   font-size: 18px;
   font-weight: 400;
 }
+.cmt-container .cmt-body .txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .cmt-container .cmt-body textarea.txt-edit {
   display: none;
 }

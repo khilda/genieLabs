@@ -26,6 +26,9 @@
     line-height: 26px;
     font-size: 18px;
     font-weight: 400;
+    .txt{
+      flex: 1;
+    }
     textarea.txt-edit {
       display: none;
     }
