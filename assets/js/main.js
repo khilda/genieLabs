@@ -17,7 +17,7 @@ document.querySelector("#toggleTheme")?.addEventListener("click", (e) => {
 // card Bookmark
 document.querySelectorAll(".card-bookmark")?.forEach((boomark) => {
   boomark.addEventListener("click", (e) => {
-    e.stopPropagation();
+    e.preventDefault();
     e.target.classList.toggle("is-active");
   });
 });
