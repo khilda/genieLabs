@@ -96,6 +96,8 @@ function initSelectBox(selectContainer) {
   _box.dataset.selected = _slct.selectedOptions[0].value;
   _box.textContent = _slct.selectedOptions[0].label;
 
+  _options.innerHtml = ''
+
   // set options
   _slct.querySelectorAll("option").forEach((option) => {
     const _list = document.createElement("li");
