@@ -32,11 +32,6 @@
               <div class="select-container">
                 <div class="select-box" data-selected="Voice AI"></div>
                 <ul class="select-options">
-                  <li class="select-option" data-value="123"></li>
-                  <li class="select-option" data-value="345"></li>
-                  <li class="select-option" data-value="456"></li>
-                  <li class="select-option" data-value="567"></li>
-                  <li class="select-option" data-value="678"></li>
                 </ul>
                 <select class="select">
                   <option value="Voice AI" default>Voice AI</option>
@@ -69,38 +64,5 @@
     </main>
   </body>
   <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
-  <script src="../../assets/js/lib/fileup.js"></script>
   <script src="../../assets/js/main.js"></script>
-  <script>
-    $(document).ready(() => {
-
-      $.fileup({
-        url: "https://github.com?file_upload=1",
-        inputID: "fileIpt",
-        queueID: "fileQueue",
-        dropzoneID: "fileDropzone",
-        templateFile: '<div id="file-[INPUT_ID]-[FILE_NUM]" class="fileup-file file-item">' +
-          '<div class="data">' +
-          '<div class="description">' +
-          '<span class="file-name">[NAME]</span> [<span class="file-size">[SIZE_HUMAN]</span>]' +
-          "</div>" +
-          '<div class="controls">' +
-          "<button type=\"button\" class=\"btn-txt del\" onclick=\"$.fileup('[INPUT_ID]', 'remove', '[FILE_NUM]');\" title=\"[REMOVE]\">삭제하기</button>" +
-          "</div>" +
-          '<div class="result"></div>' +
-          "</div>" +
-          "</div>",
-      })
-        .dragEnter(function (event) {
-          $(event.target).addClass("over");
-        })
-        .dragLeave(function (event) {
-          $(event.target).removeClass("over");
-        })
-        .dragEnd(function (event) {
-          $(event.target).removeClass("over");
-        });
-    })
-  </script>
-
 </html>
