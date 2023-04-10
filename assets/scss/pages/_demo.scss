@@ -48,14 +48,22 @@ article.multi-column {
 .selector-option {
   display: flex;
   gap: 0 35px;
+  &.large-text {
+    label {
+      .ico.text {
+        width: 200px
+      }
+    }
+  }
     label {
       display: flex;
       justify-content: center;
       width: calc((100% - 35px) / 2);
+      min-height: 150px;
       margin-top: 30px;
       user-select: none;
       .ico-text {
-        width: 220px;
+        width: 150px;
         margin-top: 20px;
         padding-top: 70px;
         background: url("../images/img_demo_text.svg") no-repeat 50% 0%;
@@ -100,6 +108,82 @@ article.multi-column {
   #waveform {
     margin-left: 20px;
     flex: 1;
+  }
+}
+
+.list-info {
+  margin-top: 30px;
+  padding: 30px 0;
+  border: {
+    top: 1px solid #ccc;
+    bottom: 1px solid #ccc;
+  }
+  .list-item {
+    display: flex;
+    .title {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 190px;
+      .num {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: #00d1ff;
+      }
+      .txt {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+    .content {
+      flex: 1;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    & + .list-item {
+      margin-top: 30px;
+    }
+  }
+}
+
+.title-gray {
+  font-weight: 500;
+  line-height: 28px;
+  color: #787878;
+}
+
+.textarea-container {
+  color: #787878;
+  .textarea {
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.list-user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  .list-item {
+    display: flex;
+    border: 2px solid #ededed;
+    background-color: #fff;
+    margin: 0;
+    width: 100%;
+    padding: 15px 20px;
+    line-height: 28px;
+    .data {
+      padding-left: 32px;
+      background: url("../images/ico_btn_mod.svg") no-repeat 0% 0%;
+    }
+    .controls {
+      margin-left: auto;;
+    }
   }
 }
 
