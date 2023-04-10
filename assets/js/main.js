@@ -75,43 +75,56 @@ commentItems?.forEach((_cmt) => {
 });
 
 // custom select
-const selectContainers = document.querySelectorAll('.select-container')
-
+const selectContainers = document.querySelectorAll(".select-container");
 function deactivateAllSelect() {
-  selectContainers.forEach(container => {
-    const selectBox = container.querySelector('.select-box')
-    selectBox.classList.remove('active')
-  })
+  selectContainers.forEach((container) => {
+    const selectBox = container.querySelector(".select-box");
+    selectBox.classList.remove("active");
+  });
 }
 
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.select-container')){
-    deactivateAllSelect()
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".select-container")) {
+    deactivateAllSelect();
   }
-})
+});
+function initSelectBox(selectContainer) {
+  const _box = selectContainer.querySelector(".select-box");
+  const _options = selectContainer.querySelector(".select-options");
+  const _slct = selectContainer.querySelector(".select");
+  // default value
+  _box.dataset.selected = _slct.selectedOptions[0].value;
+  _box.textContent = _slct.selectedOptions[0].label;
 
-selectContainers.forEach(container => {
-  const selectBox = container.querySelector('.select-box')
-  selectBox.textContent = selectBox.dataset.selected
-  const selectOptions = container.querySelectorAll('.select-option')
-  selectOptions.forEach(option => {
-    option.textContent = option.dataset.value
-  })
-  const selectHidden = container.querySelector('.select')
-  container.addEventListener('click', (e) => {
+  // set options
+  _slct.querySelectorAll("option").forEach((option) => {
+    const _list = document.createElement("li");
+    _list.dataset.value = option.value;
+    _list.textContent = option.label;
+    _list.classList.add("select-option");
+    _options.appendChild(_list);
+  });
+}
+selectContainers.forEach((container) => {
+  initSelectBox(container);
+  const selectOptions = container.querySelectorAll(".select-option");
+  const selectBox = container.querySelector(".select-box");
+  const selectHidden = container.querySelector(".select");
+  container.addEventListener("click", (e) => {
     if (e.target === selectBox) {
-      deactivateAllSelect()
-      selectBox.classList.toggle('active')
+      deactivateAllSelect();
+      selectBox.classList.toggle("active");
     }
-    selectOptions.forEach(option => {
+    selectOptions.forEach((option) => {
       if (e.target === option) {
-        selectBox.textContent = option.dataset.value
-        selectBox.classList.remove('active')
-        selectHidden.value = option.dataset.value
+        selectBox.textContent = option.textContent;
+        selectBox.classList.remove("active");
+        selectHidden.value = option.dataset.value;
+        selectHidden.dispatchEvent(new Event("change"));
       }
-    })
-  })
-  selectHidden.addEventListener('change', (e) => {
-    console.log(e.currentTarget.value)
-  })
-})
+    });
+  });
+  selectHidden.addEventListener("change", (e) => {
+    console.log(e);
+  });
+});
