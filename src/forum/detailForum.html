@@ -67,14 +67,14 @@
                   </p>
                 </div>
                 <div id="fileQueue" class="file-list">
-                  <a href="#none" id="file-upload-1" class="fileup-file file-item" download="">
+                  <button type="button" class="fileup-file file-item" onclick="downloadFile(this)">
                     <div class="data">
                       <div class="description">
                         <span class="file-name">localhost_3000_ (1).png</span>
                         [<span class="file-size">181.82 Kb</span>]
                       </div>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </article>
             </div>
@@ -320,7 +320,9 @@
         </div>
       </footer>
     </div>
-    <script defer src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/lib/jquery-fileDownload.js"></script>
+    <script src="../../assets/js/main.js"></script>
   </body>
 
 </html>

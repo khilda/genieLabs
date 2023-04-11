@@ -6,7 +6,15 @@
   font-size: 16px;
   cursor: pointer;
   user-select: none;
-  
+  &.is-disabled {
+    cursor: default;
+    .select-box {
+      cursor: default;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
   .select-box {
     border: 2px solid transparent;
     background: #f4f4f4;
@@ -112,4 +120,3 @@
     display: none;
   }
 }
-

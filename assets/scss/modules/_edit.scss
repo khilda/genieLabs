@@ -68,6 +68,7 @@
   justify-content: space-between;
   padding-top: 20px;
   .btn-container {
+    flex-wrap: wrap;
     gap: 5px;
     &:only-child {
       margin-left: auto;

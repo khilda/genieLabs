@@ -33,21 +33,13 @@
   <script src="../../assets/js/main.js"></script>
   <script>
     function onClickAlert() {
-      Swal.fire({
-        text: 'Modal with a custom image.',
-        icon: 'info',
-        showCloseButton: true,
-        confirmButtonText: '확인',
+      alertOpen('테스트용도', (result) => {
+        console.log(result)
       })
     }
     function onClickConfirm() {
-      Swal.fire({
-        text: 'Modal with a custom image.',
-        icon: 'success',
-        showCloseButton: true,
-        showCancelButton: true,
-        confirmButtonText: '확인',
-        cancelButtonText: '취소',
+      confirmOpen('Confirm 테스트용도<br>테스트', (result) => {
+        console.log(result)
       })
     }
     function onClickLoader() {

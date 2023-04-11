@@ -18,6 +18,9 @@
 
   <body>
     <main class="guide">
+      <button type="button" class="btn" onclick="evtCmtInit()">댓글전체삭제</button>
+      <button type="button" class="btn" onclick="evtCmtAdd()">댓글 추가</button>
+      <button type="button" class="btn" onclick="evtReplyAdd()">답글 추가</button>
       <article class="comment-container">
         <div class="comment-edit">
           <div class="title">댓글 <strong class="count">+2</strong></div>
@@ -28,9 +31,14 @@
             </div>
           </div>
         </div>
+        <!-- 댓글이 없는 경우 -->
+        <div class="comment-empty">등록된 댓글이 없습니다</div>
+        <!-- //댓글이 없는 경우 -->
+        <!-- 댓글이 있는 경우 -->
         <ul class="comment-list">
-          <!-- 댓글 아이템 -->
+          <!-- 댓글 아이템 container (댓글+답글 포함)-->
           <li class="list-item">
+            <!-- 댓글 아이템 -->
             <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
             <div class="cmt-container type-editable">
               <div class="cmt-header">
@@ -55,8 +63,10 @@
                 </div>
               </div>
             </div>
-            <!-- 답글 아이템 -->
+            <!-- // 댓글 아이템 -->
+            <!-- 답글 아이템 container -->
             <div class="reply-container">
+              <!-- 답글 작성하기 -->
               <div class="reply-header">
                 <div class="ipt-container">
                   <input type="text" class="ipt cmt-ipt" />
@@ -65,7 +75,11 @@
                   </div>
                 </div>
               </div>
+              <!-- // 답글 작성하기 -->
+              <!-- 답글 목록 -->
               <ul class="reply-content">
+                <!-- 답글 아이템 -->
+                <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
                 <li class="cmt-container type-editable">
                   <div class="cmt-header">
                     <dl class="auth-info">
@@ -85,6 +99,8 @@
                     </div>
                   </div>
                 </li>
+                <!-- // 답글 아이템 -->
+                <!-- 답글 아이템 -->
                 <li class="cmt-container type-editable">
                   <div class="cmt-header">
                     <dl class="auth-info">
@@ -104,6 +120,8 @@
                     </div>
                   </div>
                 </li>
+                <!-- // 답글 아이템 -->
+                <!-- 답글 아이템 -->
                 <li class="cmt-container type-editable">
                   <div class="cmt-header">
                     <dl class="auth-info">
@@ -124,13 +142,14 @@
                   </div>
                 </li>
               </ul>
+              <!-- // 답글 목록 -->
               <div class="btn-container reply-more">
                 <button type="button" class="btn">+ 답글 더보기</button>
               </div>
             </div>
-            <!-- // 답글 아이템 -->
+            <!-- // 답글 아이템 container -->
           </li>
-          <!-- //댓글 아이템 -->
+          <!-- // 댓글 아이템 container (댓글+답글 포함) -->
           <li class="list-item">
             <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
             <div class="cmt-container">
@@ -143,6 +162,11 @@
               <div class="cmt-body">
                 <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
                 <textarea class="txt-edit"></textarea>
+                <div class="btn-container type-editable-btn">
+                  <button type="button" class="btn-ico mod">수정하기</button>
+                  <button type="button" class="btn-ico del">삭제하기</button>
+                  <button type="button" class="btn-ico reply">답글달기<strong class="badge count">+999</strong></button>
+                </div>
               </div>
               <div class="cmt-footer">
                 <div class="btn-container type-mod-btn">
@@ -227,10 +251,114 @@
           </li>
           <!-- //댓글 아이템 -->
         </ul>
+        <!-- // 댓글이 있는 경우 -->
       </article>
     </main>
   </body>
-  <script defer src="../../assets/js/lib/swiper-bundle.min.js"></script>
-  <script defer src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    // 아래 스크립트는 샘플입니다. 작업에 참고하시기 바랍니다.
+    const _cmtContainer = document.querySelector('.comment-container')
+    const _cmtEmpty = _cmtContainer.querySelector('.comment-empty')
+    const _cmtList = _cmtContainer.querySelector('.comment-list')
+    function evtCmtInit() {
+      _cmtEmpty.removeAttribute('style')
+      _cmtList.innerHTML = ''
+    }
+    function initCmtItem(params) {
+      let { auth = '', date = '', isUser = false, cmtValue = '' } = params
+      date = date || new Intl.DateTimeFormat('ko-KR').format(new Date())
+      const isUserClass = isUser ? 'type-editable' : ''
+
+      const _cmtItem = document.createElement('li')
+      _cmtItem.innerHTML = `<div class="cmt-container ${isUserClass}">
+                        <div class="cmt-header">
+                          <dl class="auth-info">
+                            <dt class="auth">${auth}</dt>
+                            <dd class="date">${date}</dd>
+                          </dl>
+                        </div>
+                        <div class="cmt-body">
+                          <p class="txt">${cmtValue}</p>
+                          <textarea class="txt-edit"></textarea>
+                          <div class="btn-container type-editable-btn">
+                            <button type="button" class="btn-ico mod">수정하기</button>
+                            <button type="button" class="btn-ico del">삭제하기</button>
+                            <button type="button" class="btn-ico reply">답글달기<strong class="badge count"></strong></button>
+                          </div>
+                        </div>
+                        <div class="cmt-footer">
+                          <div class="btn-container type-mod-btn">
+                            <button type="button" class="btn-txt regist">등록하기</button>
+                            <button type="button" class="btn-txt del">삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="reply-container">
+                        <div class="reply-header">
+                          <div class="ipt-container">
+                            <input type="text" class="ipt cmt-ipt" />
+                            <div class="btn-container">
+                              <button type="button" class="btn">답글</button>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="reply-content"></ul>
+                      </div>`
+      _cmtItem.classList.add('list-item')
+      return _cmtItem
+    }
+    function evtCmtAdd() {
+      console.log('댓글 추가')
+      const item = initCmtItem({
+        auth: '홍길동',
+        date: '',
+        isUser: true,
+        cmtValue: '댓글 추가'
+      })
+      _cmtList.appendChild(item)
+      _cmtEmpty.setAttribute('style', 'display:none')
+    }
+    function initReplyItem(params) {
+      let { auth = '', date = '', isUser = false, cmtValue = '' } = params
+      date = date || new Intl.DateTimeFormat('ko-KR').format(new Date())
+
+      const _rplyItem = document.createElement('li')
+      _rplyItem.innerHTML = `<div class="cmt-header">
+                              <dl class="auth-info">
+                                <dt class="auth">${auth}</dt>
+                                <dd class="date">${date}</dd>
+                              </dl>
+                            </div>
+                            <div class="cmt-body">
+                              <p class="txt">${cmtValue}</p>
+                              <textarea class="txt-edit"></textarea>
+                            </div>
+                            <div class="cmt-footer">
+                              <div class="btn-container">
+                                <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
+                                <button type="button" class="btn-txt mod">수정하기</button>
+                                <button type="button" class="btn-txt del">삭제하기</button>
+                              </div>
+                            </div>`
+      _rplyItem.classList.add('cmt-container')
+      if (isUser) {
+        _rplyItem.classList.add('type-editable')
+      }
+      return _rplyItem
+    }
+    function evtReplyAdd() {
+      console.log('답글 추가')
+      const _replyList = _cmtContainer.querySelector('.reply-content')
+      const item = initReplyItem({
+        auth: '홍길동',
+        date: '',
+        isUser: true,
+        cmtValue: '답글 추가'
+      })
+      _replyList?.appendChild(item)
+    }
+  </script>
 
 </html>

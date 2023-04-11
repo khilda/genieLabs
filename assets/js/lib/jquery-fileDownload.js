@@ -9,8 +9,8 @@
 *   http://www.opensource.org/licenses/mit-license.php
 *
 * !!!!NOTE!!!!
-* You must also write a cookie in conjunction with using this plugin in the server's response headers containing the file download:
-* Set-Cookie: fileDownload=true; path=/"
+* You must also write a cookie in conjunction with using this plugin as mentioned in the orignal post:
+* http://johnculviner.com/jquery-file-download-plugin-for-ajax-like-feature-rich-file-downloads/
 * !!!!NOTE!!!!
 */
 
@@ -288,7 +288,10 @@ $.extend({
             } else {
 
                 //create a temporary iframe that is used to request the fileUrl as a GET request
-		$iframe = $("<iframe style='display: none' src='"+fileUrl+"'></iframe>").appendTo("body");
+                $iframe = $("<iframe>")
+                    .hide()
+                    .prop("src", fileUrl)
+                    .appendTo("body");
             }
 
         } else {
@@ -359,7 +362,6 @@ $.extend({
             }
 
             var lowerCaseCookie = settings.cookieName.toLowerCase() + "=" + cookieValue;
-
             if (document.cookie.toLowerCase().indexOf(lowerCaseCookie) > -1) {
 
                 //execute specified callback
