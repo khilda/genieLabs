@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo > 의도 분류 (Fine Tuning)</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <a href="/src/main/index.html" class="logo">GenieGround</a>
+      <div class="header-menu">
+        <div class="gnb">
+          <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+          <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
+          <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+          <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+          <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+        </div>
+        <div class="info">
+          <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+          <a href="#none" class="info-menu logout">Logout</a>
+        </div>
+        <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+      </div>
+      <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+    </header>
+    <main class="container demo">
+      <nav class="breadcrumb">
+        <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+        <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
+        <a href="/src/demo/genieVoice.html" class="breadcrumb-link">의도 분류 (Fine Tuning)</a>
+      </nav>
+      <section class="container-header">
+        <h1 class="page-title">Demo</h1>
+        <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
+      </section>
+      <section class="container-content container-detail">
+        <header class="section-title">
+          <div class="title-container">
+            <h5 class="title">의도 분류 (Fine Tuning)</h5>
+            <dl class="badge-container">
+              <dt class="badge-tit">연관 API</dt>
+              <dd class="badge">SST API​</dd>
+              <dd class="badge">의도 분류 (Fine Tuning)​</dd>
+            </dl>
+            <p class="txt mt20">
+              질문을 이해하고, 주어진 문서에서 최적화된 정답을 찾아내는 기술
+            </p>
+          </div>
+          <div class="func-container">
+            <button class="btn-link">Demo 바로가기</button>
+          </div>
+        </header>
+        <article class="detail-container">
+          <p class="txt mt20">
+            의도 분류(Intent Classification)는 텍스트에 담긴 목적이나 상황 등을 매핑 및 분류하는 기술입니다.<br />
+            일반적으로 챗봇/보이스봇 등 자연어 UX 기반 서비스에서 사용자와 상호 작용하기 위한 핵심 기술 중 하나이며, 사용자의 자연어 입력 기반으로 사용자의 의도 또는 원하는 목적을 찾을 수 있도록
+            해줍니다.<br />
+            KT 의도 분류는 대규모 신경망에 기반하여 확률적 의도 해석을 진행하기 때문에 발화 실수나
+            인식 오류에도 강건한 기술입니다.
+          </p>
+          <figure class="img has-caption">
+            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <figcaption class="caption mt10">챗봇/보이스봇에서의 자연어처리</figcaption>
+          </figure>
+          <p class="txt">
+            KT 의도 분류 기술은 다음과 같은 특징을 가지고 있습니다.
+          </p>
+          <article class="list-info">
+            <div class="list-item">
+              <div class="title">
+                <span class="num">01.</span>
+                <span class="txt">
+                  대규모 언어 데이터로
+                  학습한 신경망 기반의
+                  해석기
+                </span>
+              </div>
+              <div class="content">
+                <p class="txt list">
+                  뉴스/위키 등 일반 어휘(19GB)와 상담어휘(10GB)를<br />
+                  추가 학습하여 챗봇/보이스봇의 어휘가 풍부하게 반영된 신경망을 가지고 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="title">
+                <span class="num">02</span>
+                <span class="txt">언어 지식의 자기
+                  지도 학습
+                  + 영역 지식의
+                  자기 지도 학습</span>
+              </div>
+              <div class="content">
+                <p class="txt list">
+                  자기 지도 학습으로 풍부해진 일반 영역 해석 지능 위에<br />
+                  소규모의 사업/서비스 맞춤형 의도 학습을 통해 의도 영역 커버리지 확장이 가능합니다.
+                </p>
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="title">
+                <span class="num">03.</span>
+                <span class="txt">
+                  사업 환경에 맞는<br />
+                  다양한 모델 제공
+                </span>
+              </div>
+              <div class="content">
+                <p class="txt list">
+                  14M, 110M에서 11B(예정) 파라미터 크기까지 성능과<br />
+                  하드웨어 요구 사항을 고려한 다양한 모델 제공이 가능합니다.
+                </p>
+              </div>
+            </div>
+          </article>
+          <figure class="img has-caption">
+            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <figcaption class="caption mt10">의도 분류 학습 과정</figcaption>
+          </figure>
+          <article class="multi-column tri mt60">
+            <div class="item">
+              <p class="item-num">01</p>
+              <p class="item-title">챗봇/보이스복 특화
+                사전 언어 모델</p>
+              <p class="item-txt">
+                상담 어취 반영을 통한 챗봇/보이스봇에 특화된 사전 언어 모델
+              </p>
+            </div>
+            <div class="item">
+              <p class="item-num">02</p>
+              <p class="item-title">소규모 데이터로 강건한
+                의도 분류</p>
+              <p class="item-txt">
+                대규모 자가지도 학습을 통한 지도 학습 성능 강화
+              </p>
+            </div>
+            <div class="item">
+              <p class="item-num">03</p>
+              <p class="item-title">운영 환경에 맞는
+                모델 제공</p>
+              <p class="item-txt">
+                운영 환경에 맞게 성능과 하드웨어
+                요구사항을 고려한 다양한 모델 제공 기능
+                (성능 Trade-Off)
+              </p>
+            </div>
+          </article>
+          <div class="sub-title-container mt20">
+            <h3 class="title">의도 분류</h3>
+            <div class="btn-container">
+              <button type="button" class="btn-txt refresh">새로고침</button>
+            </div>
+          </div>
+          <h5 class="title-gray mt30">의도 분류 모델을 선택해주세요.</h5>
+          <div class="select-container mt10">
+            <div class="select-box" data-selected="음식주문"></div>
+            <ul class="select-options"></ul>
+            <select class="select">
+              <option value="1" default>음식주문</option>
+              <option value="2">음식주문1</option>
+              <option value="3">음식주문2</option>
+              <option value="4">음식주문3</option>
+              <option value="5">음식주문4</option>
+              <option value="6">음식주문5</option>
+            </select>
+          </div>
+          <h5 class="title-gray mt40">추론할 문장을 선택해주신후, ‘의도추론’을 눌러주세요.</h5>
+          <div class="select-container mt10">
+            <div class="select-box" data-selected="음식주문"></div>
+            <ul class="select-options"></ul>
+            <select class="select">
+              <option value="1" default>음식주문</option>
+              <option value="2">음식주문1</option>
+              <option value="3">음식주문2</option>
+              <option value="4">음식주문3</option>
+              <option value="5">음식주문4</option>
+              <option value="6">음식주문5</option>
+            </select>
+          </div>
+          <div class="ipt-container question">
+            <input id="userInput2" type="text" class="ipt edit-ipt" placeholder="기우는 민혁이한테 뭘 선물로 받았어?" />
+            <button id="userRequest" type="button" class="btn">질문하기</button>
+          </div>
+          <p class="direction"></p>
+          <h5 class="title-gray">정답</h5>
+          <div class="textarea-container">
+            <textarea name="" id="" cols="30" rows="10" class="textarea">정답 지문 나오는 TextArea</textarea>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="copyright">
+        <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+        <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+        <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+      </div>
+      <div class="term">
+        <a href="#none" class="term-txt">이용약관</a>
+        <a href="#none" class="policy-txt">개인정보처리방침</a>
+      </div>
+    </footer>
+  </div>
+  <script defer src="https://unpkg.com/wavesurfer.js"></script>
+  <script defer src="../../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const testOptions = document.querySelectorAll('input[name="option"]'),
+        optionsContent = document.querySelectorAll('.tab-item');
+
+      testOptions.forEach(option => {
+        option.addEventListener('change', (e) => {
+          optionsContent.forEach(option => {
+            option.classList.remove('is-active')
+            if (option.classList.contains(e.target.id)) {
+              option.classList.add('is-active')
+            }
+          })
+        })
+      })
+
+      optionsContent.forEach(optionContent => {
+        const selectQuestion = optionContent.querySelector('select'),
+          inputQuestion = optionContent.querySelector('.question .edit-ipt'),
+          btnQuestion = optionContent.querySelector('.question .btn')
+
+        selectQuestion.addEventListener('change', (e) => {
+          inputQuestion.value = e.target.selectedOptions[0].label
+        })
+
+        btnQuestion.addEventListener('click', (e) => {
+          console.log(`질문하기 : ${inputQuestion.value}`)
+        })
+
+        if (optionContent.classList.contains('user')) {
+          const inputAdd = optionContent.querySelector('#userInput'),
+            btnAdd = optionContent.querySelector('#userAdd'),
+            listUserData = optionContent.querySelector('.list-user-data')
+
+          btnAdd.addEventListener('click', (e) => {
+            console.log('추가')
+            const addData = `
+              <li class="list-item">
+                <div class="data">${inputAdd.value}</div>
+                <div class="controls">
+                  <button type="button" class="btn-txt del">
+                    삭제하기
+                  </button>
+                </div>
+              </li>
+            `
+            listUserData.insertAdjacentHTML('beforeend', addData)
+            inputAdd.value = ''
+          })
+
+          listUserData.addEventListener('click', (e) => {
+            if (e.target.classList.contains('del')) {
+              e.target.closest('.list-item').remove()
+            }
+          })
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
