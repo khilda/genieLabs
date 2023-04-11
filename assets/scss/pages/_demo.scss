@@ -33,6 +33,11 @@ article.multi-column {
       flex-basis: calc(100% / 2)
     }
   }
+  &.tri {
+    .item {
+      flex-basis: calc(100% / 3)
+    }
+  }
 }
 
 .sub-title-container {
@@ -208,6 +213,18 @@ article.multi-column {
 .fileUpload-container .txt {
   font-size: 16px;
 }
+
+.result-multi {
+  display: flex;
+  gap: 0 20px;
+  & .result-item {
+    flex-basis: calc((100% - 20px) / 2);
+    .textarea {
+      height: 450px;
+    }
+  }
+}
+
 
 @include mobile {
   article.multi-column {
