@@ -141,6 +141,13 @@ article.multi-column {
       flex: 1;
       font-size: 18px;
       line-height: 30px;
+      .txt.list {
+        display: list-item;
+        padding-left: 25px;
+        list-style: disc;
+        list-style-position: inside;
+        text-indent: -25px;
+      }
     }
     & + .list-item {
       margin-top: 30px;
@@ -185,6 +192,21 @@ article.multi-column {
       margin-left: auto;;
     }
   }
+}
+
+.btn-container {
+  .create-summary {
+    margin-left: auto;
+  }
+}
+
+.fileUpload-container .title-gray {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.fileUpload-container .txt {
+  font-size: 16px;
 }
 
 @include mobile {

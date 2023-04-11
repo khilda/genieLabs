@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo > Voc 상담 대화 요약</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <a href="/src/main/index.html" class="logo">GenieGround</a>
+      <div class="header-menu">
+        <div class="gnb">
+          <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+          <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
+          <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+          <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+          <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+        </div>
+        <div class="info">
+          <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+          <a href="#none" class="info-menu logout">Logout</a>
+        </div>
+        <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+      </div>
+      <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+    </header>
+    <main class="container demo">
+      <nav class="breadcrumb">
+        <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+        <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
+        <a href="/src/demo/genieVoice.html" class="breadcrumb-link">Voc 상담 대화 요약</a>
+      </nav>
+      <section class="container-header">
+        <h1 class="page-title">Demo</h1>
+        <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
+      </section>
+      <section class="container-content container-detail">
+        <header class="section-title">
+          <div class="title-container">
+            <h5 class="title">Voc 상담 대화 요약</h5>
+            <dl class="badge-container">
+              <dt class="badge-tit">연관 API</dt>
+              <dd class="badge">Voc 상담 대화 요약</dd>
+            </dl>
+            <p class="txt">
+              상담 대화문을 요약하여 상담사가 대화의 중요 내용을 알 수 있게 해주는 기술
+            </p>
+          </div>
+          <div class="func-container">
+            <button class="btn-link">Demo 바로가기</button>
+          </div>
+        </header>
+        <article class="detail-container">
+          <p class="txt mt20">
+            생성 요약(Abstractive Summarization) 기술은 AI를 활용하여 뉴스 기사, 멀티턴 대화 등을 요약하는 문장을 생성하는 기술이며, KT가 연구하는 상담 대화 요약 생성은 이중
+            상담에 특화된 기술입니다.
+          </p>
+          <p class="txt">
+            상담 대화는 일반적으로 고객의 요구사항과 상담사의 응답의 형태로 대화가 진행 됩니다.
+          </p>
+          <p class="txt">
+            KT 100번 상담의 예를 들면, "요금제를 바꿔주세요"와 같은 고객 질의 사항에 대해 고객과 상담사의 대화가 이어지며 "XXX 요금제로 변경 진행 했습니다." 와 같은 상담사의 응대 결과로
+            진행이 됩니다.
+          </p>
+          <figure class="img">
+            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+          </figure>
+          <p class="txt pt10">
+            상담 대화 요약 생성 기술은 고객의 질의사항과 상담사의 응대를 적절하게 요약하는 문장을 생성합니다. 상담사는 다음 상담이 진행 될 때 이 전에 요약된 상담 결과를 보고 빠르게 히스토리를 이해하여
+            응대 시간을 절약하고 더 효과적으로 응대할 수 있도록 합니다.
+          </p>
+          <p class="txt">
+            기존 상담 요약 기술은 대화문 내에서 중요하다고 판단되는 문장을 추출하는 패턴 기반의 추출 요약 방식을 사용합니다. 하지만 서비스별로 지속적인 패턴 추가 작업이 필요하고, 단순 문장을 추출하는
+            방식으로는 전체 대화 내용을 파악하기 힘들다는 단점이 있습니다.
+          </p>
+          <p class="txt">
+            아래는 실제 KT 100번 상담 대화 사례에 대한 핸드폰 고장 관련 상담의 패턴 추출 요약 방식과 생성 요약 방식 결과입니다.
+          </p>
+          <article class="list-info">
+            <div class="list-item">
+              <div class="title">
+                <span class="num">01.</span>
+                <span class="txt">패턴 추출 요약 결과</span>
+              </div>
+              <div class="content">
+                <p class="txt list">고객 {"아니요 왔는데요. 핸드폰을 떨어트려서 이쪽도 나가고", "핸드폰 이상해서 가지고 왔는데 여러 문제가 있다고 하셔 가지고 확인하고 진행하려고
+                  전화 드렸어요.", "그건 기억하는데 기간이 혜택을 받을 수 있는 기간인가 싶어서 오래 됐어요"}</p>
+                <p class="txt list">상담사 {"단말기 보험센터로 연결하겠습니다."}</p>
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="title">
+                <span class="num">02</span>
+                <span class="txt">문장 생성 요약 결과</span>
+              </div>
+              <div class="content">
+                <p class="txt list">핸드폰 보험 기간 확인을 요청하여 단말기 보험 가입이 완료되어 있는 것으로 확인된다고 안내한 후 보험센터로 연결해주었다.</p>
+              </div>
+            </div>
+          </article>
+          <p class="txt mt30">
+            이처럼 생성 요약 결과는 대화문 흐름에 맞춰 함축적으로 요약되어 대화의 핵심 내용을 파악하기 좋은데 반해, 패턴 기반 추출 요약 결과는 핵심 내용을 한번에 파악하기가 상대적으로 쉽지 않아 여러
+            번 확인해야 되는 경우가 생기게 됩니다.
+          </p>
+          <figure class="img">
+            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+          </figure>
+          <p class="txt">
+            KT 상담 요약 기술은 Large AI 모델의 풍부한 어휘 및 문장 생성 능력을 기반으로 하여 적은 데이터만으로도 대화의 중요 내용을 함축적으로 요약하고 자연스러운 문장을 생성하며, 서비스
+            확장에 용이한 장점을 가지고 있습니다.
+          </p>
+          <article class="multi-column dbl mt60">
+            <div class="item">
+              <p class="item-num">01</p>
+              <p class="item-title">
+                적은 데이터로도<br />
+                효과적인 요약문 생성
+              </p>
+              <p class="item-txt">
+                풍부한 데이터를 가진 Large AI를 이용하여 서비스에 특화된 적은 데이터만으로도 효과적인 요약문 생성
+              </p>
+            </div>
+            <div class="item">
+              <p class="item-num">02</p>
+              <p class="item-title">
+                풍부한 어휘의<br />
+                요약문 생성
+              </p>
+              <p class="item-txt">
+                Large AI 모델의 풍부한 어휘를 활용하여 대화문에 포함된 잘못된 어휘를 교정하고 적합한 형태의 요약문 생성
+              </p>
+            </div>
+            <div class="item">
+              <p class="item-num">03</p>
+              <p class="item-title">
+                핵심 내용을 포함한<br/>
+                자연스러운 요약문 생성
+              </p>
+              <p class="item-txt">
+                Large AI 모델의 Encoder 모델을 활용하여 문장의 특성을 파악하고, Decoder 모델을 통해 자연스러운 요약문 생성
+              </p>
+            </div>
+          </article>
+          <div class="sub-title-container mt20">
+            <h3 class="title">상담 대화 요약</h3>
+            <div class="btn-container">
+              <button type="button" class="btn-txt refresh">새로고침</button>
+            </div>
+          </div>
+          <article class="selector-option mt30">
+            <input id="sample" name="option" type="radio" checked />
+            <label for="sample">
+              <p class="ico-text">
+                샘플 테스트
+              </p>
+            </label>
+            <input id="user" name="option" type="radio" />
+            <label for="user">
+              <p class="ico-text">
+                사용자 테스트
+              </p>
+            </label>
+          </article>
+          <div class="tab-item sample is-active">
+            <h5 class="title-gray mt30">제공드리는 샘플 내용 확인 후, 요약문 생성을 눌러줍니다.</h5>
+            <article class="textarea-container">
+              <textarea name="" id="" cols="30" rows="10"
+                class="textarea">상담사: 파이브지를 선도하는 케이티 배유진입니다. 
+고객: 네 저기 그 핸드폰 보험 기간 좀 확인할려고 전화드렸는데요.
+상담사 : 아 그러세요 문의하신 핸드폰 번호 먼저 부탁드립니다.
+고객: %#번호#
+상담사: 바로 조회를 해보도록 하겠습니다. 잠시만 기다려주시겠습니까?
+상담사: 기다려주셔서 감사합니다 명의자분 성함과 생년월일 같이 부탁드립니다.</textarea>
+            </article>
+            <div class="btn-container pt10">
+              <button id="createSummarySample" type="button" class="btn create-summary">요약문 생성하기</button>
+            </div>
+            <p class="direction"></p>
+            <h5 class="title-gray">요약결과</h5>
+            <div class="textarea-container">
+              <textarea name="" id="" cols="30" rows="10" class="textarea">핸드폰 보험 기간 확인을 요청하여 단말기 보험 가입이 완료되어 있는 것으로 확인된다고 안내한 후 보험센터로 연결해 주었다.</textarea>
+            </div>
+          </div>
+          <div class="tab-item user">
+            <article class="fileUpload-container mt40">
+              <div class="fileUpload-title">
+                <h5 class="title title-gray">본문과 질문이 주어졌을 때, 본문에서 정답을 추출합니다.</h5>
+                <p class="txt">
+                  * 첨부가능 파일 확장자 : hwp/pdf(최대 25MB) [
+                  <strong>200.9KB</strong>
+                  / 25MB]
+                </p>
+              </div>
+              <div id="fileDropzone" class="drag-zone">
+                <label for="fileIpt" class="file-label">파일첨부하기</label>
+                <input type="file" id="fileIpt" class="file-ipt" multiple />
+                <p class="drag-txt">파일을 마우스로 끌어오세요</p>
+              </div>
+              <div id="fileQueue" class="file-list">
+              </div>
+            </article>
+            <article class="textarea-container">
+              <textarea name="" id="" cols="30" rows="10" class="textarea mt0">업로드된 텍스트 파일이 여기에 나옵니다.</textarea>
+            </article>
+            <div class="btn-container pt10">
+              <button id="createSummarySample" type="button" class="btn create-summary">요약문 생성하기</button>
+            </div>
+            <p class="direction"></p>
+            <h5 class="title-gray">요약결과</h5>
+            <div class="textarea-container">
+              <textarea name="" id="" cols="30" rows="10" class="textarea">요약 결과 나오는 TextArea</textarea>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="copyright">
+        <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+        <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+        <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+      </div>
+      <div class="term">
+        <a href="#none" class="term-txt">이용약관</a>
+        <a href="#none" class="policy-txt">개인정보처리방침</a>
+      </div>
+    </footer>
+  </div>
+  <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+  <script src="../../assets/js/lib/fileup.js"></script>
+  <script defer src="../../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const testOptions = document.querySelectorAll('input[name="option"]'),
+        optionsContent = document.querySelectorAll('.tab-item');
+
+      testOptions.forEach(option => {
+        option.addEventListener('change', (e) => {
+          optionsContent.forEach(option => {
+            option.classList.remove('is-active')
+            if (option.classList.contains(e.target.id)) {
+              option.classList.add('is-active')
+            }
+          })
+        })
+      })
+
+      optionsContent.forEach(optionContent => {
+        const selectQuestion = optionContent.querySelector('select'),
+          inputQuestion = optionContent.querySelector('.question .edit-ipt'),
+          btnSummary = optionContent.querySelector('.question .btn')
+
+        btnSummary.addEventListener('click', (e) => {
+          console.log(`질문하기 : ${inputQuestion.value}`)
+        })
+
+        if (optionContent.classList.contains('user')) {
+          $.fileup({
+            url: "https://github.com?file_upload=1",
+            inputID: "fileIpt",
+            queueID: "fileQueue",
+            dropzoneID: "fileDropzone",
+            templateFile: '<div id="file-[INPUT_ID]-[FILE_NUM]" class="fileup-file file-item">' +
+              '<div class="data">' +
+              '<div class="description">' +
+              '<span class="file-name">[NAME]</span> [<span class="file-size">[SIZE_HUMAN]</span>]' +
+              "</div>" +
+              '<div class="controls">' +
+              "<button type=\"button\" class=\"btn-txt del\" onclick=\"$.fileup('[INPUT_ID]', 'remove', '[FILE_NUM]');\" title=\"[REMOVE]\">삭제하기</button>" +
+              "</div>" +
+              '<div class="result"></div>' +
+              "</div>" +
+              "</div>",
+          })
+            .dragEnter(function (event) {
+              $(event.target).addClass("over");
+            })
+            .dragLeave(function (event) {
+              $(event.target).removeClass("over");
+            })
+            .dragEnd(function (event) {
+              $(event.target).removeClass("over");
+            });
+          }
+      })
+    })
+  </script>
+</body>
+
+</html>
