@@ -22,6 +22,7 @@
 @import "../css/lib/codemirror.css";
 
 // module
+@import "modules/paragraph";
 @import "modules/breadcrumb";
 @import "modules/badge";
 @import "modules/button";
@@ -38,6 +39,7 @@
 @import "modules/etc";
 
 @import "pages/main";
+@import "pages/docs";
 @import "pages/demo";
 @import "pages/applications";
 @import "pages/forum";
