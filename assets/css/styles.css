@@ -3691,6 +3691,28 @@ code {
   }
 }
 
+.docs .multi-column > .item {
+  flex: 1;
+}
+.docs .multi-column > .item > p {
+  width: auto;
+}
+@media (min-width: 743px) and (max-width: 1439px) {
+  .docs .multi-column {
+    flex-wrap: wrap;
+  }
+  .docs .multi-column > .item {
+    min-width: 33.3333%;
+  }
+}
+@media (max-width: 742px) {
+  .docs .multi-column {
+    flex-direction: column;
+  }
+}
+.docs .badge-container {
+  flex-wrap: wrap;
+}
 .docs .code-box {
   position: relative;
 }
@@ -3699,11 +3721,36 @@ code {
   margin: 10px 0;
   padding: 20px;
   white-space: pre;
+  overflow-x: auto;
 }
 .docs .code-box .btn-ico.copy {
   position: absolute;
   right: 20px;
   top: 20px;
+}
+@media (max-width: 742px) {
+  .docs .code-box .code {
+    padding-bottom: 50px;
+  }
+  .docs .code-box .btn-ico.copy {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+.docs .api-link {
+  margin-top: 10px;
+}
+.docs .api-link > .form-item {
+  flex-direction: row;
+}
+.docs .api-link > .form-item > dt {
+  width: 200px;
+}
+.docs .api-link > .form-item dd {
+  text-decoration: underline;
 }
 
 .multi-column {
