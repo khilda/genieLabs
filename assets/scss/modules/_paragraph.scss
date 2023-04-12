@@ -1,0 +1,68 @@
+// title
+.h1{
+  font-weight: 700;
+  font-size: 32px;
+}
+.h2{
+  font-weight: 700;
+  font-size: 28px;
+}
+.h3{
+  font-weight: 700;
+  font-size: 24px;
+}
+.h4{
+  font-weight: 700;
+  font-size: 20px;
+}
+.h5{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+// font size
+@for $i from 0 to 50 {
+  $fontSize: $i;
+  .fs#{$fontSize} {
+    font-size: $fontSize * 1px !important;
+  }
+}
+
+// color
+.fc-info{
+  color: #787878 !important;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.list-dot{
+  > li{
+    position: relative;
+    padding-left: 30px;
+    &::before{
+      content: 'ㆍ';
+      position: absolute;
+      top:0;
+      left: 0;
+      display: block;
+      width: 30px;
+      text-align: center;
+    }
+  }
+}
+.list-dash{
+  > li{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+      content: '-';
+      position: absolute;
+      top:0;
+      left: 0;
+      display: block;
+      width: 15px;
+    }
+  }
+}
