@@ -1,4 +1,28 @@
 .docs {
+  .multi-column{
+    > .item{
+      flex: 1;
+      > p{
+        width: auto;
+      }
+    }
+  }
+  @include tablet-only{
+    .multi-column{
+      flex-wrap: wrap;
+      > .item{
+        min-width: 33.3333%;
+      }
+    }
+  }
+  @include mobile{
+    .multi-column{
+      flex-direction: column;
+    }
+  }
+  .badge-container{
+    flex-wrap: wrap;
+  }
   .code-box{
     position: relative;
     .code{
@@ -6,11 +30,36 @@
       margin: 10px 0;
       padding: 20px;
       white-space: pre;
+      overflow-x: auto;
     }
     .btn-ico.copy{
       position: absolute;
       right: 20px;
       top: 20px;
+    }
+    @include mobile{
+      .code{
+        padding-bottom: 50px;
+      }
+      .btn-ico.copy{
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .api-link{
+    margin-top: 10px;
+    > .form-item{
+      flex-direction: row;
+      > dt {
+        width: 200px;
+      }
+      dd{
+        text-decoration: underline;
+      }
     }
   }
 }
