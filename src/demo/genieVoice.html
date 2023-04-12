@@ -140,25 +140,57 @@
               <div id="waveform"></div>
             </div>
           </article>
-        </section>
-      </main>
-      <footer class="footer">
-        <div class="copyright">
-          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
-          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
-          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
-        </div>
-        <div class="term">
-          <a href="#none" class="term-txt">이용약관</a>
-          <a href="#none" class="policy-txt">개인정보처리방침</a>
-        </div>
-      </footer>
-    </div>
-    <script defer src="https://unpkg.com/wavesurfer.js"></script>
-    <script defer src="../../assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const selectorWrapper = document.querySelector('.selector-option'),
+          <div class="sub-title-container mt20">
+            <h3 class="title">음성합성(Text-to-Speech)</h3>
+            <div class="btn-container">
+              <button type="button" class="btn-txt refresh">새로고침</button>
+            </div>
+          </div>
+          <article class="selector-option large-text mt30">
+            <input id="first" name="option" type="radio" checked />
+            <label for="first">
+              <p class="ico-text">
+                높은 음질의 자연스러운 음성 합성 기술을, 다양한 오디오 콘텐츠와 음성안내 서비스에 사용해 보세요.
+              </p>
+            </label>
+            <input id="second" name="option" type="radio" />
+            <label for="second">
+              <p class="ico-text">
+                오늘, 맑은 하늘에 깨끗한 공기, 따스한 봄볕까지 봄을 느끼기 참 좋겠는데요, 현재 서울 기온은 15도 안팎까지 올라 어제 같은 시각과 비슷합니다.
+              </p>
+            </label>
+          </article>
+          <p class="txt-notice center color-info mt40">텍스트를 입력하거나 위의 예시 텍스트를 선택한 후 ‘음성합성 요청’을 하세요​.</p>
+          <div class="ipt-container mt20">
+            <input id="waveformInput" type="text" class="ipt edit-ipt" placeholder="텍스트를 입력하세요." />
+            <button id="waveformRequest" type="button" class="btn">음성합성 요청</button>
+          </div>
+          <p class="direction"></p>
+          <div class="waveform-area">
+            <button id="waveformPlay">play</button>
+            <span class="title">여기 음성 UI 나오는 영역</span>
+            <div id="waveform"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="copyright">
+        <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+        <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+        <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+      </div>
+      <div class="term">
+        <a href="#none" class="term-txt">이용약관</a>
+        <a href="#none" class="policy-txt">개인정보처리방침</a>
+      </div>
+    </footer>
+  </div>
+  <script defer src="https://unpkg.com/wavesurfer.js"></script>
+  <script defer src="../../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectorWrapper = document.querySelector('.selector-option'),
           selectors = selectorWrapper.querySelectorAll('input'),
           waveformBtn = document.querySelector('#waveformRequest'),
           waveformBtnPlay = document.querySelector('#waveformPlay')
