@@ -255,3 +255,43 @@
   max-height: 190px;
   padding: 50px 70px;
 }
+
+code{
+  padding: 2px 5px;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: rgb(175 184 193 / 20%);
+  border-radius: 6px;
+}
+.caption{
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #787878;
+}
+.table{
+    display: block;
+    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    tr{
+      background-color: #fff;
+      &:nth-child(2n){
+        background-color: #f6f8fa;
+        border-top: 1px solid #d8dee4
+      }
+    }
+    th{
+      background-color: #ffffff;
+      font-weight: 600;
+    }
+    th,
+    td{
+      border: 1px solid #d0d7de;
+      padding: 6px 13px;
+  }
+}
