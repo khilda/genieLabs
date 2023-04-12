@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs < GenieGround</title>
+        <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu is-active">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+            <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+            <a href="#logout" class="info-menu logout">Logout</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+      </header>
+      <main class="container docs">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/docs/index.html" class="breadcrumb-link">Docs</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">GenieLabs Documentation</h1>
+          <p class="page-txt">GenieLabs Documentation은 개발자들이 <br class="br-mo" />GenieLabs 플랫폼을<br class="br-pc" />
+            통해 보다 쉽게 API를 <br class="br-mo" />활용할 수 있도록 안내하고 있습니다.</p>
+        </section>
+        <section class="container-content container-detail">
+          <header class="section-title">
+            <div class="title-container">
+              <h5 class="title">지니 Voice(TTS)</h5>
+              <dl class="badge-container">
+                <dt class="badge-tit">연관 API</dt>
+                <dd class="badge">TTS API​</dd>
+              </dl>
+              <p class="txt">텍스트를 입력하면 딥러닝 음성 합성 기술을 통해 음성으로 합성/새성해주는 기술</p>
+            </div>
+            <div class="func-container">
+              <a href="링크바로가기" class="btn-link">NLP AI Demo 바로가기</a>
+            </div>
+          </header>
+          <article class="detail-container">
+            <h4 class="title">Guide For Developers</h4>
+            <dl>
+              <dt>Overview</dt>
+              <dd>본 가이드는 GenieLabs AI API 개발자들을 위한 공통 가이드를 제공합니다.</dd>
+            </dl>
+            <dl>
+              <dt>사전 준비사항</dt>
+              <dd>GenieLabs AI API 사용 및 등록을 위해 먼저 GenieLabs에 가입 및 API 신청이 필요합니다.</dd>
+              <dd>AI API 신청 및 등록 방법은 아래 가이드를 확인해주세요.</dd>
+            </dl>
+            <h4 class="sub-title">Quickstart</h4>
+            <figure class="img has-caption">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+              <figcaption class="caption mt10">음성 합성의 기술 변화</figcaption>
+            </figure>
+            <h4 class="sub-title">관련정보</h4>
+
+            <h4 class="title">Guide For Providers</h4>
+
+            <dl>
+              <dt>사전 준비사항</dt>
+              <dd><a href="">GenieLabs</a> 사용자라면 누구나 AI API Provider가 될 수 있습니다.</dd>
+              <dd>배포 프로세스는 아래를 참고해주세요. (문의: <a href="mailto:genielabs@kt.com">genielabs@kt.com</a>)</dd>
+            </dl>
+
+            <ul>
+              <li>(1) GenieLabs 회원가입 및 로그인 후 API 등록 버튼을 클릭합니다.</li>
+              <li>(2) API 등록 신청 페이지를 작성 후 등록 신청합니다.</li>
+              <li>이용 범위와 상관 없이 API 리스트는 노출되며, 범위에 따라 상세조회, API 사용 신청 권한이 설정됨</li>
+              <li>API 요약에는 API 페이지 카드에 노출 될 한 문장 작성 (ex. ~기능, ~기술, ~제공 과 같은 형식으로 작성)</li>
+              <li>API 소개에는 서비스 개요, 특징, 활용 사례 등을 구체적으로 서술</li>
+              <li>API Serving 환경이 별도로 구축되어 있는 경우, Dedi로 표기 후 기타 요청사항에 연동 필요한 API 서버 정보 기입</li>
+              <li>API Serving 환경 구축이 필요한 경우, Dedi 또는 Kubernetes 환경 신청</li>
+              <li>Kubernetes 배포 권장</li>
+              <li>회사 로고는 KT가 아닌 경우만 등록 </li>
+              <li>(3) 관리자가 검토 후 API 구축을 위해 다음 단계를 안내드립니다.</li>
+            </ul>
+            <article class="multi-column dbl mt60">
+              <div class="item">
+                <p class="item-num">01</p>
+                <p class="item-title">음성 합성 모델 경량화</p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">자연스러운 고품질의 음성</p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">자연스러운 고품질의 음성</p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">자연스러운 고품질의 음성</p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">자연스러운 고품질의 음성</p>
+              </div>
+            </article>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script defer src="https://unpkg.com/wavesurfer.js"></script>
+    <script defer src="../../assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const selectorWrapper = document.querySelector('.selector-option'),
+          selectors = selectorWrapper.querySelectorAll('input'),
+          waveformBtn = document.querySelector('#waveformRequest'),
+          waveformBtnPlay = document.querySelector('#waveformPlay')
+
+        const wavesurfer = WaveSurfer.create({
+          container: '#waveform',
+          height: 40,
+          hideScrollbar: true,
+        });
+        selectors.forEach(selector => {
+          selector.addEventListener('change', (e) => {
+            const textData = e.target.nextElementSibling.querySelector('.ico-text').textContent.trim()
+            const textInput = document.querySelector('#waveformInput')
+            textInput.value = textData
+          })
+        })
+
+        waveformBtn.addEventListener('click', () => {
+          wavesurfer.load('../../assets/wav/demo.wav')
+        })
+
+        waveformBtnPlay.addEventListener('click', () => {
+          if (waveformBtnPlay.textContent === 'play') {
+            waveformBtnPlay.textContent = 'stop'
+            wavesurfer.play()
+          } else {
+            waveformBtnPlay.textContent = 'play'
+            wavesurfer.playPause()
+          }
+        })
+      })
+
+    </script>
+  </body>
+
+</html>
