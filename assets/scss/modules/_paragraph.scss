@@ -38,7 +38,8 @@
 }
 
 .list-dot{
-  > li{
+  > li,
+  > dd{
     position: relative;
     padding-left: 30px;
     &::before{
@@ -53,7 +54,8 @@
   }
 }
 .list-dash{
-  > li{
+  > li,
+  > dd{
     position: relative;
     padding-left: 15px;
     &::before{
@@ -64,5 +66,13 @@
       display: block;
       width: 15px;
     }
+  }
+}
+.list-dot,
+.list-dash{
+  > dt{
+    font-weight: 700;
+    font-size: 18px;
+    color: #787878;
   }
 }
