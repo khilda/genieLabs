@@ -85,12 +85,6 @@ textarea {
   }
 }
 
-@for $i from 0 to 50 {
-  $fontSize: $i;
-  .fs#{$fontSize} {
-    font-size: $fontSize * 1px;
-  }
-}
 
 :root {
   --background: #fff;
