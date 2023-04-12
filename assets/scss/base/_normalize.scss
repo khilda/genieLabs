@@ -18,7 +18,14 @@ dt {
 dd {
   font-weight: 400;
 }
-
+table{
+  border-spacing: 0;
+  border-collapse: collapse;
+  th,
+  td{
+    padding: 0;
+  }
+}
 a,
 button {
   cursor: pointer;
@@ -43,11 +50,14 @@ textarea {
   align-items: center;
   width: 100%;
 }
-.flex-direction-vertical {
-  flex-direction: column;
-}
 .flex-direction-column {
   flex-direction: column;
+}
+.flex-direction-row {
+  flex-direction: row;
+}
+.justify-center {
+  justify-content: center;
 }
 
 @for $i from 0 to 10 {
