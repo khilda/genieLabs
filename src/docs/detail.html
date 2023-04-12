@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docs < GenieGround</title>
-        <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
 
   <body>
@@ -17,17 +16,27 @@
           <div class="gnb">
             <a href="/src/docs/index.html" class="gnb-menu is-active">Docs</a>
             <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
-            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
-            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu"
+              >Sample Code</a
+            >
+            <a href="/src/applications/index.html" class="gnb-menu"
+              >Applications</a
+            >
             <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
           </div>
           <div class="info">
-            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+            <a href="/src/myGround/index.html" class="info-menu ground"
+              >MyGround</a
+            >
             <a href="#logout" class="info-menu logout">Logout</a>
           </div>
-          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+          <button type="button" id="gnbClose" class="btn-gnb close">
+            메뉴닫기
+          </button>
         </div>
-        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+        <button type="button" id="gnbOpen" class="btn-gnb open">
+          메뉴열기
+        </button>
       </header>
       <main class="container docs">
         <nav class="breadcrumb">
@@ -36,90 +45,676 @@
         </nav>
         <section class="container-header">
           <h1 class="page-title">GenieLabs Documentation</h1>
-          <p class="page-txt">GenieLabs Documentation은 개발자들이 <br class="br-mo" />GenieLabs 플랫폼을<br class="br-pc" />
-            통해 보다 쉽게 API를 <br class="br-mo" />활용할 수 있도록 안내하고 있습니다.</p>
+          <p class="page-txt">
+            GenieLabs Documentation은 개발자들이 <br class="br-mo" />GenieLabs
+            플랫폼을<br class="br-pc" />
+            통해 보다 쉽게 API를 <br class="br-mo" />활용할 수 있도록 안내하고
+            있습니다.
+          </p>
         </section>
         <section class="container-content container-detail">
-          <header class="section-title">
-            <div class="title-container">
-              <h5 class="title">지니 Voice(TTS)</h5>
-              <dl class="badge-container">
-                <dt class="badge-tit">연관 API</dt>
-                <dd class="badge">TTS API​</dd>
-              </dl>
-              <p class="txt">텍스트를 입력하면 딥러닝 음성 합성 기술을 통해 음성으로 합성/새성해주는 기술</p>
-            </div>
-            <div class="func-container">
-              <a href="링크바로가기" class="btn-link">NLP AI Demo 바로가기</a>
-            </div>
-          </header>
-          <article class="detail-container">
-            <h4 class="title">Guide For Developers</h4>
-            <dl>
+          <!-- 동영상 -->
+          <article>
+            <h4 class="h4">동영상</h4>
+            <figure class="img">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+            </figure>
+          </article>
+          <!-- Guide For Developers -->
+          <article class="mt50">
+            <h4 class="h4">Guide For Developers</h4>
+            <dl class="list-dot mt30">
               <dt>Overview</dt>
-              <dd>본 가이드는 GenieLabs AI API 개발자들을 위한 공통 가이드를 제공합니다.</dd>
+              <dd>
+                본 가이드는 GenieLabs AI API 개발자들을 위한 공통 가이드를
+                제공합니다.
+              </dd>
             </dl>
-            <dl>
+            <dl class="list-dot mt30">
               <dt>사전 준비사항</dt>
-              <dd>GenieLabs AI API 사용 및 등록을 위해 먼저 GenieLabs에 가입 및 API 신청이 필요합니다.</dd>
+              <dd>
+                GenieLabs AI API 사용 및 등록을 위해 먼저
+                <a href="#GenieLabs" class="underline">GenieLabs</a>에 가입 및
+                API 신청이 필요합니다.
+              </dd>
               <dd>AI API 신청 및 등록 방법은 아래 가이드를 확인해주세요.</dd>
             </dl>
-            <h4 class="sub-title">Quickstart</h4>
-            <figure class="img has-caption">
-              <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-              <figcaption class="caption mt10">음성 합성의 기술 변화</figcaption>
+            <h4 class="h4 mt30">Quickstart</h4>
+            <figure class="img">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
             </figure>
-            <h4 class="sub-title">관련정보</h4>
+          </article>
 
-            <h4 class="title">Guide For Providers</h4>
+          <!-- 관련정보 -->
+          <article class="mt50">
+            <h4 class="h4">관련정보</h4>
+            <div class="form">
+              <dl class="form-item">
+                <dt>의도 분류 API</dt>
+                <dd class="link">
+                  <a href="#링크바로가기" class="btn-txt link" target="_blank"
+                    >링크바로가기</a
+                  >
+                </dd>
+              </dl>
+              <dl class="form-item">
+                <dt>개체명 인식 API</dt>
+                <dd class="link">
+                  <a href="#링크바로가기" class="btn-txt link" target="_blank"
+                    >링크바로가기</a
+                  >
+                </dd>
+              </dl>
+              <dl class="form-item">
+                <dt>얼굴 인식 API</dt>
+                <dd class="link">
+                  <a href="#링크바로가기" class="btn-txt link" target="_blank"
+                    >링크바로가기</a
+                  >
+                </dd>
+              </dl>
+            </div>
+          </article>
 
-            <dl>
-              <dt>사전 준비사항</dt>
-              <dd><a href="">GenieLabs</a> 사용자라면 누구나 AI API Provider가 될 수 있습니다.</dd>
-              <dd>배포 프로세스는 아래를 참고해주세요. (문의: <a href="mailto:genielabs@kt.com">genielabs@kt.com</a>)</dd>
-            </dl>
-
-            <ul>
-              <li>(1) GenieLabs 회원가입 및 로그인 후 API 등록 버튼을 클릭합니다.</li>
-              <li>(2) API 등록 신청 페이지를 작성 후 등록 신청합니다.</li>
-              <li>이용 범위와 상관 없이 API 리스트는 노출되며, 범위에 따라 상세조회, API 사용 신청 권한이 설정됨</li>
-              <li>API 요약에는 API 페이지 카드에 노출 될 한 문장 작성 (ex. ~기능, ~기술, ~제공 과 같은 형식으로 작성)</li>
-              <li>API 소개에는 서비스 개요, 특징, 활용 사례 등을 구체적으로 서술</li>
-              <li>API Serving 환경이 별도로 구축되어 있는 경우, Dedi로 표기 후 기타 요청사항에 연동 필요한 API 서버 정보 기입</li>
-              <li>API Serving 환경 구축이 필요한 경우, Dedi 또는 Kubernetes 환경 신청</li>
-              <li>Kubernetes 배포 권장</li>
-              <li>회사 로고는 KT가 아닌 경우만 등록 </li>
-              <li>(3) 관리자가 검토 후 API 구축을 위해 다음 단계를 안내드립니다.</li>
+          <!-- Guide For Providers -->
+          <article class="mt50">
+            <h4 class="h4">Guide For Providers</h4>
+            <ul class="list-dot mt10">
+              <li>
+                <a href="https://genielabs.ai" class="underline">GenieLabs</a>
+                사용자라면 누구나 AI API Provider가 될 수 있습니다.
+              </li>
+              <li>
+                배포 프로세스는 아래를 참고해 주세요 (문의:
+                <a href="mailto:genielabs@kt.com" class="underline"
+                  >genielabs@kt.com</a
+                >)
+              </li>
             </ul>
-            <article class="multi-column dbl mt60">
+            <figure class="img has-caption mt30">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+            </figure>
+            <div class="multi-column dbl mt30">
               <div class="item">
                 <p class="item-num">01</p>
-                <p class="item-title">음성 합성 모델 경량화</p>
+                <p class="item-title">API 개발</p>
               </div>
               <div class="item">
                 <p class="item-num">02</p>
-                <p class="item-title">자연스러운 고품질의 음성</p>
+                <p class="item-title">API 등록</p>
               </div>
               <div class="item">
-                <p class="item-num">02</p>
-                <p class="item-title">자연스러운 고품질의 음성</p>
+                <p class="item-num">03</p>
+                <p class="item-title">API 엔진구축<br />및 G/W 연동</p>
               </div>
               <div class="item">
-                <p class="item-num">02</p>
-                <p class="item-title">자연스러운 고품질의 음성</p>
+                <p class="item-num">04</p>
+                <p class="item-title">API 명세 작성</p>
               </div>
               <div class="item">
-                <p class="item-num">02</p>
-                <p class="item-title">자연스러운 고품질의 음성</p>
+                <p class="item-num">05</p>
+                <p class="item-title">API 배포</p>
               </div>
-            </article>
+            </div>
+            <!-- Guide For Providers > 1. API 개발 -->
+            <h5 class="h5">1. API 개발</h5>
+            <p class="mt10">
+              등록 신청 전에
+              <a
+                href="https://github.com/ktgenielabs/guide/wiki/API-%EA%B0%9C%EB%B0%9C-%EA%B0%80%EC%9D%B4%EB%93%9C"
+                class="underline"
+                >AI API 개발 가이드</a
+              >를 참고해 주세요.
+            </p>
+
+            <!-- Guide For Providers > 2. API 등록 -->
+            <h5 class="h5 mt30">2. API 등록</h5>
+            <figure class="img has-caption mt30">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+            </figure>
+            <ul>
+              <li>
+                (1)
+                <a href="genielabs.ai/accout/login" class="underline"
+                  >GenieLabs</a
+                >
+                회원가입 및 로그인 후 API 등록 버튼을 클릭합니다.
+                <ul class="list-dot">
+                  <li>
+                    <a
+                      href="https://genielabs.ai/console/provider/status"
+                      class="underline"
+                      >Developer Console &gt; API Provider &gt; API 등록</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                (2) API 등록 신청 페이지를 작성 후 등록 신청합니다.
+                <ul class="list-dot">
+                  <li>
+                    이용 범위와 상관 없이 API 리스트는 노출되며, 범위에 따라
+                    상세조회, API 사용 신청 권한이 설정됨
+                  </li>
+                  <li>
+                    <code>API 요약</code>에는 API 페이지 카드에 노출 될 한 문장 작성 (ex.
+                    ~기능, ~기술, ~제공 과 같은 형식으로 작성)
+                  </li>
+                  <li>
+                    <code>API 소개</code>에는 서비스 개요, 특징, 활용 사례 등을 구체적으로
+                    서술
+                  </li>
+                  <li>
+                    API Serving 환경이 별도로 구축되어 있는 경우, Dedi로 표기 후
+                    기타 요청사항에 연동 필요한 API 서버 정보 기입
+                  </li>
+                  <li>
+                    API Serving 환경 구축이 필요한 경우, Dedi 또는 Kubernetes
+                    환경 신청
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/ktgenielabs/guide/wiki/Kubernetes-%ED%99%98%EA%B2%BD%EC%9D%84-%EC%9C%84%ED%95%9C-API-%EB%8F%84%EC%BB%A4-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B0%80%EC%9D%B4%EB%93%9C"
+                      class="underline"
+                      >Kubernetes 배포 권장</a
+                    >
+                  </li>
+                  <li>회사 로고는 KT가 아닌 경우만 등록</li>
+                </ul>
+              </li>
+              <li>
+                (3) 관리자가 검토 후 API 구축을 위해 다음 단계를 안내드립니다.
+              </li>
+            </ul>
+
+            <!-- Guide For Providers > 3. API 엔진구축 및 G/W 연동 -->
+            <h5 class="h5 mt30">3. API 엔진구축 및 G/W 연동</h5>
+            <figure class="img has-caption mt10">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+            </figure>
+            <ul>
+              <li>
+                (1) GenieLabs <code>Kubernetes</code> 또는 <code>Dedi</code> 서버에 API 구축이 완료되면,
+                아래 정보를 관리자 에게 제출합니다.
+                <ul class="list-dot">
+                  <li>API 엔진을 호출할 Endpoint 서버 IP, 포트 또는 URL</li>
+                  <li>
+                    API 자체 테스트 결과 전달
+                    <ul class="list-dash">
+                      <li>
+                        성공, 실패, 예외 등 다양한 케이스에 대한 테스트 진행
+                        결과 전달 (응답코드, 메시지 포함)
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>(2) G/W 연동이 완료되면 최종 호출 테스트를 진행합니다.</li>
+              <li>
+                (3) 호출 테스트까지 완료되면, API 명세 작성 단계를 진행합니다.
+              </li>
+            </ul>
+            <!-- Guide For Providers > 4. API 명세 작성 -->
+            <h5 class="h5 mt30">4. API 명세 작성</h5>
+            <ul class="mt10">
+              <li>
+                (1) 구축이 완료된 API에 대해 상세 명세를 작성합니다.
+                <ul class="list-dot">
+                  <li>
+                    <a
+                      href="https://genielabs.ai/console/provider/status"
+                      class="unerline"
+                      >Developer Console &gt; API Provider &gt; API 등록현황</a
+                    >
+                  </li>
+                </ul>
+                <div class="ml30 mt20">
+                  <div class="h5">API 식별자/Base URL</div>
+                  <figure class="img has-caption mt10">
+                    <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+                  </figure>
+                  <ul class="list-dot">
+                    <li>
+                      아래 API 식별자 표기법을 참고하여 API 식별자 및 BaseURL을
+                      작성합니다.
+                    </li>
+                    <li>
+                      식별자가 잘못 작성될 경우 API 사용 불가능하니 유의 부탁
+                      드립니다.
+                    </li>
+                  </ul>
+                </div>
+                <div class="ml30 mt20">
+                  <div class="h5">Tutorial</div>
+                  <figure class="img has-caption mt10">
+                    <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+                  </figure>
+                  <ul class="list-dot">
+                    <li>
+                      API 사용 방법
+                      <ul class="list-dash">
+                        <li>
+                          API 사용 방법을 단계별로 작성합니다. 필요한 경우,
+                          파라미터에 대한 설명을 추가하고 예시를 작성합니다.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Sample
+                      <ul class="list-dash">
+                        <li>
+                          Request에 대한 curl, python 샘플 두 종과 함께 Response
+                          샘플을 작성합니다.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ml30 mt20">
+                  <div class="h5">API 상세</div>
+                  <figure class="img has-caption mt10">
+                    <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+                  </figure>
+                  <ul class="list-dot">
+                    <li>
+                      API 규격에 맞는 요청타입, METHOD, 응답데이터타입, 통신
+                      프로토콜을 선택합니다.
+                    </li>
+                    <li>
+                      Request Header는
+                      <a
+                        href="https://github.com/ktgenielabs/guide/wiki/AI-API-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95"
+                        class="underline"
+                        >API 인증 방법</a
+                      >에 따른 기본 고정 값을 사용합니다.
+                    </li>
+                    <li>
+                      Request, Response Body 부분에 각 파라미터에 대한 자세한
+                      설명 및 필수여부, 자료형, 디폴트 값 등을 규격에 맞게
+                      작성합니다.
+                      <ul class="list-dash">
+                        <li>각 파라미터 값의 범위 작성 필수</li>
+                        <li>
+                          적절한 예시를 보여줄 수 있는 데이터를 디폴트 값에 입력
+                          (Free Trial 미리보기 테스트)
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      외부 URL의 소개글만 제공하고자 하는 경우에는 API 외부
+                      URL로 이동하는 기능을 사용합니다.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mt20">
+                (2) 명세 등록 시, 관리자가 확인 후 승인 또는 반려합니다
+              </li>
+            </ul>
+
+            <!-- Guide For Providers > 5. API 배포완료 -->
+            <h5 class="h5 mt30">5. API 배포완료</h5>
+            <figure class="img has-caption mt10">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+            </figure>
+            <p class="mt10">
+              명세 작성이 승인된 API는 <code>API 배포</code> 로 표시되며,
+              <a href="https://genielabs.ai/ecospace/api" class="underline"
+                >API 페이지</a
+              >에 해당 API가 노출됩니다.
+            </p>
+            <p class="mt30">
+              이후 Developer Console > API Provider > API 등록현황에서 자유롭게
+              명세서 수정이 가능하며, 배포한 API에 대해 수정이 필요한 경우
+              <code>업데이트</code> 신청 접수 부탁 드립니다.
+            </p>
+          </article>
+
+          <!-- (참고) GenieLabs REST API Endpoint Naming Convention -->
+          <article class="mt50">
+            <h5 class="h5">
+              (참고) GenieLabs REST API Endpoint Naming Convention
+            </h5>
+            <p class="mt10">규칙</p>
+            <ul>
+              <li>
+                (1) API을 호출하기 위한 <code>url</code>의 path와 GenieLabs에서
+                사용하는 <code> API 식별자 </code>는 “회사명”, “카테고리”,
+                “api이름” 등의 3가지 값으로 구성
+                <ul class="list-dot">
+                  <li class="color-info">
+                    2-depth 이상의 카테고리가 필요할 경우, ‘-’를 이용하여 표현.
+                    ex: vision 내 digital-health → vision-digital-health
+                  </li>
+                </ul>
+              </li>
+              <li>
+                (2) “회사명”, “카테고리”, “api이름” 각각은 50글자를 넘을 수 없음
+              </li>
+              <li>
+                (3) “회사명”, “카테고리”, “api이름” 각각은 소문자, 숫자, ‘-’ 만
+                사용하여 표기
+              </li>
+              <li>
+                (4) <code>API 식별자</code>는
+                <code>{회사명}_{카테고리}_{api이름}</code> 으로 구성
+              </li>
+              <li>
+                (5) <code>url</code>의 path는
+                <code>{회사명}/{카테고리}/{api이름}</code> 으로 구성
+              </li>
+              <li>
+                (6) KT API인 경우, 아래 카테고리 중 하나를 선택
+                <div class="badge-container mt10 mb10">
+                  <span class="badge">voice</span>
+                  <span class="badge">nlp</span>
+                  <span class="badge">vision</span>
+                  <span class="badge">industry</span>
+                  <span class="badge">network</span>
+                  <span class="badge">miscellaneous</span>
+                </div>
+              </li>
+              <li>
+                (7) 그 외 API인 경우, 임의로 정의 가능하나 아래 카테고리 중
+                선택하는 것을 권장함
+                <ul class="list-dot">
+                  <li><code>kt</code> voice, nlp, vision, industry, network</li>
+                  <li>
+                    <code>paper with code</code> medical, methodology, time
+                    series, graphs, playing games, audio, computer code,
+                    adversarial, reasoning, music, miscellaneous
+                  </li>
+                  <li>
+                    <code>rapid api</code> data, sports, finance, travel,
+                    entertainment, location, science, food, transportation,
+                    business, tools, text analysis, weather, gaming, sms,
+                    events, health and fitness, payments, financial,
+                    translation, storage, logistics, database, search, reward,
+                    mapping, machine learning, email, news, media, video,
+                    images, ecommerce, devices, business software, advertising,
+                    education, media, social, commerce, communication,
+                    monitoring, energy, movies, other
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h5 class="h5 mt30">예시</h5>
+            <ol class="list-num mt10">
+              <li>
+                <code>url</code>: kt/vision/face-detection-and-recognition →
+                <code>API 식별자</code>:
+                kt_vision_face-detection-and-recognition
+              </li>
+              <li>
+                <code>url</code>: kt/voice/genie-voice →
+                <code>API 식별자</code>: kt_voice_genie-voice
+              </li>
+              <li>
+                <code>url</code>:
+                kt/vision-digital-health/thyroid-cancer-diagnosis-assistant →
+                <code>API 식별자</code>:
+                kt_vision-digital-health_thyroid-cancer-diagnosis-assistant
+              </li>
+            </ol>
+            <h5 class="h5 mt30">AI API 개발 가이드</h5>
+            <ul class="list-dot mt10">
+              <li>
+                아래 유의사항을 참고하여 GenieLabs API 개발 및 규격서를
+                준비합니다.
+              </li>
+              <li>
+                URL Rules:
+                <a
+                  href="https://github.com/ktgenielabs/guide/wiki/AI-API-%EB%93%B1%EB%A1%9D-%EB%B0%A9%EB%B2%95#%EC%B0%B8%EA%B3%A0-genielabs-rest-api-endpoint-naming-convention"
+                  class="underline"
+                  >GenieLabs REST API Endpoint Naming Convention</a
+                >
+              </li>
+              <li>
+                G/W의 연동을 위해 <code>http Restful</code> 형태로 처리
+                <ul class="list-dash">
+                  <li>지원 예시: URL/URI에 식별 값(id 등) 활용 가능</li>
+                  <li>
+                    미지원 예시: http GET 전송 방식으로 데이터를 담아 POST로
+                    전송 불가 (ex.
+                    <code
+                      >http://localhost/example?user=id&arrList=%EB%AF...</code
+                    >)
+                  </li>
+                  <li>
+                    연동 요청형식은
+                    <code>Content-Type application/json</code> 권장
+                  </li>
+                  <li>TCP 소켓을 활용한 별도 처리 필요 시 협의 필요</li>
+                </ul>
+              </li>
+              <li>
+                <code>Request</code>/<code>Response</code> 파라미터 규격 Tips
+                <ul class="list-dash">
+                  <li>mandatory, optional 구분 필수</li>
+                  <li>
+                    내용에 맞는 자료형 사용 (ex. 문자열은 <code>String</code>,
+                    숫자는 <code>Number</code>
+                    Type 사용)
+                    <ul class="list-dot color-info">
+                      <li>문자열 인코딩은 <code>UTF-8</code> 사용</li>
+                    </ul>
+                  </li>
+                  <li>
+                    성공, 실패, 예외 등 다양한 케이스에 대한 응답코드 정상
+                    동작하는지 확인
+                  </li>
+                  <li>
+                    G/W와 연동검토(혹은 연동개발) 중 응답결과 및 JSON 응답
+                    파라미터 임의 수정 지양
+                  </li>
+                </ul>
+              </li>
+              <li>
+                엔진 상태 코드 및 메시지 Response에 추가
+                <div class="d-flex justify-center">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>code</code></td>
+                        <td><code>Int</code></td>
+                        <td>
+                          에러인 경우 HTTP 상태 코드와 구분을 위해 음수 값으로
+                          전달
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>message</code></td>
+                        <td><code>String</code></td>
+                        <td>에러인 경우 에러 내용 전달</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="d-flex justify-center mt10">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Status Code</th>
+                        <th>Code</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>400</td>
+                        <td>5000</td>
+                        <td>HTTP Request Method(GET, POST) 오류</td>
+                      </tr>
+                      <tr>
+                        <td>400</td>
+                        <td>5001</td>
+                        <td>요청 파라미터 설정 오류</td>
+                      </tr>
+                      <tr>
+                        <td>400</td>
+                        <td>5002</td>
+                        <td>Request Body 포맷 오류 - PARSE_ERR / READ_ERR</td>
+                      </tr>
+                      <tr>
+                        <td>401</td>
+                        <td>5003</td>
+                        <td>인증 실패</td>
+                      </tr>
+                      <tr>
+                        <td>429</td>
+                        <td>5004</td>
+                        <td>일 호출 건 수 초과</td>
+                      </tr>
+                      <tr>
+                        <td>500</td>
+                        <td>5005</td>
+                        <td>Request Body data read 에러</td>
+                      </tr>
+                      <tr>
+                        <td>500</td>
+                        <td>5006</td>
+                        <td>http.Request() 에러</td>
+                      </tr>
+                      <tr>
+                        <td>500</td>
+                        <td>5007</td>
+                        <td>엔진 타임아웃 등</td>
+                      </tr>
+                      <tr>
+                        <td>500</td>
+                        <td>5008</td>
+                        <td>Response Body data read 에러 등</td>
+                      </tr>
+                      <tr>
+                        <td>500</td>
+                        <td>50xx</td>
+                        <td>...</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                API 미터링 정보 Response에 추가
+                <ul class="list-dash">
+                  <li>
+                    NLP API
+                    <div class="d-flex justify-center flex-direction-column">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><code>total_token_count</code></td>
+                            <td><code>Int</code>(선택)</td>
+                            <td>미터링을 위해 사용할 token count 값을 전달</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p class="caption">예) 입/출력 데이터 토큰 개수의 합</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="mt50">
+            <h4 class="h4 mt30">Kubernetes 배포 가이드</h4>
+            <h5 class="h5 mt30">
+              1. Kubernetes 상에서 API 컨테이너가 실행되도록 이미지 재빌드
+            </h5>
+            <!-- codemirror 변경 -->
+            <div class="code-box">
+              <pre class="code">
+FROM 이미지명:태그명 
+WOKRDIR /home/workdir
+EXPOSE 80 CMD "python", "-m", "api"</pre
+              >
+              <button type="button" class="btn-ico copy">복사하기</button>
+              <p class="caption">
+                ex. 80 포트를 사용하는 API <code>Dockerfile</code> 예시
+              </p>
+            </div>
+            <h5 class="h5 mt30">
+              2. 재 빌드된 이미지로 컨테이너가 정상 구동되는지 테스트
+            </h5>
+            <ul class="list-dot">
+              <li>
+                <code>priviledged</code>, unsafe <code>sysctl</code> 옵션 지양
+              </li>
+              <ul class="list-dash">
+                <li>
+                  <a
+                    href="https://kubernetes.io/ko/docs/tasks/administer-cluster/sysctl-cluster/"
+                    class="underline"
+                    >Kubernetes sysctl</a
+                  >
+                  참고
+                </li>
+              </ul>
+            </ul>
+            <h5 class="h5 mt30">3. GenieLabs 도커 레지스트리에 이미지 push</h5>
+            <!-- codemirror 변경 -->
+            <div class="code-box">
+              <pre class="code">
+sudo docker login HARBOR_ADDRESS # sudo docker commit CONTAINER
+SOURCE_IMAGE:TAG sudo docker tag SOURCE_IMAGE:TAG 
+HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG sudo docker push 
+HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre
+              >
+              <button type="button" class="btn-ico copy">복사하기</button>
+            </div>
+            <ul class="list-dot">
+              <li>
+                <code>Harbor</code> 정보 담당자에게 문의 (<a
+                  href="mailto:genielabs@kt.com"
+                  class="underline"
+                  >genielabs@kt.com</a
+                >)
+                <ul class="list-dash">
+                  <li>Harbor push할 서버 공인IP 정보 함께 전달 참고</li>
+                </ul>
+              </li>
+              <li>
+                이미지 push 후 아래 정보 담당자에게 공유
+                <ul class="list-dash">
+                  <li>도커 이미지명/태그명/API 사용 포트 (path)</li>
+                  <li>도커 컨테이너 실행시 필요한 옵션 (docker run 명령어)</li>
+                  <li>
+                    도커 컨테이너 정상동작 확인 방법 (명령어, 스크립트 등)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                폴더 마운트 필요 시, 필요한 용량 및 디렉토리 위치를 함께 전달
+              </li>
+              <li>기타 옵션 필요 시, 별도 협의</li>
+            </ul>
           </article>
         </section>
       </main>
       <footer class="footer">
         <div class="copyright">
-          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
-          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
           <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
         </div>
         <div class="term">
@@ -128,44 +723,23 @@
         </div>
       </footer>
     </div>
-    <script defer src="https://unpkg.com/wavesurfer.js"></script>
-    <script defer src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/lib/codemirror.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const selectorWrapper = document.querySelector('.selector-option'),
-          selectors = selectorWrapper.querySelectorAll('input'),
-          waveformBtn = document.querySelector('#waveformRequest'),
-          waveformBtnPlay = document.querySelector('#waveformPlay')
-
-        const wavesurfer = WaveSurfer.create({
-          container: '#waveform',
-          height: 40,
-          hideScrollbar: true,
+      document.addEventListener("DOMContentLoaded", () => {
+        // 소스 복사하기
+        const btnCopys = document.querySelectorAll(".btn-ico.copy");
+        btnCopys.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            if (e.which == 1) {
+              const code = btn.previousElementSibling.innerText;
+              navigator.clipboard.writeText(code);
+              alertOpen("복사되었습니다");
+            }
+          });
         });
-        selectors.forEach(selector => {
-          selector.addEventListener('change', (e) => {
-            const textData = e.target.nextElementSibling.querySelector('.ico-text').textContent.trim()
-            const textInput = document.querySelector('#waveformInput')
-            textInput.value = textData
-          })
-        })
-
-        waveformBtn.addEventListener('click', () => {
-          wavesurfer.load('../../assets/wav/demo.wav')
-        })
-
-        waveformBtnPlay.addEventListener('click', () => {
-          if (waveformBtnPlay.textContent === 'play') {
-            waveformBtnPlay.textContent = 'stop'
-            wavesurfer.play()
-          } else {
-            waveformBtnPlay.textContent = 'play'
-            wavesurfer.playPause()
-          }
-        })
-      })
-
+      });
     </script>
   </body>
-
 </html>
