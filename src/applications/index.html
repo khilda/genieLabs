@@ -528,6 +528,7 @@
     <script defer src="../../assets/js/main.js"></script>
     <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
     <script>
+      // 0413 spaceBetween 수정
       const swiper = new Swiper("#cardSwiper", {
         loop: true,
         slidesPerView: 1,
@@ -543,12 +544,11 @@
         breakpoints: {
           742: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 50,
           },
           1440: {
             slidesPerView: 4,
             spaceBetween: 36,
-            pagination: false,
           },
         },
       });

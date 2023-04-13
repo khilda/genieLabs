@@ -61,8 +61,8 @@
   .card {
     .card-head {
       margin-bottom: 27px;
-      .card-bookmark{
-        pointer-events: none
+      .card-bookmark {
+        pointer-events: none;
       }
     }
     .card-txt {
@@ -96,8 +96,8 @@
           background-image: url("../images/ico_view_24_hover.svg");
           color: #000;
         }
-        .badge-txt.new,
-        .badge-txt.update {
+        .badge-txt.primary,
+        .badge-txt.secondary {
           color: #fff;
         }
         .card-body .card-detail {
@@ -170,16 +170,16 @@
     .card-container {
       padding: 0 27px;
       .card-title {
-        .title-tit{
+        .title-tit {
           font-size: 24px;
         }
-        .title-link{
+        .title-link {
           font-size: 18px;
         }
       }
-      .card{
+      .card {
         min-height: 321px;
-        .card-txt{
+        .card-txt {
           font-size: 24px;
           line-height: 26px;
         }
@@ -188,8 +188,7 @@
     .card-container + .card-container {
       margin-top: 60px;
     }
-    .card{
-
+    .card {
     }
   }
 }

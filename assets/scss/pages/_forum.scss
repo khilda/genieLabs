@@ -1,3 +1,10 @@
-
 .forum {
+  @include desktop {
+    .board {
+      .board-header,
+      .board-link {
+        grid-template-columns: 142px 600px repeat(4, 142px);
+      }
+    }
+  }
 }

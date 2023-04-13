@@ -3,11 +3,15 @@
  */
 document.addEventListener("DOMContentLoaded", () => {
   eventHeader();
-  eventCardBookmark();
-  eventTab();
-  eventCmt();
   eventSelect();
+  eventTab();
+  eventCardBookmark();
+  eventCmt();
 });
+
+/**
+ * GNB Tablet, Mobile Open
+ */
 function eventHeader() {
   document.querySelector("#gnbOpen")?.addEventListener("click", () => {
     document.querySelector(".header-menu").classList.add("is-show");
@@ -23,23 +27,10 @@ function eventHeader() {
     document.body.classList.toggle("dark-theme");
   });
 }
-// card Bookmark
-function eventCardBookmark() {
-  document.querySelectorAll(".card-bookmark")?.forEach((boomark) => {
-    boomark.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (e.target.classList.contains("is-active")) {
-        e.target.classList.remove("is-active");
-        alertOpen("저장이 취소되었습니다.");
-      } else {
-        e.target.classList.add("is-active");
-        alertOpen(
-          "샘플저장이 완료되었습니다.<br> 저장한 샘플은 My Ground 메뉴에서 확인할 수 있습니다."
-        );
-      }
-    });
-  });
-}
+
+/**
+ * 공통 Component
+ */
 // tab
 function eventTab() {
   document.querySelectorAll(".tab-container")?.forEach((tab) => {
@@ -116,7 +107,12 @@ function eventSelect() {
     });
   });
 }
-// alert
+
+/**
+ * Dialog
+ * @param {String} msg : Dialog에 노출할 텍스트
+ * @param {Function} callback  : 버튼 클릭이후 실행할 함수
+ */
 function alertOpen(msg, callback) {
   Swal.fire({
     html: msg,
@@ -145,10 +141,41 @@ function confirmOpen(msg, callback) {
     }
   });
 }
+
+/**
+ * 페이지 공통 모듈
+ */
+// card Bookmark
+function eventCardBookmark() {
+  document.querySelectorAll(".card-bookmark")?.forEach((boomark) => {
+    boomark.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (e.target.classList.contains("is-active")) {
+        e.target.classList.remove("is-active");
+        alertOpen("저장이 취소되었습니다.");
+      } else {
+        e.target.classList.add("is-active");
+        alertOpen(
+          "샘플저장이 완료되었습니다.<br> 저장한 샘플은 My Ground 메뉴에서 확인할 수 있습니다."
+        );
+      }
+    });
+  });
+}
+// 댓글
 function eventCmt() {
-  // comment
+  // 댓글 input이벤트
+  const _cmtEdit = document.querySelector(".comment-edit");
+  _cmtEdit?.querySelector(".comment-ipt").addEventListener("input", (e) => {
+    if (e.target.value.length) {
+      e.target.nextElementSibling
+        .querySelector(".btn")
+        .removeAttribute("disabled");
+    }
+  });
+  // comment Item 동적이벤트 할당
   const _cmtLists = document.querySelectorAll(".comment-list");
-  _cmtLists.forEach((_cmtList) => {
+  _cmtLists?.forEach((_cmtList) => {
     _cmtList.addEventListener("click", (e) => {
       const _target = e.target;
       const _cmtContainer = e.target.closest(".cmt-container");
@@ -196,10 +223,32 @@ function eventCmt() {
           _target.nextElementSibling.removeAttribute("style");
         }
       }
+      // 답글모드에서 취소하기
+      if (_target.classList.value === "btn cancel") {
+        console.log("답글모드에서 취소하기");
+        _target.closest(".btn-container").previousElementSibling.value = "";
+        _target.setAttribute("disabled", "true");
+        _target.nextElementSibling.setAttribute("disabled", "true");
+      }
+    });
+    _cmtList.addEventListener("input", (e) => {
+      const _target = e.target;
+      const _replyWriteBtn = e.target.nextElementSibling;
+      // 답글쓰기
+      if (_target.classList.value === "ipt cmt-ipt") {
+        if (e.target.value.length) {
+          _replyWriteBtn
+            .querySelectorAll(".btn")
+            .forEach((btn) => btn.removeAttribute("disabled"));
+        }
+      }
     });
   });
 }
 
+/**
+ * AS-IS FileDownload
+ */
 // 파일 다운로드
 function downloadFile(el) {
   $.fileDownload({

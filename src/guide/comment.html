@@ -27,7 +27,7 @@
           <div class="ipt-container">
             <input type="text" class="ipt comment-ipt" />
             <div class="btn-container">
-              <button type="button" class="btn">댓글</button>
+              <button type="button" class="btn" disabled>댓글</button>
             </div>
           </div>
         </div>
@@ -71,7 +71,10 @@
                 <div class="ipt-container">
                   <input type="text" class="ipt cmt-ipt" />
                   <div class="btn-container">
-                    <button type="button" class="btn">답글</button>
+                    <!-- S : 0413 disabled 추가 -->
+                    <button type="button" class="btn cancel" disabled>취소</button>
+                    <button type="button" class="btn" disabled>답글</button>
+                    <!-- E : 0413 disabled 추가 -->
                   </div>
                 </div>
               </div>
@@ -80,7 +83,7 @@
               <ul class="reply-content">
                 <!-- 답글 아이템 -->
                 <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
-                <li class="cmt-container type-editable">
+                <li class="cmt-container type-editable" data-depth="2">
                   <div class="cmt-header">
                     <dl class="auth-info">
                       <dt class="auth">나</dt>
@@ -93,6 +96,7 @@
                   </div>
                   <div class="cmt-footer">
                     <div class="btn-container">
+                      <button type="button" class="btn-txt">답글달기</button>
                       <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
                       <button type="button" class="btn-txt mod">수정하기</button>
                       <button type="button" class="btn-txt del">삭제하기</button>
@@ -101,7 +105,7 @@
                 </li>
                 <!-- // 답글 아이템 -->
                 <!-- 답글 아이템 -->
-                <li class="cmt-container type-editable">
+                <li class="cmt-container type-editable" data-depth="3">
                   <div class="cmt-header">
                     <dl class="auth-info">
                       <dt class="auth">나</dt>
@@ -109,7 +113,7 @@
                     </dl>
                   </div>
                   <div class="cmt-body">
-                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                    <p class="txt"><code>@나</code> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
                     <textarea class="txt-edit"></textarea>
                   </div>
                   <div class="cmt-footer">
@@ -181,7 +185,8 @@
                 <div class="ipt-container">
                   <input type="text" class="ipt cmt-ipt" />
                   <div class="btn-container">
-                    <button type="button" class="btn">답글</button>
+                    <button type="button" class="btn cancel" disabled>취소</button>
+                    <button type="button" class="btn" disabled>답글</button>
                   </div>
                 </div>
               </div>
@@ -241,7 +246,8 @@
                 <div class="ipt-container">
                   <input type="text" class="ipt cmt-ipt" />
                   <div class="btn-container">
-                    <button type="button" class="btn">답글</button>
+                    <button type="button" class="btn cancel" disabled>취소</button>
+                    <button type="button" class="btn" disabled>답글</button>
                   </div>
                 </div>
               </div>
@@ -300,7 +306,8 @@
                           <div class="ipt-container">
                             <input type="text" class="ipt cmt-ipt" />
                             <div class="btn-container">
-                              <button type="button" class="btn">답글</button>
+                              <button type="button" class="btn cancel" disabled>취소</button>
+                              <button type="button" class="btn" disabled>답글</button>
                             </div>
                           </div>
                         </div>
