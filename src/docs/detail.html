@@ -48,6 +48,21 @@
           </p>
         </section>
         <section class="container-content container-detail">
+          <!-- 퀵메뉴 -->
+          <div class="quick-container">
+            <div class="quick">
+              <p class="quick-title">Introduction</p>
+              <div class="quick-link">
+                <button type="button" data-id="guideDevelopers" class="link main">Guide For Developer</button>
+                <button type="button" data-id="quickstart" class="link sub">Quickstart</button>
+                <button type="button" data-id="apiReference" class="link sub">API Reference</button>
+                <button type="button" data-id="guideProviders" class="link main">Guide For Prociders</button>
+                <button type="button" data-id="aiApiGuide" class="link sub">AI API 개발가이드</button>
+                <button type="button" data-id="kubernetesGuide" class="link sub">Kubernetes 배포가이드</button>
+              </div>
+              <button type="button" class="quick-collapse"></button>
+            </div>
+          </div>
           <!-- 동영상 -->
           <article>
             <h4 class="h4">동영상</h4>
@@ -55,8 +70,9 @@
               <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
             </figure>
           </article>
+
           <!-- Guide For Developers -->
-          <article class="mt50">
+          <article id="guideDevelopers" class="mt50">
             <h4 class="h4">Guide For Developers</h4>
             <dl class="list-dot mt30">
               <dt>Overview</dt>
@@ -74,15 +90,19 @@
               </dd>
               <dd>AI API 신청 및 등록 방법은 아래 가이드를 확인해주세요.</dd>
             </dl>
-            <h4 class="h4 mt30">Quickstart</h4>
+          </article>
+
+          <!-- QuickStart -->
+          <article id="quickstart" class="mt50">
+            <h4 class="h4">Quickstart</h4>
             <figure class="img">
               <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
             </figure>
           </article>
 
-          <!-- 관련정보 -->
-          <article class="mt50">
-            <h4 class="h4">관련정보</h4>
+          <!-- API Reference -->
+          <article id="apiReference" class="mt50">
+            <h4 class="h4">API Reference</h4>
             <div class="form api-link">
               <dl class="form-item">
                 <dt>의도 분류 API</dt>
@@ -106,7 +126,7 @@
           </article>
 
           <!-- Guide For Providers -->
-          <article class="mt50">
+          <article id="guideProviders" class="mt50">
             <h4 class="h4">Guide For Providers</h4>
             <ul class="list-dot mt10">
               <li>
@@ -355,11 +375,8 @@
               명세서 수정이 가능하며, 배포한 API에 대해 수정이 필요한 경우
               <code>업데이트</code> 신청 접수 부탁 드립니다.
             </p>
-          </article>
-
-          <!-- (참고) GenieLabs REST API Endpoint Naming Convention -->
-          <article class="mt50">
-            <h5 class="h5">
+            <!-- (참고) GenieLabs REST API Endpoint Naming Convention -->
+            <h5 class="h5 mt50">
               (참고) GenieLabs REST API Endpoint Naming Convention
             </h5>
             <p class="mt10">규칙</p>
@@ -428,22 +445,26 @@
             <h5 class="h5 mt30">예시</h5>
             <ol class="list-num mt10">
               <li>
-                <code>url</code>: kt/vision/face-detection-and-recognition →
+                1. <code>url</code>: kt/vision/face-detection-and-recognition →
                 <code>API 식별자</code>:
                 kt_vision_face-detection-and-recognition
               </li>
               <li>
-                <code>url</code>: kt/voice/genie-voice →
+                2. <code>url</code>: kt/voice/genie-voice →
                 <code>API 식별자</code>: kt_voice_genie-voice
               </li>
               <li>
-                <code>url</code>:
+                3. <code>url</code>:
                 kt/vision-digital-health/thyroid-cancer-diagnosis-assistant →
                 <code>API 식별자</code>:
                 kt_vision-digital-health_thyroid-cancer-diagnosis-assistant
               </li>
             </ol>
-            <h5 class="h5 mt30">AI API 개발 가이드</h5>
+          </article>
+
+          <!-- Guide For Providers -->
+          <article id="aiApiGuide" class="mt50">
+            <h5 class="h5">AI API 개발 가이드</h5>
             <ul class="list-dot mt10">
               <li>
                 아래 유의사항을 참고하여 GenieLabs API 개발 및 규격서를
@@ -612,8 +633,10 @@
               </li>
             </ul>
           </article>
-          <article class="mt50">
-            <h4 class="h4 mt30">Kubernetes 배포 가이드</h4>
+
+          <!-- Guide For Providers -->
+          <article id="kubernetesGuide" class="mt50">
+            <h4 class="h4">Kubernetes 배포 가이드</h4>
             <h5 class="h5 mt30">
               1. Kubernetes 상에서 API 컨테이너가 실행되도록 이미지 재빌드
             </h5>
@@ -698,7 +721,54 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
     <script src="../../assets/js/lib/codemirror.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
+      let throttlingId;
+      const quickLink = document.querySelector(".quick-link");
+      const quickSection = []
+
+      function evtActiveQuick() {
+        quickSection.forEach(section => {
+          const startPoint = section.offsetTop - 50
+          const endPoint = section.offsetTop + section.getBoundingClientRect().height
+          const scrollY = document.documentElement.scrollTop
+          const id = section.getAttribute('id')
+          if (scrollY >= startPoint) {
+            quickLink.querySelector(`[data-id="${id}"]`).classList.add('is-active')
+          } else {
+            quickLink.querySelector(`[data-id="${id}"]`).classList.remove('is-active')
+          }
+        })
+      }
+      function evtScrollY(id) {
+        const target = document.getElementById(id)
+        const y = target.offsetTop
+        onScrollTo(y)
+      }
+      function onScrollTo(y) {
+        window.scroll({ top: y, behavior: "smooth" })
+      }
+      function throttling(func, timeout = 300) {
+        if (throttlingId) return
+
+        throttlingId = setTimeout(() => {
+          func();
+          throttlingId = undefined;
+        }, timeout);
+      }
+
+      window.addEventListener('scroll', (e) => {
+        throttling(evtActiveQuick)
+      })
+
       document.addEventListener("DOMContentLoaded", () => {
+        // quick menu
+        quickLink.querySelectorAll('.link').forEach(link => {
+          // scrollTo target
+          link.addEventListener('click', (e) => {
+            evtScrollY(e.target.dataset.id)
+          })
+          const section = document.getElementById(link.dataset.id)
+          quickSection.push(section)
+        })
         // 소스 복사하기
         const btnCopys = document.querySelectorAll(".btn-ico.copy");
         btnCopys.forEach((btn) => {
@@ -711,6 +781,7 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
           });
         });
       });
+
     </script>
   </body>
 

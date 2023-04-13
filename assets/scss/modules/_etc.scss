@@ -256,7 +256,7 @@
   padding: 50px 70px;
 }
 
-code{
+code {
   padding: 2px 5px;
   margin: 0;
   font-size: 85%;
@@ -264,7 +264,7 @@ code{
   background-color: rgb(175 184 193 / 20%);
   border-radius: 6px;
 }
-.caption{
+.caption {
   margin-top: 10px;
   text-align: center;
   font-weight: 400;
@@ -272,26 +272,101 @@ code{
   line-height: 22px;
   color: #787878;
 }
-.table{
-    display: block;
-    width: 100%;
-    width: max-content;
-    max-width: 100%;
-    overflow: auto;
-    tr{
-      background-color: #fff;
-      &:nth-child(2n){
-        background-color: #f6f8fa;
-        border-top: 1px solid #d8dee4
+.table {
+  display: block;
+  width: 100%;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  tr {
+    background-color: #fff;
+    &:nth-child(2n) {
+      background-color: #f6f8fa;
+      border-top: 1px solid #d8dee4;
+    }
+  }
+  th {
+    background-color: #ffffff;
+    font-weight: 600;
+  }
+  th,
+  td {
+    border: 1px solid #d0d7de;
+    padding: 6px 13px;
+  }
+}
+
+.quick {
+  &-title {
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &-link {
+    display: flex;
+    flex-direction: column;
+    .link {
+      display: flex;
+      align-items: center;
+      &.main {
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #787878;
+        &:not(:first-child) {
+          margin-top: 30px;
+        }
+      }
+      &.sub {
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 14px;
+        &::before {
+          content: "";
+          display: block;
+          background-color: #000;
+          border-radius: 50%;
+          width: 2px;
+          height: 2px;
+          margin-left: 3px;
+          margin-right: 8px;
+        }
+      }
+      &:hover,
+      &:active,
+      &.is-active {
+        font-weight: 700;
+        text-decoration: underline;
+        color: #000;
+        &::after {
+          content: "";
+          display: block;
+          background: url("../images/ico_quick_arrow.svg") no-repeat 50% 50%;
+          width: 15px;
+          height: 15px;
+          margin-left: 15px;
+        }
       }
     }
-    th{
-      background-color: #ffffff;
-      font-weight: 600;
-    }
-    th,
-    td{
-      border: 1px solid #d0d7de;
-      padding: 6px 13px;
+  }
+}
+@include desktop {
+  .quick-container{
+    position: sticky;
+    top: 150px;
+  }
+  .quick {
+    position: absolute;
+    left: calc(50% - 906px);
+    top: -60px;
+    width: 210px;
+  }
+}
+@include tablet {
+  .quick {
+  }
+}
+@include mobile {
+  .quick {
   }
 }
