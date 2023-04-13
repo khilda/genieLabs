@@ -173,12 +173,14 @@
   .cmt-container {
     padding: 35px 20px 0;
     .cmt-body {
+      flex-direction: column;
       padding-bottom: 35px;
       .txt-edit {
         max-height: none;
       }
       .btn-container {
-        flex-direction: column;
+        margin-top: 20px;
+        justify-content: flex-end;
       }
     }
     .cmt-footer {
@@ -206,10 +208,6 @@
       .txt-edit {
         max-height: none;
         height: 300px;
-      }
-      .btn-container {
-        margin-top: 20px;
-        justify-content: flex-end;
       }
     }
     .cmt-footer {

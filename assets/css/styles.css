@@ -3563,16 +3563,20 @@ textarea {
     padding: 35px 20px 0;
   }
   .cmt-container .cmt-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-bottom: 35px;
   }
   .cmt-container .cmt-body .txt-edit {
     max-height: none;
   }
   .cmt-container .cmt-body .btn-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin-top: 20px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .cmt-container .cmt-footer {
     top: 35px;
@@ -3609,12 +3613,6 @@ textarea {
   .cmt-container .cmt-body .txt-edit {
     max-height: none;
     height: 300px;
-  }
-  .cmt-container .cmt-body .btn-container {
-    margin-top: 20px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
   .cmt-container .cmt-footer {
     position: static;
@@ -3828,7 +3826,6 @@ textarea {
   }
   .file-item .controls {
     margin-top: 10px;
-    margin-right: auto;
   }
   .file-item .data {
     -webkit-box-orient: vertical;
