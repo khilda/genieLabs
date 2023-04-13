@@ -351,7 +351,7 @@ code {
   }
 }
 @include desktop {
-  .quick-container{
+  .quick-container {
     position: sticky;
     top: 150px;
   }
@@ -361,12 +361,105 @@ code {
     top: -60px;
     width: 210px;
   }
+  .quick-collapse {
+    display: none;
+  }
 }
 @include tablet {
+  .quick-container {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    padding-bottom: 30px;
+    z-index: 99;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
   .quick {
+    bottom: 30px;
+    border: 3px solid #160c0c;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.2s;
+    .quick-link {
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      padding: 10px 20px;
+    }
+  }
+  .quick-container.is-open {
+    width: auto;
+    height: auto;
+    .quick {
+      opacity: 1;
+    }
+  }
+  .quick-collapse {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    border-radius: 15px;
+    width: 65px;
+    height: 65px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 12px);
+      top: calc(50% - 2px);
+      display: block;
+      border-radius: 6px;
+      background-color: #fff;
+      width: 25px;
+      height: 4px;
+      transition: transform 0.3s;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+    &.is-open {
+      border-top-left-radius: 0;
+      &::after {
+        transform: rotate(0);
+      }
+    }
   }
 }
 @include mobile {
+  .quick-container {
+    left: 15px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 15px;
+  }
+  .quick-title{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
   .quick {
+    bottom: 15px;
+    border-radius: 15px;
+    padding: 15px;
+    .quick-link {
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+  }
+  .quick-collapse {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    &::before,
+    &::after {
+      content: "";
+      left: calc(50% - 10px);
+      width: 20px;
+    }
   }
 }

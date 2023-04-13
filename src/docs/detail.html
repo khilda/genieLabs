@@ -60,8 +60,8 @@
                 <button type="button" data-id="aiApiGuide" class="link sub">AI API 개발가이드</button>
                 <button type="button" data-id="kubernetesGuide" class="link sub">Kubernetes 배포가이드</button>
               </div>
-              <button type="button" class="quick-collapse"></button>
             </div>
+            <button type="button" class="quick-collapse"></button>
           </div>
           <!-- 동영상 -->
           <article>
@@ -722,7 +722,7 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
     <script src="../../assets/js/main.js"></script>
     <script>
       let throttlingId;
-      const quickLink = document.querySelector(".quick-link");
+      const quickContainer = document.querySelector(".quick-container");
       const quickSection = []
 
       function evtActiveQuick() {
@@ -732,9 +732,9 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
           const scrollY = document.documentElement.scrollTop
           const id = section.getAttribute('id')
           if (scrollY >= startPoint) {
-            quickLink.querySelector(`[data-id="${id}"]`).classList.add('is-active')
+            quickContainer.querySelector(`[data-id="${id}"]`).classList.add('is-active')
           } else {
-            quickLink.querySelector(`[data-id="${id}"]`).classList.remove('is-active')
+            quickContainer.querySelector(`[data-id="${id}"]`).classList.remove('is-active')
           }
         })
       }
@@ -760,14 +760,25 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
       })
 
       document.addEventListener("DOMContentLoaded", () => {
-        // quick menu
+        // Quickmenu scrollTo target
+        const quickLink = quickContainer.querySelector(".quick-link");
         quickLink.querySelectorAll('.link').forEach(link => {
-          // scrollTo target
           link.addEventListener('click', (e) => {
             evtScrollY(e.target.dataset.id)
           })
           const section = document.getElementById(link.dataset.id)
           quickSection.push(section)
+        })
+        // quick menu open/close
+        quickContainer.querySelector('.quick-collapse').addEventListener('click', (e) => {
+          const quick = quickContainer.querySelector('.quick')
+          if (e.target.classList.contains('is-open')) {
+            e.target.classList.remove('is-open')
+            quickContainer.classList.remove('is-open')
+          } else {
+            e.target.classList.add('is-open')
+            quickContainer.classList.add('is-open')
+          }
         })
         // 소스 복사하기
         const btnCopys = document.querySelectorAll(".btn-ico.copy");
