@@ -14,6 +14,12 @@
   .regist-complete .card-head .badge-txt {
     margin-left: auto;
   }
+  .container-edit .txt-notice:not(.color-info) {
+    color: #ff6b00;
+    &:before {
+      background-image: url("../images/ico_txt_notice_orange.svg");
+    }
+  }
   .title-content-box {
     flex: 1;
     display: flex;

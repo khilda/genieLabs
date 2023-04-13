@@ -121,9 +121,15 @@
                       </ul>
                     </div>
                     <div class="form-item">
+                      <!-- S: 0413 타이틀 추가 -->
+                      <h5 class="form-item-title">Application 제목</h5>
+                      <!-- E: 0413 타이틀 추가 -->
                       <input type="text" class="ipt edit-ipt" placeholder="등록 될 application 제목을 입력하세요." />
                     </div>
                     <div class="form-item">
+                      <!-- S: 0413 타이틀 추가 -->
+                      <h5 class="form-item-title">Application 요약</h5>
+                      <!-- E: 0413 타이틀 추가 -->
                       <textarea class="textarea"></textarea>
                     </div>
                     <div class="form-item">
@@ -155,24 +161,34 @@
                           </figure>
                         </dd>
                       </dl>
-                      <p class="txt-notice color-info">
+                      <!-- S: 0413 class 삭제 -->
+                      <p class="txt-notice">
                         Application 상세 화면에서 제공할 대표 이미지 또는
                         YouTube 영상 URL 정보를 등록하세요​
                       </p>
+                      <!-- E: 0413 class 삭제 -->
                     </div>
                     <div class="form-item">
-                      <textarea class="edit-textarea" placeholder="application 관련 상세 설명 정보를 입력하세요."></textarea>
-                      <p class="txt-notice color-info">
+                      <!-- S: 0413 html 변경-->
+                      <h5 class="form-item-title">Application 설명</h5>
+                      <textarea id="formEditor" name="editor1" class="edit-textarea" placeholder="application 관련 상세 설명 정보를 입력하세요."></textarea>
+                      <p class="txt-notice">
                         Application 상세 화면에서 제공할 서비스 관련 정보를
                         등록하세요​
                       </p>
+                      <!-- E: 0413 html 변경 -->
                     </div>
                     <div class="form-item">
+                      <!-- S: 0413 타이틀 추가 -->
+                      <h5 class="form-item-title">Git 주소</h5>
+                      <!-- E: 0413 타이틀 추가 -->
                       <input type="text" class="ipt edit-ipt" placeholder="application 관련 GIT Hub 주소를 입력하세요​" />
-                      <p class="txt-notice color-info">
+                      <!-- S: 0413 class 삭제 -->
+                      <p class="txt-notice">
                         Application 상세 화면에서 제공할 GitHub 정보를
                         등록하세요​
                       </p>
+                      <!-- E: 0413 class 삭제 -->
                     </div>
                     <div class="form-item">
                       <dl class="title-content-box">
@@ -189,10 +205,12 @@
                           <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
                         </dd>
                       </dl>
-                      <p class="txt-notice color-info">
+                      <!-- S: 0413 class 삭제 -->
+                      <p class="txt-notice">
                         제공자의 정보를 그룹(회사명 등) 또는 개인으로 선택하여
                         입력하세요. ​개인으로 선택 시 로그인 사용자의 이름으로
                         적용 됩니다.
+                        <!-- E: 0413 class 삭제 -->
                       </p>
                     </div>
                   </form>
@@ -203,11 +221,16 @@
                   </header>
                   <form class="form">
                     <div class="form-item">
+                      <!-- S: 0413 타이틀 추가 -->
+                      <h5 class="form-item-title">APK 다운로드 링크</h5>
+                      <!-- E: 0413 타이틀 추가 -->
                       <input type="text" class="ipt edit-ipt" placeholder="APK를 다운받을 수 있는 주소를 입력해 주세요.​" />
-                      <p class="txt-notice color-info">
+                      <!-- S: 0413 class 삭제 -->
+                      <p class="txt-notice">
                         APK 제공이 가능한 경우 입력하면 서비스 상세 화면에서
-                        해당 링크를 통해 APK 다운로드를 제공합니다. ​
+                        해당 링크를 통해 APK 다운로드를 제공합니다.
                       </p>
+                      <!-- E: 0413 class 삭제 -->
                     </div>
                     <div class="form-item">
                       <dl class="title-ipt-box">
@@ -221,10 +244,12 @@
                           <input type="text" class="ipt" placeholder="제공자 정보를 입력해주세요​" />
                         </dd>
                       </dl>
-                      <p class="txt-notice color-info">
+                      <!-- S: 0413 class 삭제 -->
+                      <p class="txt-notice">
                         서비스 중인 제목 및 링크 주소를 입력하면 서비스 상세
-                        화면에서 해당 링크를 제공합니다. ​
+                        화면에서 해당 링크를 제공합니다. 
                       </p>
+                      <!-- E: 0413 class 삭제 -->
                     </div>
                   </form>
                   <div class="form-footer">
@@ -260,10 +285,12 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
     <script src="../../assets/js/lib/fileup.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
+      // UI 관련 스크립트
       document.addEventListener("DOMContentLoaded", () => {
         evtApiItem();
         evtThumbImg();
@@ -346,7 +373,10 @@
       }
     </script>
     <script>
-      $(document).ready(() => {
+      // library
+      document.addEventListener('DOMContentLoaded', () => {
+        CKEDITOR.config.width = `100%`
+        CKEDITOR.replace('editor1');
         $.fileup({
           url: "",
           inputID: "fileIpt",

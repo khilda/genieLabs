@@ -2020,6 +2020,11 @@ textarea {
 .form-item:last-child {
   border-color: #000;
 }
+.form-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
 .form-editor {
   border-bottom: 1px solid #ccc;
@@ -4973,6 +4978,12 @@ code {
 }
 .myGround .regist-complete .card-head .badge-txt {
   margin-left: auto;
+}
+.myGround .container-edit .txt-notice:not(.color-info) {
+  color: #ff6b00;
+}
+.myGround .container-edit .txt-notice:not(.color-info):before {
+  background-image: url("../images/ico_txt_notice_orange.svg");
 }
 .myGround .title-content-box {
   -webkit-box-flex: 1;
