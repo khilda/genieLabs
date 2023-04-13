@@ -261,6 +261,7 @@ button {
 }
 a:disabled,
 button:disabled {
+  pointer-events: none;
   cursor: default;
 }
 
@@ -1811,6 +1812,9 @@ textarea {
 }
 .btn.cancel {
   background-color: #929292;
+}
+.btn:disabled {
+  opacity: 0.8;
 }
 
 .btn-txt {
@@ -3614,6 +3618,12 @@ textarea {
     max-height: none;
     height: 300px;
   }
+  .cmt-container .cmt-body .btn-container {
+    margin-top: 20px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .cmt-container .cmt-footer {
     position: static;
     padding-top: 10px;
@@ -3672,7 +3682,12 @@ textarea {
 @media (max-width: 1624px) {
   .swiper-button-prev,
   .swiper-button-next {
-    display: none;
+    opacity: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .swiper-pagination {
+    opacity: 0;
   }
 }
 .fileUpload-container {

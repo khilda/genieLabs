@@ -18,18 +18,19 @@ dt {
 dd {
   font-weight: 400;
 }
-table{
+table {
   border-spacing: 0;
   border-collapse: collapse;
   th,
-  td{
+  td {
     padding: 0;
   }
 }
 a,
 button {
   cursor: pointer;
-  &:disabled{
+  &:disabled {
+    pointer-events: none;
     cursor: default;
   }
 }
@@ -94,7 +95,6 @@ textarea {
     padding-right: $padding * 1px;
   }
 }
-
 
 :root {
   --background: #fff;

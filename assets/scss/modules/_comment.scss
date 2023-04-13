@@ -209,6 +209,10 @@
         max-height: none;
         height: 300px;
       }
+      .btn-container {
+        margin-top: 20px;
+        justify-content: flex-end;
+      }
     }
     .cmt-footer {
       position: static;
