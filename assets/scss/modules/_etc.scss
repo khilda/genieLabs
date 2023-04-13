@@ -379,7 +379,7 @@ code {
     border: 3px solid #160c0c;
     border-radius: 20px;
     background-color: #fff;
-    padding: 30px;
+    padding: 30px 30px 50px;
     opacity: 0;
     transition: all 0.2s;
     .quick-link {
@@ -427,9 +427,9 @@ code {
 }
 @include mobile {
   .quick-container {
-    left: 15px;
-    bottom: 15px;
-    padding-bottom: 15px;
+    left: 20px;
+    bottom: 20px;
+    padding-bottom: 20px;
   }
   .quick-title{
     font-size: 18px;
@@ -437,7 +437,7 @@ code {
   }
   .quick {
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px 15px 30px;
     .quick-link {
       border-radius: 10px;
       padding: 10px 20px;
