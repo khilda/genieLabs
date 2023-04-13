@@ -1,63 +1,64 @@
 .docs {
-  .multi-column{
-    > .item{
+  .multi-column {
+    > .item {
       flex: 1;
-      > p{
+      > p {
         width: auto;
       }
     }
   }
-  @include tablet-only{
-    .multi-column{
+  @include tablet-only {
+    .multi-column {
       flex-wrap: wrap;
-      > .item{
+      > .item {
         min-width: 33.3333%;
       }
     }
   }
-  @include mobile{
-    .multi-column{
+  @include mobile {
+    .multi-column {
       flex-direction: column;
     }
   }
-  .badge-container{
+  .badge-container {
     flex-wrap: wrap;
   }
-  .code-box{
+  .code-box {
     position: relative;
-    .code{
+    .code {
       background-color: #f5f5f5;
       margin: 10px 0;
       padding: 20px;
       white-space: pre;
       overflow-x: auto;
     }
-    .btn-ico.copy{
+    .btn-ico.copy {
       position: absolute;
       right: 20px;
       top: 20px;
+      background-image: url("../images/ico_file_file_78.svg");
     }
-    @include mobile{
-      .code{
-        padding-bottom: 50px;
+    @include mobile {
+      .code {
+        padding-top: 50px;
       }
-      .btn-ico.copy{
-        top: auto;
-        bottom: 10px;
+      .btn-ico.copy {
+        background-size: 50%;
+        top: 10px;
         right: 10px;
         width: 30px;
         height: 30px;
       }
     }
   }
-  .api-link{
+  .api-link {
     margin-top: 10px;
-    > .form-item{
+    > .form-item {
       flex-direction: row;
       > dt {
         width: 200px;
       }
-      dd{
+      dd {
         text-decoration: underline;
       }
     }
