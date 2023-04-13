@@ -138,7 +138,7 @@
     }
   }
 }
-
+// 게시판 기본
 .board {
   position: relative;
   border-top: 2px solid #000;
@@ -146,8 +146,6 @@
     display: none;
     border-bottom: 1px solid #ccc;
     padding: 30px 40px;
-  }
-  &-list {
   }
   &-link {
     border-bottom: 1px solid #ccc;
@@ -165,13 +163,47 @@
       text-align: left;
     }
   }
+  .link-collapse {
+    display: flex;
+    align-items: center;
+    background-color: #dfdfdf;
+  }
+  .collapse {
+    display: none;
+    border-top: 1px solid transparent;
+      background: #d4d4d4;
+      overflow: hidden;
+    &.is-collapse {
+      border-color: #000;
+    }
+    .collapse-content {
+      text-align: left;
+    }
+    .collapse-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      &::before {
+        content: "";
+        display: block;
+        background: url("../images/ico_cmt_reply.svg") no-repeat 50% 50%;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .collapse-detail {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
 }
 
 @include desktop {
   .board {
     &-header {
       display: grid;
-      grid-template-columns: 142px 600px 142px 142px 142px 142px;
       grid-template-rows: repeat(1, 26px);
       align-items: center;
       .board-title {
@@ -180,21 +212,24 @@
         text-align: center;
       }
     }
-    &-list {
-    }
     &-link {
       display: grid;
-      grid-template-columns: 142px 600px 142px 142px 142px 142px;
       grid-template-rows: repeat(1, 86px);
       align-items: center;
       padding: 30px 40px;
       .link-grid {
         text-align: center;
         font-size: 18px;
+        &[data-column="content"] {
+          width: 600px;
+        }
       }
       &-detail {
         @include ellipsis(2);
       }
+    }
+    .collapse.is-collapse {
+      display: grid;
     }
   }
 }
@@ -241,6 +276,9 @@
       &.comment {
         background-image: var(--card-icon-commnet);
       }
+    }
+    .collapse.is-collapse {
+      display: flex;
     }
   }
 }

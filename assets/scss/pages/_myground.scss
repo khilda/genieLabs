@@ -132,4 +132,46 @@
       }
     }
   }
-}
+  // index
+  .board.board-mypost-normal {
+    @include desktop {
+      .board-header,
+      .board-link {
+        grid-template-columns: 177px 600px repeat(auto-fit, 177px);
+      }
+    }
+    @include tablet {
+      .link-grid {
+        &[data-column="date"] {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .board.board-mypost-api {
+    @include desktop {
+      .board-header,
+      .board-link {
+        grid-template-columns: 600px repeat(auto-fit, 177px);
+      }
+      .link-collapse {
+        display: grid;
+        grid-template-columns: 1131px 177px;
+        grid-template-rows: repeat(1, 224px);
+      }
+      .collapse {
+        grid-template-rows: fit-content(86px);
+        &-content {
+          grid-column: auto / span 4;
+        }
+      }
+    }
+    @include tablet {
+      .link-grid {
+        &[data-column="date"] {
+          width: 100%;
+        }
+      }
+    }
+  }
+     }
