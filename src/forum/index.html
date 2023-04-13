@@ -38,7 +38,6 @@
           <h1 class="page-title">Forum</h1>
           <p class="page-txt">GenieGround에서 경험할 수 있는 <br class="br-mo" />다양한 API들에 <br class="br-pc" />대해 정보를 <br class="br-mo" />공유할 수 있는 공간입니다 .</p>
         </section>
-        <!--  -->
         <section class="container-content">
           <header class="section-title">
             <div class="section-title-txt">
@@ -67,277 +66,73 @@
               <input type="text" class="search-ipt" placeholder="검색어를 입력해주세요" />
               <button type="button" class="search-btn">검색하기</button>
             </div>
-            <p class="search-total">Total <strong>60</strong></p>
-            <div class="select-container filter-select">
-              <div class="select-box"></div>
-              <ul class="select-options"></ul>
-              <select class="select">
-                <option value="0" default>최신순</option>
-                <option value="1">조회순</option>
-                <option value="2">댓글순</option>
-              </select>
+            <!-- S : 0413 html 수정 -->
+            <div class="search-filter">
+              <div class="select-container count-select">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
+                <select class="select">
+                  <option value="10" default>10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+              <p class="search-total">Total <strong>60</strong></p>
+              <div class="select-container filter-select">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
+                <select class="select">
+                  <option value="0" default>최신순</option>
+                  <option value="1">조회순</option>
+                  <option value="2">댓글순</option>
+                </select>
+              </div>
             </div>
           </div>
           <!-- // 검색영역 -->
-          <div class="card-list card-hover-3">
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
+          <article class="board">
+            <header class="board-header">
+              <h5 class="board-title">글</h5>
+              <h5 class="board-title">제목</h5>
+              <h5 class="board-title">조회수</h5>
+              <h5 class="board-title">댓글</h5>
+              <h5 class="board-title">작성자</h5>
+              <h5 class="board-title">작성일</h5>
+            </header>
+            <div class="board-list">
+              <!-- S: 게시글이 없을때 -->
+              <p class="empty-container">작성한 게시글이 존재하지 않습니다.</p>
+              <!-- E: 게시글이 없을때 -->
+              <!-- S: 게시글 link -->
+              <a href="#listLink" class="board-link">
+                <div class="link-grid" data-column="category">
+                  <em class="badge">NPL AI</em>
                 </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
+                <div class="link-grid" data-column="content">
+                  <h4 class="board-link-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate</h4>
+                  <p class="board-link-detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolores tenetur possimus labore necessitatibus perspiciatis, illum molestiae saepe ducimus beatae sit</p>
                 </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
+                <div class="link-grid" data-column="view">
+                  <p class="board-view hits"><span class="count">123</span></p>
                 </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
+                <div class="link-grid" data-column="comment">
+                  <p class="board-view comment"><span class="count">123</span></p>
                 </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-            <a href="./detailForum.html" class="card">
-              <div class="card-hover">
-                <div class="card-head">
-                  <em class="card-view hits"><span class="count">123</span></em>
-                  <em class="card-view comment"><span class="count">3455</span></em>
-                </div>
-                <div class="card-body">
-                  <strong class="card-txt">Voc 상담 대화 </strong>
-                  <p class="card-detail">AI 상담 서비스는 KT ….API 를 </p>
-                </div>
-                <div class="card-foot">
-                  <div class="foot-api">
-                    <em class="badge">Voice AI</em>
-                  </div>
-                  <dl class="foot-author">
-                    <dt>홍길동</dt>
-                    <dd>2023.01.12</dd>
-                  </dl>
-                </div>
-              </div>
-            </a>
-          </div>
+                <div class="link-grid" data-column="auth">홍길동</div>
+                <div class="link-grid" data-column="date">2023.01.12</div>
+              </a>
+              <!-- E: 게시글 link -->
+            </div>
+          </article>
+          <!-- E : 0413 html 수정 -->
+          <!-- Mobile일때 page-item max 3개까지 -->
           <div class="pagination">
             <button type="button" class="page-item first" disabled>처음으로</button>
             <button type="button" class="page-item prev" disabled>이전으로</button>
             <button type="button" class="page-item is-active">1</button>
             <button type="button" class="page-item">2</button>
+            <button type="button" class="page-item">3</button>
             <button type="button" class="page-item next">다음으로</button>
             <button type="button" class="page-item last">끝으로</button>
           </div>

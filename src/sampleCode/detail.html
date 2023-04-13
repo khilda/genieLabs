@@ -52,6 +52,12 @@
               </dl>
             </div>
             <div class="func-container">
+              <!-- S: 0413 bookmark 추가 -->
+              <div class="chk chk-bookMark">
+                <input class="chk-ipt" id="chkBookMark" type="checkbox">
+                <label for="chkBookMark" class="chk-label">123</label>
+              </div>
+              <!-- E: 0413 bookmark 추가 -->
               <button type="button" class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
             </div>
           </header>
@@ -142,7 +148,7 @@
               console.log(result, e.target.dataset.url)
             })
           })
-        })  
+        })
         // 데모 바로가기
         document.querySelector('.btn-link').addEventListener('click', (e) => {
           confirmOpen('선택하신 데모 상세 화면으로 이동합니다. <br> 계속하시겠습니까?', (result) => {
