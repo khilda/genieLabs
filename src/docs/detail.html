@@ -731,7 +731,7 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
           const endPoint = section.offsetTop + section.getBoundingClientRect().height
           const scrollY = document.documentElement.scrollTop
           const id = section.getAttribute('id')
-          if (scrollY >= startPoint) {
+          if (scrollY >= startPoint && scrollY <= endPoint) {
             quickContainer.querySelector(`[data-id="${id}"]`).classList.add('is-active')
           } else {
             quickContainer.querySelector(`[data-id="${id}"]`).classList.remove('is-active')
