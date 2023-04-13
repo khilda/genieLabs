@@ -55,7 +55,7 @@
         </header>
         <article class="detail-container">
           <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_nlp_01.png" alt="음성합성(TTS, Text-To-Speech)">
           </figure>
           <p class="txt mt40">
             음성합성(TTS, Text-To-Speech)은 텍스트를 음성으로 변환하는 기술입니다.
@@ -65,7 +65,7 @@
             음성을 생성할 수 있도록 연구하고 있습니다.
           </p>
           <figure class="img has-caption">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_nlp_02.png" alt="음성 합성의 기술 변화">
             <figcaption class="caption">음성 합성의 기술 변화</figcaption>
           </figure>
           <p class="txt mt40">
@@ -73,7 +73,7 @@
             그리고 Vocoder를 통해 스스로 학습하여 하나의 자연스러운 문장을 만들게 됩니다.
           </p>
           <figure class="img has-caption">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_nlp_03.png" alt="음성 합성의 Deep Learning 적용">
             <figcaption class="caption">음성 합성의 Deep Learning 적용</figcaption>
           </figure>
           <p class="txt mt40">
@@ -142,7 +142,7 @@
           </div>
           <p class="direction"></p>
           <div class="waveform-area">
-            <button id="waveformPlay">play</button>
+            <button class="btn-control play" id="waveformPlay"></button>
             <span class="title">여기 음성 UI 나오는 영역</span>
             <div id="waveform"></div>
           </div>
@@ -192,13 +192,13 @@
       })
 
       waveformBtnPlay.addEventListener('click', () => {
-        if (waveformBtnPlay.textContent === 'play') {
-          waveformBtnPlay.textContent = 'stop'
+        if (waveformBtnPlay.classList.contains('play')) {
           wavesurfer.play()
-        } else {
-          waveformBtnPlay.textContent = 'play'
+        } else if (waveformBtnPlay.classList.contains('stop')) {
           wavesurfer.playPause()
         }
+        waveformBtnPlay.classList.toggle('play')
+        waveformBtnPlay.classList.toggle('stop')
       })
     })
 
