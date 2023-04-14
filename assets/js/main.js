@@ -147,7 +147,7 @@ function confirmOpen(msg, callback) {
  */
 // card Bookmark
 function eventCardBookmark() {
-  document.querySelectorAll(".card-bookmark")?.forEach((boomark) => {
+  document.querySelectorAll(".btn-bookmark")?.forEach((boomark) => {
     boomark.addEventListener("click", (e) => {
       e.preventDefault();
       if (e.target.classList.contains("is-active")) {

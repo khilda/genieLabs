@@ -98,7 +98,18 @@
     }
   }
 }
-
+// bookmark
+.btn-bookmark {
+  background: no-repeat 50% 50%;
+  background-image: var(--card-icon-bookmark);
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  color: transparent;
+  &.is-active {
+    background-image: var(--card-icon-bookmark-active);
+  }
+}
 // 바로가기 버튼
 .btn-link {
   display: inline-flex;

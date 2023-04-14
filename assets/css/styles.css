@@ -1897,6 +1897,18 @@ textarea {
   background-image: url("../images/ico_btn_cmt_b.svg");
 }
 
+.btn-bookmark {
+  background: no-repeat 50% 50%;
+  background-image: var(--card-icon-bookmark);
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  color: transparent;
+}
+.btn-bookmark.is-active {
+  background-image: var(--card-icon-bookmark-active);
+}
+
 .btn-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3115,19 +3127,12 @@ textarea {
           flex: 0 0 auto;
   margin-left: auto;
 }
-.card .card-head .card-bookmark {
+.card .card-head .card-btn.btn-bookmark {
   position: absolute;
   top: 0;
   right: 0;
-  background: no-repeat 50% 50%;
-  background-image: var(--card-icon-bookmark);
   width: 120px;
   height: 120px;
-  font-size: 0;
-  color: transparent;
-}
-.card .card-head .card-bookmark.is-active {
-  background-image: var(--card-icon-bookmark-active);
 }
 .card .card-body {
   display: block;
@@ -4492,7 +4497,7 @@ code {
 .main .card-container .card .card-head {
   margin-bottom: 27px;
 }
-.main .card-container .card .card-head .card-bookmark {
+.main .card-container .card .card-head .card-btn.btn-bookmark {
   pointer-events: none;
 }
 .main .card-container .card .card-txt {
