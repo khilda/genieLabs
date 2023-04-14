@@ -221,13 +221,6 @@
 
 
 @include mobile {
-  article.multi-column {
-    flex-wrap: wrap;
-    .item {
-      flex-basis: 100%
-    }
-  }
-
   .sub-title-container {
     flex-wrap: wrap;
     .title {
@@ -236,6 +229,26 @@
     .btn-container {
       justify-content: flex-end;
       margin-top: 10px;
+    }
+  }
+
+  .waveform-area {
+    .title {
+      width: calc(100% - 60px)
+    }
+    #waveform {
+      width: 100%;
+      margin-left: 0;
+      flex: auto;
+    }
+  }
+}
+
+@include tablet {
+  article.multi-column {
+    flex-wrap: wrap;
+    .item {
+      flex-basis: 100%
     }
   }
 
@@ -254,17 +267,6 @@
     gap: 0;
     label {
       flex-basis: 100%
-    }
-  }
-
-  .waveform-area {
-    .title {
-      width: calc(100% - 60px)
-    }
-    #waveform {
-      width: 100%;
-      margin-left: 0;
-      flex: auto;
     }
   }
 }

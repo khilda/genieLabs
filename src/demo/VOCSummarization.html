@@ -40,6 +40,18 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
+        <div class="quick-container">
+          <div class="quick">
+            <p class="quick-title">Voc 상담 대화 요약</p>
+            <div class="quick-link">
+              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
+              <button type="button" data-id="demo" class="link sub">Demo</button>
+              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
+              <button type="button" data-id="research" class="link sub">Research</button>
+            </div>
+          </div>
+          <button type="button" class="quick-collapse"></button>
+        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">Voc 상담 대화 요약</h5>
@@ -47,7 +59,7 @@
               <dt class="badge-tit">연관 API</dt>
               <dd class="badge">Voc 상담 대화 요약</dd>
             </dl>
-            <p class="txt">
+            <p class="txt mt20">
               상담 대화문을 요약하여 상담사가 대화의 중요 내용을 알 수 있게 해주는 기술
             </p>
           </div>
@@ -68,9 +80,9 @@
             진행이 됩니다.
           </p>
           <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_voc_01.png" alt="">
           </figure>
-          <p class="txt pt10">
+          <p class="txt mt40">
             상담 대화 요약 생성 기술은 고객의 질의사항과 상담사의 응대를 적절하게 요약하는 문장을 생성합니다. 상담사는 다음 상담이 진행 될 때 이 전에 요약된 상담 결과를 보고 빠르게 히스토리를 이해하여
             응대 시간을 절약하고 더 효과적으로 응대할 수 있도록 합니다.
           </p>
@@ -108,9 +120,9 @@
             번 확인해야 되는 경우가 생기게 됩니다.
           </p>
           <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_voc_02.png" alt="">
           </figure>
-          <p class="txt">
+          <p class="txt mt40">
             KT 상담 요약 기술은 Large AI 모델의 풍부한 어휘 및 문장 생성 능력을 기반으로 하여 적은 데이터만으로도 대화의 중요 내용을 함축적으로 요약하고 자연스러운 문장을 생성하며, 서비스
             확장에 용이한 장점을 가지고 있습니다.
           </p>
@@ -122,7 +134,9 @@
                 효과적인 요약문 생성
               </p>
               <p class="item-txt">
-                풍부한 데이터를 가진 Large AI를 이용하여 서비스에 특화된 적은 데이터만으로도 효과적인 요약문 생성
+                풍부한 데이터를 가진 Large AI를 이용하<br />
+                여 서비스에 특화된 적은 데이터만으로도<br />
+                효과적인 요약문 생성
               </p>
             </div>
             <div class="item">
@@ -132,7 +146,9 @@
                 요약문 생성
               </p>
               <p class="item-txt">
-                Large AI 모델의 풍부한 어휘를 활용하여 대화문에 포함된 잘못된 어휘를 교정하고 적합한 형태의 요약문 생성
+                Large AI 모델의 풍부한 어휘를 활용하여<br />
+                대화문에 포함된 잘못된 어휘를 교정하고<br />
+                적합한 형태의 요약문 생성
               </p>
             </div>
             <div class="item">
@@ -142,11 +158,13 @@
                 자연스러운 요약문 생성
               </p>
               <p class="item-txt">
-                Large AI 모델의 Encoder 모델을 활용하여 문장의 특성을 파악하고, Decoder 모델을 통해 자연스러운 요약문 생성
+                Large AI 모델의 Encoder 모델을 활용하<br />
+                여 문장의 특성을 파악하고, Decoder 모<br />
+                델을 통해 자연스러운 요약문 생성
               </p>
             </div>
           </article>
-          <div class="sub-title-container mt20">
+          <div class="sub-title-container mt50">
             <h3 class="title">상담 대화 요약</h3>
             <div class="btn-container">
               <button type="button" class="btn-txt refresh">새로고침</button>
@@ -234,8 +252,7 @@
   <script defer src="../../assets/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const testOptions = document.querySelectorAll('input[name="option"]'),
-        optionsContent = document.querySelectorAll('.tab-item');
+      const testOptions = document.querySelectorAll('input[name="option"]');
 
       testOptions.forEach(option => {
         option.addEventListener('change', (e) => {
@@ -248,16 +265,6 @@
         })
       })
 
-      optionsContent.forEach(optionContent => {
-        const selectQuestion = optionContent.querySelector('select'),
-          inputQuestion = optionContent.querySelector('.question .edit-ipt'),
-          btnSummary = optionContent.querySelector('.question .btn')
-
-        btnSummary.addEventListener('click', (e) => {
-          console.log(`질문하기 : ${inputQuestion.value}`)
-        })
-
-      })
     })
   </script>
 </body>
