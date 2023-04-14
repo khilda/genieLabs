@@ -41,7 +41,7 @@
         <section class="container-content container-detail">
           <header class="section-title">
             <div class="title-container">
-              <h5 class="title">의도 분류(Fine Tuning)</h5>
+              <h5 class="title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique explicabo enim assumenda impedit harum quisquam ipsum delectus magnam quae nam quia pariatur dolor et excepturi, dolorem vero, dolorum sequi magni.</h5>
               <dl class="badge-container">
                 <dt class="badge-tit">사용 API</dt>
                 <dd class="badge-link">
@@ -70,7 +70,7 @@
                   <div class="select-box"></div>
                   <ul class="select-options"></ul>
                   <select class="select">
-                    <option value="Node.js" default>Node.js</option>
+                    <option value="Node.js" default>(Node.js)Axios</option>
                     <option value="java">java</option>
                     <option value="python">python</option>
                   </select>
@@ -78,7 +78,19 @@
                 <button type="button" class="btn-copy">Code Copy</button>
                 <p class="copy-tooltip">code가 복사 되었습니다.<br>원하는 곳에 붙여넣기 해주세요 (Ctrl+V)</p>
               </div>
-              <textarea id="codeMirror">
+              <div class="code-box">
+                <div class="h5 mb10">Request</div>
+                <textarea id="codeMirrorRequest">
+import json
+import requests 
+url = "https://aiapi.genielabs.ai/kt/nlp/emotion-analysis" 
+headers = { "x-client-key":f"{apiKey}", "x-client-signature":f"{signature}", "x-auth-timestamp": f"{timestamp}"], "Content-Type": "application/json", "charset": "utf-8", } 
+body = json.dumps({"user_id" : "NIPA", "data": [{"sentence" : "집도 없는 새끼가 무슨 차를 사냐?"}, {"sentence" : "와 진짜 잘한다. 우리나라에 그런 선수가 있다니 행복하네요."}]}) 
+response = requests.post(url,</textarea>
+              </div>
+              <div class="code-box mt20">
+                <div class="h5 mb10">Response</div>
+                <textarea id="codeMirrorResponse">
 {
   "code":"200",
   "message":"Success",
@@ -95,8 +107,8 @@
       "confidences": { "normal": 1.0, "toxic": 0.0 }
     }
   ]
-}
-              </textarea>
+}</textarea>
+              </div>
             </div>
           </article>
         </section>
@@ -118,16 +130,23 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const editor = CodeMirror.fromTextArea(document.getElementById("codeMirror"), {
+        const request = CodeMirror.fromTextArea(document.getElementById("codeMirrorRequest"), {
           lineNumbers: true,
           mode: "text/html",
-          matchBrackets: true
+          matchBrackets: true,
+          readOnly: true,
+        });
+        CodeMirror.fromTextArea(document.getElementById("codeMirrorResponse"), {
+          lineNumbers: true,
+          mode: "text/html",
+          matchBrackets: true,
+          readOnly: true,
         });
         // 소스 복사하기
         const btnCopy = document.querySelector('.btn-copy')
         btnCopy.addEventListener('click', (e) => {
           if (e.which == 1) {
-            navigator.clipboard.writeText(editor.getValue());
+            navigator.clipboard.writeText(request.getValue());
             const tooltip = e.target.nextElementSibling
             tooltip.classList.add('is-show')
             setTimeout(() => {

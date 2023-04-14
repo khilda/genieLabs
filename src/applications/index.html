@@ -243,12 +243,9 @@
           <div class="card-container">
             <div class="card-title">
               <h5 class="title-tit">전체 서비스</h5>
-              <div class="select-container filter-select">
-                <div class="select-box" data-selected="최신순"></div>
-                <ul class="select-options">
-                  <li class="select-option" data-value="123"></li>
-                  <li class="select-option" data-value="345"></li>
-                </ul>
+              <div class="select-container">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
                 <select class="select">
                   <option value="Voice AI" default>최신순</option>
                   <option value="123">조회순</option>
@@ -510,6 +507,14 @@
                 </div>
               </a>
             </div>
+          </div>
+          <div class="pagination">
+            <button type="button" class="page-item first" disabled>처음으로</button>
+            <button type="button" class="page-item prev" disabled>이전으로</button>
+            <button type="button" class="page-item is-active">1</button>
+            <button type="button" class="page-item">2</button>
+            <button type="button" class="page-item next">다음으로</button>
+            <button type="button" class="page-item last">끝으로</button>
           </div>
         </section>
       </main>

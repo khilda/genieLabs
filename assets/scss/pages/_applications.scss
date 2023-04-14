@@ -5,6 +5,12 @@
   .card-swiper-container {
     position: relative;
   }
+  .card-title .select-container {
+    margin-left: auto;
+    @include mobile {
+      width: 100%;
+    }
+  }
   .title-link-box {
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +28,15 @@
     .title-link-box .link {
       width: 100%;
       justify-content: flex-start;
+    }
+  }
+  .section-title .author{
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    color: #787878;
+    > dt {
+      line-height: 26px;
     }
   }
 }
