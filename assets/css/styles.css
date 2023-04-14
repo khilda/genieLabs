@@ -2319,6 +2319,8 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
 .container-detail .section-title .func-container {
@@ -2329,6 +2331,9 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+}
+.container-detail .section-title .btn-bookmark {
+  margin: 0 auto;
 }
 .container-detail .section-title .chk .chk-label {
   font-size: 20px;
