@@ -14,8 +14,8 @@
   &.cancel {
     background-color: #929292;
   }
-  &:disabled{
-    opacity: .8;
+  &:disabled {
+    opacity: 0.8;
   }
 }
 // 텍스트 아이콘
@@ -127,6 +127,7 @@
   text-align: center;
   &::after {
     content: "";
+    flex: none;
     display: block;
     width: 24px;
     height: 24px;

@@ -1650,6 +1650,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 13px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1689,6 +1692,12 @@ textarea {
   height: 20px;
 }
 
+@media (max-width: 742px) {
+  .breadcrumb .breadcrumb-link {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
 :root {
   --badge-white-background: #fff;
   --badge-outline-border: #000;
@@ -1935,6 +1944,9 @@ textarea {
 }
 .btn-link::after {
   content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   display: block;
   width: 24px;
   height: 24px;
@@ -4867,8 +4879,12 @@ code {
   padding: 20px;
   border-radius: 15px;
   background-color: #f4f4f4;
+  gap: 10px;
 }
 .demo .waveform-area .btn-control {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   width: 40px;
   height: 40px;
 }
@@ -4982,7 +4998,7 @@ code {
 }
 .demo .list-user-data .list-item .data {
   padding-left: 32px;
-  background: url("../images/ico_btn_mod.svg") no-repeat 0% 0%;
+  background: url("../images/ico_btn_mod.svg") no-repeat 0 50%;
 }
 .demo .list-user-data .list-item .controls {
   margin-left: auto;
@@ -5043,31 +5059,6 @@ code {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 742px) {
-  .demo .sub-title-container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .demo .sub-title-container .title {
-    width: 100%;
-  }
-  .demo .sub-title-container .btn-container {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-top: 10px;
-  }
-  .demo .waveform-area .title {
-    width: calc(100% - 60px);
-  }
-  .demo .waveform-area .waveform {
-    width: 100%;
-    margin-left: 0;
-    -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
-  }
-}
 @media (max-width: 1439px) {
   .demo article.multi-column {
     -ms-flex-wrap: wrap;
@@ -5099,6 +5090,15 @@ code {
   .demo .list-info .list-item .title .txt br {
     display: none;
   }
+  .demo .list-user-data .list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .demo .list-user-data .controls {
+    margin-top: 10px;
+  }
   .demo .selector-option {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -5128,6 +5128,68 @@ code {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
+  }
+  .demo .rdo-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .demo .rdo-btn-container .btn {
+    margin-left: auto;
+  }
+}
+@media (max-width: 742px) {
+  .demo .sub-title-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .demo .sub-title-container .title {
+    width: 100%;
+  }
+  .demo .sub-title-container .btn-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .demo .waveform-area .title {
+    width: calc(100% - 60px);
+  }
+  .demo .waveform-area .waveform {
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+  .demo .info-btn-container .btn {
+    width: 100%;
+  }
+  .demo .ipt-container.question {
+    margin-top: 5px;
+  }
+  .demo .wave-btn {
+    width: 100%;
+  }
+  .demo .direction {
+    padding: 0;
+    margin: 20px 0;
+  }
+  .demo .rdo-btn-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .demo .rdo-btn-container .rdo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .demo .rdo-btn-container .btn {
+    width: 100%;
   }
 }
 

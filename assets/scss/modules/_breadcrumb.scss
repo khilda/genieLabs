@@ -1,5 +1,6 @@
 .breadcrumb {
   display: flex;
+  align-items: center;
   gap: 13px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -36,5 +37,11 @@
       width: 18px;
       height: 20px;
     }
+  }
+}
+@include mobile{
+  .breadcrumb .breadcrumb-link{
+    font-size: 16px;
+    line-height: 1.2;
   }
 }
