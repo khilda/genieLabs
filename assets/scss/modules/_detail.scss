@@ -17,6 +17,7 @@
       gap: 10px;
       .badge-link {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
       }
     }
@@ -24,6 +25,9 @@
       flex: none;
       display: flex;
       gap: 20px;
+    }
+    .btn-bookmark{
+      margin:0 auto ;
     }
     .chk {
       .chk-label {
