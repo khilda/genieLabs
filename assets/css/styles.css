@@ -1325,6 +1325,7 @@ textarea {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-color: #ededed;
   max-width: 1392px;
   margin: 0 auto;
   padding-top: 60px;
@@ -4488,6 +4489,10 @@ code {
   --visual-link-icon-hover: url("../images/btn_ico_guide.svg");
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
+}
+
+.main .footer {
+  background-color: transparent;
 }
 
 .main .visual-container {

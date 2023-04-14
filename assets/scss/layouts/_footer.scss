@@ -8,11 +8,13 @@
   --footer-color: #787878;
   --footer-policy-color: #fff;
 }
+
 .footer {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #ededed;
   max-width: 1392px;
   margin: 0 auto;
   padding-top: 60px;
