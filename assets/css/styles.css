@@ -1855,6 +1855,9 @@ textarea {
 .btn-txt.link:before {
   background-image: url("../images/ico_btn_chain.svg");
 }
+.btn-txt.refresh:before {
+  background-image: url("../images/ico_btn_refresh.svg");
+}
 
 .btn-ico {
   position: relative;
@@ -2869,6 +2872,8 @@ textarea {
   left: 0;
   width: 100%;
   z-index: 99;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 .select-container .select-options .select-option {
   background: #f4f4f4;
