@@ -40,10 +40,22 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
+        <div class="quick-container">
+          <div class="quick">
+            <p class="quick-title">Home Twin Modeling</p>
+            <div class="quick-link">
+              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
+              <button type="button" data-id="demo" class="link sub">Demo</button>
+              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
+              <button type="button" data-id="research" class="link sub">Research</button>
+            </div>
+          </div>
+          <button type="button" class="quick-collapse"></button>
+        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">Home Twin Modeling</h5>
-            <p class="txt">
+            <p class="txt mt20">
               도면 입력으로 메타버스에 우리집과 동일한 공간 모델을 생성하는 기술
             </p>
           </div>
@@ -56,7 +68,7 @@
             홈트윈 모델링 기술은 현실의 공간을 도면 입력만으로 메타버스 세계에 복제하는 기술로, 2D 도면을 입력하면 공간의 구조와 의미, 사물 배치를 분석하여 상호작용이 가능한 3D 트윈 공간을 생성하는
             기술입니다.
           </p>
-          <figure class="img has-caption">
+          <figure class="img has-caption mt50">
             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
             <figcaption class="caption mt10">[Home Twin Modeling 개요]</figcaption>
           </figure>
@@ -64,18 +76,20 @@
             입력된 도면을 AI 기술로 분석하여 건물 구조, 방 타입, 문/창 등의 구조를 파악하고 배치된 사물들의 특징을 인식합니다. 분석된 도면을 3D 모델링에 적합한 벡터 형태로 변환하고 구조 변경이
             편리한 타일 기반의 모델링 기법으로 렌더링합니다. 생성된 공간은 아바타와 상호작용이 가능한 사용자가 손쉽게 변경이 가능하여 메타버스에서 활용이 가능합니다.
           </p>
-          <figure class="img has-caption">
+          <figure class="img has-caption mt50">
             <img src="https://placehold.co/700x400/EEE/31343C" alt="">
             <figcaption class="caption mt10">[Home Twin Modeling 구성]</figcaption>
           </figure>
-          <article class="multi-column dbl mt60">
+          <article class="multi-column mt60">
             <div class="item">
               <p class="item-num">01</p>
               <p class="item-title">
                 Meta Space
               </p>
               <p class="item-txt">
-                메타버스 공간 생성에 최적화되어 있어 아바타와 상호작용(문, 가구 이용 등)이 가능하고 공간 스타일 편집이 용이합니다.
+                메타버스 공간 생성에 최적화되어 있어 아<br />
+                바타와 상호작용(문, 가구 이용 등)이 가능<br />
+                하고 공간 스타일 편집이 용이합니다.
               </p>
             </div>
             <div class="item">
@@ -84,7 +98,9 @@
                 Vector Graph
               </p>
               <p class="item-txt">
-                공간을 그래프 구조(에지-노드)로 재해석하여 정확도를 높이고 방단위로 구분, 편집이 가능합니다.
+                공간을 그래프 구조(에지-노드)로 재해석<br />
+                하여 정확도를 높이고 방단위로 구분, 편<br />
+                집이 가능합니다.
               </p>
             </div>
             <div class="item">
@@ -93,13 +109,13 @@
                 3D Object
               </p>
               <p class="item-txt">
-                도면 심볼 인식으로 주방, 빌트인 등이
-                자동 생성되고
+                도면 심볼 인식으로 주방, 빌트인 등이<br />
+                자동 생성되고<br />
                 추가 가구 배치가 가능합니다.
               </p>
             </div>
           </article>
-          <div class="sub-title-container mt20">
+          <div class="sub-title-container mt50">
             <h3 class="title">홈 트윈</h3>
             <div class="btn-container">
               <button type="button" class="btn-txt refresh">새로고침</button>
@@ -126,7 +142,7 @@
             </div>
             <div class="result-item">
               <h5 class="title-gray">결과</h5>
-              <div class="textarea-container">
+              <div class="textarea-container dbl">
                 <textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
                 <textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
               </div>
