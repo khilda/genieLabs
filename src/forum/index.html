@@ -54,7 +54,8 @@
               <div class="select-box"></div>
               <ul class="select-options"></ul>
               <select class="select">
-                <option value="0" default>Voice API</option>
+                <option value="" default>전체</option>
+                <option value="0">Voice API</option>
                 <option value="1">NLP API</option>
                 <option value="2">Vision API</option>
                 <option value="3">Industry API</option>
@@ -66,7 +67,6 @@
               <input type="text" class="search-ipt" placeholder="검색어를 입력해주세요" />
               <button type="button" class="search-btn">검색하기</button>
             </div>
-            <!-- S : 0413 html 수정 -->
             <div class="search-filter">
               <div class="select-container count-select">
                 <div class="select-box"></div>
@@ -114,10 +114,29 @@
                   <p class="board-link-detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolores tenetur possimus labore necessitatibus perspiciatis, illum molestiae saepe ducimus beatae sit</p>
                 </div>
                 <div class="link-grid" data-column="view">
-                  <p class="board-view hits"><span class="count">123</span></p>
+                  <p class="board-view hits"><span class="count">123123</span></p>
                 </div>
                 <div class="link-grid" data-column="comment">
-                  <p class="board-view comment"><span class="count">123</span></p>
+                  <p class="board-view comment"><span class="count">123123123</span></p>
+                </div>
+                <div class="link-grid" data-column="auth">홍길동</div>
+                <div class="link-grid" data-column="date">2023.01.12</div>
+              </a>
+              <!-- E: 게시글 link -->
+              <!-- S: 게시글 link -->
+              <a href="./detailForum.html" class="board-link">
+                <div class="link-grid" data-column="category">
+                  <em class="badge">NPL AI</em>
+                </div>
+                <div class="link-grid" data-column="content">
+                  <h4 class="board-link-title">타이틀</h4>
+                  <p class="board-link-detail">상세보기</p>
+                </div>
+                <div class="link-grid" data-column="view">
+                  <p class="board-view hits"><span class="count">0</span></p>
+                </div>
+                <div class="link-grid" data-column="comment">
+                  <p class="board-view comment"><span class="count">0</span></p>
                 </div>
                 <div class="link-grid" data-column="auth">홍길동</div>
                 <div class="link-grid" data-column="date">2023.01.12</div>
@@ -125,7 +144,6 @@
               <!-- E: 게시글 link -->
             </div>
           </article>
-          <!-- E : 0413 html 수정 -->
           <!-- Mobile일때 page-item max 3개까지 -->
           <div class="pagination">
             <button type="button" class="page-item first" disabled>처음으로</button>

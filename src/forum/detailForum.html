@@ -96,9 +96,7 @@
               <div class="ipt-container">
                 <input type="text" class="ipt comment-ipt" />
                 <div class="btn-container">
-                  <!-- S : 0413 : disabled 추가 -->
                   <button type="button" class="btn" disabled>댓글</button>
-                  <!-- E : 0413 : disabled 추가 -->
                 </div>
               </div>
             </div>
@@ -135,10 +133,8 @@
                     <div class="ipt-container">
                       <input type="text" class="ipt cmt-ipt" />
                       <div class="btn-container">
-                        <!-- S : 0413 disabled 추가 -->
                         <button type="button" class="btn cancel" disabled>취소</button>
                         <button type="button" class="btn" disabled>답글</button>
-                        <!-- E : 0413 disabled 추가 -->
                       </div>
                     </div>
                   </div>
@@ -240,10 +236,8 @@
                     <div class="ipt-container">
                       <input type="text" class="ipt cmt-ipt" />
                       <div class="btn-container">
-                        <!-- S : 0413 disabled 추가 -->
                         <button type="button" class="btn cancel" disabled>취소</button>
                         <button type="button" class="btn" disabled>답글</button>
-                        <!-- E : 0413 disabled 추가 -->
                       </div>
                     </div>
                   </div>
@@ -303,10 +297,8 @@
                     <div class="ipt-container">
                       <input type="text" class="ipt cmt-ipt" />
                       <div class="btn-container">
-                        <!-- S : 0413 disabled 추가 -->
                         <button type="button" class="btn cancel" disabled>취소</button>
                         <button type="button" class="btn" disabled>답글</button>
-                        <!-- E : 0413 disabled 추가 -->
                       </div>
                     </div>
                   </div>
@@ -332,8 +324,17 @@
       </footer>
     </div>
     <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
     <script src="../../assets/js/lib/jquery-fileDownload.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script>
+      // 게시글 삭제버튼
+      document.querySelector('.form-detail-footer .btn-txt.del').addEventListener('click', (e) => {
+        confirmOpen("삭제하시겠습니까?", (result) => {
+          console.log(result);
+        });
+      })
+    </script>
   </body>
 
 </html>

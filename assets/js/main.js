@@ -283,6 +283,25 @@ function eventCmt() {
           console.log(result);
         });
       }
+      // 수정모드에서 저장하기
+      if (_target.classList.value === "btn-txt regist") {
+        console.log("수정모드에서 저장하기");
+        _cmtContainer.classList.remove("is-edit");
+        const cmtContent = _cmtContainer.querySelector(".txt-edit").value;
+        _cmtContainer.querySelector(".txt").innerText = cmtContent;
+        if (_target.nextElementSibling.classList.contains("mod")) {
+          _target.style.display = "none";
+          _target.nextElementSibling.removeAttribute("style");
+        }
+      }
+      // 수정모드에서 삭제하기
+      if (_target.classList.value === "btn-txt del") {
+        console.log("수정모드에서 삭제하기");
+        confirmOpen("삭제하시겠습니까?", (result) => {
+          console.log(result);
+        });
+        _cmtContainer.classList.remove("is-edit");
+      }
       // 답글모드에서 수정하기
       if (_target.classList.value === "btn-txt mod") {
         console.log("답글모드에서 수정하기");
@@ -293,17 +312,6 @@ function eventCmt() {
         if (_target.previousElementSibling.classList.contains("regist")) {
           _target.style.display = "none";
           _target.previousElementSibling.removeAttribute("style");
-        }
-      }
-      // 수정모드에서 저장하기
-      if (_target.classList.value === "btn-txt regist") {
-        console.log("수정모드에서 저장하기");
-        _cmtContainer.classList.remove("is-edit");
-        const cmtContent = _cmtContainer.querySelector(".txt-edit").value;
-        _cmtContainer.querySelector(".txt").innerText = cmtContent;
-        if (_target.nextElementSibling.classList.contains("mod")) {
-          _target.style.display = "none";
-          _target.nextElementSibling.removeAttribute("style");
         }
       }
       // 답글모드에서 취소하기
