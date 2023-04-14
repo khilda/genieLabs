@@ -1,7 +1,16 @@
+// import loadScript
+function loadScript(url) {
+	var script = document.createElement('script');
+	script.src = url;
+	document.querySelector('head').insertAdjacentElement('beforeend', script);
+}
+
 /**
  * Common Func
  */
 document.addEventListener("DOMContentLoaded", () => {
+  const sweerAlert2 = '../../assets/js/lib/sweetalert2.min.js'
+  loadScript(sweerAlert2);
   eventHeader();
   eventQuickToggle();
   eventQuickScroll();
