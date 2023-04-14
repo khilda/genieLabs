@@ -144,6 +144,9 @@
         list-style-position: inside;
         text-indent: -25px;
       }
+      .indent {
+        text-indent: 20px;
+      }
     }
     & + .list-item {
       margin-top: 30px;
@@ -233,6 +236,16 @@
     .btn-container {
       justify-content: flex-end;
       margin-top: 10px;
+    }
+  }
+
+  .list-info {
+    .list-item {
+      flex-direction: column;
+      gap: 10px 0;
+      .title {
+        flex-basis: auto;
+      }
     }
   }
 
