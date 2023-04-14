@@ -2802,7 +2802,7 @@ textarea {
 .select-container {
   display: inline-block;
   position: relative;
-  width: 100%;
+  width: 250px;
   font-size: 16px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -3695,12 +3695,12 @@ textarea {
 @media (max-width: 1624px) {
   .swiper-button-prev,
   .swiper-button-next {
-    opacity: 0;
+    display: none;
   }
 }
 @media (min-width: 1440px) {
   .swiper-pagination {
-    opacity: 0;
+    display: none;
   }
 }
 .fileUpload-container {
@@ -5039,6 +5039,14 @@ code {
 .applications .card-swiper-container {
   position: relative;
 }
+.applications .card-title .select-container {
+  margin-left: auto;
+}
+@media (max-width: 742px) {
+  .applications .card-title .select-container {
+    width: 100%;
+  }
+}
 .applications .title-link-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5064,6 +5072,17 @@ code {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+.applications .section-title .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  color: #787878;
+}
+.applications .section-title .author > dt {
+  line-height: 26px;
 }
 
 @media (min-width: 1440px) {

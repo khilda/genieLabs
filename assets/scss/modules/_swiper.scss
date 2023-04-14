@@ -22,11 +22,11 @@
 @media (max-width: 1624px) {
   .swiper-button-prev,
   .swiper-button-next {
-    opacity: 0;
+    display: none;
   }
 }
 @include desktop {
   .swiper-pagination {
-    opacity: 0;
+    display: none;
   }
 }
