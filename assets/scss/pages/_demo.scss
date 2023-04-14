@@ -257,7 +257,15 @@
       flex-direction: column;
       gap: 10px 0;
       .title {
+        flex-direction: row;
         flex-basis: auto;
+        gap: 0 10px;
+        .txt {
+          margin-top: 0;
+          br {
+            display: none;
+          }
+        }
       }
     }
   }

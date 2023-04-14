@@ -40,6 +40,18 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
+        <div class="quick-container">
+          <div class="quick">
+            <p class="quick-title">의도 분류 (Fine Tuning)</p>
+            <div class="quick-link">
+              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
+              <button type="button" data-id="demo" class="link sub">Demo</button>
+              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
+              <button type="button" data-id="research" class="link sub">Research</button>
+            </div>
+          </div>
+          <button type="button" class="quick-collapse"></button>
+        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">의도 분류 (Fine Tuning)</h5>
@@ -49,7 +61,7 @@
               <dd class="badge">의도 분류 (Fine Tuning)​</dd>
             </dl>
             <p class="txt mt20">
-              질문을 이해하고, 주어진 문서에서 최적화된 정답을 찾아내는 기술
+              대규모 언어 데이터 신경망에 기반하여 파악하고자 하는 의도 문장을 학습시키고 분류하는 기술
             </p>
           </div>
           <div class="func-container">
@@ -64,11 +76,11 @@
             KT 의도 분류는 대규모 신경망에 기반하여 확률적 의도 해석을 진행하기 때문에 발화 실수나
             인식 오류에도 강건한 기술입니다.
           </p>
-          <figure class="img has-caption">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+          <figure class="img has-caption mt50">
+            <img src="../../assets/images/img_demo_fine_01.png" alt="">
             <figcaption class="caption mt10">챗봇/보이스봇에서의 자연어처리</figcaption>
           </figure>
-          <p class="txt">
+          <p class="txt mt50">
             KT 의도 분류 기술은 다음과 같은 특징을 가지고 있습니다.
           </p>
           <article class="list-info">
@@ -119,11 +131,11 @@
               </div>
             </div>
           </article>
-          <figure class="img has-caption">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+          <figure class="img has-caption mt50">
+            <img src="../../assets/images/img_demo_fine_02.png" alt="">
             <figcaption class="caption mt10">의도 분류 학습 과정</figcaption>
           </figure>
-          <article class="multi-column tri mt60">
+          <article class="multi-column tri mt70">
             <div class="item">
               <p class="item-num">01</p>
               <p class="item-title">챗봇/보이스복 특화
@@ -185,7 +197,7 @@
           </div>
           <div class="ipt-container question">
             <input id="userInput2" type="text" class="ipt edit-ipt" placeholder="기우는 민혁이한테 뭘 선물로 받았어?" />
-            <button id="userRequest" type="button" class="btn">질문하기</button>
+            <button id="userRequest" type="button" class="btn">의도추론</button>
           </div>
           <p class="direction"></p>
           <h5 class="title-gray">정답</h5>
@@ -207,7 +219,6 @@
       </div>
     </footer>
   </div>
-  <script defer src="https://unpkg.com/wavesurfer.js"></script>
   <script defer src="../../assets/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
