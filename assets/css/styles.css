@@ -4118,7 +4118,7 @@ textarea {
 .empty-container::before {
   content: "";
   display: block;
-  background: transparent no-repeat 50% 50%;
+  background: transparent no-repeat 50% 50%/cover;
   background-image: url("../images/ico_empty.svg");
   width: 60px;
   height: 60px;
@@ -4127,10 +4127,11 @@ textarea {
 @media (max-width: 742px) {
   .empty-container {
     font-size: 16px;
+    gap: 10px;
   }
   .empty-container::before {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 }
 .loading {
@@ -4599,6 +4600,7 @@ code {
   }
   .main .card-container {
     padding: 0 27px;
+    overflow: hidden;
   }
   .main .card-container .card-title .title-tit {
     font-size: 24px;
