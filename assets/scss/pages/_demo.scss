@@ -212,9 +212,26 @@
   display: flex;
   gap: 0 20px;
   & .result-item {
-    flex-basis: calc((100% - 20px) / 2);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(100% / 2);
+    // flex-basis: calc((100% - 20px) / 2);
+    .img {
+      flex: 1;
+    }
     .textarea {
       height: 450px;
+    }
+    .select-container {
+      margin-bottom: 8px;
+    }
+    .dbl {
+      .textarea:nth-child(1) {
+        height: 200px;
+      }
+      .textarea:nth-child(2) {
+        height: 300px;
+      }
     }
   }
 }

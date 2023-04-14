@@ -40,10 +40,22 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
+        <div class="quick-container">
+          <div class="quick">
+            <p class="quick-title">음식 검출 및 분류</p>
+            <div class="quick-link">
+              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
+              <button type="button" data-id="demo" class="link sub">Demo</button>
+              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
+              <button type="button" data-id="research" class="link sub">Research</button>
+            </div>
+          </div>
+          <button type="button" class="quick-collapse"></button>
+        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">음식 검출 및 분류</h5>
-            <p class="txt">
+            <p class="txt mt20">
               이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술
             </p>
           </div>
@@ -81,7 +93,8 @@
                 하이브리드형 분류 모델
               </p>
               <p class="item-txt">
-                합성곱 신경망만을 이용한 분류 모델이 아닌 트랜스포머 구조를 결합하여 하이브리드형 모델을 적용하여 더 높은 인식률을 달성합니다.
+                합성곱 신경망만을 이용한 분류 모델이 아닌 트랜스포머 구조를 결합<br />
+                하여 하이브리드형 모델을 적용하여 더 높은 인식률을 달성합니다.
               </p>
             </div>
             <div class="item">
@@ -90,7 +103,8 @@
                 모델 경량화
               </p>
               <p class="item-txt">
-                무거운 엔진이 아닌 경량화된 모델로 빠른 검출 및 분류 속도와 동시에 높은 인식률을 달성하였습니다.
+                무거운 엔진이 아닌 경량화된 모델로 빠른 검출 및 분류 속도와 동시<br />
+                에 높은 인식률을 달성하였습니다.
               </p>
             </div>
           </article>
@@ -121,11 +135,10 @@
             </div>
             <div class="result-item">
               <h5 class="title-gray">결과</h5>
-              <div class="textarea-container">
-                <textarea name="" id="" cols="30" rows="10"
+              <div class="textarea-container dbl"><textarea name="" id="" cols="30" rows="10"
                   class="textarea">코드 나오는 결과 영역</textarea>
                 <textarea name="" id="" cols="30" rows="10"
-                  class="textarea">코드 나오는 결과 영역</textarea>
+                  class="textarea mt0">코드 나오는 결과 영역</textarea>
               </div>
             </div>
           </div>
