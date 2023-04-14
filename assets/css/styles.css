@@ -3221,15 +3221,15 @@ textarea {
           align-items: flex-start;
   gap: 5px;
 }
-.card .card-foot .foot-api .badge:first-child:hover {
+.card .card-foot .foot-api.has-tooltip .badge:first-child:hover {
   background-color: #1f1f1f;
   color: #fff;
 }
-.card .card-foot .foot-api .badge:first-child:hover ~ .badge-tooltip {
+.card .card-foot .foot-api.has-tooltip .badge:first-child:hover ~ .badge-tooltip {
   opacity: 1;
   z-index: 5;
 }
-.card .card-foot .foot-api .badge-tooltip {
+.card .card-foot .foot-api.has-tooltip .badge-tooltip {
   position: absolute;
   top: -35px;
   background-color: #1f1f1f;
@@ -3243,7 +3243,7 @@ textarea {
   opacity: 0;
   z-index: -1;
 }
-.card .card-foot .foot-api .badge-tooltip::after {
+.card .card-foot .foot-api.has-tooltip .badge-tooltip::after {
   content: "";
   position: absolute;
   bottom: -3px;

@@ -121,36 +121,38 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 5px;
-      .badge:first-child:hover {
-        background-color: #1f1f1f;
-        color: #fff;
-        & ~ .badge-tooltip {
-          opacity: 1;
-          z-index: 5;
-        }
-      }
-      .badge-tooltip {
-        position: absolute;
-        top: -35px;
-        background-color: #1f1f1f;
-        padding: 5px 10px;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.2;
-        color: #fff;
-        transition: opacity 0.3s;
-        opacity: 0;
-        z-index: -1;
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -3px;
-          left: calc(50% - 2px);
-          display: block;
+      &.has-tooltip {
+        .badge:first-child:hover {
           background-color: #1f1f1f;
-          width: 5px;
-          height: 5px;
-          transform: rotate(45deg);
+          color: #fff;
+          & ~ .badge-tooltip {
+            opacity: 1;
+            z-index: 5;
+          }
+        }
+        .badge-tooltip {
+          position: absolute;
+          top: -35px;
+          background-color: #1f1f1f;
+          padding: 5px 10px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.2;
+          color: #fff;
+          transition: opacity 0.3s;
+          opacity: 0;
+          z-index: -1;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: calc(50% - 2px);
+            display: block;
+            background-color: #1f1f1f;
+            width: 5px;
+            height: 5px;
+            transform: rotate(45deg);
+          }
         }
       }
     }
