@@ -71,12 +71,21 @@
 
 .direction {
   position: relative;
-  height: 8px;
+  height: 40px;
+  padding: 10px 0;
   margin: 40px 0;
-  background: #000000;
-  &::after {
-    content: "";
-    position: absolute;
+  background: url("../images/ico_direction.svg") no-repeat 50% 50%;
+}
+
+.waveform-container {
+  display: flex;
+  gap: 0 30px;
+  .waveform-area {
+    flex: 1;
+  }
+
+  & + & {
+    margin-top: 20px;
   }
 }
 
@@ -101,7 +110,7 @@
     font-weight: 500;
     line-height: 40px;
   }
-  #waveform {
+  .waveform {
     margin-left: 20px;
     flex: 1;
   }
@@ -237,6 +246,7 @@
 }
 
 
+
 @include mobile {
   .sub-title-container {
     flex-wrap: wrap;
@@ -253,7 +263,7 @@
     .title {
       width: calc(100% - 60px)
     }
-    #waveform {
+    .waveform {
       width: 100%;
       margin-left: 0;
       flex: auto;
@@ -297,5 +307,10 @@
 
   .result-multi {
     flex-direction: column;
+  }
+
+  .waveform-container {
+    flex-direction: column;
+    gap: 10px 0;
   }
 }

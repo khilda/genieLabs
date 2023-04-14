@@ -156,7 +156,7 @@
           <div class="waveform-area">
             <button class="btn-control play" id="waveformPlay"></button>
             <span class="title">여기 음성 UI 나오는 영역</span>
-            <div id="waveform"></div>
+            <div class="waveform"></div>
           </div>
         </article>
       </section>
@@ -194,7 +194,7 @@
       
       // waveform setting
       const wavesurfer = WaveSurfer.create({
-        container: '#waveform',
+        container: '.waveform',
         height: 40,
         hideScrollbar: true,
       });
