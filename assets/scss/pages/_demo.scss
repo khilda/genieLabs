@@ -14,7 +14,7 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 26px;
-      color: #00d1ff
+      color: #00d1ff;
     }
     &-title {
       margin-top: 20px;
@@ -43,30 +43,32 @@
 .selector-option {
   display: flex;
   gap: 0 35px;
-    label {
-      display: flex;
-      justify-content: center;
-      width: calc((100% - 35px) / 2);
-      min-height: 150px;
-      padding: 30px 0;
-      user-select: none;
-      .ico-text {
-        padding-top: 70px;
-        background: url("../images/img_demo_text.svg") no-repeat 50% 0%;
-        text-align: center;
-      }
+  label {
+    display: flex;
+    justify-content: center;
+    width: calc((100% - 35px) / 2);
+    min-height: 150px;
+    padding: 30px 0;
+    user-select: none;
+    cursor: pointer;
+    .ico-text {
+      padding-top: 70px;
+      background: url("../images/img_demo_text.svg") no-repeat 50% 0%;
+      text-align: center;
+      max-width: 300px;
     }
-    input[type=radio] {
-      display: none;
-    }
-    input:checked + label {
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input:checked + label {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 
-      .ico-text {
-        background: url("../images/img_demo_text_active.svg") no-repeat 50% 0%;
-        font-weight: 700;
-      }
+    .ico-text {
+      background: url("../images/img_demo_text_active.svg") no-repeat 50% 0%;
+      font-weight: 700;
     }
+  }
 }
 
 .direction {
@@ -197,7 +199,7 @@
       background: url("../images/ico_btn_mod.svg") no-repeat 0% 0%;
     }
     .controls {
-      margin-left: auto;;
+      margin-left: auto;
     }
   }
 }
@@ -245,13 +247,11 @@
   }
 }
 
-
-
 @include mobile {
   .sub-title-container {
     flex-wrap: wrap;
     .title {
-      width: 100%
+      width: 100%;
     }
     .btn-container {
       justify-content: flex-end;
@@ -261,7 +261,7 @@
 
   .waveform-area {
     .title {
-      width: calc(100% - 60px)
+      width: calc(100% - 60px);
     }
     .waveform {
       width: 100%;
@@ -275,7 +275,7 @@
   article.multi-column {
     flex-wrap: wrap;
     .item {
-      flex-basis: 100%
+      flex-basis: 100%;
     }
   }
 
@@ -301,7 +301,7 @@
     flex-wrap: wrap;
     gap: 0;
     label {
-      flex-basis: 100%
+      flex-basis: 100%;
     }
   }
 
