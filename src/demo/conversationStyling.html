@@ -148,9 +148,19 @@
       </div>
     </footer>
   </div>
-  <script defer type="module" src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script  src="../../assets/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Demo바로가기 click 이벤트 걸기
+        eventLinkTo({
+          className: '.btn-link',
+          msg: "GenieLabs의 해당AI 분류 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          callback: (result, target) => {
+            console.log(result, target.dataset.url)
+          }
+        })
+
       const selectorWrapper = document.querySelector('.selector-option'),
             selectors = selectorWrapper.querySelectorAll('input');
             

@@ -168,14 +168,6 @@
       text-align: left;
     }
   }
-  .collapse-list {
-    .board-link {
-      grid-template-rows: repeat(1, 46px);
-    }
-    .collapse .board-link {
-      grid-template-rows: auto;
-    }
-  }
   .collapse {
     display: none;
     border-top: 1px solid transparent;
@@ -185,7 +177,6 @@
       border-color: #000;
     }
     .collapse-content {
-      grid-template-rows: auto;
       text-align: left;
     }
     .collapse-title {
@@ -238,8 +229,21 @@
         @include ellipsis(2);
       }
     }
-    .collapse.is-collapse {
-      display: grid;
+    .collapse-list {
+      .board-link {
+        grid-template-rows: repeat(1, 46px);
+      }
+      .collapse .board-link {
+        grid-template-rows: auto;
+      }
+    }
+    .collapse {
+      &.is-collapse {
+        display: grid;
+      }
+      .collapse-content {
+        grid-template-rows: auto;
+      }
     }
   }
 }
@@ -286,8 +290,11 @@
         background-image: var(--card-icon-commnet);
       }
     }
-    .collapse.is-collapse {
-      display: flex;
+    .collapse {
+      &.is-collapse {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

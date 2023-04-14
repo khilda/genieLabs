@@ -1,219 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demo > Home Twin Modeling</title>
-  <link rel="stylesheet" href="../../assets/css/styles.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo > Home Twin Modeling</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
 
-<body>
-  <div class="wrap">
-    <header class="header">
-      <a href="/src/main/index.html" class="logo">GenieGround</a>
-      <div class="header-menu">
-        <div class="gnb">
-          <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
-          <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
-          <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
-          <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
-          <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+            <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+            <a href="#none" class="info-menu logout">Logout</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
         </div>
-        <div class="info">
-          <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
-          <a href="#none" class="info-menu logout">Logout</a>
-        </div>
-        <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
-      </div>
-      <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
-    </header>
-    <main class="container demo">
-      <nav class="breadcrumb">
-        <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
-        <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
-        <a href="/src/demo/homeTwinModeling.html" class="breadcrumb-link">Home Twin Modeling</a>
-      </nav>
-      <section class="container-header">
-        <h1 class="page-title">Demo</h1>
-        <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
-      </section>
-      <section class="container-content container-detail">
-        <header class="section-title">
-          <div class="title-container">
-            <h5 class="title">Home Twin Modeling</h5>
+        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+      </header>
+      <main class="container demo">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
+          <a href="/src/demo/homeTwinModeling.html" class="breadcrumb-link">Home Twin Modeling</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">Demo</h1>
+          <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
+        </section>
+        <section class="container-content container-detail">
+          <header class="section-title">
+            <div class="title-container">
+              <h5 class="title">Home Twin Modeling</h5>
+              <p class="txt mt20">
+                도면 입력으로 메타버스에 우리집과 동일한 공간 모델을 생성하는 기술
+              </p>
+            </div>
+            <div class="func-container">
+              <button class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
+            </div>
+          </header>
+          <article class="detail-container">
             <p class="txt mt20">
-              도면 입력으로 메타버스에 우리집과 동일한 공간 모델을 생성하는 기술
+              홈트윈 모델링 기술은 현실의 공간을 도면 입력만으로 메타버스 세계에 복제하는 기술로, 2D 도면을 입력하면 공간의 구조와 의미, 사물 배치를 분석하여 상호작용이 가능한 3D 트윈 공간을 생성하는
+              기술입니다.
             </p>
-          </div>
-          <div class="func-container">
-            <button class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
-          </div>
-        </header>
-        <article class="detail-container">
-          <p class="txt mt20">
-            홈트윈 모델링 기술은 현실의 공간을 도면 입력만으로 메타버스 세계에 복제하는 기술로, 2D 도면을 입력하면 공간의 구조와 의미, 사물 배치를 분석하여 상호작용이 가능한 3D 트윈 공간을 생성하는
-            기술입니다.
-          </p>
-          <figure class="img has-caption mt50">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-            <figcaption class="caption mt10">[Home Twin Modeling 개요]</figcaption>
-          </figure>
-          <p class="txt mt50">
-            입력된 도면을 AI 기술로 분석하여 건물 구조, 방 타입, 문/창 등의 구조를 파악하고 배치된 사물들의 특징을 인식합니다. 분석된 도면을 3D 모델링에 적합한 벡터 형태로 변환하고 구조 변경이
-            편리한 타일 기반의 모델링 기법으로 렌더링합니다. 생성된 공간은 아바타와 상호작용이 가능한 사용자가 손쉽게 변경이 가능하여 메타버스에서 활용이 가능합니다.
-          </p>
-          <figure class="img has-caption mt50">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-            <figcaption class="caption mt10">[Home Twin Modeling 구성]</figcaption>
-          </figure>
-          <article class="multi-column mt60">
-            <div class="item">
-              <p class="item-num">01</p>
-              <p class="item-title">
-                Meta Space
-              </p>
-              <p class="item-txt">
-                메타버스 공간 생성에 최적화되어 있어 아<br />
-                바타와 상호작용(문, 가구 이용 등)이 가능<br />
-                하고 공간 스타일 편집이 용이합니다.
-              </p>
+            <figure class="img has-caption mt50">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+              <figcaption class="caption mt10">[Home Twin Modeling 개요]</figcaption>
+            </figure>
+            <p class="txt mt50">
+              입력된 도면을 AI 기술로 분석하여 건물 구조, 방 타입, 문/창 등의 구조를 파악하고 배치된 사물들의 특징을 인식합니다. 분석된 도면을 3D 모델링에 적합한 벡터 형태로 변환하고 구조 변경이
+              편리한 타일 기반의 모델링 기법으로 렌더링합니다. 생성된 공간은 아바타와 상호작용이 가능한 사용자가 손쉽게 변경이 가능하여 메타버스에서 활용이 가능합니다.
+            </p>
+            <figure class="img has-caption mt50">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+              <figcaption class="caption mt10">[Home Twin Modeling 구성]</figcaption>
+            </figure>
+            <article class="multi-column mt60">
+              <div class="item">
+                <p class="item-num">01</p>
+                <p class="item-title">
+                  Meta Space
+                </p>
+                <p class="item-txt">
+                  메타버스 공간 생성에 최적화되어 있어 아<br />
+                  바타와 상호작용(문, 가구 이용 등)이 가능<br />
+                  하고 공간 스타일 편집이 용이합니다.
+                </p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">
+                  Vector Graph
+                </p>
+                <p class="item-txt">
+                  공간을 그래프 구조(에지-노드)로 재해석<br />
+                  하여 정확도를 높이고 방단위로 구분, 편<br />
+                  집이 가능합니다.
+                </p>
+              </div>
+              <div class="item">
+                <p class="item-num">03</p>
+                <p class="item-title">
+                  3D Object
+                </p>
+                <p class="item-txt">
+                  도면 심볼 인식으로 주방, 빌트인 등이<br />
+                  자동 생성되고<br />
+                  추가 가구 배치가 가능합니다.
+                </p>
+              </div>
+            </article>
+            <div class="sub-title-container mt50">
+              <h3 class="title">홈 트윈</h3>
+              <div class="btn-container">
+                <button type="button" class="btn-txt refresh">새로고침</button>
+              </div>
             </div>
-            <div class="item">
-              <p class="item-num">02</p>
-              <p class="item-title">
-                Vector Graph
-              </p>
-              <p class="item-txt">
-                공간을 그래프 구조(에지-노드)로 재해석<br />
-                하여 정확도를 높이고 방단위로 구분, 편<br />
-                집이 가능합니다.
-              </p>
+            <div class="result-multi mt20">
+              <div class="result-item">
+                <h5 class="title-gray">테스트 예제-도면이미지</h5>
+                <figure class="img mt10">
+                  <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+                </figure>
+                <div class="select-container mt10">
+                  <div class="select-box" data-selected="기우는 민혁이한테 뭘 선물로 받았어?"></div>
+                  <ul class="select-options"></ul>
+                  <select class="select">
+                    <option value="1" default>기우는 민혁이한테 뭘 선물로 받았어?</option>
+                    <option value="2">123</option>
+                    <option value="3">123</option>
+                    <option value="4">456</option>
+                    <option value="5">789</option>
+                    <option value="6">098</option>
+                  </select>
+                </div>
+              </div>
+              <div class="result-item">
+                <h5 class="title-gray">결과</h5>
+                <div class="textarea-container dbl">
+                  <textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
+                  <textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
+                </div>
+              </div>
             </div>
-            <div class="item">
-              <p class="item-num">03</p>
-              <p class="item-title">
-                3D Object
-              </p>
-              <p class="item-txt">
-                도면 심볼 인식으로 주방, 빌트인 등이<br />
-                자동 생성되고<br />
-                추가 가구 배치가 가능합니다.
-              </p>
+            <div class="btn-container mt20">
+              <h5 class="title-gray">테스트 예제를 선택 후 ‘실행하기’을 눌러줍니다.</h5>
+              <button id="executeUser" type="button" class="btn create-summary">실행하기</button>
             </div>
           </article>
-          <div class="sub-title-container mt50">
-            <h3 class="title">홈 트윈</h3>
-            <div class="btn-container">
-              <button type="button" class="btn-txt refresh">새로고침</button>
-            </div>
-          </div>
-          <div class="result-multi mt20">
-            <div class="result-item">
-              <h5 class="title-gray">테스트 예제-도면이미지</h5>
-              <figure class="img mt10">
-                <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-              </figure>
-              <div class="select-container mt10">
-                <div class="select-box" data-selected="기우는 민혁이한테 뭘 선물로 받았어?"></div>
-                <ul class="select-options"></ul>
-                <select class="select">
-                  <option value="1" default>기우는 민혁이한테 뭘 선물로 받았어?</option>
-                  <option value="2">123</option>
-                  <option value="3">123</option>
-                  <option value="4">456</option>
-                  <option value="5">789</option>
-                  <option value="6">098</option>
-                </select>
-              </div>
-            </div>
-            <div class="result-item">
-              <h5 class="title-gray">결과</h5>
-              <div class="textarea-container dbl">
-                <textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
-                <textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
-              </div>
-            </div>
-          </div>
-          <div class="btn-container mt20">
-            <h5 class="title-gray">테스트 예제를 선택 후 ‘실행하기’을 눌러줍니다.</h5>
-            <button id="executeUser" type="button" class="btn create-summary">실행하기</button>
-          </div>
-        </article>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="copyright">
-        <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
-        <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
-        <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
-      </div>
-      <div class="term">
-        <a href="#none" class="term-txt">이용약관</a>
-        <a href="#none" class="policy-txt">개인정보처리방침</a>
-      </div>
-    </footer>
-  </div>
-  <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
-  <script src="../../assets/js/lib/fileup.js"></script>
-  <script defer src="../../assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const testOptions = document.querySelectorAll('input[name="option"]'),
-        optionsContent = document.querySelectorAll('.tab-item');
-
-      testOptions.forEach(option => {
-        option.addEventListener('change', (e) => {
-          optionsContent.forEach(option => {
-            option.classList.remove('is-active')
-            if (option.classList.contains(e.target.id)) {
-              option.classList.add('is-active')
-            }
-          })
-        })
-      })
-
-      optionsContent.forEach(optionContent => {
-        const selectQuestion = optionContent.querySelector('select'),
-          inputQuestion = optionContent.querySelector('.question .edit-ipt'),
-          btnSummary = optionContent.querySelector('.question .btn')
-
-        btnSummary.addEventListener('click', (e) => {
-          console.log(`질문하기 : ${inputQuestion.value}`)
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/lib/fileup.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Demo바로가기 click 이벤트 걸기
+        eventLinkTo({
+          className: '.btn-link',
+          msg: "GenieLabs의 해당AI 분류 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          callback: (result, target) => {
+            console.log(result, target.dataset.url)
+          }
         })
 
-        if (optionContent.classList.contains('user')) {
-          $.fileup({
-            url: "https://github.com?file_upload=1",
-            inputID: "fileIpt",
-            queueID: "fileQueue",
-            dropzoneID: "fileDropzone",
-            templateFile: '<div id="file-[INPUT_ID]-[FILE_NUM]" class="fileup-file file-item">' +
-              '<div class="data">' +
-              '<div class="description">' +
-              '<span class="file-name">[NAME]</span> [<span class="file-size">[SIZE_HUMAN]</span>]' +
-              "</div>" +
-              '<div class="controls">' +
-              "<button type=\"button\" class=\"btn-txt del\" onclick=\"$.fileup('[INPUT_ID]', 'remove', '[FILE_NUM]');\" title=\"[REMOVE]\">삭제하기</button>" +
-              "</div>" +
-              '<div class="result"></div>' +
-              "</div>" +
-              "</div>",
+        const testOptions = document.querySelectorAll('input[name="option"]'),
+          optionsContent = document.querySelectorAll('.tab-item');
+
+        testOptions.forEach(option => {
+          option.addEventListener('change', (e) => {
+            optionsContent.forEach(option => {
+              option.classList.remove('is-active')
+              if (option.classList.contains(e.target.id)) {
+                option.classList.add('is-active')
+              }
+            })
           })
-            .dragEnter(function (event) {
-              $(event.target).addClass("over");
+        })
+
+        optionsContent.forEach(optionContent => {
+          const selectQuestion = optionContent.querySelector('select'),
+            inputQuestion = optionContent.querySelector('.question .edit-ipt'),
+            btnSummary = optionContent.querySelector('.question .btn')
+
+          btnSummary.addEventListener('click', (e) => {
+            console.log(`질문하기 : ${inputQuestion.value}`)
+          })
+
+          if (optionContent.classList.contains('user')) {
+            $.fileup({
+              url: "https://github.com?file_upload=1",
+              inputID: "fileIpt",
+              queueID: "fileQueue",
+              dropzoneID: "fileDropzone",
+              templateFile: '<div id="file-[INPUT_ID]-[FILE_NUM]" class="fileup-file file-item">' +
+                '<div class="data">' +
+                '<div class="description">' +
+                '<span class="file-name">[NAME]</span> [<span class="file-size">[SIZE_HUMAN]</span>]' +
+                "</div>" +
+                '<div class="controls">' +
+                "<button type=\"button\" class=\"btn-txt del\" onclick=\"$.fileup('[INPUT_ID]', 'remove', '[FILE_NUM]');\" title=\"[REMOVE]\">삭제하기</button>" +
+                "</div>" +
+                '<div class="result"></div>' +
+                "</div>" +
+                "</div>",
             })
-            .dragLeave(function (event) {
-              $(event.target).removeClass("over");
-            })
-            .dragEnd(function (event) {
-              $(event.target).removeClass("over");
-            });
-        }
+              .dragEnter(function (event) {
+                $(event.target).addClass("over");
+              })
+              .dragLeave(function (event) {
+                $(event.target).removeClass("over");
+              })
+              .dragEnd(function (event) {
+                $(event.target).removeClass("over");
+              });
+          }
+        })
       })
-    })
-  </script>
-</body>
+    </script>
+  </body>
 
 </html>

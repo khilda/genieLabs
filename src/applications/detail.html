@@ -198,12 +198,12 @@
           matchBrackets: true
         });
         // link
-        document.querySelectorAll('.link-api').forEach(link => {
-          link.querySelector('.file-item').addEventListener('click', (e) => {
-            confirmOpen('GenieLabs의 해당 API 상세 화면으로 이동합니다. <br> 계속하시겠습니까?', (result) => {
-              console.log(result, e.target.dataset.url)
-            })
-          })
+        eventLinkTo({
+          className: '.file-item',
+          msg: "GenieLabs의 해당 API 상세 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          callback: (result,target) => {
+            console.log(result, target.dataset.url)
+          }
         })
         // chk like
         document.querySelector('.chk-like input').addEventListener('change', (e) => {

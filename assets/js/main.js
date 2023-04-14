@@ -1,16 +1,7 @@
-// import loadScript
-function loadScript(url) {
-	var script = document.createElement('script');
-	script.src = url;
-	document.querySelector('head').insertAdjacentElement('beforeend', script);
-}
-
 /**
  * Common Func
  */
 document.addEventListener("DOMContentLoaded", () => {
-  const sweerAlert2 = '../../assets/js/lib/sweetalert2.min.js'
-  loadScript(sweerAlert2);
   eventHeader();
   eventQuickToggle();
   eventQuickScroll();
@@ -18,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   eventTab();
   eventCardBookmark();
   eventCmt();
-  eventLinkDialog()
+  eventLinkDialog();
 });
 /**
  * GNB Tablet, Mobile Open
@@ -361,19 +352,29 @@ function eventLinkDialog() {
         );
       });
     });
+}
+/**
+ *
+ * @param {Object} params
+ */
+function eventLinkTo(params) {
+  const { className = "", msg = "", isConfirm = true, callback } = params;
   // 데모 바로가기
-  document.querySelectorAll(".btn-link[data-url]").forEach((btn) => {
+  const target = `${className}[data-url]`;
+  document.querySelectorAll(target).forEach((btn) => {
     btn?.addEventListener("click", (e) => {
-      confirmOpen(
-        "선택하신 데모 상세 화면으로 이동합니다. <br> 계속하시겠습니까?",
-        (result) => {
-          console.log(result, e.target.dataset.url);
-        }
-      );
+      if (isConfirm) {
+        confirmOpen(msg, (result) => {
+          if (callback) callback(result, e.target);
+        });
+      } else {
+        alertOpen(msg, (result) => {
+          if (callback) callback(result, e.target);
+        });
+      }
     });
   });
 }
-
 /**
  * AS-IS FileDownload
  */

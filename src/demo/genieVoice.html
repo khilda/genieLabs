@@ -45,7 +45,9 @@
               <h5 class="title">지니 Voice(TTS)</h5>
               <dl class="badge-container">
                 <dt class="badge-tit">연관 API</dt>
-                <dd class="badge">TTS API</dd>
+                <dd class="badge-link">
+                  <button type="button" class="badge" data-url="#VoiceAI">TTS API</button>
+                </dd>
               </dl>
               <p class="txt mt20">텍스트를 입력하면 딥러닝 음성 합성 기술을 통해 음성으로 합성/새성해주는 기술</p>
             </div>
@@ -135,7 +137,6 @@
             <p class="direction"></p>
             <div class="waveform-area">
               <button class="btn-control play" id="waveformPlay"></button>
-              <span class="title">여기 음성 UI 나오는 영역</span>
               <div class="waveform"></div>
             </div>
           </article>
@@ -153,10 +154,21 @@
         </div>
       </footer>
     </div>
-    <script defer src="https://unpkg.com/wavesurfer.js"></script>
-    <script defer src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        // Demo바로가기 click 이벤트 걸기
+        eventLinkTo({
+          className: '.btn-link',
+          msg: "GenieLabs의 해당AI 분류 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          callback: (result, target) => {
+            console.log(result, target.dataset.url)
+          }
+        })
+
+
         const selectorWrapper = document.querySelector('.selector-option'),
           selectors = selectorWrapper.querySelectorAll('input'),
           waveformBtn = document.querySelector('#waveformRequest'),

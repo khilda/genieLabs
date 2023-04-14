@@ -1,185 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demo > 음식 검출 및 분류</title>
-  <link rel="stylesheet" href="../../assets/css/styles.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo > 음식 검출 및 분류</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
 
-<body>
-  <div class="wrap">
-    <header class="header">
-      <a href="/src/main/index.html" class="logo">GenieGround</a>
-      <div class="header-menu">
-        <div class="gnb">
-          <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
-          <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
-          <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
-          <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
-          <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
-        </div>
-        <div class="info">
-          <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
-          <a href="#none" class="info-menu logout">Logout</a>
-        </div>
-        <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
-      </div>
-      <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
-    </header>
-    <main class="container demo">
-      <nav class="breadcrumb">
-        <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
-        <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
-        <a href="/src/demo/foodDetection.html" class="breadcrumb-link">음식 검출 및 분류</a>
-      </nav>
-      <section class="container-header">
-        <h1 class="page-title">Demo</h1>
-        <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
-      </section>
-      <section class="container-content container-detail">
-        <header class="section-title">
-          <div class="title-container">
-            <h5 class="title">음식 검출 및 분류</h5>
-            <p class="txt mt20">
-              이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술
-            </p>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+            <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
           </div>
-          <div class="func-container">
-            <button class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+            <a href="#none" class="info-menu logout">Logout</a>
           </div>
-        </header>
-        <article class="detail-container">
-          <p class="txt mt20">
-            음식 검출 및 분류(Food Detection and Classification)는 이미지나 영상에서 음식의 위치를 검출하고, 검출된 각각의 음식에 대해 정해진 클래스로 분류하여 해당 음식이 어떤 음식인지를 분류하는 기술입니다.
-          </p>
-          <p class="txt">
-            음식은 얼굴이나 일반적인 객체들과는 다르게 어떻게 담느냐에 따라 형태로 다르고, 만드는 방법에 따라 같은 음식이더라도 다르게 보여질 수 있습니다.
-          </p>
-          <p class="txt">
-            KT는 이러한 다양한 형태의 음식에 대해 검출과 분류가 가능하도록 계속해서 연구하고 있습니다. 현재 일반적인 분류 모델인 합성곱 신경망(Convolutional Neutral Network)만을 이용한 모델이 아닌 트랜스포머 구조를 결합한 하이브리드형 모델을 사용함으로써 1000종의 음식에 대해 더 높은 인식률을 구현했습니다.
-          </p>
-          <h4 class="sub-title mt30">음식 분류에 대한 전체적인 흐름도</h4>
-          <p class="txt mt10">
-            입력 이미지로 음식 사진이 들어왔을경우, 음식으로 판단된 영역을 다수개 검출합니다.
-          </p>
-          <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-          </figure>
-          <p class="txt mt50">
-            검출된 음식 영역 각각에 대해 음식 분류 모델을 실행하고, 음식 종류별 클래스 확률값을 계산하여 가장 높은 확률을 나타낸 클래스를 해당 음식이라고 결과를 출력합니다.
-          </p>
-          <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-          </figure>
-          <article class="multi-column dbl mt60">
-            <div class="item">
-              <p class="item-num">01</p>
-              <p class="item-title">
-                하이브리드형 분류 모델
-              </p>
-              <p class="item-txt">
-                합성곱 신경망만을 이용한 분류 모델이 아닌 트랜스포머 구조를 결합<br />
-                하여 하이브리드형 모델을 적용하여 더 높은 인식률을 달성합니다.
+          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+      </header>
+      <main class="container demo">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
+          <a href="/src/demo/foodDetection.html" class="breadcrumb-link">음식 검출 및 분류</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">Demo</h1>
+          <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
+        </section>
+        <section class="container-content container-detail">
+          <header class="section-title">
+            <div class="title-container">
+              <h5 class="title">음식 검출 및 분류</h5>
+              <p class="txt mt20">
+                이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는 기술
               </p>
             </div>
-            <div class="item">
-              <p class="item-num">02</p>
-              <p class="item-title">
-                모델 경량화
-              </p>
-              <p class="item-txt">
-                무거운 엔진이 아닌 경량화된 모델로 빠른 검출 및 분류 속도와 동시<br />
-                에 높은 인식률을 달성하였습니다.
-              </p>
+            <div class="func-container">
+              <button class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
+            </div>
+          </header>
+          <article class="detail-container">
+            <p class="txt mt20">
+              음식 검출 및 분류(Food Detection and Classification)는 이미지나 영상에서 음식의 위치를 검출하고, 검출된 각각의 음식에 대해 정해진 클래스로 분류하여 해당 음식이 어떤 음식인지를 분류하는 기술입니다.
+            </p>
+            <p class="txt">
+              음식은 얼굴이나 일반적인 객체들과는 다르게 어떻게 담느냐에 따라 형태로 다르고, 만드는 방법에 따라 같은 음식이더라도 다르게 보여질 수 있습니다.
+            </p>
+            <p class="txt">
+              KT는 이러한 다양한 형태의 음식에 대해 검출과 분류가 가능하도록 계속해서 연구하고 있습니다. 현재 일반적인 분류 모델인 합성곱 신경망(Convolutional Neutral Network)만을 이용한 모델이 아닌 트랜스포머 구조를 결합한 하이브리드형 모델을 사용함으로써 1000종의 음식에 대해 더 높은 인식률을 구현했습니다.
+            </p>
+            <h4 class="sub-title mt30">음식 분류에 대한 전체적인 흐름도</h4>
+            <p class="txt mt10">
+              입력 이미지로 음식 사진이 들어왔을경우, 음식으로 판단된 영역을 다수개 검출합니다.
+            </p>
+            <figure class="img">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            </figure>
+            <p class="txt mt50">
+              검출된 음식 영역 각각에 대해 음식 분류 모델을 실행하고, 음식 종류별 클래스 확률값을 계산하여 가장 높은 확률을 나타낸 클래스를 해당 음식이라고 결과를 출력합니다.
+            </p>
+            <figure class="img">
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            </figure>
+            <article class="multi-column dbl mt60">
+              <div class="item">
+                <p class="item-num">01</p>
+                <p class="item-title">
+                  하이브리드형 분류 모델
+                </p>
+                <p class="item-txt">
+                  합성곱 신경망만을 이용한 분류 모델이 아닌 트랜스포머 구조를 결합<br />
+                  하여 하이브리드형 모델을 적용하여 더 높은 인식률을 달성합니다.
+                </p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">
+                  모델 경량화
+                </p>
+                <p class="item-txt">
+                  무거운 엔진이 아닌 경량화된 모델로 빠른 검출 및 분류 속도와 동시<br />
+                  에 높은 인식률을 달성하였습니다.
+                </p>
+              </div>
+            </article>
+            <div class="sub-title-container mt20">
+              <h3 class="title">음식 인식</h3>
+              <div class="btn-container">
+                <button type="button" class="btn-txt refresh">새로고침</button>
+              </div>
+            </div>
+            <div class="result-multi mt20">
+              <div class="result-item">
+                <h5 class="title-gray">테스트 예제-음식이미지</h5>
+                <figure class="img mt10">
+                  <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+                </figure>
+                <div class="select-container mt10">
+                  <div class="select-box" data-selected="기우는 민혁이한테 뭘 선물로 받았어?"></div>
+                  <ul class="select-options"></ul>
+                  <select class="select">
+                    <option value="1" default>기우는 민혁이한테 뭘 선물로 받았어?</option>
+                    <option value="2">123</option>
+                    <option value="3">123</option>
+                    <option value="4">456</option>
+                    <option value="5">789</option>
+                    <option value="6">098</option>
+                  </select>
+                </div>
+              </div>
+              <div class="result-item">
+                <h5 class="title-gray">결과</h5>
+                <div class="textarea-container dbl"><textarea name="" id="" cols="30" rows="10" class="textarea">코드 나오는 결과 영역</textarea>
+                  <textarea name="" id="" cols="30" rows="10" class="textarea mt0">코드 나오는 결과 영역</textarea>
+                </div>
+              </div>
+            </div>
+            <div class="btn-container mt20">
+              <h5 class="title-gray">테스트 예제를 선택 후 ‘실행하기’을 눌러줍니다.</h5>
+              <button id="executeUser" type="button" class="btn create-summary">실행하기</button>
             </div>
           </article>
-          <div class="sub-title-container mt20">
-            <h3 class="title">음식 인식</h3>
-            <div class="btn-container">
-              <button type="button" class="btn-txt refresh">새로고침</button>
-            </div>
-          </div>
-          <div class="result-multi mt20">
-            <div class="result-item">
-              <h5 class="title-gray">테스트 예제-음식이미지</h5>
-              <figure class="img mt10">
-                <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-              </figure>
-              <div class="select-container mt10">
-                <div class="select-box" data-selected="기우는 민혁이한테 뭘 선물로 받았어?"></div>
-                <ul class="select-options"></ul>
-                <select class="select">
-                  <option value="1" default>기우는 민혁이한테 뭘 선물로 받았어?</option>
-                  <option value="2">123</option>
-                  <option value="3">123</option>
-                  <option value="4">456</option>
-                  <option value="5">789</option>
-                  <option value="6">098</option>
-                </select>
-              </div>
-            </div>
-            <div class="result-item">
-              <h5 class="title-gray">결과</h5>
-              <div class="textarea-container dbl"><textarea name="" id="" cols="30" rows="10"
-                  class="textarea">코드 나오는 결과 영역</textarea>
-                <textarea name="" id="" cols="30" rows="10"
-                  class="textarea mt0">코드 나오는 결과 영역</textarea>
-              </div>
-            </div>
-          </div>
-          <div class="btn-container mt20">
-            <h5 class="title-gray">테스트 예제를 선택 후 ‘실행하기’을 눌러줍니다.</h5>
-            <button id="executeUser" type="button" class="btn create-summary">실행하기</button>
-          </div>
-        </article>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="copyright">
-        <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
-        <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
-        <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
-      </div>
-      <div class="term">
-        <a href="#none" class="term-txt">이용약관</a>
-        <a href="#none" class="policy-txt">개인정보처리방침</a>
-      </div>
-    </footer>
-  </div>
-  <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
-  <script src="../../assets/js/lib/fileup.js"></script>
-  <script defer src="../../assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const testOptions = document.querySelectorAll('input[name="option"]'),
-        optionsContent = document.querySelectorAll('.tab-item');
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/lib/fileup.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Demo바로가기 click 이벤트 걸기
+        eventLinkTo({
+          className: '.btn-link',
+          msg: "GenieLabs의 해당AI 분류 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          callback: (result, target) => {
+            console.log(result, target.dataset.url)
+          }
+        })
 
-      testOptions.forEach(option => {
-        option.addEventListener('change', (e) => {
-          optionsContent.forEach(option => {
-            option.classList.remove('is-active')
-            if (option.classList.contains(e.target.id)) {
-              option.classList.add('is-active')
-            }
+        const testOptions = document.querySelectorAll('input[name="option"]'),
+          optionsContent = document.querySelectorAll('.tab-item');
+
+        testOptions.forEach(option => {
+          option.addEventListener('change', (e) => {
+            optionsContent.forEach(option => {
+              option.classList.remove('is-active')
+              if (option.classList.contains(e.target.id)) {
+                option.classList.add('is-active')
+              }
+            })
           })
         })
-      })
 
-      optionsContent.forEach(optionContent => {
-        const selectQuestion = optionContent.querySelector('select'),
-          inputQuestion = optionContent.querySelector('.question .edit-ipt'),
-          btnSummary = optionContent.querySelector('.question .btn')
+        optionsContent.forEach(optionContent => {
+          const selectQuestion = optionContent.querySelector('select'),
+            inputQuestion = optionContent.querySelector('.question .edit-ipt'),
+            btnSummary = optionContent.querySelector('.question .btn')
 
-        btnSummary.addEventListener('click', (e) => {
-          console.log(`질문하기 : ${inputQuestion.value}`)
+          btnSummary.addEventListener('click', (e) => {
+            console.log(`질문하기 : ${inputQuestion.value}`)
+          })
+
         })
-
       })
-    })
-  </script>
-</body>
+    </script>
+  </body>
 
 </html>
