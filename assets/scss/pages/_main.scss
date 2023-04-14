@@ -61,7 +61,7 @@
   .card {
     .card-head {
       margin-bottom: 27px;
-      .card-bookmark {
+      .card-btn.btn-bookmark {
         pointer-events: none;
       }
     }
@@ -169,6 +169,7 @@
     }
     .card-container {
       padding: 0 27px;
+      overflow: hidden;
       .card-title {
         .title-tit {
           font-size: 24px;

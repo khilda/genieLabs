@@ -63,19 +63,13 @@
       flex: 0 0 auto;
       margin-left: auto;
     }
-    .card-bookmark {
+    .card-btn.btn-bookmark {
       position: absolute;
       top: 0;
       right: 0;
-      background: no-repeat 50% 50%;
-      background-image: var(--card-icon-bookmark);
-      width: 120px;
-      height: 120px;
-      font-size: 0;
-      color: transparent;
-      &.is-active {
-        background-image: var(--card-icon-bookmark-active);
-      }
+      background-position: left bottom;
+      width: 70px;
+      height: 70px;
     }
   }
   .card-body {

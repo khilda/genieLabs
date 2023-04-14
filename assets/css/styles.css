@@ -1196,7 +1196,7 @@ textarea {
   .main .header .gnb {
     margin-left: 0;
   }
-  .header .info .info-menu.ground .is-active {
+  .header .info .info-menu.ground.is-active {
     background-image: url("../images/ico_gnb_my_active.svg");
     color: #35D4F8;
   }
@@ -1897,6 +1897,18 @@ textarea {
   background-image: url("../images/ico_btn_cmt_b.svg");
 }
 
+.btn-bookmark {
+  background: no-repeat 50% 50%;
+  background-image: var(--card-icon-bookmark);
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  color: transparent;
+}
+.btn-bookmark.is-active {
+  background-image: var(--card-icon-bookmark-active);
+}
+
 .btn-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2498,6 +2510,9 @@ textarea {
 }
 .board .collapse .collapse-title::before {
   content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   display: block;
   background: url("../images/ico_cmt_reply.svg") no-repeat 50% 50%;
   width: 24px;
@@ -2616,6 +2631,10 @@ textarea {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .board .collapse {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .ipt {
@@ -3115,19 +3134,13 @@ textarea {
           flex: 0 0 auto;
   margin-left: auto;
 }
-.card .card-head .card-bookmark {
+.card .card-head .card-btn.btn-bookmark {
   position: absolute;
   top: 0;
   right: 0;
-  background: no-repeat 50% 50%;
-  background-image: var(--card-icon-bookmark);
-  width: 120px;
-  height: 120px;
-  font-size: 0;
-  color: transparent;
-}
-.card .card-head .card-bookmark.is-active {
-  background-image: var(--card-icon-bookmark-active);
+  background-position: left bottom;
+  width: 70px;
+  height: 70px;
 }
 .card .card-body {
   display: block;
@@ -3936,12 +3949,16 @@ textarea {
   }
 }
 .txt-notice {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 34px;
   font-size: 16px;
   line-height: 28px;
   font-weight: 500;
@@ -3951,12 +3968,12 @@ textarea {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  position: absolute;
+  left: 0;
   display: block;
   background: url("../images/ico_txt_notice.svg") no-repeat 50% 50%/cover;
   width: 24px;
   height: 24px;
-  line-height: 28px;
-  margin-right: 10px;
 }
 .txt-notice > * {
   margin: 0 3px;
@@ -4114,7 +4131,7 @@ textarea {
 .empty-container::before {
   content: "";
   display: block;
-  background: transparent no-repeat 50% 50%;
+  background: transparent no-repeat 50% 50%/cover;
   background-image: url("../images/ico_empty.svg");
   width: 60px;
   height: 60px;
@@ -4123,10 +4140,11 @@ textarea {
 @media (max-width: 742px) {
   .empty-container {
     font-size: 16px;
+    gap: 10px;
   }
   .empty-container::before {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 }
 .loading {
@@ -4338,28 +4356,41 @@ code {
     position: fixed;
     left: 30px;
     bottom: 30px;
-    padding-bottom: 30px;
+    width: 65px;
+    height: 65px;
     z-index: 99;
     overflow: hidden;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
   .quick {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
     border: 3px solid #160c0c;
     border-radius: 20px;
     background-color: #fff;
+    width: 296px;
     padding: 30px 30px 50px;
     opacity: 0;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: 0.18s;
+            transition-delay: 0.18s;
   }
   .quick .quick-link {
     border-radius: 10px;
     background-color: #f4f4f4;
     padding: 10px 20px;
   }
+  .quick-container.is-open {
+    width: 296px;
+    height: auto;
+  }
   .quick-container.is-open .quick {
     opacity: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
   }
   .quick-collapse {
     position: absolute;
@@ -4401,19 +4432,25 @@ code {
   .quick-container {
     left: 20px;
     bottom: 20px;
-    padding-bottom: 20px;
+    width: 40px;
+    height: 40px;
   }
   .quick-title {
     font-size: 18px;
     margin-bottom: 10px;
   }
   .quick {
+    bottom: 20px;
     border-radius: 15px;
+    width: 266px;
     padding: 15px 15px 30px;
   }
   .quick .quick-link {
     border-radius: 10px;
     padding: 10px 20px;
+  }
+  .quick-container.is-open {
+    width: 266px;
   }
   .quick-collapse {
     border-radius: 8px;
@@ -4487,7 +4524,7 @@ code {
 .main .card-container .card .card-head {
   margin-bottom: 27px;
 }
-.main .card-container .card .card-head .card-bookmark {
+.main .card-container .card .card-head .card-btn.btn-bookmark {
   pointer-events: none;
 }
 .main .card-container .card .card-txt {
@@ -4595,6 +4632,7 @@ code {
   }
   .main .card-container {
     padding: 0 27px;
+    overflow: hidden;
   }
   .main .card-container .card-title .title-tit {
     font-size: 24px;
@@ -4637,6 +4675,9 @@ code {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .docs .multi-column > .item {
+    padding: 20px 0;
   }
 }
 .docs .badge-container {
