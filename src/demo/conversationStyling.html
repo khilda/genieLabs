@@ -40,33 +40,22 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
-        <div class="quick-container">
-          <div class="quick">
-            <p class="quick-title">대화 스타일링(사투리/<br />
-              키즈 반말체)</p>
-            <div class="quick-link">
-              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
-              <button type="button" data-id="demo" class="link sub">Demo</button>
-              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
-              <button type="button" data-id="research" class="link sub">Research</button>
-            </div>
-          </div>
-          <button type="button" class="quick-collapse"></button>
-        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">대화 스타일링(사투리/키즈 반말체)</h5>
             <dl class="badge-container">
               <dt class="badge-tit">연관 API</dt>
-              <dd class="badge">사투리 스타일 변환​</dd>
-              <dd class="badge">키즈 반말체 변환​</dd>
+              <dd class="badge-link">
+                <button type="button" class="badge" data-url="#사투리스타일변환">사투리 스타일 변환</button>
+                <button type="button" class="badge" data-url="#키즈반말체변환">키즈 반말체 변환</button>
+              </dd>
             </dl>
             <p class="txt mt20">
               대화 스타일링(Dialogue Styling) 기술은 AI에 페르소나를 부여하여 동일한 답변도 상황에 따라 다양한 말투로 변환하는 기술입니다.
             </p>
           </div>
           <div class="func-container">
-            <button class="btn-link">Demo 바로가기</button>
+            <button class="btn-link" data-url="#Demo바로가기">Demo 바로가기</button>
           </div>
         </header>
         <article class="detail-container">
@@ -159,7 +148,7 @@
       </div>
     </footer>
   </div>
-  <script defer src="../../assets/js/main.js"></script>
+  <script defer type="module" src="../../assets/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const selectorWrapper = document.querySelector('.selector-option'),
