@@ -40,10 +40,22 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
+        <div class="quick-container">
+          <div class="quick">
+            <p class="quick-title">얼굴 검출 · 인식</p>
+            <div class="quick-link">
+              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
+              <button type="button" data-id="demo" class="link sub">Demo</button>
+              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
+              <button type="button" data-id="research" class="link sub">Research</button>
+            </div>
+          </div>
+          <button type="button" class="quick-collapse"></button>
+        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">얼굴 검출 · 인식</h5>
-            <p class="txt">
+            <p class="txt mt20">
               이미지에서 얼굴 검출과 특징을 추출하고 저장된 특징 데이터와 비교하여 얼굴을 인식하는 기술
             </p>
           </div>
@@ -63,11 +75,11 @@
             예를 들어 테러리스트 N명에 대한 분류 모델을 만들었다고 가정하더라도 테러리스트 명단이 업데이트 될 때마다 몇 명을 추가로 학습할 지, 얼마나 빨리 학습해서 필드에 반영할 지 결정할 수
             없습니다.
           </p>
-          <figure class="img has-caption">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-            <figcaption class="caption mt10">얼굴 검출 알고리즘</figcaption>
+          <figure class="img has-caption mt50">
+            <img src="../../assets/images/img_demo_face_01.png" alt="">
+            <figcaption class="caption">얼굴 검출 알고리즘</figcaption>
           </figure>
-          <p class="txt">
+          <p class="txt mt50">
             최근에는 코로나로 인한 마스크 착용이 의무화 되면서 얼굴의 대부분이 가려지게 되었고, 실제 얼굴의 특징을 추출할 수 있는 영역이 많이 줄어들었습니다.
           </p>
           <p class="txt">
@@ -78,14 +90,14 @@
             추가로 학습하였고, 눈 주위의 특징을 추출하여 얼굴 인식이 가능하도록 만들었습니다.
           </p>
           <figure class="img has-caption mt50">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-            <figcaption class="caption mt10">TRY 1. 얼굴의 일정 영역을 Masking 한 후 특징 추출 모델 학습</figcaption>
+            <img src="../../assets/images/img_demo_face_02.png" alt="">
+            <figcaption class="caption">TRY 1. 얼굴의 일정 영역을 Masking 한 후 특징 추출 모델 학습</figcaption>
           </figure>
           <figure class="img has-caption mt90">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
-            <figcaption class="caption mt10">TRY 2. 마스크 착용 얼굴을 생성 후 특징 추출 모델 학습</figcaption>
+            <img src="../../assets/images/img_demo_face_03.png" alt="">
+            <figcaption class="caption">TRY 2. 마스크 착용 얼굴을 생성 후 특징 추출 모델 학습</figcaption>
           </figure>
-          <article class="multi-column dbl mt60">
+          <article class="multi-column dbl mt70">
             <div class="item">
               <p class="item-num">01</p>
               <p class="item-title">
@@ -93,7 +105,9 @@
                 랜드마크 검출 가능
               </p>
               <p class="item-txt">
-                풍부한 데이터를 가진 Large AI를 이용하여 서비스에 특화된 적은 데이터만으로도 효과적인 요약문 생성
+                풍부한 데이터를 가진 Large AI를 이용하<br />
+                여 서비스에 특화된 적은 데이터만으로도<br />
+                효과적인 요약문 생성
               </p>
             </div>
             <div class="item">
@@ -103,7 +117,9 @@
                 얼굴 인식 가능
               </p>
               <p class="item-txt">
-                마스크 착용으로 많은 부분이 가려져 있어도 눈 주위의 특징을 추출하여 얼굴 인식이 가능하게 합니다.
+                마스크 착용으로 많은 부분이 가려져 있어<br />
+                도 눈 주위의 특징을 추출하여 얼굴 인식<br />
+                이 가능하게 합니다.
               </p>
             </div>
             <div class="item">
@@ -113,11 +129,13 @@
                 & 모델 경량화
               </p>
               <p class="item-txt">
-                얼굴 인증을 이용한 출입 보안 서비스의 실시간 처리를 위해 검출 엔진의 최적화와 경량화가 적용되었습니다.
+                얼굴 인증을 이용한 출입 보안 서비스의<br />
+                실시간 처리를 위해 검출 엔진의 최적화와<br />
+                경량화가 적용되었습니다.
               </p>
             </div>
           </article>
-          <div class="sub-title-container mt20">
+          <div class="sub-title-container mt50">
             <h3 class="title">얼굴 검출·인식</h3>
             <div class="btn-container">
               <button type="button" class="btn-txt refresh">새로고침</button>
@@ -160,7 +178,7 @@
                 <h5 class="title-gray">결과</h5>
                 <div class="textarea-container">
                   <textarea name="" id="" cols="30" rows="10"
-                    class="textarea">핸드폰 보험 기간 확인을 요청하여 단말기 보험 가입이 완료되어 있는 것으로 확인된다고 안내한 후 보험센터로 연결해 주었다.</textarea>
+                    class="textarea">코드 결과 나오는 영역</textarea>
                 </div>
               </div>
             </div>
@@ -205,7 +223,7 @@
                 <h5 class="title-gray">결과</h5>
                 <div class="textarea-container">
                   <textarea name="" id="" cols="30" rows="10"
-                    class="textarea">핸드폰 보험 기간 확인을 요청하여 단말기 보험 가입이 완료되어 있는 것으로 확인된다고 안내한 후 보험센터로 연결해 주었다.</textarea>
+                    class="textarea">코드 결과 나오는 영역</textarea>
                 </div>
               </div>
             </div>
@@ -246,12 +264,7 @@
 
       optionsContent.forEach(optionContent => {
         const selectQuestion = optionContent.querySelector('select'),
-          inputQuestion = optionContent.querySelector('.question .edit-ipt'),
-          btnSummary = optionContent.querySelector('.question .btn')
-
-        btnSummary.addEventListener('click', (e) => {
-          console.log(`질문하기 : ${inputQuestion.value}`)
-        })
+            inputQuestion = optionContent.querySelector('.question .edit-ipt');
 
         if (optionContent.classList.contains('user')) {
           $.fileup({
