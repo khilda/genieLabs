@@ -2803,7 +2803,7 @@ textarea {
 .select-container {
   display: inline-block;
   position: relative;
-  width: 250px;
+  width: 100%;
   font-size: 16px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -5115,6 +5115,7 @@ code {
 }
 .applications .card-title .select-container {
   margin-left: auto;
+  width: 250px;
 }
 @media (max-width: 742px) {
   .applications .card-title .select-container {

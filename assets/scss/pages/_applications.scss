@@ -7,6 +7,7 @@
   }
   .card-title .select-container {
     margin-left: auto;
+    width: 250px;
     @include mobile {
       width: 100%;
     }
