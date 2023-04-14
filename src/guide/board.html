@@ -16,73 +16,108 @@
   </head>
 
   <body>
-    <main class="guide">
-      <article class="board board-mypost-api">
-        <header class="board-header">
-          <h5 class="board-title">제목</h5>
-          <h5 class="board-title">상태</h5>
-          <h5 class="board-title">조회수</h5>
-          <h5 class="board-title">댓글</h5>
-          <h5 class="board-title">작성일</h5>
-        </header>
-        <div class="board-list collapse-list">
-          <!-- S: 게시글이 없을때 -->
-          <!-- <p class="empty-container">작성한 게시글이 존재하지 않습니다.</p> -->
-          <!-- E: 게시글이 없을때 -->
-          <!-- S: 게시글 collapse 아이템 -->
-          <a href="javascript:void(0);" class="board-link">
-            <div class="link-grid" data-column="content">
-              <h4 class="board-link-title">텍스트</h4>
-              <p class="board-link-detail">텍스트상세 </p>
+    <main class="guide myGround">
+      <section class="container-content">
+        <article class="board board-mypost-api">
+          <header class="board-header">
+            <h5 class="board-title">제목</h5>
+            <h5 class="board-title">상태</h5>
+            <h5 class="board-title">조회수</h5>
+            <h5 class="board-title">댓글</h5>
+            <h5 class="board-title">작성일</h5>
+          </header>
+          <div class="board-list collapse-list">
+            <!-- S: 게시글이 없을때 -->
+            <!-- <p class="empty-container">작성한 게시글이 존재하지 않습니다.</p> -->
+            <!-- E: 게시글이 없을때 -->
+            <!-- S: 게시글 collapse 아이템 -->
+            <a href="javascript:void(0);" class="board-link">
+              <div class="link-grid" data-column="content">
+                <h4 class="board-link-title">텍스트</h4>
+              </div>
+              <div class="link-grid" data-column="status">
+                <span class="badge-outline primary">대기중</span>
+                <!-- <span class="badge-outline info">답변완료</span> -->
+              </div>
+              <div class="link-grid" data-column="view">
+                <p class="board-view hits"><span class="count">123</span></p>
+              </div>
+              <div class="link-grid" data-column="comment">
+                <p class="board-view comment"><span class="count">123</span></p>
+              </div>
+              <div class="link-grid" data-column="date">2023.01.12</div>
+            </a>
+            <div class="collapse is-collapse">
+              <!-- 본문글 -->
+              <div class="board-link">
+                <div class="link-grid collapse-content" data-column="reply">
+                  <ul class="list-dot">
+                    <li>res</li>
+                    <li>res</li>
+                    <li>res</li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tempore fugit perspiciatis assumenda omnis maiores tempora quam! Aperiam minus possimus, accusamus, harum obcaecati quo id earum tenetur impedit provident facere.</p>
+                </div>
+                <div class="link-grid" data-column="date">2023.01.12</div>
+              </div>
+              <!-- // 본문글 -->
+              <!-- 답변 -->
+              <div class="board-link">
+                <div class="link-grid collapse-content" data-column="reply">
+                  <h4 class="collapse-title">답변</h4>
+                  <p class="collapse-detail">답변입니다</p>
+                </div>
+                <div class="link-grid" data-column="date">2023.01.12</div>
+              </div>
+              <!-- // 답변 -->
             </div>
-            <div class="link-grid" data-column="status">
-              <span class="badge-outline primary">대기중</span>
-              <!-- <span class="badge-outline info">답변완료</span> -->
+            <!-- E: 게시글 collapse 아이템 -->
+            <!-- S: 게시글 collapse 아이템 -->
+            <a href="javascript:void(0);" class="board-link">
+              <div class="link-grid" data-column="content">
+                <h4 class="board-link-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate</h4>
+              </div>
+              <div class="link-grid" data-column="status">
+                <span class="badge-outline primary">대기중</span>
+                <!-- <span class="badge-outline info">답변완료</span> -->
+              </div>
+              <div class="link-grid" data-column="view">
+                <p class="board-view hits"><span class="count">123</span></p>
+              </div>
+              <div class="link-grid" data-column="comment">
+                <p class="board-view comment"><span class="count">123</span></p>
+              </div>
+              <div class="link-grid" data-column="date">2023.01.12</div>
+            </a>
+            <div class="collapse">
+                <!-- 본문글 -->
+                <div class="board-link">
+                  <div class="link-grid collapse-content" data-column="reply">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, aspernatur inventore accusamus repudiandae, officia hic ut, ex incidunt delectus distinctio? A fugiat placeat necessitatibus suscipit. Totam sed cupiditate libero?
+                  </div>
+                  <div class="link-grid" data-column="date">2023.01.12</div>
+                </div>
+                <!-- // 본문글 -->
+                <!-- 답변 -->
+                <div class="board-link">
+                  <div class="link-grid collapse-content" data-column="reply">
+                    <h4 class="collapse-title">답변</h4>
+                    <p class="collapse-detail">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, aspernatur inventore accusamus repudiandae, officia hic ut, ex incidunt delectus distinctio? A fugiat placeat necessitatibus suscipit. Totam sed cupiditate libero?
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, aspernatur inventore accusamus repudiandae, officia hic ut, ex incidunt delectus distinctio? A fugiat placeat necessitatibus suscipit. Totam sed cupiditate libero?
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, aspernatur inventore accusamus repudiandae, officia hic ut, ex incidunt delectus distinctio? A fugiat placeat necessitatibus suscipit. Totam sed cupiditate libero?
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, aspernatur inventore accusamus repudiandae, officia hic ut, ex incidunt delectus distinctio? A fugiat placeat necessitatibus suscipit. Totam sed cupiditate libero?
+                    </p>
+                  </div>
+                  <div class="link-grid" data-column="date">2023.01.12</div>
+                </div>
+                <!-- // 답변 -->
+              </div>
             </div>
-            <div class="link-grid" data-column="view">
-              <p class="board-view hits"><span class="count">123</span></p>
-            </div>
-            <div class="link-grid" data-column="comment">
-              <p class="board-view comment"><span class="count">123</span></p>
-            </div>
-            <div class="link-grid" data-column="date">2023.01.12</div>
-          </a>
-          <div class="board-link collapse is-collapse">
-            <div class="link-grid collapse-content" data-column="reply">
-              <h4 class="collapse-title">답변</h4>
-              <p class="collapse-detail">답변입니다</p>
-            </div>
-            <div class="link-grid" data-column="date">2023.01.12</div>
+            <!-- E: 게시글 collapse 아이템 -->
           </div>
-          <!-- E: 게시글 collapse 아이템 -->
-          <!-- S: 게시글 collapse 아이템 -->
-          <a href="javascript:void(0);" class="board-link">
-            <div class="link-grid" data-column="content">
-              <h4 class="board-link-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate</h4>
-              <p class="board-link-detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolores tenetur possimus labore necessitatibus perspiciatis, illum molestiae saepe ducimus beatae sit</p>
-            </div>
-            <div class="link-grid" data-column="status">
-              <span class="badge-outline primary">대기중</span>
-              <!-- <span class="badge-outline info">답변완료</span> -->
-            </div>
-            <div class="link-grid" data-column="view">
-              <p class="board-view hits"><span class="count">123</span></p>
-            </div>
-            <div class="link-grid" data-column="comment">
-              <p class="board-view comment"><span class="count">123</span></p>
-            </div>
-            <div class="link-grid" data-column="date">2023.01.12</div>
-          </a>
-          <div class="board-link collapse">
-            <div class="link-grid collapse-content" data-column="reply">
-              <h4 class="collapse-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, ad rem? Nobis optio quis, atque eius eos facilis suscipit sequi, quibusdam laudantium sint temporibus placeat numquam nihil ut molestias illum?</h4>
-              <p class="collapse-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magnam fuga, cupiditate nobis sunt laboriosam iusto voluptate esse unde sint reprehenderit, provident obcaecati architecto dolorum velit, eius ex laudantium! Impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam beatae dolores vitae ipsum earum iure saepe veritatis omnis aliquid quis id enim esse ducimus, ad nisi iste quaerat dolore obcaecati?</p>
-            </div>
-            <div class="link-grid" data-column="date">2023.01.12</div>
-          </div>
-          <!-- E: 게시글 collapse 아이템 -->
-        </div>
-      </article>
+        </article>
+      </section>
     </main>
   </body>
   <script src="../../assets/js/lib/jquery-1.9.1.js"></script>

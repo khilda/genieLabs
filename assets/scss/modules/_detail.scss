@@ -26,8 +26,8 @@
       display: flex;
       gap: 20px;
     }
-    .btn-bookmark{
-      margin:0 auto ;
+    .btn-bookmark {
+      margin: 0 auto;
     }
     .chk {
       .chk-label {
@@ -168,10 +168,13 @@
       text-align: left;
     }
   }
-  .link-collapse {
-    display: flex;
-    align-items: center;
-    background-color: #dfdfdf;
+  .collapse-list {
+    .board-link {
+      grid-template-rows: repeat(1, 46px);
+    }
+    .collapse .board-link {
+      grid-template-rows: auto;
+    }
   }
   .collapse {
     display: none;
@@ -182,6 +185,7 @@
       border-color: #000;
     }
     .collapse-content {
+      grid-template-rows: auto;
       text-align: left;
     }
     .collapse-title {

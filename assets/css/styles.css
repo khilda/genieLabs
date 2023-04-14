@@ -1723,6 +1723,7 @@ textarea {
   padding: 0 12px;
   line-height: 28px;
   color: #787878;
+  vertical-align: middle;
 }
 .badge-white {
   background-color: var(--badge-white-background, #fff);
@@ -1746,6 +1747,7 @@ textarea {
   padding: 0 20px;
   font-size: 16px;
   color: var(--badge-outline-color, #000);
+  vertical-align: middle;
 }
 .badge-outline.primary {
   border-color: #35D4F8;
@@ -2485,14 +2487,11 @@ textarea {
   font-weight: 400;
   text-align: left;
 }
-.board .link-collapse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #dfdfdf;
+.board .collapse-list .board-link {
+  grid-template-rows: repeat(1, 46px);
+}
+.board .collapse-list .collapse .board-link {
+  grid-template-rows: auto;
 }
 .board .collapse {
   display: none;
@@ -2504,6 +2503,7 @@ textarea {
   border-color: #000;
 }
 .board .collapse .collapse-content {
+  grid-template-rows: auto;
   text-align: left;
 }
 .board .collapse .collapse-title {
@@ -5375,14 +5375,6 @@ code {
   .myGround .board.board-mypost-api .board-header,
   .myGround .board.board-mypost-api .board-link {
     grid-template-columns: 600px repeat(auto-fit, 177px);
-  }
-  .myGround .board.board-mypost-api .link-collapse {
-    display: grid;
-    grid-template-columns: 1131px 177px;
-    grid-template-rows: repeat(1, 224px);
-  }
-  .myGround .board.board-mypost-api .collapse {
-    grid-template-rows: fit-content(86px);
   }
   .myGround .board.board-mypost-api .collapse-content {
     grid-column: auto/span 4;

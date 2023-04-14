@@ -154,13 +154,7 @@
       .board-link {
         grid-template-columns: 600px repeat(auto-fit, 177px);
       }
-      .link-collapse {
-        display: grid;
-        grid-template-columns: 1131px 177px;
-        grid-template-rows: repeat(1, 224px);
-      }
       .collapse {
-        grid-template-rows: fit-content(86px);
         &-content {
           grid-column: auto / span 4;
         }
