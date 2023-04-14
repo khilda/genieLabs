@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   eventTab();
   eventCardBookmark();
   eventCmt();
+  eventLinkDialog()
 });
 /**
  * GNB Tablet, Mobile Open
@@ -333,6 +334,33 @@ function eventCmt() {
             .forEach((btn) => btn.removeAttribute("disabled"));
         }
       }
+    });
+  });
+}
+// 링크이동
+function eventLinkDialog() {
+  // badge Link
+  document
+    .querySelectorAll(".badge-link > .badge[data-url]")
+    .forEach((badge) => {
+      badge?.addEventListener("click", (e) => {
+        confirmOpen(
+          "GenieLabs의 해당 API 상세 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          (result) => {
+            console.log(result, e.target.dataset.url);
+          }
+        );
+      });
+    });
+  // 데모 바로가기
+  document.querySelectorAll(".btn-link[data-url]").forEach((btn) => {
+    btn?.addEventListener("click", (e) => {
+      confirmOpen(
+        "선택하신 데모 상세 화면으로 이동합니다. <br> 계속하시겠습니까?",
+        (result) => {
+          console.log(result, e.target.dataset.url);
+        }
+      );
     });
   });
 }
