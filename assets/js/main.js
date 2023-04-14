@@ -42,7 +42,7 @@ function eventQuickToggle() {
       const _quickBtn = e.target;
       const btnH = _quickBtn.offsetHeight;
       const _quick = _quickContainer.querySelector(".quick");
-      const h = _quick.offsetHeight + btnH/2;
+      const h = _quick.offsetHeight + btnH / 2;
       if (_quickBtn.classList.contains("is-open")) {
         _quickBtn.classList.remove("is-open");
         _quickContainer.classList.remove("is-open");
@@ -65,6 +65,7 @@ function eventQuickScroll() {
       evtScrollY(e.target.dataset.id);
     });
     const section = document.getElementById(link.dataset.id);
+    if (!section) return;
     quickSection.push(section);
   });
   let throttlingId;
@@ -105,12 +106,12 @@ function eventQuickLinkActive() {
  * 공통 Component
  */
 // scroll
-function onScrollTo(y) {
+function onScrollTo(y = 0) {
   window.scroll({ top: y, behavior: "smooth" });
 }
 function evtScrollY(id) {
   const target = document.getElementById(id);
-  const y = target.offsetTop;
+  const y = target?.offsetTop ?? 0;
   onScrollTo(y);
 }
 // tab
