@@ -40,6 +40,19 @@
         <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
       </section>
       <section class="container-content container-detail">
+        <div class="quick-container">
+          <div class="quick">
+            <p class="quick-title">대화 스타일링(사투리/<br />
+              키즈 반말체)</p>
+            <div class="quick-link">
+              <button type="button" data-id="summary" class="link sub is-active">개요​</button>
+              <button type="button" data-id="demo" class="link sub">Demo</button>
+              <button type="button" data-id="relatedProject" class="link sub">관련 프로젝트</button>
+              <button type="button" data-id="research" class="link sub">Research</button>
+            </div>
+          </div>
+          <button type="button" class="quick-collapse"></button>
+        </div>
         <header class="section-title">
           <div class="title-container">
             <h5 class="title">대화 스타일링(사투리/키즈 반말체)</h5>
@@ -48,7 +61,7 @@
               <dd class="badge">사투리 스타일 변환​</dd>
               <dd class="badge">키즈 반말체 변환​</dd>
             </dl>
-            <p class="txt">
+            <p class="txt mt20">
               대화 스타일링(Dialogue Styling) 기술은 AI에 페르소나를 부여하여 동일한 답변도 상황에 따라 다양한 말투로 변환하는 기술입니다.
             </p>
           </div>
@@ -58,9 +71,9 @@
         </header>
         <article class="detail-container">
           <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_conversation_01.png" alt="">
           </figure>
-          <p class="txt">
+          <p class="txt mt40">
             예를 들어 강아지가 태어났다는 고객 발화에 대해, 일반 고객에게는 "강아지는 항상 귀엽죠", 키즈 고객에게는 "강아지는 엄청 귀여워", 경상도 지역 고객에게는 "강생이는 억수로 귀엽재"와 같은 스타일링된 답변을 제공하도록 합니다. 
           </p>
           <p class="txt">
@@ -70,27 +83,29 @@
             KT는 Encoder-Decoder 방식으로 사전 학습한 대용량 언어 모델을 활용하고 전이학습 방식(Transfer Learning)으로 스타일링을 학습합니다.
           </p>
           <figure class="img">
-            <img src="https://placehold.co/700x400/EEE/31343C" alt="">
+            <img src="../../assets/images/img_demo_conversation_02.png" alt="">
           </figure>
-          <p class="txt">
+          <p class="txt mt40">
             딥러닝으로 변환된 문장은 어법상 잘못된 문장일 수도 있고, 원래 문장의 의미와는 다르게 변환될 수 있기 때문에 그대로 사용하지 않고 비문이나 의미 변형을 검증하는 기술을 추가로 진행합니다.
           </p>
           <p class="txt">
             KT의 스타일링 기술은 비문이나 의미 변형을 검증하기 위한 언어 모델을 학습하고, 이를 이용하여 정확도 높은 스타일링 서비스를 제공합니다.
           </p>
-          <article class="multi-column dbl mt60">
+          <article class="multi-column mt50">
             <div class="item">
               <p class="item-num">01</p>
               <p class="item-title">Dynamic 스타일링</p>
               <p class="item-txt">
-                일부 단어나 문장의 서술어 변환에만 그치지 않고, 원 문장의 의미를 유지한 채 문장의 구조 변환까지 가능합니다.
+                일부 단어나 문장의 서술어 변환에만 그치지 않고, 원 문장의 의미를<br />
+                유지한 채 문장의 구조 변환까지 가능합니다.
               </p>
             </div>
             <div class="item">
               <p class="item-num">02</p>
               <p class="item-title">실시간 스타일링</p>
               <p class="item-txt">
-                자사전 학습된 대용량 언어 모델 기반의 딥러닝 기술을 사용하지만, 실시간 변환이 가능한 수준으로 최적화 되어있습니다.
+                자사전 학습된 대용량 언어 모델 기반의 딥러닝 기술을 사용하지만,<br />
+                실시간 변환이 가능한 수준으로 최적화 되어있습니다.
               </p>
             </div>
           </article>
@@ -145,6 +160,19 @@
     </footer>
   </div>
   <script defer src="../../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectorWrapper = document.querySelector('.selector-option'),
+            selectors = selectorWrapper.querySelectorAll('input');
+            
+      // option 선택 하면 input에 텍스트 삽입
+      selectors.forEach(selector => {
+        selector.addEventListener('change', (e) => {
+          console.log(`select option: ${e.target.id}`)
+        })
+      })
+    })
+  </script>
 </body>
 
 </html>
