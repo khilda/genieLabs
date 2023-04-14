@@ -73,20 +73,23 @@
 
 
 .txt-notice {
+  position: relative;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  padding-left: 34px;
   font-size: 16px;
   line-height: 28px;
   font-weight: 500;
   &::before {
     content: "";
     flex: none;
+    position: absolute;
+    left:0;
     display: block;
     background: url("../images/ico_txt_notice.svg") no-repeat 50% 50% / cover;
     width: 24px;
     height: 24px;
-    line-height: 28px;
-    margin-right: 10px;
   }
   > * {
     margin: 0 3px;
