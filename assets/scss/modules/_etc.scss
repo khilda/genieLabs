@@ -58,19 +58,18 @@
     }
   }
 }
-@include mobile{
+@include mobile {
   .pagination {
     gap: 5px;
     max-width: 100%;
     margin-top: 30px;
     overflow: hidden;
     .first,
-    .last{
+    .last {
       display: none;
     }
   }
 }
-
 
 .txt-notice {
   position: relative;
@@ -85,7 +84,7 @@
     content: "";
     flex: none;
     position: absolute;
-    left:0;
+    left: 0;
     display: block;
     background: url("../images/ico_txt_notice.svg") no-repeat 50% 50% / cover;
     width: 24px;
@@ -189,7 +188,6 @@
   }
 }
 
-
 .img-container {
   position: relative;
   margin: 20px 0;
@@ -201,7 +199,6 @@
     margin: 0 auto;
   }
 }
-
 
 .empty-container {
   display: flex;
@@ -414,18 +411,24 @@ code {
     position: fixed;
     left: 30px;
     bottom: 30px;
-    padding-bottom: 30px;
+    width: 65px;
+    height: 65px;
     z-index: 99;
     overflow: hidden;
     transition: all 0.2s;
   }
   .quick {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
     border: 3px solid #160c0c;
     border-radius: 20px;
     background-color: #fff;
+    width: 296px;
     padding: 30px 30px 50px;
     opacity: 0;
-    transition: all 0.2s;
+    transition: opacity 0.2s;
+    transition-delay: 0.18s;
     .quick-link {
       border-radius: 10px;
       background-color: #f4f4f4;
@@ -433,8 +436,11 @@ code {
     }
   }
   .quick-container.is-open {
+    width: 296px;
+    height: auto;
     .quick {
       opacity: 1;
+      transition-delay: 0s;
     }
   }
   .quick-collapse {
@@ -469,23 +475,30 @@ code {
     }
   }
 }
+
 @include mobile {
   .quick-container {
     left: 20px;
     bottom: 20px;
-    padding-bottom: 20px;
+    width: 40px;
+    height: 40px;
   }
   .quick-title {
     font-size: 18px;
     margin-bottom: 10px;
   }
   .quick {
+    bottom: 20px;
     border-radius: 15px;
+    width: 266px;
     padding: 15px 15px 30px;
     .quick-link {
       border-radius: 10px;
       padding: 10px 20px;
     }
+  }
+  .quick-container.is-open {
+    width: 266px;
   }
   .quick-collapse {
     border-radius: 8px;

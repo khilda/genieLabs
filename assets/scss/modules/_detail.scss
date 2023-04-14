@@ -171,8 +171,8 @@
   .collapse {
     display: none;
     border-top: 1px solid transparent;
-      background: #d4d4d4;
-      overflow: hidden;
+    background: #d4d4d4;
+    overflow: hidden;
     &.is-collapse {
       border-color: #000;
     }
@@ -187,6 +187,7 @@
       font-weight: 700;
       &::before {
         content: "";
+        flex: none;
         display: block;
         background: url("../images/ico_cmt_reply.svg") no-repeat 50% 50%;
         width: 24px;
@@ -296,6 +297,10 @@
       &[data-column="comment"] {
         order: 2;
       }
+    }
+    .collapse {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

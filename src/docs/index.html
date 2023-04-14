@@ -164,7 +164,7 @@
               </div>
             </div>
             <!-- Guide For Providers > 1. API 개발 -->
-            <h5 class="h5">1. API 개발</h5>
+            <h5 class="h5 mt30">1. API 개발</h5>
             <p class="mt10">
               등록 신청 전에
               <a href="https://github.com/ktgenielabs/guide/wiki/API-%EA%B0%9C%EB%B0%9C-%EA%B0%80%EC%9D%B4%EB%93%9C" class="underline">AI API 개발 가이드</a>를 참고해 주세요.
@@ -721,65 +721,7 @@ HARBOR_ADDRESS/PROJECT_NAME/IMAGE:TAG</pre>
     <script src="../../assets/js/lib/codemirror.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
-      let throttlingId;
-      const quickContainer = document.querySelector(".quick-container");
-      const quickSection = []
-
-      function evtActiveQuick() {
-        quickSection.forEach(section => {
-          const startPoint = section.offsetTop - 50
-          const endPoint = section.offsetTop + section.getBoundingClientRect().height
-          const scrollY = document.documentElement.scrollTop
-          const id = section.getAttribute('id')
-          if (scrollY >= startPoint && scrollY <= endPoint) {
-            quickContainer.querySelector(`[data-id="${id}"]`).classList.add('is-active')
-          } else {
-            quickContainer.querySelector(`[data-id="${id}"]`).classList.remove('is-active')
-          }
-        })
-      }
-      function evtScrollY(id) {
-        const target = document.getElementById(id)
-        const y = target.offsetTop
-        onScrollTo(y)
-      }
-      function onScrollTo(y) {
-        window.scroll({ top: y, behavior: "smooth" })
-      }
-      function throttling(func, timeout = 300) {
-        if (throttlingId) return
-
-        throttlingId = setTimeout(() => {
-          func();
-          throttlingId = undefined;
-        }, timeout);
-      }
-
-      window.addEventListener('scroll', (e) => {
-        throttling(evtActiveQuick)
-      })
-
       document.addEventListener("DOMContentLoaded", () => {
-        // Quickmenu scrollTo target
-        const quickLink = quickContainer.querySelector(".quick-link");
-        quickLink.querySelectorAll('.link').forEach(link => {
-          link.addEventListener('click', (e) => {
-            evtScrollY(e.target.dataset.id)
-          })
-          const section = document.getElementById(link.dataset.id)
-          quickSection.push(section)
-        })
-        // quick menu open/close
-        quickContainer.querySelector('.quick-collapse').addEventListener('click', (e) => {
-          const quick = quickContainer.querySelector('.quick')
-          if (e.target.classList.contains('is-open')) {
-            e.target.classList.remove('is-open')
-            quickContainer.classList.remove('is-open')
-          } else {
-            e.target.classList.add('is-open')
-            quickContainer.classList.add('is-open')
-          }
-        })
         // 소스 복사하기
         const btnCopys = document.querySelectorAll(".btn-ico.copy");
         btnCopys.forEach((btn) => {

@@ -3,12 +3,13 @@
  */
 document.addEventListener("DOMContentLoaded", () => {
   eventHeader();
+  eventQuickToggle();
+  eventQuickScroll();
   eventSelect();
   eventTab();
   eventCardBookmark();
   eventCmt();
 });
-
 /**
  * GNB Tablet, Mobile Open
  */
@@ -29,8 +30,89 @@ function eventHeader() {
 }
 
 /**
+ * Quick Menu
+ */
+function eventQuickToggle() {
+  const _quickContainer = document.querySelector(".quick-container");
+  if (!_quickContainer) return;
+  // quick menu open/close
+  _quickContainer
+    .querySelector(".quick-collapse")
+    .addEventListener("click", (e) => {
+      const _quickBtn = e.target;
+      const btnH = _quickBtn.offsetHeight;
+      const _quick = _quickContainer.querySelector(".quick");
+      const h = _quick.offsetHeight + btnH/2;
+      if (_quickBtn.classList.contains("is-open")) {
+        _quickBtn.classList.remove("is-open");
+        _quickContainer.classList.remove("is-open");
+        _quickContainer.style.cssText = `height: ${btnH}px`;
+      } else {
+        _quickBtn.classList.add("is-open");
+        _quickContainer.classList.add("is-open");
+        _quickContainer.style.cssText = `height: ${h}px`;
+      }
+    });
+}
+const quickSection = [];
+function eventQuickScroll() {
+  const _quickContainer = document.querySelector(".quick-container");
+  if (!_quickContainer) return;
+  // 클릭시 해당메뉴로 이동
+  const quickLink = _quickContainer.querySelector(".quick-link");
+  quickLink.querySelectorAll(".link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      evtScrollY(e.target.dataset.id);
+    });
+    const section = document.getElementById(link.dataset.id);
+    quickSection.push(section);
+  });
+  let throttlingId;
+  function throttling(func, timeout = 300) {
+    if (throttlingId) return;
+    throttlingId = setTimeout(() => {
+      func();
+      throttlingId = undefined;
+    }, timeout);
+  }
+
+  // 스크롤시 해당 메뉴 활성화
+  window.addEventListener("scroll", (e) => {
+    throttling(eventQuickLinkActive);
+  });
+}
+
+function eventQuickLinkActive() {
+  const _quickContainer = document.querySelector(".quick-container");
+  if (!_quickContainer) return;
+  quickSection.forEach((section) => {
+    const startPoint = section.offsetTop - 50;
+    const endPoint = section.offsetTop + section.getBoundingClientRect().height;
+    const scrollY = document.documentElement.scrollTop;
+    const id = section.getAttribute("id");
+    if (scrollY >= startPoint && scrollY <= endPoint) {
+      _quickContainer
+        .querySelector(`[data-id="${id}"]`)
+        .classList.add("is-active");
+    } else {
+      _quickContainer
+        .querySelector(`[data-id="${id}"]`)
+        .classList.remove("is-active");
+    }
+  });
+}
+/**
  * 공통 Component
  */
+// scroll
+function onScrollTo(y) {
+  window.scroll({ top: y, behavior: "smooth" });
+}
+function evtScrollY(id) {
+  const target = document.getElementById(id);
+  const y = target.offsetTop;
+  onScrollTo(y);
+}
 // tab
 function eventTab() {
   document.querySelectorAll(".tab-container")?.forEach((tab) => {
