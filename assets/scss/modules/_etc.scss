@@ -387,7 +387,8 @@ code {
     }
   }
 }
-@include desktop {
+// PC 해상도
+@media (min-width: 1851px) {
   .quick-container {
     position: sticky;
     top: 150px;
@@ -402,7 +403,7 @@ code {
     display: none;
   }
 }
-@include tablet {
+@media (max-width: 1850px) {
   .quick-container {
     position: fixed;
     left: 30px;
