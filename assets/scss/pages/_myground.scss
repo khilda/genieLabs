@@ -137,7 +137,7 @@
     @include desktop {
       .board-header,
       .board-link {
-        grid-template-columns: 177px 600px repeat(auto-fit, 177px);
+        grid-template-columns: 170px 632px repeat(auto-fit, 170px);
       }
     }
     @include tablet {
@@ -152,11 +152,11 @@
     @include desktop {
       .board-header,
       .board-link {
-        grid-template-columns: 600px repeat(auto-fit, 177px);
+        grid-template-columns: 972px repeat(auto-fit, 170px);
       }
       .collapse {
         &-content {
-          grid-column: auto / span 4;
+          grid-column: auto / span 2;
         }
       }
     }

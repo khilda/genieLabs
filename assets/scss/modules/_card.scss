@@ -76,6 +76,7 @@
     display: block;
     .card-txt {
       @include ellipsis(2);
+      min-height: 52px;
       line-height: 26px;
       font-size: 24px;
       font-weight: 700;
@@ -94,7 +95,7 @@
     justify-content: space-between;
     align-items: flex-end;
     .badge {
-      max-width: 120px;
+      max-width: 170px;
     }
     &.link::before {
       content: "";
@@ -122,7 +123,7 @@
       align-items: flex-start;
       gap: 5px;
       &.has-tooltip {
-        .badge:first-child:hover {
+        &:hover .badge {
           background-color: #1f1f1f;
           color: #fff;
           & ~ .badge-tooltip {

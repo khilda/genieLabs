@@ -67,7 +67,11 @@
     }
   }
   .cmt-footer .btn-container {
-    display: none;
+    .btn-txt.regist,
+    .btn-txt.mod,
+    .btn-txt.del {
+      display: none;
+    }
   }
 }
 // 답글달기

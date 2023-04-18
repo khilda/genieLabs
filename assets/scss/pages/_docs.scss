@@ -1,4 +1,7 @@
 .docs {
+  a.underline:hover {
+    opacity: 0.8;
+  }
   .multi-column {
     > .item {
       flex: 1;
@@ -18,7 +21,7 @@
   @include mobile {
     .multi-column {
       flex-direction: column;
-      > .item{
+      > .item {
         padding: 20px 0;
       }
     }

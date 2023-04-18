@@ -44,30 +44,53 @@
     color: var(--badge-outline-color, #000);
     vertical-align: middle;
   }
-  &-outline.primary {
+  // 대기중
+  &-outline.waiting {
     border-color: $color-primary-skyblue;
     color: $color-primary-skyblue;
   }
-  &-outline.secondary {
+  // 답변완료
+  &-outline.finish {
+    border-color: $color-primary-info;
+    color: $color-primary-info;
+  }
+  // 등록신청중
+  &-outline.regist-apply {
+    border-color: $color-primary-skyblue;
+    color: $color-primary-skyblue;
+  }
+  // 등록신청반려
+  &-outline.regist-reject {
     border-color: $color-primary-orange;
     color: $color-primary-orange;
   }
-  &-outline.info {
+  // 등록완료
+  &-outline.regist-complete {
     border-color: $color-primary-info;
     color: $color-primary-info;
   }
 }
 .badge-txt {
   @include badge-default();
-  &.primary {
+  &.update {
     font-size: 18px;
     color: $color-primary-skyblue;
   }
-  &.secondary {
+  &.new {
     font-size: 18px;
     color: $color-primary-orange;
   }
-  &.info {
+  // 등록신청중
+  &.regist-apply {
+    font-size: 18px;
+    color: $color-primary-skyblue;
+  }
+  // 등록신청반려
+  &.regist-reject {
+    font-size: 18px;
+    color: $color-primary-orange;
+  }
+  &.regist-complete {
     font-size: 18px;
     color: $color-primary-info;
   }

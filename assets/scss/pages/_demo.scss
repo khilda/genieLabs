@@ -253,6 +253,14 @@
     justify-content: space-between;
   }
 
+  .rdo-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .btn {
+      margin-left: auto;
+    }
+  }
   @include tablet {
     article.multi-column {
       flex-wrap: wrap;
@@ -308,14 +316,6 @@
     .info-btn-container {
       flex-direction: column;
       gap: 20px;
-    }
-    .rdo-btn-container {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      .btn {
-        margin-left: auto;
-      }
     }
   }
 

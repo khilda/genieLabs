@@ -158,6 +158,9 @@
     width: 42px;
     height: 48px;
     font-size: 0;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 @include tablet {

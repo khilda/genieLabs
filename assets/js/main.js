@@ -263,11 +263,11 @@ function eventCmt() {
     _cmtList.addEventListener("click", (e) => {
       const _target = e.target;
       const _cmtContainer = e.target.closest(".cmt-container");
-      const _replyContainer = _cmtContainer?.nextElementSibling;
       // 답글보기
       if (_target.classList.contains("reply")) {
         console.log("답글보기");
         _target.classList.toggle("is-active");
+        const _replyContainer = _cmtContainer?.nextElementSibling;
         _replyContainer?.classList.toggle("is-show");
       }
       // 수정하기
@@ -303,6 +303,18 @@ function eventCmt() {
         });
         _cmtContainer.classList.remove("is-edit");
       }
+      // 답글모드에서 댓글달기
+      if (_target.classList.contains("rereply")) {
+        console.log("답글모드에서 댓글달기", _target);
+        const _replyContainer = _cmtContainer.closest(".reply-container");
+        const _replyIpt = _replyContainer.querySelector(".cmt-ipt");
+        const _auth = _cmtContainer
+          .querySelector(".cmt-header")
+          .querySelector(".auth");
+        _replyIpt.value = `@${_auth.innerText} `;
+        _replyIpt.focus();
+        onChangeReplyIpt(_replyIpt);
+      }
       // 답글모드에서 수정하기
       if (_target.classList.value === "btn-txt mod") {
         console.log("답글모드에서 수정하기");
@@ -323,18 +335,18 @@ function eventCmt() {
         _target.nextElementSibling.setAttribute("disabled", "true");
       }
     });
-    _cmtList.addEventListener("input", (e) => {
-      const _target = e.target;
-      const _replyWriteBtn = e.target.nextElementSibling;
-      // 답글쓰기
-      if (_target.classList.value === "ipt cmt-ipt") {
-        if (e.target.value.length) {
+    _cmtList.addEventListener("input", (e) => onChangeReplyIpt(e.target));
+    // 답글쓰기 input
+    function onChangeReplyIpt(target) {
+      const _replyWriteBtn = target.nextElementSibling;
+      if (target.classList.value === "ipt cmt-ipt") {
+        if (target.value.length) {
           _replyWriteBtn
             .querySelectorAll(".btn")
             .forEach((btn) => btn.removeAttribute("disabled"));
         }
       }
-    });
+    }
   });
 }
 // 링크이동

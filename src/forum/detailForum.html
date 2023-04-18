@@ -100,10 +100,15 @@
                 </div>
               </div>
             </div>
+            <!-- 댓글이 없는 경우 -->
+            <div class="comment-empty">등록된 댓글이 없습니다</div>
+            <!-- //댓글이 없는 경우 -->
+            <!-- 댓글이 있는 경우 -->
             <ul class="comment-list">
-              <!-- 댓글 아이템 -->
+              <!-- 댓글 아이템 container (댓글+답글 포함)-->
               <li class="list-item">
-                <!-- 작성자가 본일일때 cmt-container type-editable 클래스 추가 -->
+                <!-- 댓글 아이템 -->
+                <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
                 <div class="cmt-container type-editable">
                   <div class="cmt-header">
                     <dl class="auth-info">
@@ -127,8 +132,10 @@
                     </div>
                   </div>
                 </div>
-                <!-- 답글 아이템 -->
+                <!-- // 댓글 아이템 -->
+                <!-- 답글 아이템 container -->
                 <div class="reply-container">
+                  <!-- 답글 작성하기 -->
                   <div class="reply-header">
                     <div class="ipt-container">
                       <input type="text" class="ipt cmt-ipt" />
@@ -138,9 +145,12 @@
                       </div>
                     </div>
                   </div>
+                  <!-- // 답글 작성하기 -->
+                  <!-- 답글 목록 -->
                   <ul class="reply-content">
-                    <!-- 작성자가 본일일때 cmt-container type-editable 클래스 추가 -->
-                    <li class="cmt-container type-editable">
+                    <!-- 답글 아이템 -->
+                    <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
+                    <li class="cmt-container type-editable" data-depth="2">
                       <div class="cmt-header">
                         <dl class="auth-info">
                           <dt class="auth">나</dt>
@@ -153,13 +163,16 @@
                       </div>
                       <div class="cmt-footer">
                         <div class="btn-container">
+                          <button type="button" class="btn-txt rereply">답글달기</button>
                           <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
                           <button type="button" class="btn-txt mod">수정하기</button>
                           <button type="button" class="btn-txt del">삭제하기</button>
                         </div>
                       </div>
                     </li>
-                    <li class="cmt-container type-editable">
+                    <!-- // 답글 아이템 -->
+                    <!-- 답글 아이템 -->
+                    <li class="cmt-container type-editable" data-depth="3">
                       <div class="cmt-header">
                         <dl class="auth-info">
                           <dt class="auth">나</dt>
@@ -167,17 +180,21 @@
                         </dl>
                       </div>
                       <div class="cmt-body">
-                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
+                        <p class="txt"><code>@나</code> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut cupiditate ipsam tenetur eos, aliquid atque. Ea accusamus deleniti nobis, sequi non dolorem explicabo id! Quam, laborum voluptates. Veniam, fugit.</p>
                         <textarea class="txt-edit"></textarea>
                       </div>
                       <div class="cmt-footer">
                         <div class="btn-container">
+                          <button type="button" class="btn-txt rereply">답글달기</button>
+
                           <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
                           <button type="button" class="btn-txt mod">수정하기</button>
                           <button type="button" class="btn-txt del">삭제하기</button>
                         </div>
                       </div>
                     </li>
+                    <!-- // 답글 아이템 -->
+                    <!-- 답글 아이템 -->
                     <li class="cmt-container type-editable">
                       <div class="cmt-header">
                         <dl class="auth-info">
@@ -191,6 +208,7 @@
                       </div>
                       <div class="cmt-footer">
                         <div class="btn-container">
+                          <button type="button" class="btn-txt rereply">답글달기</button>
                           <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
                           <button type="button" class="btn-txt mod">수정하기</button>
                           <button type="button" class="btn-txt del">삭제하기</button>
@@ -198,13 +216,14 @@
                       </div>
                     </li>
                   </ul>
+                  <!-- // 답글 목록 -->
                   <div class="btn-container reply-more">
                     <button type="button" class="btn">+ 답글 더보기</button>
                   </div>
                 </div>
-                <!-- // 답글 아이템 -->
+                <!-- // 답글 아이템 container -->
               </li>
-              <!-- //댓글 아이템 -->
+              <!-- // 댓글 아이템 container (댓글+답글 포함) -->
               <li class="list-item">
                 <!-- 작성자가 본일일때 type-editable 클래스 추가 -->
                 <div class="cmt-container">
@@ -255,6 +274,7 @@
                       </div>
                       <div class="cmt-footer">
                         <div class="btn-container">
+                          <button type="button" class="btn-txt rereply">답글달기</button>
                           <button type="button" class="btn-txt regist" style="display: none">등록하기</button>
                           <button type="button" class="btn-txt mod">수정하기</button>
                           <button type="button" class="btn-txt del">삭제하기</button>
@@ -308,6 +328,7 @@
               </li>
               <!-- //댓글 아이템 -->
             </ul>
+            <!-- // 댓글이 있는 경우 -->
           </article>
         </section>
       </main>

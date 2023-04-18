@@ -30,6 +30,9 @@
   color: #000;
   font-weight: 700;
   cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 .file-ipt {
   position: absolute;
@@ -55,6 +58,7 @@
   padding: 30px 0;
   text-align: center;
   color: #787878;
+  cursor: grab;
   .drag-txt {
     background: transparent no-repeat 0 50%;
     background-image: url("../images/ico_file_file_78.svg");
@@ -102,6 +106,9 @@
   &.api .description {
     background-image: url("../images/ico_file_api.svg");
   }
+}
+button.file-item:hover {
+  opacity: 0.5;
 }
 
 @include mobile {

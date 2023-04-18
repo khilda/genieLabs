@@ -11,6 +11,9 @@
   padding: 11px 30px;
   color: #fff;
   text-align: center;
+  &:not(:disabled):hover {
+    opacity: 0.8;
+  }
   &.cancel {
     background-color: #929292;
   }
@@ -109,6 +112,9 @@
   height: 48px;
   font-size: 0;
   color: transparent;
+  &:hover {
+    opacity: 0.5;
+  }
   &.is-active {
     background-image: var(--card-icon-bookmark-active);
   }
@@ -125,6 +131,9 @@
   color: #fff;
   text-decoration: underline;
   text-align: center;
+  &:not(:disabled):hover {
+    opacity: 0.8;
+  }
   &::after {
     content: "";
     flex: none;
@@ -146,6 +155,9 @@
   font-weight: 600;
   color: #fff;
   text-align: center;
+  &:not(:disabled):hover {
+    opacity: 0.5;
+  }
   &::before {
     content: "";
     display: block;
@@ -155,7 +167,13 @@
     background: url("../images/ico_btn_copy.svg") no-repeat 50% 50%;
   }
 }
-
+// badge-link
+button.badge {
+  &:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+}
 @include mobile {
   .btn-container {
     width: 100%;
