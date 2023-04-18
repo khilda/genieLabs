@@ -2762,6 +2762,17 @@ button.badge:hover {
     position: static;
     padding-top: 10px;
   }
+  .cmt-container .cmt-footer .btn-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 14px;
+  }
+  .cmt-container .cmt-footer .btn-container .btn-txt:before {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+  }
   .reply-container .reply-header .ipt-container,
   .comment-edit .ipt-container {
     -webkit-box-orient: vertical;

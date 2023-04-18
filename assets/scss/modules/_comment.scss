@@ -223,6 +223,16 @@
     .cmt-footer {
       position: static;
       padding-top: 10px;
+      .btn-container {
+        flex-wrap: wrap;
+        font-size: 14px;
+        .btn-txt:before{
+          background-size: cover;
+          width: 20px;
+          height: 20px;
+          margin-right: 3px;
+        }
+      }
     }
   }
   .reply-container .reply-header,
