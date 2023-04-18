@@ -1,21 +1,83 @@
-// title
-.h1{
+/* ##############################
+# components - 편의성을 위한 class
+################################*/
+.d-flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.flex-direction-row {
+  flex-direction: row;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.color {
+  &-primary {
+  }
+  &-secondary {
+    color: $color-primary-orange;
+  }
+  &-info {
+    color: #787878;
+  }
+}
+
+@for $i from 0 to 10 {
+  $margin: $i * 10;
+  .mt#{$margin} {
+    margin-top: $margin * 1px !important;
+  }
+  .mb#{$margin} {
+    margin-bottom: $margin * 1px !important;
+  }
+  .ml#{$margin} {
+    margin-left: $margin * 1px !important;
+  }
+  .mr#{$margin} {
+    margin-right: $margin * 1px !important;
+  }
+  .gap#{$margin} {
+    gap: $margin * 1px !important;
+  }
+}
+
+@for $i from 0 to 10 {
+  $padding: $i * 10;
+  .pt#{$padding} {
+    padding-top: $padding * 1px;
+  }
+  .pb#{$padding} {
+    padding-bottom: $padding * 1px;
+  }
+  .pl#{$padding} {
+    padding-left: $padding * 1px;
+  }
+  .pr#{$padding} {
+    padding-right: $padding * 1px;
+  }
+}
+.h1 {
   font-weight: 700;
   font-size: 32px;
 }
-.h2{
+.h2 {
   font-weight: 700;
   font-size: 28px;
 }
-.h3{
+.h3 {
   font-weight: 700;
   font-size: 24px;
 }
-.h4{
+.h4 {
   font-weight: 700;
   font-size: 20px;
 }
-.h5{
+.h5 {
   font-weight: 700;
   font-size: 18px;
 }
@@ -29,23 +91,23 @@
 }
 
 // color
-.fc-info{
+.fc-info {
   color: #787878 !important;
 }
 
-.underline{
+.underline {
   text-decoration: underline;
 }
 
-.list-dot{
+.list-dot {
   > li,
-  > dd{
+  > dd {
     position: relative;
     padding-left: 30px;
-    &::before{
-      content: 'ㆍ';
+    &::before {
+      content: "ㆍ";
       position: absolute;
-      top:0;
+      top: 0;
       left: 0;
       display: block;
       width: 30px;
@@ -53,15 +115,15 @@
     }
   }
 }
-.list-dash{
+.list-dash {
   > li,
-  > dd{
+  > dd {
     position: relative;
     padding-left: 15px;
-    &::before{
-      content: '-';
+    &::before {
+      content: "-";
       position: absolute;
-      top:0;
+      top: 0;
       left: 0;
       display: block;
       width: 15px;
@@ -69,8 +131,8 @@
   }
 }
 .list-dot,
-.list-dash{
-  > dt{
+.list-dash {
+  > dt {
     font-weight: 700;
     font-size: 18px;
     color: #787878;

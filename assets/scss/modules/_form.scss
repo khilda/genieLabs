@@ -1,3 +1,6 @@
+/* ##############################
+# components - input[text]
+################################*/
 .ipt {
   border: 2px solid #ccc;
   background-color: #fff;
@@ -36,6 +39,10 @@
     }
   }
 }
+
+/* ##############################
+# components - checkbox
+################################*/
 .chk {
   position: relative;
   display: inline-flex;
@@ -80,6 +87,9 @@
     background-color: #000;
   }
 }
+/* ##############################
+# components - radio
+################################*/
 .rdo {
   position: relative;
   position: relative;

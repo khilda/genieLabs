@@ -1,14 +1,6 @@
-// color
-// var(--color, #f4f4f4);
-:root {
-  --footer-color: #787878;
-  --footer-policy-color: #000;
-}
-.dark-theme {
-  --footer-color: #787878;
-  --footer-policy-color: #fff;
-}
-
+/* ##############################
+# layout - footer
+################################*/
 .footer {
   position: relative;
   display: flex;

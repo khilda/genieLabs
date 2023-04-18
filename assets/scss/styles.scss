@@ -1,47 +1,8 @@
-/******************************************
-# DATE   :  
-# AUTHOR : yujinkim
-# DEVICE : WEB
-******************************************/
-@import "abstracts/variable";
-@import "abstracts/function";
-@import "abstracts/mixin";
+@import url('./reset.css');
+@import url('./font.css');
+@import url('./normalize.css');
 
-@import "base/reset";
-@import "base/fonts";
-@import "base/normalize";
-
-@import "layouts/container";
-@import "layouts/header";
-@import "layouts/footer";
-
-// libaray
-@import "../css/lib/sweetalert2.min.css";
-@import "../css/lib/swiper-bundle.css";
-@import "../css/lib/fileup.css";
-@import "../css/lib/codemirror.css";
-
-// module
-@import "modules/paragraph";
-@import "modules/breadcrumb";
-@import "modules/badge";
-@import "modules/button";
-@import "modules/edit";
-@import "modules/dialog";
-@import "modules/detail";
-@import "modules/form";
-@import "modules/select";
-@import "modules/tab";
-@import "modules/card";
-@import "modules/comment";
-@import "modules/swiper";
-@import "modules/library";
-@import "modules/etc";
-
-@import "pages/main";
-@import "pages/docs";
-@import "pages/demo";
-@import "pages/applications";
-@import "pages/forum";
-@import "pages/myground";
-@import "pages/sampleCode";
+@import url('./layout.css');
+@import url('./library.css');
+@import url('./components.css');
+@import url('./pages.css');

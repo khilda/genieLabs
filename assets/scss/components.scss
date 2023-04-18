@@ -1,0 +1,46 @@
+@import "abstracts/variable";
+
+@import "abstracts/mixin";
+
+:root {
+  --badge-white-background: #fff;
+  --badge-outline-border: #000;
+  --badge-outline-color: #000;
+  --card-background: #f4f4f4;
+  --card-icon-bookmark: url("../images/ico_bookmark_b.svg");
+  --card-icon-bookmark-active: url("../images/ico_bookmark_b_active.svg");
+  --card-icon-arrow: url("../images/ico_arrow_42.svg");
+  --card-icon-midm: url("../images/img_midm.svg");
+  --card-icon-hits: url("../images/ico_view_24.svg");
+  --card-icon-like: url("../images/ico_like_24.svg");
+  --card-icon-commnet: url("../images/ico_comment_24.svg");
+  --card-view-color: #000;
+}
+.dark-theme {
+  --badge-white-background: #fff;
+  --badge-outline-border: #fff;
+  --badge-outline-color: #fff;
+  --card-background: #1f1f1f;
+  --card-icon-bookmark: url("../images/darkmode/ico_bookmark.svg");
+  --card-icon-bookmark-active: url("../images/darkmode/ico_bookmark_active.svg");
+  --card-icon-arrow: url("../images/darkmode/ico_arrow_42.svg");
+  --card-icon-midm: url("../images/darkmode/img_midm.svg");
+  --card-icon-hits: url("../images/darkmode/ico_view_24.svg");
+  --card-icon-like: url("../images/darkmode/ico_like_24.svg");
+  --card-icon-commnet: url("../images/darkmode/ico_comment_24.svg");
+  --card-view-color: #787878;
+}
+
+// module
+@import "modules/paragraph";
+@import "modules/breadcrumb";
+@import "modules/badge";
+@import "modules/button";
+@import "modules/form";
+@import "modules/select";
+@import "modules/edit";
+@import "modules/detail";
+@import "modules/tab";
+@import "modules/card";
+@import "modules/comment";
+@import "modules/etc";

@@ -1,28 +1,6 @@
-// color
-// var(--color, #f4f4f4);
-:root {
-  --card-background: #f4f4f4;
-  --card-icon-bookmark: url("../images/ico_bookmark_b.svg");
-  --card-icon-bookmark-active: url("../images/ico_bookmark_b_active.svg");
-  --card-icon-arrow: url("../images/ico_arrow_42.svg");
-  --card-icon-midm: url("../images/img_midm.svg");
-  --card-icon-hits: url("../images/ico_view_24.svg");
-  --card-icon-like: url("../images/ico_like_24.svg");
-  --card-icon-commnet: url("../images/ico_comment_24.svg");
-  --card-view-color: #000;
-}
-.dark-theme {
-  --card-background: #1f1f1f;
-  --card-icon-bookmark: url("../images/darkmode/ico_bookmark.svg");
-  --card-icon-bookmark-active: url("../images/darkmode/ico_bookmark_active.svg");
-  --card-icon-arrow: url("../images/darkmode/ico_arrow_42.svg");
-  --card-icon-midm: url("../images/darkmode/img_midm.svg");
-  --card-icon-hits: url("../images/darkmode/ico_view_24.svg");
-  --card-icon-like: url("../images/darkmode/ico_like_24.svg");
-  --card-icon-commnet: url("../images/darkmode/ico_comment_24.svg");
-  --card-view-color: #787878;
-}
-
+/* ##############################
+# components - card
+################################*/
 .card {
   position: relative;
   display: block;

@@ -1,15 +1,6 @@
-// color
-// var(--color, #f4f4f4);
-:root {
-  --badge-white-background: #fff;
-  --badge-outline-border: #000;
-  --badge-outline-color: #000;
-}
-.dark-theme {
-  --badge-white-background: #fff;
-  --badge-outline-border: #fff;
-  --badge-outline-color: #fff;
-}
+/* ##############################
+# components - badge
+################################*/
 @mixin badge-default() {
   flex: none;
   display: inline-block;

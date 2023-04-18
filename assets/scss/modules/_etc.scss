@@ -1,3 +1,6 @@
+/* ##############################
+# components - pagination
+################################*/
 .pagination {
   display: flex;
   align-items: center;
@@ -70,7 +73,9 @@
     }
   }
 }
-
+/* ##############################
+# components - notice text
+################################*/
 .txt-notice {
   position: relative;
   display: flex;
@@ -97,16 +102,9 @@
     justify-content: center;
   }
 }
-.color {
-  &-primary {
-  }
-  &-secondary {
-    color: $color-primary-orange;
-  }
-  &-info {
-    color: #787878;
-  }
-}
+/* ##############################
+# components - search (검색영역)
+################################*/
 .search-container {
   display: flex;
   justify-content: space-between;
@@ -187,6 +185,9 @@
   }
 }
 
+/* ##############################
+# components - image
+################################*/
 .img-container {
   position: relative;
   margin: 20px 0;
@@ -199,6 +200,9 @@
   }
 }
 
+/* ##############################
+# components - emtpy(게시글이 없습니다)
+################################*/
 .empty-container {
   display: flex;
   align-items: center;
@@ -232,7 +236,10 @@
   }
 }
 
-// loading
+
+/* ##############################
+# components - loading, pageing loader
+################################*/
 .loading {
   display: flex;
   flex-direction: column;
@@ -291,6 +298,9 @@
   padding: 50px 70px;
 }
 
+/* ##############################
+# components - code, caption
+################################*/
 code {
   padding: 2px 5px;
   margin: 0;
@@ -307,6 +317,9 @@ code {
   line-height: 22px;
   color: #787878;
 }
+/* ##############################
+# components - table
+################################*/
 .table {
   display: block;
   width: 100%;
@@ -331,7 +344,9 @@ code {
   }
 }
 
-// quickmenu
+/* ##############################
+# components - quick menu(퀵메뉴)
+################################*/
 .quick {
   &-title {
     margin-bottom: 18px;
@@ -509,6 +524,41 @@ code {
       content: "";
       left: calc(50% - 10px);
       width: 20px;
+    }
+  }
+}
+
+/* ##############################
+# components - multi column(design)
+################################*/
+.multi-column {
+  display: flex;
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    > p {
+      text-align: center;
+    }
+    &-num {
+      font-size: 18px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      color: #00d1ff;
+    }
+    &-title {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+    &-txt {
+      margin-top: 18px;
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 }
