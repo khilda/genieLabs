@@ -940,6 +940,12 @@
 .btn-txt.refresh:before {
   background-image: url("../images/ico_btn_refresh.svg");
 }
+.btn-txt.rereply {
+  color: #000;
+}
+.btn-txt.rereply:before {
+  background-image: url("../images/ico_btn_cmt_b.svg");
+}
 
 .btn-ico {
   position: relative;

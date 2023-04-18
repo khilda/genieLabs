@@ -61,6 +61,12 @@
   &.refresh:before {
     background-image: url("../images/ico_btn_refresh.svg");
   }
+  &.rereply {
+    color: #000;
+    &:before {
+      background-image: url("../images/ico_btn_cmt_b.svg");
+    }
+  }
 }
 
 // 아이콘버튼
