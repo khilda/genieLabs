@@ -219,6 +219,11 @@
       }
     }
   }
+  .select-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   .info-btn-container {
     display: flex;
     align-items: center;
@@ -233,6 +238,71 @@
       margin-left: auto;
     }
   }
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px 40px;
+    gap: 10px;
+    .chat-info {
+      font-weight: 500;
+      text-align: center;
+    }
+    .from-them,
+    .from-me {
+      position: relative;
+      border: 3px solid #000;
+      background-color: #fff;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: 400;
+      z-index: 1;
+      &:not(.emoji)::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        border-top: 15px solid #000;
+        border-bottom: 15px solid transparent;
+        border-right: 11px solid transparent;
+        border-left: 11px solid transparent;
+        width: 0;
+        height: 0;
+      }
+    }
+    .from-them {
+      align-self: flex-start;
+      &:not(.emoji)::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -19px;
+        left: 25px;
+        border-top: 8px solid #fff;
+        border-bottom: 8px solid transparent;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        width: 0;
+        height: 0;
+      }
+    }
+    .from-me {
+      align-self: flex-end;
+      background-color: #000;
+      color: #fff;
+      &::before {
+        right: 20px;
+      }
+    }
+    .emoji {
+      border-color: transparent;
+      background-color: transparent;
+      font-size: 2.5em;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   @include tablet {
     article.multi-column {
       flex-wrap: wrap;
@@ -325,6 +395,9 @@
     .direction {
       padding: 0;
       margin: 20px 0;
+    }
+    .select-btn-container {
+      flex-wrap: wrap;
     }
     .rdo-btn-container {
       flex-wrap: wrap;

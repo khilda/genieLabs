@@ -334,6 +334,16 @@
       let { auth = '', date = '', isUser = false, cmtValue = '' } = params
       date = date || new Intl.DateTimeFormat('ko-KR').format(new Date())
 
+      if (cmtValue.slice(0, 1) === '@') {
+        const str = cmtValue.split(' ')
+        let tag = str.shift()
+        if (tag.length > 1) {
+          tag = `<span class="tag">${tag}</span>`
+          cmtValue = `${tag} ${str.join(' ')}`
+
+        }
+      }
+      console.log(cmtValue)
       const _rplyItem = document.createElement('li')
       _rplyItem.innerHTML = `<div class="cmt-header">
                               <dl class="auth-info">
@@ -374,6 +384,15 @@
       console.log('대댓글(3dep) 추가')
       const _rereply = _cmtContainer.querySelector('.rereply')
       _rereply.dispatchEvent(new Event('click', { bubbles: true }))
+
+      const _replyList = _cmtContainer.querySelector('.reply-content')
+      const item = initReplyItem({
+        auth: '홍길동',
+        date: '',
+        isUser: true,
+        cmtValue: '@홍길동 대댓글 추가'
+      })
+      _replyList?.appendChild(item)
     }
   </script>
 

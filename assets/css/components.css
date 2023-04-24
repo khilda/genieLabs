@@ -2545,6 +2545,11 @@ button.badge:hover {
   font-size: 18px;
   font-weight: 400;
 }
+.cmt-container .cmt-body .tag {
+  margin-right: 3px;
+  font-weight: 700;
+  color: #787878;
+}
 .cmt-container .cmt-body .txt {
   -webkit-box-flex: 1;
       -ms-flex: 1;

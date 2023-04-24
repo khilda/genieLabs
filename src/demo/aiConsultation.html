@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo > AI 상담대화</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+            <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+            <a href="#none" class="info-menu logout">Logout</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+      </header>
+      <main class="container demo">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/demo/index.html" class="breadcrumb-link">Demo</a>
+          <a href="/src/demo/conversationStyling.html" class="breadcrumb-link">AI 상담대화</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">Demo</h1>
+          <p class="page-txt">Ground 에서 제공하는 <br class="br-mo" />Demo 들을 통해<br />직접 API를 경험 해 보세요.</p>
+        </section>
+        <section class="container-content container-detail">
+          <header class="section-title">
+            <div class="title-container">
+              <h5 class="title">AI 상담대화</h5>
+              <p class="txt mt20">사용자가 자연어로 된 발화를 하면 연속되는 대화의 문맥에 적합한 최적의 답변을 탐색하여 제공하는 기술</p>
+            </div>
+          </header>
+          <article class="detail-container">
+            <p class="txt mt40">관련 문구 탐색 기술은 자연어로 된 발화에 문맥적으로 적합한 응답을 찾아주는 기술입니다.
+              일상채팅에서는 연속 대화 대상이 일반/시니어 등이 되며, 해당 대상에 대해 색인 되어 있는 문맥 대화 데이터를 기반으로
+              사용자 발화의 답변을 제공합니다.</p>
+            <figure class="img">
+              <img src="../../assets/images/img_demo_ai_01.png" alt="">
+            </figure>
+            <p class="txt">일상채팅의 문맥에 맞는 답변 제공을 위해 질의응답기술 중 하나인 집약벡터상의 관련 문구 탐색 기술(Dense Passage Retrieval, DPR)이 적용되었습니다. DPR은 Query(발화)와 Passage(응답 문구)를 각각 Dense Embedding하여 유사도를 랭킹으로 매기고, 유사도가 가장 높은 Passage를 선택합니다.</p>
+            <figure class="img">
+              <img src="../../assets/images/img_demo_ai_02.png" alt="">
+            </figure>
+            <p class="txt">Dense Encoder Training에서 연관된 Question과 Passage의 Dense Embedding간의 거리를 작게 학습합니다. 해당 과정을 통해 사용자 발화와 연관이 높은 응답일수록 유사도가 높아지고 관련이 없을수록 유사도가 낮아지게 KT MI:DEUM이 학습될 수 있습니다.</p>
+            <figure class="img">
+              <img src="../../assets/images/img_demo_ai_03.png" alt="">
+            </figure>
+            <p class="txt mt40">사용자로부터 들어온 Query(사용자 발화)와 가장 가까운 Passage 내 Query(응답색인문구)를 탐색하여 해당 Passage에 맵핑 되어 있는 Answer(답변 문구)를 채택합니다.</p>
+            <figure class="img">
+              <img src="../../assets/images/img_demo_ai_04.png" alt="">
+            </figure>
+            <p class="txt mt40">위와 같은 관련 문구 탐색 과정을 통해 "손흥민의 소속 팀은?" 이라는 발화에 대해 "손흥민은 토트넘 구단에 속해 있어요."와 같은 채팅 답변을 제공할 수 있습니다.</p>
+
+            <article class="multi-column mt50">
+              <div class="item">
+                <p class="item-num">01</p>
+                <p class="item-title">문맥 대화</p>
+                <p class="item-txt">대화의 순차적 진행을 통해 이전 발화와 응답을 기반으로 <br>문맥을 이해하고, 불완전한 사용자의 발화가 입력되어도 현재 상황에서 <br>가장 적합한 응답 탐색이 가능합니다.</p>
+              </div>
+              <div class="item">
+                <p class="item-num">02</p>
+                <p class="item-title">시니어 감성 케어</p>
+                <p class="item-txt">시니어를 대상으로한 일상/근황과 같은 <br>가벼운 주제의 감성케어 대화 진행이 가능합니다.</p>
+              </div>
+            </article>
+            <div class="sub-title-container mt20">
+              <h3 class="title">상담대화</h3>
+              <div class="btn-container">
+                <button type="button" class="btn-txt refresh">새로고침</button>
+              </div>
+            </div>
+            <div class="mt40 select-btn-container">
+              <div class="select-container">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
+                <select class="select">
+                  <option value="1" default>아이 Profile 선택</option>
+                </select>
+              </div>
+              <button id="userRequest" type="button" class="btn wave-btn">의도추론</button>
+            </div>
+            <article class="chat-container mt30">
+              <div class="chat-info">2022.08.03 14:23 상담시작</div>
+              <p class="from-them">어떤 고민이 있으신가요?</p>
+              <p class="from-them emoji">😊</p>
+              <p class="from-me emoji">😢</p>
+              <p class="from-me">아이가 편식을 해서 고민입니다.</p>
+              <div class="chat-info">2022.08.03 14:30 상담 종료</div>
+            </article>
+            <div class="ipt-container mt20">
+              <input id="stylingInput" type="text" class="ipt edit-ipt" placeholder="대화를 입력해주세요" />
+              <button id="stylingRequest" type="button" class="btn wave-btn">보내기</button>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Demo바로가기 click 이벤트 걸기
+        eventLinkTo({
+          className: '.btn-link',
+          msg: "GenieLabs의 해당AI 분류 화면으로 이동합니다. <br> 계속하시겠습니까?",
+          callback: (result, target) => {
+            console.log(result, target.dataset.url)
+          }
+        })
+      })
+    </script>
+  </body>
+
+</html>

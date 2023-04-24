@@ -28,6 +28,11 @@
     line-height: 26px;
     font-size: 18px;
     font-weight: 400;
+    .tag{
+      margin-right: 3px;
+      font-weight: 700;
+      color: #787878;
+    }
     .txt {
       flex: 1;
     }

@@ -529,6 +529,15 @@
 .demo .result-multi .result-item .dbl .textarea:nth-child(2) {
   height: 300px;
 }
+.demo .select-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
 .demo .info-btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,6 +560,78 @@
 }
 .demo .rdo-btn-container .btn {
   margin-left: auto;
+}
+.demo .chat-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+  gap: 10px;
+}
+.demo .chat-container .chat-info {
+  font-weight: 500;
+  text-align: center;
+}
+.demo .chat-container .from-them,
+.demo .chat-container .from-me {
+  position: relative;
+  border: 3px solid #000;
+  background-color: #fff;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 1;
+}
+.demo .chat-container .from-them:not(.emoji)::before,
+.demo .chat-container .from-me:not(.emoji)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  border-top: 15px solid #000;
+  border-bottom: 15px solid transparent;
+  border-right: 11px solid transparent;
+  border-left: 11px solid transparent;
+  width: 0;
+  height: 0;
+}
+.demo .chat-container .from-them {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.demo .chat-container .from-them:not(.emoji)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -19px;
+  left: 25px;
+  border-top: 8px solid #fff;
+  border-bottom: 8px solid transparent;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  width: 0;
+  height: 0;
+}
+.demo .chat-container .from-me {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #000;
+  color: #fff;
+}
+.demo .chat-container .from-me::before {
+  right: 20px;
+}
+.demo .chat-container .emoji {
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 2.5em;
+  padding-left: 0;
+  padding-right: 0;
 }
 @media (max-width: 1439px) {
   .demo article.multi-column {
@@ -659,6 +740,10 @@
   .demo .direction {
     padding: 0;
     margin: 20px 0;
+  }
+  .demo .select-btn-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .demo .rdo-btn-container {
     -ms-flex-wrap: wrap;
