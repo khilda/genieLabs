@@ -79,6 +79,10 @@ dd {
   font-weight: 400;
 }
 
+li {
+  word-break: inherit;
+}
+
 table {
   border-spacing: 0;
   border-collapse: collapse;
