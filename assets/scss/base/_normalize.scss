@@ -6,7 +6,7 @@ body {
   font-size: $font-size;
   color: var(--color, #000);
   line-height: $line-height;
-  word-break: keep-all;
+  word-break: break-word;
   transition: color 0.3s;
   transition-delay: 0s;
 }
@@ -21,7 +21,7 @@ dd {
 ol,
 ul,
 li {
-  word-break: break-all;
+  word-break: break-word;
 }
 table {
   border-spacing: 0;
