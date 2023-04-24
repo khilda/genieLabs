@@ -79,8 +79,10 @@ dd {
   font-weight: 400;
 }
 
+ol,
+ul,
 li {
-  word-break: inherit;
+  word-break: keep-all;
 }
 
 table {
