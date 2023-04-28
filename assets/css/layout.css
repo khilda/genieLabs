@@ -154,6 +154,10 @@
   background: url("../images/ico_gnb_login.svg") no-repeat 0 50%;
   color: #838383;
 }
+.header .info .info-menu.sign {
+  padding-left: 0;
+  color: #838383;
+}
 .header .btn-theme {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -319,10 +323,13 @@
   }
   .header .info .info-menu {
     position: absolute;
+    right: 40px;
+    top: 550px;
   }
   .header .info .info-menu.ground {
     top: 30px;
     left: 40px;
+    right: auto;
     border: 2px solid var(--visual-link-border);
     border-radius: 80px;
     background-image: var(--gnb-icon-ground);
@@ -335,9 +342,9 @@
     background-color: #000;
     color: #fff;
   }
-  .header .info .info-menu.logout {
-    right: 40px;
-    top: 550px;
+  .header .info .info-menu.sign {
+    right: 0;
+    left: 40px;
   }
 }
 /* ##############################

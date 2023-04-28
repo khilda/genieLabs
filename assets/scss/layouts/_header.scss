@@ -91,6 +91,10 @@
         background: url("../images/ico_gnb_login.svg") no-repeat 0 50%;
         color: #838383;
       }
+      &.sign{
+        padding-left: 0;
+        color: #838383;
+      }
     }
   }
   .btn-theme {
@@ -246,9 +250,12 @@
       align-self: flex-end;
       .info-menu {
         position: absolute;
+        right: 40px;
+        top: 550px;
         &.ground {
           top: 30px;
           left: 40px;
+          right: auto;
           border: 2px solid var(--visual-link-border);
           border-radius: 80px;
           background-image: var(--gnb-icon-ground);
@@ -261,9 +268,9 @@
             color: #fff;
           }
         }
-        &.logout {
-          right: 40px;
-          top: 550px;
+        &.sign {
+          right: 0;
+          left: 40px;
         }
       }
     }
