@@ -110,6 +110,7 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        CKEDITOR.config.contentsCss = '/assets/css/lib/ckeditor-content.css';
         CKEDITOR.replace('editor1');
         // file
         $.fileup({
