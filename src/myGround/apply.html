@@ -285,7 +285,8 @@
           })
         })
         // Applications 설명
-        CKEDITOR.config.width = `100%`
+        CKEDITOR.config.width = `100%`        
+        CKEDITOR.config.contentsCss = '/assets/css/lib/ckeditor-content.css';
         CKEDITOR.replace('editor1');
         // 제공자 정보
         evtChangeProvider()
