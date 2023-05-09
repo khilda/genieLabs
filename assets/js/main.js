@@ -3,6 +3,7 @@
  */
 document.addEventListener("DOMContentLoaded", () => {
   eventHeader();
+  eventTopButton();
   eventQuickToggle();
   eventQuickScroll();
   eventSelect();
@@ -30,6 +31,27 @@ function eventHeader() {
   });
 }
 
+/**
+ * TopButton
+ */
+function eventTopButton() {
+  const _topBtn = document.querySelector(".top-btn");
+  if (!_topBtn) return;
+
+  _topBtn.addEventListener("click", (e) => {
+    onScrollTo(0);
+  });
+
+  // 스크롤시에만 보여짐
+  window.addEventListener("scroll", (e) => {
+    let scrollY = window.scrollY;
+    if (scrollY > 0) {
+      _topBtn.setAttribute('style','display:block');
+    } else{
+      _topBtn.removeAttribute("style");
+    }
+  });
+}
 /**
  * Quick Menu
  */
