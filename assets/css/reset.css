@@ -70,8 +70,7 @@ table {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -116,16 +115,7 @@ meter {
 }
 
 /* reset default text opacity of input placeholder */
-::-webkit-input-placeholder {
-  color: unset;
-}
 ::-moz-placeholder {
-  color: unset;
-}
-:-ms-input-placeholder {
-  color: unset;
-}
-::-ms-input-placeholder {
   color: unset;
 }
 ::placeholder {
@@ -152,4 +142,4 @@ meter {
 /* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable=true]) {
   -webkit-user-drag: element;
-}
+}/*# sourceMappingURL=reset.css.map */
