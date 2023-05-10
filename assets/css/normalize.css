@@ -64,10 +64,8 @@ body {
   color: var(--color, #000);
   line-height: 28px;
   word-break: keep-all;
-  -webkit-transition: color 0.3s;
   transition: color 0.3s;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 dt {
@@ -105,25 +103,7 @@ button:disabled {
   cursor: default;
 }
 
-::-webkit-input-placeholder {
-  color: #787878;
-  font-size: 14px;
-  font-weight: 400;
-}
-
 ::-moz-placeholder {
-  color: #787878;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-:-ms-input-placeholder {
-  color: #787878;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-::-ms-input-placeholder {
   color: #787878;
   font-size: 14px;
   font-weight: 400;
@@ -176,4 +156,4 @@ textarea {
   .br-mo {
     display: initial;
   }
-}
+}/*# sourceMappingURL=normalize.css.map */
