@@ -138,12 +138,15 @@
     .foot-author {
       margin-top: auto;
       margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
       font-size: 18px;
       text-align: right;
       color: #787878;
-      
       > dt {
-        @include ellipsis(2);
+        max-width: 85px;
+        @include ellipsis(1);
         line-height: 26px;
       }
     }
