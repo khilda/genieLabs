@@ -141,7 +141,9 @@
       font-size: 18px;
       text-align: right;
       color: #787878;
+      
       > dt {
+        @include ellipsis(2);
         line-height: 26px;
       }
     }
