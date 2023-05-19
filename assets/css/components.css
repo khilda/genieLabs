@@ -2109,15 +2109,16 @@ button.badge:hover {
 .card .card-foot .foot-author {
   margin-top: auto;
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   font-size: 18px;
   text-align: right;
   color: #787878;
 }
 .card .card-foot .foot-author > dt {
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* 라인수 */
-  -webkit-box-orient: vertical;
-  white-space: normal;
+  max-width: 85px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
