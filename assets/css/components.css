@@ -2114,6 +2114,13 @@ button.badge:hover {
   color: #787878;
 }
 .card .card-foot .foot-author > dt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   line-height: 26px;
 }
 
@@ -3029,4 +3036,4 @@ code {
   margin-top: 18px;
   font-size: 14px;
   line-height: 22px;
-}/*# sourceMappingURL=components.css.map */
+}
