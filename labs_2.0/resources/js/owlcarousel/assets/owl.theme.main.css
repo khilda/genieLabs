@@ -1,0 +1,28 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ *  Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {  margin-top: 10px; text-align: center; -webkit-tap-highlight-color: transparent; position: absolute; left: 0; top: 50%; width: 100%; height: 0; transform: translateY(-50%); }
+.owl-theme .owl-nav [class*='owl-'] {  color: rgba(255,255,255,0.3); font-size: 14px; display: inline-block; cursor: pointer; }
+.owl-theme .owl-nav [class*='owl-']:hover {  color: rgba(255,255,255,1); text-decoration: none; }
+.owl-theme .owl-nav .disabled {  opacity: 0.5; cursor: default; }
+.owl-theme .owl-nav.disabled + .owl-dots {  margin-top: 10px; }
+.owl-theme .owl-dots {  text-align: center; -webkit-tap-highlight-color: transparent; position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); }
+.owl-theme .owl-dots .owl-dot {  display: inline-block; zoom: 1; *display: inline; }
+.owl-theme .owl-dots .owl-dot span {  width: 10px; height: 10px; margin: 5px 5px; background: #D6D6D6; display: block; -webkit-backface-visibility: visible; transition: opacity 200ms ease, width 200ms ease; border-radius: 30px; }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {  background: #3bb3af; width: 30px; }
+
+.notice-theme .owl-nav {  margin-top: 10px; text-align: center; -webkit-tap-highlight-color: transparent; position: absolute; left: 0; top: 50%; width: 100%; height: 0; transform: translateY(-50%); }
+.notice-theme .owl-nav [class*='owl-'] {  color: rgba(255,255,255,0.3); font-size: 14px; display: inline-block; cursor: pointer; }
+.notice-theme .owl-nav [class*='owl-']:hover {  color: rgba(255,255,255,1); text-decoration: none; }
+.notice-theme .owl-nav .disabled {  opacity: 0.5; cursor: default; }
+.notice-theme .owl-nav.disabled + .owl-dots { margin-top: 10px; }
+.notice-theme .owl-dots {text-align: center;-webkit-tap-highlight-color: transparent;position: absolute;bottom: 10px;left: 50%;transform: translateX(-50%);}
+.notice-theme .owl-dots .owl-dot {  display: inline-block; zoom: 1; *display: inline; }
+.notice-theme .owl-dots .owl-dot span {width: 10px;height: 10px;margin: 5px 5px;background: rgba(255,255,255,0.5);display: block;-webkit-backface-visibility: visible;transition: opacity 200ms ease, width 200ms ease;border-radius: 30px;}
+.notice-theme .owl-dots .owl-dot.active span, .notice-theme .owl-dots .owl-dot:hover span {background: #ffffff;width: 30px;}
+

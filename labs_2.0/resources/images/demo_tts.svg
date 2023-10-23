@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 207.8 207.8" style="enable-background:new 0 0 207.8 207.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#30B6B2;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#4D4A49;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#2EB5B0;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#2EB5B0;}
+	.st4{font-family:'ACaslonPro-Regular';}
+	.st5{font-size:54.5875px;}
+	.st6{enable-background:new    ;}
+	.st7{fill:none;stroke:#2EB5B0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<line class="st0" x1="137.6" y1="99.7" x2="137.6" y2="159"/>
+	<line class="st0" x1="163.1" y1="108.6" x2="163.1" y2="150.1"/>
+	<line class="st0" x1="112.3" y1="108.6" x2="112.3" y2="150.1"/>
+	<line class="st0" x1="150.4" y1="118.7" x2="150.4" y2="140.1"/>
+	<line class="st0" x1="124.9" y1="118.7" x2="124.9" y2="140.1"/>
+	<line class="st0" x1="175.9" y1="121.3" x2="175.9" y2="137.4"/>
+	<line class="st0" x1="99.5" y1="121.3" x2="99.5" y2="137.4"/>
+</g>
+<g>
+	<path class="st1" d="M58.3,115.9H31.2V23.7c0-6.7-5.3-12.1-12.1-12.1S7,17.1,7,23.7v14h14.5"/>
+	<path class="st1" d="M19.1,11.7h78.4c6.7,0,12.1,5.3,12.1,12.1V68"/>
+</g>
+<g>
+	<path class="st1" d="M164.2,174.6c21.6-7.9,36.6-25.2,36.6-45.2c0-27.6-28.4-49.9-63.3-49.9c-35,0-63.3,22.3-63.3,49.9
+		s28.4,49.9,63.3,49.9c1.5,0,3,0,4.5-0.1"/>
+	<path class="st1" d="M164.2,174.6c4.1,10.3,16.5,16.7,16.5,16.7s-22.3,8.3-38.6-12.3"/>
+</g>
+<path class="st2" d="M127.7,26.5H147c10.3,0,18.8,8.4,18.8,18.8v19.9"/>
+<polyline class="st2" points="177,54.2 166,65.2 154.7,53.9 "/>
+<text transform="matrix(1 0 0 1 51.416 77.5353)" class="st3 st4 st5">T</text>
+<g class="st6">
+	<path class="st7" d="M67.6,40.9h-1.4c-1.7,0-6.5,0-8.6,0.7c-2.5,0.8-4.1,4.6-4.9,6.3c-0.1,0.3-0.3,0.3-0.5,0.3l-1-0.3
+		c-0.2-0.1-0.3-0.1-0.2-0.4c0.5-2,2.5-9,2.6-9.6c0.1-0.7,0.3-0.9,0.5-0.9c0.3,0,0.4,0.1,0.7,0.2l0.7,0.5c1,0.7,1.5,0.9,3.1,0.9
+		c2.9,0.1,5.2,0.3,10.3,0.3h2.6c5.9,0,8.3-0.2,11-0.3c1.2-0.1,1.9-0.2,2.8-0.8l1-0.7c0.3-0.2,0.4-0.2,0.7-0.2c0.3,0,0.4,0.2,0.5,0.9
+		c0.1,0.7,1.1,7.4,1.6,9.8c0.1,0.3-0.1,0.4-0.3,0.4l-0.9,0.2c-0.2,0.1-0.3,0-0.4-0.4c-0.4-1-2.1-5.2-3.9-6.1
+		c-1.6-0.8-6.8-0.9-9.4-0.9h-1.5v15.6c0,0.8,0,16,0.1,17c0.1,1.4,0.5,2.2,1.9,2.2H78c0.5,0,0.5,0.2,0.5,0.5v1.1
+		c0,0.3-0.1,0.4-0.5,0.4c-0.5,0-2.3-0.2-7.6-0.2c-5.2,0-7.5,0.2-8.3,0.2c-0.4,0-0.5-0.2-0.5-0.5v-1c0-0.4,0.1-0.5,0.4-0.5h3.7
+		c1.1,0,1.7-0.7,1.8-1.3c0.2-1.6,0.2-18.3,0.2-19.4V40.9z"/>
+</g>
+</svg>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>KT GenieLabs</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<script type="text/javascript" src="../resources/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui-1.10.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../resources/js/jquery-ui.css">
+<script type="text/javascript" src="../resources/js/menu.js"></script>
+<link rel="stylesheet" type="text/css" href="../resources/css/common.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/menu.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/main.css">
+
+<!-- 스크롤 기능 -->
+<script type="text/javascript" src="../resources/js/jquery.smooth-scroll/jquery.smooth-scroll.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.smooth-scroll/scroll.js"></script>
+
+<!-- owlcarousel 좌우 스크롤-->
+<link rel="stylesheet" href="../resources/js/owlcarousel/assets/owl.carousel.main.css">
+<link rel="stylesheet" href="../resources/js/owlcarousel/assets/owl.theme.main.css">
+<script src="../resources/js/owlcarousel/owl.carousel.js"></script>
+<!-- <script src="../resources/js/owlcarousel/jquery.mousewheel.js"></script> -->
+  <script>
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        loop: true,
+        nav: true,
+        margin: 0,
+        autoplay:true,
+        autoplayTimeout:40000,
+        lazyLoad:true,
+        items:1
+      });
+
+      var notice = $('.notice-carousel');
+      notice.owlCarousel({
+        loop: true,
+        nav: true,
+        margin: 0,
+        items:1,
+        autoHeight:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true
+      });
+
+
+    })
+  </script>
+<!-- // owlcarousel -->
+
+<!-- 구글 번역기능 -->
+<script type="text/javascript">
+   function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages : 'en,es,ko', autoDisplay: true, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');  
+   }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- // 번역기능 -->
+
+
+</head>
+
+
+
+<body id="top">
+
+
+<!-- header -->
+<header>
+<!-- header_inner -->
+<div class="header_inner">
+    
+                <!-- GenieLabs 로고 logo_nav_wrapper -->
+                <div class="logo_nav_wrapper">
+                        <div class="openCloseMenu">
+                        <span></span>
+                        </div>
+                        <a href="index.html" class="logo">KT GenieLabs</a>
+                </div>
+                <!-- // GenieLabs 로고 logo_nav_wrapper -->
+                <div class="logo_nav_wrapper_ground">
+                        <a href="index.html" class="logo_ground" target="_blank">GENIE GROUND</a>
+                </div>
+            
+                <!-- 메인메뉴 menuArea --> 
+                <div class="menuArea">
+
+                        <!-- 메인메뉴 nav_wrapper -->
+                        <div class="nav_wrapper">
+                                
+                                <!-- nav -->
+                                <nav>
+                                        <ul>
+                                                <li>
+                                                        <a href="aiTechSpace_voice.html">AI Tech Space</a>
+                                                        <ul class="off">
+                                                                <li><a href="aiTechSpace_voice.html">Voice AI</a></li>
+                                                                <li><a href="aiTechSpace_nlp.html">NLP AI</a></li>
+                                                                <li><a href="aiTechSpace_vision.html">Vision AI</a></li>
+                                                                <li><a href="aiTechSpace_industry.html">Industry AI</a></li>
+                                                                <li><a href="aiTechSpace_network.html">Network AI</a></li>
+                                                                <li><a href="aiTechSpace_partners.html">Partners AI</a></li>
+                                                        </ul>
+                                                </li>
+                                                <li>
+                                                        <a href="aiDataHub_status.html">AI Data Hub</a>
+                                                        <ul class="off">
+                                                                <li><a href="aiDataHub_status.html">Explorer</a></li>
+                                                                <li><a href="aiDataHub_search.html">Search</a></li>
+                                                                <li><a href="aiDataHub_registration.html">Publish</a></li>
+                                                        </ul>
+                                                </li>
+                                                <li>
+                                                        <a href="aiEcoSpace_main.html">AI Eco Space</a>
+                                                        <ul class="off">
+                                                                <li><a href="aiEcoSpace_main.html#Voice_API">Voice API</a></li>
+                                                                <li><a href="aiEcoSpace_main.html#NLP_API">NLP API</a></li>
+                                                                <li><a href="aiEcoSpace_main.html#Vision_API">Vision API</a></li>
+                                                                <li><a href="aiEcoSpace_main.html#Industry_API">Industry API</a></li>
+                                                                <li><a href="aiEcoSpace_main.html#Network_API">Network API</a></li>
+                                                        </ul>
+                                                </li>
+                                                <li>
+                                                        <a href="aiEvaluation_leaderboard.html">AI Evaluation</a>
+                                                        <ul class="off">
+                                                        <li><a href="aiEvaluation_leaderboard.html">Leaderboard</a></li>
+                                                                <li><a href="aiEvaluation_voiceAI.html">Voice AI</a></li>
+                                                                <li><a href="aiEvaluation_visionAI.html">Vision AI</a></li>
+                                                                <li><a href="aiEvaluation_nlpAI.html">NLP AI</a></li>
+                                                                <li><a href="aiEvaluation_testData.html">Test Data</a></li>
+                                                                <li><a href="aiEvaluation_testResult.html">Test Result</a></li>
+                                                        </ul>
+                                                </li>
+                                                
+                                                <li>
+                                                        <a href="support_notice_list.html">Support</a>
+                                                        <ul class="off">
+                                                                <li><a href="support_notice_list.html">Notice</a></li>
+                                                                <li><a href="support_qna_list.html">Q&A</a></li>
+                                                                <li><a href="support_faq_list.html">FAQ</a></li>
+                                                        </ul>
+                                                </li>
+
+                                                <li>
+                                                        <a href="community_aiReport_list.html">Community</a>
+                                                        <ul class="off">
+                                                                <li><a href="community_aiReport_list.html">AI Report</a></li>
+                                                                <li><a href="community_rndTed_list.html">R&D TED</a></li>
+                                                        </ul>
+                                                </li>
+                                        </ul>
+                                                
+                                        <ul class="header_items">
+
+                                                <li>
+                                                        <a href="myAccount_info.html" class="userIcon">My Account</a>
+                                                        <ul class="off">
+                                                                <li><a href="myAccount_info.html">My Account</a></li>
+                                                                <li><a href="myAccount_changePassword.html">Change Password</a></li>
+                                                                <li><a href="myAccount_deleteAccount.html">Delete Account</a></li>
+                                                        </ul>
+                                                </li>
+
+                                               <li>
+                                                        <a href="developerConsole_dashboard.html">Developer Console</a>
+                                                        <ul class="off">
+                                                                <li><a href="developerConsole_dashboard.html">Dashboard</a></li>
+                                                                <li><a href="developerConsole_developer.html">Developer</a></li>
+                                                                <li><a href="developerConsole_apiProvider.html">API Provider</a></li>
+                                                                
+                                                        </ul>
+                                                </li>
+
+                                                <li>
+                                                        <a href="javascript:onLogOut();">Log Out</a>
+                                                        
+                                                </li>
+
+                                                <li>
+                                                        <div id="google_translate_element"></div>
+                                                </li>
+
+                                        </ul>
+                                </nav>
+                                <!-- // nav -->
+
+                              
+
+
+                        </div>
+                       <!-- // 메인메뉴 nav_wrapper -->
+
+
+
+                </div>   
+                <!--//  메인메뉴 menuArea --> 
+
+</div>
+<!-- //header_inner -->
+
+
+
+</header>
+<!-- //header -->
+<aside class="topLink">
+        <a href="#top">TOP</a>
+</aside>
+<main>
+
+        <section  class="mainImageArea">
+                <div class="owl-carousel owl-theme">
+                        <div class="item">
+                                <video playsinline autoplay muted loop poster="" >
+                                <source src="../resources/movies/main.mp4" type="video/mp4">
+                                </video>
+                                <div class="mainTextArea">
+                                        <h2>KT GenieLabs</h2>
+                                        <p class="desc">artificial intelligence</p>
+                                        <!-- <a href="javascript:void(0)">자세히 보기</a> -->
+                                </div>
+
+                        </div>
+                        <div class="item">
+                                <video playsinline autoplay muted loop poster="" >
+                                <source src="../resources/movies/main_voice_nlp.mp4" type="video/mp4">
+                                </video>
+                                <div class="mainTextArea">
+                                        <h2>Voice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLPVoice & NLP</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                Voice AI : 음성인식, 음성합성, 화자인증 등의 음성분야의 AI기술을 소개합니다.<br>
+                                                NLP AI : 의도해석, NER, 번역 등의 자연어처리 분야의 AI기술을 소개합니다.Voice AI : 음성인식, 음성합성, 화자인증 등의 음성분야의 AI기술을 소개합니다.<br>
+                                                NLP AI : 의도해석, NER, 번역 등의 자연어처리 분야의 AI기술을 소개합니다.Voice AI : 음성인식, 음성합성, 화자인증 등의 음성분야의 AI기술을 소개합니다.<br>
+                                                NLP AI : 의도해석, NER, 번역 등의 자연어처리 분야의 AI기술을 소개합니다.Voice AI : 음성인식, 음성합성, 화자인증 등의 음성분야의 AI기술을 소개합니다.<br>
+                                                NLP AI : 의도해석, NER, 번역 등의 자연어처리 분야의 AI기술을 소개합니다.
+                                        </p>
+                                        <a href="javascript:void(0)">자세히 보기</a>
+                                        
+                                </div>
+                        </div>
+                        <div class="item">
+                                <video playsinline autoplay muted loop poster="" >
+                                <source src="../resources/movies/main_vision_industry.mp4" type="video/mp4">
+                                </video>
+                                <div class="mainTextArea">
+                                        <h2>Vision & Industry</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                Vision AI : 객체 인식, 모션 분석, OCR 등의이미지·영상 처리 분야의 AI기술을 소개합니다.<br>
+                                                Industry AI : 운송 Twin, 건물시스템 최적제어 등의 산업용 AI Solution을 소개합니다.
+                                        </p>
+                                        <!-- <a href="javascript:void(0)">자세히 보기</a> -->
+                                </div>
+                        </div>
+                        <div class="item">
+                                <video playsinline autoplay muted loop poster="" >
+                                <source src="../resources/movies/main_network.mp4" type="video/mp4">
+                                </video>
+                                <div class="mainTextArea">
+                                        <h2>Network</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                Vision AI : Dr.Lauren, Dr.WAIS 등의 운용관련 AI Solution을 소개합니다.
+                                        </p>
+                                        <!-- <a href="javascript:void(0)">자세히 보기</a> -->
+                                </div>
+                        </div>
+                        <div class="item">
+                                <figure>
+                                        <span style="background-image: url(resources/images/testImage.png);">
+                                </figure>
+                                <div class="mainTextArea">
+                                        <h2>MI:DEUM</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                영화 리뷰와 같은 텍스트 입력하면 <br>문맥을 기반으로 해당 문장이 긍정인지 부정인지 분류하는 기술
+                                        </p>
+                                        <a href="javascript:void(0)">자세히 보기</a>
+                                </div>
+                        </div>
+
+                        <div class="item">
+                                <figure>
+                                        <span style="background-image: url(resources/images/image_back1.svg);">
+                                </figure>
+                                <div class="mainTextArea">
+                                        <h2>SVG TEST</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                영화 리뷰와 같은 텍스트 입력하면 <br>문맥을 기반으로 해당 문장이 긍정인지 부정인지 분류하는 기술
+                                        </p>
+                                        <a href="javascript:void(0)">자세히 보기</a>
+                                </div>
+                        </div>
+                        
+                        <!-- <div class="item">
+                                <figure>
+                                        <span style="background-image: url('https://thumb2.photo.mybox.naver.com/3472488305052738136?type=m1280_1280_2&nocache=0043020810');">
+                                </figure>
+                                <div class="mainTextArea">
+                                        <h2>PNG 다운로드 방식</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                영화 리뷰와 같은 텍스트 입력하면 <br>문맥을 기반으로 해당 문장이 긍정인지 부정인지 분류하는 기술
+                                        </p>
+                                        <a href="javascript:void(0)">자세히 보기</a>
+                                </div>
+                        </div> -->
+                        
+                        <!-- <div class="item">
+                                <figure>
+                                        <span style="background-image: url('https://thumb2.photo.mybox.naver.com/3472488305052738136?type=m1280_1280_2&nocache=0043020810');">
+                                </figure>
+                                <div class="mainTextArea">
+                                        <h2>SVG TEST 다운로드방식</h2>
+                                        <h3></h3>
+                                        <p class="desc">
+                                                영화 리뷰와 같은 텍스트 입력하면 <br>문맥을 기반으로 해당 문장이 긍정인지 부정인지 분류하는 기술
+                                        </p>
+                                        <a href="javascript:void(0)">자세히 보기</a>
+                                </div>
+                        </div> -->
+                </div>
+        </section>
+
+        <section>
+                <article class="voidArea">
+
+                </article>
+
+                
+                
+                <article class="iconMenuArea">
+                        <h3>AI Tech Space</h3>
+                        <ul>
+                                <li><a href="aiTechSpace_voice.html"><span class="icon voice"></span><span class="iconTitle">Voice AIVoice AIVoice AIVoice AIVoice AIVoice AIVoice AI</span><span class="iconDesc">음성 인식, 음성 합성, 화자 인식 등음성 인식, 음성 합성, 화자 인식 등음성 인식, 음성 합성, 화자 인식 등음성 인식, 음성 합성, 화자 인식 등음성 인식, 음성 합성, 화자 인식 등</span></a></li>
+                                <li><a href="aiTechSpace_nlp.html"><span class="icon nlp"></span><span class="iconTitle">NLP AI</span><span class="iconDesc">대화 처리, 언어 분석, 질의 응답 등</span></a></li>
+                                <li><a href="aiTechSpace_vision.html"><span class="icon vision"></span><span class="iconTitle">Vision AI</span><span class="iconDesc">객체 검출, OCR, 모션 분석 등</span></a></li>
+                                <li><a href="aiTechSpace_industry.html"><span class="icon industry"></span><span class="iconTitle">Indusrty AI</span><span class="iconDesc">Digital Twin, Inside, Sensing 등</span></a></li>
+                                <li><a href="aiTechSpace_network.html"><span class="icon network"></span><span class="iconTitle">Network AI</span><span class="iconDesc">Dr.Lauren, Dr.Cable, AiB 등</span></a></li>
+                                <li><a href="aiTechSpace_partners.html"><span class="icon partners"></span><span class="iconTitle">Partners AI</span><span class="iconDesc">제휴사의 우수 AI기술 및 솔루션 소개</span></a></li>
+
+                        </ul>
+
+                </article>
+
+              
+
+                <article class="cardMenuArea">
+                        <ul>
+                                <li>
+                                        <a href="aiDataHub_status.html">
+                                                <span class="icon datahub"></span>
+                                                <div class="layout">
+                                                        <span class="iconTitle">AI Data HubAI Data HubAI Data HubAI Data HubAI Data HubAI Data HubAI Data Hub</span>
+                                                        <span class="iconDesc">KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다KT가 보유한 다양한 분야의 <br>AI 학습 & 평가용 데이터를 제공합니다.</span>
+                                                </div>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="aiEcoSpace_main.html">
+                                                <span class="icon ecospace"></span>
+                                                <div class="layout">
+                                                        <span class="iconTitle">AI Eco Space</span>
+                                                        <span class="iconDesc">AI 개발에 필요한 KT와 <br>파트너사의 AI API를 체험해 볼 수 있습니다.</span>
+                                                </div>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="aiEvaluation_leaderboard.html">
+                                                <span class="icon evaluation"></span>
+                                                <div class="layout">
+                                                        <span class="iconTitle">AI Evaluation</span>
+                                                        <span class="iconDesc">AI API의 평가지표와 <br>API를 테스트해 볼 수 있습니다.</span>
+                                                </div>
+                                        </a>
+                                </li>
+                        </ul>
+                </article>
+
+                
+
+                <article class="noticeArea">
+                        <div class="notice-carousel notice-theme">
+                                
+
+                                <div class="item itemBackground">
+                                        <div class="contentArea2">
+                                                <div class="textGroup">
+                                                        <a href="javascript:void(0);">
+                                                                <span></span>
+                                                                <h2>4.공지사항 제목들어가는 곳공지사항 제목들어가는 곳공지사항 제목들어가는 곳공지사항 제목들어가는 곳</h2>
+                                                                <p>591 x 327 비율 591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율591 x 327 비율
+                                                                1200 X 327 비율 1200 X 327 비율 1200 X 327 비율 1200 X 327 비율 1200 X 327 비율 
+                                                                </p>
+                                                        </a>
+                                                </div>
+                                                <figure>
+                                                        <img src="../resources/images/event_image_02.png">
+                                                </figure>
+                                        </div>
+
+                                </div>
+
+                                <div class="item itemBackground notice">
+                                        <div class="contentArea2">
+                                                <div class="textGroup">
+                                                        <a href="javascript:void(0);">
+                                                                <span></span>
+                                                                <h2>[AI Data Hub] 서비스 오픈 기념 프로모션</h2>
+                                                                <p>testtest</p>
+                                                        </a>
+                                                </div>
+                                                
+                                        </div>
+                                </div>
+
+                                <div class="item itemBackground">
+                                        <div class="contentArea2">
+                                                <div class="textGroup">
+                                                        <a href="javascript:void(0);">
+                                                                <span></span>
+                                                                <h2>5. 공지사항 제목들어가는 곳공지사항 제목들어가는 곳공지사항 제목들어가는 곳공지사항 제목들어가는 곳</h2>
+                                                                <p>공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳</p>
+                                                        </a>
+                                                </div>
+                                                <figure>
+                                                        <img src="../resources/images/event_image_02.png">
+                                                </figure>
+                                        </div>
+
+                                </div>
+
+                                <div class="item itemBackground">
+                                        <div class="contentArea2">
+                                                <div class="textGroup">
+                                                        <a href="javascript:void(0);">
+                                                                <span></span>
+                                                                <h2>5. 공지사항 제목들어가는 곳공지사항 제목들어가는 곳공지사항 제목들어가는 곳공지사항 제목들어가는 곳</h2>
+                                                                <p>공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳공지사항 내용들어가는 곳</p>
+                                                        </a>
+                                                </div>
+                                                
+                                        </div>
+
+                                </div>
+
+
+
+                                
+                        </div>
+                </article>
+
+                <article class="facebookArea">
+                        <h3>AI2XL Facebook</h3>
+                        <ul>
+
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/487147770077504/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                         안녕하세요!
+
+#AI홈트윈 기반 #메타버스 플랫폼 #지니버스 에 대해 들어보셨나요? KT는 지니버스 서비스 연내 오픈을 위해 열심히 준비중인데요, 오늘은 지니버스에서 즐길 수 있는 다양한 #게임콘텐츠 를 함께 만들기 위해 #청강문화산업대학교 와 KT가 MOU를 체결한 소식을 전해 드리겠습니다.
+
+청강문화산업대학교는 2021년 교육부 ‘신산업 분야 특화 선도전문대학’(증강, 가상현실 부문)으로 선정된 게임 콘텐츠 전문 대학으로, #AR #VR 기반 차세대 콘텐츠 산업 관련 교육 및 산학협력 체계를 구축하며 빠르게 발전하고 있는 콘텐츠 개발 인재의 산실입니다.   
+
+KT는 이번 MOU를 통해 #청강대 의 우수한 게임 개발 인재들이 참여할 수 있는 #산학프로젝트 를 진행하기로 했는데요, 프로젝트에 참여하는 청강대 학생들은 수업 과정중 #지니버스게임 을 개발하며  KT의 #지니버스플랫폼 과 리소스를 제공받을 수 있고, KT 전문 연구원들의 #멘토링 과 #기술지원 도 받게 됩니다. 
+
+그뿐만 아니라, KT는 AI연구개발 포털 #지니랩스 를 통해 디지털 휴먼에 활용 가능한 API를 청강대에 제공하는 등 협력 분야를 지속 확대해 나갈 계획입니다.
+
+프로젝트를 통해 개발된 게임들은 금년말 심사를 통해 우수작을 선정해 포상하고 지니버스에도 게임을 탑재할 예정인데요, 어떤 재미있는 지니버스 게임이 만들어질지 정말 기대가 됩니다! 최종 선정된 우수 게임들은 연말에 포스팅을 통해 소개드릴 예정이니, 많은 관심 부탁드립니다~~ 
+
+#지니버스 #청강문화산업대학교 #지니랩스 #AR #VR #산학프로젝트 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+
+                                
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/485478276911120/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                                7월에 개최된 #아마존 #개발자컨퍼런스 행사인 #AlexaLive 에서 KT의 #기가지니 #멀티에이전트 사례가 소개되었습니다!
+
+'엠비언트 인텔리전스(Ambient Intelligence, 생활환경 지능), 스마트홈, 보이스 AI의 미래'라는 주제로 개최된 #AlexaLive2022 'Multi-assistant showcase' 세션에서, 
+
+KT #AI2XL 배순민 소장은, “KT는 아마존과 같은 글로벌 컴퍼니와의 협력을 통해 고객을 위한 더 넓고 가치 있는 서비스를 제공하고자 했다.”고 하며, 
+
+KT가 “기가지니 스피커 단말에서 동시에 한국어(기가지니)와 영어(알렉사) 음성 서비스를 제공하게 됨으로써, 한국의 300만 기가지니 이용 고객들이 일상 속에서 자연스럽게 영어를 사용하는 데 도움을 줄 수 있게 되었다.”고 밝혔습니다.
+
+🖥 영상보러가기: https://youtu.be/m1A0l1dYlHs?t=724 (기가지니 사례 소개: 12:05 ~ )
+
+#기가지니 #알렉사 #멀티에이전트 #듀얼에이전트 #듀얼브레인 #알렉사라이브 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/455685319890416/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('resources/images/290137863_454914123300869_7308087826808998363_n.jpeg')">
+                                        </figure>
+                                        <p>
+                                                안녕하세요~ 국내외 산업계/학계의 #IT뉴스 를 전달해드리는 #AI2XL #뉴스클리핑 6월호 입니다!  
+
+이번 달은 #AI기술 관련 최신 뉴스로 준비해보았는데요,
+
+#DigicoKT 와 #KAIST 가 협력해 오픈한 #KoreaTechSquare 소식부터,
+
+구글의 #초거대AI 대화형 언어모델인 #LaMDA 의 #AI인격체 논쟁 관련 기사 등 최신 #AI뉴스 를 한번에 확인하실 수 있습니다.
+
+무더위와 장마가 시작되는 초여름 입니다 ^^ 건강한 나날 되시길 바랍니다~
+
+#DigicoKT #AI2XL #뉴스클리핑 #초거대AI #KTAI
+
+🔎국내 산업계🔎
+✔️KT, 초거대 AI 기반 서비스 공개…'KT AI 2.0' 선언(iT조선,’22.5.20)
+https://bit.ly/3HRFPyZ
+
+✔️“달리(DALL-E)만 있나?”...AI 아트 생성기 10선(Ai타임즈, ’22.6.17)
+https://bit.ly/3NnPgqQ
+
+✔️AI 스타트업 프렌들리에이아이, 대규모 언어 모델 ‘GPT-FAI 13B’ 공개(한국경제, ’22.6.7)
+https://bit.ly/3xYS3kL
+
+✔️'인간지능과 AI의 만남'… KT·네이버·카카오엔터프라이즈 전략은(파이낸셜뉴스,’22.6.6)
+https://bit.ly/39XS7Jx
+
+✔️"의료 AI 발전을 위해"...SK C&amp;C·딥노이드·뷰노·루닛 연합군 결성(Ai타임즈,’22.6.23)
+https://bit.ly/3bvdH8F
+
+🔎국내 학계🔎
+✔️KT-카이스트, AI 공동연구센터 '코리아 테크 스퀘어' 개소(매일경제, ’22.6.21)
+https://bit.ly/39RNVuX
+
+✔️KAIST, 초대규모 AI 모델 처리 위한 세계 최고 성능의 머신러닝 기술 개발: 김민수 교수 연구팀(Ai타임스, ’22.6.20)
+https://bit.ly/3A3cujb
+
+✔️"포스트 인공지능을 위해"...카이스트, 뇌인지과학과 설립(Ai타임즈, ’22.6.17)
+https://bit.ly/3NnPluE
+
+✔️KAIST, 실시간 학습 가능한 모바일 인공지능 반도체 칩 개발: 카이스트 김회준 교수 연구팀(로봇신문,’22.6.23)
+https://bit.ly/3xWmkRh
+
+🔎해외산업계🔎
+✔️“AI도 생각하고 말할 수 있다” vs “인간의 대화 유형을 모방하는 것” : Google LaMDA (조선일보,’22.6.23)
+https://bit.ly/3OrYgfS
+
+✔️죽은 가족 목소리도 재현… 아마존 인공지능 논란(조선일보,’22.6.24)
+https://bit.ly/3u32CSs
+
+✔️엔비디아, 2D 이미지를 3D 개체로 변환하는 AI 도구 공개(’22.6.23,Ai타임스)
+https://bit.ly/3QKWW9L
+
+✔️메타 AI, 메타버스 시대에 강력한 AR 경험 등 '인공지능 음성 인식' 기술의 새로운 도전(Ai타임스,’22.5.29)
+https://bit.ly/3Or1a4B
+
+✔️인공위성에 하이브리드 클라우드 및 인공지능 기술 탑재... IBM, 우주를 공략한다(Ai타임스,’22.5.30)
+https://bit.ly/3A6YIMc
+
+✔️MS, 화상회의 솔루션에 AI 적용해 음질 개선(Ai타임스, ’22.6.14)
+https://bit.ly/3OLZH8X
+
+✔️MS, '책임 있는 AI' 추진을 위해 얼굴 분석 도구 제거 계획(’22.6.22, 뉴욕타임즈)
+https://nyti.ms/3QTvneb
+
+🔎해외학계🔎
+✔️새 기능 학습 없이 조립하면 끝… ‘광통신 AI칩’ 나와: MIT-KIST-칭화대 공동 연구 (동아일보, ’22.6.20)
+https://bit.ly/3OplpQe
+
+✔️인간과 로봇이 교감하는 인공지능 기반 '인공피부' 개발...촉각넘어 위험물질 탐지까지: 캘리포니아공대 연구팀(Ai타임즈, ’22.6.5)
+https://bit.ly/3HTTXHL
+
+✔️인공지능 '인종 편견' 넘어, 의료 이미지에서 '환자 인종' 정확히 식별!...그러나, AI는 그 과정을 설명하지 못했다:MIT연구팀 (Ai타임즈,’22.5.22)
+https://bit.ly/3HUFxHu
+
+✔️"차근차근 생각해보자"고 말하자, AI가 더 똑똑해졌다: 도쿄대와 구글 브레인팀 공동연구(한경,’22.5.31)
+https://bit.ly/3HVyJJR
+                                        </p>
+                                        <span class="date">2022.06.29</span>
+                                        </a>
+                                </li>
+
+                                <!-- <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/454914253300856/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('resources/images/289968258_455685113223770_7306986133749654141_n.jpeg')">
+                                        </figure>
+                                        <p>
+                                                #스타트업 창업자 or 종사자 여러분들 주목~~
+유망 스타트업 발굴과 지원을 위한 ‘Korea AI Startup 100’ 응모전이 진행중입니다!
+
+한국경제신문과 #AIOneTeam 이 주최하고, #KT경제경영연구소 가 주관하는 #KoreaAIStartup100 은 작년에 이어 2022년 대한민국을 대표할 스타트업을 모집합니다.
+
+ㅇ 지원 대상: 대한민국 AI 스타트업 (국내/외)
+ㅇ 신청 방법: www.aistartuptop100.co.kr 에서 신청 접수
+ㅇ 신청 기간: 6/27(월) ~ 7/24(일)
+ㅇ 문의처: aistartuptop100@gmail.com
+
+Top 100으로 선정된 스타트업에게는 #투자자연결기회 제공, #온오프라인홍보 지원 등 다양한 혜택이 제공되며, 카이스트와 KT경제경영연구소가 공동개발한 #AI스타트업평가모델 을 통해 스타트업의 경쟁력을 진단해볼 수 있는 기회도 제공됩니다.  
+
+스타트업 종사자라면, 지금 바로 #지원 GoGo~ 
+주변에 스타트업 종사자가 있다면, #추천 과 #공유 부탁드립니다!
+
+#KoreaAIStartup100 #스타트업공모전 #스타트업지원 #KTAI #AIOneTeam
+                                        </p>
+                                        <span class="date">2022.06.28</span>
+                                        </a>
+         
+                                </li> -->
+
+
+                                
+                        </ul>
+                </article>
+
+
+
+
+                <article class="facebookArea">
+                        <h3>AI2XL Facebook</h3>
+                        <ul>
+
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/487147770077504/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                         안녕하세요!
+
+#AI홈트윈 기반 #메타버스 플랫폼 #지니버스 에 대해 들어보셨나요? KT는 지니버스 서비스 연내 오픈을 위해 열심히 준비중인데요, 오늘은 지니버스에서 즐길 수 있는 다양한 #게임콘텐츠 를 함께 만들기 위해 #청강문화산업대학교 와 KT가 MOU를 체결한 소식을 전해 드리겠습니다.
+
+청강문화산업대학교는 2021년 교육부 ‘신산업 분야 특화 선도전문대학’(증강, 가상현실 부문)으로 선정된 게임 콘텐츠 전문 대학으로, #AR #VR 기반 차세대 콘텐츠 산업 관련 교육 및 산학협력 체계를 구축하며 빠르게 발전하고 있는 콘텐츠 개발 인재의 산실입니다.   
+
+KT는 이번 MOU를 통해 #청강대 의 우수한 게임 개발 인재들이 참여할 수 있는 #산학프로젝트 를 진행하기로 했는데요, 프로젝트에 참여하는 청강대 학생들은 수업 과정중 #지니버스게임 을 개발하며  KT의 #지니버스플랫폼 과 리소스를 제공받을 수 있고, KT 전문 연구원들의 #멘토링 과 #기술지원 도 받게 됩니다. 
+
+그뿐만 아니라, KT는 AI연구개발 포털 #지니랩스 를 통해 디지털 휴먼에 활용 가능한 API를 청강대에 제공하는 등 협력 분야를 지속 확대해 나갈 계획입니다.
+
+프로젝트를 통해 개발된 게임들은 금년말 심사를 통해 우수작을 선정해 포상하고 지니버스에도 게임을 탑재할 예정인데요, 어떤 재미있는 지니버스 게임이 만들어질지 정말 기대가 됩니다! 최종 선정된 우수 게임들은 연말에 포스팅을 통해 소개드릴 예정이니, 많은 관심 부탁드립니다~~ 
+
+#지니버스 #청강문화산업대학교 #지니랩스 #AR #VR #산학프로젝트 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+
+                                
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/485478276911120/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                                7월에 개최된 #아마존 #개발자컨퍼런스 행사인 #AlexaLive 에서 KT의 #기가지니 #멀티에이전트 사례가 소개되었습니다!
+
+'엠비언트 인텔리전스(Ambient Intelligence, 생활환경 지능), 스마트홈, 보이스 AI의 미래'라는 주제로 개최된 #AlexaLive2022 'Multi-assistant showcase' 세션에서, 
+
+KT #AI2XL 배순민 소장은, “KT는 아마존과 같은 글로벌 컴퍼니와의 협력을 통해 고객을 위한 더 넓고 가치 있는 서비스를 제공하고자 했다.”고 하며, 
+
+KT가 “기가지니 스피커 단말에서 동시에 한국어(기가지니)와 영어(알렉사) 음성 서비스를 제공하게 됨으로써, 한국의 300만 기가지니 이용 고객들이 일상 속에서 자연스럽게 영어를 사용하는 데 도움을 줄 수 있게 되었다.”고 밝혔습니다.
+
+🖥 영상보러가기: https://youtu.be/m1A0l1dYlHs?t=724 (기가지니 사례 소개: 12:05 ~ )
+
+#기가지니 #알렉사 #멀티에이전트 #듀얼에이전트 #듀얼브레인 #알렉사라이브 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/455685319890416/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('resources/images/290137863_454914123300869_7308087826808998363_n.jpeg')">
+                                        </figure>
+                                        <p>
+                                                AI2XL 종이비행기 날리기 대회
+                                        </p>
+                                        <span class="date">2022.06.29</span>
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/454914253300856/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('resources/images/289968258_455685113223770_7306986133749654141_n.jpeg')">
+                                        </figure>
+                                        <p>
+                                                #스타트업 창업자 or 종사자 여러분들 주목~~
+유망 스타트업 발굴과 지원을 위한 ‘Korea AI Startup 100’ 응모전이 진행중입니다!
+
+한국경제신문과 #AIOneTeam 이 주최하고, #KT경제경영연구소 가 주관하는 #KoreaAIStartup100 은 작년에 이어 2022년 대한민국을 대표할 스타트업을 모집합니다.
+
+ㅇ 지원 대상: 대한민국 AI 스타트업 (국내/외)
+ㅇ 신청 방법: www.aistartuptop100.co.kr 에서 신청 접수
+ㅇ 신청 기간: 6/27(월) ~ 7/24(일)
+ㅇ 문의처: aistartuptop100@gmail.com
+
+Top 100으로 선정된 스타트업에게는 #투자자연결기회 제공, #온오프라인홍보 지원 등 다양한 혜택이 제공되며, 카이스트와 KT경제경영연구소가 공동개발한 #AI스타트업평가모델 을 통해 스타트업의 경쟁력을 진단해볼 수 있는 기회도 제공됩니다.  
+
+스타트업 종사자라면, 지금 바로 #지원 GoGo~ 
+주변에 스타트업 종사자가 있다면, #추천 과 #공유 부탁드립니다!
+
+#KoreaAIStartup100 #스타트업공모전 #스타트업지원 #KTAI #AIOneTeam
+                                        </p>
+                                        <span class="date">2022.06.28</span>
+                                        </a>
+         
+                                </li>
+
+
+                                
+                        </ul>
+                </article>
+
+                
+
+                <article class="facebookArea">
+                        <h3>AI2XL Facebook</h3>
+                        <ul>
+
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/487147770077504/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                         안녕하세요!
+
+#AI홈트윈 기반 #메타버스 플랫폼 #지니버스 에 대해 들어보셨나요? KT는 지니버스 서비스 연내 오픈을 위해 열심히 준비중인데요, 오늘은 지니버스에서 즐길 수 있는 다양한 #게임콘텐츠 를 함께 만들기 위해 #청강문화산업대학교 와 KT가 MOU를 체결한 소식을 전해 드리겠습니다.
+
+청강문화산업대학교는 2021년 교육부 ‘신산업 분야 특화 선도전문대학’(증강, 가상현실 부문)으로 선정된 게임 콘텐츠 전문 대학으로, #AR #VR 기반 차세대 콘텐츠 산업 관련 교육 및 산학협력 체계를 구축하며 빠르게 발전하고 있는 콘텐츠 개발 인재의 산실입니다.   
+
+KT는 이번 MOU를 통해 #청강대 의 우수한 게임 개발 인재들이 참여할 수 있는 #산학프로젝트 를 진행하기로 했는데요, 프로젝트에 참여하는 청강대 학생들은 수업 과정중 #지니버스게임 을 개발하며  KT의 #지니버스플랫폼 과 리소스를 제공받을 수 있고, KT 전문 연구원들의 #멘토링 과 #기술지원 도 받게 됩니다. 
+
+그뿐만 아니라, KT는 AI연구개발 포털 #지니랩스 를 통해 디지털 휴먼에 활용 가능한 API를 청강대에 제공하는 등 협력 분야를 지속 확대해 나갈 계획입니다.
+
+프로젝트를 통해 개발된 게임들은 금년말 심사를 통해 우수작을 선정해 포상하고 지니버스에도 게임을 탑재할 예정인데요, 어떤 재미있는 지니버스 게임이 만들어질지 정말 기대가 됩니다! 최종 선정된 우수 게임들은 연말에 포스팅을 통해 소개드릴 예정이니, 많은 관심 부탁드립니다~~ 
+
+#지니버스 #청강문화산업대학교 #지니랩스 #AR #VR #산학프로젝트 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+
+                                
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/485478276911120/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                                7월에 개최된 #아마존 #개발자컨퍼런스 행사인 #AlexaLive 에서 KT의 #기가지니 #멀티에이전트 사례가 소개되었습니다!
+
+'엠비언트 인텔리전스(Ambient Intelligence, 생활환경 지능), 스마트홈, 보이스 AI의 미래'라는 주제로 개최된 #AlexaLive2022 'Multi-assistant showcase' 세션에서, 
+
+KT #AI2XL 배순민 소장은, “KT는 아마존과 같은 글로벌 컴퍼니와의 협력을 통해 고객을 위한 더 넓고 가치 있는 서비스를 제공하고자 했다.”고 하며, 
+
+KT가 “기가지니 스피커 단말에서 동시에 한국어(기가지니)와 영어(알렉사) 음성 서비스를 제공하게 됨으로써, 한국의 300만 기가지니 이용 고객들이 일상 속에서 자연스럽게 영어를 사용하는 데 도움을 줄 수 있게 되었다.”고 밝혔습니다.
+
+🖥 영상보러가기: https://youtu.be/m1A0l1dYlHs?t=724 (기가지니 사례 소개: 12:05 ~ )
+
+#기가지니 #알렉사 #멀티에이전트 #듀얼에이전트 #듀얼브레인 #알렉사라이브 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+
+                                
+
+
+                                
+                        </ul>
+                </article>
+               
+
+
+        </section>
+
+
+
+        <article class="facebookArea">
+                        <h3>AI2XL Facebook</h3>
+                        <ul>
+
+
+                                <li>
+                                        <a href="https://www.facebook.com/114504244008527/posts/487147770077504/" target="_blank">
+                                        <figure>
+                                                <span style="background-image: url('')">
+                                                        
+                                                </span>
+                                        </figure>
+                                        <p>
+                                         안녕하세요!
+
+#AI홈트윈 기반 #메타버스 플랫폼 #지니버스 에 대해 들어보셨나요? KT는 지니버스 서비스 연내 오픈을 위해 열심히 준비중인데요, 오늘은 지니버스에서 즐길 수 있는 다양한 #게임콘텐츠 를 함께 만들기 위해 #청강문화산업대학교 와 KT가 MOU를 체결한 소식을 전해 드리겠습니다.
+
+청강문화산업대학교는 2021년 교육부 ‘신산업 분야 특화 선도전문대학’(증강, 가상현실 부문)으로 선정된 게임 콘텐츠 전문 대학으로, #AR #VR 기반 차세대 콘텐츠 산업 관련 교육 및 산학협력 체계를 구축하며 빠르게 발전하고 있는 콘텐츠 개발 인재의 산실입니다.   
+
+KT는 이번 MOU를 통해 #청강대 의 우수한 게임 개발 인재들이 참여할 수 있는 #산학프로젝트 를 진행하기로 했는데요, 프로젝트에 참여하는 청강대 학생들은 수업 과정중 #지니버스게임 을 개발하며  KT의 #지니버스플랫폼 과 리소스를 제공받을 수 있고, KT 전문 연구원들의 #멘토링 과 #기술지원 도 받게 됩니다. 
+
+그뿐만 아니라, KT는 AI연구개발 포털 #지니랩스 를 통해 디지털 휴먼에 활용 가능한 API를 청강대에 제공하는 등 협력 분야를 지속 확대해 나갈 계획입니다.
+
+프로젝트를 통해 개발된 게임들은 금년말 심사를 통해 우수작을 선정해 포상하고 지니버스에도 게임을 탑재할 예정인데요, 어떤 재미있는 지니버스 게임이 만들어질지 정말 기대가 됩니다! 최종 선정된 우수 게임들은 연말에 포스팅을 통해 소개드릴 예정이니, 많은 관심 부탁드립니다~~ 
+
+#지니버스 #청강문화산업대학교 #지니랩스 #AR #VR #산학프로젝트 #AI2XL #KTAI
+                                        </p>
+                                        <span class="date">2022.07.08</span>
+                                        </a>
+                                </li>
+                                
+                        </ul>
+                </article>
+               
+
+
+        </section>
+
+        
+
+</main>
+
+
+
+
+
+<footer>
+
+        <section> 
+                <ul class="footerMenu">
+                        <li><a href="https://corp.kt.com/" target="_blank">회사소개</a></li>
+                        <li><a href="agreement.html">이용약관</a></li>
+                        <li><a href="https://corp.kt.com/html/etc/privacy.html" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <div class="footerInfo">
+                        
+                        <ul>
+                                <li><b>㈜케이티:</b> 대표이사 구현모</li>
+                                <li><b>사업자등록번호:</b> 102-81-42945</li>
+                                <li><b>통신판매업신고:</b> 2002-경기성남-0048</li>
+                                <li><address><b>주소:</b> 경기도 성남시 분당구 불정로 90 (정자동)</address></li>
+                        </ul>
+                        <p class="copyright">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+                </div>
+        </section>
+
+</footer>
+
+
+    
+</body>
+
+</html>

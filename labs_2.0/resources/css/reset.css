@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* Noto Sans Thin */
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:100;
+	src:url("../font/NotoSans-Thin.woff2") format("woff2"),
+		url("../font/NotoSans-Thin.woff") format("woff"),
+		url("../font/NotoSans-Thin.eot"),
+		url("../font/NotoSans-Thin.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Light */
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:200;
+	src:url("../font/NotoSans-Light.woff2") format("woff2"),
+		url("../font/NotoSans-Light.woff") format("woff"),
+		url("../font/NotoSans-Light.eot"),
+		url("../font/NotoSans-Light.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans DemiLight*/
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:300;
+	src:url("../font/NotoSans-DemiLight.woff2") format("woff2"),
+		url("../font/NotoSans-DemiLight.woff") format("woff"),
+		url("../font/NotoSans-DemiLight.eot"),
+		url("../font/NotoSans-DemiLight.eot?#iefix") format("embedded-opentype");
+} 
+
+/* Noto Sans Regular */
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:400;
+	src:url("../font/NotoSans-Regular.woff2") format("woff2"),
+		url("../font/NotoSans-Regular.woff") format("woff"),
+		url("../font/NotoSans-Regular.eot"),
+		url("../font/NotoSans-Regular.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Medium */
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:500;
+	src:url("../font/NotoSans-Medium.woff2") format("woff2"),
+		url("../font/NotoSans-Medium.woff") format("woff"),
+		url("../font/NotoSans-Medium.eot"),
+		url("../font/NotoSans-Medium.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Bold */
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:600;
+	src:url("../font/NotoSans-Bold.woff2") format("woff2"),
+		url("../font/NotoSans-Bold.woff") format("woff"),
+		url("../font/NotoSans-Bold.eot"),
+		url("../font/NotoSans-Bold.eot?#iefix") format("embedded-opentype");
+}
+
+
+
+
+/* [reset css] */
+
+/*
+* { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; -webkit-transition: opacity 0.4s, top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, color 0.4s, border 0.2s, width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+     transition: opacity 0.4s, top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, color 0.4s,border 0.2s, width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;}
+*/
+* { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; -webkit-transition: opacity 0.5s, color 0.4s, border 0.2s, width 0.5s, height 0.5s, max-height 0.5s, background-color 0.5s ;
+     transition: opacity 0.5s, color 0.4s,border 0.2s, width 0.5s, height 0.5s, max-height 0.5s, background-color 0.5s; word-break:break-all;}
+html,body {margin:0; padding:0; width:100%; height:100%; font-family:'Noto Sans KR', sans-serif; font-size:12px; color:#555; /*-webkit-font-smoothing: antialiased; font-smoothing: antialiased;*/}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,legend,figure {margin:0; padding:0;  } 
+table {border-spacing:0; border-collapse:collapse;}
+th, td {word-break:break-all;}
+form,fieldset {display:block;}
+form,fieldset,img {border:none;} 
+address,caption,cite,code,dfn,em,th,var {font-style:normal; font-weight:normal;} 
+ol,ul,li {list-style:none;} 
+h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:normal;}
+abbr,acronym {border:none;} 
+hr {display:none;}
+a {text-decoration:none; color:#555; cursor: pointer;}
+a:link,a:visited {text-decoration:none; outline:none;}
+a:hover,a:active,a:focus {text-decoration:none;}
+textarea {overflow:auto;} 
+
+option {padding-right:6px;} /* firefox fix */
+legend {position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;} /* for screen reader */ 
+caption {display:none;}
