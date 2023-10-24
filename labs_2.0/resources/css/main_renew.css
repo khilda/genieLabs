@@ -1,0 +1,499 @@
+@charset "UTF-8";
+main {
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* common */
+.l-content {
+  width: 100%;
+  max-width: 1392px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 0;
+}
+@media screen and (max-width: 1440px) {
+  .l-content {
+    max-width: 860px;
+  }
+}
+
+.l-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  color: #000;
+}
+.l-title .title {
+  font-size: 32px;
+  font-weight: 700;
+  color: inherit;
+}
+.l-title .title-link {
+  background: url(../images/ico_link_20.svg) no-repeat 100% 50%;
+  margin-left: auto;
+  padding: 8px 40px 8px 12px;
+  font-size: 24px;
+  font-weight: 500;
+  color: inherit;
+}
+.l-title .title-link:hover {
+  color: #00D9C3;
+}
+
+/* visual */
+.mainImageArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  overflow: hidden;
+  /* owl nav button custom*/
+}
+.mainImageArea figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.mainImageArea figure span {
+  display: block;
+  background: no-repeat 50% 50%/cover;
+  width: 100%;
+  height: 100%;
+}
+.mainImageArea figure::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.mainImageArea .owl-carousel .owl-nav button.owl-prev {
+  left: 104px;
+}
+.mainImageArea .owl-carousel .owl-nav button.owl-next {
+  right: 104px;
+}
+
+.mainTextArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  padding: 80px 0;
+  color: #fff;
+}
+.mainTextArea h2 {
+  display: block;
+  width: calc(100% - 500px);
+  margin-top: 137px;
+  line-height: 69px;
+  font-size: 48px;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.mainTextArea h2::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 30px;
+  height: 4px;
+  margin: 20px auto;
+}
+.mainTextArea .fc-primary {
+  color: #00ffde;
+}
+.mainTextArea .desc {
+  width: calc(100% - 500px);
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  color: inherit;
+}
+.mainTextArea a {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin: 25px auto 70px auto;
+  padding: 8px 24px;
+  font-size: 15px;
+  font-weight: 200;
+  color: inherit;
+}
+
+/* 공지사항 */
+.mainNotice.l-content {
+  padding: 120px 0 0;
+}
+.mainNotice .notice-list {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-start;
+  gap: 16px;
+  border-top: 3px solid #000;
+  border-bottom: 1px solid #000;
+  margin-top: 40px;
+  padding: 30px 40px;
+}
+.mainNotice .notice-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.mainNotice .notice-badge {
+  flex: none;
+  border: 1px solid #000;
+  border-radius: 80px;
+  width: 114px;
+  padding: 6px 0;
+  line-height: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.mainNotice .notice-title {
+  flex: 1 1 auto;
+  max-width: 1032px;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.mainNotice .notice-title:hover {
+  color: #00d9c3;
+  text-decoration: underline;
+}
+/* Use Case */
+.mainUseCase .case-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+.mainUseCase .case-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  height: 496px;
+  transition: none;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.mainUseCase .case-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #9747ff -1.82%, #5c4eff 48.91%, #00d9c3 100%);
+  opacity: 0;
+  z-index: 0;
+}
+.mainUseCase .case-item:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: none;
+}
+.mainUseCase .case-item:hover::before {
+  transform: translate(10px, 10px);
+  opacity: 1;
+}
+.mainUseCase .case-thumb {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.mainUseCase .case-thumb img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainUseCase .case-content {
+  position: relative;
+  flex: 1;
+  background-color: #fff;
+  padding: 34px 40px;
+  transition: none;
+}
+.mainUseCase .case-content .title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.mainUseCase .case-content .content {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  transition: none;
+}
+
+/* Tech */
+.mainTech {
+  background: linear-gradient(180deg, rgba(53, 243, 232, 0.3) 0%, rgba(151, 71, 255, 0.3) 100%);
+}
+.mainTech .tech-list {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+.mainTech .tech-item {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-image-slice: 1;
+  width: 440px;
+  height: 440px;
+  padding: 40px;
+  transition: none;
+  color: #000;
+}
+.mainTech .tech-item:hover {
+  border-image-source: linear-gradient(126.72deg, #9747ff 0%, #5c4eff 51.04%, #00d9c3 100%);
+  background-color: #000;
+  color: #fff;
+}
+.mainTech .tech-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 128px;
+}
+.mainTech .tech-title .badge {
+  background-color: #f4f4f4;
+  border-radius: 80px;
+  line-height: 1;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.mainTech .tech-title .title {
+  height: 84px;
+  margin-top: auto;
+  font-size: 30px;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  color: inherit;
+  transition: none;
+}
+.mainTech .tech-content {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  color: inherit;
+  transition: none;
+}
+
+/* Genie Developer */
+.mainGenieDeveloper .gd-list {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.mainGenieDeveloper .gd-item {
+  display: flex;
+  height: 334px;
+  padding: 40px 60px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.12);
+}
+.mainGenieDeveloper .gd-item::before {
+  content: "";
+  flex: none;
+  display: block;
+  background: #fff no-repeat 50% 50%;
+  width: 254px;
+  height: 254px;
+  color: #000;
+}
+.mainGenieDeveloper .gd-item.api::before {
+  background-image: url("../images/");
+}
+.mainGenieDeveloper .gd-item.data::before {
+  background-image: url("../images/");
+}
+.mainGenieDeveloper .gd-item:hover {
+  background-color: #000;
+  color: #fff;
+  box-shadow: none;
+}
+.mainGenieDeveloper .gd-content {
+  margin-left: 40px;
+  padding-left: 40px;
+  color: inherit;
+}
+.mainGenieDeveloper .gd-content .title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: inherit;
+}
+.mainGenieDeveloper .gd-content .content {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: inherit;
+  transition: none;
+}
+
+/* Facebook */
+.mainFacebook {
+  background: linear-gradient(180deg, #5c4eff 0%, #012c80 100%);
+}
+.mainFacebook .l-title {
+  color: #fff;
+}
+.mainFacebook .fb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 33px;
+}
+.mainFacebook .fb-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 440px;
+  height: 496px;
+  transition: none;
+}
+.mainFacebook .fb-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 0;
+}
+.mainFacebook .fb-item .fb-thumb {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.mainFacebook .fb-item .fb-thumb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: none;
+}
+.mainFacebook .fb-item .fb-thumb img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainFacebook .fb-item .fb-content {
+  position: relative;
+  flex: 1;
+  padding: 40px;
+  transition: none;
+}
+.mainFacebook .fb-item .fb-content .content {
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 라인수 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  transition: none;
+}
+.mainFacebook .fb-item .fb-content .date {
+  font-size: 18px;
+  font-weight: 400;
+  color: #787878;
+  transition: none;
+}
+.mainFacebook .fb-item:hover::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-image: linear-gradient(329.91deg, #00d9c3 0%, #5c4eff 49.56%, #9747ff 100%);
+}
+.mainFacebook .fb-item:hover .fb-thumb::after {
+  opacity: 1;
+}
+.mainFacebook .fb-item:hover .fb-content {
+  background-color: #000;
+}
+.mainFacebook .fb-item:hover .fb-content .content,
+.mainFacebook .fb-item:hover .fb-content .date {
+  color: #fff;
+}
