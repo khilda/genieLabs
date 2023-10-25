@@ -96,7 +96,7 @@ header.is-scroll {
   display: flex;
   align-items: center;
   gap: 2px;
-  padding: 0 6px;
+  padding: 8px 6px;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -109,21 +109,24 @@ header.is-scroll {
   background: url("../images/icon_gnb_arrow.png") 50% 50% no-repeat;
   transition: transform 0.3s;
 }
+.nav_wrapper nav .header_nav > li > a:hover, .nav_wrapper nav .header_nav > li > a:active {
+  text-decoration: underline;
+}
 .nav_wrapper nav .header_nav > li > a:hover::after, .nav_wrapper nav .header_nav > li > a:active::after {
   transform: rotate(180deg);
 }
-.nav_wrapper nav ul.on.fix {
+.nav_wrapper nav ul.on {
   position: fixed;
-  top: 60px;
+  top: 62px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 16px 10px;
 }
-.nav_wrapper nav ul.on.fix li {
+.nav_wrapper nav ul.on li {
   display: block;
   margin: 2px 0;
 }
-.nav_wrapper nav ul.on.fix a {
+.nav_wrapper nav ul.on a {
   display: block;
   margin: 2px 0;
   font-size: 16px;
@@ -131,7 +134,7 @@ header.is-scroll {
   line-height: 1.75;
   color: #fff;
 }
-.nav_wrapper nav ul.on.fix a:hover, .nav_wrapper nav ul.on.fix a:active {
+.nav_wrapper nav ul.on a:hover, .nav_wrapper nav ul.on a:active {
   color: #00d9c3;
   text-decoration: underline;
 }
@@ -150,6 +153,30 @@ header.is-scroll {
 }
 .nav_wrapper nav .header_items a {
   color: #fff;
+}
+.nav_wrapper nav .header_items .userIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav_wrapper nav .header_items .userIcon::before {
+  content: "";
+  display: block;
+  background: transparent url("../images/icon_gnb_my.png") no-repeat 50% 50%/cover;
+  width: 24px;
+  height: 24px;
+}
+.nav_wrapper nav .header_items .logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav_wrapper nav .header_items .logout::before {
+  content: "";
+  display: block;
+  background: transparent url("../images/icon_gnb_logout.png") no-repeat 50% 50%/cover;
+  width: 24px;
+  height: 24px;
 }
 
 @media (max-width: 1439px) {

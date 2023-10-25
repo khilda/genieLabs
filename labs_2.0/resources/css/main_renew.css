@@ -26,7 +26,7 @@ main {
 
 .btn-seeall {
   display: block;
-  background: url("../images/icon_seeall.png") no-repeat right 12px top 15px;
+  background: url("../images/icon_seeall.svg") no-repeat right 12px top 15px;
   width: 130px;
   margin-left: auto;
   padding: 9px 40px 9px 12px;
@@ -36,8 +36,19 @@ main {
   transition: none;
 }
 .btn-seeall:hover {
-  background-image: url("../images/icon_seeall_on.png");
+  background-image: url("../images/icon_seeall_on.svg");
   color: #00d9c3;
+}
+
+.ico-arr {
+  display: block;
+  background: transparent url("../images/icon_arrow.svg") no-repeat 50% 50%/cover;
+  width: 42px;
+  aspect-ratio: 1/1;
+}
+
+.mainGenieDeveloper .gd-item:hover .ico-arr, .mainTech .tech-item:hover .ico-arr, .mainUseCase .case-item:hover .ico-arr {
+  background-image: url("../images/icon_arrow_on.svg");
 }
 
 /* visual */
@@ -78,6 +89,9 @@ main {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.mainImageArea .owl-theme .owl-dots .owl-dot.active span {
+  background-color: #00d9c3;
+}
 .mainImageArea .owl-carousel .owl-nav button.owl-prev {
   left: 104px;
 }
@@ -100,7 +114,7 @@ main {
   display: block;
   width: calc(100% - 500px);
   margin-top: 137px;
-  line-height: 1.75;
+  line-height: 1;
   font-size: 48px;
   font-weight: 500;
   color: inherit;
@@ -116,13 +130,14 @@ main {
   background-color: #fff;
   width: 30px;
   height: 4px;
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 .mainTextArea .fc-primary {
   color: #00ffde;
 }
 .mainTextArea .desc {
   width: calc(100% - 500px);
+  margin-top: 20px;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
@@ -130,6 +145,7 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: keep-all;
+  height: 60px;
   line-height: 30px;
   font-size: 20px;
   font-weight: 400;
@@ -138,7 +154,7 @@ main {
 .mainTextArea a {
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  margin: 25px auto 70px auto;
+  margin: 25px auto 50px auto;
   padding: 8px 24px;
   font-size: 16px;
   font-weight: 700;
@@ -213,6 +229,11 @@ main {
   position: absolute;
   top: 200px;
   right: 0;
+}
+.mainUseCase .ico-arr {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 .mainUseCase .case-list {
   display: flex;
@@ -301,6 +322,11 @@ main {
 .mainTech .btn-seeall {
   margin: 60px auto 0;
 }
+.mainTech .ico-arr {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
 .mainTech .tech-list {
   position: relative;
   display: flex;
@@ -310,6 +336,7 @@ main {
   gap: 36px;
 }
 .mainTech .tech-item {
+  position: relative;
   background-color: #fff;
   border: 3px solid #fff;
   border-image-slice: 1;
@@ -361,7 +388,7 @@ main {
   font-size: 16px;
   font-weight: 400;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-line-clamp: 3; /* 라인수 */
   -webkit-box-orient: vertical;
   white-space: normal;
   overflow: hidden;
@@ -372,12 +399,18 @@ main {
 }
 
 /* Genie Developer */
+.mainGenieDeveloper .ico-arr {
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+}
 .mainGenieDeveloper .gd-list {
   display: flex;
   align-items: center;
   gap: 36px;
 }
 .mainGenieDeveloper .gd-item {
+  position: relative;
   display: flex;
   width: 100%;
   height: 334px;
@@ -572,6 +605,10 @@ main {
     padding: 6px 30px 6px 8px;
     font-size: 18px;
   }
+  .ico-arr {
+    width: 28px;
+    height: 28px;
+  }
   /* owl nav button custom*/
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next {
@@ -587,10 +624,11 @@ main {
   .mainTextArea h2::after {
     width: 20px;
     height: 2px;
-    margin: 16px auto;
+    margin-top: 16px;
   }
   .mainTextArea .desc {
     width: 100%;
+    margin-top: 16px;
     line-height: 22px;
     font-size: 14px;
   }
@@ -603,6 +641,10 @@ main {
     top: auto;
     right: auto;
     margin-top: 20px;
+  }
+  .mainNotice .ico-arr {
+    right: 30px;
+    bottom: 30px;
   }
   .mainNotice.l-content {
     padding: 60px 0;
@@ -638,6 +680,10 @@ main {
     right: auto;
     margin-top: 20px;
   }
+  .mainUseCase .ico-arr {
+    right: 30px;
+    bottom: 30px;
+  }
   .mainUseCase .case-list {
     gap: 20px;
   }
@@ -660,6 +706,10 @@ main {
   .mainTech .btn-seeall {
     margin: 20px 0 0 auto;
   }
+  .mainTech .ico-arr {
+    right: 30px;
+    bottom: 30px;
+  }
   .mainTech .tech-list {
     gap: 20px;
   }
@@ -672,13 +722,10 @@ main {
   }
   .mainTech .tech-content {
     font-size: 14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* 라인수 */
-    -webkit-box-orient: vertical;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: keep-all;
+  }
+  .mainGenieDeveloper .ico-arr {
+    right: 30px;
+    bottom: 30px;
   }
   .mainGenieDeveloper .gd-list {
     gap: 20px;
@@ -690,6 +737,7 @@ main {
   }
   .mainGenieDeveloper .gd-item::before {
     width: 220px;
+    margin: 0 auto;
   }
   .mainGenieDeveloper .gd-content {
     padding: 0;

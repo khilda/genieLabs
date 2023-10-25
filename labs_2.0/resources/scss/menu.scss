@@ -18,7 +18,7 @@ header {
   height: 80px;
   padding: 26px 0;
   z-index: 99;
-  &.is-scroll{
+  &.is-scroll {
     background-color: #000;
   }
 }
@@ -34,7 +34,8 @@ header {
 .logo_nav_wrapper {
   .logo {
     display: block;
-    background: transparent url("../images/header_logo.png") no-repeat 50% 50% / contain;
+    background: transparent url("../images/header_logo.png") no-repeat 50% 50% /
+      contain;
     width: 150px;
     height: 28px;
     font-size: 0;
@@ -103,7 +104,7 @@ header {
         display: flex;
         align-items: center;
         gap: 2px;
-        padding: 0 6px;
+        padding: 8px 6px;
         font-size: 20px;
         font-weight: 700;
         color: #fff;
@@ -117,6 +118,7 @@ header {
         }
         &:hover,
         &:active {
+          text-decoration: underline;
           &::after {
             transform: rotate(180deg);
           }
@@ -125,9 +127,9 @@ header {
     }
   }
   // 2depth
-  ul.on.fix {
+  ul.on {
     position: fixed;
-    top: 60px;
+    top: 62px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 16px 10px;
@@ -165,6 +167,32 @@ header {
     a {
       color: #fff;
     }
+    .userIcon {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &::before {
+        content: "";
+        display: block;
+        background: transparent url("../images/icon_gnb_my.png") no-repeat 50%
+          50% / cover;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .logout {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &::before {
+        content: "";
+        display: block;
+        background: transparent url("../images/icon_gnb_logout.png") no-repeat
+          50% 50% / cover;
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
 // tablet
@@ -178,19 +206,19 @@ header {
 }
 // mobile
 @media (max-width: 907px) {
-  header{
+  header {
     height: 60px;
     padding: 19px 0;
   }
-  .header_inner{
+  .header_inner {
     height: auto;
     padding: 0 20px;
   }
-  .logo_nav_wrapper .logo{
+  .logo_nav_wrapper .logo {
     width: 112px;
     height: 21px;
   }
-  .logo_nav_wrapper_ground{
+  .logo_nav_wrapper_ground {
     display: none;
   }
 }

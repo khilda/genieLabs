@@ -22,10 +22,9 @@
       type="text/css"
       href="../resources/js/jquery-ui.css"
     />
-    <script type="text/javascript" src="../resources/js/menu.js"></script>
+    <script type="text/javascript" src="../resources/js/menu_renew.js"></script>
     <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/menu.css" />
-    <link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
     <!-- owlcarousel 좌우 스크롤-->
     <link
       rel="stylesheet"
@@ -44,7 +43,7 @@
       <div class="header_inner">
         <!-- GenieLabs 로고 logo_nav_wrapper -->
         <div class="logo_nav_wrapper">
-          <!-- remove: .OpenCloseMenu 위치 이동 -->
+          <!-- (todo)remove: .OpenCloseMenu 위치 이동 및 태그 변경 -->
           <!-- <div class="openCloseMenu">
             <span></span>
           </div> -->
@@ -55,18 +54,20 @@
           <a href="index.html" class="logo_ground" target="_blank">Developer</a>
         </div>
 
-        <!-- remove: .OpenCloseMenu 위치 이동 -->
-        <div class="openCloseMenu">
+        <!-- (todo)remove : .OpenCloseMenu 위치 이동 및 태그 변경-->
+        <button type="button" class="openCloseMenu">
           <span></span>
-        </div>
-        
+          <span></span>
+          <span></span>
+        </button>
+
         <!-- 메인메뉴 menuArea -->
         <div class="menuArea">
           <!-- 메인메뉴 nav_wrapper -->
           <div class="nav_wrapper">
             <!-- nav -->
             <nav>
-              <!-- add : header_nav 클래스 추가 -->
+              <!-- (todo)add : header_nav 클래스 추가 -->
               <ul class="header_nav">
                 <li>
                   <a href="#Mi:dm">Mi:dm</a>
@@ -117,7 +118,8 @@
               <ul class="header_items">
                 <li>
                   <a href="myAccount_info.html" class="userIcon">My Account</a>
-                  <ul class="off">
+                  <!-- (todo)remove : 기존 메뉴삭제 -->
+                  <!-- <ul class="off">
                     <li><a href="myAccount_info.html">My Account</a></li>
                     <li>
                       <a href="myAccount_changePassword.html"
@@ -127,10 +129,11 @@
                     <li>
                       <a href="myAccount_deleteAccount.html">Delete Account</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li>
-                  <a href="javascript:onLogOut();">Log Out</a>
+                  <!-- (todo)add : logout 클래스 추가 -->
+                  <a href="javascript:onLogOut();" class="logout">Log Out</a>
                 </li>
               </ul>
             </nav>
