@@ -88,15 +88,23 @@
       <div class="header_inner">
         <!-- GenieLabs 로고 logo_nav_wrapper -->
         <div class="logo_nav_wrapper">
-          <div class="openCloseMenu">
+          <!-- remove: .OpenCloseMenu 위치 이동 및 태그 변경 -->
+          <!-- <div class="openCloseMenu">
             <span></span>
-          </div>
+          </div> -->
           <a href="index.html" class="logo">KT GenieLabs</a>
         </div>
         <!-- // GenieLabs 로고 logo_nav_wrapper -->
         <div class="logo_nav_wrapper_ground">
           <a href="index.html" class="logo_ground" target="_blank">Developer</a>
         </div>
+
+        <!-- remove: .OpenCloseMenu 위치 이동 및 태그 변경-->
+        <button type="button" class="openCloseMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <!-- 메인메뉴 menuArea -->
         <div class="menuArea">
@@ -272,10 +280,7 @@
         </div>
       </section>
       <section class="mainNotice l-content">
-        <hgroup class="l-title">
-          <h2 class="title">Notice</h2>
-          <a href="#SeeAll" class="title-link">See All</a>
-        </hgroup>
+        <h2 class="l-title">Notice</h2>
         <dl class="notice-list">
           <a href="#notice" class="notice-item">
             <dt class="notice-badge">Vision API</dt>
@@ -305,16 +310,14 @@
             <dd class="notice-date">2023.07.01</dd>
           </a>
         </dl>
+        <a href="#SeeAll" class="btn-seeall">See All</a>
       </section>
       <section class="mainUseCase l-content">
-        <hgroup class="l-title">
-          <h2 class="title">Mi:dm Use Case</h2>
-          <a href="#SeeAll" class="title-link">See All</a>
-        </hgroup>
+        <h2 class="l-title">Mi:dm Use Case</h2>
         <article class="case-list">
           <a href="#caseItem" class="case-item">
             <figure class="case-thumb">
-              <img src="https://placehold.co/600x400" alt="" />
+              <img src="https://placehold.co/800x800" alt="" />
             </figure>
             <div class="case-content">
               <h5 class="title">
@@ -328,7 +331,7 @@
           </a>
           <a href="#caseItem" class="case-item">
             <figure class="case-thumb">
-              <img src="https://placehold.co/600x400" alt="" />
+              <img src="https://placehold.co/800x800" alt="" />
             </figure>
             <div class="case-content">
               <h5 class="title">
@@ -342,7 +345,7 @@
           </a>
           <a href="#caseItem" class="case-item">
             <figure class="case-thumb">
-              <img src="https://placehold.co/600x400" alt="" />
+              <img src="https://placehold.co/800x800" alt="" />
             </figure>
             <div class="case-content">
               <h5 class="title">
@@ -355,12 +358,11 @@
             </div>
           </a>
         </article>
+        <a href="#SeeAll" class="btn-seeall">See All</a>
       </section>
       <section class="mainTech">
         <div class="l-content">
-          <hgroup class="l-title">
-            <h2 class="title">Tech</h2>
-          </hgroup>
+          <h2 class="l-title">Tech</h2>
           <article class="tech-list">
             <a href="#techItem" class="tech-item">
               <hgroup class="tech-title">
@@ -375,7 +377,9 @@
             <a href="#techItem" class="tech-item">
               <hgroup class="tech-title">
                 <span class="badge">Demo</span>
-                <h4 class="title">믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화</h4>
+                <h4 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h4>
               </hgroup>
               <p class="tech-content">
                 기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
@@ -394,7 +398,9 @@
             <a href="#techItem" class="tech-item">
               <hgroup class="tech-title">
                 <span class="badge">Demo</span>
-                <h4 class="title">믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화</h4>
+                <h4 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h4>
               </hgroup>
               <p class="tech-content">
                 기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
@@ -404,7 +410,9 @@
             <a href="#techItem" class="tech-item">
               <hgroup class="tech-title">
                 <span class="badge">Demo</span>
-                <h4 class="title">믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화</h4>
+                <h4 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h4>
               </hgroup>
               <p class="tech-content">
                 기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
@@ -412,36 +420,39 @@
               </p>
             </a>
           </article>
+          <a href="#SeeAll" class="btn-seeall">See All</a>
         </div>
       </section>
       <section class="mainGenieDeveloper l-content">
-        <hgroup class="l-title">
-          <h2 class="title">Genie Developer</h2>
-        </hgroup>
+        <h2 class="l-title">Genie Developer</h2>
         <article class="gd-list">
           <a href="#gdItem" class="gd-item api">
             <div class="gd-content">
               <h5 class="title">API</h5>
-              <p class="content">You Can experience the AI APIs of KT and its partners necessary for AI development</p>
+              <p class="content">
+                You Can experience the AI APIs of KT and its partners necessary
+                for AI development
+              </p>
             </div>
           </a>
           <a href="#gdItem" class="gd-item data">
             <div class="gd-content">
               <h5 class="title">Data</h5>
-              <p class="content">You Can experience the AI APIs of KT and its partners necessary for AI development</p>
+              <p class="content">
+                You Can experience the AI APIs of KT and its partners necessary
+                for AI development
+              </p>
             </div>
           </a>
         </article>
       </section>
       <section class="mainFacebook">
         <div class="l-content">
-          <hgroup class="l-title">
-            <h2 class="title">AI2XL Facebook</h2>
-          </hgroup>
+          <h2 class="l-title">AI2XL Facebook</h2>
           <article class="fb-list">
             <a href="#fbItem" class="fb-item">
               <figure class="fb-thumb">
-                <img src="https://placehold.co/600x400" alt="" />
+                <img src="https://placehold.co/800x800" alt="" />
               </figure>
               <div class="fb-content">
                 <p class="content">
@@ -454,7 +465,7 @@
             </a>
             <a href="#fbItem" class="fb-item">
               <figure class="fb-thumb">
-                <img src="https://placehold.co/600x400" alt="" />
+                <img src="https://placehold.co/800x800" alt="" />
               </figure>
               <div class="fb-content">
                 <p class="content">안녕하세요~</p>
@@ -463,7 +474,7 @@
             </a>
             <a href="#fbItem" class="fb-item">
               <figure class="fb-thumb">
-                <img src="https://placehold.co/600x400" alt="" />
+                <img src="https://placehold.co/800x800" alt="" />
               </figure>
               <div class="fb-content">
                 <p class="content">

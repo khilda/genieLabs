@@ -9,19 +9,24 @@ header {
   padding: 26px 0;
   z-index: 99;
 }
+header.is-scroll {
+  background-color: #000;
+}
 
 .header_inner {
   display: flex;
   align-items: center;
+  height: 28px;
   width: 100%;
-  max-width: 1390px;
+  max-width: 1392px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 30px;
 }
 
 .logo_nav_wrapper .logo {
   display: block;
-  background: transparent url("../images/header_logo.png") 50% 50% no-repeat;
+  background: transparent url("../images/header_logo.png") no-repeat 50% 50%/contain;
   width: 150px;
   height: 28px;
   font-size: 0;
@@ -39,6 +44,30 @@ header {
 }
 .logo_nav_wrapper_ground .logo_ground:hover, .logo_nav_wrapper_ground .logo_ground:active {
   background-image: url("../images/logo_developer_on.png");
+}
+
+.openCloseMenu {
+  flex: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background-color: transparent;
+  width: 20px;
+  min-width: auto;
+  height: 20px;
+  padding: 0;
+  margin-left: auto;
+  cursor: pointer;
+}
+.openCloseMenu:hover {
+  background-color: transparent;
+}
+.openCloseMenu > span {
+  border-radius: 2px;
+  background-color: #fff;
+  width: 16px;
+  height: 2px;
 }
 
 .menuArea {
@@ -121,4 +150,30 @@ header {
 }
 .nav_wrapper nav .header_items a {
   color: #fff;
+}
+
+@media (max-width: 1439px) {
+  .openCloseMenu {
+    display: flex;
+  }
+  .menuArea {
+    display: none;
+  }
+}
+@media (max-width: 907px) {
+  header {
+    height: 60px;
+    padding: 19px 0;
+  }
+  .header_inner {
+    height: auto;
+    padding: 0 20px;
+  }
+  .logo_nav_wrapper .logo {
+    width: 112px;
+    height: 21px;
+  }
+  .logo_nav_wrapper_ground {
+    display: none;
+  }
 }

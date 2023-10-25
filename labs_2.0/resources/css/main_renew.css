@@ -6,16 +6,12 @@ main {
 
 /* common */
 .l-content {
+  position: relative;
   width: 100%;
   max-width: 1392px;
   margin-left: auto;
   margin-right: auto;
   padding: 200px 0;
-}
-@media screen and (max-width: 1440px) {
-  .l-content {
-    max-width: 860px;
-  }
 }
 
 .l-title {
@@ -24,22 +20,24 @@ main {
   justify-content: space-between;
   margin-bottom: 40px;
   color: #000;
-}
-.l-title .title {
   font-size: 32px;
   font-weight: 700;
-  color: inherit;
 }
-.l-title .title-link {
-  background: url(../images/ico_link_20.svg) no-repeat 100% 50%;
+
+.btn-seeall {
+  display: block;
+  background: url("../images/icon_seeall.png") no-repeat right 12px top 15px;
+  width: 130px;
   margin-left: auto;
-  padding: 8px 40px 8px 12px;
+  padding: 9px 40px 9px 12px;
   font-size: 24px;
   font-weight: 500;
-  color: inherit;
+  color: #000;
+  transition: none;
 }
-.l-title .title-link:hover {
-  color: #00D9C3;
+.btn-seeall:hover {
+  background-image: url("../images/icon_seeall_on.png");
+  color: #00d9c3;
 }
 
 /* visual */
@@ -102,7 +100,7 @@ main {
   display: block;
   width: calc(100% - 500px);
   margin-top: 137px;
-  line-height: 69px;
+  line-height: 1.75;
   font-size: 48px;
   font-weight: 500;
   color: inherit;
@@ -142,19 +140,27 @@ main {
   border-radius: 5px;
   margin: 25px auto 70px auto;
   padding: 8px 24px;
-  font-size: 15px;
-  font-weight: 200;
+  font-size: 16px;
+  font-weight: 700;
   color: inherit;
+}
+.mainTextArea a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* 공지사항 */
 .mainNotice.l-content {
   padding: 120px 0 0;
 }
+.mainNotice .btn-seeall {
+  position: absolute;
+  top: 120px;
+  right: 0;
+}
 .mainNotice .notice-list {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
   justify-content: flex-start;
   gap: 16px;
   border-top: 3px solid #000;
@@ -167,6 +173,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+  color: #000;
 }
 .mainNotice .notice-badge {
   flex: none;
@@ -178,12 +185,14 @@ main {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
+  color: inherit;
 }
 .mainNotice .notice-title {
   flex: 1 1 auto;
   max-width: 1032px;
   font-size: 18px;
   font-weight: 700;
+  color: inherit;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -193,9 +202,21 @@ main {
   color: #00d9c3;
   text-decoration: underline;
 }
+.mainNotice .notice-date {
+  flex: none;
+  font-size: 18px;
+  color: inherit;
+}
+
 /* Use Case */
+.mainUseCase .btn-seeall {
+  position: absolute;
+  top: 200px;
+  right: 0;
+}
 .mainUseCase .case-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 36px;
@@ -205,7 +226,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 440px;
-  height: 496px;
+  height: 514px;
   transition: none;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
 }
@@ -239,6 +260,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
 }
 .mainUseCase .case-content {
@@ -276,6 +298,9 @@ main {
 .mainTech {
   background: linear-gradient(180deg, rgba(53, 243, 232, 0.3) 0%, rgba(151, 71, 255, 0.3) 100%);
 }
+.mainTech .btn-seeall {
+  margin: 60px auto 0;
+}
 .mainTech .tech-list {
   position: relative;
   display: flex;
@@ -289,7 +314,8 @@ main {
   border: 3px solid #fff;
   border-image-slice: 1;
   width: 440px;
-  height: 440px;
+  aspect-ratio: 1/1;
+  min-height: 298px;
   padding: 40px;
   transition: none;
   color: #000;
@@ -353,29 +379,37 @@ main {
 }
 .mainGenieDeveloper .gd-item {
   display: flex;
+  width: 100%;
   height: 334px;
   padding: 40px 60px;
+  color: #000;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.12);
 }
 .mainGenieDeveloper .gd-item::before {
   content: "";
   flex: none;
   display: block;
-  background: #fff no-repeat 50% 50%;
+  background: transparent no-repeat 50% 50%/cover;
   width: 254px;
-  height: 254px;
+  aspect-ratio: 1/1;
   color: #000;
 }
 .mainGenieDeveloper .gd-item.api::before {
-  background-image: url("../images/");
+  background-image: url("../images/img_main_api.png");
 }
 .mainGenieDeveloper .gd-item.data::before {
-  background-image: url("../images/");
+  background-image: url("../images/img_main_data.png");
 }
 .mainGenieDeveloper .gd-item:hover {
   background-color: #000;
   color: #fff;
   box-shadow: none;
+}
+.mainGenieDeveloper .gd-item:hover.api::before {
+  background-image: url("../images/img_main_api_on.png");
+}
+.mainGenieDeveloper .gd-item:hover.data::before {
+  background-image: url("../images/img_main_data_on.png");
 }
 .mainGenieDeveloper .gd-content {
   margin-left: 40px;
@@ -451,6 +485,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
 }
 .mainFacebook .fb-item .fb-content {
@@ -496,4 +531,180 @@ main {
 .mainFacebook .fb-item:hover .fb-content .content,
 .mainFacebook .fb-item:hover .fb-content .date {
   color: #fff;
+}
+
+@media (max-width: 1439px) {
+  .l-content {
+    max-width: 860px;
+  }
+  .mainUseCase .case-list {
+    gap: 30px;
+  }
+  .mainUseCase .case-item {
+    width: 415px;
+  }
+  .mainTech .tech-list {
+    gap: 30px;
+  }
+  .mainTech .tech-item {
+    width: 415px;
+  }
+  .mainGenieDeveloper .gd-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .mainFacebook .fb-list {
+    gap: 30px;
+  }
+  .mainFacebook .fb-item {
+    width: 415px;
+  }
+}
+@media (max-width: 907px) {
+  .l-content {
+    max-width: calc(100vw - 40px);
+    padding: 60px 0;
+  }
+  .btn-seeall {
+    background-position: right 6px top 10px;
+    background-size: 20px 20px;
+    width: 96px;
+    padding: 6px 30px 6px 8px;
+    font-size: 18px;
+  }
+  /* owl nav button custom*/
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next {
+    display: none;
+  }
+  .mainTextArea {
+    padding: 0 30px;
+  }
+  .mainTextArea h2 {
+    width: 100%;
+    font-size: 24px;
+  }
+  .mainTextArea h2::after {
+    width: 20px;
+    height: 2px;
+    margin: 16px auto;
+  }
+  .mainTextArea .desc {
+    width: 100%;
+    line-height: 22px;
+    font-size: 14px;
+  }
+  .mainTextArea a {
+    margin-top: 60px;
+    margin-bottom: 96px;
+  }
+  .mainNotice .btn-seeall {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+  }
+  .mainNotice.l-content {
+    padding: 60px 0;
+  }
+  .mainNotice .notice-list {
+    padding: 0;
+  }
+  .mainNotice .notice-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+  }
+  .mainNotice .notice-item + .notice-item {
+    border-top: 1px solid #000;
+  }
+  .mainNotice .notice-title {
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+  }
+  .mainNotice .notice-date {
+    margin-left: auto;
+  }
+  .mainUseCase .btn-seeall {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+  }
+  .mainUseCase .case-list {
+    gap: 20px;
+  }
+  .mainUseCase .case-item {
+    width: calc(100vw - 40px);
+  }
+  .mainUseCase .case-content .title {
+    font-size: 28px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+  }
+  .mainUseCase .case-content .content {
+    font-size: 14px;
+  }
+  .mainTech .btn-seeall {
+    margin: 20px 0 0 auto;
+  }
+  .mainTech .tech-list {
+    gap: 20px;
+  }
+  .mainTech .tech-item {
+    width: calc(100vw - 40px);
+    padding: 30px;
+  }
+  .mainTech .tech-title .title {
+    font-size: 28px;
+  }
+  .mainTech .tech-content {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 라인수 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+  }
+  .mainGenieDeveloper .gd-list {
+    gap: 20px;
+  }
+  .mainGenieDeveloper .gd-item {
+    flex-direction: column;
+    height: 516px;
+    padding: 30px;
+  }
+  .mainGenieDeveloper .gd-item::before {
+    width: 220px;
+  }
+  .mainGenieDeveloper .gd-content {
+    padding: 0;
+    margin: 30px 0 0;
+  }
+  .mainGenieDeveloper .gd-content .title {
+    font-size: 28px;
+  }
+  .mainGenieDeveloper .gd-content .content {
+    font-size: 14px;
+  }
+  .mainFacebook .fb-list {
+    gap: 20px;
+  }
+  .mainFacebook .fb-item {
+    width: calc(100vw - 40px);
+  }
 }
