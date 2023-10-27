@@ -34,7 +34,7 @@ header {
 .logo_nav_wrapper {
   .logo {
     display: block;
-    background: transparent url("../images/header_logo.png") no-repeat 50% 50% /
+    background: transparent url("../images/header_logo.svg") no-repeat 50% 50% /
       contain;
     width: 150px;
     height: 28px;
@@ -44,7 +44,7 @@ header {
 }
 .logo_nav_wrapper_ground .logo_ground {
   display: block;
-  background: transparent url("../images/logo_developer.png");
+  background: transparent url("../images/logo_developer.svg");
   width: 122px;
   height: 28px;
   margin: 0 6px;
@@ -52,7 +52,7 @@ header {
   color: transparent;
   &:hover,
   &:active {
-    background-image: url("../images/logo_developer_on.png");
+    background-image: url("../images/logo_developer_on.svg");
   }
 }
 
@@ -130,7 +130,7 @@ header {
   ul.on {
     position: fixed;
     top: 62px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 16px 10px;
     li {
