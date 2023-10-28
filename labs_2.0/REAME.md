@@ -9,7 +9,8 @@
   * (todo)remove: .OpenCloseMenu 위치 이동 및 태그 변경
 - common.css, main.css
   * (todo)remove : header 관련 클래스 제거move 
-- main_renew.css
+- renew_common.css, main_renew.css, midm.css
   * 신규파일추가
-- menu_renew.js
+- menu_renew.js, gsap/gsap.min.js
   * 신규파일추가
+- images 폴더 내 이미지 모두 신규추가

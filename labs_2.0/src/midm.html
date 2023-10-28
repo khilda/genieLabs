@@ -344,21 +344,28 @@
         </div>
       </section>
       <section class="midmClip l-content">
+        <div class="mouse__cursor"></div>
         <hgroup class="l-titlebox">
           <h2 class="l-title">Mi:dm CLIP</h2>
         </hgroup>
         <article class="clip-list">
-          <div class="clip-item title is-active">
+          <div class="clip-item item-title is-active">
             <h3 class="clip-title">
               KT LARGE AI, <br />Mi:dm의 <br />기술적 특징과 <br />적용사례를
               <br />소개합니다.
             </h3>
           </div>
           <div class="clip-item">
+            <figure class="clip-img">
+              <img src="../resources/images/img_clip_01.png" alt="" />
+            </figure>
             <h3 class="clip-title">KT AI <br />기자간담회</h3>
             <button type="button" class="clip-btn">영상보기</button>
           </div>
           <div class="clip-item">
+            <figure class="clip-img">
+              <img src="../resources/images/img_clip_02.png" alt="" />
+            </figure>
             <h3 class="clip-title">KOREA <br />AI DEVCON <br />2022</h3>
             <button type="button" class="clip-btn">영상보기</button>
           </div>
@@ -392,5 +399,40 @@
         </div>
       </section>
     </footer>
+    <script src="../resources/js/gsap/gsap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // item hover
+        $(".clip-item").on({
+          mouseenter: function (e) {
+            $(".clip-item").removeClass("is-active");
+            $(this).addClass("is-active");
+          },
+        });
+        // mouse effect
+        $(".clip-list").on({
+          mousemove: function (e) {
+            console.log(e);
+            // 마우스 좌표값
+            let mousePageX = e.clientX;
+            let mousePageY = e.clientY;
+            // 커서
+            gsap.to(".mouse__cursor", {
+              duration: 0.5,
+              left: mousePageX - 25,
+              top: mousePageY - 25,
+            });
+          },
+          mouseenter: function (e) {
+            console.log("mouseenter");
+            $(".mouse__cursor").css("opacity", 1);
+          },
+          mouseleave: function (e) {
+            console.log("mouseleave");
+            $(".mouse__cursor").css("opacity", 0);
+          },
+        });
+      });
+    </script>
   </body>
 </html>

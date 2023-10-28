@@ -128,7 +128,6 @@ main {
 }
 .mainTextArea h2 {
   display: block;
-  width: calc(100% - 500px);
   margin-top: 137px;
   line-height: 1;
   font-size: 48px;
@@ -148,7 +147,6 @@ main {
   color: #00ffde;
 }
 .mainTextArea .desc {
-  width: calc(100% - 500px);
   margin-top: 20px;
   height: 60px;
   line-height: 30px;
@@ -338,7 +336,7 @@ main {
   transition: none;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 907px) {
   .l-content {
     max-width: 860px;
     width: calc(100vw - 40px);

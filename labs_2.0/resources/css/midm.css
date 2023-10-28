@@ -128,7 +128,6 @@ main {
 }
 .mainTextArea h2 {
   display: block;
-  width: calc(100% - 500px);
   margin-top: 137px;
   line-height: 1;
   font-size: 48px;
@@ -148,7 +147,6 @@ main {
   color: #00ffde;
 }
 .mainTextArea .desc {
-  width: calc(100% - 500px);
   margin-top: 20px;
   height: 60px;
   line-height: 30px;
@@ -338,7 +336,7 @@ main {
   transition: none;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 907px) {
   .l-content {
     max-width: 860px;
     width: calc(100vw - 40px);
@@ -641,16 +639,33 @@ main {
   margin: 1px 8px;
 }
 
+.midmClip .mouse__cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1000;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  mix-blend-mode: difference;
+}
 .midmClip.l-content {
   padding-top: 120px;
 }
 .midmClip .clip-list {
   display: flex;
   align-items: stretch;
-  justify-content: center;
   gap: 36px;
+  cursor: none;
 }
 .midmClip .clip-item {
+  flex: 0 0 360px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -660,18 +675,34 @@ main {
   height: 640px;
   padding: 60px 40px;
   color: #fff;
+  transition: 0.5s;
 }
-.midmClip .clip-item.title {
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+.midmClip .clip-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6) no-repeat 50% 50%;
+  overflow: hidden;
+  z-index: 0;
+}
+.midmClip .clip-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .midmClip .clip-title {
+  background: linear-gradient(148.02deg, #a764ff 2.73%, #6e63ff 33.71%, #5fffef 62.55%);
   font-size: 42px;
   font-weight: 700;
   line-height: 62px;
-  color: inherit;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  z-index: 1;
 }
 .midmClip .clip-btn {
   flex: none;
@@ -684,6 +715,7 @@ main {
   font-size: 20px;
   font-weight: 500;
   text-decoration: underline;
+  z-index: 1;
 }
 .midmClip .clip-btn::before {
   content: "";
@@ -693,12 +725,42 @@ main {
   height: 28px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1439px) {
+  .midmClip .clip-img {
+    opacity: 0;
+  }
+  .midmClip .clip-item:last-child {
+    flex-basis: 380px;
+  }
   .midmClip .clip-item.is-active {
+    flex: 1 1;
     width: 600px;
+    transition: padding 0.5s;
+  }
+  .midmClip .clip-item.is-active.item-title {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  .midmClip .clip-item.is-active:not(.item-title) .clip-title {
+    background: transparent;
+    color: #fff;
+  }
+  .midmClip .clip-item.is-active .clip-img {
+    opacity: 1;
   }
 }
-@media (max-width: 1439px) {
+@media (max-width: 907px) {
+  .midmFeature .feature-title {
+    font-size: 24px;
+  }
+  .midmFeature .feature-title::after {
+    margin: 30px auto;
+  }
+  .midmFeature .feature-desc {
+    font-size: 14px;
+  }
   .midmClip .clip-list {
     flex-direction: column;
     gap: 30px;
@@ -707,8 +769,18 @@ main {
     width: 100%;
     height: 430px;
   }
+  .midmClip .clip-item.item-title {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  .midmClip .clip-item:not(.item-title) .clip-title {
+    background: transparent;
+    color: #fff;
+  }
 }
-@media (max-width: 907px) {
+@media (max-width: 426px) {
   .mainImageArea.midm .mainTextArea h2 {
     margin-top: 252px;
   }

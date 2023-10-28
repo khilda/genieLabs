@@ -256,7 +256,13 @@
 }
 
 // tablet
-@media (max-width: 1439px) {
+@media (max-width: $tablet) {
+  .mainTextArea {
+    h2,
+    .desc {
+      width: calc(100% - 500px);
+    }
+  }
   .mainGenieDeveloper {
     .gd-list {
       flex-direction: column;
@@ -273,7 +279,7 @@
   }
 }
 // mobile
-@media (max-width: 426px) {
+@media (max-width: $mobile) {
   /* owl nav button custom*/
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next {
