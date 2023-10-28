@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>KT GenieLabs</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script
+      type="text/javascript"
+      src="../resources/js/jquery-1.9.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../resources/js/jquery-ui-1.10.3.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../resources/js/jquery-ui.css"
+    />
+    <script type="text/javascript" src="../resources/js/menu_renew.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/midm.css" />
+    <!-- owlcarousel 좌우 스크롤-->
+    <link
+      rel="stylesheet"
+      href="../resources/js/owlcarousel/assets/owl.carousel.main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../resources/js/owlcarousel/assets/owl.theme.main.css"
+    />
+  </head>
+
+  <body id="top">
+    <!-- header -->
+    <header>
+      <!-- header_inner -->
+      <div class="header_inner">
+        <!-- GenieLabs 로고 logo_nav_wrapper -->
+        <div class="logo_nav_wrapper">
+          <!-- (todo)remove: .OpenCloseMenu 위치 이동 및 태그 변경 -->
+          <!-- <div class="openCloseMenu">
+            <span></span>
+          </div> -->
+          <a href="index.html" class="logo">KT GenieLabs</a>
+        </div>
+        <!-- // GenieLabs 로고 logo_nav_wrapper -->
+        <div class="logo_nav_wrapper_ground">
+          <a href="index.html" class="logo_ground" target="_blank">Developer</a>
+        </div>
+
+        <!-- (todo)remove : .OpenCloseMenu 위치 이동 및 태그 변경-->
+        <button type="button" class="openCloseMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- 메인메뉴 menuArea -->
+        <div class="menuArea">
+          <!-- 메인메뉴 nav_wrapper -->
+          <div class="nav_wrapper">
+            <!-- nav -->
+            <nav>
+              <!-- (todo)add : header_nav 클래스 추가 -->
+              <ul class="header_nav">
+                <li>
+                  <a href="#Mi:dm">Mi:dm</a>
+                  <ul class="off">
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#UseCase">UseCase</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#Tech">Tech</a>
+                  <ul class="off">
+                    <li><a href="#VoiceAI">Voice AI</a></li>
+                    <li><a href="#NLPAI">NLP AI</a></li>
+                    <li><a href="#VisionAI">Vision AI</a></li>
+                    <li><a href="#IndustryAI">Industry AI</a></li>
+                    <li><a href="#NetworkAI">Network AI</a></li>
+                    <li><a href="#PartnersAI">Partners AI</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#Partners">Partners</a>
+                  <ul class="off">
+                    <li><a href="#TechInfo">Tech Info</a></li>
+                    <li><a href="#News">News</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#Support">Support</a>
+                  <ul class="off">
+                    <li><a href="#Notice">Notice</a></li>
+                    <li><a href="#Q&A">Q&A</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#R&DArchive">R&D Archive</a>
+                  <ul class="off">
+                    <li>
+                      <a href="#AIReport">AI Report</a>
+                    </li>
+                    <li><a href="#R&DTED">R&D TED</a></li>
+                    <li><a href="#TechScanning">Tech Scanning</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="header_items">
+                <li>
+                  <a href="myAccount_info.html" class="userIcon">My Account</a>
+                  <!-- (todo)remove : 기존 메뉴삭제 -->
+                  <!-- <ul class="off">
+                    <li><a href="myAccount_info.html">My Account</a></li>
+                    <li>
+                      <a href="myAccount_changePassword.html"
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a href="myAccount_deleteAccount.html">Delete Account</a>
+                    </li>
+                  </ul> -->
+                </li>
+                <li>
+                  <!-- (todo)add : logout 클래스 추가 -->
+                  <a href="javascript:onLogOut();" class="logout">Log Out</a>
+                  <!-- (todo)add : login 클래스 추가 -->
+                  <!-- <a href="javascript:onLogOut();" class="logout">Login</a> -->
+                  <!-- (todo)add : signup -->
+                  <!-- <a href="javascript:onLogOut();">Signup</a> -->
+                </li>
+              </ul>
+            </nav>
+            <!-- // nav -->
+          </div>
+          <!-- // 메인메뉴 nav_wrapper -->
+        </div>
+        <!--//  메인메뉴 menuArea -->
+      </div>
+      <!-- //header_inner -->
+    </header>
+    <!-- //header -->
+    <aside class="topLink">
+      <a href="#top">TOP</a>
+    </aside>
+    <main>
+      <section class="mainImageArea midm">
+        <div class="mainTextArea">
+          <h2>KT 초거대 AI <em class="fc-primary">Mi:dm</em></h2>
+          <div class="desc">
+            <p>
+              <em class="fc-primary">M</em>indful
+              <em class="fc-primary">I</em>ntelligence that
+              <em class="fc-primary">D</em>ialogs, <br class="br-mo" />
+              e<em class="fc-primary">M</em>pathizes, understands and moves
+            </p>
+            <p>
+              고객의 생각과 감성을 이해하고, 기억하며,
+              <br class="br-mo" />공감하고, 표현하는 AI를 지향합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="midmFeature l-content">
+        <hgroup class="l-titlebox">
+          <h2 class="l-title">Mi:dm’s Feature</h2>
+          <p class="l-desc">Mi:dm의 차별화된 특징을 소개합니다.</p>
+        </hgroup>
+        <article class="feature-list">
+          <div class="feature-item">
+            <h3 class="feature-title">멀티태스킹 최적화</h3>
+            <p class="feature-desc">
+              다양한 문제 사전학습<br />빠르고 가벼운 미세학습
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-title">공감하는 감성적 소통</h3>
+            <p class="feature-desc">
+              고객과의 기억 공유<br />개인화된 공감과 추천
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-title">외부 지식의 빠른 습득</h3>
+            <p class="feature-desc">
+              외부 지식 연동, 지식의 증강<br />대화문맥 이해, 정보 검색
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="l-useCase midm">
+        <div class="l-content">
+          <hgroup class="l-titlebox">
+            <h2 class="l-title">Mi:dm Use Case</h2>
+            <p class="l-desc">Mi:dm의 대표적인 사용 사례를 확인해보세요.</p>
+          </hgroup>
+          <article class="case-list">
+            <a href="#caseItem" class="case-item">
+              <figure class="case-thumb">
+                <img src="https://placehold.co/800x800" alt="" />
+              </figure>
+              <div class="case-content">
+                <h5 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h5>
+                <p class="content">
+                  기가지니로 믿:음과 함께 만드는 나만의 오디오 그림
+                  동화기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화
+                </p>
+              </div>
+              <i class="ico-arr"></i>
+            </a>
+            <a href="#caseItem" class="case-item">
+              <figure class="case-thumb">
+                <img src="https://placehold.co/800x800" alt="" />
+              </figure>
+              <div class="case-content">
+                <h5 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h5>
+                <p class="content">
+                  기가지니로 믿:음과 함께 만드는 나만의 오디오 그림
+                  동화기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화
+                </p>
+              </div>
+              <i class="ico-arr"></i>
+            </a>
+            <a href="#caseItem" class="case-item">
+              <figure class="case-thumb">
+                <img src="https://placehold.co/800x800" alt="" />
+              </figure>
+              <div class="case-content">
+                <h5 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h5>
+                <p class="content">
+                  기가지니로 믿:음과 함께 만드는 나만의 오디오 그림
+                  동화기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화
+                </p>
+              </div>
+              <i class="ico-arr"></i>
+            </a>
+          </article>
+          <a href="#SeeAll" class="btn-seeall">See All</a>
+        </div>
+      </section>
+      <section class="l-cardList midm">
+        <div class="l-content">
+          <hgroup class="l-titlebox">
+            <h2 class="l-title">Mi:dm API</h2>
+            <p class="l-desc">Mi:dm으로 구현된 API를 소개합니다.</p>
+          </hgroup>
+          <article class="card-list">
+            <a href="#cardItem" class="card-item">
+              <hgroup class="card-title">
+                <span class="icon api01">긍부정분류</span>
+                <!-- <span class="icon api02">감정분류</span>
+                <span class="icon api03">패러프레이징</span>
+                <span class="icon api04">키즈반말체변환</span>
+                <span class="icon api05">사투리변환</span>
+                <span class="icon api06">의도분류</span>
+                <span class="icon api07">구문분석</span>
+                <span class="icon api08">상담대화요약</span>
+                <span class="icon api09">소설요약</span>
+                <span class="icon api10">뉴스요약</span>
+                <span class="icon api11">유해정보필터링</span>
+                <span class="icon api12">문법교정</span>
+                <span class="icon api13">개체명추출</span> -->
+                <h4 class="title">지니 속기사(E2E STT)</h4>
+              </hgroup>
+              <p class="card-content">
+                기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
+                믿:음과 함께 만드는 나만의 오디오 그림 동화 오디오 그림
+                동화기가지니로 믿:음과 함께 만드는 나만의 오디오 그림
+              </p>
+              <p class="card-info"><em>2023.01.01</em><em>KT</em></p>
+              <i class="ico-arr"></i>
+            </a>
+            <a href="#cardItem" class="card-item">
+              <hgroup class="card-title">
+                <span class="icon api02">감정분류</span>
+                <h4 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h4>
+              </hgroup>
+              <p class="card-content">
+                기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
+                믿:음과 함께 만드는 나만의 오디오 그림 동화
+              </p>
+              <p class="card-info"><em>2023.01.01</em><em>KT</em></p>
+              <i class="ico-arr"></i>
+            </a>
+            <a href="#cardItem" class="card-item">
+              <hgroup class="card-title">
+                <span class="icon api03">패러프레이징</span>
+                <h4 class="title">지니 속기사(E2E STT)</h4>
+              </hgroup>
+              <p class="card-content">
+                기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
+                믿:음과 함께 만드는 나만의 오디오 그림 동화
+              </p>
+              <p class="card-info"><em>2023.01.01</em><em>KT</em></p>
+              <i class="ico-arr"></i>
+            </a>
+            <a href="#cardItem" class="card-item">
+              <hgroup class="card-title">
+                <span class="icon api04">키즈반말체변환</span>
+                <h4 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h4>
+              </hgroup>
+              <p class="card-content">
+                기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
+                믿:음과 함께 만드는 나만의 오디오 그림 동화
+              </p>
+              <p class="card-info"><em>2023.01.01</em><em>KT</em></p>
+              <i class="ico-arr"></i>
+            </a>
+            <a href="#cardItem" class="card-item">
+              <hgroup class="card-title">
+                <span class="icon api05">사투리변환</span>
+                <h4 class="title">
+                  믿:음과 함께 만드는 동화믿:음과 함께 만드는 동화
+                </h4>
+              </hgroup>
+              <p class="card-content">
+                기가지니로 믿:음과 함께 만드는 나만의 오디오 그림 동화기가지니로
+                믿:음과 함께 만드는 나만의 오디오 그림 동화
+              </p>
+              <p class="card-info"><em>2023.01.01</em><em>KT</em></p>
+              <i class="ico-arr"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+      <section class="midmClip l-content">
+        <hgroup class="l-titlebox">
+          <h2 class="l-title">Mi:dm CLIP</h2>
+        </hgroup>
+        <article class="clip-list">
+          <div class="clip-item title is-active">
+            <h3 class="clip-title">
+              KT LARGE AI, <br />Mi:dm의 <br />기술적 특징과 <br />적용사례를
+              <br />소개합니다.
+            </h3>
+          </div>
+          <div class="clip-item">
+            <h3 class="clip-title">KT AI <br />기자간담회</h3>
+            <button type="button" class="clip-btn">영상보기</button>
+          </div>
+          <div class="clip-item">
+            <h3 class="clip-title">KOREA <br />AI DEVCON <br />2022</h3>
+            <button type="button" class="clip-btn">영상보기</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section>
+        <ul class="footerMenu">
+          <li><a href="https://corp.kt.com/" target="_blank">회사소개</a></li>
+          <li><a href="agreement.html">이용약관</a></li>
+          <li>
+            <a href="https://corp.kt.com/html/etc/privacy.html" target="_blank"
+              >개인정보처리방침</a
+            >
+          </li>
+        </ul>
+        <div class="footerInfo">
+          <ul>
+            <li><b>㈜케이티:</b> 대표이사 구현모</li>
+            <li><b>사업자등록번호:</b> 102-81-42945</li>
+            <li><b>통신판매업신고:</b> 2002-경기성남-0048</li>
+            <li>
+              <address>
+                <b>주소:</b> 경기도 성남시 분당구 불정로 90 (정자동)
+              </address>
+            </li>
+          </ul>
+          <p class="copyright">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

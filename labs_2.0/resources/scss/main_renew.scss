@@ -1,170 +1,9 @@
-@mixin ellipsis($line-cnt: 1) {
-  @if ($line-cnt == 1) {
-    white-space: nowrap;
-  } @else {
-    display: -webkit-box;
-    -webkit-line-clamp: $line-cnt; /* 라인수 */
-    -webkit-box-orient: vertical;
-    white-space: normal;
-  }
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: keep-all;
-}
-main {
-  padding: 0;
-  min-height: 100vh;
-}
-/* common */
-.l-content {
-  position: relative;
-  width: 100%;
-  max-width: 1392px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 200px 0;
-}
-.l-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  color: #000;
-  font-size: 32px;
-  font-weight: 700;
-}
-.btn-seeall {
-  display: block;
-  background: url("../images/icon_seeall.svg") no-repeat right 12px top 15px;
-  width: 130px;
-  margin-left: auto;
-  padding: 9px 40px 9px 12px;
-  font-size: 24px;
-  font-weight: 500;
-  color: #000;
-  transition: none;
-  &:hover {
-    background-image: url("../images/icon_seeall_on.svg");
-    color: #00d9c3;
-  }
-}
-.ico-arr {
-  display: block;
-  background: transparent url("../images/icon_arrow.svg") no-repeat 50% 50% /
-    cover;
-  width: 42px;
-  aspect-ratio: 1 / 1;
-}
+@import "renew_common";
 
-%icon-hover {
-  .ico-arr {
-    background-image: url("../images/icon_arrow_on.svg");
-  }
-}
-/* visual */
-.mainImageArea {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;
-  width: 100%;
-  height: 600px;
-  text-align: center;
-  overflow: hidden;
-  figure {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    span {
-      display: block;
-      background: no-repeat 50% 50% / cover;
-      width: 100%;
-      height: 100%;
-    }
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-  /* owl nav button custom*/
-  .owl-theme .owl-dots .owl-dot.active span {
-    background-color: #00d9c3;
-  }
-  .owl-carousel .owl-nav button.owl-prev {
-    left: 104px;
-  }
-  .owl-carousel .owl-nav button.owl-next {
-    right: 104px;
-  }
-}
-.mainTextArea {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 600px;
-  padding: 80px 0;
-  color: #fff;
-  h2 {
-    display: block;
-    width: calc(100% - 500px);
-    margin-top: 137px;
-    line-height: 1;
-    font-size: 48px;
-    font-weight: 500;
-    color: inherit;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: keep-all;
-    &::after {
-      content: "";
-      display: block;
-      background-color: #fff;
-      width: 30px;
-      height: 4px;
-      margin: 20px auto 0;
-    }
-  }
-  .fc-primary {
-    color: #00ffde;
-  }
-  .desc {
-    width: calc(100% - 500px);
-    margin-top: 20px;
+.mainImageArea.main {
+  @include ellipsis();
+  .mainTextArea .desc {
     @include ellipsis(2);
-    height: 60px;
-    line-height: 30px;
-    font-size: 20px;
-    font-weight: 400;
-    color: inherit;
-  }
-  a {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    margin: 25px auto 50px auto;
-    padding: 8px 24px;
-    font-size: 16px;
-    font-weight: 700;
-    color: inherit;
-    &:hover {
-      background-color: #fff;
-      color: #000;
-    }
   }
 }
 
@@ -228,181 +67,25 @@ main {
   }
 }
 /* Use Case */
-.mainUseCase {
+.l-useCase.main {
   .btn-seeall {
-    position: absolute;
     top: 200px;
-    right: 0;
-  }
-  .ico-arr {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-  }
-  .case {
-    &-list {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 36px;
-    }
-    &-item {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 440px;
-      height: 514px;
-      transition: none;
-      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          90deg,
-          #9747ff -1.82%,
-          #5c4eff 48.91%,
-          #00d9c3 100%
-        );
-        opacity: 0;
-        z-index: 0;
-      }
-      &:hover {
-        transform: translate(-10px, -10px);
-        box-shadow: none;
-        &::before {
-          transform: translate(10px, 10px);
-          opacity: 1;
-        }
-        @extend %icon-hover;
-      }
-    }
-    &-thumb {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      overflow: hidden;
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-      }
-    }
-    &-content {
-      position: relative;
-      flex: 1;
-      background-color: #fff;
-      padding: 34px 40px;
-      transition: none;
-      .title {
-        font-size: 30px;
-        font-weight: 700;
-        color: #000;
-        @include ellipsis;
-      }
-      .content {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: 400;
-        color: #000;
-        @include ellipsis(2);
-        transition: none;
-      }
-    }
   }
 }
 /* Tech */
-.mainTech {
-  .btn-seeall {
-    margin: 60px auto 0;
-  }
-  .ico-arr {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-  }
+.l-cardList.main {
   background: linear-gradient(
     180deg,
     rgba(53, 243, 232, 0.3) 0%,
     rgba(151, 71, 255, 0.3) 100%
   );
-  .tech {
-    &-list {
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 36px;
-    }
-    &-item {
-      position: relative;
-      background-color: #fff;
-      border: 3px solid #fff;
-      border-image-slice: 1;
-      width: 440px;
-      aspect-ratio: 1 / 1;
-      min-height: 298px;
-      padding: 40px;
-      transition: none;
-      color: #000;
-      &:hover {
-        border-image-source: linear-gradient(
-          126.72deg,
-          #9747ff 0%,
-          #5c4eff 51.04%,
-          #00d9c3 100%
-        );
-        background-color: #000;
-        color: #fff;
-        @extend %icon-hover;
-      }
-    }
-    &-title {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      height: 128px;
-      .badge {
-        background-color: #f4f4f4;
-        border-radius: 80px;
-        line-height: 1;
-        padding: 6px 12px;
-        margin-bottom: 16px;
-        font-size: 16px;
-        font-weight: 700;
-        color: #000;
-      }
-      .title {
-        height: 84px;
-        margin-top: auto;
-        font-size: 30px;
-        font-weight: 700;
-        @include ellipsis(2);
-        color: inherit;
-        transition: none;
-      }
-    }
-    &-content {
-      margin-top: 20px;
-      font-size: 16px;
-      font-weight: 400;
-      @include ellipsis(3);
-      color: inherit;
-      transition: none;
-    }
+  .card-item:hover {
+    background-color: #000;
+    color: #fff;
   }
 }
 /* Genie Developer */
 .mainGenieDeveloper {
-  
   .ico-arr {
     position: absolute;
     right: 60px;
@@ -574,26 +257,6 @@ main {
 
 // tablet
 @media (max-width: 1439px) {
-  .l-content {
-    max-width: 860px;
-    width: calc(100vw - 40px);
-  }
-  .mainUseCase {
-    .case-list {
-      gap: 30px;
-    }
-    .case-item {
-      width: 415px;
-    }
-  }
-  .mainTech {
-    .tech-list {
-      gap: 30px;
-    }
-    .tech-item {
-      width: 415px;
-    }
-  }
   .mainGenieDeveloper {
     .gd-list {
       flex-direction: column;
@@ -611,133 +274,13 @@ main {
 }
 // mobile
 @media (max-width: 426px) {
-  .l-content {
-    max-width: calc(100vw - 40px);
-    padding: 60px 0;
-  }
-  .btn-seeall {
-    background-position: right 6px top 10px;
-    background-size: 20px 20px;
-    width: 96px;
-    padding: 6px 30px 6px 8px;
-    font-size: 18px;
-  }
-  .ico-arr {
-    width: 28px;
-    height: 28px;
-  }
   /* owl nav button custom*/
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next {
     display: none;
   }
-  .mainTextArea {
-    padding: 0 30px;
-    h2 {
-      width: 100%;
-      font-size: 24px;
-      &::after {
-        width: 20px;
-        height: 2px;
-        margin-top: 16px;
-      }
-    }
-    .desc {
-      width: 100%;
-      margin-top: 16px;
-      line-height: 22px;
-      font-size: 14px;
-    }
-    a {
-      margin-top: 60px;
-      margin-bottom: 96px;
-    }
-  }
-  .mainNotice {
-    .btn-seeall {
-      position: relative;
-      top: auto;
-      right: auto;
-      margin-top: 20px;
-    }
-    .ico-arr{
-      right: 30px;
-      bottom: 30px;
-    }
-    &.l-content {
-      padding: 60px 0;
-    }
-    .notice-list {
-      padding: 0;
-    }
-    .notice-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 20px 0;
-      & + .notice-item {
-        border-top: 1px solid #000;
-      }
-    }
-    .notice-title {
-      max-width: 100%;
-      @include ellipsis(2);
-    }
-    .notice-date {
-      margin-left: auto;
-    }
-  }
-  .mainUseCase {
-    .btn-seeall {
-      position: relative;
-      top: auto;
-      right: auto;
-      margin-top: 20px;
-    }
-    .ico-arr{
-      right: 30px;
-      bottom: 30px;
-    }
-    .case-list {
-      gap: 20px;
-    }
-    .case-item {
-      width: calc(100vw - 40px);
-    }
-    .case-content {
-      .title {
-        font-size: 28px;
-        @include ellipsis(2);
-      }
-      .content {
-        font-size: 14px;
-      }
-    }
-  }
-  .mainTech {
-    .btn-seeall {
-      margin: 20px 0 0 auto;
-    }
-    .ico-arr{
-      right: 30px;
-      bottom: 30px;
-    }
-    .tech-list {
-      gap: 20px;
-    }
-    .tech-item {
-      width: calc(100vw - 40px);
-      padding: 30px;
-    }
-    .tech-title .title {
-      font-size: 28px;
-    }
-    .tech-content {
-      font-size: 14px;
-    }
-  }
   .mainGenieDeveloper {
-    .ico-arr{
+    .ico-arr {
       right: 30px;
       bottom: 30px;
     }

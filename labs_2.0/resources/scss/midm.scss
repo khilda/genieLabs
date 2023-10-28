@@ -1,0 +1,310 @@
+///************************************
+//# Mi:dm page css
+//************************************
+@import "renew_common";
+
+.mainImageArea.midm {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(94.2deg, #9748ff 0%, #5f4eff 50.52%, #35f3e8 100%);
+  .mainTextArea {
+    h2 {
+      margin-top: 175px;
+    }
+    .desc > p + p {
+      margin-top: 12px;
+    }
+  }
+}
+
+.midmFeature {
+  &.l-content {
+    padding-top: 120px;
+  }
+  .feature {
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: no-repeat 50% 50% / cover;
+      width: 400px;
+      aspect-ratio: 1 / 1;
+      margin: 0 -23px;
+      overflow: hidden;
+      color: #000;
+      transition: none;
+      &:hover {
+        color: #fff;
+        z-index: 1;
+        .feature-title::after {
+          background-color: #fff;
+        }
+      }
+      &:nth-child(1) {
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(0, 217, 195, 0.8) 0%,
+          rgba(0, 217, 195, 0.2) 100%
+        );
+        &:hover {
+          background-image: url("../images/img_midm_feature_01.png");
+        }
+      }
+      &:nth-child(2) {
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(92, 78, 255, 0.8) 0%,
+          rgba(92, 78, 255, 0.2) 100%
+        );
+        &:hover {
+          background-image: url("../images/img_midm_feature_02.png");
+        }
+      }
+      &:nth-child(3) {
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(151, 71, 255, 0.8) 0%,
+          rgba(151, 71, 255, 0.2) 100%
+        );
+        &:hover {
+          background-image: url("../images/img_midm_feature_03.png");
+        }
+      }
+    }
+    &-title {
+      line-height: 1.2;
+      font-size: 28px;
+      font-weight: 700;
+      color: inherit;
+      &::after {
+        content: "";
+        display: block;
+        background-color: #000;
+        width: 30px;
+        height: 2px;
+        margin: 40px auto;
+      }
+    }
+    &-desc {
+      text-align: center;
+      line-height: 1.2;
+      font-size: 18px;
+      color: inherit;
+    }
+  }
+}
+.l-useCase.midm {
+  background: linear-gradient(
+    180deg,
+    rgba(151, 71, 255, 0.3) 0%,
+    rgba(92, 78, 255, 0.15) 50.52%,
+    rgba(53, 243, 232, 0) 100%
+  );
+  .l-content {
+    padding-top: 120px;
+  }
+  .btn-seeall {
+    top: 160px;
+  }
+}
+
+.l-cardList.midm {
+  .l-content {
+    padding-top: 120px;
+  }
+  .ico-arr {
+    right: 30px;
+    bottom: 30px;
+  }
+  .card-item {
+    height: 346px;
+    aspect-ratio: auto;
+    padding: 30px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+  .card-title {
+    height: 148px;
+    line-height: 32px;
+    font-size: 28px;
+    .icon {
+      flex: none;
+      background: #f4f4f4 no-repeat 50% 50% / contain;
+      border-radius: 50%;
+      width: 64px;
+      aspect-ratio: 1 / 1;
+      font-size: 0;
+      color: transparent;
+      @function numName($num) {
+        @if ($num >= 10) {
+          @return $num;
+        } @else {
+          @return "0#{$num}";
+        }
+      }
+      @for $i from 01 to 13 {
+        $name: numName($i);
+        &.api#{$name} {
+          background-image: url("../images/icon_midm_api_#{$name}.png");
+        }
+      }
+    }
+    .title {
+      margin-top: 20px;
+      height: 148px;
+    }
+  }
+  .card-content {
+    font-size: 16px;
+    @include ellipsis(2);
+  }
+  .card-info {
+    position: absolute;
+    bottom: 44px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    color: #787878;
+    > em {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    > em + em:before {
+      content: "";
+      display: block;
+      background-color: #787878;
+      width: 1px;
+      height: 14px;
+      margin: 1px 8px;
+    }
+  }
+}
+.midmClip {
+  &.l-content {
+    padding-top: 120px;
+  }
+  .clip {
+    &-list {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 36px;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-color: #000;
+      width: 360px;
+      height: 640px;
+      padding: 60px 40px;
+      color: #fff;
+      &.title {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+    &-title {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 62px;
+      color: inherit;
+    }
+    &-btn {
+      flex: none;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      margin-top: auto;
+      padding: 0;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: underline;
+      &::before {
+        content: "";
+        display: inline-block;
+        background: url("../images/icon_btn_move.png") no-repeat 0 50%;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+
+// pc
+@media (min-width: 1440px) {
+  .midmClip .clip-item.is-active {
+    width: 600px;
+  }
+}
+// tablet
+@media (max-width: 1439px) {
+  .midmClip {
+    .clip-list {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .clip-item {
+      width: 100%;
+      height: 430px;
+    }
+  }
+}
+// mobile
+@media (max-width: 907px) {
+  .mainImageArea.midm .mainTextArea h2 {
+    margin-top: 252px;
+  }
+  .l-useCase.midm .btn-seeall {
+    top: auto;
+  }
+  .midmFeature {
+    .feature-list {
+      flex-direction: column;
+      align-items: center;
+      height: 740px;
+    }
+    .feature-item {
+      width: 260px;
+      margin: -10px auto;
+    }
+    .feature-title {
+      font-size: 22px;
+      &::after {
+        width: 20px;
+        margin: 12px auto;
+      }
+    }
+    .feature-desc {
+      font-size: 14px;
+    }
+  }
+  .midmClip {
+    .clip-list {
+      gap: 20px;
+    }
+    .clip-item {
+      width: 100%;
+      height: 260px;
+      padding: 30px 20px;
+    }
+    .clip-title {
+      font-size: 26px;
+      line-height: 40px;
+    }
+  }
+}
