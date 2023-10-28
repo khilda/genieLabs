@@ -412,7 +412,6 @@
         // mouse effect
         $(".clip-list").on({
           mousemove: function (e) {
-            console.log(e);
             // 마우스 좌표값
             let mousePageX = e.clientX;
             let mousePageY = e.clientY;
@@ -424,11 +423,9 @@
             });
           },
           mouseenter: function (e) {
-            console.log("mouseenter");
             $(".mouse__cursor").css("opacity", 1);
           },
           mouseleave: function (e) {
-            console.log("mouseleave");
             $(".mouse__cursor").css("opacity", 0);
           },
         });
