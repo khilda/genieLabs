@@ -161,6 +161,7 @@ header.is-scroll {
   font-weight: 500;
 }
 .nav_wrapper nav .header_items a {
+  display: block;
   color: inherit;
 }
 .nav_wrapper nav .header_items .userIcon,
