@@ -569,6 +569,7 @@ main {
 @media (max-width: 1439px) {
   .l-content {
     max-width: 860px;
+    width: calc(100vw - 40px);
   }
   .mainUseCase .case-list {
     gap: 30px;
@@ -593,7 +594,7 @@ main {
     width: 415px;
   }
 }
-@media (max-width: 907px) {
+@media (max-width: 426px) {
   .l-content {
     max-width: calc(100vw - 40px);
     padding: 60px 0;
