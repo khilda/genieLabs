@@ -184,6 +184,7 @@ main {
 .l-useCase {
   .btn-seeall {
     position: absolute;
+    top: 200px;
     right: 0;
   }
   .ico-arr {
@@ -196,7 +197,7 @@ main {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 36px;
     }
     &-item {
@@ -350,15 +351,21 @@ main {
 // tablet
 @media (max-width: $tablet) {
   .l-content {
-    max-width: 860px;
-    width: calc(100vw - 40px);
+    max-width: 1000px;
+    width: 100vw;
+    padding-left: 70px;
+    padding-right: 70px;
   }
   .l-useCase {
+    .btn-seeall{
+      right: 70px;
+    }
     .case-list {
       gap: 30px;
     }
     .case-item {
-      width: 415px;
+      flex: 0 1 auto;
+      width: calc(50% - 15px);
     }
   }
   .l-cardList {
@@ -366,7 +373,8 @@ main {
       gap: 30px;
     }
     .card-item {
-      width: 415px;
+      flex: 0 1 auto;
+      width: calc(50% - 15px);
     }
   }
 }

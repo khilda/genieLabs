@@ -1,16 +1,20 @@
 @import "renew_common";
 
 .mainImageArea.main {
-  @include ellipsis();
-  .mainTextArea .desc {
-    @include ellipsis(2);
+  .mainTextArea {
+    h2 {
+      @include ellipsis();
+    }
+    .desc {
+      @include ellipsis(2);
+    }
   }
 }
 
 /* 공지사항 */
 .mainNotice {
   &.l-content {
-    padding: 120px 0 0;
+    padding-top: 120px;
   }
   .btn-seeall {
     position: absolute;
@@ -68,9 +72,6 @@
 }
 /* Use Case */
 .l-useCase.main {
-  .btn-seeall {
-    top: 200px;
-  }
 }
 /* Tech */
 .l-cardList.main {
@@ -257,11 +258,14 @@
 
 // tablet
 @media (max-width: $tablet) {
-  .mainTextArea {
+  .main .mainTextArea {
     h2,
     .desc {
       width: calc(100% - 500px);
     }
+  }
+  .mainNotice .btn-seeall{
+    right: 70px;
   }
   .mainGenieDeveloper {
     .gd-list {
@@ -274,7 +278,8 @@
       gap: 30px;
     }
     .fb-item {
-      width: 415px;
+      flex: 0 1 auto;
+      width: calc(50% - 15px);
     }
   }
 }
@@ -285,7 +290,16 @@
   .owl-carousel .owl-nav button.owl-next {
     display: none;
   }
+  .mainTextArea h2{
+    margin-top: 215px;
+  }
   .mainNotice {
+    .btn-seeall{
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-top: 20px;
+    }
     .notice {
       &-list {
         padding: 0;
@@ -303,7 +317,7 @@
         max-width: 100%;
         @include ellipsis(2);
       }
-      &-date{
+      &-date {
         margin-left: auto;
       }
     }

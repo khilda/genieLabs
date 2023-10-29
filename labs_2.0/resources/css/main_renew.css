@@ -171,6 +171,7 @@ main {
 /* Use Case */
 .l-useCase .btn-seeall {
   position: absolute;
+  top: 200px;
   right: 0;
 }
 .l-useCase .ico-arr {
@@ -182,7 +183,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 36px;
 }
 .l-useCase .case-item {
@@ -337,21 +338,32 @@ main {
 }
 
 @media (max-width: 907px) {
+  .mainTextArea h2,
+  .mainTextArea .desc {
+    width: calc(100% - 500px);
+  }
   .l-content {
-    max-width: 860px;
-    width: calc(100vw - 40px);
+    max-width: 1000px;
+    width: 100vw;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .l-useCase .btn-seeall {
+    right: 70px;
   }
   .l-useCase .case-list {
     gap: 30px;
   }
   .l-useCase .case-item {
-    width: 415px;
+    flex: 0 1 auto;
+    width: calc(50% - 15px);
   }
   .l-cardList .card-list {
     gap: 30px;
   }
   .l-cardList .card-item {
-    width: 415px;
+    flex: 0 1 auto;
+    width: calc(50% - 15px);
   }
 }
 @media (max-width: 426px) {
@@ -448,7 +460,7 @@ main {
     font-size: 14px;
   }
 }
-.mainImageArea.main {
+.mainImageArea.main .mainTextArea h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -466,7 +478,7 @@ main {
 
 /* 공지사항 */
 .mainNotice.l-content {
-  padding: 120px 0 0;
+  padding-top: 120px;
 }
 .mainNotice .btn-seeall {
   position: absolute;
@@ -524,10 +536,6 @@ main {
 }
 
 /* Use Case */
-.l-useCase.main .btn-seeall {
-  top: 200px;
-}
-
 /* Tech */
 .l-cardList.main {
   background: linear-gradient(180deg, rgba(53, 243, 232, 0.3) 0%, rgba(151, 71, 255, 0.3) 100%);
@@ -706,9 +714,12 @@ main {
 }
 
 @media (max-width: 907px) {
-  .mainTextArea h2,
-  .mainTextArea .desc {
+  .main .mainTextArea h2,
+  .main .mainTextArea .desc {
     width: calc(100% - 500px);
+  }
+  .mainNotice .btn-seeall {
+    right: 70px;
   }
   .mainGenieDeveloper .gd-list {
     flex-direction: column;
@@ -718,7 +729,8 @@ main {
     gap: 30px;
   }
   .mainFacebook .fb-item {
-    width: 415px;
+    flex: 0 1 auto;
+    width: calc(50% - 15px);
   }
 }
 @media (max-width: 426px) {
@@ -726,6 +738,15 @@ main {
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next {
     display: none;
+  }
+  .mainTextArea h2 {
+    margin-top: 215px;
+  }
+  .mainNotice .btn-seeall {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
   }
   .mainNotice .notice-list {
     padding: 0;
