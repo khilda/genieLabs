@@ -338,10 +338,6 @@ main {
 }
 
 @media (max-width: 907px) {
-  .mainTextArea h2,
-  .mainTextArea .desc {
-    width: calc(100% - 500px);
-  }
   .l-content {
     max-width: 1000px;
     width: 100vw;
