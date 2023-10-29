@@ -285,6 +285,29 @@
   .owl-carousel .owl-nav button.owl-next {
     display: none;
   }
+  .mainNotice {
+    .notice {
+      &-list {
+        padding: 0;
+      }
+      &-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        gap: 16px;
+        &:not(:first-child) {
+          border-top: 1px solid #000;
+        }
+      }
+      &-title {
+        max-width: 100%;
+        @include ellipsis(2);
+      }
+      &-date{
+        margin-left: auto;
+      }
+    }
+  }
   .mainGenieDeveloper {
     .ico-arr {
       right: 30px;

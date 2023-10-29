@@ -727,6 +727,31 @@ main {
   .owl-carousel .owl-nav button.owl-next {
     display: none;
   }
+  .mainNotice .notice-list {
+    padding: 0;
+  }
+  .mainNotice .notice-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    gap: 16px;
+  }
+  .mainNotice .notice-item:not(:first-child) {
+    border-top: 1px solid #000;
+  }
+  .mainNotice .notice-title {
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+  }
+  .mainNotice .notice-date {
+    margin-left: auto;
+  }
   .mainGenieDeveloper .ico-arr {
     right: 30px;
     bottom: 30px;
