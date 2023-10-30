@@ -255,8 +255,8 @@ a.disabled { background-color: #aaa; }
 .moreBtn:hover { color: #109a96;  }
 .moreBtn:hover::after {content: ''; background: url(../images/icon_arrow_R.svg) 0 -19px no-repeat; width: 19px;height: 19px;display: inline-block;background-size: cover;margin:  0 0 0 5px;}
 
-
-footer {padding: 30px 0 10px 0;position: relative;background-color: #fff;}
+/* (todo)padding-top 삭제 */
+footer {padding: 0 0 10px 0;position: relative;background-color: #fff;}
 footer section {border-top: 1px solid #ccc;width: 100%;padding: 22px 80px 30px 80px;background-color: #fff;}
 footer ul {}
 footer li {   }

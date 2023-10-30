@@ -11,6 +11,7 @@
 
 - common.css, main.css
   - (todo)remove : header 관련 클래스 제거move
+  - (todo)padding-top 삭제
 - renew_common.css, main_renew.css, midm.css
   - 신규파일추가
 
