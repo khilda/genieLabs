@@ -103,58 +103,19 @@ $color-secondary-skyblue: #4ff3ff;
     margin-top: 79px;
   }
   .card {
-    .card-hover {
-      padding: 40px;
-    }
-    .card-head {
-      margin-bottom: 27px;
-      .card-btn.btn-bookmark {
-        width: 66px;
-        height: 66px;
-        pointer-events: none;
-      }
-    }
     .card-txt {
-      @include ellipsis(3);
+      @include ellipsis(2);
       line-height: 42px;
       font-size: 30px;
     }
     .card-detail {
       display: none;
-      -webkit-line-clamp: 4;
       width: 320px;
       margin-top: 30px;
+      -webkit-line-clamp: 4;
       line-height: 32px;
       font-weight: 500;
       font-size: 24px;
-    }
-    .card-foot {
-      align-items: center;
-      flex-direction: row-reverse;
-      &.link::before {
-        position: relative;
-        left: auto;
-        bottom: auto;
-      }
-      .foot-info {
-        display: flex;
-        align-items: center;
-        color: #787878;
-        > li {
-          display: flex;
-          align-items: center;
-          font-size: 16px;
-          line-height: 16px;
-        }
-        > li + li:before {
-          content: "";
-          display: block;
-          background-color: #787878;
-          width: 1px;
-          height: 14px;
-          margin: 1px 8px;
-        }
-      }
     }
   }
 }

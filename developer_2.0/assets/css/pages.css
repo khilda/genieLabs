@@ -98,20 +98,9 @@
 .main .card-container + .card-container {
   margin-top: 79px;
 }
-.main .card-container .card .card-hover {
-  padding: 40px;
-}
-.main .card-container .card .card-head {
-  margin-bottom: 27px;
-}
-.main .card-container .card .card-head .card-btn.btn-bookmark {
-  width: 66px;
-  height: 66px;
-  pointer-events: none;
-}
 .main .card-container .card .card-txt {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 라인수 */
+  -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
   white-space: normal;
   overflow: hidden;
@@ -122,40 +111,12 @@
 }
 .main .card-container .card .card-detail {
   display: none;
-  -webkit-line-clamp: 4;
   width: 320px;
   margin-top: 30px;
+  -webkit-line-clamp: 4;
   line-height: 32px;
   font-weight: 500;
   font-size: 24px;
-}
-.main .card-container .card .card-foot {
-  align-items: center;
-  flex-direction: row-reverse;
-}
-.main .card-container .card .card-foot.link::before {
-  position: relative;
-  left: auto;
-  bottom: auto;
-}
-.main .card-container .card .card-foot .foot-info {
-  display: flex;
-  align-items: center;
-  color: #787878;
-}
-.main .card-container .card .card-foot .foot-info > li {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 16px;
-}
-.main .card-container .card .card-foot .foot-info > li + li:before {
-  content: "";
-  display: block;
-  background-color: #787878;
-  width: 1px;
-  height: 14px;
-  margin: 1px 8px;
 }
 
 .main .notice-container {
@@ -1231,4 +1192,39 @@
 }
 .builder .accodion .acc-item.is-active .acc-content {
   height: auto;
+}
+
+/* ##############################
+# pages - api
+################################*/
+.api .card-container {
+  display: flex;
+  gap: 36px;
+}
+.api .category {
+  flex: 1 1 250px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+.api .category .ctg-item {
+  display: flex;
+  flex-direction: column;
+}
+.api .category .ctg-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.api .category .ipt-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 742px) {
+  .api .card-container {
+    flex-direction: column;
+  }
 }

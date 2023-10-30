@@ -1,0 +1,44 @@
+/* ##############################
+# pages - api
+################################*/
+.api {
+  .card-container {
+    display: flex;
+    gap: 36px;
+  }
+  .card {
+  }
+  .category {
+    flex: 1 1 250px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #f4f4f4;
+    padding: 40px;
+    .ctg {
+      &-item {
+        display: flex;
+        flex-direction: column;
+      }
+      &-title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .ipt-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @include tablet {
+    .card-container .card {
+    }
+  }
+  @include mobile {
+    .card-container {
+      flex-direction: column;
+    }
+  }
+}

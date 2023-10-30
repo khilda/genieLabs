@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API < GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu"
+              >Sample Code</a
+            >
+            <a href="/src/applications/index.html" class="gnb-menu"
+              >Applications</a
+            >
+            <a href="/src/forum/index.html" class="gnb-menu is-active">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground"
+              >MyGround</a
+            >
+            <!-- <a href="#login" class="info-menu login">Login</a> -->
+            <a href="#logout" class="info-menu logout">Logout</a>
+            <a href="#sign" class="info-menu sign">Sign Up</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">
+            메뉴닫기
+          </button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">
+          메뉴열기
+        </button>
+      </header>
+      <main class="container api">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/api/index.html" class="breadcrumb-link">API</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">API</h1>
+          <p class="page-txt">개발자들의 놀이터, 다양한 API의 세상</p>
+        </section>
+        <section class="container-content">
+          <!-- 검색영역 -->
+          <div class="search-container">
+            <div class="search-filter">
+              <div class="search-input">
+                <input
+                  type="text"
+                  class="search-ipt"
+                  placeholder="검색어를 입력해주세요"
+                />
+                <button type="button" class="search-btn">검색하기</button>
+              </div>
+              <div class="select-container filter-select">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
+                <select class="select">
+                  <option value="0" default>최신순</option>
+                  <option value="1">조회순</option>
+                  <option value="2">댓글순</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- 검색결과 -->
+          <div class="card-container">
+            <dl class="category">
+              <div class="ctg-item">
+                <dt class="ctg-title">API</dt>
+                <dd class="ipt-container">
+                  <div class="chk">
+                    <input
+                      class="chk-ipt chk-all"
+                      id="ctg01"
+                      type="checkbox"
+                      data-name="ctg0"
+                    />
+                    <label for="ctg01" class="chk-label">All</label>
+                  </div>
+                  <div class="chk">
+                    <input
+                      class="chk-ipt"
+                      id="ctg02"
+                      type="checkbox"
+                      name="ctg0"
+                    />
+                    <label for="ctg02" class="chk-label">Voice</label>
+                  </div>
+                  <div class="chk">
+                    <input
+                      class="chk-ipt"
+                      id="ctg03"
+                      type="checkbox"
+                      name="ctg0"
+                    />
+                    <label for="ctg03" class="chk-label">NLP</label>
+                  </div>
+                  <div class="chk">
+                    <input
+                      class="chk-ipt"
+                      id="ctg04"
+                      type="checkbox"
+                      name="ctg0"
+                    />
+                    <label for="ctg04" class="chk-label">Industry</label>
+                  </div>
+                  <div class="chk">
+                    <input
+                      class="chk-ipt"
+                      id="ctg05"
+                      type="checkbox"
+                      name="ctg0"
+                    />
+                    <label for="ctg05" class="chk-label">Global Partners</label>
+                  </div>
+                </dd>
+              </div>
+              <div class="ctg-item">
+                <dt class="ctg-title">외부 API</dt>
+                <dd class="ipt-container">
+                  <div class="chk">
+                    <input
+                      class="chk-ipt chk-all"
+                      id="ctg11"
+                      type="checkbox"
+                      data-name="ctg1"
+                    />
+                    <label for="ctg11" class="chk-label">All</label>
+                  </div>
+                  <div class="chk">
+                    <input
+                      class="chk-ipt"
+                      id="ctg12"
+                      type="checkbox"
+                      name="ctg1"
+                    />
+                    <label for="ctg12" class="chk-label">Voice</label>
+                  </div>
+                  <div class="chk">
+                    <input
+                      class="chk-ipt"
+                      id="ctg13"
+                      type="checkbox"
+                      name="ctg1"
+                    />
+                    <label for="ctg13" class="chk-label">API Name</label>
+                  </div>
+                </dd>
+              </div>
+            </dl>
+            <div class="card-list type2 card-hover-3">
+              <a href="./detail.html" class="card">
+                <div class="card-hover">
+                  <div class="card-head">
+                    <em class="badge badge-white">NPL</em>
+                    <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                    <em class="badge badge-midm">Mi:dm</em>
+                    <button type="button" class="card-btn btn-bookmark">
+                      즐겨찾기
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <strong class="card-txt">Voc 상담 대화 요약</strong>
+                    <p class="card-detail">
+                      AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT
+                      ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해…
+                    </p>
+                  </div>
+                  <div class="card-foot link">
+                    <!-- (todo) .foot-info 태그 추가 -->
+                    <ul class="foot-info">
+                      <li>2023.01.01</li>
+                      <li>KT</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+              <a href="./detail.html" class="card">
+                <div class="card-hover">
+                  <div class="card-head">
+                    <em class="badge badge-white">NPL</em>
+                    <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                    <em class="badge badge-midm">Mi:dm</em>
+                    <button type="button" class="card-btn btn-bookmark">
+                      즐겨찾기
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <strong class="card-txt">Voc 상담 대화 요약</strong>
+                    <p class="card-detail">
+                      AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT
+                      ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해…
+                    </p>
+                  </div>
+                  <div class="card-foot link">
+                    <!-- (todo) .foot-info 태그 추가 -->
+                    <ul class="foot-info">
+                      <li>2023.01.01</li>
+                      <li>KT</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+              <a href="./detail.html" class="card">
+                <div class="card-hover">
+                  <div class="card-head">
+                    <em class="badge badge-white">NPL</em>
+                    <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                    <em class="badge badge-midm">Mi:dm</em>
+                    <button type="button" class="card-btn btn-bookmark">
+                      즐겨찾기
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <strong class="card-txt">Voc 상담 대화 요약</strong>
+                    <p class="card-detail">
+                      AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT
+                      ….API 를 통해…AI 상담 서비스는 KT ….API 를 통해…
+                    </p>
+                  </div>
+                  <div class="card-foot link">
+                    <!-- (todo) .foot-info 태그 추가 -->
+                    <ul class="foot-info">
+                      <li>2023.01.01</li>
+                      <li>KT</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      // 카테고리 전체선택 이벤트
+      document.querySelectorAll(".ipt-container").forEach((_container) => {
+        _container.querySelectorAll(".chk-all").forEach((_chkAll) => {
+          const name = _chkAll.dataset.name;
+          const _checks = document.getElementsByName(name);
+          // 전체선택 checkbox
+          _chkAll.addEventListener("change", (e) => {
+            _checks.forEach((chk) => (chk.checked = e.target.checked));
+          });
+          _checks.forEach((chk) => {
+            chk.addEventListener("change", (e) => {
+              // 전체선택해제
+              if (!chk.checked) _chkAll.checked = false;
+              // 전체선택
+              const checkCount = Array.from(_checks).filter(
+                (c) => c.checked
+              ).length;
+              if (checkCount === _checks.length) _chkAll.checked = true;
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

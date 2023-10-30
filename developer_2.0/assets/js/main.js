@@ -262,7 +262,7 @@ function eventCardBookmark() {
       } else {
         e.target.classList.add("is-active");
         alertOpen(
-          "샘플저장이 완료되었습니다.<br> 저장한 샘플은 My Ground 메뉴에서 확인할 수 있습니다."
+          "API 저장이 완료되었습니다.<br> 저장한 API는 DeveloperConsole 메뉴에서 확인할 수 있습니다."
         );
       }
     });

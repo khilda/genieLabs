@@ -2041,6 +2041,7 @@ button.badge:hover {
   background-position: left bottom;
   width: 70px;
   height: 70px;
+  z-index: 1;
 }
 .card .card-body {
   display: block;
@@ -2225,6 +2226,42 @@ button.badge:hover {
 
 .card-swiper-container {
   position: relative;
+}
+
+.card-list.type2 .card .card-head {
+  margin-bottom: 27px;
+}
+.card-list.type2 .card .card-head .card-btn.btn-bookmark {
+  width: 66px;
+  height: 66px;
+}
+.card-list.type2 .card .card-foot {
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.card-list.type2 .card .card-foot.link::before {
+  position: relative;
+  left: auto;
+  bottom: auto;
+}
+.card-list.type2 .card .card-foot .foot-info {
+  display: flex;
+  align-items: center;
+  color: #787878;
+}
+.card-list.type2 .card .card-foot .foot-info > li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+}
+.card-list.type2 .card .card-foot .foot-info > li + li:before {
+  content: "";
+  display: block;
+  background-color: #787878;
+  width: 1px;
+  height: 14px;
+  margin: 1px 8px;
 }
 
 @media (min-width: 743px) and (max-width: 1439px) {
