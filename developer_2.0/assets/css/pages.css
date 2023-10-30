@@ -1148,6 +1148,9 @@
 }
 .builder .builder-item.template {
   flex: 0 0 200px;
+  height: 682px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .builder .builder-item.flowchart {
   flex: 1 1 490px;
@@ -1157,6 +1160,7 @@
 }
 .builder .builder-item.control {
   width: 100%;
+  min-height: 182px;
 }
 .builder .builder-title {
   flex: none;
@@ -1174,4 +1178,57 @@
   min-height: 182px;
   padding: 10px;
   overflow: auto;
+}
+.builder .accodion .acc-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 20px;
+  color: inherit;
+  font-weight: inherit;
+}
+.builder .accodion .acc-title {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 3px 0;
+  color: #333;
+  font-weight: 500;
+}
+.builder .accodion .acc-title .acc-btn::after {
+  content: "";
+  display: block;
+  background: url("../images/ico_select_arrow.svg") no-repeat 50% 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  transition: 0.3s;
+}
+.builder .accodion .acc-content {
+  margin-bottom: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.builder .accodion .acc-content .acc-btn::before {
+  content: "";
+  display: block;
+  background-color: #333;
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  margin: 0 10px;
+}
+.builder .accodion .acc-content .acc-btn:hover {
+  background-color: rgba(53, 212, 248, 0.05);
+  color: #35d4f8;
+}
+.builder .accodion .acc-content .acc-btn:hover::before {
+  background-color: #35d4f8;
+}
+.builder .accodion .acc-item.is-active .acc-title .acc-btn::after {
+  transform: rotate(180deg);
+}
+.builder .accodion .acc-item.is-active .acc-content {
+  height: auto;
 }

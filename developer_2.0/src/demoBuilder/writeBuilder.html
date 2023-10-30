@@ -87,21 +87,92 @@
               <div class="form-item builder-edit">
                 <div class="builder-item template">
                   <h5 class="builder-title">Template</h5>
-                  <div class="builder-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequuntur saepe, in illum eveniet eligendi ducimus maiores odit dolorum id nobis aperiam impedit distinctio iste voluptatem fugiat beatae ex! Veritatis!</div>
+                  <div class="builder-content">
+                    <dl class="accodion">
+                      <div class="acc-item is-active">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">입력 UI</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">
+                            고정 구문
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Input text
+                          </button>
+                          <button type="button" class="acc-btn">
+                            파일업로드
+                          </button>
+                          <button type="button" class="acc-btn">
+                            웹마이크
+                          </button>
+                        </dd>
+                      </div>
+                      <div class="acc-item">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">출력 UI</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">
+                            Text 출력
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Json 출력
+                          </button>
+                          <button type="button" class="acc-btn">
+                            이미지 출력
+                          </button>
+                          <button type="button" class="acc-btn">
+                            음성 출력
+                          </button>
+                        </dd>
+                      </div>
+                      <div class="acc-item">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">Action</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">
+                            Action01
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Action02
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Action03
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Action04
+                          </button>
+                        </dd>
+                      </div>
+                      <div class="acc-item">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">API</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">API01</button>
+                          <button type="button" class="acc-btn">API02</button>
+                          <button type="button" class="acc-btn">API03</button>
+                          <button type="button" class="acc-btn">API04</button>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
                 </div>
                 <div class="builder-item flowchart">
                   <h5 class="builder-title">Flow Chart</h5>
-                  <div class="builder-content">d</div>
+                  <div class="builder-content"></div>
                 </div>
                 <div class="builder-item ui">
                   <h5 class="builder-title">UI</h5>
-                  <div class="builder-content">d</div>
+                  <div class="builder-content"></div>
                 </div>
                 <div class="builder-item control">
                   <h5 class="builder-title">Control</h5>
                   <div class="builder-group">
-                    <div class="builder-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque eos harum sint ullam quia quidem ea, praesentium nihil? Cum praesentium amet, tempora eos quos illum commodi rem sit obcaecati?</div>
-                    <div class="builder-content">d</div>
+                    <div class="builder-content"></div>
+                    <div class="builder-content"></div>
                   </div>
                 </div>
               </div>
@@ -156,6 +227,13 @@
       document.querySelector(".textarea").addEventListener("input", (e) => {
         const _count = document.querySelector(".textarea-container .count");
         _count.innerText = e.target.value.length;
+      });
+      // template accordion
+      document.querySelectorAll(".acc-title").forEach((title) => {
+        title.querySelector(".acc-btn").addEventListener("click", (e) => {
+          const _item = title.parentElement;
+          _item.classList.toggle("is-active");
+        });
       });
       // 버튼
       function onClickBtn(type) {

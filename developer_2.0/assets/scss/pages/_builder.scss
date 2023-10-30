@@ -11,8 +11,8 @@
       }
     }
   }
-  .section-title.type2{
-    .search-input{
+  .section-title.type2 {
+    .search-input {
       border-color: #ccc;
       background-color: #fff;
     }
@@ -29,7 +29,7 @@
   .builder {
     &-edit {
       flex-direction: row;
-      flex-wrap: wrap; 
+      flex-wrap: wrap;
       align-items: stretch;
       gap: 20px;
       border-color: transparent;
@@ -44,6 +44,9 @@
       gap: 20px;
       &.template {
         flex: 0 0 200px;
+        height: 682px;
+        overflow-y: auto;
+        overflow-x: hidden;
       }
       &.flowchart {
         flex: 1 1 490px;
@@ -53,6 +56,7 @@
       }
       &.control {
         width: 100%;
+        min-height: 182px;
       }
     }
     &-title {
@@ -71,6 +75,70 @@
       min-height: 182px;
       padding: 10px;
       overflow: auto;
+    }
+  }
+  // write > template
+  .accodion {
+    .acc {
+      &-item {
+      }
+      &-btn {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 6px 20px;
+        color: inherit;
+        font-weight: inherit;
+      }
+      &-title {
+        display: flex;
+        align-items: center;
+        background-color: #f4f4f4;
+        padding: 3px 0;
+        color: #333;
+        font-weight: 500;
+        .acc-btn::after {
+          content: "";
+          display: block;
+          background: url("../images/ico_select_arrow.svg") no-repeat 50% 50%;
+          width: 20px;
+          height: 20px;
+          margin-left: auto;
+          transition: .3s;
+        }
+      }
+      &-content {
+        margin-bottom: 20px;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+        .acc-btn {
+          &::before {
+            content: "";
+            display: block;
+            background-color: #333;
+            border-radius: 50%;
+            width: 3px;
+            height: 3px;
+            margin: 0 10px;
+          }
+          &:hover {
+            background-color: rgba(53, 212, 248, 0.05);
+            color: #35d4f8;
+            &::before {
+              background-color: #35d4f8;
+            }
+          }
+        }
+      }
+      &-item.is-active {
+        .acc-title .acc-btn::after {
+          transform: rotate(180deg);
+        }
+        .acc-content {
+          height: auto;
+        }
+      }
     }
   }
 }
