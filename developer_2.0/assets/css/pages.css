@@ -1118,6 +1118,10 @@
     grid-template-columns: 142px 1fr repeat(3, 142px);
   }
 }
+.builder .section-title.type2 .search-input {
+  border-color: #ccc;
+  background-color: #fff;
+}
 .builder .form-item.flex-direction-row {
   align-items: center;
 }
