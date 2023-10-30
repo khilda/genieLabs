@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrap main">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu"
+              >Sample Code</a
+            >
+            <a href="/src/applications/index.html" class="gnb-menu"
+              >Applications</a
+            >
+            <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground"
+              >MyGround</a
+            >
+            <!-- <a href="#login" class="info-menu login">Login</a> -->
+            <a href="#logout" class="info-menu logout">Logout</a>
+            <a href="#sign" class="info-menu sign">Sign Up</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">
+            메뉴닫기
+          </button>
+        </div>
+        <button type="button" id="toggleTheme" class="btn-theme">
+          테마변경
+        </button>
+        <button type="button" id="gnbOpen" class="btn-gnb open">
+          메뉴열기
+        </button>
+      </header>
+      <main class="container">
+        <!-- Visual 영역 -->
+        <section class="visual-container">
+          <h1 class="visual-text">Open API<br />with GenieGround</h1>
+          <a href="#none" class="visual-link">가이드 보러가기</a>
+        </section>
+        <!-- (todo) Notice 영역 추가 -->
+        <section class="notice-container">
+          <div class="card-title">
+            <h5 class="title-tit">Notice</h5>
+          </div>
+          <dl class="notice-list">
+            <a href="#notice" class="notice-item">
+              <dt class="notice-badge">Vision API</dt>
+              <dd class="notice-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit consequuntur molestias nulla nam! Eum quia sint
+                quisquam sit vel! Aspernatur rerum excepturi veniam recusandae
+                expedita. Repudiandae nulla magni sint ab?
+              </dd>
+              <dd class="notice-date">2023.07.01</dd>
+            </a>
+            <a href="#notice" class="notice-item">
+              <dt class="notice-badge">Notice</dt>
+              <dd class="notice-title">
+                서버 작업으로 인한 이용 제한 안내 (완료)
+              </dd>
+              <dd class="notice-date">2023.07.01</dd>
+            </a>
+            <a href="#notice" class="notice-item">
+              <dt class="notice-badge">Conference</dt>
+              <dd class="notice-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit consequuntur molestias nulla nam! Eum quia sint
+                quisquam sit vel! Aspernatur rerum excepturi veniam recusandae
+                expedita. Repudiandae nulla magni sint ab?
+              </dd>
+              <dd class="notice-date">2023.07.01</dd>
+            </a>
+          </dl>
+          <!-- (todo) SeeAll 태그 위치 변경 -->
+          <a href="#Notice" class="title-link">See All</a>
+        </section>
+        <!-- New 영역 -->
+        <section class="card-container">
+          <div class="card-title">
+            <!-- (todo) color-secondary 클래스 추가 -->
+            <h5 class="title-tit color-secondary">New</h5>
+          </div>
+          <div class="card-list card-hover-1">
+            <a href="/src/demo/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">NPL</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">Voc 상담 대화 요약</strong>
+                  <p class="card-detail">
+                    AI 상담 서비스는 KT ….API 를 통해…AI 상담 서비스는 KT ….API
+                    를 통해…AI 상담 서비스는 KT ….API 를 통해…
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/demo/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">NPL</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">의도 분류<br />(Fine Tuning)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/demo/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/demo/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 Voice(TTS)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- API 영역 -->
+        <section class="card-container">
+          <div class="card-title">
+            <h5 class="title-tit">API</h5>
+          </div>
+          <div class="card-list card-hover-2">
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="/src/sampleCode/index.html" class="card">
+              <div class="card-hover">
+                <div class="card-head">
+                  <em class="badge badge-white">Voice</em>
+                  <!-- (todo) .badge.badge-midm 뱃지 추가 -->
+                  <em class="badge badge-midm">Mi:dm</em>
+                  <button type="button" class="card-btn btn-bookmark">
+                    즐겨찾기
+                  </button>
+                </div>
+                <div class="card-body">
+                  <strong class="card-txt">지니 속기사<br />(E2E STT)</strong>
+                  <p class="card-detail">
+                    이미지에서 음식을 검출하고, 검출된 음식의 종류를 분류하는
+                    기술
+                  </p>
+                </div>
+                <div class="card-foot link">
+                  <!-- (todo) .foot-info 태그 추가 -->
+                  <ul class="foot-info">
+                    <li>2023.01.01</li>
+                    <li>KT</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- (todo) SeeAll 태그 위치 변경 -->
+          <a href="/src/sampleCode/index.html" class="title-link">See All</a>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../../assets/js/main.js"></script>
+  <!-- (todo) swiper 스크립트 삭제 -->
+</html>

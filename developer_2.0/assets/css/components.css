@@ -39,15 +39,15 @@
 }
 
 .flex-direction-column {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .flex-direction-row {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .justify-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .color-secondary {
@@ -767,6 +767,12 @@
   background-color: var(--badge-white-background, #fff);
   color: #000;
 }
+.badge-midm {
+  border: 2px solid var(--badge-outline-border, #000);
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--badge-outline-color, #000);
+}
 .badge-outline {
   flex: none;
   display: inline-block;
@@ -784,6 +790,10 @@
   font-size: 16px;
   color: var(--badge-outline-color, #000);
   vertical-align: middle;
+}
+.badge-outline.working {
+  border-color: #13de48;
+  color: #13de48;
 }
 .badge-outline.waiting {
   border-color: #35D4F8;
@@ -1163,6 +1173,25 @@ button.badge:hover {
 }
 .rdo .rdo-ipt:checked + .rdo-label:before {
   background-color: #000;
+}
+
+/* ##############################
+# components - textarea
+################################*/
+.textarea-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 48px;
+}
+.textarea-container .textarea-count {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 16px;
+  color: #787878;
+}
+.textarea-container .textarea-count .count {
+  color: #000;
 }
 
 /* ##############################
@@ -1769,6 +1798,9 @@ button.badge:hover {
   }
   .board-link .link-grid[data-column=content] {
     width: 600px;
+  }
+  .board-link .link-grid .badge-outline {
+    line-height: 32px;
   }
   .board-link-detail {
     display: -webkit-box;
@@ -2638,6 +2670,7 @@ button.badge:hover {
   flex: 1;
   max-width: calc(100% - 42px);
   padding: 10px 0 10px 20px;
+  text-align: left;
 }
 .search-input .search-btn {
   flex: none;

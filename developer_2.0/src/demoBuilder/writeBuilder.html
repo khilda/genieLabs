@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoBuilder < GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu"
+              >Sample Code</a
+            >
+            <a href="/src/applications/index.html" class="gnb-menu"
+              >Applications</a
+            >
+            <a href="/src/forum/index.html" class="gnb-menu is-active">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground"
+              >MyGround</a
+            >
+            <!-- <a href="#login" class="info-menu login">Login</a> -->
+            <a href="#logout" class="info-menu logout">Logout</a>
+            <a href="#sign" class="info-menu sign">Sign Up</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">
+            메뉴닫기
+          </button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">
+          메뉴열기
+        </button>
+      </header>
+      <main class="container builder">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/builder/index.html" class="breadcrumb-link">builder</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">builder</h1>
+          <p class="page-txt">
+            개발자들의 놀이터, 다양한 API를 이용한 나만의 데모를 만들어 보세요!
+          </p>
+        </section>
+        <!-- 게시글 작성시  -->
+        <section class="container-content container-edit">
+          <article class="form-container">
+            <form class="form">
+              <div class="form-item flex-direction-row">
+                <h5 class="form-item-title">데모 명</h5>
+                <input
+                  type="text"
+                  class="ipt edit-ipt"
+                  placeholder="등록 될 데모 명을 입력하세요."
+                />
+              </div>
+              <div class="form-item">
+                <h5 class="form-item-title">데이터 설명</h5>
+                <div class="textarea-container">
+                  <textarea
+                    class="textarea"
+                    placeholder="상세 설명 정보를 입력하세요.​"
+                  ></textarea>
+                  <span class="textarea-count"
+                    >[<em class="count">0</em> / 1000 자]</span
+                  >
+                </div>
+              </div>
+              <div class="form-item flex-direction-row">
+                <h5 class="form-item-title">반려 사유</h5>
+                <input
+                  type="text"
+                  class="ipt edit-ipt"
+                  value="반려되었습니다."
+                  disabled
+                />
+              </div>
+              <div class="form-item builder-edit">
+                <div class="builder-item template">
+                  <h5 class="builder-title">Template</h5>
+                  <div class="builder-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequuntur saepe, in illum eveniet eligendi ducimus maiores odit dolorum id nobis aperiam impedit distinctio iste voluptatem fugiat beatae ex! Veritatis!</div>
+                </div>
+                <div class="builder-item flowchart">
+                  <h5 class="builder-title">Flow Chart</h5>
+                  <div class="builder-content">d</div>
+                </div>
+                <div class="builder-item ui">
+                  <h5 class="builder-title">UI</h5>
+                  <div class="builder-content">d</div>
+                </div>
+                <div class="builder-item control">
+                  <h5 class="builder-title">Control</h5>
+                  <div class="builder-group">
+                    <div class="builder-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque eos harum sint ullam quia quidem ea, praesentium nihil? Cum praesentium amet, tempora eos quos illum commodi rem sit obcaecati?</div>
+                    <div class="builder-content">d</div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="form-footer">
+              <div class="btn-container">
+                <button type="button" class="btn">미리보기</button>
+                <button
+                  type="button"
+                  onclick="onClickBtn('cancel')"
+                  class="btn cancel"
+                >
+                  삭제하기
+                </button>
+                <button type="button" onclick="onClickBtn('mod')" class="btn">
+                  저장
+                </button>
+                <button
+                  type="button"
+                  onclick="onClickBtn('regist')"
+                  class="btn"
+                >
+                  등록요청
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      // textarea
+      document.querySelector(".textarea").addEventListener("input", (e) => {
+        const _count = document.querySelector(".textarea-container .count");
+        _count.innerText = e.target.value.length;
+      });
+      // 버튼
+      function onClickBtn(type) {
+        switch (type) {
+          case "cancel":
+            // 삭제
+            confirmOpen("해당 Demo를 삭제 하시겠습니까?", (result) => {
+              if (result.value) {
+                console.log("삭제완료");
+              } else {
+                console.log("삭제취소");
+              }
+            });
+            return;
+          case "mod":
+            // 저장
+            confirmOpen("해당 Demo를 저장 하시겠습니까?", (result) => {
+              if (result.value) {
+                console.log("저장완료");
+              } else {
+                console.log("저장취소");
+              }
+            });
+            return;
+          case "regist":
+            // 등록요청
+            confirmOpen("해당 Demo를 등록신청을 하시겠습니까?", (result) => {
+              if (result.value) {
+                console.log("등록신청완료");
+              } else {
+                console.log("등록신청취소");
+              }
+            });
+            return;
+          default:
+            return;
+        }
+      }
+    </script>
+  </body>
+</html>

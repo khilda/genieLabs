@@ -1,0 +1,70 @@
+/* ##############################
+# pages - builder
+################################*/
+.builder {
+  // index
+  @include desktop {
+    .board {
+      .board-header,
+      .board-link {
+        grid-template-columns: 142px 1fr repeat(3, 142px);
+      }
+    }
+  }
+  // write
+  .form-item.flex-direction-row {
+    align-items: center;
+    .form-item-title {
+      flex: none;
+      width: 112px;
+      margin: 0 10px 0 0;
+    }
+  }
+  .builder {
+    &-edit {
+      flex-direction: row;
+      flex-wrap: wrap; 
+      align-items: stretch;
+      gap: 20px;
+      border-color: transparent;
+      background-color: #f4f4f4;
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      gap: 20px;
+      &.template {
+        flex: 0 0 200px;
+      }
+      &.flowchart {
+        flex: 1 1 490px;
+      }
+      &.ui {
+        flex: 1 1 490px;
+      }
+      &.control {
+        width: 100%;
+      }
+    }
+    &-title {
+      flex: none;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &-group {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+    &-content {
+      flex: 1;
+      background-color: #fff;
+      min-height: 182px;
+      padding: 10px;
+      overflow: auto;
+    }
+  }
+}

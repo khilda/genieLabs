@@ -134,3 +134,22 @@
     background-color: #000;
   }
 }
+
+/* ##############################
+# components - textarea
+################################*/
+.textarea-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 48px;
+  .textarea-count {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    color: #787878;
+    .count {
+      color: #000;
+    }
+  }
+}

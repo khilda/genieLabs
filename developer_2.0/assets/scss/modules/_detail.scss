@@ -234,6 +234,9 @@
         &[data-column="content"] {
           width: 600px;
         }
+        .badge-outline {
+          line-height: 32px;
+        }
       }
       &-detail {
         @include ellipsis(2);

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoBuilder < GenieGround</title>
+        <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
+            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
+            <a href="/src/forum/index.html" class="gnb-menu is-active">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
+            <!-- <a href="#login" class="info-menu login">Login</a> -->
+            <a href="#logout" class="info-menu logout">Logout</a>
+            <a href="#sign" class="info-menu sign">Sign Up</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+      </header>
+      <main class="container builder">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/demoBuilder/index.html" class="breadcrumb-link">Demo Builder</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">Demo Builder</h1>
+          <p class="page-txt">개발자들의 놀이터, 다양한 API를 이용한 나만의 데모를 만들어 보세요!</p>
+        </section>
+        <section class="container-content">
+          <!-- (todo) type2 클래스 추가 -->
+          <header class="section-title type2">
+            <div class="search-input">
+              <input type="text" class="search-ipt" placeholder="검색어를 입력해주세요" />
+              <button type="button" class="search-btn">검색하기</button>
+            </div>
+            <div class="btn-container">
+              <a href="#write" class="btn">Demo 등록하기</a>
+            </div>
+          </header>
+          <div class="search-container">
+            <div class="search-filter">
+              <div class="select-container count-select">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
+                <select class="select">
+                  <option value="10" default>10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+              <p class="search-total">Total <strong>60</strong></p>
+              <div class="select-container filter-select">
+                <div class="select-box"></div>
+                <ul class="select-options"></ul>
+                <select class="select">
+                  <option value="0" default>최신순</option>
+                  <option value="1">조회순</option>
+                  <option value="2">댓글순</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- // 검색영역 -->
+          <article class="board">
+            <header class="board-header">
+              <h5 class="board-title">No</h5>
+              <h5 class="board-title">데모 명 / 데모 설명</h5>
+              <h5 class="board-title">작업상태</h5>
+              <h5 class="board-title">등록 신청일</h5>
+              <h5 class="board-title">등록일</h5>
+            </header>
+            <div class="board-list">
+              <!-- S: 게시글이 없을때 -->
+              <p class="empty-container">작성한 게시글이 존재하지 않습니다.</p>
+              <!-- E: 게시글이 없을때 -->
+              <!-- S: 게시글 link -->
+              <a href="./detailForum.html" class="board-link">
+                <div class="link-grid" data-column="no">
+                  9999
+                </div>
+                <div class="link-grid" data-column="content">
+                  <h4 class="board-link-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate</h4>
+                  <p class="board-link-detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolores tenetur possimus labore necessitatibus perspiciatis, illum molestiae saepe ducimus beatae sit</p>
+                </div>
+                <div class="link-grid" data-column="view">
+                  <!-- (todo) badge 추가 -->
+                  <em class="badge-outline working">작업중</em>
+                  <!-- <em class="badge-outline finish">등록완료</em>
+                  <em class="badge-outline regist-apply">등록신청</em>
+                  <em class="badge-outline regist-reject">등록신청반려</em> -->
+                </div>
+                <div class="link-grid" data-column="date">2023.01.12</div>
+                <div class="link-grid" data-column="date">2023.01.12</div>
+              </a>
+              <!-- E: 게시글 link -->
+            </div>
+          </article>
+          <!-- Mobile일때 page-item max 3개까지 -->
+          <div class="pagination">
+            <button type="button" class="page-item first" disabled>처음으로</button>
+            <button type="button" class="page-item prev" disabled>이전으로</button>
+            <button type="button" class="page-item is-active">1</button>
+            <button type="button" class="page-item">2</button>
+            <button type="button" class="page-item">3</button>
+            <button type="button" class="page-item next">다음으로</button>
+            <button type="button" class="page-item last">끝으로</button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
+          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+
+</html>

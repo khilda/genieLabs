@@ -45,6 +45,11 @@
   border-bottom: 1px solid #000;
   padding: 40px;
   margin-bottom: 40px;
+  &.type2 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
   .title {
     line-height: 42px;
     font-size: 30px;
@@ -109,6 +114,9 @@
   background-size: cover;
   text-align: center;
 }
+.builder .container-header {
+  background-image: url("../images/img_page_title_docs.svg");
+}
 
 @include tablet {
   .container {
@@ -125,7 +133,7 @@
     }
   }
 
-  .section-title {
+  .section-title:not(.type2) {
     flex-direction: column;
     align-items: flex-start;
     .btn-container {
@@ -189,6 +197,10 @@
     padding-left: 0;
     padding-right: 0;
     text-align: center;
+    .search-input{
+      width: 100%;
+      margin-bottom: 10px;
+    }
     .btn-container {
       width: 100%;
       .btn {
@@ -216,7 +228,7 @@
 /* ##############################
 # layout - top button
 ################################*/
-.top-btn{
+.top-btn {
   display: none;
   position: fixed;
   right: 30px;
@@ -227,9 +239,9 @@
   height: 65px;
   text-align: center;
   font-size: 0;
-  transition: all .3s;
+  transition: all 0.3s;
   &::before,
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     display: block;
@@ -238,34 +250,34 @@
     width: 18px;
     height: 4px;
   }
-  &::before{
+  &::before {
     left: calc(50% - 14px);
     top: calc(50% - 2px);
     rotate: -45deg;
   }
-  &::after{
+  &::after {
     right: calc(50% - 14px);
     top: calc(50% - 2px);
     rotate: 45deg;
   }
-  @include mobile{
+  @include mobile {
     right: 20px;
     bottom: 20px;
     border-radius: 8px;
     width: 40px;
     height: 40px;
     &::before,
-    &::after{
+    &::after {
       width: 12px;
     }
-    &::before{
+    &::before {
       left: calc(50% - 9px);
     }
-    &::after{
+    &::after {
       right: calc(50% - 9px);
     }
   }
 }
-.main .top-btn{
+.main .top-btn {
   background-color: #ededed;
 }

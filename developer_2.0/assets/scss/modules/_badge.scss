@@ -24,6 +24,13 @@
     background-color: var(--badge-white-background, #fff);
     color: #000;
   }
+  // midm
+  &-midm {
+    border: 2px solid var(--badge-outline-border, #000);
+    background-color: transparent;
+    font-size: 16px;
+    color: var(--badge-outline-color, #000);
+  }
   &-outline {
     @include badge-default();
     border: 2px solid var(--badge-outline-border, #000);
@@ -34,6 +41,11 @@
     font-size: 16px;
     color: var(--badge-outline-color, #000);
     vertical-align: middle;
+  }
+  // 작업중
+  &-outline.working {
+    border-color: $color-primary-green;
+    color: $color-primary-green;
   }
   // 대기중
   &-outline.waiting {
