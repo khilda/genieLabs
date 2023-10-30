@@ -6,15 +6,17 @@
     display: flex;
     gap: 36px;
   }
-  .card {
+  .card-list{
+    flex: 1;
   }
   .category {
-    flex: 1 1 250px;
+    flex: none;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
     gap: 30px;
     background-color: #f4f4f4;
+    width: 321px;
     padding: 40px;
     .ctg {
       &-item {
@@ -33,7 +35,8 @@
     }
   }
   @include tablet {
-    .card-container .card {
+    .category {
+      flex: 0 1 250px;
     }
   }
   @include mobile {

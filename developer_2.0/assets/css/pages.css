@@ -1201,13 +1201,17 @@
   display: flex;
   gap: 36px;
 }
+.api .card-list {
+  flex: 1;
+}
 .api .category {
-  flex: 1 1 250px;
+  flex: none;
   align-self: flex-start;
   display: flex;
   flex-direction: column;
   gap: 30px;
   background-color: #f4f4f4;
+  width: 321px;
   padding: 40px;
 }
 .api .category .ctg-item {
@@ -1222,6 +1226,11 @@
 .api .category .ipt-container {
   flex-direction: column;
   align-items: flex-start;
+}
+@media (max-width: 1439px) {
+  .api .category {
+    flex: 0 1 250px;
+  }
 }
 @media (max-width: 742px) {
   .api .card-container {

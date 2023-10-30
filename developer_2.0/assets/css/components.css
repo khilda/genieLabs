@@ -1115,6 +1115,7 @@ button.badge:hover {
 }
 .chk .chk-label::before {
   content: "";
+  flex: none;
   display: block;
   border: 1px solid #ccc;
   border-radius: 50%;
