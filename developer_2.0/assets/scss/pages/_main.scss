@@ -249,13 +249,13 @@ $color-secondary-skyblue: #4ff3ff;
       margin-bottom: 118px;
     }
     .card-container {
-      padding: 0 60px;
+      padding: 0 50px;
     }
     .card-container + .card-container {
       margin-top: 88px;
     }
     .notice-container {
-      padding: 0 60px;
+      padding: 0 50px;
     }
   }
   @include mobile {

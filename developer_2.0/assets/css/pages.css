@@ -245,13 +245,13 @@
     margin-bottom: 118px;
   }
   .main .card-container {
-    padding: 0 60px;
+    padding: 0 50px;
   }
   .main .card-container + .card-container {
     margin-top: 88px;
   }
   .main .notice-container {
-    padding: 0 60px;
+    padding: 0 50px;
   }
 }
 @media (max-width: 742px) {
