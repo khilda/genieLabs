@@ -145,6 +145,10 @@
   position: relative;
   border: 2px solid #000;
   display: inline-flex;
+  &.type2{
+    border-color: #ccc;
+    background-color: #fff;
+  }
   .search-ipt {
     flex: 1;
     max-width: calc(100% - 42px);

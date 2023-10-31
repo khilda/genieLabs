@@ -496,14 +496,14 @@
     font-size: 14px;
     line-height: 22px;
   }
-  .section-title:not(.type2) {
+  .section-title {
     flex-direction: column;
     align-items: flex-start;
   }
-  .section-title:not(.type2) .btn-container {
+  .section-title .btn-container {
     margin: 20px auto 0 0;
   }
-  .section-title:not(.type2) .badge-container {
+  .section-title .badge-container {
     margin-left: 0;
   }
   .main .container {

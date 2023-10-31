@@ -34,14 +34,28 @@
       align-items: flex-start;
     }
   }
-  @include tablet {
+  @include tablet-only {
+    .search-container .filter-select{
+      width: 250px;
+    }
+    .card-container{
+      flex-direction: column;
+    }
     .category {
-      flex: 0 1 250px;
+      width: 100%;
+      .ipt-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 40px;
+      }
     }
   }
   @include mobile {
     .card-container {
       flex-direction: column;
+    }
+    .category{
+      width: 100%;
     }
   }
 }

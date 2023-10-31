@@ -2704,6 +2704,10 @@ button.badge:hover {
   border: 2px solid #000;
   display: inline-flex;
 }
+.search-input.type2 {
+  border-color: #ccc;
+  background-color: #fff;
+}
 .search-input .search-ipt {
   flex: 1;
   max-width: calc(100% - 42px);
