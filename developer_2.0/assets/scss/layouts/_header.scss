@@ -88,7 +88,7 @@
       &.is-active {
         text-decoration: underline;
       }
-      .ico-link{
+      .ico-link {
         background: var(--1dep-link) no-repeat 50% 50% / 13px;
         width: 20px;
         height: 20px;
@@ -165,7 +165,7 @@
       background-color: var(--header-gnb-toggle-icon, #fff);
       border-radius: 28px;
       width: 28px;
-      height: 28px;
+      aspect-ratio: 1 / 1;
       transition: all 0.3s;
     }
     &::after {
@@ -175,7 +175,7 @@
       right: 10px;
       display: block;
       width: 28px;
-      height: 28px;
+      aspect-ratio: 1 / 1;
       font-size: 18px;
       font-weight: 700;
       text-align: center;
@@ -354,7 +354,35 @@
       left: 100vw;
       transition: 0.3s;
     }
+    .btn-theme {
+      width: 56px;
+      height: 30px;
+      margin-right: 20px;
+      &::before {
+        top: 2px;
+        left: 2px;
+        width: 24px;
+      }
+      &::after {
+        top: 1px;
+        right: 2px;
+        width: 24px;
+        font-size: 16px;
+      }
+      &.toggle{
+        &::before {
+          left: 28px;
+        }
+        &::after {
+          right: 26px;
+        }
+
+      }
+    }
     .btn-gnb {
+      background-position-x: 0;
+      right: 0;
+      width: 40px;
       height: 60px;
     }
     .header-menu {

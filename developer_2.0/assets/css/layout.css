@@ -203,7 +203,7 @@
   background-color: var(--header-gnb-toggle-icon, #fff);
   border-radius: 28px;
   width: 28px;
-  height: 28px;
+  aspect-ratio: 1/1;
   transition: all 0.3s;
 }
 .header .btn-theme::after {
@@ -213,7 +213,7 @@
   right: 10px;
   display: block;
   width: 28px;
-  height: 28px;
+  aspect-ratio: 1/1;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -385,7 +385,32 @@
     left: 100vw;
     transition: 0.3s;
   }
+  .header .btn-theme {
+    width: 56px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .header .btn-theme::before {
+    top: 2px;
+    left: 2px;
+    width: 24px;
+  }
+  .header .btn-theme::after {
+    top: 1px;
+    right: 2px;
+    width: 24px;
+    font-size: 16px;
+  }
+  .header .btn-theme.toggle::before {
+    left: 28px;
+  }
+  .header .btn-theme.toggle::after {
+    right: 26px;
+  }
   .header .btn-gnb {
+    background-position-x: 0;
+    right: 0;
+    width: 40px;
     height: 60px;
   }
   .header .header-menu {
