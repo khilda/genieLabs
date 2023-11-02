@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 function eventHeader() {
   document.querySelector("#gnbOpen")?.addEventListener("click", () => {
-    document.querySelector(".header-menu").classList.add("is-show");
+    document.querySelector(".header").classList.add("is-show");
     document.body.setAttribute("style", "overflow: hidden");
   });
   document.querySelector("#gnbClose")?.addEventListener("click", () => {
-    document.querySelector(".header-menu").classList.remove("is-show");
+    document.querySelector(".header").classList.remove("is-show");
     document.body.removeAttribute("style");
   });
   // theme
@@ -29,6 +29,38 @@ function eventHeader() {
     e.target.classList.toggle("toggle");
     document.body.classList.toggle("dark-theme");
   });
+  // (todo) gnb event 추가
+  // desktop event
+  document.querySelectorAll(".gnb-1dep").forEach((gnb1dep, idx, gnb1deps) => {
+    gnb1dep.addEventListener("mouseenter", (e) => {
+      if (window.innerWidth >= 1440) {
+        gnb1deps.forEach((dep1) => dep1.classList.remove("is-active"));
+        gnb1dep.classList.add("is-active");
+      }
+    });
+    document.querySelector(".gnb").addEventListener("mouseleave", (e) => {
+      if (window.innerWidth >= 1440) {
+        gnb1deps.forEach((dep1) => dep1.classList.remove("is-active"));
+      }
+    });
+  });
+  // tablet, mobile event
+  document.querySelectorAll(".gnb-1dep > .gnb-menu").forEach((gnbMenu) => {
+    gnbMenu.addEventListener("click", (e) => {
+      const gnb1dep = e.target.parentElement;
+
+      document.querySelectorAll(".gnb-1dep").forEach((dep1) => {
+        if (dep1 !== gnb1dep) dep1.classList.remove("is-active");
+      });
+
+      if (gnb1dep.classList.contains("is-active")) {
+        gnb1dep.classList.remove("is-active");
+      } else {
+        gnb1dep.classList.add("is-active");
+      }
+    });
+  });
+  // //(todo) gnb event 추가
 }
 
 /**
@@ -46,8 +78,8 @@ function eventTopButton() {
   window.addEventListener("scroll", (e) => {
     let scrollY = window.scrollY;
     if (scrollY > 0) {
-      _topBtn.setAttribute('style','display:block');
-    } else{
+      _topBtn.setAttribute("style", "display:block");
+    } else {
       _topBtn.removeAttribute("style");
     }
   });

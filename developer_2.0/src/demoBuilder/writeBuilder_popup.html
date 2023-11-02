@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoBuilder < GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <style>
+      .fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #fff;
+        padding: 20px;
+        z-index: 999999;
+      }
+      .fixed button {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- POPUP GUIDE : 개발시 삭제 -->
+    <div class="fixed">
+      <button type="button" data-popup="popupTemplate">
+        template 정보팝업
+      </button>
+      <button type="button" class="openPopup">Event 설정팝업</button>
+      <button type="button" class="openPopup">변수명 설정팝업</button>
+      <button type="button" class="openPopup">API 설정팝업</button>
+    </div>
+    <!-- //POPUP GUIDE : 개발시 삭제 -->
+    <div class="wrap">
+      <header class="header">
+        <a href="/src/main/index.html" class="logo">GenieGround</a>
+        <div class="header-menu">
+          <div class="gnb">
+            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
+            <a href="/src/demo/index.html" class="gnb-menu">Demo</a>
+            <a href="/src/sampleCode/index.html" class="gnb-menu"
+              >Sample Code</a
+            >
+            <a href="/src/applications/index.html" class="gnb-menu"
+              >Applications</a
+            >
+            <a href="/src/forum/index.html" class="gnb-menu is-active">Forum</a>
+          </div>
+          <div class="info">
+            <a href="/src/myGround/index.html" class="info-menu ground"
+              >MyGround</a
+            >
+            <!-- <a href="#login" class="info-menu login">Login</a> -->
+            <a href="#logout" class="info-menu logout">Logout</a>
+            <a href="#sign" class="info-menu sign">Sign Up</a>
+          </div>
+          <button type="button" id="gnbClose" class="btn-gnb close">
+            메뉴닫기
+          </button>
+        </div>
+        <button type="button" id="gnbOpen" class="btn-gnb open">
+          메뉴열기
+        </button>
+      </header>
+      <main class="container builder">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/builder/index.html" class="breadcrumb-link">builder</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">builder</h1>
+          <p class="page-txt">
+            개발자들의 놀이터, 다양한 API를 이용한 나만의 데모를 만들어 보세요!
+          </p>
+        </section>
+        <!-- 게시글 작성시  -->
+        <section class="container-content container-edit">
+          <article class="form-container">
+            <form class="form">
+              <div class="form-item flex-direction-row">
+                <h5 class="form-item-title">데모 명</h5>
+                <input
+                  type="text"
+                  class="ipt edit-ipt"
+                  placeholder="등록 될 데모 명을 입력하세요."
+                />
+              </div>
+              <div class="form-item">
+                <h5 class="form-item-title">데이터 설명</h5>
+                <div class="textarea-container">
+                  <textarea
+                    class="textarea"
+                    placeholder="상세 설명 정보를 입력하세요.​"
+                  ></textarea>
+                  <span class="textarea-count"
+                    >[<em class="count">0</em> / 1000 자]</span
+                  >
+                </div>
+              </div>
+              <div class="form-item flex-direction-row">
+                <h5 class="form-item-title">반려 사유</h5>
+                <input
+                  type="text"
+                  class="ipt edit-ipt"
+                  value="반려되었습니다."
+                  disabled
+                />
+              </div>
+              <div class="form-item builder-edit">
+                <div class="builder-item template">
+                  <h5 class="builder-title">Template</h5>
+                  <div class="builder-content">
+                    <dl class="accodion">
+                      <div class="acc-item is-active">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">입력 UI</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">
+                            고정 구문
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Input text
+                          </button>
+                          <button type="button" class="acc-btn">
+                            파일업로드
+                          </button>
+                          <button type="button" class="acc-btn">
+                            웹마이크
+                          </button>
+                        </dd>
+                      </div>
+                      <div class="acc-item">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">출력 UI</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">
+                            Text 출력
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Json 출력
+                          </button>
+                          <button type="button" class="acc-btn">
+                            이미지 출력
+                          </button>
+                          <button type="button" class="acc-btn">
+                            음성 출력
+                          </button>
+                        </dd>
+                      </div>
+                      <div class="acc-item">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">Action</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">
+                            Action01
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Action02
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Action03
+                          </button>
+                          <button type="button" class="acc-btn">
+                            Action04
+                          </button>
+                        </dd>
+                      </div>
+                      <div class="acc-item">
+                        <dt class="acc-title">
+                          <button type="button" class="acc-btn">API</button>
+                        </dt>
+                        <dd class="acc-content">
+                          <button type="button" class="acc-btn">API01</button>
+                          <button type="button" class="acc-btn">API02</button>
+                          <button type="button" class="acc-btn">API03</button>
+                          <button type="button" class="acc-btn">API04</button>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="builder-item flowchart">
+                  <h5 class="builder-title">Flow Chart</h5>
+                  <div class="builder-content"></div>
+                </div>
+                <div class="builder-item ui">
+                  <h5 class="builder-title">UI</h5>
+                  <div class="builder-content"></div>
+                </div>
+                <div class="builder-item control">
+                  <h5 class="builder-title">Control</h5>
+                  <div class="builder-group">
+                    <div class="builder-content"></div>
+                    <div class="builder-content"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="form-footer">
+              <div class="btn-container">
+                <button type="button" class="btn">미리보기</button>
+                <button
+                  type="button"
+                  onclick="onClickBtn('cancel')"
+                  class="btn cancel"
+                >
+                  삭제하기
+                </button>
+                <button type="button" onclick="onClickBtn('mod')" class="btn">
+                  저장
+                </button>
+                <button
+                  type="button"
+                  onclick="onClickBtn('regist')"
+                  class="btn"
+                >
+                  등록요청
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <!-- layer popup -->
+    <article id="popupTemplate" class="dialog">
+      <h1 class="dialog-title">변수명을 입력해주세요.</h1>
+      <section class="dialog-content">
+        <p class="">
+          변수명이 입력되면 해당 변수명의 속성값으로 데이터가 저장됩니다.
+        </p>
+        <input
+          type="text"
+          class="ipt edit-ipt"
+          placeholder="등록 될 데모 명을 입력하세요."
+        />
+      </section>
+      <footer class="dialog-footer">
+        <button type="button" class="btn cancel">Cancel</button>
+        <button type="button" class="btn">OK</button>
+      </footer>
+    </article>
+    <!-- // layer popup -->
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      // popup
+      document.querySelector("[data-popup]").addEventListener("click", (e) => {
+        const target = e.target.dataset.popup;
+        openCustomPopup(target);
+      });
+      function openCustomPopup(target) {
+        let dimmed = document.createElement("div");
+        dimmed.classList.add("dimmed");
+        document.body.prepend(dimmed);
+        document.body.setAttribute("style", "overflow:hidden");
+        document.getElementById(target).classList.add("is-show");
+        closeCustomPopup();
+      }
+      function closeCustomPopup() {
+        document.querySelectorAll(".dialog-footer .btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            document.body.removeAttribute("style");
+            document.querySelector(".dimmed")?.remove();
+            document.querySelectorAll(".dialog").forEach((dialog) => {
+              dialog.classList.remove("is-show");
+            });
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
