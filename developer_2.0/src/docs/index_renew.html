@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs < GenieGround</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/lib/ckeditor-content.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <article class="header-container">
+          <a href="/src/main/index.html" class="logo">GenieGround</a>
+          <a href="#labs" class="labs-logo">Labs</a>
+          <div class="header-menu">
+            <!-- (todo) gnb 마크업 변경 -->
+            <nav class="gnb">
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Mi:dm</button>
+                <div class="gnb-2dep">
+                  <a href="#demoBuilder" class="gnb-menu">Demo Builder</a>
+                  <a href="#Playground" class="gnb-menu">Playground</a>
+                  <a href="#LETS" class="gnb-menu"
+                    >LETS<i class="ico-link"></i
+                  ></a>
+                </div>
+              </div>
+              <a href="#Docs" class="gnb-1dep gnb-menu">Docs</a>
+              <a href="#API" class="gnb-1dep gnb-menu">API</a>
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Evaluation</button>
+                <div class="gnb-2dep">
+                  <a href="#Leaderboard" class="gnb-menu">Leaderboard</a>
+                  <a href="#VoiceAPI" class="gnb-menu">Voice API</a>
+                  <a href="#NLPAPI" class="gnb-menu">NLP API</a>
+                  <a href="#VisionAPI" class="gnb-menu">Vision API</a>
+                  <a href="#TestData" class="gnb-menu">Test Data</a>
+                  <a href="#TestResult" class="gnb-menu">Test Result</a>
+                </div>
+              </div>
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Data</button>
+                <div class="gnb-2dep">
+                  <a href="#Explore" class="gnb-menu">Explore</a>
+                  <a href="#Search" class="gnb-menu">Search</a>
+                  <a href="#Pubdivsh" class="gnb-menu">Publish</a>
+                </div>
+              </div>
+              <a href="#Forum" class="gnb-1dep gnb-menu">Forum</a>
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Support</button>
+                <div class="gnb-2dep">
+                  <a href="#Notice" class="gnb-menu">Notice</a>
+                  <a href="#Q&A" class="gnb-menu">Q&A</a>
+                  <a href="#FAQ" class="gnb-menu">FAQ</a>
+                </div>
+              </div>
+            </nav>
+            <!-- //(todo) gnb 마크업 변경 -->
+            <div class="info">
+              <a href="/src/myGround/index.html" class="info-menu ground">
+                Console
+              </a>
+              <!-- <a href="#login" class="info-menu login">Login</a> -->
+              <a href="#logout" class="info-menu logout">Logout</a>
+              <!-- <a href="#sign" class="info-menu sign">Sign Up</a> -->
+            </div>
+            <button type="button" id="gnbClose" class="btn-gnb close">
+              메뉴닫기
+            </button>
+          </div>
+
+          <button type="button" id="gnbOpen" class="btn-gnb open">
+            메뉴열기
+          </button>
+        </article>
+      </header>
+      <main class="container docs">
+        <nav class="breadcrumb">
+          <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
+          <a href="/src/docs/index.html" class="breadcrumb-link">Docs</a>
+        </nav>
+        <section class="container-header">
+          <h1 class="page-title">GenieLabs Documentation</h1>
+          <p class="page-txt">
+            GenieLabs Documentation은 개발자들이 <br class="br-mo" />GenieLabs
+            플랫폼을<br class="br-pc" />
+            통해 보다 쉽게 API를 <br class="br-mo" />활용할 수 있도록 안내하고
+            있습니다.
+          </p>
+        </section>
+        <section class="container-content container-detail">
+          <!-- 퀵메뉴 -->
+          <div class="quick-container">
+            <div class="quick">
+              <p class="quick-title">Introduction</p>
+              <div class="quick-link">
+                <button
+                  type="button"
+                  data-id="guideDevelopers"
+                  class="link main"
+                >
+                  Guide For Developer
+                </button>
+                <button type="button" data-id="quickstart" class="link sub">
+                  Quickstart
+                </button>
+                <button type="button" data-id="apiReference" class="link sub">
+                  API Reference
+                </button>
+                <button
+                  type="button"
+                  data-id="guideProviders"
+                  class="link main"
+                >
+                  Guide For Prociders
+                </button>
+                <button type="button" data-id="aiApiGuide" class="link sub">
+                  AI API 개발가이드
+                </button>
+                <button
+                  type="button"
+                  data-id="kubernetesGuide"
+                  class="link sub"
+                >
+                  Kubernetes 배포가이드
+                </button>
+              </div>
+            </div>
+            <button type="button" class="quick-collapse"></button>
+          </div>
+
+          <article id="docsEditor">
+            <div>
+              <h1>h1 Title</h1>
+              <h2>h2 Title</h2>
+              <h3>h3 Title</h3>
+              <h4>h4 Title</h4>
+              <h5>h5 Title</h5>
+            </div>
+            <hr />
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+                minus? Voluptatum corporis minus natus libero vel ducimus
+                explicabo dicta quisquam labore tempore consectetur corrupti
+                blanditiis aut, adipisci numquam accusantium exercitationem?
+              </p>
+              <hr />
+              <p>
+                <a href="#AnchorTag" class="underline">A Tag</a>
+                <b>굵은글씨</b>
+                <strong>굵은글씨</strong>
+                <em>이탤릭</em>
+                <del>취소선</del>
+                <u>밑줄</u>
+                <code>인라인코드</code>
+              </p>
+              <hr />
+              <h5>blockquote tag</h5>
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
+                  minus? Voluptatum corporis minus natus libero vel ducimus
+                  explicabo dicta quisquam labore tempore consectetur corrupti
+                  blanditiis aut, adipisci numquam accusantium exercitationem?
+                </p>
+              </blockquote>
+            </div>
+            <hr />
+            <div>
+              <h5>UL tag</h5>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia impedit laborum eius aperiam, facere, pariatur
+                  necessitatibus ut consectetur error vitae laboriosam ipsum.
+                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia impedit laborum eius aperiam, facere, pariatur
+                  necessitatibus ut consectetur error vitae laboriosam ipsum.
+                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
+                </li>
+              </ul>
+            </div>
+            <hr />
+            <div>
+              <h5>OL tag</h5>
+              <ol>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia impedit laborum eius aperiam, facere, pariatur
+                  necessitatibus ut consectetur error vitae laboriosam ipsum.
+                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia impedit laborum eius aperiam, facere, pariatur
+                  necessitatibus ut consectetur error vitae laboriosam ipsum.
+                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
+                </li>
+              </ol>
+            </div>
+            <hr />
+            <div>
+              <h5>address tag</h5>
+            </div>
+            <hr />
+            <div>
+              <h5>PRE tag</h5>
+              <pre>
+FROM 이미지명:태그명 
+WOKRDIR /home/workdir
+EXPOSE 80 CMD "python", "-m", "api"</pre
+              >
+            </div>
+            <hr />
+            <div>
+              <h5>Img tag</h5>
+              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+            </div>
+            <hr />
+            <div>
+              <h5>table tag</h5>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Status Code</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>400</td>
+                    <td>5000</td>
+                    <td>HTTP Request Method(GET, POST) 오류</td>
+                  </tr>
+                  <tr>
+                    <td>400</td>
+                    <td>5001</td>
+                    <td>요청 파라미터 설정 오류</td>
+                  </tr>
+                  <tr>
+                    <td>400</td>
+                    <td>5002</td>
+                    <td>Request Body 포맷 오류 - PARSE_ERR / READ_ERR</td>
+                  </tr>
+                  <tr>
+                    <td>401</td>
+                    <td>5003</td>
+                    <td>인증 실패</td>
+                  </tr>
+                  <tr>
+                    <td>429</td>
+                    <td>5004</td>
+                    <td>일 호출 건 수 초과</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>5005</td>
+                    <td>Request Body data read 에러</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>5006</td>
+                    <td>http.Request() 에러</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>5007</td>
+                    <td>엔진 타임아웃 등</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>5008</td>
+                    <td>Response Body data read 에러 등</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>50xx</td>
+                    <td>...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
+          <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
+        </div>
+        <div class="term">
+          <a href="#none" class="term-txt">이용약관</a>
+          <a href="#none" class="policy-txt">개인정보처리방침</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../../assets/js/lib/sweetalert2.min.js"></script>
+    <script src="../../assets/js/lib/codemirror.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 소스 복사하기
+        const btnCopys = document.querySelectorAll(".btn-ico.copy");
+        btnCopys.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            if (e.which == 1) {
+              const code = btn.previousElementSibling.innerText;
+              navigator.clipboard.writeText(code);
+              alertOpen("복사되었습니다");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
