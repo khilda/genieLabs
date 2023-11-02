@@ -11,25 +11,71 @@
 
   <body>
     <div class="wrap">
+      
       <header class="header">
-        <a href="/src/main/index.html" class="logo">GenieGround</a>
-        <div class="header-menu">
-          <div class="gnb">
-            <a href="/src/docs/index.html" class="gnb-menu">Docs</a>
-            <a href="/src/demo/index.html" class="gnb-menu is-active">Demo</a>
-            <a href="/src/sampleCode/index.html" class="gnb-menu">Sample Code</a>
-            <a href="/src/applications/index.html" class="gnb-menu">Applications</a>
-            <a href="/src/forum/index.html" class="gnb-menu">Forum</a>
+        <article class="header-container">
+          <a href="/src/main/index.html" class="logo">GenieGround</a>
+          <a href="#labs" class="labs-logo">Labs</a>
+          <div class="header-menu">
+            <!-- (todo) gnb 마크업 변경 -->
+            <nva class="gnb">
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Mi:dm</button>
+                <div class="gnb-2dep">
+                  <a href="#demoBuilder" class="gnb-menu">Demo Builder</a>
+                  <a href="#Playground" class="gnb-menu">Playground</a>
+                  <a href="#LETS" class="gnb-menu">LETS<i class="ico-link"></i></a>
+                </div>
+              </div>
+              <a href="#Docs" class="gnb-1dep gnb-menu">Docs</a>
+              <a href="#API" class="gnb-1dep gnb-menu">API</a>
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Evaluation</button>
+                <div class="gnb-2dep">
+                  <a href="#Leaderboard" class="gnb-menu">Leaderboard</a>
+                  <a href="#VoiceAPI" class="gnb-menu">Voice API</a>
+                  <a href="#NLPAPI" class="gnb-menu">NLP API</a>
+                  <a href="#VisionAPI" class="gnb-menu">Vision API</a>
+                  <a href="#TestData" class="gnb-menu">Test Data</a>
+                  <a href="#TestResult" class="gnb-menu">Test Result</a>
+                </div>
+              </div>
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Data</button>
+                <div class="gnb-2dep">
+                  <a href="#Explore" class="gnb-menu">Explore</a>
+                  <a href="#Search" class="gnb-menu">Search</a>
+                  <a href="#Pubdivsh" class="gnb-menu">Publish</a>
+                </div>
+              </div>
+              <a href="#Forum" class="gnb-1dep gnb-menu">Forum</a>
+              <div class="gnb-1dep">
+                <button type="button" class="gnb-menu">Support</button>
+                <div class="gnb-2dep">
+                  <a href="#Notice" class="gnb-menu">Notice</a>
+                  <a href="#Q&A" class="gnb-menu">Q&A</a>
+                  <a href="#FAQ" class="gnb-menu">FAQ</a>
+                </div>
+              </div>
+            </nav>
+            <!-- //(todo) gnb 마크업 변경 -->
+            <div class="info">
+              <a href="/src/myGround/index.html" class="info-menu ground">
+                Console
+              </a>
+              <!-- <a href="#login" class="info-menu login">Login</a> -->
+              <a href="#logout" class="info-menu logout">Logout</a>
+              <!-- <a href="#sign" class="info-menu sign">Sign Up</a> -->
+            </div>
+            <button type="button" id="gnbClose" class="btn-gnb close">
+              메뉴닫기
+            </button>
           </div>
-          <div class="info">
-            <a href="/src/myGround/index.html" class="info-menu ground">MyGround</a>
-            <!-- <a href="#login" class="info-menu login">Login</a> -->
-            <a href="#logout" class="info-menu logout">Logout</a>
-            <a href="#sign" class="info-menu sign">Sign Up</a>
-          </div>
-          <button type="button" id="gnbClose" class="btn-gnb close">메뉴닫기</button>
-        </div>
-        <button type="button" id="gnbOpen" class="btn-gnb open">메뉴열기</button>
+          
+          <button type="button" id="gnbOpen" class="btn-gnb open">
+            메뉴열기
+          </button>
+        </article>
       </header>
       <main class="container demo">
         <nav class="breadcrumb">
