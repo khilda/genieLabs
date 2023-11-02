@@ -5,6 +5,7 @@
   --header-gnb-toggle-border: transparent;
   --svg-icon-color: #000;
   --gnb-logo: url("../images/img_logo.svg");
+  --gnb-logo-labs: url("../images/img_labs_logo.svg");
   --gnb-icon-open: url("../images/ico_gnb_open.svg");
   --gnb-icon-open-white: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/ico_gnb_close.svg");
@@ -24,6 +25,7 @@
   --header-gnb-toggle-border: #fff;
   --svg-icon-color: #fff;
   --gnb-logo: url("../images/darkmode/img_logo.svg");
+  --gnb-logo-labs: url("../images/darkmode/img_labs_logo.svg");
   --gnb-icon-open: url("../images/darkmode/ico_gnb_open.svg");
   --gnb-icon-open-white: url("../images/ico_gnb_open.svg");
   --gnb-icon-close: url("../images/darkmode/ico_gnb_close.svg");
@@ -40,16 +42,12 @@
 # layout - Header
 ################################*/
 :root {
-  --logo-background: url("../images/img_logo.svg");
-  --logo-labs-background: url("../images/img_labs_logo.svg");
   --1dep-arrow: url("../images/ico_gnb_arrow.svg");
   --1dep-link: url("../images/ico_link_24_000.svg");
   --2dep-background: #f4f4f4;
 }
 
 .dark-theme {
-  --logo-background: url("../images/darkmode/img_logo.svg");
-  --logo-labs-background: url("../images/darkmode/img_labs_logo.svg");
   --1dep-arrow: url("../images/darkmode/ico_gnb_arrow.svg");
   --1dep-link: url("../images/ico_link_24_fff.svg");
   --2dep-background: #1f1f1f;
@@ -57,16 +55,20 @@
 
 .header {
   position: relative;
-  display: flex;
-  align-items: center;
   background-color: #000;
   color: #fff;
-  padding: 26px 0;
   z-index: 999;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 16px 0;
+  color: inherit;
 }
 .header .logo {
   flex: none;
-  background: var(--logo-background) no-repeat 50% 50%/contain;
+  background: url("../images/darkmode/img_logo.svg") no-repeat 50% 50%/contain;
   width: 214px;
   height: 28px;
   padding: 10px 0;
@@ -75,7 +77,7 @@
 }
 .header .labs-logo {
   flex: none;
-  background: var(--logo-labs-background) no-repeat 50% 50%/contain;
+  background: url("../images/darkmode/img_labs_logo.svg") no-repeat 50% 50%/contain;
   width: 75px;
   height: 28px;
   margin-left: 8px;
@@ -110,6 +112,7 @@
   color: #fff;
 }
 .header .gnb {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -131,7 +134,7 @@
   text-decoration: underline;
 }
 .header .gnb-menu .ico-link {
-  background: var(--1dep-link) no-repeat 50% 50%/13px;
+  background: url("../images/ico_link_24_fff.svg") no-repeat 50% 50%/13px;
   width: 20px;
   height: 20px;
 }
@@ -143,7 +146,7 @@
 .header .gnb-1dep > .gnb-menu::after {
   content: "";
   display: block;
-  background: var(--1dep-arrow) no-repeat 50% 50%/contain;
+  background: url("../images/darkmode/ico_gnb_arrow.svg") no-repeat 50% 50%/contain;
   width: 16px;
   height: 16px;
   margin-left: 2px;
@@ -161,7 +164,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
-  color: inherit;
+  margin-left: auto;
+  color: #fff;
 }
 .header .info .info-menu {
   padding: 10px 0 10px 34px;
@@ -185,6 +189,7 @@
   color: #838383;
 }
 .header .btn-theme {
+  display: block;
   flex: 0 0 auto;
   position: relative;
   border: 1px solid var(--header-gnb-toggle-border, #ccc);
@@ -235,8 +240,14 @@
 .main .header .header-menu {
   color: inherit;
 }
+.main .header .header-menu::before {
+  background-color: var(--gnb-mobile-background);
+}
 .main .header .logo {
   background-image: var(--gnb-logo);
+}
+.main .header .labs-logo {
+  background-image: var(--gnb-logo-labs);
 }
 .main .header .btn-gnb.open {
   background-image: var(--gnb-icon-open);
@@ -244,13 +255,32 @@
 .main .header .btn-gnb.close {
   background-image: var(--gnb-icon-close);
 }
+.main .header .btn-theme {
+  display: block;
+}
+.main .header .gnb-1dep .gnb-menu::after {
+  background-image: var(--1dep-arrow);
+}
+.main .header .gnb-1dep .gnb-menu .ico-link {
+  background-image: var(--1dep-link);
+}
+.main .header .info {
+  color: var(--main-header-color);
+}
 .main .header .info .info-menu.ground {
   background-image: var(--gnb-icon-ground);
 }
 
 @media (min-width: 1440px) {
-  .btn-theme {
-    margin-left: 30px;
+  .header-container {
+    max-width: 1390px;
+    margin: 0 auto;
+  }
+  .header .labs-logo {
+    margin-right: 40px;
+  }
+  .header .btn-theme {
+    margin-left: 20px;
   }
   .header .gnb-1dep.is-active .gnb-2dep {
     display: flex;
@@ -275,15 +305,26 @@
 }
 @media (max-width: 1439px) {
   .header {
-    height: 80px;
-    padding: 0 30px;
     color: #000;
   }
   .header.is-show {
     right: 0;
+    background-color: var(--gnb-mobile-background);
+  }
+  .header.is-show .logo {
+    background-image: var(--gnb-logo);
+  }
+  .header.is-show .labs-logo {
+    background-image: var(--gnb-logo-labs);
   }
   .header.is-show .header-menu {
     right: 0;
+  }
+  .header.is-show .gnb-1dep .gnb-menu::after {
+    background-image: var(--1dep-arrow);
+  }
+  .header.is-show .gnb-1dep .gnb-menu .ico-link {
+    background-image: var(--1dep-link);
   }
   .header.is-show .btn-theme {
     opacity: 0;
@@ -293,6 +334,10 @@
   }
   .header.is-show .btn-gnb.close {
     display: block;
+  }
+  .header-container {
+    height: 80px;
+    padding: 0 30px;
   }
   .header .btn-theme {
     margin-left: auto;
@@ -314,7 +359,7 @@
     background-color: var(--gnb-mobile-background);
     padding: 0;
     width: 100vw;
-    height: 100%;
+    height: calc(100% - 80px);
     overflow-y: auto;
     z-index: 5;
     color: var(--main-header-color);
@@ -345,7 +390,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
+    margin: 0;
     padding: 20px 30px;
+    color: inherit;
   }
   .header .info .info-menu {
     margin: 7px 10px;
@@ -366,14 +413,14 @@
   }
 }
 @media (max-width: 742px) {
-  .header {
-    height: 60px;
-  }
   .header.is-show {
     overflow: visible;
   }
   .header.is-show .labs-logo {
     left: 20px;
+  }
+  .header-container {
+    height: 60px;
   }
   .header .logo {
     width: 160px;
@@ -415,6 +462,7 @@
   }
   .header .header-menu {
     top: 0;
+    height: 100%;
   }
   .header .header-menu::before {
     content: "";
