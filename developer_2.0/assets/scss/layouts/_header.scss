@@ -5,11 +5,15 @@
   --logo-background: url("../images/img_logo.svg");
   --logo-labs-background: url("../images/img_labs_logo.svg");
   --1dep-arrow: url("../images/ico_gnb_arrow.svg");
+  --1dep-link: url("../images/ico_link_24_000.svg");
+  --2dep-background: #f4f4f4;
 }
 .dark-theme {
   --logo-background: url("../images/darkmode/img_logo.svg");
   --logo-labs-background: url("../images/darkmode/img_labs_logo.svg");
   --1dep-arrow: url("../images/darkmode/ico_gnb_arrow.svg");
+  --1dep-link: url("../images/ico_link_24_fff.svg");
+  --2dep-background: #1f1f1f;
 }
 .header {
   position: relative;
@@ -75,6 +79,7 @@
     &-menu {
       display: flex;
       align-items: center;
+      gap: 4px;
       padding: 2px 6px;
       font-size: inherit;
       font-weight: inherit;
@@ -82,6 +87,11 @@
       &:hover,
       &.is-active {
         text-decoration: underline;
+      }
+      .ico-link{
+        background: var(--1dep-link) no-repeat 50% 50% / 13px;
+        width: 20px;
+        height: 20px;
       }
     }
     &-1dep {
@@ -294,7 +304,7 @@
         }
       }
       .gnb-2dep {
-        background-color: #f4f4f4;
+        background-color: var(--2dep-background);
         .gnb-menu:hover {
           color: $color-primary-skyblue;
         }

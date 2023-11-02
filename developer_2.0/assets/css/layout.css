@@ -43,12 +43,16 @@
   --logo-background: url("../images/img_logo.svg");
   --logo-labs-background: url("../images/img_labs_logo.svg");
   --1dep-arrow: url("../images/ico_gnb_arrow.svg");
+  --1dep-link: url("../images/ico_link_24_000.svg");
+  --2dep-background: #f4f4f4;
 }
 
 .dark-theme {
   --logo-background: url("../images/darkmode/img_logo.svg");
   --logo-labs-background: url("../images/darkmode/img_labs_logo.svg");
   --1dep-arrow: url("../images/darkmode/ico_gnb_arrow.svg");
+  --1dep-link: url("../images/ico_link_24_fff.svg");
+  --2dep-background: #1f1f1f;
 }
 
 .header {
@@ -117,6 +121,7 @@
 .header .gnb-menu {
   display: flex;
   align-items: center;
+  gap: 4px;
   padding: 2px 6px;
   font-size: inherit;
   font-weight: inherit;
@@ -124,6 +129,11 @@
 }
 .header .gnb-menu:hover, .header .gnb-menu.is-active {
   text-decoration: underline;
+}
+.header .gnb-menu .ico-link {
+  background: var(--1dep-link) no-repeat 50% 50%/13px;
+  width: 20px;
+  height: 20px;
 }
 .header .gnb-1dep {
   position: relative;
@@ -326,7 +336,7 @@
     display: block;
   }
   .header .gnb .gnb-2dep {
-    background-color: #f4f4f4;
+    background-color: var(--2dep-background);
   }
   .header .gnb .gnb-2dep .gnb-menu:hover {
     color: #35D4F8;
