@@ -85,13 +85,13 @@ header {
     height: 2px;
     transition: all 0.3s;
     &:nth-child(1) {
-      top: 0;
+      top: 4px;
     }
     &:nth-child(2) {
-      top: 6px;
+      top: 10px;
     }
     &:nth-child(3) {
-      top: 12px;
+      top: 16px;
     }
   }
 }
@@ -225,19 +225,22 @@ header {
       background-image: url("../images/header_logo_on.svg");
     }
     .logo_nav_wrapper_ground .logo_ground {
-      background-image: url("../images/logo_developer_on.svg");
+      background-image: url("../images/logo_developer_open.svg");
+      &:hover {
+        background-image: url("../images/logo_developer_open_on.svg");
+      }
     }
     .openCloseMenu > span {
       background-color: #000;
       &:nth-child(1) {
-        top: 7px;
+        top: 9px;
         transform: rotate(135deg);
       }
       &:nth-child(2) {
         opacity: 0;
       }
       &:nth-child(3) {
-        top: 7px;
+        top: 9px;
         transform: rotate(-135deg);
       }
     }
@@ -319,9 +322,22 @@ header {
   header {
     height: 60px;
     padding: 19px 0;
+    .logo_nav_wrapper_ground {
+      position: absolute;
+      top: 74px;
+      left: 100vw;
+      transition: 0.3s;
+      .logo_ground {
+        background-image: url("../images/logo_developer_open.svg");
+        margin: 0;
+        &:hover {
+          background-image: url("../images/logo_developer_open_on.svg");
+        }
+      }
+    }
     &.is-open {
       .logo_nav_wrapper_ground {
-        opacity: 1;
+        left: 20px;
       }
     }
   }
@@ -332,11 +348,6 @@ header {
   .logo_nav_wrapper .logo {
     width: 112px;
     height: 21px;
-  }
-  .logo_nav_wrapper_ground {
-    position: absolute;
-    top: 74px;
-    opacity: 0;
   }
   .menuArea::before {
     height: 116px;
