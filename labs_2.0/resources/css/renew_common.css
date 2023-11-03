@@ -47,7 +47,7 @@ main {
 
 .btn-seeall {
   display: block;
-  background: url("../images/icon_seeall.svg") no-repeat right 12px top 15px;
+  background: url("../images/icon_seeall.svg") no-repeat right 12px top 15px/24px 24px;
   margin-left: auto;
   padding: 9px 40px 9px 12px;
   font-size: 24px;
@@ -361,8 +361,9 @@ main {
     font-size: 24px;
   }
   .btn-seeall {
-    background-position: right 12px top 9px;
-    padding: 6px 30px 6px 8px;
+    background-position: right 12px top 10px;
+    background-size: 20px 20px;
+    padding: 6px 40px 6px 8px;
     font-size: 18px;
   }
   .mainTextArea h2 {
