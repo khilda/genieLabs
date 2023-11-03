@@ -107,8 +107,6 @@
 }
 .l-cardList.midm .card-title {
   height: 148px;
-  line-height: 32px;
-  font-size: 28px;
 }
 .l-cardList.midm .card-title .icon {
   flex: none;
@@ -156,8 +154,9 @@
   background-image: url("../images/icon_midm_api_12.png");
 }
 .l-cardList.midm .card-title .title {
-  margin-top: 20px;
-  height: 148px;
+  height: 64px;
+  font-size: 28px;
+  line-height: 32px;
 }
 .l-cardList.midm .card-content {
   font-size: 16px;

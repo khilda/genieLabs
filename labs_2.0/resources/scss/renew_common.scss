@@ -295,6 +295,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: 20px;
       height: 128px;
       .badge {
         flex: none;
@@ -302,12 +303,12 @@ main {
         border-radius: 80px;
         line-height: 1;
         padding: 6px 12px;
-        margin-bottom: 16px;
         font-size: 16px;
         font-weight: 700;
         color: #000;
       }
       .title {
+        flex: none;
         height: 84px;
         line-height: 42px;
         margin-top: auto;
@@ -404,6 +405,7 @@ main {
     .card-title {
       .title {
         height: 64px;
+        line-height: 32px;
         font-size: 24px;
         line-height: 32px;
       }

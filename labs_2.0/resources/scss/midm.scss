@@ -136,8 +136,6 @@
   }
   .card-title {
     height: 148px;
-    line-height: 32px;
-    font-size: 28px;
     .icon {
       flex: none;
       background: #f4f4f4 no-repeat 50% 50% / contain;
@@ -160,9 +158,10 @@
         }
       }
     }
-    .title {
-      margin-top: 20px;
-      height: 148px;
+    .title{
+      height: 64px;
+      font-size: 28px;
+      line-height: 32px;
     }
   }
   .card-content {
