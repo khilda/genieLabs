@@ -332,11 +332,9 @@ main {
 @media (max-width: $tablet) {
   /* owl nav button custom*/
   .mainImageArea .owl-carousel .owl-nav {
-    button.owl-prev {
-      left: 10px;
-    }
+    button.owl-prev,
     button.owl-next {
-      right: 10px;
+      display: none;
     }
   }
   .l-content {
@@ -418,12 +416,6 @@ main {
 }
 // mobile
 @media (max-width: $mobile) {
-  .mainImageArea .owl-carousel .owl-nav {
-    button.owl-prev,
-    button.owl-next {
-      display: none;
-    }
-  }
   .br-pc {
     display: none;
   }

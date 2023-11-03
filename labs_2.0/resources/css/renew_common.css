@@ -343,11 +343,9 @@ main {
 
 @media (max-width: 1439px) {
   /* owl nav button custom*/
-  .mainImageArea .owl-carousel .owl-nav button.owl-prev {
-    left: 10px;
-  }
+  .mainImageArea .owl-carousel .owl-nav button.owl-prev,
   .mainImageArea .owl-carousel .owl-nav button.owl-next {
-    right: 10px;
+    display: none;
   }
   .l-content {
     max-width: 768px;
@@ -417,10 +415,6 @@ main {
   }
 }
 @media (max-width: 767px) {
-  .mainImageArea .owl-carousel .owl-nav button.owl-prev,
-  .mainImageArea .owl-carousel .owl-nav button.owl-next {
-    display: none;
-  }
   .br-pc {
     display: none;
   }
