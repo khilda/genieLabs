@@ -67,6 +67,9 @@
       background-image: url("../images/ico_btn_cmt_b.svg");
     }
   }
+  &.preview:before {
+    background-image: url("../images/ico_view_24.svg");
+  }
 }
 
 // 아이콘버튼

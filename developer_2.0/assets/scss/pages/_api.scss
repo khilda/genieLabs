@@ -2,12 +2,44 @@
 # pages - api
 ################################*/
 .api {
+  .search-container .search-filter .filter-select {
+    width: 250px;
+  }
   .card-container {
     display: flex;
     gap: 36px;
   }
-  .card-list{
+  .card-list.type2 {
     flex: 1;
+    .card {
+      .card-hover {
+        padding-bottom: 21px;
+      }
+      .card-body .card-detail {
+        -webkit-line-clamp: 2;
+      }
+      .card-body .card-badge {
+        margin-top: 20px;
+        .badge.gpu{
+          background-image: url('../images/icon_badge_gpu.svg');
+          background-repeat: no-repeat;
+          background-position: 12px 4px;
+          padding-left: 34px;
+        }
+      }
+      .card-foot.link::before {
+        background-size: contain;
+        width: 28px;
+        height: 28px;
+      }
+      .card-foot.link-blank::before {
+        content: "";
+        display: block;
+        background: url('../images/ico_link_24_000.svg') no-repeat 50% 50% / 20px 20px;
+        width: 28px;
+        height: 28px;
+      }
+    }
   }
   .category {
     flex: none;
@@ -32,18 +64,27 @@
     .ipt-container {
       flex-direction: column;
       align-items: flex-start;
+      .chk .chk-label {
+        color: #787878;
+        &::before {
+          background-color: transparent;
+        }
+      }
+      .chk-ipt:checked + .chk-label {
+        color: #000;
+        &::before {
+          background-color: #000;
+        }
+      }
     }
   }
   @include tablet-only {
-    .search-container .filter-select{
-      width: 250px;
-    }
-    .card-container{
+    .card-container {
       flex-direction: column;
     }
     .category {
       width: 100%;
-      .ipt-container{
+      .ipt-container {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 10px 40px;
@@ -54,7 +95,10 @@
     .card-container {
       flex-direction: column;
     }
-    .category{
+    .search-container .search-filter .filter-select {
+      width: 100%;
+    }
+    .category {
       width: 100%;
     }
   }

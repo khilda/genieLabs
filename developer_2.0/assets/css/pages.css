@@ -32,9 +32,9 @@
   position: relative;
   background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
   width: 100%;
-  height: 427px;
-  margin-top: 70px;
-  margin-bottom: 109px;
+  height: 520px;
+  padding-top: 80px;
+  margin-bottom: 120px;
   text-align: center;
 }
 .main .visual-container .visual-text {
@@ -109,14 +109,17 @@
   line-height: 42px;
   font-size: 30px;
 }
+.main .card-container .card .card-hover {
+  padding: 40px;
+}
 .main .card-container .card .card-detail {
   display: none;
   width: 320px;
-  margin-top: 30px;
-  -webkit-line-clamp: 4;
-  line-height: 32px;
-  font-weight: 500;
-  font-size: 24px;
+  margin-top: 20px;
+  -webkit-line-clamp: 3;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .main .notice-container {
@@ -129,7 +132,6 @@
   gap: 16px;
   border-top: 3px solid var(--color, #000);
   border-bottom: 1px solid var(--color, #000);
-  margin-top: 40px;
   padding: 30px 40px;
 }
 .main .notice-container .notice-item {
@@ -240,9 +242,7 @@
     right: 60px;
   }
   .main .visual-container {
-    height: 427px;
-    margin-top: 50px;
-    margin-bottom: 118px;
+    background-image: url("../images/img_visual_main_t.svg");
   }
   .main .card-container {
     padding: 0 50px;
@@ -255,12 +255,20 @@
   }
 }
 @media (max-width: 742px) {
+  .main .card-container .card-title,
+  .main .notice-container .card-title {
+    margin-bottom: 20px;
+  }
+  .main .card-container .card-title .title-tit,
+  .main .notice-container .card-title .title-tit {
+    font-size: 24px;
+  }
   .main .card-container .title-link,
   .main .notice-container .title-link {
     position: relative;
     right: auto;
     top: auto;
-    background-position: right 6px top 8px;
+    background-position: right 6px top 10px;
     background-size: 20px 20px;
     width: 96px;
     margin: 20px 0 0 auto;
@@ -268,7 +276,7 @@
     font-size: 18px;
   }
   .main .visual-container {
-    background: url("../images/img_visual_main_m.svg") no-repeat 50% 100%;
+    background-image: url("../images/img_visual_main_m.svg");
     height: 450px;
     margin-top: 50px;
     margin-bottom: 40px;
@@ -293,7 +301,7 @@
   }
   .main .card-container .card .card-txt {
     font-size: 24px;
-    line-height: 26px;
+    line-height: 32x;
   }
   .main .card-container + .card-container {
     margin-top: 60px;
@@ -1091,13 +1099,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: 20px;
+  gap: 30px 20px;
   border-color: transparent;
   background-color: #f4f4f4;
   padding: 30px 20px;
   margin-top: 20px;
 }
 .builder .builder-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -1114,6 +1123,11 @@
 }
 .builder .builder-item.ui {
   flex: 1 1 490px;
+}
+.builder .builder-item.ui .btn-txt {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .builder .builder-item.control {
   width: 100%;
@@ -1142,6 +1156,7 @@
   width: 100%;
   padding: 6px 20px;
   color: inherit;
+  font-size: inherit;
   font-weight: inherit;
 }
 .builder .accodion .acc-title {
@@ -1150,6 +1165,7 @@
   background-color: #f4f4f4;
   padding: 3px 0;
   color: #333;
+  font-size: 16px;
   font-weight: 500;
 }
 .builder .accodion .acc-title .acc-btn::after {
@@ -1165,6 +1181,7 @@
   margin-bottom: 20px;
   height: 0;
   overflow: hidden;
+  font-size: 14px;
   transition: 0.3s;
 }
 .builder .accodion .acc-content .acc-btn::before {
@@ -1193,12 +1210,42 @@
 /* ##############################
 # pages - api
 ################################*/
+.api .search-container .search-filter .filter-select {
+  width: 250px;
+}
 .api .card-container {
   display: flex;
   gap: 36px;
 }
-.api .card-list {
+.api .card-list.type2 {
   flex: 1;
+}
+.api .card-list.type2 .card .card-hover {
+  padding-bottom: 21px;
+}
+.api .card-list.type2 .card .card-body .card-detail {
+  -webkit-line-clamp: 2;
+}
+.api .card-list.type2 .card .card-body .card-badge {
+  margin-top: 20px;
+}
+.api .card-list.type2 .card .card-body .card-badge .badge.gpu {
+  background-image: url("../images/icon_badge_gpu.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 4px;
+  padding-left: 34px;
+}
+.api .card-list.type2 .card .card-foot.link::before {
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+}
+.api .card-list.type2 .card .card-foot.link-blank::before {
+  content: "";
+  display: block;
+  background: url("../images/ico_link_24_000.svg") no-repeat 50% 50%/20px 20px;
+  width: 28px;
+  height: 28px;
 }
 .api .category {
   flex: none;
@@ -1223,10 +1270,19 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.api .category .ipt-container .chk .chk-label {
+  color: #787878;
+}
+.api .category .ipt-container .chk .chk-label::before {
+  background-color: transparent;
+}
+.api .category .ipt-container .chk-ipt:checked + .chk-label {
+  color: #000;
+}
+.api .category .ipt-container .chk-ipt:checked + .chk-label::before {
+  background-color: #000;
+}
 @media (min-width: 743px) and (max-width: 1439px) {
-  .api .search-container .filter-select {
-    width: 250px;
-  }
   .api .card-container {
     flex-direction: column;
   }
@@ -1242,6 +1298,9 @@
 @media (max-width: 742px) {
   .api .card-container {
     flex-direction: column;
+  }
+  .api .search-container .search-filter .filter-select {
+    width: 100%;
   }
   .api .category {
     width: 100%;

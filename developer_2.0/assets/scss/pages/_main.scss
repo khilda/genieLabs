@@ -35,9 +35,9 @@ $color-secondary-skyblue: #4ff3ff;
   position: relative;
   background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
   width: 100%;
-  height: 427px;
-  margin-top: 70px;
-  margin-bottom: 109px;
+  height: 520px;
+  padding-top: 80px;
+  margin-bottom: 120px;
   text-align: center;
   .visual-text {
     margin-bottom: 35px;
@@ -108,14 +108,17 @@ $color-secondary-skyblue: #4ff3ff;
       line-height: 42px;
       font-size: 30px;
     }
+    .card-hover{
+      padding: 40px;
+    }
     .card-detail {
       display: none;
       width: 320px;
-      margin-top: 30px;
-      -webkit-line-clamp: 4;
-      line-height: 32px;
-      font-weight: 500;
-      font-size: 24px;
+      margin-top: 20px;
+      -webkit-line-clamp: 3;
+      line-height: 30px;
+      font-weight: 400;
+      font-size: 18px;
     }
   }
 }
@@ -129,7 +132,6 @@ $color-secondary-skyblue: #4ff3ff;
       gap: 16px;
       border-top: 3px solid var(--color, #000);
       border-bottom: 1px solid var(--color, #000);
-      margin-top: 40px;
       padding: 30px 40px;
     }
     &-item {
@@ -244,9 +246,7 @@ $color-secondary-skyblue: #4ff3ff;
       }
     }
     .visual-container {
-      height: 427px;
-      margin-top: 50px;
-      margin-bottom: 118px;
+      background-image: url("../images/img_visual_main_t.svg");
     }
     .card-container {
       padding: 0 50px;
@@ -261,11 +261,17 @@ $color-secondary-skyblue: #4ff3ff;
   @include mobile {
     .card-container,
     .notice-container {
+      .card-title {
+        margin-bottom: 20px;
+        .title-tit {
+          font-size: 24px;
+        }
+      }
       .title-link {
         position: relative;
         right: auto;
         top: auto;
-        background-position: right 6px top 8px;
+        background-position: right 6px top 10px;
         background-size: 20px 20px;
         width: 96px;
         margin: 20px 0 0 auto;
@@ -274,7 +280,7 @@ $color-secondary-skyblue: #4ff3ff;
       }
     }
     .visual-container {
-      background: url("../images/img_visual_main_m.svg") no-repeat 50% 100%;
+      background-image: url("../images/img_visual_main_m.svg");
       height: 450px;
       margin-top: 50px;
       margin-bottom: 40px;
@@ -299,7 +305,7 @@ $color-secondary-skyblue: #4ff3ff;
         min-height: 321px;
         .card-txt {
           font-size: 24px;
-          line-height: 26px;
+          line-height: 32x;
         }
       }
     }

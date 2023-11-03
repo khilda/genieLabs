@@ -79,12 +79,12 @@
       <main class="container builder">
         <nav class="breadcrumb">
           <a href="/src/main/index.html" class="breadcrumb-link">HOME</a>
-          <a href="/src/builder/index.html" class="breadcrumb-link">builder</a>
+          <a href="/src/builder/index.html" class="breadcrumb-link">Demo Builder</a>
         </nav>
         <section class="container-header">
-          <h1 class="page-title">builder</h1>
+          <h1 class="page-title">Mi:dm</h1>
           <p class="page-txt">
-            개발자들의 놀이터, 다양한 API를 이용한 나만의 데모를 만들어 보세요!
+            개발자들의 놀이터, 다양한 API를 이용한 <br class="br-pc" /> 나만의 데모를 만들어 보세요!
           </p>
         </section>
         <!-- 게시글 작성시  -->
@@ -101,15 +101,10 @@
               </div>
               <div class="form-item">
                 <h5 class="form-item-title">데이터 설명</h5>
-                <div class="textarea-container">
-                  <textarea
-                    class="textarea"
-                    placeholder="상세 설명 정보를 입력하세요.​"
-                  ></textarea>
-                  <span class="textarea-count"
-                    >[<em class="count">0</em> / 1000 자]</span
-                  >
-                </div>
+                <textarea
+                  class="textarea"
+                  placeholder="상세 설명 정보를 입력하세요.​"
+                ></textarea>
               </div>
               <div class="form-item flex-direction-row">
                 <h5 class="form-item-title">반려 사유</h5>
@@ -202,6 +197,7 @@
                 </div>
                 <div class="builder-item ui">
                   <h5 class="builder-title">UI</h5>
+                  <button class="btn-txt preview">미리보기</button>
                   <div class="builder-content"></div>
                 </div>
                 <div class="builder-item control">
@@ -215,7 +211,6 @@
             </form>
             <div class="form-footer">
               <div class="btn-container">
-                <button type="button" class="btn">미리보기</button>
                 <button
                   type="button"
                   onclick="onClickBtn('cancel')"
@@ -259,11 +254,6 @@
     <script src="../../assets/js/lib/sweetalert2.min.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
-      // textarea
-      document.querySelector(".textarea").addEventListener("input", (e) => {
-        const _count = document.querySelector(".textarea-container .count");
-        _count.innerText = e.target.value.length;
-      });
       // template accordion
       document.querySelectorAll(".acc-title").forEach((title) => {
         title.querySelector(".acc-btn").addEventListener("click", (e) => {

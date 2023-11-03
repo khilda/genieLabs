@@ -11,6 +11,8 @@
       }
     }
   }
+  .section-title {
+  }
   // write
   .form-item.flex-direction-row {
     align-items: center;
@@ -25,13 +27,14 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: stretch;
-      gap: 20px;
+      gap: 30px 20px;
       border-color: transparent;
       background-color: #f4f4f4;
       padding: 30px 20px;
       margin-top: 20px;
     }
     &-item {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: stretch;
@@ -47,6 +50,11 @@
       }
       &.ui {
         flex: 1 1 490px;
+        .btn-txt {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
       }
       &.control {
         width: 100%;
@@ -82,6 +90,7 @@
         width: 100%;
         padding: 6px 20px;
         color: inherit;
+        font-size: inherit;
         font-weight: inherit;
       }
       &-title {
@@ -90,6 +99,7 @@
         background-color: #f4f4f4;
         padding: 3px 0;
         color: #333;
+        font-size: 16px;
         font-weight: 500;
         .acc-btn::after {
           content: "";
@@ -98,14 +108,15 @@
           width: 20px;
           height: 20px;
           margin-left: auto;
-          transition: .3s;
+          transition: 0.3s;
         }
       }
       &-content {
         margin-bottom: 20px;
         height: 0;
         overflow: hidden;
-        transition: .3s;
+        font-size: 14px;
+        transition: 0.3s;
         .acc-btn {
           &::before {
             content: "";
@@ -135,5 +146,4 @@
       }
     }
   }
-  
 }
