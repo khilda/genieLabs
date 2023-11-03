@@ -133,7 +133,7 @@
     bottom: 30px;
   }
   .card-item {
-    height: 346px;
+    height: 366px;
     aspect-ratio: auto;
     padding: 30px;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
@@ -142,7 +142,7 @@
     }
   }
   .card-title {
-    height: 148px;
+    height: 168px;
     .icon {
       flex: none;
       background: #f4f4f4 no-repeat 50% 50% / contain;
@@ -161,14 +161,12 @@
       @for $i from 01 to 13 {
         $name: numName($i);
         &.api#{$name} {
-          background-image: url("../images/icon_midm_api_#{$name}.png");
+          background-image: url("../images/icon_midm_api_#{$name}.svg");
         }
       }
     }
     .title {
-      height: 64px;
-      font-size: 28px;
-      line-height: 32px;
+      margin-top: 20px;
     }
   }
   .card-content {

@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="64" height="64" rx="32" fill="#F4F4F4"/>
+<path d="M31.5 18.4999C25.4999 17.9999 20.3754 22.5 18.9999 27.9999C17.6245 33.4998 19.9999 39.9999 24.0001 42.9998" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M17.5001 40.9998L24.0004 42.9998" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M24.0001 42.9999L24.0001 36.4998" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M32.4997 45.0001C39.0002 45.0002 43.5002 41.3303 44.8965 35.747C46.2927 30.1637 43.8965 23.747 39.8963 20.7471" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M46.3964 22.7468L39.896 20.7468" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M39.8964 20.7467L39.8964 27.2467" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M27.7265 30.2188V34.0391H26.7343V31.0234H23.1874V30.2188H27.7265Z" fill="black"/>
+<path d="M34.3187 33.1328V33.9297H29.7093V30.2188H30.7093V33.1328H34.3187Z" fill="black"/>
+<path d="M40.7156 30.1953V30.9922H37.2546V33.25H40.7781V34.0312H36.2468V30.1953H40.7156Z" fill="black"/>
+</svg>
