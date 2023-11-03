@@ -417,6 +417,10 @@ main {
   }
 }
 @media (max-width: 767px) {
+  .mainImageArea .owl-carousel .owl-nav button.owl-prev,
+  .mainImageArea .owl-carousel .owl-nav button.owl-next {
+    display: none;
+  }
   .br-pc {
     display: none;
   }

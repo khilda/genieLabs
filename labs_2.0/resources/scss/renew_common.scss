@@ -418,6 +418,12 @@ main {
 }
 // mobile
 @media (max-width: $mobile) {
+  .mainImageArea .owl-carousel .owl-nav {
+    button.owl-prev,
+    button.owl-next {
+      display: none;
+    }
+  }
   .br-pc {
     display: none;
   }
