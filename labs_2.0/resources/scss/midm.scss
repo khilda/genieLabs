@@ -158,7 +158,7 @@
         }
       }
     }
-    .title{
+    .title {
       height: 64px;
       font-size: 28px;
       line-height: 32px;
@@ -356,6 +356,14 @@
 @media (max-width: $mobile) {
   .l-useCase.midm .btn-seeall {
     top: auto;
+  }
+  .l-cardList.midm {
+    .card-title .title {
+      font-size: 24px;
+    }
+    .card-content {
+      font-size: 14px;
+    }
   }
   .midmFeature {
     .feature-list {
