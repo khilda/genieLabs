@@ -9,12 +9,16 @@
   - (todo)add : logout 클래스 추가
   - (todo)add : login 클래스 추가
   - (todo)add : signup
+
 - midm.html
   - 신규파일추가
 
 - common.css, main.css
-  - (todo)remove : header 관련 클래스 제거move
+  - (todo)modify : 탑버튼 z-index 수정
+  - (todo)remove : header 관련 클래스 제거
   - (todo)padding-top 삭제
+  - (todo) footer 상단여백삭제
+
 - renew_common.css, main_renew.css, midm.css, menu.css
   - 신규파일추가
 
