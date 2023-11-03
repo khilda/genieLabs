@@ -21,7 +21,7 @@
 
 /* 공지사항 */
 .mainNotice.l-content {
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: 0;
 }
 .mainNotice .btn-seeall {
@@ -83,6 +83,9 @@
 /* Tech */
 .l-cardList.main {
   background: linear-gradient(180deg, rgba(53, 243, 232, 0.3) 0%, rgba(151, 71, 255, 0.3) 100%);
+}
+.l-cardList.main .btn-seeall {
+  width: 129px;
 }
 .l-cardList.main .card-item:hover {
   background-color: #000;

@@ -37,7 +37,7 @@ main {
 }
 .btn-seeall {
   display: block;
-  background: url("../images/icon_seeall.svg") no-repeat right 12px top 15px / 24px 24px;
+  background: url("../images/icon_seeall.svg") no-repeat right 12px top 17px / 24px 24px;
   margin-left: auto;
   padding: 9px 40px 9px 12px;
   font-size: 24px;
@@ -419,7 +419,6 @@ main {
         height: 64px;
         line-height: 32px;
         font-size: 24px;
-        line-height: 32px;
       }
     }
     .card-content {
@@ -494,9 +493,6 @@ main {
         height: 64px;
         @include ellipsis(2);
       }
-      .content {
-        font-size: 14px;
-      }
     }
   }
   .l-cardList {
@@ -512,13 +508,7 @@ main {
     }
     .card-item {
       width: calc(100vw - 40px);
-      padding: 30px;
-    }
-    .card-title .title {
-      font-size: 28px;
-    }
-    .card-content {
-      font-size: 14px;
+      height: auto;
     }
   }
 }

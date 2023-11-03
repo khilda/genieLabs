@@ -315,7 +315,7 @@
 }
 @media (max-width: 1439px) {
   .midmFeature .feature-title {
-    font-size: 24px;
+    font-size: 22px;
   }
   .midmFeature .feature-title::after {
     margin: 20px auto;
@@ -371,15 +371,9 @@
     width: 260px;
     margin: -10px auto;
   }
-  .midmFeature .feature-title {
-    font-size: 22px;
-  }
   .midmFeature .feature-title::after {
     width: 20px;
     margin: 12px auto;
-  }
-  .midmFeature .feature-desc {
-    font-size: 14px;
   }
   .midmClip .clip-list {
     gap: 20px;

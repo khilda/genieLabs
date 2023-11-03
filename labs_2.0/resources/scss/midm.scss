@@ -326,7 +326,7 @@
   .midmFeature {
     .feature {
       &-title {
-        font-size: 24px;
+        font-size: 22px;
         &::after {
           margin: 20px auto;
         }
@@ -390,15 +390,9 @@
       width: 260px;
       margin: -10px auto;
     }
-    .feature-title {
-      font-size: 22px;
-      &::after {
-        width: 20px;
-        margin: 12px auto;
-      }
-    }
-    .feature-desc {
-      font-size: 14px;
+    .feature-title::after {
+      width: 20px;
+      margin: 12px auto;
     }
   }
   .midmClip {
