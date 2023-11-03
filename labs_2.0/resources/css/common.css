@@ -11,8 +11,8 @@ article {width: 100%;}
 
 aside {   }
 
-
-aside.topLink {position: fixed;z-index: 10000;right: 20px;bottom: 20px;}
+/* (todo) modify : 탑버튼 z-index 수정 */
+aside.topLink {position: fixed;z-index: 999;right: 20px;bottom: 20px;}
 aside.topLink a {text-align: center;font-size: 12px;color: #000;}
 aside.topLink a::before { content:'';background: url(../images/icon_top.svg) center 0 no-repeat;display: block;width: 18px;height: 20px;margin: 0 auto 4px auto;overflow: hidden;background-size: cover;}
 aside.topLink a:hover { color: #2bb7b3;  }

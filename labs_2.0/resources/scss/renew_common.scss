@@ -38,7 +38,6 @@ main {
 .btn-seeall {
   display: block;
   background: url("../images/icon_seeall.svg") no-repeat right 12px top 15px;
-  width: 130px;
   margin-left: auto;
   padding: 9px 40px 9px 12px;
   font-size: 24px;
@@ -110,8 +109,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: calc(100vw - 200px);
+  max-width: 1340px;
   height: 600px;
+  margin: 0 auto;
   padding: 80px 0;
   color: #fff;
   h2 {
@@ -234,6 +235,7 @@ main {
       padding: 34px 40px;
       transition: none;
       .title {
+        line-height: 32px;
         font-size: 30px;
         font-weight: 700;
         color: #000;
@@ -276,7 +278,7 @@ main {
       border: 3px solid #fff;
       border-image-slice: 1;
       width: 440px;
-      aspect-ratio: 1 / 1;
+      height: 380px;
       min-height: 298px;
       padding: 40px;
       transition: none;
@@ -295,7 +297,6 @@ main {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 20px;
       height: 128px;
       .badge {
         flex: none;
@@ -345,6 +346,14 @@ main {
     width: 100vw;
     padding-left: 24px;
     padding-right: 24px;
+  }
+  .l-title {
+    font-size: 24px;
+  }
+  .btn-seeall {
+    background-position: right 12px top 9px;
+    padding: 6px 30px 6px 8px;
+    font-size: 18px;
   }
   .mainTextArea {
     h2 {
@@ -400,9 +409,11 @@ main {
     .card-item {
       flex: 0 1 auto;
       width: calc(50% - 15px);
+      height: 312px;
       padding: 30px;
     }
     .card-title {
+      height: 104px;
       .title {
         height: 64px;
         line-height: 32px;
@@ -444,6 +455,7 @@ main {
     height: 28px;
   }
   .mainTextArea {
+    width: calc(100vw - 48px);
     h2 {
       font-size: 24px;
     }
@@ -471,8 +483,16 @@ main {
     }
     .case-item {
       width: calc(100vw - 40px);
+      height: 380px;
+    }
+    .case-thumb {
+      height: 160px;
     }
     .case-content {
+      .title {
+        height: 64px;
+        @include ellipsis(2);
+      }
       .content {
         font-size: 14px;
       }

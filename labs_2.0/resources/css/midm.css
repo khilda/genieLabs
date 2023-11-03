@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .mainImageArea.midm {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(94.2deg, #9748ff 0%, #5f4eff 50.52%, #35f3e8 100%);
+  background: url("../images/img_midm_visual.png") no-repeat 50% 50%/cover;
 }
 .mainImageArea.midm .mainTextArea h2 {
   margin-top: 175px;
@@ -91,6 +91,12 @@
 
 .l-cardList.midm .l-content {
   padding-top: 120px;
+}
+.l-cardList.midm .btn-seeall {
+  position: absolute;
+  top: 160px;
+  right: 0;
+  margin: 0;
 }
 .l-cardList.midm .ico-arr {
   right: 30px;
@@ -317,6 +323,9 @@
   .midmFeature .feature-desc {
     font-size: 14px;
   }
+  .l-cardList.midm .btn-seeall {
+    right: 24px;
+  }
   .midmClip .clip-list {
     flex-direction: column;
     gap: 30px;
@@ -339,6 +348,12 @@
 @media (max-width: 767px) {
   .l-useCase.midm .btn-seeall {
     top: auto;
+  }
+  .l-cardList.midm .btn-seeall {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px 0 0 auto;
   }
   .l-cardList.midm .card-title .title {
     font-size: 24px;

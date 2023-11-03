@@ -2,9 +2,6 @@
 
 .mainImageArea.main {
   .mainTextArea {
-    width: calc(100vw - 200px);
-    max-width: 1340px;
-    margin: 0 auto;
     h2 {
       @include ellipsis();
     }
@@ -267,7 +264,7 @@
     height: 72px;
   }
   .mainNotice .btn-seeall {
-    right: 70px;
+    right: 24px;
   }
   .mainGenieDeveloper {
     .gd-list {
