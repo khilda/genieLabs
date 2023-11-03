@@ -74,7 +74,7 @@
 }
 .midmFeature .feature-desc {
   text-align: center;
-  line-height: 1.2;
+  line-height: 30px;
   font-size: 18px;
   color: inherit;
 }
@@ -322,6 +322,7 @@
   }
   .midmFeature .feature-desc {
     font-size: 14px;
+    line-height: 22px;
   }
   .l-cardList.midm .btn-seeall {
     right: 24px;
