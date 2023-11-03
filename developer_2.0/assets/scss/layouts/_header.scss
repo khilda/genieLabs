@@ -2,13 +2,9 @@
 # layout - Header
 ################################*/
 :root {
-  --1dep-arrow: url("../images/ico_gnb_arrow.svg");
-  --1dep-link: url("../images/ico_link_24_000.svg");
   --2dep-background: #f4f4f4;
 }
 .dark-theme {
-  --1dep-arrow: url("../images/darkmode/ico_gnb_arrow.svg");
-  --1dep-link: url("../images/ico_link_24_fff.svg");
   --2dep-background: #1f1f1f;
 }
 .header {
@@ -25,8 +21,7 @@
   }
   .logo {
     flex: none;
-    background: url("../images/darkmode/img_logo.svg") no-repeat 50% 50% /
-      contain;
+    background: var(--gnb-logo-white) no-repeat 50% 50% / contain;
     width: 214px;
     height: 28px;
     padding: 10px 0;
@@ -35,13 +30,15 @@
   }
   .labs-logo {
     flex: none;
-    background: url("../images/darkmode/img_labs_logo.svg") no-repeat 50% 50% /
-      contain;
+    background: var(--gnb-logo-labs-white) no-repeat 50% 50% / contain;
     width: 75px;
     height: 28px;
     margin-left: 8px;
     font-size: 0;
     z-index: 9;
+    &:hover {
+      background-image: var(--gnb-logo-labs-white-on);
+    }
   }
   .btn-gnb {
     display: none;
@@ -90,10 +87,12 @@
       &:hover,
       &.is-active {
         text-decoration: underline;
+        .ico-link {
+          background-image: url("../images/ico_link_24_hover.svg");
+        }
       }
       .ico-link {
-        background: url("../images/ico_link_24_fff.svg") no-repeat 50% 50% /
-          13px;
+        background: no-repeat 50% 50% / 13px;
         width: 20px;
         height: 20px;
       }
@@ -106,8 +105,9 @@
         &::after {
           content: "";
           display: block;
-          background: url("../images/darkmode/ico_gnb_arrow.svg") no-repeat 50%
-            50% / contain;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: contain;
           width: 16px;
           height: 16px;
           margin-left: 2px;
@@ -122,6 +122,12 @@
       display: none;
       font-size: 16px;
       font-weight: 500;
+      > .gnb-menu {
+        &:hover,
+        &.is-active {
+          color: $color-primary-skyblue;
+        }
+      }
     }
   }
   .info {
@@ -201,6 +207,86 @@
   }
 }
 
+// tablet, mobile
+.header.is-show {
+  right: 0;
+  background-color: var(--gnb-mobile-background);
+  .logo {
+    background-image: var(--gnb-logo);
+  }
+  .labs-logo {
+    background-image: var(--gnb-logo-labs);
+    &:hover {
+      background-image: var(--gnb-logo-labs-on);
+    }
+  }
+  .header-menu {
+    right: 0;
+  }
+  .btn-theme {
+    opacity: 0;
+  }
+  .btn-gnb.open {
+    display: none;
+  }
+  .btn-gnb.close {
+    display: block;
+  }
+  .gnb {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+  }
+  .gnb-menu {
+    width: 100%;
+    padding: 16px 40px;
+    &::after {
+      background-image: var(--gnb-icon-menu);
+    }
+  }
+  .ico-link {
+    background-image: var(--gnb-icon-link);
+  }
+  .gnb-1dep {
+    width: 100%;
+    &.is-active .gnb-2dep {
+      display: block;
+    }
+  }
+  .gnb-2dep {
+    background-color: var(--2dep-background);
+    .gnb-menu:hover {
+      color: $color-primary-skyblue;
+    }
+  }
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+    padding: 20px 30px;
+    color: inherit;
+    .info-menu {
+      margin: 7px 10px;
+      &.ground {
+        border: 2px solid var(--visual-link-border);
+        border-radius: 80px;
+        background-image: var(--gnb-icon-ground);
+        background-position: 20px 50%;
+        padding: 10px 20px 10px 44px;
+        margin: 0 0 60px 0;
+        line-height: 22px;
+        &.is-active {
+          background-image: url("../images/darkmode/ico_gnb_my.svg");
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// main page theme
 .main .header {
   background-color: transparent;
   color: var(--main-header-color);
@@ -215,6 +301,9 @@
   }
   .labs-logo {
     background-image: var(--gnb-logo-labs);
+    &:hover {
+      background-image: var(--gnb-logo-labs-on);
+    }
   }
   .btn-gnb.open {
     background-image: var(--gnb-icon-open);
@@ -225,13 +314,8 @@
   .btn-theme {
     display: block;
   }
-  .gnb-1dep .gnb-menu {
-    &::after {
-      background-image: var(--1dep-arrow);
-    }
-    .ico-link {
-      background-image: var(--1dep-link);
-    }
+  .gnb-menu::after{
+    background-image: var(--gnb-icon-menu);
   }
   .info {
     color: var(--main-header-color);
@@ -253,6 +337,14 @@
     }
     .btn-theme {
       margin-left: 20px;
+    }
+    .gnb-menu {
+      &::after {
+        background-image: var(--gnb-icon-menu-white);
+      }
+      .ico-link {
+        background-image: var(--gnb-icon-link-white);
+      }
     }
     .gnb-1dep.is-active .gnb-2dep {
       display: flex;
@@ -282,36 +374,6 @@
 @include tablet {
   .header {
     color: #000;
-    &.is-show {
-      right: 0;
-      background-color: var(--gnb-mobile-background);
-      .logo {
-        background-image: var(--gnb-logo);
-      }
-      .labs-logo {
-        background-image: var(--gnb-logo-labs);
-      }
-      .header-menu {
-        right: 0;
-      }
-      .gnb-1dep .gnb-menu {
-        &::after {
-          background-image: var(--1dep-arrow);
-        }
-        .ico-link {
-          background-image: var(--1dep-link);
-        }
-      }
-      .btn-theme {
-        opacity: 0;
-      }
-      .btn-gnb.open {
-        display: none;
-      }
-      .btn-gnb.close {
-        display: block;
-      }
-    }
     &-container {
       height: 80px;
       padding: 0 30px;
@@ -340,53 +402,6 @@
       overflow-y: auto;
       z-index: 5;
       color: var(--main-header-color);
-    }
-    .gnb {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      gap: 0;
-      .gnb-menu {
-        width: 100%;
-        padding: 16px 40px;
-      }
-      &-1dep {
-        width: 100%;
-        &.is-active .gnb-2dep {
-          display: block;
-        }
-      }
-      .gnb-2dep {
-        background-color: var(--2dep-background);
-        .gnb-menu:hover {
-          color: $color-primary-skyblue;
-        }
-      }
-    }
-    .info {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0;
-      margin: 0;
-      padding: 20px 30px;
-      color: inherit;
-      .info-menu {
-        margin: 7px 10px;
-        &.ground {
-          border: 2px solid var(--visual-link-border);
-          border-radius: 80px;
-          background-image: var(--gnb-icon-ground);
-          background-position: 20px 50%;
-          padding: 10px 20px 10px 44px;
-          margin: 0 0 60px 0;
-          line-height: 22px;
-          &.is-active {
-            background-image: url("../images/darkmode/ico_gnb_my.svg");
-            background-color: #000;
-            color: #fff;
-          }
-        }
-      }
     }
   }
 }
