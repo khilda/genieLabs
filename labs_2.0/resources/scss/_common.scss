@@ -1,0 +1,23 @@
+$pc: 1439px;
+$tablet: 1439px;
+$mobile: 767px;
+
+@mixin ellipsis($line-cnt: 1) {
+  @if ($line-cnt == 1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line-cnt; /* 라인수 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+%icon-hover {
+  .ico-arr {
+    background-image: url("../images/icon_arrow_on.svg");
+  }
+}

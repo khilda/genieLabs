@@ -1,7 +1,10 @@
-@import "renew_common";
+@import "_common";
 
 .mainImageArea.main {
   .mainTextArea {
+    width: calc(100vw - 200px);
+    max-width: 1340px;
+    margin: 0 auto;
     h2 {
       @include ellipsis();
     }
@@ -89,7 +92,7 @@
 .mainGenieDeveloper {
   .ico-arr {
     position: absolute;
-    right: 60px;
+    right: 40px;
     bottom: 40px;
   }
   .gd-list {
@@ -102,16 +105,16 @@
     display: flex;
     width: 100%;
     height: 334px;
-    padding: 40px 60px;
     color: #000;
     box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.12);
     &::before {
       content: "";
       flex: none;
       display: block;
-      background: transparent no-repeat 50% 50% / cover;
-      width: 254px;
+      background: transparent no-repeat 50% 50% / contain;
+      width: 234px;
       aspect-ratio: 1 / 1;
+      margin: 30px;
       color: #000;
     }
     &.api::before {
@@ -134,8 +137,7 @@
     }
   }
   .gd-content {
-    margin-left: 40px;
-    padding-left: 40px;
+    padding: 40px;
     color: inherit;
     .title {
       margin-bottom: 20px;
@@ -148,6 +150,7 @@
       font-size: 18px;
       font-weight: 400;
       color: inherit;
+      word-break: keep-all;
       transition: none;
     }
   }
@@ -184,6 +187,7 @@
       z-index: 0;
     }
     .fb-thumb {
+      flex: none;
       position: relative;
       width: 100%;
       height: 250px;
@@ -255,16 +259,12 @@
     }
   }
 }
-
 // tablet
 @media (max-width: $tablet) {
-  .main .mainTextArea {
-    h2,
-    .desc {
-      width: calc(100% - 500px);
-    }
+  .mainImageArea.main .mainTextArea .desc {
+    height: 72px;
   }
-  .mainNotice .btn-seeall{
+  .mainNotice .btn-seeall {
     right: 70px;
   }
   .mainGenieDeveloper {
@@ -275,26 +275,35 @@
   }
   .mainFacebook {
     .fb-list {
-      gap: 30px;
+      gap: 20px;
     }
     .fb-item {
       flex: 0 1 auto;
       width: calc(50% - 15px);
+      height: 386px;
+      .fb-thumb {
+        height: 200px;
+      }
+      .fb-content {
+        padding: 30px;
+        .content {
+          line-height: 22px;
+          font-size: 14px;
+        }
+        .date {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
 // mobile
 @media (max-width: $mobile) {
-  /* owl nav button custom*/
-  .owl-carousel .owl-nav button.owl-prev,
-  .owl-carousel .owl-nav button.owl-next {
-    display: none;
-  }
-  .mainTextArea h2{
-    margin-top: 215px;
+  .mainImageArea.main .mainTextArea .desc {
+    height: 66px;
   }
   .mainNotice {
-    .btn-seeall{
+    .btn-seeall {
       position: relative;
       top: auto;
       right: auto;
@@ -351,11 +360,9 @@
     }
   }
   .mainFacebook {
-    .fb-list {
-      gap: 20px;
-    }
     .fb-item {
       width: calc(100vw - 40px);
+      height: 346px;
     }
   }
 }

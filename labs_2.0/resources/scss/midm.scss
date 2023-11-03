@@ -1,7 +1,7 @@
 ///************************************
 //# Mi:dm page css
 //************************************
-@import "renew_common";
+@import "common";
 
 .mainImageArea.midm {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -242,6 +242,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
       }
     }
     &-title {
@@ -349,9 +351,6 @@
 }
 // mobile
 @media (max-width: $mobile) {
-  .mainImageArea.midm .mainTextArea h2 {
-    margin-top: 252px;
-  }
   .l-useCase.midm .btn-seeall {
     top: auto;
   }

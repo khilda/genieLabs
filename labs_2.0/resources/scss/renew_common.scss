@@ -1,20 +1,5 @@
-$pc: 1439px;
-$tablet: 907px;
-$mobile: 426px;
+@import "_common";
 
-@mixin ellipsis($line-cnt: 1) {
-  @if ($line-cnt == 1) {
-    white-space: nowrap;
-  } @else {
-    display: -webkit-box;
-    -webkit-line-clamp: $line-cnt; /* 라인수 */
-    -webkit-box-orient: vertical;
-    white-space: normal;
-  }
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: keep-all;
-}
 main {
   padding: 0;
   min-height: 100vh;
@@ -73,13 +58,6 @@ main {
   aspect-ratio: 1 / 1;
 }
 
-%icon-hover {
-  .ico-arr {
-    background-image: url("../images/icon_arrow_on.svg");
-  }
-}
-
-
 /* visual */
 .mainImageArea {
   position: relative;
@@ -121,10 +99,10 @@ main {
     background-color: #00d9c3;
   }
   .owl-carousel .owl-nav button.owl-prev {
-    left: 104px;
+    left: 100px;
   }
   .owl-carousel .owl-nav button.owl-next {
-    right: 104px;
+    right: 100px;
   }
 }
 .mainTextArea {
@@ -138,6 +116,7 @@ main {
   color: #fff;
   h2 {
     display: block;
+    width: 100%;
     margin-top: 137px;
     line-height: 1;
     font-size: 48px;
@@ -157,17 +136,18 @@ main {
     color: #00ffde;
   }
   .desc {
+    width: 100%;
     margin-top: 20px;
-    height: 60px;
+    min-height: 60px;
     line-height: 30px;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 200;
     color: inherit;
   }
   a {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 5px;
-    margin: 25px auto 50px auto;
+    margin: 25px auto 0 auto;
     padding: 8px 24px;
     font-size: 16px;
     font-weight: 700;
@@ -178,7 +158,6 @@ main {
     }
   }
 }
-
 
 /* Use Case */
 .l-useCase {
@@ -317,6 +296,7 @@ main {
       align-items: flex-start;
       height: 128px;
       .badge {
+        flex: none;
         background-color: #f4f4f4;
         border-radius: 80px;
         line-height: 1;
@@ -328,6 +308,7 @@ main {
       }
       .title {
         height: 84px;
+        line-height: 42px;
         margin-top: auto;
         font-size: 30px;
         font-weight: 700;
@@ -347,18 +328,47 @@ main {
   }
 }
 
-
 // tablet
 @media (max-width: $tablet) {
+  /* owl nav button custom*/
+  .mainImageArea .owl-carousel .owl-nav {
+    button.owl-prev {
+      left: 10px;
+    }
+    button.owl-next {
+      right: 10px;
+    }
+  }
   .l-content {
-    max-width: 1000px;
+    max-width: 768px;
     width: 100vw;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .mainTextArea {
+    h2 {
+      width: 100%;
+      margin-top: 135px;
+      font-size: 36px;
+      &::after {
+        width: 20px;
+        height: 2px;
+        margin-top: 16px;
+      }
+    }
+    .desc {
+      width: 100%;
+      margin-top: 16px;
+      line-height: 24px;
+      font-size: 16px;
+    }
+    a {
+      margin-top: 60px;
+    }
   }
   .l-useCase {
-    .btn-seeall{
-      right: 70px;
+    .btn-seeall {
+      right: 24px;
     }
     .case-list {
       gap: 30px;
@@ -366,6 +376,19 @@ main {
     .case-item {
       flex: 0 1 auto;
       width: calc(50% - 15px);
+      height: 422px;
+    }
+    .case-thumb {
+      height: 200px;
+    }
+    .case-content {
+      .title {
+        font-size: 24px;
+      }
+      .content {
+        margin-top: 12px;
+        font-size: 14px;
+      }
     }
   }
   .l-cardList {
@@ -375,6 +398,21 @@ main {
     .card-item {
       flex: 0 1 auto;
       width: calc(50% - 15px);
+      padding: 30px;
+    }
+    .card-title {
+      .title {
+        height: 64px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    .card-content {
+      font-size: 14px;
+    }
+    .ico-arr {
+      right: 30px;
+      bottom: 30px;
     }
   }
 }
@@ -402,25 +440,15 @@ main {
     height: 28px;
   }
   .mainTextArea {
-    padding: 0 30px;
     h2 {
-      width: 100%;
       font-size: 24px;
-      &::after {
-        width: 20px;
-        height: 2px;
-        margin-top: 16px;
-      }
     }
     .desc {
-      width: 100%;
-      margin-top: 16px;
       line-height: 22px;
       font-size: 14px;
     }
     a {
       margin-top: 60px;
-      margin-bottom: 96px;
     }
   }
   .l-useCase {
@@ -441,10 +469,6 @@ main {
       width: calc(100vw - 40px);
     }
     .case-content {
-      .title {
-        font-size: 28px;
-        @include ellipsis(2);
-      }
       .content {
         font-size: 14px;
       }

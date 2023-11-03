@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.l-cardList .card-item:hover .ico-arr, .l-useCase .case-item:hover .ico-arr {
+  background-image: url("../images/icon_arrow_on.svg");
+}
+
 main {
   padding: 0;
   min-height: 100vh;
@@ -64,10 +68,6 @@ main {
   aspect-ratio: 1/1;
 }
 
-.l-cardList .card-item:hover .ico-arr, .l-useCase .case-item:hover .ico-arr {
-  background-image: url("../images/icon_arrow_on.svg");
-}
-
 /* visual */
 .mainImageArea {
   position: relative;
@@ -110,10 +110,10 @@ main {
   background-color: #00d9c3;
 }
 .mainImageArea .owl-carousel .owl-nav button.owl-prev {
-  left: 104px;
+  left: 100px;
 }
 .mainImageArea .owl-carousel .owl-nav button.owl-next {
-  right: 104px;
+  right: 100px;
 }
 
 .mainTextArea {
@@ -128,6 +128,7 @@ main {
 }
 .mainTextArea h2 {
   display: block;
+  width: 100%;
   margin-top: 137px;
   line-height: 1;
   font-size: 48px;
@@ -147,17 +148,18 @@ main {
   color: #00ffde;
 }
 .mainTextArea .desc {
+  width: 100%;
   margin-top: 20px;
-  height: 60px;
+  min-height: 60px;
   line-height: 30px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 200;
   color: inherit;
 }
 .mainTextArea a {
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  margin: 25px auto 50px auto;
+  margin: 25px auto 0 auto;
   padding: 8px 24px;
   font-size: 16px;
   font-weight: 700;
@@ -298,6 +300,7 @@ main {
   height: 128px;
 }
 .l-cardList .card-title .badge {
+  flex: none;
   background-color: #f4f4f4;
   border-radius: 80px;
   line-height: 1;
@@ -309,6 +312,7 @@ main {
 }
 .l-cardList .card-title .title {
   height: 84px;
+  line-height: 42px;
   margin-top: auto;
   font-size: 30px;
   font-weight: 700;
@@ -337,15 +341,41 @@ main {
   transition: none;
 }
 
-@media (max-width: 907px) {
+@media (max-width: 1439px) {
+  /* owl nav button custom*/
+  .mainImageArea .owl-carousel .owl-nav button.owl-prev {
+    left: 10px;
+  }
+  .mainImageArea .owl-carousel .owl-nav button.owl-next {
+    right: 10px;
+  }
   .l-content {
-    max-width: 1000px;
+    max-width: 768px;
     width: 100vw;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .mainTextArea h2 {
+    width: 100%;
+    margin-top: 135px;
+    font-size: 36px;
+  }
+  .mainTextArea h2::after {
+    width: 20px;
+    height: 2px;
+    margin-top: 16px;
+  }
+  .mainTextArea .desc {
+    width: 100%;
+    margin-top: 16px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  .mainTextArea a {
+    margin-top: 60px;
   }
   .l-useCase .btn-seeall {
-    right: 70px;
+    right: 24px;
   }
   .l-useCase .case-list {
     gap: 30px;
@@ -353,6 +383,17 @@ main {
   .l-useCase .case-item {
     flex: 0 1 auto;
     width: calc(50% - 15px);
+    height: 422px;
+  }
+  .l-useCase .case-thumb {
+    height: 200px;
+  }
+  .l-useCase .case-content .title {
+    font-size: 24px;
+  }
+  .l-useCase .case-content .content {
+    margin-top: 12px;
+    font-size: 14px;
   }
   .l-cardList .card-list {
     gap: 30px;
@@ -360,9 +401,22 @@ main {
   .l-cardList .card-item {
     flex: 0 1 auto;
     width: calc(50% - 15px);
+    padding: 30px;
+  }
+  .l-cardList .card-title .title {
+    height: 64px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .l-cardList .card-content {
+    font-size: 14px;
+  }
+  .l-cardList .ico-arr {
+    right: 30px;
+    bottom: 30px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 767px) {
   .br-pc {
     display: none;
   }
@@ -384,27 +438,15 @@ main {
     width: 28px;
     height: 28px;
   }
-  .mainTextArea {
-    padding: 0 30px;
-  }
   .mainTextArea h2 {
-    width: 100%;
     font-size: 24px;
   }
-  .mainTextArea h2::after {
-    width: 20px;
-    height: 2px;
-    margin-top: 16px;
-  }
   .mainTextArea .desc {
-    width: 100%;
-    margin-top: 16px;
     line-height: 22px;
     font-size: 14px;
   }
   .mainTextArea a {
     margin-top: 60px;
-    margin-bottom: 96px;
   }
   .l-useCase .btn-seeall {
     position: relative;
@@ -421,16 +463,6 @@ main {
   }
   .l-useCase .case-item {
     width: calc(100vw - 40px);
-  }
-  .l-useCase .case-content .title {
-    font-size: 28px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* 라인수 */
-    -webkit-box-orient: vertical;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: keep-all;
   }
   .l-useCase .case-content .content {
     font-size: 14px;
