@@ -21,7 +21,6 @@
 
 /* 공지사항 */
 .mainNotice.l-content {
-  padding-top: 60px;
   padding-bottom: 0;
 }
 .mainNotice .btn-seeall {
@@ -262,6 +261,11 @@
   color: #fff;
 }
 
+@media (min-width: 1440px) {
+  .mainNotice.l-content {
+    padding-top: 120px;
+  }
+}
 @media (max-width: 1439px) {
   .mainImageArea.main .mainTextArea .desc {
     height: 72px;
