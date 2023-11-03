@@ -41,7 +41,7 @@
   text-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
 .midmFeature .feature-item:nth-child(1) {
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 217, 195, 0.8) 0%, rgba(42, 43, 43, 0.2) 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 217, 195, 0.8) 0%, rgba(0, 217, 195, 0.2) 100%);
 }
 .midmFeature .feature-item:nth-child(1):hover {
   background-image: url("../images/img_midm_feature_01.png");

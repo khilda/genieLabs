@@ -52,8 +52,9 @@
         background-image: radial-gradient(
           50% 50% at 50% 50%,
           rgba(0, 217, 195, 0.8) 0%,
-          rgba(42, 43, 43, 0.2) 100%
+          rgba(0, 217, 195, 0.2) 100%
         );
+
         &:hover {
           background-image: url("../images/img_midm_feature_01.png");
         }
