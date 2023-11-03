@@ -37,20 +37,23 @@
 .midmFeature .feature-item:hover .feature-title::after {
   background-color: #fff;
 }
+.midmFeature .feature-item:hover .feature-desc {
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
 .midmFeature .feature-item:nth-child(1) {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 217, 195, 0.8) 0%, rgba(0, 217, 195, 0.2) 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 217, 195, 0.8) 0%, rgba(42, 43, 43, 0.2) 100%);
 }
 .midmFeature .feature-item:nth-child(1):hover {
   background-image: url("../images/img_midm_feature_01.png");
 }
 .midmFeature .feature-item:nth-child(2) {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(92, 78, 255, 0.8) 0%, rgba(92, 78, 255, 0.2) 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(92, 78, 255, 0.8) 0%, rgba(92, 78, 255, 0.2) 100%);
 }
 .midmFeature .feature-item:nth-child(2):hover {
   background-image: url("../images/img_midm_feature_02.png");
 }
 .midmFeature .feature-item:nth-child(3) {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(151, 71, 255, 0.8) 0%, rgba(151, 71, 255, 0.2) 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(151, 71, 255, 0.8) 0%, rgba(151, 71, 255, 0.2) 100%);
 }
 .midmFeature .feature-item:nth-child(3):hover {
   background-image: url("../images/img_midm_feature_03.png");
@@ -310,7 +313,7 @@
     font-size: 24px;
   }
   .midmFeature .feature-title::after {
-    margin: 30px auto;
+    margin: 20px auto;
   }
   .midmFeature .feature-desc {
     font-size: 14px;
