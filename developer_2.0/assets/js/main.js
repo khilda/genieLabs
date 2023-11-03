@@ -34,11 +34,13 @@ function eventHeader() {
   document.querySelectorAll(".gnb-1dep").forEach((gnb1dep, idx, gnb1deps) => {
     gnb1dep.addEventListener("mouseenter", (e) => {
       if (window.innerWidth >= 1440) {
-        gnb1deps.forEach((dep1) => dep1.classList.remove("is-active"));
+        gnb1deps.forEach((dep1) => {
+          if (dep1 !== gnb1dep) dep1.classList.remove("is-active");
+        });
         gnb1dep.classList.add("is-active");
       }
     });
-    document.querySelector(".gnb").addEventListener("mouseleave", (e) => {
+    document.querySelector(".header").addEventListener("mouseleave", (e) => {
       if (window.innerWidth >= 1440) {
         gnb1deps.forEach((dep1) => dep1.classList.remove("is-active"));
       }
