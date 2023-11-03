@@ -248,6 +248,7 @@ main {
 }
 .l-useCase .case-content .content {
   margin-top: 20px;
+  line-height: 30px;
   font-size: 18px;
   font-weight: 400;
   color: #000;
@@ -328,6 +329,7 @@ main {
 }
 .l-cardList .card-content {
   margin-top: 20px;
+  line-height: 30px;
   font-size: 16px;
   font-weight: 400;
   display: -webkit-box;
@@ -391,6 +393,7 @@ main {
   }
   .l-useCase .case-content .content {
     margin-top: 12px;
+    line-height: 22px;
     font-size: 14px;
   }
   .l-cardList .card-list {
@@ -407,6 +410,7 @@ main {
     line-height: 32px;
   }
   .l-cardList .card-content {
+    line-height: 22px;
     font-size: 14px;
   }
   .l-cardList .ico-arr {

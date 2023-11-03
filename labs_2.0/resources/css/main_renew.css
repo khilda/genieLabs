@@ -27,6 +27,7 @@
 /* 공지사항 */
 .mainNotice.l-content {
   padding-top: 120px;
+  padding-bottom: 0;
 }
 .mainNotice .btn-seeall {
   position: absolute;
@@ -151,6 +152,7 @@
 }
 .mainGenieDeveloper .gd-content .content {
   margin-top: 20px;
+  line-height: 30px;
   font-size: 18px;
   font-weight: 400;
   color: inherit;
@@ -354,10 +356,14 @@
     font-size: 28px;
   }
   .mainGenieDeveloper .gd-content .content {
+    line-height: 22px;
     font-size: 14px;
   }
   .mainFacebook .fb-item {
     width: calc(100vw - 40px);
-    height: 346px;
+    height: 348px;
+  }
+  .mainFacebook .fb-item .fb-thumb {
+    height: 160px;
   }
 }

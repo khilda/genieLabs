@@ -241,6 +241,7 @@ main {
       }
       .content {
         margin-top: 20px;
+        line-height: 30px;
         font-size: 18px;
         font-weight: 400;
         color: #000;
@@ -319,6 +320,7 @@ main {
     }
     &-content {
       margin-top: 20px;
+      line-height: 30px;
       font-size: 16px;
       font-weight: 400;
       @include ellipsis(3);
@@ -385,6 +387,7 @@ main {
       }
       .content {
         margin-top: 12px;
+        line-height: 22px;
         font-size: 14px;
       }
     }
@@ -406,6 +409,7 @@ main {
       }
     }
     .card-content {
+      line-height: 22px;
       font-size: 14px;
     }
     .ico-arr {

@@ -18,6 +18,7 @@
 .mainNotice {
   &.l-content {
     padding-top: 120px;
+    padding-bottom: 0;
   }
   .btn-seeall {
     position: absolute;
@@ -147,6 +148,7 @@
     }
     .content {
       margin-top: 20px;
+      line-height: 30px;
       font-size: 18px;
       font-weight: 400;
       color: inherit;
@@ -355,6 +357,7 @@
         font-size: 28px;
       }
       .content {
+        line-height: 22px;
         font-size: 14px;
       }
     }
@@ -362,7 +365,10 @@
   .mainFacebook {
     .fb-item {
       width: calc(100vw - 40px);
-      height: 346px;
+      height: 348px;
+      .fb-thumb {
+        height: 160px;
+      }
     }
   }
 }
