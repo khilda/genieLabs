@@ -31,13 +31,12 @@
       <button type="button" data-popup="popupTemplate">
         template 정보팝업
       </button>
-      <button type="button" class="openPopup">Event 설정팝업</button>
-      <button type="button" class="openPopup">변수명 설정팝업</button>
-      <button type="button" class="openPopup">API 설정팝업</button>
+      <button type="button" data-popup="popupEvent">Event 설정팝업</button>
+      <button type="button" data-popup="popupVarName">변수명 설정팝업</button>
+      <button type="button" data-popup="popupAPI">API 설정팝업</button>
     </div>
     <!-- //POPUP GUIDE : 개발시 삭제 -->
     <div class="wrap">
-      
       <header class="header">
         <article class="header-container">
           <a href="/src/main/index.html" class="logo">GenieGround</a>
@@ -50,7 +49,9 @@
                 <div class="gnb-2dep">
                   <a href="#demoBuilder" class="gnb-menu">Demo Builder</a>
                   <a href="#Playground" class="gnb-menu">Playground</a>
-                  <a href="#LETS" class="gnb-menu">LETS<i class="ico-link"></i></a>
+                  <a href="#LETS" class="gnb-menu"
+                    >LETS<i class="ico-link"></i
+                  ></a>
                 </div>
               </div>
               <a href="#Docs" class="gnb-1dep gnb-menu">Docs</a>
@@ -97,7 +98,7 @@
               메뉴닫기
             </button>
           </div>
-          
+
           <button type="button" id="gnbOpen" class="btn-gnb open">
             메뉴열기
           </button>
@@ -282,18 +283,101 @@
         </div>
       </footer>
     </div>
-    <!-- layer popup -->
-    <article id="popupTemplate" class="dialog">
-      <h1 class="dialog-title">변수명을 입력해주세요.</h1>
+    <!-- layer popup : Template 설정팝업 -->
+    <article id="popupTemplate" class="dialog" style="width: 500px;">
       <section class="dialog-content">
-        <p class="">
-          변수명이 입력되면 해당 변수명의 속성값으로 데이터가 저장됩니다.
-        </p>
-        <input
-          type="text"
-          class="ipt edit-ipt"
-          placeholder="등록 될 데모 명을 입력하세요."
-        />
+        <dl class="df-group">
+          <dt class="df-title">템플릿명</dt>
+          <dd class="df-content">음성출력</dd>
+        </dl>
+        <dl class="df-group">
+          <dt class="df-title">템플릿 설명</dt>
+          <dd class="df-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In atque
+            nobis nostrum dolores minima aperiam voluptatibus alias, illum
+            culpa.
+          </dd>
+        </dl>
+        <dl class="df-group">
+          <dt class="df-title">UI 미리보기</dt>
+          <dd class="df-content"></dd>
+        </dl>
+      </section>
+      <footer class="dialog-footer">
+        <button type="button" class="btn cancel">Cancel</button>
+        <button type="button" class="btn">OK</button>
+      </footer>
+    </article>
+    <!-- layer popup : Event 설정팝업 -->
+    <article id="popupEvent" class="dialog" style="width: 560px;">
+      <section class="dialog-content">
+        <dl class="df-group">
+          <dt class="df-title">Attach Point</dt>
+          <dd class="df-content">
+            <div class="select-container count-select">
+              <div class="select-box"></div>
+              <ul class="select-options"></ul>
+              <select class="select">
+                <option value="10" default>Component Attach Point</option>
+              </select>
+            </div>
+          </dd>
+        </dl>
+        <dl class="df-group">
+          <dt class="df-title">이벤트 타입</dt>
+          <dd class="df-content">
+            <div class="select-container count-select">
+              <div class="select-box"></div>
+              <ul class="select-options"></ul>
+              <select class="select">
+                <option value="10" default>Output Data</option>
+              </select>
+            </div>
+          </dd>
+        </dl>
+        <dl class="df-group">
+          <dt class="df-title">이벤트 설명</dt>
+          <dd class="df-content">
+            해당 Event는 Attach Component의 데이터를 자식의 Component로 전달하기
+            위한 이벤트
+          </dd>
+        </dl>
+      </section>
+      <footer class="dialog-footer">
+        <button type="button" class="btn cancel">Cancel</button>
+        <button type="button" class="btn">OK</button>
+      </footer>
+    </article>
+    <!-- layer popup : 변수명 팝업 -->
+    <article id="popupVarName" class="dialog">
+      <section class="dialog-content">
+        <dl class="df-group">
+          <dt class="df-title">변수명을 입력해주세요.</dt>
+          <dd class="df-desc">
+            변수명이 입력되면 해당 변수명의 속성값으로 데이터가 저장됩니다.
+          </dd>
+          <dd class="df-content">
+            <input
+              type="text"
+              class="ipt edit-ipt"
+              placeholder="변수명을 입력해주세요.(영문, 숫자 20자)"
+            />
+          </dd>
+        </dl>
+      </section>
+      <footer class="dialog-footer">
+        <button type="button" class="btn cancel">Cancel</button>
+        <button type="button" class="btn">OK</button>
+      </footer>
+    </article>
+    <!-- layer popup : API 설정 팝업 -->
+    <article id="popupAPI" class="dialog" style="width: 880px;">
+      <section class="dialog-content">
+        <dl class="df-group">
+          <dt class="df-title">API 설정</dt>
+          <dd class="df-content">
+          </dd>
+        </dl>
       </section>
       <footer class="dialog-footer">
         <button type="button" class="btn cancel">Cancel</button>
@@ -304,15 +388,18 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       // popup
-      document.querySelector("[data-popup]").addEventListener("click", (e) => {
-        const target = e.target.dataset.popup;
-        openCustomPopup(target);
+      document.querySelectorAll("[data-popup]").forEach((popBtn) => {
+        popBtn.addEventListener("click", (e) => {
+          const target = e.target.dataset.popup;
+          openCustomPopup(target);
+        });
       });
       function openCustomPopup(target) {
         let dimmed = document.createElement("div");
         dimmed.classList.add("dimmed");
         document.body.prepend(dimmed);
         document.body.setAttribute("style", "overflow:hidden");
+        console.log(target, " 팝업 오픈");
         document.getElementById(target).classList.add("is-show");
         closeCustomPopup();
       }

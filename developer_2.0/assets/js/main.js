@@ -90,7 +90,7 @@ function eventTopButton() {
  * Quick Menu
  */
 function eventQuickToggle() {
-  const _quickContainer = document.querySelector(".quick-container");
+  const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
   // quick menu open/close
   _quickContainer
@@ -98,7 +98,7 @@ function eventQuickToggle() {
     .addEventListener("click", (e) => {
       const _quickBtn = e.target;
       const btnH = _quickBtn.offsetHeight;
-      const _quick = _quickContainer.querySelector(".quick");
+      const _quick = _quickContainer.querySelector(".quick-container");
       const h = _quick.offsetHeight + btnH / 2;
       if (_quickBtn.classList.contains("is-open")) {
         _quickBtn.classList.remove("is-open");
@@ -113,7 +113,7 @@ function eventQuickToggle() {
 }
 const quickSection = [];
 function eventQuickScroll() {
-  const _quickContainer = document.querySelector(".quick-container");
+  const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
   // 클릭시 해당메뉴로 이동
   const quickLink = _quickContainer.querySelector(".quick-link");
@@ -141,7 +141,7 @@ function eventQuickScroll() {
 }
 
 function eventQuickLinkActive() {
-  const _quickContainer = document.querySelector(".quick-container");
+  const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
   quickSection.forEach((section) => {
     const startPoint = section.offsetTop - 50;
