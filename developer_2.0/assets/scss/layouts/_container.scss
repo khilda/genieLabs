@@ -92,32 +92,6 @@
   }
 }
 
-// images
-.docs .container-header {
-  background-image: url("../images/img_page_title_docs.svg");
-}
-.demo .container-header {
-  background-image: url("../images/img_page_title_demo.svg");
-}
-.sampleCode .container-header {
-  background-image: url("../images/img_page_title_sampleCode.svg");
-}
-.applications .container-header {
-  background-image: url("../images/img_page_title_applications.svg");
-}
-.forum .container-header {
-  background-image: url("../images/img_page_title_forum.svg");
-}
-.myGround .container-header {
-  background-image: url("../images/img_page_title_myground.svg");
-  background-position: 50% 50%;
-  background-size: cover;
-  text-align: center;
-}
-.builder .container-header {
-  background-image: url("../images/img_page_title_forum.svg");
-}
-
 @include tablet {
   .container {
     padding: 0 50px;
@@ -146,24 +120,6 @@
   .main .container {
     padding: 0;
   }
-  .docs .container-header {
-    background-position: calc(100% - -48px) calc(100% - -18px);
-  }
-  .sampleCode .container-header {
-    background-position: calc(100% - -60px) 100%;
-  }
-  .applications .container-header {
-    background-position: calc(100% - -40px) 100%;
-  }
-  .forum .container-header {
-    background-position: calc(100% - -40px) 100%;
-  }
-  .myGround .container-header {
-    background-image: url("../images/img_page_title_myground_m.svg");
-    background-position: 100% 100%;
-    background-size: auto;
-    text-align: left;
-  }
 }
 @include mobile {
   .container {
@@ -181,7 +137,7 @@
     }
   }
   .container-header {
-    background-size: auto;
+    background-position: 50% 100%;
     height: 400px;
     margin-bottom: 20px;
     padding: 50px 20px 0px;
@@ -197,7 +153,7 @@
     padding-left: 0;
     padding-right: 0;
     text-align: center;
-    .search-input{
+    .search-input {
       width: 100%;
       margin-bottom: 10px;
     }
@@ -208,20 +164,97 @@
       }
     }
   }
-  .docs .container-header,
-  .demo .container-header,
-  .sampleCode .container-header,
-  .applications .container-header,
-  .myGround .container-header {
-    background-size: 320px;
-    background-position: center 100%;
+}
+
+//************************************
+//# Page Title Background
+//************************************
+@include desktop {
+  // images
+  .docs .container-header {
+    background-image: url("../images/img_page_title_docs.png");
+  }
+  .demo .container-header {
+    background-image: url("../images/img_page_title_docs.png");
+  }
+  .sampleCode .container-header {
+    background-image: url("../images/img_page_title_evaluation.png");
+  }
+  .applications .container-header {
+    background-image: url("../images/img_page_title_data.png");
   }
   .forum .container-header {
-    background-size: 530px;
-    background-position: calc(50% - 16px) 100%;
+    background-image: url("../images/img_page_title_forum.png");
   }
   .myGround .container-header {
-    text-align: center;
+    background-image: url("../images/img_page_title_console.png");
+  }
+  .midm .container-header {
+    background-image: url("../images/img_page_title_midm.png");
+  }
+  .api .container-header {
+    background-image: url("../images/img_page_title_api.png");
+  }
+  .support .container-header {
+    background-image: url("../images/img_page_title_support.png");
+  }
+}
+@include tablet-only {
+  .docs .container-header {
+    background-image: url("../images/img_page_title_docs_t.png");
+  }
+  .demo .container-header {
+    background-image: url("../images/img_page_title_docs_t.png");
+  }
+  .sampleCode .container-header {
+    background-image: url("../images/img_page_title_evaluation_t.png");
+  }
+  .applications .container-header {
+    background-image: url("../images/img_page_title_data_t.png");
+  }
+  .forum .container-header {
+    background-image: url("../images/img_page_title_forum_t.png");
+  }
+  .myGround .container-header {
+    background-image: url("../images/img_page_title_console_t.png");
+  }
+  .midm .container-header {
+    background-image: url("../images/img_page_title_midm_t.png");
+  }
+  .api .container-header {
+    background-image: url("../images/img_page_title_api_t.png");
+  }
+  .support .container-header {
+    background-image: url("../images/img_page_title_support_t.png");
+  }
+}
+@include mobile {
+  .docs .container-header {
+    background-image: url("../images/img_page_title_docs_m.png");
+  }
+  .demo .container-header {
+    background-image: url("../images/img_page_title_docs_m.png");
+  }
+  .sampleCode .container-header {
+    background-image: url("../images/img_page_title_evaluation_m.png");
+  }
+  .applications .container-header {
+    background-image: url("../images/img_page_title_data_m.png");
+  }
+  .forum .container-header {
+    background-image: url("../images/img_page_title_forum_m.png");
+  }
+  .myGround .container-header {
+    background-image: url("../images/img_page_title_console_m.png");
+  }
+  .midm .container-header {
+    background-image: url("../images/img_page_title_midm_m.png");
+  }
+  .api .container-header {
+    background-image: url("../images/img_page_title_api_m.png");
+  }
+  .support .container-header {
+    background-image: url("../images/img_page_title_support_m.png");
   }
 }
 

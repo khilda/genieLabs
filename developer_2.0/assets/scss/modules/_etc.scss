@@ -147,7 +147,7 @@
   position: relative;
   border: 2px solid #000;
   display: inline-flex;
-  &.type2{
+  &.type2 {
     border-color: #ccc;
     background-color: #fff;
   }
@@ -242,7 +242,6 @@
     }
   }
 }
-
 
 /* ##############################
 # components - loading, pageing loader
@@ -355,70 +354,67 @@ code {
 # components - quick menu(퀵메뉴)
 ################################*/
 .quick {
-  &-title {
-    margin-bottom: 18px;
-    font-size: 20px;
-    font-weight: 700;
-  }
-  &-link {
+  &-container {
+    background-color: #fff;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    width: 230px;
+    gap: 30px;
+    padding: 60px 0;
+  }
+  &-tit {
+    background-color: #f4f4f4;
+    padding: 9px 16px;
+    line-height: 19px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &-content {
+    position: relative;
     .link {
-      display: flex;
-      align-items: center;
-      &::after {
-        content: "";
-        display: block;
-        background: no-repeat 50% 50%;
-        width: 15px;
-        height: 15px;
-        margin-left: 15px;
-      }
-      &.main {
-        line-height: 40px;
-        font-weight: 500;
-        font-size: 16px;
-        color: #787878;
-        &:not(:first-child) {
-          margin-top: 30px;
-        }
-      }
-      &.sub {
-        line-height: 30px;
-        font-weight: 400;
-        font-size: 14px;
-        &::before {
-          content: "";
-          display: block;
-          background-color: #000;
-          border-radius: 50%;
-          width: 2px;
-          height: 2px;
-          margin-left: 3px;
-          margin-right: 8px;
-        }
-      }
-      &:hover,
-      &:active,
-      &.is-active {
-        font-weight: 700;
+      display: block;
+      width: 100%;
+      padding: 6px 40px;
+      line-height: 1.25;
+      font-weight: 400;
+      font-size: 14px;
+      color: #333;
+      &:hover {
+        background-color: rgba(53, 212, 248, 0.05);
+        color: #35d4f8;
         text-decoration: underline;
-        color: #000;
-        &::after {
-          background-image: url("../images/ico_quick_arrow.svg");
+        &::before {
+          background-color: #35d4f8;
         }
       }
+    }
+    > .link::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 13px;
+      left: 30px;
+      background-color: #333;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+    }
+  }
+  &-link-sub {
+    height: 0;
+    overflow: hidden;
+    &.is-show {
+      height: auto;
     }
   }
 }
 // PC 해상도
 @media (min-width: 1851px) {
-  .quick-container {
-    position: sticky;
-    top: 150px;
-  }
   .quick {
+    position: sticky;
+    top: 120px;
+  }
+  .quick-container {
     position: absolute;
     left: calc(50% - 906px);
     top: -60px;
@@ -429,7 +425,7 @@ code {
   }
 }
 @media (max-width: 1850px) {
-  .quick-container {
+  .quick {
     position: fixed;
     left: 30px;
     bottom: 30px;
@@ -438,32 +434,26 @@ code {
     z-index: 99;
     overflow: hidden;
     transition: all 0.2s;
+    &.is-open {
+      width: 296px;
+      height: auto;
+      .quick-container {
+        opacity: 1;
+        transition-delay: 0s;
+      }
+    }
   }
-  .quick {
+  .quick-container {
     position: absolute;
     left: 0;
     bottom: 30px;
-    border: 3px solid #160c0c;
+    border: 2px solid #160c0c;
     border-radius: 20px;
-    background-color: #fff;
-    width: 296px;
-    padding: 30px 30px 50px;
+    width: 226px;
+    padding: 20px 10px 40px;
     opacity: 0;
     transition: opacity 0.2s;
     transition-delay: 0.18s;
-    .quick-link {
-      border-radius: 10px;
-      background-color: #f4f4f4;
-      padding: 10px 20px;
-    }
-  }
-  .quick-container.is-open {
-    width: 296px;
-    height: auto;
-    .quick {
-      opacity: 1;
-      transition-delay: 0s;
-    }
   }
   .quick-collapse {
     position: absolute;
@@ -499,28 +489,18 @@ code {
 }
 
 @include mobile {
-  .quick-container {
+  .quick {
     left: 20px;
     bottom: 20px;
     width: 40px;
     height: 40px;
-  }
-  .quick-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  .quick {
-    bottom: 20px;
-    border-radius: 15px;
-    width: 266px;
-    padding: 15px 15px 30px;
-    .quick-link {
-      border-radius: 10px;
-      padding: 10px 20px;
+    &.is-open {
+      width: 266px;
     }
   }
-  .quick-container.is-open {
-    width: 266px;
+  .quick-container {
+    bottom: 20px;
+    padding: 15px 15px 30px;
   }
   .quick-collapse {
     border-radius: 8px;

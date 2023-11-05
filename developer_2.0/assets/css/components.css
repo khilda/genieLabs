@@ -2954,67 +2954,66 @@ code {
 /* ##############################
 # components - quick menu(퀵메뉴)
 ################################*/
-.quick-title {
-  margin-bottom: 18px;
-  font-size: 20px;
-  font-weight: 700;
-}
-.quick-link {
+.quick-container {
+  background-color: #fff;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  width: 230px;
+  gap: 30px;
+  padding: 60px 0;
 }
-.quick-link .link {
-  display: flex;
-  align-items: center;
-}
-.quick-link .link::after {
-  content: "";
-  display: block;
-  background: no-repeat 50% 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: 15px;
-}
-.quick-link .link.main {
-  line-height: 40px;
+.quick-tit {
+  background-color: #f4f4f4;
+  padding: 9px 16px;
+  line-height: 19px;
   font-weight: 500;
   font-size: 16px;
-  color: #787878;
 }
-.quick-link .link.main:not(:first-child) {
-  margin-top: 30px;
+.quick-content {
+  position: relative;
 }
-.quick-link .link.sub {
-  line-height: 30px;
+.quick-content .link {
+  display: block;
+  width: 100%;
+  padding: 6px 40px;
+  line-height: 1.25;
   font-weight: 400;
   font-size: 14px;
+  color: #333;
 }
-.quick-link .link.sub::before {
+.quick-content .link:hover {
+  background-color: rgba(53, 212, 248, 0.05);
+  color: #35d4f8;
+  text-decoration: underline;
+}
+.quick-content .link:hover::before {
+  background-color: #35d4f8;
+}
+.quick-content > .link::before {
   content: "";
   display: block;
-  background-color: #000;
+  position: absolute;
+  top: 13px;
+  left: 30px;
+  background-color: #333;
   border-radius: 50%;
-  width: 2px;
-  height: 2px;
-  margin-left: 3px;
-  margin-right: 8px;
+  width: 3px;
+  height: 3px;
 }
-.quick-link .link:hover, .quick-link .link:active, .quick-link .link.is-active {
-  font-weight: 700;
-  text-decoration: underline;
-  color: #000;
+.quick-link-sub {
+  height: 0;
+  overflow: hidden;
 }
-.quick-link .link:hover::after, .quick-link .link:active::after, .quick-link .link.is-active::after {
-  background-image: url("../images/ico_quick_arrow.svg");
+.quick-link-sub.is-show {
+  height: auto;
 }
 
 @media (min-width: 1851px) {
-  .quick-container {
-    position: sticky;
-    top: 150px;
-  }
   .quick {
+    position: sticky;
+    top: 120px;
+  }
+  .quick-container {
     position: absolute;
     left: calc(50% - 906px);
     top: -60px;
@@ -3025,7 +3024,7 @@ code {
   }
 }
 @media (max-width: 1850px) {
-  .quick-container {
+  .quick {
     position: fixed;
     left: 30px;
     bottom: 30px;
@@ -3035,31 +3034,25 @@ code {
     overflow: hidden;
     transition: all 0.2s;
   }
-  .quick {
-    position: absolute;
-    left: 0;
-    bottom: 30px;
-    border: 3px solid #160c0c;
-    border-radius: 20px;
-    background-color: #fff;
-    width: 296px;
-    padding: 30px 30px 50px;
-    opacity: 0;
-    transition: opacity 0.2s;
-    transition-delay: 0.18s;
-  }
-  .quick .quick-link {
-    border-radius: 10px;
-    background-color: #f4f4f4;
-    padding: 10px 20px;
-  }
-  .quick-container.is-open {
+  .quick.is-open {
     width: 296px;
     height: auto;
   }
-  .quick-container.is-open .quick {
+  .quick.is-open .quick-container {
     opacity: 1;
     transition-delay: 0s;
+  }
+  .quick-container {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    border: 2px solid #160c0c;
+    border-radius: 20px;
+    width: 226px;
+    padding: 20px 10px 40px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    transition-delay: 0.18s;
   }
   .quick-collapse {
     position: absolute;
@@ -3093,28 +3086,18 @@ code {
   }
 }
 @media (max-width: 742px) {
-  .quick-container {
+  .quick {
     left: 20px;
     bottom: 20px;
     width: 40px;
     height: 40px;
   }
-  .quick-title {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .quick.is-open {
+    width: 266px;
   }
-  .quick {
+  .quick-container {
     bottom: 20px;
-    border-radius: 15px;
-    width: 266px;
     padding: 15px 15px 30px;
-  }
-  .quick .quick-link {
-    border-radius: 10px;
-    padding: 10px 20px;
-  }
-  .quick-container.is-open {
-    width: 266px;
   }
   .quick-collapse {
     border-radius: 8px;
