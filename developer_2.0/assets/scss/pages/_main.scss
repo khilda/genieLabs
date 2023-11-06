@@ -16,6 +16,9 @@ $color-secondary-skyblue: #4ff3ff;
   --visual-link-hover-background: #000;
   --visual-link-hover-color: #fff;
   --btn-see-all: url("../images/ico_link_24_000.svg");
+  --main-gpu-icon: url("../images/icon_badge_gpu.svg");
+  --main-gpu-background: #dfdfdf;
+  --main-gpu-color: #787878;
 }
 .dark-theme {
   --visual-link-background: #000;
@@ -26,6 +29,9 @@ $color-secondary-skyblue: #4ff3ff;
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
   --btn-see-all: url("../images/ico_link_24_fff.svg");
+  --main-gpu-icon: url("../images/darkmode/icon_badge_gpu.svg");
+  --main-gpu-background: #787878;
+  --main-gpu-color: #dfdfdf;
 }
 // visual
 .main .footer {
@@ -104,13 +110,13 @@ $color-secondary-skyblue: #4ff3ff;
     margin-top: 120px;
   }
   .card {
+    .card-hover {
+      padding: 40px 30px;
+    }
     .card-txt {
       @include ellipsis(2);
       line-height: 42px;
       font-size: 30px;
-    }
-    .card-hover {
-      padding: 40px 30px;
     }
     .card-detail {
       display: none;
@@ -120,6 +126,19 @@ $color-secondary-skyblue: #4ff3ff;
       line-height: 30px;
       font-weight: 400;
       font-size: 18px;
+    }
+    .card-foot.link::before {
+      width: 42px;
+      height: 42px;
+    }
+    &:not(:hover) {
+      .badge {
+        background-color: var(--main-gpu-background);
+        color: var(--main-gpu-color);
+        &.gpu {
+          background-image: var(--main-gpu-icon);
+        }
+      }
     }
   }
 }

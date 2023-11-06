@@ -11,6 +11,9 @@
   --visual-link-hover-background: #000;
   --visual-link-hover-color: #fff;
   --btn-see-all: url("../images/ico_link_24_000.svg");
+  --main-gpu-icon: url("../images/icon_badge_gpu.svg");
+  --main-gpu-background: #dfdfdf;
+  --main-gpu-color: #787878;
 }
 
 .dark-theme {
@@ -22,6 +25,9 @@
   --visual-link-hover-background: #fff;
   --visual-link-hover-color: #000;
   --btn-see-all: url("../images/ico_link_24_fff.svg");
+  --main-gpu-icon: url("../images/darkmode/icon_badge_gpu.svg");
+  --main-gpu-background: #787878;
+  --main-gpu-color: #dfdfdf;
 }
 
 .main .footer {
@@ -99,6 +105,9 @@
 .main .card-container + .card-container {
   margin-top: 120px;
 }
+.main .card-container .card .card-hover {
+  padding: 40px 30px;
+}
 .main .card-container .card .card-txt {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 라인수 */
@@ -110,9 +119,6 @@
   line-height: 42px;
   font-size: 30px;
 }
-.main .card-container .card .card-hover {
-  padding: 40px 30px;
-}
 .main .card-container .card .card-detail {
   display: none;
   width: 320px;
@@ -121,6 +127,17 @@
   line-height: 30px;
   font-weight: 400;
   font-size: 18px;
+}
+.main .card-container .card .card-foot.link::before {
+  width: 42px;
+  height: 42px;
+}
+.main .card-container .card:not(:hover) .badge {
+  background-color: var(--main-gpu-background);
+  color: var(--main-gpu-color);
+}
+.main .card-container .card:not(:hover) .badge.gpu {
+  background-image: var(--main-gpu-icon);
 }
 
 .main .notice-container {
