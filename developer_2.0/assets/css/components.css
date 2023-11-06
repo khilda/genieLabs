@@ -1045,7 +1045,7 @@ button.badge:hover {
 # components - input[text]
 ################################*/
 .ipt {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   background-color: #fff;
   width: 100%;
   padding: 10px 20px;
@@ -1926,18 +1926,22 @@ button.badge:hover {
 .dialog-content .df-group {
   padding: 20px 10px;
 }
+.dialog-content .df-group + .df-group {
+  border-top: 1px solid #ccc;
+}
 .dialog-content .df-title {
+  margin-bottom: 20px;
   line-height: 1;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 .dialog-content .df-desc {
-  margin-top: 10px;
   line-height: 22px;
   font-size: 16px;
 }
 .dialog-content .df-content {
   margin-top: 20px;
+  font-size: 18px;
 }
 
 /* ##############################
@@ -3019,22 +3023,21 @@ code {
   height: auto;
 }
 
-@media (min-width: 1851px) {
+@media (min-width: 1440px) {
   .quick {
-    position: sticky;
-    top: 120px;
+    flex: none;
+    border-right: 1px solid #f4f4f4;
+    width: 210px;
   }
   .quick-container {
-    position: absolute;
-    left: calc(50% - 906px);
-    top: -60px;
-    width: 210px;
+    position: sticky;
+    top: 120px;
   }
   .quick-collapse {
     display: none;
   }
 }
-@media (max-width: 1850px) {
+@media (max-width: 1439px) {
   .quick {
     position: fixed;
     left: 30px;

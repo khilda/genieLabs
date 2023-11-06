@@ -348,22 +348,6 @@
 .docs .multi-column > .item > p {
   width: auto;
 }
-@media (min-width: 743px) and (max-width: 1439px) {
-  .docs .multi-column {
-    flex-wrap: wrap;
-  }
-  .docs .multi-column > .item {
-    min-width: 33.3333%;
-  }
-}
-@media (max-width: 742px) {
-  .docs .multi-column {
-    flex-direction: column;
-  }
-  .docs .multi-column > .item {
-    padding: 20px 0;
-  }
-}
 .docs .badge-container {
   flex-wrap: wrap;
 }
@@ -383,18 +367,6 @@
   top: 20px;
   background-image: url("../images/ico_file_file_78.svg");
 }
-@media (max-width: 742px) {
-  .docs .code-box .code {
-    padding-top: 50px;
-  }
-  .docs .code-box .btn-ico.copy {
-    background-size: 50%;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-  }
-}
 .docs .api-link {
   margin-top: 10px;
 }
@@ -408,6 +380,42 @@
   text-decoration: underline;
 }
 
+@media (min-width: 1440px) {
+  .docs .container-detail {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+  }
+  .docs .docs-container {
+    padding: 60px;
+  }
+}
+@media (min-width: 743px) and (max-width: 1439px) {
+  .docs .multi-column {
+    flex-wrap: wrap;
+  }
+  .docs .multi-column > .item {
+    min-width: 33.3333%;
+  }
+}
+@media (max-width: 742px) {
+  .docs .multi-column {
+    flex-direction: column;
+  }
+  .docs .multi-column > .item {
+    padding: 20px 0;
+  }
+  .docs .code {
+    padding-top: 50px;
+  }
+  .docs .btn-ico.copy {
+    background-size: 50%;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
 /* ##############################
 # pages - demo
 ################################*/

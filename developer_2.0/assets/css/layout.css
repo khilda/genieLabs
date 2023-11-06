@@ -586,13 +586,12 @@
   color: #fff;
 }
 .container-header .page-title {
-  margin-bottom: 14px;
-  line-height: 55px;
+  line-height: 60px;
   font-size: 48px;
   font-weight: 700;
 }
 .container-header .page-txt {
-  margin: 0 auto;
+  margin: 14px auto 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 400;
@@ -702,7 +701,7 @@
     background-position: 50% 100%;
     height: 400px;
     margin-bottom: 20px;
-    padding: 50px 20px 0px;
+    padding: 92px 20px 0px;
     text-align: center;
   }
   .container-header .page-title {

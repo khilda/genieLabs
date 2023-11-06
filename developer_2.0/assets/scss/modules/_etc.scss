@@ -409,22 +409,21 @@ code {
   }
 }
 // PC 해상도
-@media (min-width: 1851px) {
+@include desktop {
   .quick {
-    position: sticky;
-    top: 120px;
+    flex: none;
+    border-right: 1px solid #f4f4f4;
+    width: 210px;
   }
   .quick-container {
-    position: absolute;
-    left: calc(50% - 906px);
-    top: -60px;
-    width: 210px;
+    position: sticky;
+    top: 120px;
   }
   .quick-collapse {
     display: none;
   }
 }
-@media (max-width: 1850px) {
+@include tablet {
   .quick {
     position: fixed;
     left: 30px;

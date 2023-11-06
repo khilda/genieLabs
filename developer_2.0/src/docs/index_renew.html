@@ -85,12 +85,6 @@
         </nav>
         <section class="container-header">
           <h1 class="page-title">GenieLabs Documentation</h1>
-          <p class="page-txt">
-            GenieLabs Documentation은 개발자들이 <br class="br-mo" />GenieLabs
-            플랫폼을<br class="br-pc" />
-            통해 보다 쉽게 API를 <br class="br-mo" />활용할 수 있도록 안내하고
-            있습니다.
-          </p>
         </section>
         <section class="container-content container-detail">
           <!-- 퀵메뉴 -->
@@ -148,165 +142,171 @@
             </div>
             <button type="button" class="quick-collapse"></button>
           </div>
-
-          <article id="docsEditor">
-            <div>
-              <h1>h1 Title</h1>
-              <h2>h2 Title</h2>
-              <h3>h3 Title</h3>
-              <h4>h4 Title</h4>
-              <h5>h5 Title</h5>
-            </div>
-            <hr />
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
-                minus? Voluptatum corporis minus natus libero vel ducimus
-                explicabo dicta quisquam labore tempore consectetur corrupti
-                blanditiis aut, adipisci numquam accusantium exercitationem?
-              </p>
+          <article class="docs-container">
+            <div id="docsEditor">
+              <div>
+                <h1>h1 Title</h1>
+                <h2>h2 Title</h2>
+                <h3>h3 Title</h3>
+                <h4>h4 Title</h4>
+                <h5>h5 Title</h5>
+              </div>
               <hr />
-              <p>
-                <a href="#AnchorTag" class="underline">A Tag</a>
-                <b>굵은글씨</b>
-                <strong>굵은글씨</strong>
-                <em>이탤릭</em>
-                <del>취소선</del>
-                <u>밑줄</u>
-                <code>인라인코드</code>
-              </p>
-              <hr />
-              <h5>blockquote tag</h5>
-              <blockquote>
+              <div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,
                   minus? Voluptatum corporis minus natus libero vel ducimus
                   explicabo dicta quisquam labore tempore consectetur corrupti
                   blanditiis aut, adipisci numquam accusantium exercitationem?
                 </p>
-              </blockquote>
-            </div>
-            <hr />
-            <div>
-              <h5>UL tag</h5>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Officia impedit laborum eius aperiam, facere, pariatur
-                  necessitatibus ut consectetur error vitae laboriosam ipsum.
-                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Officia impedit laborum eius aperiam, facere, pariatur
-                  necessitatibus ut consectetur error vitae laboriosam ipsum.
-                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
-                </li>
-              </ul>
-            </div>
-            <hr />
-            <div>
-              <h5>OL tag</h5>
-              <ol>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Officia impedit laborum eius aperiam, facere, pariatur
-                  necessitatibus ut consectetur error vitae laboriosam ipsum.
-                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Officia impedit laborum eius aperiam, facere, pariatur
-                  necessitatibus ut consectetur error vitae laboriosam ipsum.
-                  Cumque iste suscipit ex culpa, voluptatum deleniti? Assumenda?
-                </li>
-              </ol>
-            </div>
-            <hr />
-            <div>
-              <h5>address tag</h5>
-              <address>
-                <p>홍길동</p>
-              </address>
-            </div>
-            <hr />
-            <div>
-              <h5>PRE tag</h5>
-              <pre>
-FROM 이미지명:태그명 
-WOKRDIR /home/workdir
-EXPOSE 80 CMD "python", "-m", "api"</pre
-              >
-            </div>
-            <hr />
-            <div>
-              <h5>Img tag</h5>
-              <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
-            </div>
-            <hr />
-            <div>
-              <h5>table tag</h5>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Status Code</th>
-                    <th>Code</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>400</td>
-                    <td>5000</td>
-                    <td>HTTP Request Method(GET, POST) 오류</td>
-                  </tr>
-                  <tr>
-                    <td>400</td>
-                    <td>5001</td>
-                    <td>요청 파라미터 설정 오류</td>
-                  </tr>
-                  <tr>
-                    <td>400</td>
-                    <td>5002</td>
-                    <td>Request Body 포맷 오류 - PARSE_ERR / READ_ERR</td>
-                  </tr>
-                  <tr>
-                    <td>401</td>
-                    <td>5003</td>
-                    <td>인증 실패</td>
-                  </tr>
-                  <tr>
-                    <td>429</td>
-                    <td>5004</td>
-                    <td>일 호출 건 수 초과</td>
-                  </tr>
-                  <tr>
-                    <td>500</td>
-                    <td>5005</td>
-                    <td>Request Body data read 에러</td>
-                  </tr>
-                  <tr>
-                    <td>500</td>
-                    <td>5006</td>
-                    <td>http.Request() 에러</td>
-                  </tr>
-                  <tr>
-                    <td>500</td>
-                    <td>5007</td>
-                    <td>엔진 타임아웃 등</td>
-                  </tr>
-                  <tr>
-                    <td>500</td>
-                    <td>5008</td>
-                    <td>Response Body data read 에러 등</td>
-                  </tr>
-                  <tr>
-                    <td>500</td>
-                    <td>50xx</td>
-                    <td>...</td>
-                  </tr>
-                </tbody>
-              </table>
+                <hr />
+                <p>
+                  <a href="#AnchorTag" class="underline">A Tag</a>
+                  <b>굵은글씨</b>
+                  <strong>굵은글씨</strong>
+                  <em>이탤릭</em>
+                  <del>취소선</del>
+                  <u>밑줄</u>
+                  <code>인라인코드</code>
+                </p>
+                <hr />
+                <h5>blockquote tag</h5>
+                <blockquote>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Vel, minus? Voluptatum corporis minus natus libero vel
+                    ducimus explicabo dicta quisquam labore tempore consectetur
+                    corrupti blanditiis aut, adipisci numquam accusantium
+                    exercitationem?
+                  </p>
+                </blockquote>
+              </div>
+              <hr />
+              <div>
+                <h5>UL tag</h5>
+                <ul>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia impedit laborum eius aperiam, facere, pariatur
+                    necessitatibus ut consectetur error vitae laboriosam ipsum.
+                    Cumque iste suscipit ex culpa, voluptatum deleniti?
+                    Assumenda?
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia impedit laborum eius aperiam, facere, pariatur
+                    necessitatibus ut consectetur error vitae laboriosam ipsum.
+                    Cumque iste suscipit ex culpa, voluptatum deleniti?
+                    Assumenda?
+                  </li>
+                </ul>
+              </div>
+              <hr />
+              <div>
+                <h5>OL tag</h5>
+                <ol>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia impedit laborum eius aperiam, facere, pariatur
+                    necessitatibus ut consectetur error vitae laboriosam ipsum.
+                    Cumque iste suscipit ex culpa, voluptatum deleniti?
+                    Assumenda?
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Officia impedit laborum eius aperiam, facere, pariatur
+                    necessitatibus ut consectetur error vitae laboriosam ipsum.
+                    Cumque iste suscipit ex culpa, voluptatum deleniti?
+                    Assumenda?
+                  </li>
+                </ol>
+              </div>
+              <hr />
+              <div>
+                <h5>address tag</h5>
+                <address>
+                  <p>홍길동</p>
+                </address>
+              </div>
+              <hr />
+              <div>
+                <h5>PRE tag</h5>
+                <pre>
+            FROM 이미지명:태그명 
+            WOKRDIR /home/workdir
+            EXPOSE 80 CMD "python", "-m", "api"</pre
+                >
+              </div>
+              <hr />
+              <div>
+                <h5>Img tag</h5>
+                <img src="https://placehold.co/700x400/EEE/31343C" alt="" />
+              </div>
+              <hr />
+              <div>
+                <h5>table tag</h5>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Status Code</th>
+                      <th>Code</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>400</td>
+                      <td>5000</td>
+                      <td>HTTP Request Method(GET, POST) 오류</td>
+                    </tr>
+                    <tr>
+                      <td>400</td>
+                      <td>5001</td>
+                      <td>요청 파라미터 설정 오류</td>
+                    </tr>
+                    <tr>
+                      <td>400</td>
+                      <td>5002</td>
+                      <td>Request Body 포맷 오류 - PARSE_ERR / READ_ERR</td>
+                    </tr>
+                    <tr>
+                      <td>401</td>
+                      <td>5003</td>
+                      <td>인증 실패</td>
+                    </tr>
+                    <tr>
+                      <td>429</td>
+                      <td>5004</td>
+                      <td>일 호출 건 수 초과</td>
+                    </tr>
+                    <tr>
+                      <td>500</td>
+                      <td>5005</td>
+                      <td>Request Body data read 에러</td>
+                    </tr>
+                    <tr>
+                      <td>500</td>
+                      <td>5006</td>
+                      <td>http.Request() 에러</td>
+                    </tr>
+                    <tr>
+                      <td>500</td>
+                      <td>5007</td>
+                      <td>엔진 타임아웃 등</td>
+                    </tr>
+                    <tr>
+                      <td>500</td>
+                      <td>5008</td>
+                      <td>Response Body data read 에러 등</td>
+                    </tr>
+                    <tr>
+                      <td>500</td>
+                      <td>50xx</td>
+                      <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </article>
         </section>
