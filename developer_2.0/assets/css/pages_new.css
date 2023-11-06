@@ -132,11 +132,11 @@
   width: 42px;
   height: 42px;
 }
-.main .card-container .card:not(:hover) .badge {
+.main .card-container .card:not(:hover) .card-badge .badge {
   background-color: var(--main-gpu-background);
   color: var(--main-gpu-color);
 }
-.main .card-container .card:not(:hover) .badge.gpu {
+.main .card-container .card:not(:hover) .card-badge .badge.gpu {
   background-image: var(--main-gpu-icon);
 }
 
@@ -211,6 +211,9 @@
   }
   .main .card:hover .card-hover .btn-bookmark {
     background-image: url("../images/ico_bookmark_b.svg");
+  }
+  .main .card:hover .card-hover .btn-bookmark:hover {
+    background-image: url("../images/ico_bookmark_b_active.svg");
   }
   .main .card:hover .card-hover .card-body .card-detail {
     display: -webkit-box;

@@ -974,10 +974,7 @@
   font-size: 0;
   color: transparent;
 }
-.btn-bookmark:hover {
-  opacity: 0.5;
-}
-.btn-bookmark.is-active {
+.btn-bookmark:hover, .btn-bookmark.is-active {
   background-image: var(--card-icon-bookmark-active);
 }
 

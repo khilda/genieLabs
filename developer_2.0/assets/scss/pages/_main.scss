@@ -131,7 +131,7 @@ $color-secondary-skyblue: #4ff3ff;
       width: 42px;
       height: 42px;
     }
-    &:not(:hover) {
+    &:not(:hover) .card-badge {
       .badge {
         background-color: var(--main-gpu-background);
         color: var(--main-gpu-color);
@@ -212,6 +212,9 @@ $color-secondary-skyblue: #4ff3ff;
         }
         .btn-bookmark {
           background-image: url("../images/ico_bookmark_b.svg");
+          &:hover {
+            background-image: url("../images/ico_bookmark_b_active.svg");
+          }
         }
         .card-body .card-detail {
           display: -webkit-box;

@@ -124,9 +124,7 @@
   height: 48px;
   font-size: 0;
   color: transparent;
-  &:hover {
-    opacity: 0.5;
-  }
+  &:hover,
   &.is-active {
     background-image: var(--card-icon-bookmark-active);
   }
