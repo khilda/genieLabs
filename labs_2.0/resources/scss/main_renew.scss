@@ -16,11 +16,6 @@
   &.l-content {
     padding-bottom: 0;
   }
-  .btn-seeall {
-    position: absolute;
-    top: 120px;
-    right: 0;
-  }
   .notice {
     &-list {
       display: flex;
@@ -70,9 +65,6 @@
     }
   }
 }
-/* Use Case */
-.l-useCase.main {
-}
 /* Tech */
 .l-cardList.main {
   background: linear-gradient(
@@ -80,9 +72,6 @@
     rgba(53, 243, 232, 0.3) 0%,
     rgba(151, 71, 255, 0.3) 100%
   );
-  .btn-seeall {
-    width: 129px;
-  }
   .card-item:hover {
     background-color: #000;
     color: #fff;
@@ -267,6 +256,9 @@
     &.l-content {
       padding-top: 120px;
     }
+    .btn-seeall {
+      top: 110px;
+    }
   }
 }
 // tablet
@@ -274,8 +266,13 @@
   .mainImageArea.main .mainTextArea .desc {
     height: 72px;
   }
-  .mainNotice .btn-seeall {
-    right: 24px;
+  .mainNotice {
+    &.l-content {
+      padding-top: 120px;
+    }
+    .btn-seeall {
+      top: 115px;
+    }
   }
   .mainGenieDeveloper {
     .gd-list {
@@ -314,10 +311,7 @@
   }
   .mainNotice {
     .btn-seeall {
-      position: relative;
       top: auto;
-      right: auto;
-      margin-top: 20px;
     }
     .notice {
       &-list {

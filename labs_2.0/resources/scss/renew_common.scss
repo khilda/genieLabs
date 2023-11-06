@@ -36,8 +36,12 @@ main {
   font-size: 18px;
 }
 .btn-seeall {
+  position: absolute;
+  top: 190px;
+  right: 0;
   display: block;
-  background: url("../images/icon_seeall.svg") no-repeat right 12px top 17px / 24px 24px;
+  background: url("../images/icon_seeall.svg") no-repeat right 12px top 17px /
+    24px 24px;
   margin-left: auto;
   padding: 9px 40px 9px 12px;
   font-size: 24px;
@@ -162,11 +166,6 @@ main {
 
 /* Use Case */
 .l-useCase {
-  .btn-seeall {
-    position: absolute;
-    top: 200px;
-    right: 0;
-  }
   .ico-arr {
     position: absolute;
     right: 40px;
@@ -256,9 +255,6 @@ main {
 }
 /* Tech */
 .l-cardList {
-  .btn-seeall {
-    margin: 60px auto 0;
-  }
   .ico-arr {
     position: absolute;
     right: 40px;
@@ -332,7 +328,8 @@ main {
     }
   }
 }
-
+@media (min-width: $pc) {
+}
 // tablet
 @media (max-width: $tablet) {
   /* owl nav button custom*/
@@ -348,7 +345,7 @@ main {
     padding-left: 24px;
     padding-right: 24px;
   }
-  .l-titlebox{
+  .l-titlebox {
     gap: 12px;
     margin-bottom: 20px;
   }
@@ -356,6 +353,8 @@ main {
     font-size: 24px;
   }
   .btn-seeall {
+    top: 195px;
+    right: 24px;
     background-position: right 12px top 10px;
     background-size: 20px 20px;
     padding: 6px 40px 6px 8px;
@@ -383,9 +382,6 @@ main {
     }
   }
   .l-useCase {
-    .btn-seeall {
-      right: 24px;
-    }
     .case-list {
       gap: 30px;
     }
@@ -446,12 +442,15 @@ main {
   }
   .l-content {
     max-width: calc(100vw - 40px);
-    padding: 60px 0;
   }
   .btn-seeall {
+    position: relative;
+    top: auto;
+    right: auto;
     background-position: right 6px top 10px;
     background-size: 20px 20px;
     width: 96px;
+    margin-top: 30px;
     padding: 6px 30px 6px 8px;
     font-size: 18px;
   }
@@ -473,12 +472,6 @@ main {
     }
   }
   .l-useCase {
-    .btn-seeall {
-      position: relative;
-      top: auto;
-      right: auto;
-      margin-top: 20px;
-    }
     .ico-arr {
       right: 30px;
       bottom: 30px;
@@ -501,9 +494,6 @@ main {
     }
   }
   .l-cardList {
-    .btn-seeall {
-      margin: 20px 0 0 auto;
-    }
     .ico-arr {
       right: 30px;
       bottom: 30px;

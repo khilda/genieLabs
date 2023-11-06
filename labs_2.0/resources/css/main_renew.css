@@ -23,11 +23,6 @@
 .mainNotice.l-content {
   padding-bottom: 0;
 }
-.mainNotice .btn-seeall {
-  position: absolute;
-  top: 120px;
-  right: 0;
-}
 .mainNotice .notice-list {
   display: flex;
   flex-direction: column;
@@ -78,13 +73,9 @@
   color: inherit;
 }
 
-/* Use Case */
 /* Tech */
 .l-cardList.main {
   background: linear-gradient(180deg, rgba(53, 243, 232, 0.3) 0%, rgba(151, 71, 255, 0.3) 100%);
-}
-.l-cardList.main .btn-seeall {
-  width: 129px;
 }
 .l-cardList.main .card-item:hover {
   background-color: #000;
@@ -266,13 +257,19 @@
   .mainNotice.l-content {
     padding-top: 120px;
   }
+  .mainNotice .btn-seeall {
+    top: 110px;
+  }
 }
 @media (max-width: 1439px) {
   .mainImageArea.main .mainTextArea .desc {
     height: 72px;
   }
+  .mainNotice.l-content {
+    padding-top: 120px;
+  }
   .mainNotice .btn-seeall {
-    right: 24px;
+    top: 115px;
   }
   .mainGenieDeveloper .gd-list {
     flex-direction: column;
@@ -305,10 +302,7 @@
     height: 66px;
   }
   .mainNotice .btn-seeall {
-    position: relative;
     top: auto;
-    right: auto;
-    margin-top: 20px;
   }
   .mainNotice .notice-list {
     padding: 0;

@@ -4,7 +4,7 @@
 @import "common";
 
 .mainImageArea.midm {
-  background: url('../images/img_midm_visual.png') no-repeat 50% 50% / cover;
+  background: url("../images/img_midm_visual.png") no-repeat 50% 50% / cover;
   .mainTextArea {
     h2 {
       margin-top: 175px;
@@ -14,7 +14,6 @@
     }
   }
 }
-
 .midmFeature {
   &.l-content {
     padding-top: 120px;
@@ -113,20 +112,11 @@
   .l-content {
     padding-top: 120px;
   }
-  .btn-seeall {
-    top: 160px;
-  }
 }
 
 .l-cardList.midm {
   .l-content {
     padding-top: 120px;
-  }
-  .btn-seeall {
-    position: absolute;
-    top: 160px;
-    right: 0;
-    margin: 0;
   }
   .ico-arr {
     right: 30px;
@@ -294,6 +284,9 @@
 
 // pc
 @media (min-width: $pc) {
+  .midm .btn-seeall {
+    top: 160px;
+  }
   .midmClip {
     .clip-img {
       opacity: 0;
@@ -323,6 +316,9 @@
 }
 // tablet
 @media (max-width: $tablet) {
+  .midm .btn-seeall {
+    top: 155px;
+  }
   .midmFeature {
     .feature {
       &-title {
@@ -336,9 +332,6 @@
         line-height: 22px;
       }
     }
-  }
-  .l-cardList.midm .btn-seeall {
-    right: 24px;
   }
   .midmClip {
     .clip-list {
@@ -363,16 +356,10 @@
 }
 // mobile
 @media (max-width: $mobile) {
-  .l-useCase.midm .btn-seeall {
+  .midm .btn-seeall {
     top: auto;
   }
   .l-cardList.midm {
-    .btn-seeall {
-      position: relative;
-      top: auto;
-      right: auto;
-      margin: 20px 0 0 auto;
-    }
     .card-title .title {
       font-size: 24px;
     }

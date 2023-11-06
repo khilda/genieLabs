@@ -87,18 +87,9 @@
 .l-useCase.midm .l-content {
   padding-top: 120px;
 }
-.l-useCase.midm .btn-seeall {
-  top: 160px;
-}
 
 .l-cardList.midm .l-content {
   padding-top: 120px;
-}
-.l-cardList.midm .btn-seeall {
-  position: absolute;
-  top: 160px;
-  right: 0;
-  margin: 0;
 }
 .l-cardList.midm .ico-arr {
   right: 30px;
@@ -288,6 +279,9 @@
 }
 
 @media (min-width: 1440px) {
+  .midm .btn-seeall {
+    top: 160px;
+  }
   .midmClip .clip-img {
     opacity: 0;
   }
@@ -314,6 +308,9 @@
   }
 }
 @media (max-width: 1439px) {
+  .midm .btn-seeall {
+    top: 155px;
+  }
   .midmFeature .feature-title {
     font-size: 22px;
   }
@@ -323,9 +320,6 @@
   .midmFeature .feature-desc {
     font-size: 14px;
     line-height: 22px;
-  }
-  .l-cardList.midm .btn-seeall {
-    right: 24px;
   }
   .midmClip .clip-list {
     flex-direction: column;
@@ -347,14 +341,8 @@
   }
 }
 @media (max-width: 767px) {
-  .l-useCase.midm .btn-seeall {
+  .midm .btn-seeall {
     top: auto;
-  }
-  .l-cardList.midm .btn-seeall {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: 20px 0 0 auto;
   }
   .l-cardList.midm .card-title .title {
     font-size: 24px;

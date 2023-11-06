@@ -46,6 +46,9 @@ main {
 }
 
 .btn-seeall {
+  position: absolute;
+  top: 190px;
+  right: 0;
   display: block;
   background: url("../images/icon_seeall.svg") no-repeat right 12px top 17px/24px 24px;
   margin-left: auto;
@@ -172,11 +175,6 @@ main {
 }
 
 /* Use Case */
-.l-useCase .btn-seeall {
-  position: absolute;
-  top: 200px;
-  right: 0;
-}
 .l-useCase .ico-arr {
   position: absolute;
   right: 40px;
@@ -266,9 +264,6 @@ main {
 }
 
 /* Tech */
-.l-cardList .btn-seeall {
-  margin: 60px auto 0;
-}
 .l-cardList .ico-arr {
   position: absolute;
   right: 40px;
@@ -366,6 +361,8 @@ main {
     font-size: 24px;
   }
   .btn-seeall {
+    top: 195px;
+    right: 24px;
     background-position: right 12px top 10px;
     background-size: 20px 20px;
     padding: 6px 40px 6px 8px;
@@ -389,9 +386,6 @@ main {
   }
   .mainTextArea a {
     margin-top: 60px;
-  }
-  .l-useCase .btn-seeall {
-    right: 24px;
   }
   .l-useCase .case-list {
     gap: 30px;
@@ -447,12 +441,15 @@ main {
   }
   .l-content {
     max-width: calc(100vw - 40px);
-    padding: 60px 0;
   }
   .btn-seeall {
+    position: relative;
+    top: auto;
+    right: auto;
     background-position: right 6px top 10px;
     background-size: 20px 20px;
     width: 96px;
+    margin-top: 30px;
     padding: 6px 30px 6px 8px;
     font-size: 18px;
   }
@@ -472,12 +469,6 @@ main {
   }
   .mainTextArea a {
     margin-top: 60px;
-  }
-  .l-useCase .btn-seeall {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-top: 20px;
   }
   .l-useCase .ico-arr {
     right: 30px;
@@ -502,9 +493,6 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: keep-all;
-  }
-  .l-cardList .btn-seeall {
-    margin: 20px 0 0 auto;
   }
   .l-cardList .ico-arr {
     right: 30px;
