@@ -1290,6 +1290,11 @@
 .api .category .ipt-container .chk-ipt:checked + .chk-label::before {
   background-color: #000;
 }
+@media (min-width: 1440px) {
+  .api .search-input.type2 {
+    width: 321px;
+  }
+}
 @media (min-width: 743px) and (max-width: 1439px) {
   .api .card-container {
     flex-direction: column;
