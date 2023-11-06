@@ -153,6 +153,28 @@
     }
   }
 }
+// renewal card design
+.card-list.type2 {
+  flex: 1;
+  .card {
+    .card-body .card-badge {
+      margin-top: 20px;
+    }
+    .card-foot.link::before {
+      background-size: contain;
+      width: 28px;
+      height: 28px;
+    }
+    .card-foot.link-blank::before {
+      content: "";
+      display: block;
+      background: var(--card-icon-link) no-repeat 50% 50% /
+        20px 20px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
 // hover effect
 .card .card-hover {
   position: absolute;

@@ -5,7 +5,6 @@
   flex: none;
   display: inline-block;
   font-weight: 700;
-  line-height: 1;
   @include ellipsis();
 }
 .badge-container {
@@ -30,6 +29,13 @@
     background-color: transparent;
     font-size: 16px;
     color: var(--badge-outline-color, #000);
+  }
+  // gpu
+  &.gpu {
+    background-image: url("../images/icon_badge_gpu.svg");
+    background-repeat: no-repeat;
+    background-position: 12px 4px;
+    padding-left: 34px;
   }
   &-outline {
     @include badge-default();

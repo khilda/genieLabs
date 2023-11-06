@@ -12,33 +12,9 @@
   .card-list.type2 {
     flex: 1;
     .card {
-      .card-hover {
-        padding-bottom: 21px;
-      }
+      height: 372px;
       .card-body .card-detail {
         -webkit-line-clamp: 2;
-      }
-      .card-body .card-badge {
-        margin-top: 20px;
-        .badge.gpu {
-          background-image: url("../images/icon_badge_gpu.svg");
-          background-repeat: no-repeat;
-          background-position: 12px 4px;
-          padding-left: 34px;
-        }
-      }
-      .card-foot.link::before {
-        background-size: contain;
-        width: 28px;
-        height: 28px;
-      }
-      .card-foot.link-blank::before {
-        content: "";
-        display: block;
-        background: url("../images/ico_link_24_000.svg") no-repeat 50% 50% /
-          20px 20px;
-        width: 28px;
-        height: 28px;
       }
     }
   }

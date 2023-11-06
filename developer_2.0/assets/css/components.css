@@ -6,6 +6,7 @@
   --card-background: #f4f4f4;
   --card-icon-bookmark: url("../images/ico_bookmark_b.svg");
   --card-icon-bookmark-active: url("../images/ico_bookmark_b_active.svg");
+  --card-icon-link: url("../images/ico_link_24_000.svg");
   --card-icon-arrow: url("../images/ico_arrow_42.svg");
   --card-icon-midm: url("../images/img_midm.svg");
   --card-icon-hits: url("../images/ico_view_24.svg");
@@ -21,6 +22,7 @@
   --card-background: #1f1f1f;
   --card-icon-bookmark: url("../images/darkmode/ico_bookmark.svg");
   --card-icon-bookmark-active: url("../images/darkmode/ico_bookmark_active.svg");
+  --card-icon-link: url("../images/ico_link_24_fff.svg");
   --card-icon-arrow: url("../images/darkmode/ico_arrow_42.svg");
   --card-icon-midm: url("../images/darkmode/img_midm.svg");
   --card-icon-hits: url("../images/darkmode/ico_view_24.svg");
@@ -751,7 +753,6 @@
   flex: none;
   display: inline-block;
   font-weight: 700;
-  line-height: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -773,11 +774,16 @@
   font-size: 16px;
   color: var(--badge-outline-color, #000);
 }
+.badge.gpu {
+  background-image: url("../images/icon_badge_gpu.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 4px;
+  padding-left: 34px;
+}
 .badge-outline {
   flex: none;
   display: inline-block;
   font-weight: 700;
-  line-height: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -820,7 +826,6 @@
   flex: none;
   display: inline-block;
   font-weight: 700;
-  line-height: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2218,6 +2223,25 @@ button.badge:hover {
   text-overflow: ellipsis;
   word-break: keep-all;
   line-height: 26px;
+}
+
+.card-list.type2 {
+  flex: 1;
+}
+.card-list.type2 .card .card-body .card-badge {
+  margin-top: 20px;
+}
+.card-list.type2 .card .card-foot.link::before {
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+}
+.card-list.type2 .card .card-foot.link-blank::before {
+  content: "";
+  display: block;
+  background: var(--card-icon-link) no-repeat 50% 50%/20px 20px;
+  width: 28px;
+  height: 28px;
 }
 
 .card .card-hover {

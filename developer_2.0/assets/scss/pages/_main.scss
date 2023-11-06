@@ -101,7 +101,7 @@ $color-secondary-skyblue: #4ff3ff;
 // card
 .main .card-container {
   & + .card-container {
-    margin-top: 79px;
+    margin-top: 120px;
   }
   .card {
     .card-txt {
@@ -110,7 +110,7 @@ $color-secondary-skyblue: #4ff3ff;
       font-size: 30px;
     }
     .card-hover {
-      padding: 40px;
+      padding: 40px 30px;
     }
     .card-detail {
       display: none;

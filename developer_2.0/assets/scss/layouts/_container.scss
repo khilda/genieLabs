@@ -9,6 +9,7 @@
   background-color: #ededed;
   width: 100%;
   min-height: 100vh;
+  padding-top: 80px;
   &.main {
     background-color: var(--background, #000);
     max-width: 1392px;
@@ -121,6 +122,9 @@
   }
 }
 @include mobile {
+  .wrap {
+    padding-top: 60px;
+  }
   .container {
     padding: 0 27px;
   }
@@ -176,7 +180,7 @@
   .demo .container-header {
     background-image: url("../images/img_page_title_docs.png");
   }
-  .sampleCode .container-header {
+  .evaluation .container-header {
     background-image: url("../images/img_page_title_evaluation.png");
   }
   .applications .container-header {
@@ -205,7 +209,7 @@
   .demo .container-header {
     background-image: url("../images/img_page_title_docs_t.png");
   }
-  .sampleCode .container-header {
+  .evaluation .container-header {
     background-image: url("../images/img_page_title_evaluation_t.png");
   }
   .applications .container-header {
@@ -234,10 +238,10 @@
   .demo .container-header {
     background-image: url("../images/img_page_title_docs_m.png");
   }
-  .sampleCode .container-header {
+  .evaluation .container-header {
     background-image: url("../images/img_page_title_evaluation_m.png");
   }
-  .applications .container-header {
+  .data .container-header {
     background-image: url("../images/img_page_title_data_m.png");
   }
   .forum .container-header {
