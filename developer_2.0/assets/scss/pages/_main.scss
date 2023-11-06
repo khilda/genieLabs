@@ -40,7 +40,7 @@ $color-secondary-skyblue: #4ff3ff;
   margin-bottom: 120px;
   text-align: center;
   .visual-text {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     line-height: 70px;
     font-size: 55px;
     font-weight: 700;
@@ -50,10 +50,11 @@ $color-secondary-skyblue: #4ff3ff;
     border: 2px solid var(--visual-link-border, #000);
     border-radius: 80px;
     background: var(--visual-link-background, transparent)
-      var(--visual-link-icon) no-repeat 41px 50%;
-    padding: 15px 40px 15px 65px;
-    font-weight: 800;
-    line-height: 26px;
+      var(--visual-link-icon) no-repeat 24px 50%;
+    padding: 16px 24px 16px 52px;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 700;
     transition: all 0.3s;
     &:hover {
       background-image: var(--visual-link-icon-hover);
@@ -108,7 +109,7 @@ $color-secondary-skyblue: #4ff3ff;
       line-height: 42px;
       font-size: 30px;
     }
-    .card-hover{
+    .card-hover {
       padding: 40px;
     }
     .card-detail {
@@ -247,6 +248,11 @@ $color-secondary-skyblue: #4ff3ff;
     }
     .visual-container {
       background-image: url("../images/img_visual_main_t.svg");
+      padding-top: 100px;
+      .visual-text {
+        line-height: 55px;
+        font-size: 48px;
+      }
     }
     .card-container {
       padding: 0 50px;
@@ -281,12 +287,11 @@ $color-secondary-skyblue: #4ff3ff;
     }
     .visual-container {
       background-image: url("../images/img_visual_main_m.svg");
-      height: 450px;
-      margin-top: 50px;
-      margin-bottom: 40px;
+      padding-top: 100px;
+      margin-bottom: 60px;
       .visual-text {
-        margin-bottom: 30px;
-        line-height: 42px;
+        margin-bottom: 22px;
+        line-height: 36px;
         font-size: 30px;
       }
     }
