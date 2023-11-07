@@ -577,6 +577,45 @@
     margin: 0 0 0 auto;
   }
 }
+.dialog .df-content.api {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+}
+.dialog .df-content.api .api-title {
+  margin-bottom: 10px;
+  line-height: 22px;
+  font-size: 16px;
+}
+.dialog .df-content.api .btn-container {
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.dialog .df-content.api .btn-container .btn-arrow {
+  border: 1px solid #ccc;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+}
+.dialog .df-content.api .table tr:nth-child(2n) {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.dialog .df-content.api .table th, .dialog .df-content.api .table td {
+  border-color: #ccc;
+  padding: 3px 20px;
+}
+.dialog .df-content.api .table th {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+.dialog .df-content.api .table .has-ipt {
+  padding: 3px 6px;
+}
+
 /* ##############################
 # pages - api
 ################################*/
