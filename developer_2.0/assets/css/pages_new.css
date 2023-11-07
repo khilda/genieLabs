@@ -134,6 +134,12 @@
 .main .card-container .card:not(:hover) .card-badge .badge.gpu {
   background-image: var(--main-gpu-icon);
 }
+.main .card-container .card:not(:hover) .card-badge .badge.update {
+  color: #17d3e1;
+}
+.main .card-container .card:not(:hover) .card-badge .badge.new {
+  color: #ff6800;
+}
 
 .main .notice-container {
   margin-bottom: 120px;

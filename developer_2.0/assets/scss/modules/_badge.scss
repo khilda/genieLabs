@@ -48,6 +48,12 @@
     color: var(--badge-outline-color, #000);
     vertical-align: middle;
   }
+  &.update {
+    color: $color-primary-skyblue;
+  }
+  &.new {
+    color: $color-primary-orange;
+  }
   // 작업중
   &-outline.working {
     border-color: $color-primary-green;

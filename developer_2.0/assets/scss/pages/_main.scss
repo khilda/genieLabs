@@ -133,6 +133,12 @@ $color-secondary-skyblue: #4ff3ff;
         &.gpu {
           background-image: var(--main-gpu-icon);
         }
+        &.update {
+          color: $color-primary-skyblue;
+        }
+        &.new {
+          color: $color-primary-orange;
+        }
       }
     }
   }
