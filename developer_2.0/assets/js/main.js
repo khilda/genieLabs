@@ -4,7 +4,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   eventHeader();
   eventTopButton();
-  eventQuickMenu3depToggle();
   eventQuickToggle();
   eventQuickScroll();
   eventSelect();
@@ -12,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   eventCardBookmark();
   eventCmt();
   eventLinkDialog();
+  // (todo) add event
+  eventQuickMenu3depToggle();
+  eventBtnDialog();
 });
 /**
  * GNB Tablet, Mobile Open
@@ -480,5 +482,43 @@ function downloadFile(el) {
         // $(document).block(false);
       });
     },
+  });
+}
+
+/**
+ * Dialog
+ */
+function eventBtnDialog() {
+  // open
+  document.querySelectorAll("[data-popup]").forEach((popBtn) => {
+    popBtn.addEventListener("click", (e) => {
+      openDialog(e.target.dataset?.popup);
+    });
+  });
+  // close
+  document.querySelectorAll(".dialog-footer .btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      closeDialog();
+    });
+  });
+  // hover
+  document.querySelectorAll("[data-popup-hover]").forEach((popBtn) => {
+    popBtn.addEventListener("mouseenter", (e) => {
+      openDialog(e.target.dataset?.popupHover);
+    });
+    popBtn.addEventListener("mouseleave", (e) => {
+      closeDialog();
+    });
+  });
+}
+function openDialog(target) {
+  if (!target) return;
+  document.body.setAttribute("style", "overflow:hidden");
+  document.getElementById(target).classList.add("is-show");
+}
+function closeDialog() {
+  document.body.removeAttribute("style");
+  document.querySelectorAll(".dialog").forEach((dialog) => {
+    dialog.classList.remove("is-show");
   });
 }
