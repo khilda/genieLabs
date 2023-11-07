@@ -2331,7 +2331,7 @@ button.badge:hover {
   width: 28px;
   height: 28px;
 }
-.card-list.type2 .card .card-foot .link-blank::before {
+.card-list.type2 .card .card-foot.link-blank::before {
   content: "";
   display: block;
   background: var(--card-icon-link) no-repeat 50% 50%/20px 20px;
