@@ -798,10 +798,10 @@
   vertical-align: middle;
 }
 .badge.update {
-  color: #35D4F8 !important;
+  color: #35D4F8;
 }
 .badge.new {
-  color: #ff6800 !important;
+  color: #ff6800;
 }
 .badge-outline.working {
   border-color: #13de48;
