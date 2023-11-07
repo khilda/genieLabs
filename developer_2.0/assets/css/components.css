@@ -2069,7 +2069,7 @@ button.badge:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 30px;
+  height: 28px;
   gap: 8px;
   margin-bottom: 14px;
 }
