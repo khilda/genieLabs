@@ -4,6 +4,12 @@
 .midm {
   // index
   @include desktop {
+    .search-input.type2 {
+      width: 300px;
+    }
+    .filter-select {
+      width: 250px;
+    }
     .board {
       .board-header,
       .board-link {
@@ -143,6 +149,17 @@
         .acc-content {
           height: auto;
         }
+      }
+    }
+  }
+}
+@include tablet-only {
+  .midm {
+    .section-title {
+      flex-direction: row;
+      align-items: center;
+      .btn-container {
+        margin: 0 0 0 auto;
       }
     }
   }

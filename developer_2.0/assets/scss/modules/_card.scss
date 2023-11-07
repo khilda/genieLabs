@@ -12,7 +12,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 30px;
-    gap: 11px;
+    gap: 8px;
     margin-bottom: 14px;
     .card-view {
       background: no-repeat 0% 50%;
@@ -153,28 +153,6 @@
     }
   }
 }
-// renewal card design
-.card-list.type2 {
-  flex: 1;
-  .card {
-    .card-body .card-badge {
-      margin-top: 20px;
-    }
-    .card-foot.link::before {
-      background-size: contain;
-      width: 28px;
-      height: 28px;
-    }
-    .card-foot.link-blank::before {
-      content: "";
-      display: block;
-      background: var(--card-icon-link) no-repeat 50% 50% /
-        20px 20px;
-      width: 28px;
-      height: 28px;
-    }
-  }
-}
 // hover effect
 .card .card-hover {
   position: absolute;
@@ -245,13 +223,32 @@
   position: relative;
 }
 // type2 : main, api page
-.card-list.type2{
+.card-list.type2 {
+  flex: 1;
   .card {
     .card-head {
       margin-bottom: 20px;
       .card-btn.btn-bookmark {
-        width: 66px;
+        width: 54px;
         height: 66px;
+      }
+    }
+    .card-body {
+      .card-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+      }
+      .card-txt {
+        min-height: 84px;
+        line-height: 42px;
+        font-size: 30px;
+      }
+      .card-detail {
+        margin-top: 20px;
+        line-height: 22px;
+        font-size: 14px;
       }
     }
     .card-foot {
@@ -261,6 +258,16 @@
         position: relative;
         left: auto;
         bottom: auto;
+        background-size: contain;
+        width: 28px;
+        height: 28px;
+      }
+      .link-blank::before {
+        content: "";
+        display: block;
+        background: var(--card-icon-link) no-repeat 50% 50% / 20px 20px;
+        width: 28px;
+        height: 28px;
       }
       .foot-info {
         display: flex;
@@ -281,6 +288,9 @@
           margin: 1px 8px;
         }
       }
+    }
+    &:hover .card-hover .card-foot.link-blank::before {
+      background-image: url("../images/ico_link_24_000.svg");
     }
   }
 }
@@ -317,6 +327,13 @@
   .card-list {
     flex-direction: column;
     gap: 30px;
+  }
+  .card-list.type2{
+    .card-body .card-txt{
+      min-height: 64px;
+      line-height: 32px;
+      font-size: 24px;
+    }
   }
   .card {
     width: calc(100vw - (100vw - 100%));

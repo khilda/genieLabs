@@ -39,7 +39,7 @@
   background: url("../images/img_visual_main.svg") no-repeat 50% 100%;
   width: 100%;
   height: 520px;
-  padding-top: 80px;
+  padding-top: 100px;
   margin-bottom: 120px;
   text-align: center;
 }
@@ -116,17 +116,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: keep-all;
-  line-height: 42px;
-  font-size: 30px;
 }
 .main .card-container .card .card-detail {
   display: none;
   width: 320px;
   margin-top: 20px;
   -webkit-line-clamp: 3;
-  line-height: 30px;
-  font-weight: 400;
-  font-size: 18px;
 }
 .main .card-container .card .card-foot.link::before {
   width: 42px;
@@ -209,10 +204,10 @@
     border-color: #000;
     color: #000;
   }
-  .main .card:hover .card-hover .btn-bookmark {
+  .main .card:hover .card-hover .btn-bookmark:not(.is-active) {
     background-image: url("../images/ico_bookmark_b.svg");
   }
-  .main .card:hover .card-hover .btn-bookmark:hover {
+  .main .card:hover .card-hover .btn-bookmark:not(.is-active):hover {
     background-image: url("../images/ico_bookmark_b_active.svg");
   }
   .main .card:hover .card-hover .card-body .card-detail {
@@ -264,7 +259,7 @@
   }
   .main .visual-container {
     background-image: url("../images/img_visual_main_t.svg");
-    padding-top: 100px;
+    padding-top: 80px;
   }
   .main .visual-container .visual-text {
     line-height: 55px;
@@ -272,9 +267,6 @@
   }
   .main .card-container {
     padding: 0 50px;
-  }
-  .main .card-container + .card-container {
-    margin-top: 88px;
   }
   .main .notice-container {
     padding: 0 50px;
@@ -312,7 +304,7 @@
     font-size: 30px;
   }
   .main .card-container {
-    padding: 0 27px;
+    padding: 0 20px;
     overflow: hidden;
   }
   .main .card-container .card-title .title-tit {
@@ -326,7 +318,7 @@
   }
   .main .card-container .card .card-txt {
     font-size: 24px;
-    line-height: 32x;
+    line-height: 32px;
   }
   .main .card-container + .card-container {
     margin-top: 60px;
@@ -445,6 +437,12 @@
 # pages - builder
 ################################*/
 @media (min-width: 1440px) {
+  .midm .search-input.type2 {
+    width: 300px;
+  }
+  .midm .filter-select {
+    width: 250px;
+  }
   .midm .board .board-header,
   .midm .board .board-link {
     grid-template-columns: 142px 1fr repeat(3, 142px);
@@ -570,6 +568,15 @@
   height: auto;
 }
 
+@media (min-width: 743px) and (max-width: 1439px) {
+  .midm .section-title {
+    flex-direction: row;
+    align-items: center;
+  }
+  .midm .section-title .btn-container {
+    margin: 0 0 0 auto;
+  }
+}
 /* ##############################
 # pages - api
 ################################*/

@@ -704,7 +704,7 @@
 .breadcrumb .breadcrumb-link {
   position: relative;
   padding-left: 19px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 .breadcrumb .breadcrumb-link:not(:first-child)::before {
@@ -737,7 +737,7 @@
 
 @media (max-width: 742px) {
   .breadcrumb .breadcrumb-link {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2;
   }
 }
@@ -1802,6 +1802,7 @@ button.badge:hover {
   .board-link .link-grid {
     text-align: center;
     font-size: 18px;
+    font-weight: 400;
   }
   .board-link .link-grid[data-column=content] {
     width: 600px;
@@ -2068,7 +2069,7 @@ button.badge:hover {
   justify-content: flex-start;
   align-items: center;
   height: 30px;
-  gap: 11px;
+  gap: 8px;
   margin-bottom: 14px;
 }
 .card .card-head .card-view {
@@ -2222,25 +2223,6 @@ button.badge:hover {
   line-height: 26px;
 }
 
-.card-list.type2 {
-  flex: 1;
-}
-.card-list.type2 .card .card-body .card-badge {
-  margin-top: 20px;
-}
-.card-list.type2 .card .card-foot.link::before {
-  background-size: contain;
-  width: 28px;
-  height: 28px;
-}
-.card-list.type2 .card .card-foot.link-blank::before {
-  content: "";
-  display: block;
-  background: var(--card-icon-link) no-repeat 50% 50%/20px 20px;
-  width: 28px;
-  height: 28px;
-}
-
 .card .card-hover {
   position: absolute;
   top: 0;
@@ -2311,12 +2293,31 @@ button.badge:hover {
   position: relative;
 }
 
+.card-list.type2 {
+  flex: 1;
+}
 .card-list.type2 .card .card-head {
   margin-bottom: 20px;
 }
 .card-list.type2 .card .card-head .card-btn.btn-bookmark {
-  width: 66px;
+  width: 54px;
   height: 66px;
+}
+.card-list.type2 .card .card-body .card-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.card-list.type2 .card .card-body .card-txt {
+  min-height: 84px;
+  line-height: 42px;
+  font-size: 30px;
+}
+.card-list.type2 .card .card-body .card-detail {
+  margin-top: 20px;
+  line-height: 22px;
+  font-size: 14px;
 }
 .card-list.type2 .card .card-foot {
   align-items: center;
@@ -2326,6 +2327,16 @@ button.badge:hover {
   position: relative;
   left: auto;
   bottom: auto;
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+}
+.card-list.type2 .card .card-foot .link-blank::before {
+  content: "";
+  display: block;
+  background: var(--card-icon-link) no-repeat 50% 50%/20px 20px;
+  width: 28px;
+  height: 28px;
 }
 .card-list.type2 .card .card-foot .foot-info {
   display: flex;
@@ -2345,6 +2356,9 @@ button.badge:hover {
   width: 1px;
   height: 14px;
   margin: 1px 8px;
+}
+.card-list.type2 .card:hover .card-hover .card-foot.link-blank::before {
+  background-image: url("../images/ico_link_24_000.svg");
 }
 
 @media (min-width: 743px) and (max-width: 1439px) {
@@ -2378,6 +2392,11 @@ button.badge:hover {
   .card-list {
     flex-direction: column;
     gap: 30px;
+  }
+  .card-list.type2 .card-body .card-txt {
+    min-height: 64px;
+    line-height: 32px;
+    font-size: 24px;
   }
   .card {
     width: calc(100vw - (100vw - 100%));
@@ -3052,7 +3071,7 @@ code {
   }
   .quick-container {
     position: sticky;
-    top: 120px;
+    top: 80px;
   }
   .quick-collapse {
     display: none;

@@ -11,7 +11,7 @@
   .breadcrumb-link {
     position: relative;
     padding-left: 19px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     &:not(:first-child)::before {
       content: "";
@@ -44,7 +44,7 @@
 }
 @include mobile{
   .breadcrumb .breadcrumb-link{
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2;
   }
 }
