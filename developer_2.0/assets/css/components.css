@@ -3002,6 +3002,7 @@ code {
 .table td {
   border: 1px solid #d0d7de;
   padding: 6px 13px;
+  vertical-align: middle;
 }
 
 /* ##############################

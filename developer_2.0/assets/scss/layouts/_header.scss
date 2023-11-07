@@ -325,8 +325,16 @@
   }
   .info {
     color: var(--main-header-color);
-    .info-menu.ground {
-      background-image: var(--gnb-icon-ground);
+    .info-menu{
+      &.ground {
+        background-image: var(--gnb-icon-ground);
+      }
+      &.logout {
+        background-image: var(--gnb-icon-logout);
+      }
+      &.login {
+        background-image: var(--gnb-icon-login);
+      }
     }
   }
 }
