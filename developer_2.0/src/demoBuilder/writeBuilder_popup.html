@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DemoBuilder < GenieGround</title>
+    <title>DemoBuilder < GenieDeveloper</title>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <style>
       .fixed {
@@ -26,20 +26,10 @@
   </head>
 
   <body>
-    <!-- POPUP GUIDE : 개발시 삭제 -->
-    <div class="fixed">
-      <button type="button" data-popup="popupTemplate">
-        template 정보팝업
-      </button>
-      <button type="button" data-popup="popupEvent">Event 설정팝업</button>
-      <button type="button" data-popup="popupVarName">변수명 설정팝업</button>
-      <button type="button" data-popup="popupAPI">API 설정팝업</button>
-    </div>
-    <!-- //POPUP GUIDE : 개발시 삭제 -->
     <div class="wrap">
       <header class="header">
         <article class="header-container">
-          <a href="/src/main/index.html" class="logo">GenieGround</a>
+          <a href="/src/main/index.html" class="logo">GenieDeveloper</a>
           <a href="#labs" class="labs-logo">Labs</a>
           <div class="header-menu">
             <!-- (todo) gnb 마크업 변경 -->
@@ -113,154 +103,19 @@
           <h1 class="page-title">builder</h1>
         </section>
         <!-- 게시글 작성시  -->
-        <section class="container-content container-edit">
-          <article class="form-container">
-            <form class="form">
-              <div class="form-item flex-direction-row">
-                <h5 class="form-item-title">데모 명</h5>
-                <input
-                  type="text"
-                  class="ipt edit-ipt"
-                  placeholder="등록 될 데모 명을 입력하세요."
-                />
-              </div>
-              <div class="form-item">
-                <h5 class="form-item-title">데이터 설명</h5>
-                <div class="textarea-container">
-                  <textarea
-                    class="textarea"
-                    placeholder="상세 설명 정보를 입력하세요.​"
-                  ></textarea>
-                  <span class="textarea-count"
-                    >[<em class="count">0</em> / 1000 자]</span
-                  >
-                </div>
-              </div>
-              <div class="form-item flex-direction-row">
-                <h5 class="form-item-title">반려 사유</h5>
-                <input
-                  type="text"
-                  class="ipt edit-ipt"
-                  value="반려되었습니다."
-                  disabled
-                />
-              </div>
-              <div class="form-item builder-edit">
-                <div class="builder-item template">
-                  <h5 class="builder-title">Template</h5>
-                  <div class="builder-content">
-                    <dl class="accodion">
-                      <div class="acc-item is-active">
-                        <dt class="acc-title">
-                          <button type="button" class="acc-btn">입력 UI</button>
-                        </dt>
-                        <dd class="acc-content">
-                          <button type="button" class="acc-btn">
-                            고정 구문
-                          </button>
-                          <button type="button" class="acc-btn">
-                            Input text
-                          </button>
-                          <button type="button" class="acc-btn">
-                            파일업로드
-                          </button>
-                          <button type="button" class="acc-btn">
-                            웹마이크
-                          </button>
-                        </dd>
-                      </div>
-                      <div class="acc-item">
-                        <dt class="acc-title">
-                          <button type="button" class="acc-btn">출력 UI</button>
-                        </dt>
-                        <dd class="acc-content">
-                          <button type="button" class="acc-btn">
-                            Text 출력
-                          </button>
-                          <button type="button" class="acc-btn">
-                            Json 출력
-                          </button>
-                          <button type="button" class="acc-btn">
-                            이미지 출력
-                          </button>
-                          <button type="button" class="acc-btn">
-                            음성 출력
-                          </button>
-                        </dd>
-                      </div>
-                      <div class="acc-item">
-                        <dt class="acc-title">
-                          <button type="button" class="acc-btn">Action</button>
-                        </dt>
-                        <dd class="acc-content">
-                          <button type="button" class="acc-btn">
-                            Action01
-                          </button>
-                          <button type="button" class="acc-btn">
-                            Action02
-                          </button>
-                          <button type="button" class="acc-btn">
-                            Action03
-                          </button>
-                          <button type="button" class="acc-btn">
-                            Action04
-                          </button>
-                        </dd>
-                      </div>
-                      <div class="acc-item">
-                        <dt class="acc-title">
-                          <button type="button" class="acc-btn">API</button>
-                        </dt>
-                        <dd class="acc-content">
-                          <button type="button" class="acc-btn">API01</button>
-                          <button type="button" class="acc-btn">API02</button>
-                          <button type="button" class="acc-btn">API03</button>
-                          <button type="button" class="acc-btn">API04</button>
-                        </dd>
-                      </div>
-                    </dl>
-                  </div>
-                </div>
-                <div class="builder-item flowchart">
-                  <h5 class="builder-title">Flow Chart</h5>
-                  <div class="builder-content"></div>
-                </div>
-                <div class="builder-item ui">
-                  <h5 class="builder-title">UI</h5>
-                  <div class="builder-content"></div>
-                </div>
-                <div class="builder-item control">
-                  <h5 class="builder-title">Control</h5>
-                  <div class="builder-group">
-                    <div class="builder-content"></div>
-                    <div class="builder-content"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div class="form-footer">
-              <div class="btn-container">
-                <button type="button" class="btn">미리보기</button>
-                <button
-                  type="button"
-                  onclick="onClickBtn('cancel')"
-                  class="btn cancel"
-                >
-                  삭제하기
-                </button>
-                <button type="button" onclick="onClickBtn('mod')" class="btn">
-                  저장
-                </button>
-                <button
-                  type="button"
-                  onclick="onClickBtn('regist')"
-                  class="btn"
-                >
-                  등록요청
-                </button>
-              </div>
-            </div>
-          </article>
+        <section class="container-content">
+          <button type="button" class="btn" data-popup-hover="popupTemplate">
+            template 정보팝업
+          </button>
+          <button type="button" class="btn" data-popup="popupEvent">
+            Event 설정팝업
+          </button>
+          <button type="button" class="btn" data-popup="popupVarName">
+            변수명 설정팝업
+          </button>
+          <button type="button" class="btn" data-popup="popupAPI">
+            API 설정팝업
+          </button>
         </section>
       </main>
       <footer class="footer">
@@ -281,7 +136,7 @@
       </footer>
     </div>
     <!-- layer popup : Default layout -->
-    <article class="dialog" style="width: 500px;">
+    <article class="dialog" style="width: 500px">
       <div class="dialog-content">
         <section class="df-group">
           <h3 class="df-title"></h3>
@@ -292,7 +147,7 @@
     </article>
 
     <!-- layer popup : Template 설정팝업 -->
-    <article id="popupTemplate" class="dialog" style="width: 500px;">
+    <article id="popupTemplate" class="dialog" style="width: 500px">
       <div class="dialog-content">
         <section class="df-group">
           <h3 class="df-title">템플릿명</h3>
@@ -311,13 +166,9 @@
           <div class="df-content"></div>
         </section>
       </div>
-      <footer class="dialog-footer">
-        <button type="button" class="btn cancel">Cancel</button>
-        <button type="button" class="btn">OK</button>
-      </footer>
     </article>
     <!-- layer popup : Event 설정팝업 -->
-    <article id="popupEvent" class="dialog" style="width: 560px;">
+    <article id="popupEvent" class="dialog" style="width: 560px">
       <div class="dialog-content">
         <section class="df-group">
           <h3 class="df-title">Attach Point</h3>
@@ -379,12 +230,134 @@
       </footer>
     </article>
     <!-- layer popup : API 설정 팝업 -->
-    <article id="popupAPI" class="dialog" style="width: 880px;">
+    <article id="popupAPI" class="dialog" style="width: 880px">
       <div class="dialog-content">
         <section class="df-group">
           <h3 class="df-title">API 설정</h3>
-          <div class="df-content">
-
+          <div class="df-content api">
+            <div class="api-group">
+              <h4 class="api-title">API Request Data</h4>
+              <table class="table">
+                <colgroup>
+                  <col style="width: 140px" />
+                  <col style="width: 190px" />
+                  <col style="width: 140px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>항목</th>
+                    <th>설명</th>
+                    <th>값</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Param1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                    <td class="has-ipt">
+                      <input
+                        type="text"
+                        class="ipt"
+                        placeholder="등록 될 데모 명을 입력하세요."
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Param1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                    <td class="has-ipt">
+                      <input
+                        type="text"
+                        class="ipt"
+                        placeholder="등록 될 데모 명을 입력하세요."
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="api-group btn-container">
+              <button type="button" class="btn-arrow right">&gt;</button>
+              <button type="button" class="btn-arrow left">&lt;</button>
+            </div>
+            <div class="api-group">
+              <h4 class="api-title">API Request Data</h4>
+              <table class="table">
+                <colgroup>
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Key</th>
+                    <th>값</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Param1</td>
+                    <td class="has-ipt">
+                      <input
+                        type="text"
+                        class="ipt"
+                        placeholder="등록 될 데모 명을 입력하세요."
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Param1</td>
+                    <td class="has-ipt">
+                      <input
+                        type="text"
+                        class="ipt"
+                        placeholder="등록 될 데모 명을 입력하세요."
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="df-content api">
+            <div class="api-group">
+              <h4 class="api-title">API Request Data</h4>
+              <table class="table">
+                <colgroup>
+                  <col style="width: 20%" />
+                  <col style="width: auto" />
+                  <col style="width: 20%" />
+                  <col style="width: 20%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>항목</th>
+                    <th>설명</th>
+                    <th>Request</th>
+                    <th>Data</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Param1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                    <td class="has-ipt">
+                      <input
+                        type="text"
+                        class="ipt"
+                        value="test"
+                      />
+                    </td>
+                    <td class="has-ipt">
+                      <input
+                        type="text"
+                        class="ipt"
+                        value="test"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
       </div>
@@ -396,33 +369,7 @@
     <!-- // layer popup -->
     <script src="../../assets/js/main.js"></script>
     <script>
-      // popup
-      document.querySelectorAll("[data-popup]").forEach((popBtn) => {
-        popBtn.addEventListener("click", (e) => {
-          const target = e.target.dataset.popup;
-          openCustomPopup(target);
-        });
-      });
-      function openCustomPopup(target) {
-        let dimmed = document.createElement("div");
-        dimmed.classList.add("dimmed");
-        document.body.prepend(dimmed);
-        document.body.setAttribute("style", "overflow:hidden");
-        console.log(target, " 팝업 오픈");
-        document.getElementById(target).classList.add("is-show");
-        closeCustomPopup();
-      }
-      function closeCustomPopup() {
-        document.querySelectorAll(".dialog-footer .btn").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            document.body.removeAttribute("style");
-            document.querySelector(".dimmed")?.remove();
-            document.querySelectorAll(".dialog").forEach((dialog) => {
-              dialog.classList.remove("is-show");
-            });
-          });
-        });
-      }
+      openDialog("popupAPI");
     </script>
   </body>
 </html>

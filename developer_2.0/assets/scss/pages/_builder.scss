@@ -164,3 +164,58 @@
     }
   }
 }
+//************************************
+//# Dialog
+//************************************
+.dialog {
+  .df-content.api {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    .api-title {
+      margin-bottom: 10px;
+      line-height: 22px;
+      font-size: 16px;
+    }
+    .btn-container {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      .btn-arrow {
+        border: 1px solid #ccc;
+        background: no-repeat 50% 50% / 20px;
+        width: 28px;
+        height: 28px;
+        padding: 4px;
+        font-size: 0;
+        color: transparent;
+        &.right {
+          background-image: url("../images/ico_arr_right.svg");
+        }
+        &.left {
+          background-image: url("../images/ico_arr_left.svg");
+        }
+      }
+    }
+    .table {
+      tr:nth-child(2n) {
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+      }
+      th,
+      td {
+        border-color: #ccc;
+        padding: 3px 20px;
+      }
+      th {
+        height: 50px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .has-ipt {
+        padding: 3px 6px;
+      }
+    }
+  }
+}

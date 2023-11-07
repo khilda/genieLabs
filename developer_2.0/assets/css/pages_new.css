@@ -595,15 +595,25 @@
 }
 .dialog .df-content.api .btn-container .btn-arrow {
   border: 1px solid #ccc;
+  background: no-repeat 50% 50%/20px;
   width: 28px;
   height: 28px;
   padding: 4px;
+  font-size: 0;
+  color: transparent;
+}
+.dialog .df-content.api .btn-container .btn-arrow.right {
+  background-image: url("../images/ico_arr_right.svg");
+}
+.dialog .df-content.api .btn-container .btn-arrow.left {
+  background-image: url("../images/ico_arr_left.svg");
 }
 .dialog .df-content.api .table tr:nth-child(2n) {
   background-color: #fff;
   border-top: 1px solid #ccc;
 }
-.dialog .df-content.api .table th, .dialog .df-content.api .table td {
+.dialog .df-content.api .table th,
+.dialog .df-content.api .table td {
   border-color: #ccc;
   padding: 3px 20px;
 }
