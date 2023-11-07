@@ -3026,6 +3026,8 @@ code {
 }
 .quick-content {
   position: relative;
+  overflow: hidden;
+  transition: height 0.3s;
 }
 .quick-content .link {
   display: block;
@@ -3055,14 +3057,6 @@ code {
   width: 3px;
   height: 3px;
 }
-.quick-link-sub {
-  height: 0;
-  overflow: hidden;
-}
-.quick-link-sub.is-show {
-  height: auto;
-}
-
 @media (min-width: 1440px) {
   .quick {
     flex: none;
@@ -3095,6 +3089,8 @@ code {
   .quick.is-open .quick-container {
     opacity: 1;
     transition-delay: 0s;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
   }
   .quick-container {
     position: absolute;

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>서브레이아웃 < GenieGround</title>
-        <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
 
   <body>
@@ -23,7 +22,9 @@
                 <div class="gnb-2dep">
                   <a href="#demoBuilder" class="gnb-menu">Demo Builder</a>
                   <a href="#Playground" class="gnb-menu">Playground</a>
-                  <a href="#LETS" class="gnb-menu">LETS<i class="ico-link"></i></a>
+                  <a href="#LETS" class="gnb-menu"
+                    >LETS<i class="ico-link"></i
+                  ></a>
                 </div>
               </div>
               <a href="#Docs" class="gnb-1dep gnb-menu">Docs</a>
@@ -78,11 +79,13 @@
       <!-- 
           # 메뉴에 따라 클래스 부여 
           # docs
-          # demo
-          # sampleCode
+          # evaluation
           # applications
           # forum
           # myGround
+          # midm
+          # api
+          # support
         -->
       <main class="container forum">
         <!-- navigation -->
@@ -94,35 +97,37 @@
         <!-- 페이지 타이틀 영역 -->
         <section class="container-header">
           <h1 class="page-title">Forum</h1>
-          <p class="page-txt">GenieGround에서 경험할 수 있는 <br class="br-mo" />다양한 API들에 <br class="br-pc" />대해 정보를 <br class="br-mo" />공유할 수 있는 공간입니다 .</p>
         </section>
         <!-- // 페이지 타이틀 영역 -->
         <section class="container-content">
           <!-- 서브콘텐츠 영역 -->
-          <!-- 퀵메뉴 -->
-          <div class="quick-container">
-            <div class="quick">
-              <p class="quick-title">Introduction</p>
-              <div class="quick-link">
-                <button type="button" data-id="guideDevelopers" class="link main">Guide For Developer</button>
-                <button type="button" data-id="quickstart" class="link sub">Quickstart</button>
-                <button type="button" data-id="apiReference" class="link sub">API Reference</button>
-                <button type="button" data-id="guideProviders" class="link main">Guide For Prociders</button>
-                <button type="button" data-id="aiApiGuide" class="link sub">AI API 개발가이드</button>
-                <button type="button" data-id="kubernetesGuide" class="link sub">Kubernetes 배포가이드</button>
-              </div>
-            </div>
-            <button type="button" class="quick-collapse"></button>
-          </div>
-          <div style="height: 200vh;"></div>
+          <button type="button" class="btn" data-title="midm">Mi:dm</button>
+          <button type="button" class="btn" data-title="docs">Docs</button>
+          <button type="button" class="btn" data-title="api">Api</button>
+          <button type="button" class="btn" data-title="evaluation">
+            Evaluation
+          </button>
+          <button type="button" class="btn" data-title="data">Data</button>
+          <button type="button" class="btn" data-title="forum">Forum</button>
+          <button type="button" class="btn" data-title="support">
+            Support
+          </button>
+          <button type="button" class="btn" data-title="myGround">
+            Console
+          </button>
           <!-- // 서브콘텐츠 영역 -->
         </section>
       </main>
       <!-- footer 영역 -->
       <footer class="footer">
         <div class="copyright">
-          <p class="copyright-txt">㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945</p>
-          <p class="copyright-txt">통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로 90 (정자동)</p>
+          <p class="copyright-txt">
+            ㈜케이티 대표이사 구현모 사업자등록번호: 102-81-42945
+          </p>
+          <p class="copyright-txt">
+            통신판매업신고: 2002-경기성남-0048 주소: 경기도 성남시 분당구 불정로
+            90 (정자동)
+          </p>
           <p class="copyright-txt">Copyright ⓒ KT Corp. All Rights Reserved.</p>
         </div>
         <div class="term">
@@ -135,7 +140,19 @@
       <button class="top-btn">Top</button>
       <!-- //Top Button -->
     </div>
-    <script  src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+      // page-title
+      document.querySelectorAll(".btn").forEach((_btn) => {
+        _btn.addEventListener("click", (e) => {
+          let _cls = document.querySelector(".container").classList.item(1);
+          document.querySelector(".container").classList.remove(_cls);
+          document
+            .querySelector(".container")
+            .classList.add(e.target.dataset.title);
+          document.querySelector(".page-title").innerText = e.target.innerText;
+        });
+      });
+    </script>
   </body>
-
 </html>

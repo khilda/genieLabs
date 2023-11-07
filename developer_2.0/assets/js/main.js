@@ -4,6 +4,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   eventHeader();
   eventTopButton();
+  eventQuickMenu3depToggle();
   eventQuickToggle();
   eventQuickScroll();
   eventSelect();
@@ -89,6 +90,25 @@ function eventTopButton() {
 /**
  * Quick Menu
  */
+function eventQuickMenu3depToggle() {
+  const _quickContainer = document.querySelector(".quick");
+  if (!_quickContainer) return;
+  _quickContainer.querySelectorAll(".quick-content").forEach((_content) => {
+    if (!_content.querySelector(".link-sub")) return;
+    const h = _content.offsetHeight;
+    _content.style.cssText = `height: 28px`;
+    _content.querySelector(".link").addEventListener("click", (e) => {
+      if (_content.offsetHeight === 28) {
+        _content.style.cssText = `height: ${h}px`;
+        _quickContainer.querySelectorAll(".quick-content").forEach((c) => {
+          if (c !== _content) c.style.cssText = `height: 28px`;
+        });
+      } else {
+        _content.style.cssText = `height: 28px`;
+      }
+    });
+  });
+}
 function eventQuickToggle() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
@@ -117,8 +137,9 @@ function eventQuickScroll() {
   if (!_quickContainer) return;
   // 클릭시 해당메뉴로 이동
   const quickLink = _quickContainer.querySelector(".quick-link");
-  quickLink.querySelectorAll(".link").forEach((link) => {
+  quickLink.querySelectorAll(".link[data-id]").forEach((link) => {
     link.addEventListener("click", (e) => {
+      if (!e.target.dataset?.id) return;
       evtScrollY(e.target.dataset.id);
     });
     const section = document.getElementById(link.dataset.id);
