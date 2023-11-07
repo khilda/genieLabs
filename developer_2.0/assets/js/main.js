@@ -13,11 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
   eventLinkDialog();
   // (todo) add event
   eventQuickMenu3depToggle();
-  eventBtnDialog();
+  eventBtnPopup();
 });
 /**
  * GNB Tablet, Mobile Open
  */
+// (todo) modify headder event
 function eventHeader() {
   document.querySelector("#gnbOpen")?.addEventListener("click", () => {
     document.querySelector(".header").classList.add("is-show");
@@ -92,6 +93,7 @@ function eventTopButton() {
 /**
  * Quick Menu
  */
+// (todo) add event
 function eventQuickMenu3depToggle() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
@@ -111,6 +113,7 @@ function eventQuickMenu3depToggle() {
     });
   });
 }
+// (todo) modify quick menu
 function eventQuickToggle() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
@@ -163,6 +166,7 @@ function eventQuickScroll() {
   });
 }
 
+// (todo) modify quick menu
 function eventQuickLinkActive() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
@@ -486,37 +490,38 @@ function downloadFile(el) {
 }
 
 /**
- * Dialog
+ * popup
  */
-function eventBtnDialog() {
+// (todo) add event
+function eventBtnPopup() {
   // open
   document.querySelectorAll("[data-popup]").forEach((popBtn) => {
     popBtn.addEventListener("click", (e) => {
-      openDialog(e.target.dataset?.popup);
+      openPopup(e.target.dataset?.popup);
     });
   });
   // close
   document.querySelectorAll(".dialog-footer .btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      closeDialog();
+      closePopup();
     });
   });
   // hover
   document.querySelectorAll("[data-popup-hover]").forEach((popBtn) => {
     popBtn.addEventListener("mouseenter", (e) => {
-      openDialog(e.target.dataset?.popupHover);
+      openPopup(e.target.dataset?.popupHover);
     });
     popBtn.addEventListener("mouseleave", (e) => {
-      closeDialog();
+      closePopup();
     });
   });
 }
-function openDialog(target) {
+function openPopup(target) {
   if (!target) return;
   document.body.setAttribute("style", "overflow:hidden");
   document.getElementById(target).classList.add("is-show");
 }
-function closeDialog() {
+function closePopup() {
   document.body.removeAttribute("style");
   document.querySelectorAll(".dialog").forEach((dialog) => {
     dialog.classList.remove("is-show");
