@@ -361,6 +361,8 @@ code {
     flex-direction: column;
     gap: 30px;
     padding: 60px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   &-tit {
     background-color: #f4f4f4;
@@ -415,6 +417,7 @@ code {
   .quick-container {
     position: sticky;
     top: 80px;
+    max-height: calc(100vh - 60px);
   }
   .quick-collapse {
     display: none;
