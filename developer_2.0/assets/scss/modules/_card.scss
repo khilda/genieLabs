@@ -276,8 +276,8 @@
         > li {
           display: flex;
           align-items: center;
-          font-size: 16px;
-          line-height: 16px;
+          font-size: 14px;
+          line-height: 1;
         }
         > li + li:before {
           content: "";
@@ -312,6 +312,9 @@
     width: calc(50vw - ((100vw - 100%) / 2) - 20px);
     max-height: 321px;
   }
+  .card-list.type2 .card {
+    max-height: none;
+  }
 }
 @include mobile {
   .card-swiper-container {
@@ -328,8 +331,8 @@
     flex-direction: column;
     gap: 30px;
   }
-  .card-list.type2{
-    .card-body .card-txt{
+  .card-list.type2 {
+    .card .card-body .card-txt {
       min-height: 64px;
       line-height: 32px;
       font-size: 24px;
