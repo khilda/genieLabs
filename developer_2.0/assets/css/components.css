@@ -1347,12 +1347,15 @@ button.badge:hover {
 }
 
 .form-header {
+  display: flex;
+  align-items: center;
   border: 0 none;
   padding: 0;
   margin-bottom: 10px;
   text-align: left;
 }
 .form-header .title {
+  margin-right: auto;
   font-size: 20px;
   font-weight: 700;
 }

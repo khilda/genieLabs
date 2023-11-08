@@ -5,11 +5,14 @@
   margin-top: 50px;
 }
 .form-header {
+  display: flex;
+  align-items: center;
   border: 0 none;
   padding: 0;
   margin-bottom: 10px;
   text-align: left;
   .title {
+    margin-right: auto;
     font-size: 20px;
     font-weight: 700;
   }
