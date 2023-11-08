@@ -10,6 +10,7 @@
   font-size: 16px;
   cursor: pointer;
   user-select: none;
+  vertical-align: middle;
   &.is-disabled {
     cursor: default;
     .select-box {
@@ -20,6 +21,7 @@
     }
   }
   .select-box {
+    position: relative;
     border: 2px solid transparent;
     background: #f4f4f4;
     min-width: 120px;

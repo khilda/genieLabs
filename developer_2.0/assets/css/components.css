@@ -1220,6 +1220,7 @@ button.badge:hover {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  vertical-align: middle;
 }
 .select-container.is-disabled {
   cursor: default;
@@ -1231,6 +1232,7 @@ button.badge:hover {
   border-color: transparent;
 }
 .select-container .select-box {
+  position: relative;
   border: 2px solid transparent;
   background: #f4f4f4;
   min-width: 120px;

@@ -29,3 +29,11 @@
   - (todo) modify headder event
   - (todo) add event
   - (todo) modify quick menu
+
+
+# 11.08 신규추가
+- docs/index_renew.html
+  - (todo) quick-scroll 태그 추가
+- main.js
+  - (todo) nontarget 추가
+  - (todo) popup table 내의 select 일경우 추가

@@ -240,90 +240,6 @@
               <h4 class="api-title">API Request Data</h4>
               <table class="table">
                 <colgroup>
-                  <col style="width: 140px" />
-                  <col style="width: 190px" />
-                  <col style="width: 140px" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>항목</th>
-                    <th>설명</th>
-                    <th>값</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Param1</td>
-                    <td>Lorem ipsum dolor sit amet consectetur</td>
-                    <td class="has-ipt">
-                      <input
-                        type="text"
-                        class="ipt"
-                        placeholder="등록 될 데모 명을 입력하세요."
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Param1</td>
-                    <td>Lorem ipsum dolor sit amet consectetur</td>
-                    <td class="has-ipt">
-                      <input
-                        type="text"
-                        class="ipt"
-                        placeholder="등록 될 데모 명을 입력하세요."
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="api-group btn-container">
-              <button type="button" class="btn-arrow right">&gt;</button>
-              <button type="button" class="btn-arrow left">&lt;</button>
-            </div>
-            <div class="api-group">
-              <h4 class="api-title">API Request Data</h4>
-              <table class="table">
-                <colgroup>
-                  <col style="width: 140px" />
-                  <col style="width: 140px" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>Key</th>
-                    <th>값</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Param1</td>
-                    <td class="has-ipt">
-                      <input
-                        type="text"
-                        class="ipt"
-                        placeholder="등록 될 데모 명을 입력하세요."
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Param1</td>
-                    <td class="has-ipt">
-                      <input
-                        type="text"
-                        class="ipt"
-                        placeholder="등록 될 데모 명을 입력하세요."
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="df-content api">
-            <div class="api-group">
-              <h4 class="api-title">API Request Data</h4>
-              <table class="table">
-                <colgroup>
                   <col style="width: 20%" />
                   <col style="width: auto" />
                   <col style="width: 20%" />
@@ -333,8 +249,8 @@
                   <tr>
                     <th>항목</th>
                     <th>설명</th>
-                    <th>Request</th>
-                    <th>Data</th>
+                    <th>기본값</th>
+                    <th>변수설정</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -349,11 +265,37 @@
                       />
                     </td>
                     <td class="has-ipt">
+                      <div class="select-container filter-select">
+                        <div class="select-box"></div>
+                        <ul class="select-options"></ul>
+                        <select class="select">
+                          <option value="0" default>변수0</option>
+                          <option value="1">변수1</option>
+                          <option value="2">변수2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Param1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                    <td class="has-ipt">
                       <input
                         type="text"
                         class="ipt"
                         value="test"
                       />
+                    </td>
+                    <td class="has-ipt">
+                      <div class="select-container filter-select">
+                        <div class="select-box"></div>
+                        <ul class="select-options"></ul>
+                        <select class="select">
+                          <option value="0" default>변수0</option>
+                          <option value="1">변수1</option>
+                          <option value="2">변수2</option>
+                        </select>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
