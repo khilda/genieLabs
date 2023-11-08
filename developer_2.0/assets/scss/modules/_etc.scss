@@ -354,6 +354,17 @@ code {
 # components - quick menu(퀵메뉴)
 ################################*/
 .quick {
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 8px;
+  }
   &-container {
     background-color: #fff;
     display: flex;
@@ -374,7 +385,7 @@ code {
   &-content {
     position: relative;
     overflow: hidden;
-    transition: height .3s;
+    transition: height 0.3s;
     .link {
       display: block;
       width: 100%;
@@ -434,8 +445,9 @@ code {
     overflow: hidden;
     transition: all 0.2s;
     &.is-open {
-      width: 296px;
+      width: 226px;
       height: auto;
+      max-height: calc(100vh - 130px);
       .quick-container {
         opacity: 1;
         transition-delay: 0s;
@@ -451,10 +463,16 @@ code {
     border: 2px solid #160c0c;
     border-radius: 20px;
     width: 226px;
-    padding: 20px 10px 40px;
+    padding: 20px 0 40px;
     opacity: 0;
     transition: opacity 0.2s;
     transition-delay: 0.18s;
+  }
+  .quick-scroll{
+    height: 100%;
+    padding: 0 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .quick-collapse {
     position: absolute;
@@ -550,3 +568,6 @@ code {
     }
   }
 }
+//************************************
+//# Scrollbar
+//************************************

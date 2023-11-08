@@ -3018,6 +3018,19 @@ code {
 /* ##############################
 # components - quick menu(퀵메뉴)
 ################################*/
+.quick {
+  /* Scrollbar */
+}
+.quick ::-webkit-scrollbar {
+  width: 8px;
+}
+.quick ::-webkit-scrollbar-track {
+  background: #ededed;
+}
+.quick ::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
+}
 .quick-container {
   background-color: #fff;
   display: flex;
@@ -3095,8 +3108,9 @@ code {
     transition: all 0.2s;
   }
   .quick.is-open {
-    width: 296px;
+    width: 226px;
     height: auto;
+    max-height: calc(100vh - 130px);
   }
   .quick.is-open .quick-container {
     opacity: 1;
@@ -3111,10 +3125,16 @@ code {
     border: 2px solid #160c0c;
     border-radius: 20px;
     width: 226px;
-    padding: 20px 10px 40px;
+    padding: 20px 0 40px;
     opacity: 0;
     transition: opacity 0.2s;
     transition-delay: 0.18s;
+  }
+  .quick-scroll {
+    height: 100%;
+    padding: 0 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .quick-collapse {
     position: absolute;
