@@ -34,6 +34,8 @@
 # 11.08 신규추가
 - docs/index_renew.html
   - (todo) quick-scroll 태그 추가
+- components.css, pages.css 수정
+- _select.scss, _etc.scss 수정
 - main.js
   - (todo) nontarget 추가
   - (todo) popup table 내의 select 일경우 추가
