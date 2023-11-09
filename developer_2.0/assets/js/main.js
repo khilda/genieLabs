@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
   eventQuickMenu3depToggle();
   eventBtnPopup();
 });
+// (todo) add resize Event
+window.addEventListener("resize", (e) => {
+  // init header
+  document.querySelector(".header").classList.remove("is-show");
+  document.body.removeAttribute("style");
+  // init quick menu
+  document.querySelector(".quick").removeAttribute("style");
+});
 /**
  * GNB Tablet, Mobile Open
  */

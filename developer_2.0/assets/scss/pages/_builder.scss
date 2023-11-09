@@ -47,7 +47,7 @@
       gap: 20px;
       &.template {
         flex: 0 0 200px;
-        height: 682px;
+        height: 740px;
         overflow-y: auto;
         overflow-x: hidden;
       }
@@ -65,6 +65,9 @@
       &.control {
         width: 100%;
         min-height: 182px;
+        .builder-content {
+          height: 192px;
+        }
       }
     }
     &-title {
@@ -80,9 +83,11 @@
     &-content {
       flex: 1;
       background-color: #fff;
-      min-height: 182px;
+      min-height: 192px;
+      max-height: 692px;
       padding: 10px;
       overflow: auto;
+      @include scroll();
     }
   }
   // write > template
@@ -182,40 +187,6 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
-      .btn-arrow {
-        border: 1px solid #ccc;
-        background: no-repeat 50% 50% / 20px;
-        width: 28px;
-        height: 28px;
-        padding: 4px;
-        font-size: 0;
-        color: transparent;
-        &.right {
-          background-image: url("../images/ico_arr_right.svg");
-        }
-        &.left {
-          background-image: url("../images/ico_arr_left.svg");
-        }
-      }
-    }
-    .table {
-      tr:nth-child(2n) {
-        background-color: #fff;
-        border-top: 1px solid #ccc;
-      }
-      th,
-      td {
-        border-color: #ccc;
-        padding: 3px 20px;
-      }
-      th {
-        height: 50px;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .has-ipt {
-        padding: 3px 6px;
-      }
     }
   }
 }

@@ -481,7 +481,7 @@
 }
 .midm .builder-item.template {
   flex: 0 0 200px;
-  height: 682px;
+  height: 740px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -500,6 +500,9 @@
   width: 100%;
   min-height: 182px;
 }
+.midm .builder-item.control .builder-content {
+  height: 192px;
+}
 .midm .builder-title {
   flex: none;
   font-size: 18px;
@@ -513,9 +516,21 @@
 .midm .builder-content {
   flex: 1;
   background-color: #fff;
-  min-height: 182px;
+  min-height: 192px;
+  max-height: 692px;
   padding: 10px;
   overflow: auto;
+  /* Scrollbar */
+}
+.midm .builder-content::-webkit-scrollbar {
+  width: 8px;
+}
+.midm .builder-content::-webkit-scrollbar-track {
+  background: #ededed;
+}
+.midm .builder-content::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
 }
 .midm .accodion .acc-btn {
   display: flex;
@@ -598,38 +613,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-}
-.dialog .df-content.api .btn-container .btn-arrow {
-  border: 1px solid #ccc;
-  background: no-repeat 50% 50%/20px;
-  width: 28px;
-  height: 28px;
-  padding: 4px;
-  font-size: 0;
-  color: transparent;
-}
-.dialog .df-content.api .btn-container .btn-arrow.right {
-  background-image: url("../images/ico_arr_right.svg");
-}
-.dialog .df-content.api .btn-container .btn-arrow.left {
-  background-image: url("../images/ico_arr_left.svg");
-}
-.dialog .df-content.api .table tr:nth-child(2n) {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-.dialog .df-content.api .table th,
-.dialog .df-content.api .table td {
-  border-color: #ccc;
-  padding: 3px 20px;
-}
-.dialog .df-content.api .table th {
-  height: 50px;
-  text-align: center;
-  vertical-align: middle;
-}
-.dialog .df-content.api .table .has-ipt {
-  padding: 3px 6px;
 }
 
 /* ##############################

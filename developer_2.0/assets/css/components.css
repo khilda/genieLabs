@@ -3020,22 +3020,39 @@ code {
   vertical-align: middle;
 }
 
+.dialog-table {
+  display: block;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  max-width: 100%;
+  max-height: 368px;
+  overflow: auto;
+}
+.dialog-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 9;
+}
+.dialog-table th,
+.dialog-table td {
+  border: 1px solid #ccc;
+  padding: 3px 20px;
+  vertical-align: middle;
+}
+.dialog-table th {
+  border-top: none;
+  height: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+.dialog-table .has-ipt {
+  padding: 3px 6px;
+}
+
 /* ##############################
 # components - quick menu(퀵메뉴)
 ################################*/
-.quick {
-  /* Scrollbar */
-}
-.quick ::-webkit-scrollbar {
-  width: 8px;
-}
-.quick ::-webkit-scrollbar-track {
-  background: #ededed;
-}
-.quick ::-webkit-scrollbar-thumb {
-  background: #bdbdbd;
-  border-radius: 8px;
-}
 .quick-container {
   background-color: #fff;
   display: flex;
@@ -3045,6 +3062,17 @@ code {
   padding: 60px 0;
   overflow-y: auto;
   overflow-x: hidden;
+  /* Scrollbar */
+}
+.quick-container::-webkit-scrollbar {
+  width: 8px;
+}
+.quick-container::-webkit-scrollbar-track {
+  background: #ededed;
+}
+.quick-container::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
 }
 .quick-tit {
   background-color: #f4f4f4;

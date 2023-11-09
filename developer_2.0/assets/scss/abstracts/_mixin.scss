@@ -14,7 +14,19 @@
   text-overflow: ellipsis;
   word-break: keep-all;
 }
-
+@mixin scroll() {
+  /* Scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 8px;
+  }
+}
 $tablet: 743px;
 $desktop: 1440px;
 @mixin mobile {

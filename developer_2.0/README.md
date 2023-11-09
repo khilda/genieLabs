@@ -34,8 +34,16 @@
 # 11.08 신규추가
 - docs/index_renew.html
   - (todo) quick-scroll 태그 추가
-- components.css, pages.css 수정
+- components.css, pages_new.css 수정
 - _select.scss, _etc.scss 수정
 - main.js
   - (todo) nontarget 추가
   - (todo) popup table 내의 select 일경우 추가
+
+# 11.09 신규추가
+- demoBuilder/writeBuilder_popup.html
+  - (todo) dialog-table 클래스 변경
+- components.css, pages_new.css 수정
+- abstracts/_mixin.scss, modules/_etc.scss, pages/_builder.scss 수정
+- main.js
+  - (todo) add resize Event
