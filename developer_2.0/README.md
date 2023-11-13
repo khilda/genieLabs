@@ -47,3 +47,14 @@
 - abstracts/_mixin.scss, modules/_etc.scss, pages/_builder.scss 수정
 - main.js
   - (todo) add resize Event
+
+# 11.13 신규추가
+- demoBuilder/writeBuilder.html
+  - (todo) flex icon 추가
+- demoBuilder/writeBuilder_popup.html
+  - (todo) 아이콘버튼 추가
+- components.css, pages_new.css 수정
+- modules/_button.scss, modules/_icon.scss pages/_builder.scss, components.scss 수정
+- images_new 폴더 이미지 업데이트
+- main.js
+  - (todo) quick menu 수정

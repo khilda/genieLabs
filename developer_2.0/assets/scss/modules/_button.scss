@@ -98,6 +98,18 @@
     color: #fff;
   }
 }
+.btn-ico.type2 {
+  position: relative;
+  background: #fff;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  &:hover,
+  &.is-active {
+    background-color: #fff;
+  }
+}
 .btn-ico {
   &.mod {
     background-image: url("../images/ico_btn_mod.svg");
@@ -114,6 +126,26 @@
       background-color: #fff;
       background-image: url("../images/ico_btn_cmt_b.svg");
     }
+  }
+  &.record {
+    background-color: #fff;
+    background-image: url("../images/ico_btn_record.svg");
+  }
+  &.mic {
+    background-color: #fff;
+    background-image: url("../images/ico_btn_mic.svg");
+  }
+  &.stop {
+    background-color: #fff;
+    background-image: url("../images/ico_btn_stop.svg");
+  }
+  &.play {
+    background-color: #fff;
+    background-image: url("../images/ico_btn_play.svg");
+  }
+  &.pause {
+    background-color: #fff;
+    background-image: url("../images/ico_btn_pause.svg");
   }
 }
 // bookmark

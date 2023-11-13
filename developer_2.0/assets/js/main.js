@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   eventQuickMenu3depToggle();
   eventBtnPopup();
 });
+
 // (todo) add resize Event
 window.addEventListener("resize", (e) => {
   // init header
@@ -22,7 +23,11 @@ window.addEventListener("resize", (e) => {
   document.body.removeAttribute("style");
   // init quick menu
   document.querySelector(".quick").removeAttribute("style");
+  // (todo) quick menu 수정
+  document.querySelector(".quick").classList.remove('is-open');
+  document.querySelector(".quick-collapse").classList.remove('is-open');
 });
+
 /**
  * GNB Tablet, Mobile Open
  */

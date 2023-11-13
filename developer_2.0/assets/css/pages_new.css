@@ -474,6 +474,7 @@
 }
 .midm .builder-item {
   position: relative;
+  flex: none;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -481,15 +482,18 @@
 }
 .midm .builder-item.template {
   flex: 0 0 200px;
+  width: 200px;
   height: 740px;
   overflow-y: auto;
   overflow-x: hidden;
 }
 .midm .builder-item.flowchart {
   flex: 1 1 490px;
+  width: 496px;
 }
 .midm .builder-item.ui {
   flex: 1 1 490px;
+  width: 496px;
 }
 .midm .builder-item.ui .btn-txt {
   position: absolute;

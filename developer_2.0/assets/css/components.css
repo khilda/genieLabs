@@ -956,6 +956,18 @@
   color: #fff;
 }
 
+.btn-ico.type2 {
+  position: relative;
+  background: #fff;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  line-height: 1;
+}
+.btn-ico.type2:hover, .btn-ico.type2.is-active {
+  background-color: #fff;
+}
+
 .btn-ico.mod {
   background-image: url("../images/ico_btn_mod.svg");
 }
@@ -970,6 +982,26 @@
 .btn-ico.reply:hover, .btn-ico.reply.is-active {
   background-color: #fff;
   background-image: url("../images/ico_btn_cmt_b.svg");
+}
+.btn-ico.record {
+  background-color: #fff;
+  background-image: url("../images/ico_btn_record.svg");
+}
+.btn-ico.mic {
+  background-color: #fff;
+  background-image: url("../images/ico_btn_mic.svg");
+}
+.btn-ico.stop {
+  background-color: #fff;
+  background-image: url("../images/ico_btn_stop.svg");
+}
+.btn-ico.play {
+  background-color: #fff;
+  background-image: url("../images/ico_btn_play.svg");
+}
+.btn-ico.pause {
+  background-color: #fff;
+  background-image: url("../images/ico_btn_pause.svg");
 }
 
 .btn-bookmark {
@@ -1049,6 +1081,88 @@ button.badge:hover {
     justify-content: space-between;
   }
 }
+/* ##############################
+# components - icon
+################################*/
+.ico {
+  display: inline-block;
+  background: no-repeat 50% 50%/cover;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  color: transparent;
+  vertical-align: middle;
+}
+.ico.flex-wrap-nowrap {
+  background-image: url("../images/ico_flex_wrap_nowrap.svg");
+}
+.ico.flex-wrap-wrap {
+  background-image: url("../images/ico_flex_wrap_wrap.svg");
+}
+.ico.flex-direction-row {
+  background-image: url("../images/ico_flex_direction_row.svg");
+}
+.ico.flex-direction-column {
+  background-image: url("../images/ico_flex_direction_column.svg");
+}
+.ico.flex-direction-row-reverse {
+  background-image: url("../images/ico_flex_direction_row_reverse.svg");
+}
+.ico.flex-direction-column-reverse {
+  background-image: url("../images/ico_flex_direction_column_reverse.svg");
+}
+.ico.align-contents-center {
+  background-image: url("../images/ico_flex_align_content_center.svg");
+}
+.ico.align-contents-start {
+  background-image: url("../images/ico_flex_align_content_start.svg");
+}
+.ico.align-contents-end {
+  background-image: url("../images/ico_flex_align_content_end.svg");
+}
+.ico.align-contents-around {
+  background-image: url("../images/ico_flex_align_content_around.svg");
+}
+.ico.align-contents-between {
+  background-image: url("../images/ico_flex_align_content_between.svg");
+}
+.ico.align-contents-stretch {
+  background-image: url("../images/ico_flex_align_content_stretch.svg");
+}
+.ico.align-items-center {
+  background-image: url("../images/ico_flex_align_item_center.svg");
+}
+.ico.align-items-start {
+  background-image: url("../images/ico_flex_align_item_start.svg");
+}
+.ico.align-items-end {
+  background-image: url("../images/ico_flex_align_item_end.svg");
+}
+.ico.align-items-between {
+  background-image: url("../images/ico_flex_align_item_stretch.svg");
+}
+.ico.align-items-baseline {
+  background-image: url("../images/ico_flex_align_item_baseline.svg");
+}
+.ico.justify-contents-center {
+  background-image: url("../images/ico_flex_justify_content_center.svg");
+}
+.ico.justify-contents-start {
+  background-image: url("../images/ico_flex_justify_content_start.svg");
+}
+.ico.justify-contents-end {
+  background-image: url("../images/ico_flex_justify_content_end.svg");
+}
+.ico.justify-contents-around {
+  background-image: url("../images/ico_flex_justify_content_around.svg");
+}
+.ico.justify-contents-between {
+  background-image: url("../images/ico_flex_justify_content_between.svg");
+}
+.ico.justify-contents-evenly {
+  background-image: url("../images/ico_flex_justify_content_evenly.svg");
+}
+
 /* ##############################
 # components - input[text]
 ################################*/

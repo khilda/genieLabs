@@ -1,0 +1,92 @@
+/* ##############################
+# components - icon
+################################*/
+.ico {
+  display: inline-block;
+  background: no-repeat 50% 50% / cover;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  color: transparent;
+  vertical-align: middle;
+  &.flex-wrap {
+    &-nowrap {
+      background-image: url("../images/ico_flex_wrap_nowrap.svg");
+    }
+    &-wrap {
+      background-image: url("../images/ico_flex_wrap_wrap.svg");
+    }
+  }
+  &.flex-direction {
+    &-row {
+      background-image: url("../images/ico_flex_direction_row.svg");
+    }
+    &-column {
+      background-image: url("../images/ico_flex_direction_column.svg");
+    }
+    &-row-reverse {
+      background-image: url("../images/ico_flex_direction_row_reverse.svg");
+    }
+    &-column-reverse {
+      background-image: url("../images/ico_flex_direction_column_reverse.svg");
+    }
+  }
+
+  &.align-contents {
+    &-center {
+      background-image: url("../images/ico_flex_align_content_center.svg");
+    }
+    &-start {
+      background-image: url("../images/ico_flex_align_content_start.svg");
+    }
+    &-end {
+      background-image: url("../images/ico_flex_align_content_end.svg");
+    }
+    &-around {
+      background-image: url("../images/ico_flex_align_content_around.svg");
+    }
+    &-between {
+      background-image: url("../images/ico_flex_align_content_between.svg");
+    }
+    &-stretch {
+      background-image: url("../images/ico_flex_align_content_stretch.svg");
+    }
+  }
+  &.align-items {
+    &-center {
+      background-image: url("../images/ico_flex_align_item_center.svg");
+    }
+    &-start {
+      background-image: url("../images/ico_flex_align_item_start.svg");
+    }
+    &-end {
+      background-image: url("../images/ico_flex_align_item_end.svg");
+    }
+    &-between {
+      background-image: url("../images/ico_flex_align_item_stretch.svg");
+    }
+    &-baseline {
+      background-image: url("../images/ico_flex_align_item_baseline.svg");
+    }
+  }
+  &.justify-contents {
+    &-center {
+      background-image: url("../images/ico_flex_justify_content_center.svg");
+    }
+    &-start {
+      background-image: url("../images/ico_flex_justify_content_start.svg");
+    }
+    &-end {
+      background-image: url("../images/ico_flex_justify_content_end.svg");
+    }
+    &-around {
+      background-image: url("../images/ico_flex_justify_content_around.svg");
+    }
+    &-between {
+      background-image: url("../images/ico_flex_justify_content_between.svg");
+    }
+    &-evenly {
+      background-image: url("../images/ico_flex_justify_content_evenly.svg");
+    }
+  }
+}

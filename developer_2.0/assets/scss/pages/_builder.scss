@@ -41,21 +41,25 @@
     }
     &-item {
       position: relative;
+      flex: none;
       display: flex;
       flex-direction: column;
       justify-content: stretch;
       gap: 20px;
       &.template {
         flex: 0 0 200px;
+        width: 200px;
         height: 740px;
         overflow-y: auto;
         overflow-x: hidden;
       }
       &.flowchart {
         flex: 1 1 490px;
+        width: 496px;
       }
       &.ui {
         flex: 1 1 490px;
+        width: 496px;
         .btn-txt {
           position: absolute;
           top: 0;
