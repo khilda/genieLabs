@@ -3173,18 +3173,20 @@ code {
   justify-content: flex-start;
   flex-direction: column;
   gap: 30px;
-  padding: 60px 0;
+}
+.quick-scroll {
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   /* Scrollbar */
 }
-.quick-container::-webkit-scrollbar {
+.quick-scroll::-webkit-scrollbar {
   width: 8px;
 }
-.quick-container::-webkit-scrollbar-track {
+.quick-scroll::-webkit-scrollbar-track {
   background: #ededed;
 }
-.quick-container::-webkit-scrollbar-thumb {
+.quick-scroll::-webkit-scrollbar-thumb {
   background: #bdbdbd;
   border-radius: 8px;
 }
@@ -3239,6 +3241,9 @@ code {
     top: 80px;
     max-height: calc(100vh - 60px);
   }
+  .quick-scroll {
+    padding: 60px 0;
+  }
   .quick-collapse {
     display: none;
   }
@@ -3276,12 +3281,6 @@ code {
     opacity: 0;
     transition: opacity 0.2s;
     transition-delay: 0.18s;
-  }
-  .quick-scroll {
-    height: 100%;
-    padding: 0 10px;
-    overflow-x: hidden;
-    overflow-y: auto;
   }
   .quick-collapse {
     position: absolute;
@@ -3326,7 +3325,7 @@ code {
   }
   .quick-container {
     bottom: 20px;
-    padding: 15px 15px 30px;
+    padding: 20px 0;
   }
   .quick-collapse {
     border-radius: 8px;
