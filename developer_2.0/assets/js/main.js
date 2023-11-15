@@ -133,7 +133,6 @@ function eventQuickMenu3depToggle() {
   });
 }
 // (todo) modify quick menu
-// (todo) 2dep 텍스트가 길경우 수정
 function eventQuickToggle() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
@@ -144,9 +143,7 @@ function eventQuickToggle() {
       const _quickBtn = e.target;
       const btnH = _quickBtn.offsetHeight;
       const _quick = _quickContainer.querySelector(".quick-container");
-      const maxHeight = window.innerHeight - 230
-      let h = _quick.offsetHeight + btnH / 2;
-      if(maxHeight < h) h = maxHeight
+      const h = _quick.offsetHeight + btnH / 2;
       if (_quickBtn.classList.contains("is-open")) {
         _quickBtn.classList.remove("is-open");
         _quickContainer.classList.remove("is-open");
