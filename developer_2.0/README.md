@@ -58,3 +58,7 @@
 - images_new 폴더 이미지 업데이트
 - main.js
   - (todo) quick menu 수정
+
+# 11.15 신규추가
+- components.css 수정
+- modules/_etc.scss 수정
