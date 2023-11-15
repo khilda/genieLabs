@@ -24,8 +24,8 @@ window.addEventListener("resize", (e) => {
   // init quick menu
   document.querySelector(".quick").removeAttribute("style");
   // (todo) quick menu 수정
-  document.querySelector(".quick").classList.remove('is-open');
-  document.querySelector(".quick-collapse").classList.remove('is-open');
+  document.querySelector(".quick").classList.remove("is-open");
+  document.querySelector(".quick-collapse").classList.remove("is-open");
 });
 
 /**
@@ -107,21 +107,26 @@ function eventTopButton() {
  * Quick Menu
  */
 // (todo) add event
+// (todo) 2dep 텍스트가 길경우 수정
 function eventQuickMenu3depToggle() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
   _quickContainer.querySelectorAll(".quick-content").forEach((_content) => {
     if (!_content.querySelector(".link-sub")) return;
-    const h = _content.offsetHeight;
-    _content.style.cssText = `height: 28px`;
+    const initHeight = _content.offsetHeight;
+    const height2dep = _content.firstElementChild.offsetHeight;
+    const init2depHeight = (_nonTarget) => {
+      if (_nonTarget !== _content) {
+        _content.setAttribute("style", `height: ${height2dep}px`);
+      }
+    };
+    init2depHeight();
     _content.querySelector(".link").addEventListener("click", (e) => {
-      if (_content.offsetHeight === 28) {
-        _content.style.cssText = `height: ${h}px`;
-        _quickContainer.querySelectorAll(".quick-content").forEach((c) => {
-          if (c !== _content) c.style.cssText = `height: 28px`;
-        });
+      if (_content.offsetHeight === height2dep) {
+        init2depHeight(_content);
+        _content.setAttribute("style", `height: ${initHeight}px`);
       } else {
-        _content.style.cssText = `height: 28px`;
+        init2depHeight();
       }
     });
   });

@@ -62,3 +62,5 @@
 # 11.15 신규추가
 - components.css 수정
 - modules/_etc.scss 수정
+- main.js
+  - (todo) 2dep 텍스트가 길경우 수정
