@@ -64,3 +64,9 @@
 - modules/_etc.scss 수정
 - main.js
   - (todo) 2dep 텍스트가 길경우 수정
+
+# 11.17 신규추가
+- api/index.html
+  - (todo) 작성한 게시글이 존재하지 않을때
+- main.js
+  - (todo) Toggle 수정

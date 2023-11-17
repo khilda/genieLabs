@@ -108,27 +108,35 @@ function eventTopButton() {
  */
 // (todo) add event
 // (todo) 2dep 텍스트가 길경우 수정
+// (todo) Toggle 수정
 function eventQuickMenu3depToggle() {
   const _quickContainer = document.querySelector(".quick");
   if (!_quickContainer) return;
-  _quickContainer.querySelectorAll(".quick-content").forEach((_content) => {
-    if (!_content.querySelector(".link-sub")) return;
-    const initHeight = _content.offsetHeight;
-    console.log(initHeight)
-    const height2dep = _content.firstElementChild.offsetHeight;
-    const init2depHeight = (_nonTarget) => {
+
+  const init2depHeight = (_nonTarget) => {
+    _quickContainer.querySelectorAll(".quick-content").forEach((_content) => {
       if (_nonTarget !== _content) {
-        _content.setAttribute("style", `height: ${height2dep}px`);
+        _content.setAttribute(
+          "style",
+          `height: ${_content.querySelector(".link").offsetHeight}px`
+        );
       }
-    };
+    });
+  };
+
+  _quickContainer.querySelectorAll(".quick-content").forEach((_content) => {
+    const _link = _content.querySelector(".link");
+    const _3dep = _content.querySelector(".link-sub");
+    if (!_3dep) return;
+    const height2dep = _link.offsetHeight;
+    const heightFull = height2dep + _3dep.offsetHeight;
+
     init2depHeight();
-    _content.querySelector(".link").addEventListener("click", (e) => {
-      if (_content.offsetHeight === height2dep) {
-        init2depHeight(_content);
-        _content.setAttribute("style", `height: ${initHeight}px`);
-      } else {
-        init2depHeight();
-      }
+    _link.addEventListener("click", (e) => {
+      init2depHeight(_content);
+      let height =
+        _content.offsetHeight === heightFull ? height2dep : heightFull;
+      _content.setAttribute("style", `height: ${height}px`);
     });
   });
 }
