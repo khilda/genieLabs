@@ -17,15 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // (todo) add resize Event
+// (todo) quick 메뉴 없는 case 추가
 window.addEventListener("resize", (e) => {
   // init header
   document.querySelector(".header").classList.remove("is-show");
   document.body.removeAttribute("style");
-  // init quick menu
-  document.querySelector(".quick").removeAttribute("style");
-  // (todo) quick menu 수정
-  document.querySelector(".quick").classList.remove("is-open");
-  document.querySelector(".quick-collapse").classList.remove("is-open");
+  if(document.querySelector(".quick")){
+    // init quick menu
+    document.querySelector(".quick").removeAttribute("style");
+    // (todo) quick menu 수정
+    document.querySelector(".quick").classList.remove("is-open");
+    document.querySelector(".quick-collapse")?.classList.remove("is-open");
+  }
 });
 
 /**

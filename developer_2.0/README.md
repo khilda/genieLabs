@@ -69,4 +69,5 @@
 - api/index.html
   - (todo) 작성한 게시글이 존재하지 않을때
 - main.js
+  - (todo) quick 메뉴 없는 case 추가
   - (todo) Toggle 수정
